@@ -100,7 +100,7 @@ contentDir = "content/chinese"
     # adsenseid="ca-pub-123456789"
     allowads = true
     logotext = "Cradle to Grave R" # logo text
-    footer = "&copy; [Mark Gingrass](https://markgingrass.com) 2018 | [Github](https://github.com/mtgingrass/CradleToGraveR-W3-simple) | [Twitter](https://twitter.com/markgingrass)  | [RSS](/index.xml)"
+    footer = "&copy; [Mark Gingrass](https://markgingrass.com) 2020 | [Github](https://github.com/mtgingrass/CradleToGraveR-W3-simple) | [Twitter](https://twitter.com/markgingrass)  | [RSS](/index.xml)"
 
 
 [params.social]  # Set your social account here, if you don't have some accounts just comment them
