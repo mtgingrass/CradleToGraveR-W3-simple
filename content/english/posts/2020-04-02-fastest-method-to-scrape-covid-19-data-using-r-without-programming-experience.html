@@ -125,7 +125,7 @@ This is where we import data.</p>
 <span id="cb2-2"><a href="#cb2-2"></a></span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="kw">library</span>(utils)</span>
 <span id="cb2-4"><a href="#cb2-4"></a><span class="kw">library</span>(httr)</span>
-<span id="cb2-5"><a href="#cb2-5"></a>static_url &lt;-<span class="st"> &quot;http://markgingrass.com/wp-content/uploads/2020/04/covid_data.csv&quot;</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>static_url &lt;-<span class="st"> &quot;/wp-content/uploads/2020/04/covid_data.csv&quot;</span></span>
 <span id="cb2-6"><a href="#cb2-6"></a>ecdc_url &lt;-<span class="st"> &quot;https://opendata.ecdc.europa.eu/covid19/casedistribution/csv&quot;</span></span>
 <span id="cb2-7"><a href="#cb2-7"></a><span class="co">#download the dataset from the ECDC website to a local temporary file</span></span>
 <span id="cb2-8"><a href="#cb2-8"></a><span class="kw">GET</span>(ecdc_url, <span class="kw">authenticate</span>(<span class="st">&quot;:&quot;</span>, <span class="st">&quot;:&quot;</span>, <span class="dt">type=</span><span class="st">&quot;ntlm&quot;</span>), <span class="kw">write_disk</span>(tf &lt;-<span class="st"> </span><span class="kw">tempfile</span>(<span class="dt">fileext =</span> <span class="st">&quot;.csv&quot;</span>)))</span></code></pre></div>

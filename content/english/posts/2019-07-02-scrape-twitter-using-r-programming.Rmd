@@ -4,7 +4,7 @@ author: mtgingrass
 type: post
 date: 2019-07-02T13:13:39+00:00
 url: /2019/07/02/scrape-twitter-using-r-programming/
-featured_image: http://markgingrass.com/wp-content/uploads/2019/07/scrapetwitter.jpg
+featured_image: /wp-content/uploads/2019/07/scrapetwitter.jpg
 classic-editor-remember:
   - block-editor
 categories:
@@ -29,22 +29,22 @@ tags:
   
   <ul class="ez-toc-list ez-toc-list-level-1">
     <li class="ez-toc-page-1 ez-toc-heading-level-2">
-      <a class="ez-toc-link ez-toc-heading-1" href="http://markgingrass.com/2019/07/02/scrape-twitter-using-r-programming/#Scrape_Twitter" title="Scrape Twitter">Scrape Twitter</a>
+      <a class="ez-toc-link ez-toc-heading-1" href="/2019/07/02/scrape-twitter-using-r-programming/#Scrape_Twitter" title="Scrape Twitter">Scrape Twitter</a>
     </li>
     <li class="ez-toc-page-1 ez-toc-heading-level-2">
-      <a class="ez-toc-link ez-toc-heading-2" href="http://markgingrass.com/2019/07/02/scrape-twitter-using-r-programming/#Software" title="Software">Software</a>
+      <a class="ez-toc-link ez-toc-heading-2" href="/2019/07/02/scrape-twitter-using-r-programming/#Software" title="Software">Software</a>
     </li>
     <li class="ez-toc-page-1 ez-toc-heading-level-2">
-      <a class="ez-toc-link ez-toc-heading-3" href="http://markgingrass.com/2019/07/02/scrape-twitter-using-r-programming/#Prerequisites" title="Prerequisites">Prerequisites</a>
+      <a class="ez-toc-link ez-toc-heading-3" href="/2019/07/02/scrape-twitter-using-r-programming/#Prerequisites" title="Prerequisites">Prerequisites</a>
     </li>
     <li class="ez-toc-page-1 ez-toc-heading-level-2">
-      <a class="ez-toc-link ez-toc-heading-4" href="http://markgingrass.com/2019/07/02/scrape-twitter-using-r-programming/#Part_1_Free" title="Part 1 Free">Part 1 Free</a>
+      <a class="ez-toc-link ez-toc-heading-4" href="/2019/07/02/scrape-twitter-using-r-programming/#Part_1_Free" title="Part 1 Free">Part 1 Free</a>
     </li>
     <li class="ez-toc-page-1 ez-toc-heading-level-2">
-      <a class="ez-toc-link ez-toc-heading-5" href="http://markgingrass.com/2019/07/02/scrape-twitter-using-r-programming/#Part_2_Free" title="Part 2 Free">Part 2 Free</a>
+      <a class="ez-toc-link ez-toc-heading-5" href="/2019/07/02/scrape-twitter-using-r-programming/#Part_2_Free" title="Part 2 Free">Part 2 Free</a>
     </li>
     <li class="ez-toc-page-1 ez-toc-heading-level-2">
-      <a class="ez-toc-link ez-toc-heading-6" href="http://markgingrass.com/2019/07/02/scrape-twitter-using-r-programming/#Get_Online_Help_from_my_SkillShare_Course" title="Get Online Help from my SkillShare Course">Get Online Help from my SkillShare Course</a>
+      <a class="ez-toc-link ez-toc-heading-6" href="/2019/07/02/scrape-twitter-using-r-programming/#Get_Online_Help_from_my_SkillShare_Course" title="Get Online Help from my SkillShare Course">Get Online Help from my SkillShare Course</a>
     </li>
   </ul></nav>
 </div>
@@ -53,7 +53,7 @@ tags:
 
 Ever wonder how people scrape Twitter for certain Tweets? Ever wonder how to make a Word Cloud?
 
-[My tutorial][1] on [SkillShare][2] will teach you how to use the programming language R and RStudio to <a class="thirstylink" title="Scrape Twitter SkillShare" href="http://markgingrass.com/recommends/scrape-twitter-skillshare/" target="_blank" rel="noopener noreferrer">scrape Twitter</a> in minutes and then generate a Word Cloud with the results. All the code is included with the course.
+[My tutorial][1] on [SkillShare][2] will teach you how to use the programming language R and RStudio to <a class="thirstylink" title="Scrape Twitter SkillShare" href="/recommends/scrape-twitter-skillshare/" target="_blank" rel="noopener noreferrer">scrape Twitter</a> in minutes and then generate a Word Cloud with the results. All the code is included with the course.
 
 ## <span class="ez-toc-section" id="Software"></span>Software<span class="ez-toc-section-end"></span>
 
@@ -75,7 +75,7 @@ No programming experience necessary to duplicate what is in the video; however, 
 
 [Scrape Twitter][1]
 
-All code is available on the [SkillShare][1] <a class="thirstylink" target="_blank" title="SiteUnderground Link" href="http://markgingrass.com/recommends/siteunderground-link/" data-shortcode="true">site</a>.
+All code is available on the [SkillShare][1] <a class="thirstylink" target="_blank" title="SiteUnderground Link" href="/recommends/siteunderground-link/" data-shortcode="true">site</a>.
 
  [1]: https://www.skillshare.com/classes/Scrape-Twitter-using-R-Programming/577451281/projects
  [2]: https://www.skillshare.com/r/profile/Mark-Gingrass/2388101

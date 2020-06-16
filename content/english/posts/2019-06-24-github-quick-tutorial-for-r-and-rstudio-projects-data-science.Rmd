@@ -4,7 +4,7 @@ author: mtgingrass
 type: post
 date: 2019-06-24T01:06:49+00:00
 url: /2019/06/24/🌶️🌶️github-quick-tutorial-for-r-and-rstudio-projects-data-science🌶️🌶️/
-featured_image: http://markgingrass.com/wp-content/uploads/2019/06/Python-Virtual-Environment-2.png
+featured_image: /wp-content/uploads/2019/06/Python-Virtual-Environment-2.png
 categories:
   - Computer Tips
   - Programming

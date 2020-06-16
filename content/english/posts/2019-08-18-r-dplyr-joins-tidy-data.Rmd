@@ -4,7 +4,7 @@ author: mtgingrass
 type: post
 date: 2019-08-18T10:54:33+00:00
 url: /2019/08/18/r-dplyr-joins-tidy-data/
-featured_image: http://markgingrass.com/wp-content/uploads/2019/08/r-dplyr-joins-thumbnail.jpg
+featured_image: /wp-content/uploads/2019/08/r-dplyr-joins-thumbnail.jpg
 classic-editor-remember:
   - block-editor
 tap_disable_autolinker:
@@ -35,22 +35,22 @@ This is a quick lesson on how to use the **DPLYR** functions in R such as **left
   
   <ul class="ez-toc-list ez-toc-list-level-1">
     <li class="ez-toc-page-1 ez-toc-heading-level-2">
-      <a class="ez-toc-link ez-toc-heading-1" href="http://markgingrass.com/2019/08/18/r-dplyr-joins-tidy-data/#Getting_Started" title="Getting Started">Getting Started</a>
+      <a class="ez-toc-link ez-toc-heading-1" href="/2019/08/18/r-dplyr-joins-tidy-data/#Getting_Started" title="Getting Started">Getting Started</a>
     </li>
     <li class="ez-toc-page-1 ez-toc-heading-level-2">
-      <a class="ez-toc-link ez-toc-heading-2" href="http://markgingrass.com/2019/08/18/r-dplyr-joins-tidy-data/#Install_and_Load_the_DPLYR_Library" title="Install and Load the DPLYR Library">Install and Load the DPLYR Library</a>
+      <a class="ez-toc-link ez-toc-heading-2" href="/2019/08/18/r-dplyr-joins-tidy-data/#Install_and_Load_the_DPLYR_Library" title="Install and Load the DPLYR Library">Install and Load the DPLYR Library</a>
     </li>
     <li class="ez-toc-page-1 ez-toc-heading-level-2">
-      <a class="ez-toc-link ez-toc-heading-3" href="http://markgingrass.com/2019/08/18/r-dplyr-joins-tidy-data/#Join_the_Data_Frames" title="Join the Data Frames">Join the Data Frames</a>
+      <a class="ez-toc-link ez-toc-heading-3" href="/2019/08/18/r-dplyr-joins-tidy-data/#Join_the_Data_Frames" title="Join the Data Frames">Join the Data Frames</a>
     </li>
     <li class="ez-toc-page-1 ez-toc-heading-level-2">
-      <a class="ez-toc-link ez-toc-heading-4" href="http://markgingrass.com/2019/08/18/r-dplyr-joins-tidy-data/#Try_a_rightjoin" title="Try a right_join">Try a right_join</a>
+      <a class="ez-toc-link ez-toc-heading-4" href="/2019/08/18/r-dplyr-joins-tidy-data/#Try_a_rightjoin" title="Try a right_join">Try a right_join</a>
     </li>
     <li class="ez-toc-page-1 ez-toc-heading-level-2">
-      <a class="ez-toc-link ez-toc-heading-5" href="http://markgingrass.com/2019/08/18/r-dplyr-joins-tidy-data/#Lastly_the_innerjoin" title="Lastly the inner_join">Lastly the inner_join</a>
+      <a class="ez-toc-link ez-toc-heading-5" href="/2019/08/18/r-dplyr-joins-tidy-data/#Lastly_the_innerjoin" title="Lastly the inner_join">Lastly the inner_join</a>
     </li>
     <li class="ez-toc-page-1 ez-toc-heading-level-2">
-      <a class="ez-toc-link ez-toc-heading-6" href="http://markgingrass.com/2019/08/18/r-dplyr-joins-tidy-data/#Recap" title="Recap">Recap</a>
+      <a class="ez-toc-link ez-toc-heading-6" href="/2019/08/18/r-dplyr-joins-tidy-data/#Recap" title="Recap">Recap</a>
     </li>
   </ul></nav>
 </div>
@@ -91,7 +91,7 @@ It arises because we used the **rep** command, which means repeat. Then we speci
 
 You can see how all of this is displayed in individual data tables in the screenshot below.<figure class="wp-block-image">
 
-<img src="http://markgingrass.com/wp-content/uploads/2019/08/left-and-right-data-tables-1024x596.jpg" alt="" class="wp-image-970" srcset="/wp-content/uploads/2019/08/left-and-right-data-tables-1024x596.jpg 1024w, /wp-content/uploads/2019/08/left-and-right-data-tables-300x174.jpg 300w, /wp-content/uploads/2019/08/left-and-right-data-tables-768x447.jpg 768w, /wp-content/uploads/2019/08/left-and-right-data-tables.jpg 1728w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>**left-data** and **right_data** shown in tables</figcaption></figure> 
+<img src="/wp-content/uploads/2019/08/left-and-right-data-tables-1024x596.jpg" alt="" class="wp-image-970" srcset="/wp-content/uploads/2019/08/left-and-right-data-tables-1024x596.jpg 1024w, /wp-content/uploads/2019/08/left-and-right-data-tables-300x174.jpg 300w, /wp-content/uploads/2019/08/left-and-right-data-tables-768x447.jpg 768w, /wp-content/uploads/2019/08/left-and-right-data-tables.jpg 1728w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>**left-data** and **right_data** shown in tables</figcaption></figure> 
 
 ## <span class="ez-toc-section" id="Install_and_Load_the_DPLYR_Library"></span>Install and Load the DPLYR Library<span class="ez-toc-section-end"></span>
 
@@ -103,13 +103,13 @@ library(dplyr)
 
 If you don&#8217;t have **dplyr** installed you can install it as follows. Go to the **Packages** tab in the lower-right of RStudio. Then click **Install**, and in the new popup window type **dplyr**. Make sure to check the **Install dependencies** box and hit the **Install** button.<figure class="wp-block-image">
 
-<img src="http://markgingrass.com/wp-content/uploads/2019/08/install-dplyer-1024x615.jpg" alt="" class="wp-image-973" srcset="/wp-content/uploads/2019/08/install-dplyer-1024x615.jpg 1024w, /wp-content/uploads/2019/08/install-dplyer-300x180.jpg 300w, /wp-content/uploads/2019/08/install-dplyer-768x461.jpg 768w, /wp-content/uploads/2019/08/install-dplyer.jpg 1448w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure> 
+<img src="/wp-content/uploads/2019/08/install-dplyer-1024x615.jpg" alt="" class="wp-image-973" srcset="/wp-content/uploads/2019/08/install-dplyer-1024x615.jpg 1024w, /wp-content/uploads/2019/08/install-dplyer-300x180.jpg 300w, /wp-content/uploads/2019/08/install-dplyer-768x461.jpg 768w, /wp-content/uploads/2019/08/install-dplyer.jpg 1448w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure> 
 
 ## <span class="ez-toc-section" id="Join_the_Data_Frames"></span>Join the Data Frames<span class="ez-toc-section-end"></span>
 
 Next we&#8217;re going to join the data we have. Begin on line 12 by typing the command **left_join()** and you&#8217;ll see that without filling in any other details you&#8217;ll get the yellow box which guides us on how to use this command correctly.<figure class="wp-block-image">
 
-<img src="http://markgingrass.com/wp-content/uploads/2019/08/join-code2-1024x581.jpg" alt="" class="wp-image-975" srcset="/wp-content/uploads/2019/08/join-code2-1024x581.jpg 1024w, /wp-content/uploads/2019/08/join-code2-300x170.jpg 300w, /wp-content/uploads/2019/08/join-code2-768x436.jpg 768w, /wp-content/uploads/2019/08/join-code2.jpg 1704w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>The guide for using the **left_join** command</figcaption></figure> 
+<img src="/wp-content/uploads/2019/08/join-code2-1024x581.jpg" alt="" class="wp-image-975" srcset="/wp-content/uploads/2019/08/join-code2-1024x581.jpg 1024w, /wp-content/uploads/2019/08/join-code2-300x170.jpg 300w, /wp-content/uploads/2019/08/join-code2-768x436.jpg 768w, /wp-content/uploads/2019/08/join-code2.jpg 1704w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>The guide for using the **left_join** command</figcaption></figure> 
 
 The **x** and **y** in the guide are the two objects that you want to join, and the rest is more or less how you&#8217;d like to join them. Complete the code as follows:
 
@@ -121,7 +121,7 @@ Once you run this line of code in RStudio you&#8217;ll get an error in the conso
 
 The first way is we can make sure **left_data** and **right_data** share a common variable. To do this I can rename **CustomerId** on line 6 to **custId**.<figure class="wp-block-image">
 
-<img src="http://markgingrass.com/wp-content/uploads/2019/08/common-variables-1024x469.jpg" alt="" class="wp-image-978" srcset="/wp-content/uploads/2019/08/common-variables-1024x469.jpg 1024w, /wp-content/uploads/2019/08/common-variables-300x137.jpg 300w, /wp-content/uploads/2019/08/common-variables-768x352.jpg 768w, /wp-content/uploads/2019/08/common-variables.jpg 1567w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>x and y need a common variable to allow them to join</figcaption></figure> 
+<img src="/wp-content/uploads/2019/08/common-variables-1024x469.jpg" alt="" class="wp-image-978" srcset="/wp-content/uploads/2019/08/common-variables-1024x469.jpg 1024w, /wp-content/uploads/2019/08/common-variables-300x137.jpg 300w, /wp-content/uploads/2019/08/common-variables-768x352.jpg 768w, /wp-content/uploads/2019/08/common-variables.jpg 1567w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>x and y need a common variable to allow them to join</figcaption></figure> 
 
 <div class="wp-block-columns has-2-columns">
   <div class="wp-block-column">
@@ -131,7 +131,7 @@ The first way is we can make sure **left_data** and **right_data** share a commo
   </div>
   
   <div class="wp-block-column">
-    <figure class="wp-block-image"><img src="http://markgingrass.com/wp-content/uploads/2019/08/table-of-7.jpg" alt="" class="wp-image-979" srcset="/wp-content/uploads/2019/08/table-of-7.jpg 766w, /wp-content/uploads/2019/08/table-of-7-300x248.jpg 300w" sizes="(max-width: 766px) 100vw, 766px" /><figcaption>Results of combining our data</figcaption></figure>
+    <figure class="wp-block-image"><img src="/wp-content/uploads/2019/08/table-of-7.jpg" alt="" class="wp-image-979" srcset="/wp-content/uploads/2019/08/table-of-7.jpg 766w, /wp-content/uploads/2019/08/table-of-7-300x248.jpg 300w" sizes="(max-width: 766px) 100vw, 766px" /><figcaption>Results of combining our data</figcaption></figure>
   </div>
 </div>
 
@@ -159,7 +159,7 @@ right_join(left_data, right_data, by = c("custId" = "CustomerId"))
   </div>
   
   <div class="wp-block-column">
-    <figure class="wp-block-image"><img src="http://markgingrass.com/wp-content/uploads/2019/08/right-join2.jpg" alt="" class="wp-image-983" srcset="/wp-content/uploads/2019/08/right-join2.jpg 1020w, /wp-content/uploads/2019/08/right-join2-300x174.jpg 300w, /wp-content/uploads/2019/08/right-join2-768x446.jpg 768w" sizes="(max-width: 1020px) 100vw, 1020px" /><figcaption>Our right_join only has 3 rows</figcaption></figure>
+    <figure class="wp-block-image"><img src="/wp-content/uploads/2019/08/right-join2.jpg" alt="" class="wp-image-983" srcset="/wp-content/uploads/2019/08/right-join2.jpg 1020w, /wp-content/uploads/2019/08/right-join2-300x174.jpg 300w, /wp-content/uploads/2019/08/right-join2-768x446.jpg 768w" sizes="(max-width: 1020px) 100vw, 1020px" /><figcaption>Our right_join only has 3 rows</figcaption></figure>
   </div>
 </div>
 
@@ -176,14 +176,14 @@ Now try running your **left_join** and **right_join** again one after another an
 
 <div class="wp-block-columns has-2-columns">
   <div class="wp-block-column">
-    <figure class="wp-block-image"><img src="http://markgingrass.com/wp-content/uploads/2019/08/left-join-3.jpg" alt="" class="wp-image-986" srcset="/wp-content/uploads/2019/08/left-join-3.jpg 550w, /wp-content/uploads/2019/08/left-join-3-150x150.jpg 150w, /wp-content/uploads/2019/08/left-join-3-300x300.jpg 300w" sizes="(max-width: 550px) 100vw, 550px" /><figcaption>Our new <strong>left_join</strong></figcaption></figure> 
+    <figure class="wp-block-image"><img src="/wp-content/uploads/2019/08/left-join-3.jpg" alt="" class="wp-image-986" srcset="/wp-content/uploads/2019/08/left-join-3.jpg 550w, /wp-content/uploads/2019/08/left-join-3-150x150.jpg 150w, /wp-content/uploads/2019/08/left-join-3-300x300.jpg 300w" sizes="(max-width: 550px) 100vw, 550px" /><figcaption>Our new <strong>left_join</strong></figcaption></figure> 
     
     <p>
     </p>
   </div>
   
   <div class="wp-block-column">
-    <figure class="wp-block-image"><img src="http://markgingrass.com/wp-content/uploads/2019/08/right-join-3.jpg" alt="" class="wp-image-987" srcset="/wp-content/uploads/2019/08/right-join-3.jpg 550w, /wp-content/uploads/2019/08/right-join-3-150x150.jpg 150w, /wp-content/uploads/2019/08/right-join-3-300x300.jpg 300w" sizes="(max-width: 550px) 100vw, 550px" /><figcaption>Our new <strong>right_join</strong></figcaption></figure> 
+    <figure class="wp-block-image"><img src="/wp-content/uploads/2019/08/right-join-3.jpg" alt="" class="wp-image-987" srcset="/wp-content/uploads/2019/08/right-join-3.jpg 550w, /wp-content/uploads/2019/08/right-join-3-150x150.jpg 150w, /wp-content/uploads/2019/08/right-join-3-300x300.jpg 300w" sizes="(max-width: 550px) 100vw, 550px" /><figcaption>Our new <strong>right_join</strong></figcaption></figure> 
     
     <p>
     </p>
@@ -202,7 +202,7 @@ inner_join(left_data, right_data, by = c("custId" = "CustomerId"))
 
 Run this line and the results will be different again, this time the only rows displayed are the ones that are common to both data sets. A good way to imagine this is like a Venn diagram where two circles overlap and the results display only the parts in both circles.<figure class="wp-block-image">
 
-<img src="http://markgingrass.com/wp-content/uploads/2019/08/venn-1024x576.png" alt="dplyr venn inner_join" class="wp-image-993" srcset="/wp-content/uploads/2019/08/venn-1024x576.png 1024w, /wp-content/uploads/2019/08/venn-300x169.png 300w, /wp-content/uploads/2019/08/venn-768x432.png 768w, /wp-content/uploads/2019/08/venn.png 1920w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption> **inner_join**&nbsp;shows only the common elements of both </figcaption></figure> 
+<img src="/wp-content/uploads/2019/08/venn-1024x576.png" alt="dplyr venn inner_join" class="wp-image-993" srcset="/wp-content/uploads/2019/08/venn-1024x576.png 1024w, /wp-content/uploads/2019/08/venn-300x169.png 300w, /wp-content/uploads/2019/08/venn-768x432.png 768w, /wp-content/uploads/2019/08/venn.png 1920w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption> **inner_join**&nbsp;shows only the common elements of both </figcaption></figure> 
 
 ## <span class="ez-toc-section" id="Recap"></span>Recap<span class="ez-toc-section-end"></span>
 

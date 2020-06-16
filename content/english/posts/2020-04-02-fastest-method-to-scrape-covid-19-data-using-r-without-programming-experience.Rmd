@@ -36,7 +36,7 @@ This is where we import data.
 
 library(utils)
 library(httr)
-static_url <- "http://markgingrass.com/wp-content/uploads/2020/04/covid_data.csv"
+static_url <- "/wp-content/uploads/2020/04/covid_data.csv"
 ecdc_url <- "https://opendata.ecdc.europa.eu/covid19/casedistribution/csv"
 #download the dataset from the ECDC website to a local temporary file
 GET(ecdc_url, authenticate(":", ":", type="ntlm"), write_disk(tf <- tempfile(fileext = ".csv")))
