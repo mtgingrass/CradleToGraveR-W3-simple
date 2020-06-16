@@ -6,8 +6,8 @@ categories:
   other: "Categories"
 
 # ===== footer =====
-#powered:
-#  other: "Powered by %s"
+powered:
+  other: "Powered by %s"
 
 theme:
   other: "Theme"
