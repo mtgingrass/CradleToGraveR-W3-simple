@@ -17,7 +17,7 @@ contentDir = "content/english"
       title = "Hugo W3 Simple Theme"
       authorinfo = "<h4>Authored By John Doe</h4>"
       licenseinfo = "<p class=\"w3-small\">John Doe, a good man living on the earth, loving making website with hugo. This article is licensed under a <a rel=\"license\" href=\"https://creativecommons.org/licenses/by/4.0/\" class=\"w3-text-white\">Creative Commons Attribution 4.0 International License</a>.</p>"
-      logotext = "HUGO W3 SIMPLE" # logo text
+      logotext = "Cradle to Grave R" # logo text
       isso_baseurl=""  #if you want to use isso as comment system,set your isso js baseurl here. It is like "https://isso.yourwebsite.com/" or "https://yourwebsite.com/isso/"
       isso_langcode="en"
       cookie_info = "This website uses cookies to ensure you get the best experience on our website. [Learn more](/privacy-policy/)"
@@ -95,30 +95,30 @@ contentDir = "content/chinese"
     socialicon = true
     googletranslate = true
     searchfunction = true #If true, it will only display search button but real search function is not included in example site because it need server-side app. To see the demo please visit https://jesselau.com
-    description = "Hugo W3 Simple Theme"
+    description = "All things R. Tutorials, tips, videos, blogs."
     onesignalid = ""  #one signal push app id
     # adsenseid="ca-pub-123456789"
     allowads = true
-    logotext = "HUGO W3 SIMPLE" # logo text
-    footer = "&copy; [John Doe](https://johndoe.com) 2018 | [Github](https://github.com/johndoe) | [Twitter](https://twitter.com/johndoe)  | [RSS](/index.xml)"
+    logotext = "Cradle to Grave R" # logo text
+    footer = "&copy; [Mark Gingrass](https://markgingrass.com) 2018 | [Github](https://github.com/mtgingrass/CradleToGraveR-W3-simple) | [Twitter](https://twitter.com/markgingrass)  | [RSS](/index.xml)"
 
 
 [params.social]  # Set your social account here, if you don't have some accounts just comment them
-    a-envelope = "mailto:your@email.com"
-    b-stack-overflow ="https://stackoverflow.com/users/12345678/john-doe"
-    c-twitter = "https://twitter.com/johndoe"
-    d-facebook = "https://www.facebook.com/johndoe"
-    e-github = "https://github.com/johndoe"
-    f-youtube = "https://www.youtube.com/channel/12345678"
-    g-linkedin = "https://www.linkedin.com/johndoe"
-    h-google = "https://plus.google.com/12345678"
-    i-github = "https://github.com/johndoe"
-    j-weibo = "https://weibo.com" 
-    k-weixin = "http://localhost:1313" 
-    l-tumblr = "https://www.tumblr.com/blog/johndoe"
-    m-instagram = "https://instagram.com/johndoe"
-    n-gitlab = "https://gitlab.com/johndoe"
-    o-pinterest = "https://www.pinterest.com/johndoe/"
+    #a-envelope = "mailto:mark.gingrass@gmail.com"
+    b-stack-overflow ="https://stackoverflow.com/users/6855770/devgin"
+    c-twitter = "https://twitter.com/markgingrass"
+    d-facebook = "https://www.facebook.com/mark.gingrass.1"
+    e-github = "https://github.com/mtgingrass"
+    f-youtube = "https://www.youtube.com/c/CradleToGraveR"
+    g-linkedin = "https://www.linkedin.com/in/markgingrass/"
+    #h-google = "https://plus.google.com/12345678"
+    #i-github = "https://github.com/johndoe"
+    #j-weibo = "https://weibo.com" 
+    #k-weixin = "http://localhost:1313" 
+    #l-tumblr = "https://www.tumblr.com/blog/johndoe"
+    #m-instagram = "https://instagram.com/johndoe"
+    #n-gitlab = "https://gitlab.com/johndoe"
+    #o-pinterest = "https://www.pinterest.com/johndoe/"
    
     
     

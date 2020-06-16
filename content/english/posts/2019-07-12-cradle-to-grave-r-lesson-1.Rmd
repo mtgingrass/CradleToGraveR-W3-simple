@@ -22,7 +22,6 @@ tags:
   - r script
   - rprogramming
   - scripts
-menu: "main"
 ---
 In this series of tutorials, we&#8217;ll cover the basics of R programming and RStudio. By the end of this lesson you&#8217;ll know:
 
