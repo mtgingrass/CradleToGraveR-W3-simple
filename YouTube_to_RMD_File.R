@@ -1,8 +1,9 @@
 library(jsonlite)
+library(readtext)
 
 yt_json_file <- 
   read_json("C:\\ytdl\\CradleToGraveR\\Absolute Beginners Guide\\01 - GOOD AUDIO - Install R & RStudio on Windows + First Script 2019\\GOOD AUDIO - Install R & RStudio on Windows + First Script 2019.mp4.info.json")
-
+yt_description <- readtext("C:\\ytdl\\CradleToGraveR\\Scraping Content\\01 - Data Manipulation Twitter Scraper using R\\Data Manipulation Twitter Scraper using R.webm.description")
 
 # ---
 # title: "2020 06 17 Post Template Example"
@@ -34,17 +35,22 @@ play_list_cat <- paste("categories:",
                   yt_json_file$playlist_title,
                   sep = "")
 
+yt_tags <- paste("tags:",
+                       "Test","Test2",
+                       sep = "\n  - ")
+
 w3yaml <- "type:  \"post\"
 w3codecolor: false
 draft: false"
 
 descript <- paste("**",title,"**\n\n",
-                  yt_json_file$description, sep = "\n")
+                  yt_description[2], sep = "\n")
 
 # Combined YAML
 yaml_tmp <- paste(title,
                   date_upload,
                   play_list_cat,
+                  yt_tags,
                   "",
                   w3yaml,
                   "---",

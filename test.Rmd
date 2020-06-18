@@ -3,6 +3,9 @@ title: GOOD AUDIO - Install R & RStudio on Windows + First Script 2019
 date: 2019-09-20
 categories:
   - Absolute Beginners Guide
+tags:
+  - Test
+  - Test2
 
 type:  "post"
 w3codecolor: false
