@@ -12,7 +12,8 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="/images/test_image_no_spaces.jpg" class="responsive">
+<img src="/wp-content/uploads/2019/09/thumbnail.jpg" class="responsive">
+
 **
 This post was 100% Automated
 **
