@@ -39,6 +39,7 @@ play_list_cat <- paste("categories:",
 
 # test to see if path will work for featured image or not
 # todo: automate making a copy of thumbnail to the static.images folder
+# note that the image name does not have the "numbering"
 image_path <- paste("/images/test_image_no_spaces.jpg", sep = "")
   
 yt_tags <- paste("tags:",
