@@ -60,7 +60,6 @@ yaml_tmp <- paste(title,
 
 
 write(yaml_tmp,
-      file = paste("C:\\Users\\markg\\Documents\\CradleToGraveR-W3-simple\\content\\english\\auto-posts\\",
-                   "test.Rmd"), 
+      file = "C:\\Users\\markg\\Documents\\CradleToGraveR-W3-simple\\content\\english\\auto-posts\\test.Rmd", 
                    append = FALSE)
 
