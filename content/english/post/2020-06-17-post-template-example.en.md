@@ -3,7 +3,7 @@ title: "2020 06 17 Post Template Example"
 date: 2020-06-17T20:58:59-04:00
 lastmod: 2020-06-17T20:58:59-04:00
 categories:
-
+- Test_Cat
 tags:
 - plugin
 
