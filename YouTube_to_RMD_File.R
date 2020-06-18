@@ -43,7 +43,7 @@ w3yaml <- "type:  \"post\"
 w3codecolor: false
 draft: false"
 
-descript <- paste("**",title,"**\n\n",
+descript <- paste("**","This post was 100% Automated","**\n\n",
                   yt_description[2], sep = "\n")
 
 # Combined YAML
@@ -59,5 +59,8 @@ yaml_tmp <- paste(title,
                   sep = "\n")
 
 
-write(yaml_tmp, file = "test.Rmd", append = FALSE)
+write(yaml_tmp,
+      file = paste("C:\\Users\\markg\\Documents\\CradleToGraveR-W3-simple\\content\\english\\auto-posts\\",
+                   "test.Rmd"), 
+                   append = FALSE)
 
