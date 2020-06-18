@@ -15,8 +15,8 @@ languageName = "English"
 contentDir = "content/english"
 [languages.en.params]
       title = "Hugo W3 Simple Theme"
-      authorinfo = "<h4>Authored By John Doe</h4>"
-      licenseinfo = "<p class=\"w3-small\">John Doe, a good man living on the earth, loving making website with hugo. This article is licensed under a <a rel=\"license\" href=\"https://creativecommons.org/licenses/by/4.0/\" class=\"w3-text-white\">Creative Commons Attribution 4.0 International License</a>.</p>"
+      authorinfo = "<h4>Authored By Mark gingrass</h4>"
+      licenseinfo = "<p class=\"w3-small\">Mark Gingrass, a good man living on the earth, loving making website with hugo. This article is licensed under a <a rel=\"license\" href=\"https://creativecommons.org/licenses/by/4.0/\" class=\"w3-text-white\">Creative Commons Attribution 4.0 International License</a>.</p>"
       logotext = "Cradle to Grave R" # logo text
       isso_baseurl=""  #if you want to use isso as comment system,set your isso js baseurl here. It is like "https://isso.yourwebsite.com/" or "https://yourwebsite.com/isso/"
       isso_langcode="en"
