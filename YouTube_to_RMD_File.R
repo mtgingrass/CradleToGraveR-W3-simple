@@ -4,8 +4,6 @@ yt_json_file <-
   read_json("C:\\ytdl\\CradleToGraveR\\Absolute Beginners Guide\\01 - GOOD AUDIO - Install R & RStudio on Windows + First Script 2019\\GOOD AUDIO - Install R & RStudio on Windows + First Script 2019.mp4.info.json")
 
 
-cat(yt_json_file$playlist_title)
-
 # ---
 # title: "2020 06 17 Post Template Example"
 # date: 2020-06-17T20:58:59-04:00
@@ -19,6 +17,41 @@ cat(yt_json_file$playlist_title)
 # w3codecolor: false
 # draft: false
 # ---
-write("---", file = "test.Rmd", append = TRUE)
-write(paste0(yt_json_file$playlist_title), file = "test.Rmd", append = TRUE)
-write("---", file = "test.Rmd", append = TRUE)
+
+title <- paste("---\ntitle: ", yt_json_file$title, sep = "")
+
+date_upload <- paste("date: ", 
+                     substr(yt_json_file$upload_date,1,4),
+                     "-",
+                     substr(yt_json_file$upload_date,5,6),
+                     "-",
+                     substr(yt_json_file$upload_date,7,8),
+                     sep = "")
+
+play_list_cat <- paste("categories:",
+                  "\n",
+                  "  - ",
+                  yt_json_file$playlist_title,
+                  sep = "")
+
+w3yaml <- "type:  \"post\"
+w3codecolor: false
+draft: false"
+
+descript <- paste("**",title,"**\n\n",
+                  yt_json_file$description, sep = "\n")
+
+# Combined YAML
+yaml_tmp <- paste(title,
+                  date_upload,
+                  play_list_cat,
+                  "",
+                  w3yaml,
+                  "---",
+                  "",
+                  descript,
+                  sep = "\n")
+
+
+write(yaml_tmp, file = "test.Rmd", append = FALSE)
+
