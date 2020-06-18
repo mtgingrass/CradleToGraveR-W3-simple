@@ -12,6 +12,7 @@ w3codecolor: false
 draft: false
 ---
 
+<img src="/images/test_image_no_spaces.jpg" class="responsive">
 **
 This post was 100% Automated
 **
@@ -21,3 +22,34 @@ This post was 100% Automated
 Scrape Twitter for keywords or hash tags or people. Use R and R Studio to scrape twitter using their own API, free.
 👇SUBSCRIBE & HIT THE 👍 BUTTON 👇
 R Channel: http://bit.ly/38yfFP9
+How I Create Videos: http://bit.ly/sub_to_chan
+
+➔ TubeBuddy: http://bit.ly/t_buddy
+➔ Blue Yeti Mic: https://amzn.to/2IheZTG
+➔ 2 Months SkillShare Free ➔  https://www.skillshare.com/r/profile/Mark-Gingrass/2388101
+
+Do you have more to add? Let me know how you liked the video or if I need anything corrected in the comments below.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+TECH GEAR I USE DAILY
+➔ MacBook Pro: https://amzn.to/2XxeBsG
+➔ Blue Yeti Mic: https://amzn.to/2IheZTG
+➔ Swissgear Backpack: https://youtu.be/VTTnRMyFkB8
+➔ Canon EOS 90D Camera: https://amzn.to/2u0o52K
+➔ Apple Magic Trackpad 2: https://amzn.to/31XDugG
+➔ mTuber for Title Effects : https://motionvfx.sjv.io/3M3KM
+➔ mArrows for animated arrows: https://motionvfx.sjv.io/9B3oe
+➔ Microphone - https://amzn.to/2LYfJkr
+➔ Backpack - https://amzn.to/2Ep4uez
+➔ Green Screen - https://amzn.to/2JVzMgP
+➔ Tripod Neewer: https://amzn.to/2uF275X
+➔ Tripod (cheap) - https://amzn.to/2Eo2wv4
+
+HOMEPAGE - https://www.markgingrass.com/
+REVIEWS/BLOG - https://www.markgingrass.com/blogs/re...
+
+OTHER COURSES I CURRENTLY TEACH
+➔ C++ Course: http://bit.ly/cpp_course
+➔ Supply Chain Management:  http://bit.ly/scm_course
+
+Let's chat
+https://twitter.com/MarkGingrass
