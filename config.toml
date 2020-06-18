@@ -14,7 +14,7 @@ weight = 0
 languageName = "English"
 contentDir = "content/english"
 [languages.en.params]
-      title = "Hugo W3 Simple Theme"
+      title = "Cradle To Grave R"
       authorinfo = "<h4>Authored By Mark gingrass</h4>"
       licenseinfo = "<p class=\"w3-small\">Mark Gingrass, a good man living on the earth, loving making website with hugo. This article is licensed under a <a rel=\"license\" href=\"https://creativecommons.org/licenses/by/4.0/\" class=\"w3-text-white\">Creative Commons Attribution 4.0 International License</a>.</p>"
       logotext = "Cradle to Grave R" # logo text
