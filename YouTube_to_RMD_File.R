@@ -8,19 +8,6 @@ yt_json_file <-
 
 yt_description <- readtext("C:\\ytdl\\CradleToGraveR\\Scraping Content\\01 - Data Manipulation Twitter Scraper using R\\Data Manipulation Twitter Scraper using R.webm.description")
 
-# ---
-# title: "2020 06 17 Post Template Example"
-# date: 2020-06-17T20:58:59-04:00
-# lastmod:
-# categories:
-#   - Test Category
-#   tags:
-#   - plugin
-# 
-# type:  "post"
-# w3codecolor: false
-# draft: false
-# ---
 
 title <- paste("---\ntitle: ", yt_json_file$title, sep = "")
 
@@ -38,11 +25,7 @@ play_list_cat <- paste("categories:",
                   yt_json_file$playlist_title,
                   sep = "")
 
-# test to see if path will work for featured image or not
-# todo: automate making a copy of thumbnail to the static.images folder
-# note that the image name does not have the "numbering"
-# image_path <- paste("/images/test_image_no_spaces.jpg", sep = "")
-image_path <- "C:\\Users\\markg\\Documents\\CradleToGraveR-W3-simple\\content\\wp-content\\uploads\\2019\\09\\thumbnail.jpg"
+image_path <- "/wp-content/uploads/2019/09/thumbnail.jpg"
   
 yt_tags <- paste("tags:",
                        "Test","Test2",
@@ -67,6 +50,7 @@ yaml_tmp <- paste(title,
                   paste("<img src=", '"',image_path,'"', ">", sep = ""),
                   descript,
                   sep = "\n")
+
 
 
 write(yaml_tmp,
