@@ -2,6 +2,7 @@ library(jsonlite)
 library(readtext)
 library(ymlthis)
 library(stringr)
+library(here)
 
 yt_json_file <- 
   read_json("C:\\ytdl\\CradleToGraveR\\Absolute Beginners Guide\\01 - GOOD AUDIO - Install R & RStudio on Windows + First Script 2019\\GOOD AUDIO - Install R & RStudio on Windows + First Script 2019.mp4.info.json")
@@ -25,11 +26,8 @@ play_list_cat <- paste("categories:",
                   yt_json_file$playlist_title,
                   sep = "")
 
-#image_path <- "/wp-content/uploads/2019/09/thumbnail.jpg"
-image_path <- paste("/images/auto-post-images/",
-                    yt_json_file$title,
-                    ".mp4.webp" ,
-                    sep = "")
+
+image_path <- content_files[1]
 
 yt_tags <- paste("tags:",
                        "Test","Test2",
@@ -51,7 +49,8 @@ yaml_tmp <- paste(title,
                   w3yaml,
                   "---",
                   "",
-                  paste("<img src=", '"',image_path,'"', ">", sep = ""),
+                  paste("<img src=", '"https://www.cradletograver.com/auto-posts/images/',
+                        image_path,'"', ">", sep = ""),
                   descript,
                   sep = "\n")
 

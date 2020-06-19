@@ -26,12 +26,10 @@ thumb_files <- list.files(path = "C:/ytdl/CradleToGraveR/",
 file.copy(from = thumb_files, 
           to = "C:/Users/markg/Documents/CradleToGraveR-W3-simple2/content/english/auto-posts/images")
 
+# Run .bat file first to strip spaces in filenames
+
 content_files <- list.files(path = "C:/Users/markg/Documents/CradleToGraveR-W3-simple2/content/english/auto-posts/images",
                           pattern = "*.webp$", 
                           recursive = FALSE,
                           full.names = FALSE)
 
-file.rename(paste("C:/Users/markg/Documents/CradleToGraveR-W3-simple2/content/english/auto-posts/images/",
-                  content_files,
-                  sep = ""), 
-            str_replace_all(content_files, "[^[:alnum:]]", "-"))
