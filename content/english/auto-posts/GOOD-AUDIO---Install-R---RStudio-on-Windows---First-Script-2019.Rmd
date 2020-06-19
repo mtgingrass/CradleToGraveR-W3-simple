@@ -12,9 +12,9 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="/ytdl/CradleToGraveR/Absolute Beginners Guide/01 - GOOD AUDIO - Install R & RStudio on Windows + First Script 2019/test_image_no_spaces.jpg">
+<img src="/images/auto-post-images/GOOD%20AUDIO%20-%20Install%20R%20&%20RStudio%20on%20Windows%20+%20First%20Script%202019.mp4.webp">
 **
-This post was 100% Automated
+TEST 1
 **
 
 
