@@ -1,6 +1,7 @@
 library(jsonlite)
 library(readtext)
 library(ymlthis)
+library(stringr)
 
 yt_json_file <- 
   read_json("C:\\ytdl\\CradleToGraveR\\Absolute Beginners Guide\\01 - GOOD AUDIO - Install R & RStudio on Windows + First Script 2019\\GOOD AUDIO - Install R & RStudio on Windows + First Script 2019.mp4.info.json")
@@ -40,7 +41,8 @@ play_list_cat <- paste("categories:",
 # test to see if path will work for featured image or not
 # todo: automate making a copy of thumbnail to the static.images folder
 # note that the image name does not have the "numbering"
-image_path <- paste("/images/test_image_no_spaces.jpg", sep = "")
+# image_path <- paste("/images/test_image_no_spaces.jpg", sep = "")
+image_path <- "C:\\Users\\markg\\Documents\\CradleToGraveR-W3-simple\\content\\wp-content\\uploads\\2019\\09\\thumbnail.jpg"
   
 yt_tags <- paste("tags:",
                        "Test","Test2",
@@ -68,6 +70,7 @@ yaml_tmp <- paste(title,
 
 
 write(yaml_tmp,
-      file = "C:\\Users\\markg\\Documents\\CradleToGraveR-W3-simple\\content\\english\\auto-posts\\test.Rmd", 
+      file = paste("C:\\Users\\markg\\Documents\\CradleToGraveR-W3-simple2\\content\\english\\auto-posts\\",
+                   str_replace_all(yt_json_file$title, "[^[:alnum:]]", "-"), ".Rmd", sep=""), 
                    append = FALSE)
 

@@ -12,8 +12,7 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="/wp-content/uploads/2019/09/thumbnail.jpg" class="responsive">
-
+<img src="C\\Users\\markg\\Documents\\CradleToGraveR-W3-simple\\content\wp-content\\uploads\\2019\\09\\thumbnail.jpg">
 **
 This post was 100% Automated
 **
