@@ -4,10 +4,22 @@ library(ymlthis)
 library(stringr)
 library(here)
 
-yt_json_file <- 
-  read_json("C:\\ytdl\\CradleToGraveR\\Absolute Beginners Guide\\01 - GOOD AUDIO - Install R & RStudio on Windows + First Script 2019\\GOOD AUDIO - Install R & RStudio on Windows + First Script 2019.mp4.info.json")
+#youtube-dl base directory
+yt_dl_dir <- list.files(path = "c:/ytdl/", 
+                        pattern = "*.json$",
+                      recursive = TRUE,
+                      full.names = TRUE) 
 
-yt_description <- readtext("C:\\ytdl\\CradleToGraveR\\Scraping Content\\01 - Data Manipulation Twitter Scraper using R\\Data Manipulation Twitter Scraper using R.webm.description")
+yt_dl_description <- list.files(path = "c:/ytdl/", 
+                        pattern = "*.description$",
+                        recursive = TRUE,
+                        full.names = TRUE) 
+
+
+yt_json_file <- 
+  read_json(yt_dl_dir[1])
+
+yt_description <- readtext(yt_dl_description[1])
 
 
 title <- paste("---\ntitle: ", yt_json_file$title, sep = "")
