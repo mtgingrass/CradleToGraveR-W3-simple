@@ -12,4 +12,9 @@ lapply(files, function(x) {
     }  
 })
 
+#add playlist lists - not implemented yet
+play_list_list <- list("",
+                       "",
+                       "")
+
 

@@ -25,8 +25,9 @@ play_list_cat <- paste("categories:",
                   yt_json_file$playlist_title,
                   sep = "")
 
-image_path <- "/wp-content/uploads/2019/09/thumbnail.jpg"
-  
+#image_path <- "/wp-content/uploads/2019/09/thumbnail.jpg"
+image_path <- "C:\ytdl\CradleToGraveR\Absolute Beginners Guide\01 - GOOD AUDIO - Install R & RStudio on Windows + First Script 2019\GOOD AUDIO - Install R & RStudio on Windows + First Script 2019.mp4.webp"
+
 yt_tags <- paste("tags:",
                        "Test","Test2",
                        sep = "\n  - ")
