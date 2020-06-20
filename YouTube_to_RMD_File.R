@@ -34,6 +34,7 @@ df_yt <- data.frame(JSON = yt_dl_JSON, VTT = yt_dl_vtt_cnvrt[inds],
                     IMAGE = content_files[inds2])
 
 df_yt_partial <- df_yt[complete.cases(df_yt),]
+df_yt_Partial <- df_yt
 ### I could use the DF itself instead.
 ### Iterate through each json file. 
 

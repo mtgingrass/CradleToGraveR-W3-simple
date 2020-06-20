@@ -20,7 +20,7 @@ play_list_list <- list("",
 
 #copy thumbnail images
 thumb_files <- list.files(path = "C:/ytdl/CradleToGraveR/",
-           pattern = "*.webp$", 
+           pattern = "*.webp$ |*.jpg",
            recursive = TRUE,
            full.names = TRUE)
 
@@ -41,7 +41,7 @@ content_files <- list.files(path = here("content",
                                         "english",
                                         "auto-posts",
                                         "images"),
-                          pattern = "*.webp$", 
+                          pattern = "*.webp$ | *.jpg", 
                           recursive = FALSE,
                           full.names = FALSE)
 

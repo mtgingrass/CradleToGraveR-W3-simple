@@ -8,5 +8,3 @@ For %%a in (*.webp) Do (
     Set "File=%%~a"
     Ren "%%a" "!File:%Pattern%=%Replace%!"
 )
-
-Pause&Exit
