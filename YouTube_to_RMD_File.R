@@ -76,11 +76,9 @@ for (index in seq_len(nrow(df_yt_partial)))
                     "  - ",
                     yt_json_file$playlist_title,
                     sep = "")
-  image_path <- ""
-  if (!is.na(df_yt$IMAGE[index])){
-    image_path <- gsub(" ", "", df_yt$IMAGE[index])
-  }
-  
+
+  image_path <- gsub(" ", "", df_yt$IMAGE[index])
+
   yt_tags <- paste("tags:",
                          "Test","Test2",
                          sep = "\n  - ")

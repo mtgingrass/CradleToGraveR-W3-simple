@@ -12,7 +12,7 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/">
+<img src="https://www.cradletograver.com/auto-posts/images/NetlifyCustomURLandNewPostwithRStudioBlogdownHugo.mp4.jpg">
 
 
 

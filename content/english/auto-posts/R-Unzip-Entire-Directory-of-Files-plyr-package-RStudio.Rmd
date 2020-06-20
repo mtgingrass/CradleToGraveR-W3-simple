@@ -12,7 +12,7 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/Residuals,Predictions,PlotsR.mp4.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/MultiLinearRegressionwithR.mp4.jpg">
 
 
 
