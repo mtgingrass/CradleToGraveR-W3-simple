@@ -1,0 +1,18 @@
+---
+title: CradleToGraveR Live Stream - Unzip Directory of Files
+date: 2020-05-17
+categories:
+  - Practical R for Business
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+---
+
+<img src="https://www.cradletograver.com/auto-posts/images/Correlation-Matrix-in-R-with-corplot.mp4.jpg">
+The tutorial starts here: https://youtu.be/irOsVaJFdVs?t=159
+
+In this video, I will show you how to use R and RStudio to unzip a directory of files, all automated.

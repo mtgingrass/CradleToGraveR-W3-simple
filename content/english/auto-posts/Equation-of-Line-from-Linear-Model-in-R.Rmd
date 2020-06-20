@@ -1,0 +1,17 @@
+---
+title: Equation of Line from Linear Model in R
+date: 2020-04-22
+categories:
+  - Random Statistics
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+---
+
+<img src="https://www.cradletograver.com/auto-posts/images/Netlify-Custom-URL-and-New-Post-with-RStudio-Blogdown-Hugo.mp4.jpg">
+#CradleToGraveR now a Discord! Come say hello: https://discord.gg/f2uDBvA
+Equation of Line from Linear Model in R

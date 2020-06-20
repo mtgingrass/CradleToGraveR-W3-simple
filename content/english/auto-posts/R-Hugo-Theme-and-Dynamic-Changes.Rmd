@@ -1,0 +1,65 @@
+---
+title: R Hugo Theme and Dynamic Changes
+date: 2020-06-06
+categories:
+  - R Blogdown Site
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+---
+
+<img src="https://www.cradletograver.com/auto-posts/images/R-Squared-Adjusted-R-Squared-RStudio-Linear-Models.mp4.jpg">
+How to change Hugo Themes in RStudio and create new blogdown projects. How to dynamically change your site with RStudio.
+
+Discord: https://discord.gg/f2uDBvA
+
+https://gitforwindows.org/
+https://git-scm.com/downloads
+https://github.com
+
+Other playlists you may be interested in:
+https://www.youtube.com/watch?v=R7wbCGXKAok&list=PLuak_bGvcWZO0Da0cDVBpDeTQPEWpuvCD
+https://www.youtube.com/watch?v=oXFPOOrkogA&list=PLuak_bGvcWZNu-Eu2MPBS7gZ6Zz3jdc4w
+https://www.youtube.com/watch?v=Owi5GJWuV8o&list=PLuak_bGvcWZP3unvBws7tF1SLeaUqgOA9
+https://www.youtube.com/playlist?list=PLuak_bGvcWZM40II6nwwJe2YgGm6dFRXF
+https://www.youtube.com/watch?v=_D12UM7iP_Q&list=PLuak_bGvcWZMmYwJZR-sDrJkTEGxm2zwY
+https://www.youtube.com/watch?v=SetpW7m45iw&list=PLuak_bGvcWZMgylLxW8dCEoT3AJ4fqWdY
+
+<U+0001F447>SUBSCRIBE & HIT THE <U+0001F44D> BUTTON <U+0001F447>
+R Channel: http://bit.ly/38yfFP9
+
+How I Create Videos: http://bit.ly/sub_to_chan
+
+<U+2794> TubeBuddy: http://bit.ly/t_buddy
+<U+2794> Blue Yeti Mic: https://amzn.to/2IheZTG
+<U+2794> 2 Months SkillShare Free <U+2794>  https://www.skillshare.com/r/profile/Mark-Gingrass/2388101
+
+Do you have more to add? Let me know how you liked the video or if I need anything corrected in the comments below.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+TECH GEAR I USE DAILY
+<U+2794> MacBook Pro: https://amzn.to/2XxeBsG
+<U+2794> Blue Yeti Mic: https://amzn.to/2IheZTG
+<U+2794> Swissgear Backpack: https://youtu.be/VTTnRMyFkB8
+<U+2794> Canon EOS 90D Camera: https://amzn.to/2u0o52K
+<U+2794> Apple Magic Trackpad 2: https://amzn.to/31XDugG
+<U+2794> mTuber for Title Effects : https://motionvfx.sjv.io/3M3KM
+<U+2794> mArrows for animated arrows: https://motionvfx.sjv.io/9B3oe
+<U+2794> Microphone - https://amzn.to/2LYfJkr
+<U+2794> Backpack - https://amzn.to/2Ep4uez
+<U+2794> Green Screen - https://amzn.to/2JVzMgP
+<U+2794> Tripod Neewer: https://amzn.to/2uF275X
+<U+2794> Tripod (cheap) - https://amzn.to/2Eo2wv4
+
+HOMEPAGE - https://www.markgingrass.com/
+REVIEWS/BLOG - https://www.markgingrass.com/blogs/re...
+
+OTHER COURSES I CURRENTLY TEACH
+<U+2794> C++ Course: http://bit.ly/cpp_course
+<U+2794> Supply Chain Management:  http://bit.ly/scm_course
+
+Let's chat
+https://twitter.com/MarkGingrass

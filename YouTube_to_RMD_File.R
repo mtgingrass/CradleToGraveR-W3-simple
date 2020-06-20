@@ -15,11 +15,11 @@ yt_dl_descrip_dir <- list.files(path = "c:/ytdl/",
                         recursive = TRUE,
                         full.names = TRUE)
 
-# Use this if the json file description is not working correctly
-#yt_dl_vtt_cnvrt <- list.files(path = "c:/ytdl/", 
-#                                pattern = "*.en.txt$",
-#                                recursive = TRUE,
-#                                full.names = TRUE)
+
+yt_dl_vtt_cnvrt <- list.files(path = "c:/ytdl/",
+                               pattern = "*.en.txt$",
+                               recursive = TRUE,
+                               full.names = TRUE)
 
 L1 <- yt_dl_JSON
 L2 <- yt_dl_vtt_cnvrt
@@ -30,7 +30,8 @@ inds <- match(sub('\\..*', '', basename(yt_dl_JSON)),
 inds2 <- match(sub('\\..*', '', basename(yt_dl_JSON)), 
                sub('\\..*', '', basename(content_files)))
 
-df_yt <- data.frame(JSON = yt_dl_JSON, VTT = yt_dl_vtt_cnvrt[inds],
+df_yt <- data.frame(JSON = yt_dl_JSON, 
+                    VTT = yt_dl_vtt_cnvrt[inds],
                     IMAGE = content_files[inds2])
 
 df_yt_partial <- df_yt[complete.cases(df_yt),]

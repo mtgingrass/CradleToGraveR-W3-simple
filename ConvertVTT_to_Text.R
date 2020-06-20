@@ -33,7 +33,7 @@ perm_wd <- "C:/Users/markg/Documents/CradleToGraveR-W3-simple2"
 
 setwd(here("content","english","auto-posts","images"))
 
-shell.exec("strip_spaces.bat")
+shell.exec("strip_spaces2.bat")
 setwd(perm_wd)
 
 #
