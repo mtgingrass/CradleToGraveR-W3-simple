@@ -40,13 +40,10 @@ L2 <- yt_dl_vtt_cnvrt
 inds <- match(sub('\\..*', '', basename(yt_dl_JSON)), 
               sub('\\..*', '', basename(yt_dl_vtt_cnvrt)))
 
-inds2 <- match(sub('\\..*', '', basename(yt_dl_JSON)), 
-               sub('\\..*', '', basename(content_files)))
-
 inds3 <- match(sub('\\..*', '', basename(yt_dl_JSON)), 
                sub('\\..*', '', basename(yt_dl_descrip_dir)))
 
-inds4 <- match(sub('\\..*', '', basename(yt_dl_JSON)), 
+inds4 <- match(gsub(' ', '', sub('\\..*', '', basename(yt_dl_JSON))), 
                sub('\\..*', '', basename(yt_dl_images)))
 
 
@@ -55,16 +52,20 @@ df_yt <- data.frame(JSON = yt_dl_JSON,
                     IMAGE = yt_dl_images[inds4],
                     DESC = yt_dl_descrip_dir[inds3])
 
+# Use only if no NAs are in the row
 df_yt_partial <- df_yt[complete.cases(df_yt),]
-#df_yt_partial <- df_yt
+
 
 
 for (index in seq_len(nrow(df_yt_partial)))
 {
+  #Get the json file
   yt_json_file <- read_json(df_yt_partial$JSON[index])
   
+  # Extract meta-data from json file
   yt_title <- yt_json_file[index]$title
-  
+
+  #I am having trouble using the description due to utf-8 issues?  
   #yt_descrip <- readtext(yt_dl_descrip_dir[index])
   #yt_descrip <- readtext(df_yt$DESC[index]) #yt_json_file$description
   
@@ -94,10 +95,9 @@ for (index in seq_len(nrow(df_yt_partial)))
 w3codecolor: false
 draft: false"
   
-  #descript <- paste("**","TEST 1","**\n\n",
-  #                  yt_descrip, sep = "\n")
 
-vtt_txt <-  paste(readLines(df_yt_partial$VTT[index]), collapse="\n")  
+vtt_txt <-  paste(readLines(df_yt_partial$VTT[index]), collapse="\n") 
+
   # Combined YAML
   yaml_tmp <- paste(title,
                     date_upload,
@@ -107,18 +107,21 @@ vtt_txt <-  paste(readLines(df_yt_partial$VTT[index]), collapse="\n")
                     w3yaml,
                     "---",
                     "",
+                    paste("<a href=\"", yt_json_file$webpage_url,'">', sep = ""),
                     paste("<img src=", '"https://www.cradletograver.com/auto-posts/images/',
                           image_path,'"', ">", sep = ""),
+                    paste0("</a>"),
                     #yt_json_file$description,
                     "\n\n", 
                     #descript,
                     "\n\n\n\n",
                     vtt_txt,
                     sep = "\n")
+  
+  
   yaml_tmp <- paste0(yaml_tmp, "End of file\n")
   
-  
-  
+  #Create the Rmd file
   write(yaml_tmp,
         file = paste("C:\\Users\\markg\\Documents\\CradleToGraveR-W3-simple2\\content\\english\\auto-posts\\",
                      str_replace_all(yt_json_file$title, "[^[:alnum:]]", "-"), ".Rmd", sep=""), 

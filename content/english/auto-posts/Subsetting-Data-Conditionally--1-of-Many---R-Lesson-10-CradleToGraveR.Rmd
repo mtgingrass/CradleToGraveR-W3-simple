@@ -12,7 +12,9 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/RInteractionTermsandRegression.mp4.jpg">
+<a href="https://www.youtube.com/watch?v=yHmD7g-lsr4">
+<img src="https://www.cradletograver.com/auto-posts/images/SubsettingData(dataframe),1ofMany-RLesson9.webm.jpg">
+</a>
 
 
 

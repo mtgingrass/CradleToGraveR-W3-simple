@@ -12,7 +12,9 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/PlotCOVID19coronavirusDatausingRdplyrandggplot.webm.jpg">
+<a href="https://www.youtube.com/watch?v=ioqrwUaSde8">
+<img src="https://www.cradletograver.com/auto-posts/images/KableTablewithRandCoronavirusCOVID19DeathRates.webm.jpg">
+</a>
 
 
 

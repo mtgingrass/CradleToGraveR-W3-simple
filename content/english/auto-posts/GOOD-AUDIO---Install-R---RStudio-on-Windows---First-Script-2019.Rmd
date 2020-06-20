@@ -1,0 +1,169 @@
+---
+title: GOOD AUDIO - Install R & RStudio on Windows + First Script 2019
+date: 2019-09-20
+categories:
+  - Absolute Beginners Guide
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+---
+
+<a href="https://www.youtube.com/watch?v=R7wbCGXKAok">
+<img src="https://www.cradletograver.com/auto-posts/images/RInteractionTermsandRegression.mp4.jpg">
+</a>
+
+
+
+
+
+
+
+
+
+00:00
+we are gonna download our and our studio and install them both on this fresh
+clean virtual machine Microsoft Windows so I have Microsoft edge down here we're
+gonna open that up and instead of typing
+in the URL we'll just go ahead and go to
+google.com or whatever search engine you want to use and just type in download
+our and the first site should be the our project our - project org click on that
+and then this site hasn't changed in years for the most part so the top part
+looks very similar and it has a download link here to download our so click on
+download our go down to a mirror site that's close to your location I'm in the
+USA so I'm going to click on that and finally you have a prompt to pick your
+platform of choice Linux Mac or Windows I'm gonna go ahead and download this for
+Windows I'm running the windows on top of my macbook in a virtual machine once
+
+00:01
+you click on that you get to this page then it tells you to install our for the
+first time click here and you finally get to the download link right here
+download our three point six point one at the time and the latest stable
+release should be this one here that it that it gives you by default there are
+developer versions as well you can download if you're interested so I
+clicked on that and with this I'm just going to go ahead and save it as and
+I'll put it on the desktop so that we can find it easy now that's downloading
+I can close well instead of closing this let's go ahead and download our studio
+while we're at it we're not going to install it yet though so again just go
+to google.com and type in download our studio very simple and it's the our
+studio comm I like to use Google because sometimes when I tell people to go to
+our studio they might misspell it or something like that but you can go
+directly to the link if you want most likely you're going to want this free
+
+00:02
+version the art studio desktop and so when you click on download here it'll
+bring you down to installers for supported platforms as you can see it
+says Windows Mac and Ubuntu Linux I'm again using a Windows machine in a
+VirtualBox and it is the very top one we're gonna go ahead and download that
+while that's downloading well let's just go ahead and save it actually I'll save
+it as and we'll put this on the desktop as well and you really want to install
+our first because our studio relies on our being installed so here's my our
+version three point six point one on the desktop let's go ahead and install that
+while our studio is finishing up the download of course I'm going to click
+yes I want to install this app pick your language and run through the steps read
+
+00:03
+all the pages of fun and pick your location and you you probably want to
+install the 32-bit and the 64-bit file because there's certain applications
+that might be 32-bit versus 64-bit and there are occasions where you want to
+swap out which version you want to use we're not going to get into that here
+but a lot of for example government applications are still using 32-bit
+versions of Microsoft Access and sometimes with are you want to access
+the access in order to do that you need the 32-bit version I don't want to
+customize and here we go we're just going to go through the menu system like
+any any other installation I'm sure that you're all familiar with that we're
+gonna load this up we're not even gonna test this out honestly once it's done
+installing we're just going to go ahead and and install the our studio and our
+studio is going to point to this version of our as its back-end to actually run
+the scripts you can also download previous versions of our for example if
+your work only has like a two point X type version you can download that as
+
+00:04
+well as a 3.5 and within our studio you can actually set up which are to use
+which version so you can do it that way ok our is all set up and now we're just
+going to set up our studio here's the other link for that and again it's a
+similar guide usually the default locations is what I use once in a while
+you might want to change that to say next
+hard drive or an SSD drive to save space on your your local machine but I think
+for the most part using the defaults is all I'm going to do and we're going to
+run this and what I'll do when this is done is I will open it up and I will
+show you a couple quick settings and then we'll run our first script just to
+show you that it works so let's go ahead and click on the Start menu and we're
+going to type in RS for our studio and you can see it pops right up here I'm
+also gonna right click on it and I'm going to pin it to my taskbar because
+that's where I like to put things that I use a lot so now it's down here I'm
+
+00:05
+going to click on R now that's not R as in the R version three point six this is
+our studio and it just happens to have the R as the icon so here we go we have
+a our studio setup and let me just explain this is the console this area
+here is your environment where when you store variables it'll show up there and
+down here is kind of like a nice little viewer for files for plots to install
+packages you can do all that down in this area and of course everything is
+customizable with size this right here is the console so we can do something
+like print and just type in hello world here hit enter and as you can see on
+output line number one it says hello world this is not an R script this is
+just the our console let's go to your tools and go to global options and I'll
+show you just a couple quick things remember I said you can have different
+versions of our well here's where you would change that if you download it our
+version 2 point ax or a different version for whatever reason it would be
+
+00:06
+changed right here finally we are going to go to appearance because I like to
+set this as a different size font especially when I'm tutoring online so
+I'm going to set that up to be a little bit bigger and then also you can pick a
+a color theme basically so whatever you choose Eclipse or whatever let's just do
+a dark theme here hit apply or hit OK and it says do you want to restart yes
+it's really really quick usually now this is pretty good because it's running
+in a virtual machine on top of my macbook that's a 2017 MacBook
+so now I have my new colors let's start a new project file new project this way
+we can contain all of our stuff in one directory I'm going to put it in a new
+directory and we're going to do new project we're gonna keep it simple
+simple simple direct your name I'm going to call it first our project make it
+nice and simple now I'm going to click browse just to see where the default
+location is so it looks like the default
+
+00:07
+is under your documents that's perfectly fine for me I'm going to keep that and
+I'm just going to click on create project and you'll see only a slight
+change your files over here are now under that project you see it's under
+home first project right here you can see the directory structure let's go
+ahead and do a new script now this is your first our script file new or file a
+new file our script there's a lot of options and in other tutorials or
+further down the line with this tutorial
+I'll show you and explain a lot of these
+other features let's click on our script this is our very first script and we're
+going to do the same thing we can say print in parenthesis hello world and the
+world never replies back so that's really awkward now there's two ways to
+run this code you can either hit if you're on a Macbook command enter and if
+you're on Windows I believe it's ctrl enter control enter here and you can see
+
+00:08
+down here on output line number one hello world so you know it works
+everything is fine and that's it now you can save this file let's go ahead and
+click on save ctrl s and I'm going to call it for a script and that's going to
+automatically default to the project directory which is right here for a
+script first our project it's all accessible through here which is nice
+and then if you had plots they would be here packages we'll get into packages a
+little bit later but to update packages or to install them you can click on
+install it makes it very very simple and
+for your global environment that's again if you have things in your RAM or your
+environment for example this variable var variable a I'm going to assign that
+number and then I'm gonna do control-enter and you'll see it shows up
+on my right-hand side because it's stored in memory it's using an actual
+space and here it is to clean that up you can actually delete the variables by
+
+00:09
+clicking on this broom and clicking yes and then you can start all over that's
+one way to do it click on run it'll run the entire thing
+and I thought there was a way to run the whole thing but I guess I guess
+highlighting it and hit and run is it's just good enough for now well that's it
+I wanted to keep this short and simple for a Windows or a Mac user to download
+and install our if you have any questions put them in the comments or
+comment below or send me a message if you have any tips or tricks go ahead and
+put those down there as well I'd love to hear from you so stay tuned there's
+plenty of more exercises and tutorials to goEnd of file
+

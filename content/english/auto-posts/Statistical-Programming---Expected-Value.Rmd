@@ -12,7 +12,9 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/dput-RReproducibleExampleforStackOverflow.mp4.jpg">
+<a href="https://www.youtube.com/watch?v=TXgwAY5EEdA">
+<img src="https://www.cradletograver.com/auto-posts/images/KableTablewithRandCoronavirusCOVID19DeathRates.webm.jpg">
+</a>
 
 
 

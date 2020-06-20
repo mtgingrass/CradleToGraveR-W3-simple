@@ -12,7 +12,9 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/RStudiotoGithubtoNetlifyLiveSiteblogdownHugo.mp4.jpg">
+<a href="https://www.youtube.com/watch?v=UqS0zCMcMVM">
+<img src="https://www.cradletograver.com/auto-posts/images/LinearRegressionLMusingRPlotLine.mp4.jpg">
+</a>
 
 
 

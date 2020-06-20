@@ -12,7 +12,9 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/MultiLinearRegressionwithR.mp4.jpg">
+<a href="https://www.youtube.com/watch?v=DggiyPIas5E">
+<img src="https://www.cradletograver.com/auto-posts/images/COVIDCSVDataUpdatePlot-datafromEuropeanCenterforDiseaseandPrevention.mp4.jpg">
+</a>
 
 
 

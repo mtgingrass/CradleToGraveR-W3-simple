@@ -2,7 +2,7 @@
 title: Statistical Programming with R - Estimating f (Notation)
 date: 2020-04-01
 categories:
-  - Absolute Beginners Guide to Statistical Programming
+  - Random Statistics
 tags:
   - Test
   - Test2
@@ -12,7 +12,9 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/">
+<a href="https://www.youtube.com/watch?v=Owi5GJWuV8o">
+<img src="https://www.cradletograver.com/auto-posts/images/RCDCDataFixedrmarkdownTutorial.webm.jpg">
+</a>
 
 
 

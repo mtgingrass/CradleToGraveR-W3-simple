@@ -12,7 +12,9 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/NA">
+<a href="https://www.youtube.com/watch?v=b0N6bdvM1aM">
+<img src="https://www.cradletograver.com/auto-posts/images/EquationofLinefromLinearModelinR.mp4.jpg">
+</a>
 
 
 

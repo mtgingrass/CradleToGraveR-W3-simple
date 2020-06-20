@@ -1,0 +1,196 @@
+---
+title: Random Numbers, Seeds - R Lesson 8
+date: 2019-08-17
+categories:
+  - Absolute Beginners Guide
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+---
+
+<a href="https://www.youtube.com/watch?v=TwzmPV_zJKw">
+<img src="https://www.cradletograver.com/auto-posts/images/Sequence,RepeatandSample-RLesson7.webm.jpg">
+</a>
+
+
+
+
+
+
+
+
+
+00:00
+I've got a couple quick tips and tricks for you to get going with a little bit
+more are today nothing nothing crazy just quick couple
+things that I wanted to mention last time but did not so let's go dive right
+into it as always I'm going to try to do a new
+file so I'll do an our notebook file and we're going to delete all of that we're
+going to give it a heading and say this is a random number generator so generate
+random numbers this is our documentation and we might as well put a new title on
+there saying random numbers because it's a notebook file remember as soon as I
+save it you can use it as an HTML file with code and all that let's insert a
+chunk ctrl or command option hi that's our our chunk and in fact we'll name
+
+00:01
+that chunk we'll say random number underscore and in the chunk we're going
+to reintroduce the sequences remember we
+did sequences 1 through 100 and if I hit
+command enter you'll see them show up on
+the bottom of my screen let's say that I wanted to do another chunk down here I
+do well let's do another head and I'll say random number 2 we're gonna do
+command option I random chunk or another
+chunk we're gonna call this one or we're gonna do 1 through 50 here just for fun
+there we go now we have a lot of code and we want to collapse some of this
+code we can go up and see what that number 10 is the line 10 that little
+down arrow right there click on that and it makes all of the things under that
+disappear same thing with all of your your markdown so your heading number 2
+anything that's not heading number 2 going down if you click on that 6 it
+goes away and then click it again to bring it back so that's how you can
+
+00:02
+bring code and chunks and markdown in and out of your actual viewer so that
+you can make your workflow process slightly better there's a bird flying
+into my window now so I'm a little distracted anyways
+we don't really need the second chunk right now let's delete it I just wanted
+to show you those little arrows so a random number 1 through 100 that is not
+random that is actually a sequence of numbers so we don't want that we want a
+random number so in order to do a random
+number there's a couple ways there's one called run if and if you do run if
+you're gonna put in a a number of random
+numbers you want that's the end and then a min in a max or you can just leave
+minimax as the default which is 0 and 1 so if I do I want 10 random numbers I
+just hit command enter on that and I get
+10 random numbers with decimal places if I wanted to make them between 10 and 40
+same thing and remember you don't need to explicitly say min and Max as long as
+
+00:03
+the parameters are in order I could have
+easily said min equals 10 and max equals 40 and run the chunk this way again
+doesn't matter and you get the same result so you didn't have to explicitly
+say min equals max equals but you should get used to that because a lot of times
+the parameter order will matter so that's it gets confusing so if if you're
+not worried about order you can skip naming those parameters if the order
+matters for sure you have to name them okay so let's run if and we don't really
+want to do decimal numbers let's try a different one let's do another chunk
+below it and let's do command option I and let's try to get some decimal
+numbers so do that we're gonna do a little trick we're gonna use that sample
+technique that we used before remember sample is taking a arbitrary
+sample or random sample of numbers from a pool of numbers so in order to do that
+let's do a sample and our arbitrary set of numbers is going to be we'll do the
+
+00:04
+same thing 10 through 40 but remember the sequence 10 : 42 this first
+parameter 10 11 12 all the way up for 40 that's my n in this little yellow box
+here the or the X and the size we're gonna do the same thing we're gonna do
+well actually let's click on size and see what it says and non-negative
+integer integer given the number of items to choose so the order of these
+parameters are slightly different I want to choose 10 numbers
+and it's gonna be from that sample pool so let's command enter that and we have
+ten integer numbers pretty cool if I run
+it again you run it again and you get we run it using this a set of different
+random numbers pretty easy we could set those as variables so let's close one
+random two and assign it to a sample of random numbers and let's call this run F
+when I hear random 1 and assign that as well and I'll run that so as you can see
+in my variables in my environment you see that I have R and 1 and ran too cool
+
+00:05
+well let's say we don't want those anymore how do we get rid of those
+random variables well I already showed you once that this little brush here
+this little broom will erase all of these variables but you might not want
+to erase all the variables what if you just wanted to erase the number random
+to a random one specifically let me show
+you how to do that I will do that in the console so you can run the console at
+the same time as running your notebooks or your scripts by going down to the
+console here and you literally can just type in well first of all type in the
+word LS I don't know what that stands for I forget but it's a linux command
+and our command LS will give you the list it'll return the list of the names
+of the variables in your environment pretty cool so LS will give you that
+list remember that let's say I want to remove a variable we can do RM open
+parentheses and just type in let's say we want to remove random variable number
+1 if I do that and I run it as you see in the environment it is gone so now if
+I try to use Rand one it says object Rand 1 not found but ran to is still
+
+00:06
+found you can repeat it all you want it's great or you can remove them all
+let's let's let's get Rand one back in gear let's press the play button here
+and we have Rand one and two we want to remove them all remember LS open
+parentheses close parentheses did a random one a random - it gives you a
+list of the names of the variables what I can do is I can do RM so remove and
+what do I want to remove I want to remove that list of variables so the
+entire thing so I can remove the I'm going to say list equals LS and open
+printed closed parentheses because LS will will bring back the list and you
+can remove them that way as well so they're all gone as you can see that
+being said a couple or things while we're here is something
+called a seed I don't really use random numbers without being able to duplicate
+this so you have to duplicate what you're doing so in order to do that we
+can set a seed and you can say set dot seed and you give it a random number the
+
+00:07
+same number though like let's say I want a number at 3:45 if I set that seat I'm
+still gonna get random numbers but every time I run this program I'll get the
+same set of random numbers it's gonna be
+set based on the same algorithm and I'll be able to reproduce this this is very
+very important because if you're gonna give this to a colleague or to a friend
+or to whoever if you don't set the seat then they truly will get a random number
+and they can't duplicate what you've done to try to solve your problem fix
+your error or help you along etc etc so with that being said let's run this now
+with that seed set as soon as I set that
+seed you see my random numbers for R + 1 is 16.5 remember that number I'm gonna
+run this again and I'm gonna get the same number every time 16.5 it's the
+same same thing with this one now I ran the seed so I'm still living off of that
+seed I had this one for R + 2 and I get 18 3800 it's a different chunk so I have
+
+00:08
+to set the seed separately so if I go back to this one I should get 16 every
+time I didn't set the seed over here so it's truly random but if I set the seed
+set the seed and you just give it a number and you just just got to remember
+that number and offer it up if you want someone to duplicate it so now we have
+16 12 27 and if I click it again same thing same thing same thing you say well
+that's not random numbers every time well it is random numbers it's just
+random numbers based on that seed so if I chose a different seed let's say the
+number 1 those numbers if you look at R and 2 on the in the environments those
+numbers change but as I click it again and again the numbers are still that
+same random number and if I go back up you still get 16.5 the whole point of
+the random seed is so you can duplicate the randomness now you want randomness
+because you want to have random outcomes for mostly statistics and for
+just anything really that you're programming that you need random numbers
+
+00:09
+for so you need those but you also need to duplicate them so that's where the
+set seed comes in and you can set the seed multiple times within your actual
+chunk so like I can use R and one in chunk number two here so if I do R and
+one and I just hit command enter it prints out random one so the variables
+its this is called scope the scope of that variable is good for this entire
+project so all of these global environment variables are good for the
+scope of the project I am I do find it weird that the set seed is not but
+that's okay let me show you something else though set so set seed one I want
+to delete random one here if I hit the Run button ooh let's see we've got four
+random two we have 18 21 18 21 now what I'm gonna do is I'm gonna set the seed
+down here as something different it's number two and then I'm gonna run
+
+00:10
+another random sample ten forty ten and I'll run that one and I have a different
+set of numbers sixteen fifteen twenty nine so it's different but if I go back
+to run this one ah this is where you'll get confused it's going to be a
+different set of numbers so random to 402 is eighteen twenty one twenty six
+I'm going to run it again and it's going to change because my seed even though
+it's not in order this is important too it's not in order but I ran set seed to
+sow my seed has changed within this chunk I hit the command enter button and
+you'll see that my numbers have in fact changed 38:16 how do I get those numbers
+back well have to run set seed one again then run ran two again and I'm back to
+eighteen twenty one twenty six so I hope that makes sense is you can run
+arbitrary lines of code and because the results and the repercussions will be in
+your global environment you could run into a lot of problem and when you
+troubleshoot and it's very important to kind of clear everything fresh and start
+
+00:11
+all over again especially with those random seeds hope
+that made sense I might clear it up a little bit as we
+but I wanted to give you something to play with and I'll see you in the next
+tutorialEnd of file
+

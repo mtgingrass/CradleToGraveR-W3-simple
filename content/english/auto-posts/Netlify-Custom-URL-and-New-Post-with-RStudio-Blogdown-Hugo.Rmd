@@ -12,7 +12,9 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/RSSRSquaredMathRRStudio.mp4.jpg">
+<a href="https://www.youtube.com/watch?v=NFsNfVZaTto">
+<img src="https://www.cradletograver.com/auto-posts/images/BlogdownHugotoGitHubwithRStudio.mp4.jpg">
+</a>
 
 
 

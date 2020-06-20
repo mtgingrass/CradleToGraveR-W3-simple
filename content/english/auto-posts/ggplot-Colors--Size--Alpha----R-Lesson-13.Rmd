@@ -1,0 +1,249 @@
+---
+title: ggplot Colors, Size, Alpha -  R Lesson 13
+date: 2019-09-24
+categories:
+  - Absolute Beginners Guide
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+---
+
+<a href="https://www.youtube.com/watch?v=RL_zk7S_K3E">
+<img src="https://www.cradletograver.com/auto-posts/images/ggplotLabelsandTitles,markdowntabs-RLesson12CradleToGraveR.webm.jpg">
+</a>
+
+
+
+
+
+
+
+
+
+00:00
+all right welcome back we have a notebook file open with a title of I've
+just put plot empty cars and it's a new file I created and I loaded up the
+library ggplot2 because guess what we're doing more plot in all the plots so I
+have that in the first chunk remember the command is command or control option
+I to insert a chunk if you want we're gonna play with the empty cars dataset
+so let's just go ahead and say cars a rage and we're going to set that equal
+to empty cars empty cars comes with the R in our studio so once you do that 32
+observations of 11 variables we can take a look at it we have a whole bunch of
+different things here going on miles per gallon cylinders displacement et cetera
+close that out now with that let's see if we can do some programmatic
+
+00:01
+observations here for example I want to know what kind of structure this cars
+original is so I'm gonna do STR and we type in cars orig and when I hit enter
+on that what it gives us is the observations 3211 variables and then the
+11 variables are listed down the rows the data type is num and the actual
+observations are listed going across as well and the dot dot dot means hey
+there's more than what meets the eye here so this is just a snippet of what
+that is and just so you know if you want a summary of statistics you can also do
+summary just type in cars or age and the summary will give you the min max into
+first quartile third quartile made median for every single feature and
+these features are all numeric so statistics works pretty well on that or
+the summary does but let's not let's not worry too much about statistics right
+
+00:02
+now let's create another chunk control option I and what we're gonna do is
+we're going to plot this as a scatter plot remember we're gonna do a GG plot
+but let's store it as a plot called P and we'll just say this is equal to
+a ggplot and we're gonna bring in our data the data is gonna equal to our cars
+original right and then we're gonna have an aesthetic AES and in that aesthetic
+we're gonna say X equals we'll say X equals the weight if you see up here I
+still have it on my screen weight should be a variable WT right here
+and we'll do weight versus Q SEC whatever that means quarter-mile we'll
+find out what that means in a second so we'll just do weight and we'll do the y
+variable is equal to Q SEC and remember if we run this chunk nothing's gonna
+happen it's just going to set us up saying hey we've got a placeholder
+
+00:03
+basically stored as variable P now let's add a geometry to it so we're gonna say
+P plus GM point remember it's like math you can add graphics basically to this
+so now if I run this little chunk you should get a a geometric point or a
+scatterplot with weight as the x axis and Q SEC as the Y now what if we wanted
+to add more aesthetics we can add aesthetics up here in AES but you can
+also add it in the Gian point you can also say AES and maybe pick a color
+color equals and we'll say the color is equal to well I don't know let's pick
+something let's pick another one of these drat
+DRA T let's just give it a try and see what that looks like here let's run this
+whole chunk again and so basically what that does is it adds one more variable
+called color variables probably on the right term but dimension I guess the
+
+00:04
+dimension of color is now on this graph so now as it gets lighter blue you can
+see the different drat levels whatever that if it means remember to check the
+head outlets we can go to the console just hit question mark and then type in
+empty cars and then over here it'll give us what all that means now technically
+you should definitely know your data before you start playing with it but
+this is just me having fun teaching you guys how to do
+a little bit so drat is rear-axle ratio so as the rear you know you can't really
+find a whole lot of patterns in this in fact those are pretty small right now
+you can't even see a whole lot of differences in color or whatnot so let's
+move on let's add a couple more things here let's let's make a size instead of
+the color let's make that a size dimension and you can do that I haven't
+shown you that yet see now there's different sizes you can kind of see in
+
+00:05
+this chart right here that the four point five the larger ones are sort of
+kind of here and then over here you get kind of
+smaller ones I still have no idea about cars so I have no clue what that means
+but I want to show you these little different dimensions you can add to it
+now one thing I want to show you is something like if you go back up here
+let's take a look at cylinder right right now it says cylinder is four point
+zero six point zero six point one eight etc etc right and remember when we typed
+in our structure let's redo structure here I'm gonna right I'm gonna hit that
+button again on structure to get this particular table here now let's go down
+to cylinder and we see cyl and we see it as number well
+cylinders is a number but in most practical aspects we're gonna count
+cylinder as a discrete variable a factor it's either a cylinder or a four
+cylinder you see what I'm saying here there's no actual yes there's a number
+
+00:06
+of cylinders but what you would really want to call that is a four cylinder car
+or a six cylinder car we're not really caring about that it's a digit we just
+say yeah I think you get the idea what I'm talking about so let's go ahead and
+try to chart something now let's do command option I on that and let's type
+in our P remember P is just plain setting up the graph with the data and
+we're gonna go ahead and add a Gian point to that don't forget none of these
+are saved back to P P is still row eighteen P still equals this right so
+when I add Gian point right here this is a different instance of that P I'm not
+making any changes to P I'm saying on line 19 ad this particular thing to it
+and display it but don't save it anywhere this is not saved line 19 is
+not saved anywhere so we can always reuse P and start from line 18 no matter
+what we did over here it doesn't make any difference I just wanted to make
+
+00:07
+that point clear so when I add a new aesthetic it's not writing over the old
+one or anything it simply is a new aesthetic here so we're gonna do color
+is equal to cylinder and what I want to show you is what this chart looks like
+let's take a look and instead of having this now purposely what ggplot
+automatically does is it makes this into a continuous spectrum of colors but we
+know in reality there's no 5.5 cylinder car or a 5.8 so whatever these numbers
+are we know that this is not completely true you can't get a 7.2 to 5 cylinder
+car because cylinder is not an actual numeric so let's force this into being a
+factor by just simply typing in factor inside make sure you have enough
+parentheses to cover everything so now it's going to convert it to a factor
+before it turns it in before it assigns it to the color inside of the aesthetic
+inside of the gam point I hope you got all that but now you see we have a four
+
+00:08
+cylinder a six cylinder and a cylinder and very very discrete colors like these
+are it blue green and red now you can see some patterns here as
+you can see as the weight goes up on the
+right hand side horizontal access as you go forward it looks like you have all
+eight cylinder vehicles right here right
+all this blue and what else do we notice the Q SEC didn't we didn't even look
+what that meant oh yeah we did Q SEC means quarter-mile time so the
+quarter-mile time for the eight cylinders are a lot higher no they're
+actually not a lot higher they're actually I guess somewhere in the middle
+the highest quarter-mile time is up here but you would think that the lowest
+quarter-mile time would not be what would it be in a cylinder I guess it
+shows these are very low times these two down at the bottom and they're both a
+cylinder then you get to the green use some six
+cylinders and then over here in the red you have four cylinders so in other
+words what's kind of cool is now you can
+
+00:09
+see that they are clustered you can kind
+of see these groups here like hey what's up with these points right here all
+clustered together they may be something maybe there's something else in this in
+this data that's described and why this is the case now I don't know what that
+is yet but same thing with this outlier here like what is that so it'd be worth
+diving in and seeing what exactly that is let's say we want to make another
+scatter plot and this time we just want them all to be a certain color we can do
+that as well play with some of the attributes and the parameters so we'll
+just do a P plus J on point but instead of adding more aesthetics like color a
+size we're just gonna go ahead and say well we are gonna say color but when I
+make it just equal like some color and run that so it's balloons that are black
+by default and you can obviously change the color to whatever you want
+there it is know that where we played with the empty cars let's go ahead and
+take a look at the Diamonds data set one more time remember you can do view and
+we're going to do a lower case of Diamonds and it will take a quick look
+
+00:10
+at what that dataset looks like here it is in the gooey interface here a lots of
+data cool stuff cut color clarity depth all those things so there's your diamond
+data set and remember one thing you can do is you can find the structure of it
+with just like we did with the empty cars take the structure you can see some
+ordered ordered factor data numerix you have integers and I didn't show you what
+factors are explicitly within like a data data frame but there's factor
+levels and these levels are you can either be a d EF and G in other words
+I'll explain it now but we'll explain it more later down as we go when it says
+five levels or seven levels or eight levels these levels are hate these are
+the categories and that's it if you try to add another category it will give you
+an error so this data is here and it says if your cut is one of these five
+levels you're good to go you try to add data say down the road
+
+00:11
+you say I want to add another row and you say I'm gonna create one called
+semi-good and you try to add it to this cut
+feature it will just give you an error which is what you want
+now there's ways to override that and add a factor and add a level I mean so
+it just tells you how many different categories there are four cuts there's
+five different cuts there's seven different colors and there's eight
+different clarity's all right let's do another chunk here we'll add a Chunkin
+we're going to go ahead and just plot this we're going to call this one I don't
+Diamond data and we're going to assign that to a plot will explicitly say the
+data is equal to diamonds and we're gonna put our aesthetics as we're gonna
+run carat we're gonna say X is equal to the carat in fact you don't even have to
+use the X you can just say carat because it explicitly knows because it's the
+first one and order matters in this function and your Y is gonna equal we'll
+
+00:12
+just go ahead and do price on that and what are we gonna do let's see is closed
+paren see oh no - well run that just to have our D D stored and now that D D is
+stored we can use D D and play with it a little bit so let's go ahead and add a
+geometry to it are the endpoint and let's take a quick look at that a lot
+more data this is very very I guess tight data all this data is really close
+to each other it's really hard to desync distinguish what's what so in that case
+let's do a little trick that we have we're gonna go ahead and do another
+chunk and let's go ahead and do D D + 3 on point and this time we're gonna set
+an alpha level and alpha levels are gonna come in handy quite a bit alpha
+level is basically your transparency level when when data is close it'll let
+you know that and I'll just give you a quick look to see what it looks like I
+
+00:13
+just put a point two in there so you can kind of see where a the least amount of
+data is plotted where it's lighter and then more data is where it's dark and
+you can change these levels around and and just kind of get a you know a sense
+of what's going on with the data if I make it more closer to number one
+they're gonna be more dark overall and if I make it oops what
+I do I don't know what oh there we go now let's make it like you know point
+zero four and you're just gonna have a lighter letter colors where it's lighter
+just a nice little thing to have we're gonna start one more chunk and I'll show
+you how to subset data with a OGG plot or again our data is equal to diamonds
+and this is what we did normally we had an aesthetic we had X and y equals so
+we'll do care it and price and of course we have to add a geometry to that we
+want the geometry point hit enter on that and what we have is this cluster of
+
+00:14
+fun and let's go ahead and let's go ahead and put the just for fun let's put
+the alpha value in there of 0.2 now this is definitely plus cluttered let's say
+we wanted just a piece of this we one of the first 50 observations so instead of
+diamonds we can actually just subset it using the bracket notation here and we
+can subset and say we want the first say 1 through 50 observations and comma
+because we want every column which we don't use every column we're actually
+using carat and price but I want every column available for the ggplot if we
+need it so now we have this plot because it's only the first one through 50 and
+at that point we don't need an alpha value so we can just set that as 1 or we
+can get rid of it and now we have our plot of our first 50 let's say you want
+to do 50 through 100 you can do something like that right that's an
+
+00:15
+interest in 1 right here huh now we can also do things like 5,300 and week and
+we can actually subset the the columns but we don't need to because the sub
+setting is really done right here in the
+aesthetic anyways and if we subset it it here and we said hey we just want carat
+and price if we wanted something else later we wouldn't be able to use it
+later because it would be subsetted here so for the most part you want to just
+bring in all your columns at this point in the tutorials I hope that gives you a
+little bit more insight on how to make some changes to the plots and in the neck
+tutorial we will definitely dive more into plots we will probably be in plots
+for the next few tutorials so stay tunedEnd of file
+

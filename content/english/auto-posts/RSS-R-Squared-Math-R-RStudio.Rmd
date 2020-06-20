@@ -12,7 +12,9 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/NetlifyCustomURLandNewPostwithRStudioBlogdownHugo.mp4.jpg">
+<a href="https://www.youtube.com/watch?v=j7L1cB1ILcI">
+<img src="https://www.cradletograver.com/auto-posts/images/EquationofLinefromLinearModelinR.mp4.jpg">
+</a>
 
 
 

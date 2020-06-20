@@ -1,0 +1,435 @@
+---
+title: Complete Web Scraper for anyone
+date: 2019-09-21
+categories:
+  - Scraping Content
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+---
+
+
+
+<p><a href="https://www.youtube.com/watch?v=o4ds2k9XJTU">
+<img src="https://www.cradletograver.com/auto-posts/images/DataManipulationTwitterScraperusingR.webm.jpg">
+</a></p>
+<p>00:00
+this project is all about scraping content from the web we’re going to
+scrape content and we’re going to push it into a CSV file so you can do further
+analysis with it now why do you want to scrape content well you might want to do
+some comparison maybe you want to compare titles you have a new YouTube
+video you want to put on and you want to scrape all the YouTube videos that are
+similar to the one you want to do so let’s do an analysis of the titles or
+you just want to collect all the quotes from a certain website that has a bunch
+of quotes now there’s two ways to really
+go about grabbing information from sites there’s one where you can use an API
+which is an application programming interface that is something very
+specific that that site would allow you to do not every site allows you to do
+that so in those cases you need to scrape the web and it’s not very
+straightforward because there’s so many differences between one site and another
+site and not all sites are treated equally in this project I’m going to
+show you how to get around some of those hurdles</p>
+<p>00:01
+using software our our studio and a Chrome extension called gadget selector
+all three are free so you’re only requirements for this is install our our
+studio and the Chrome extension from there I will show you how to scrape lots
+of different web sites I’ll give you a few different examples and then your
+project is going to be to scrape your own website and let’s see what kind of
+results you end up with that being said this does not work for every web site so
+there’s going to be some playing around let’s get started first let’s download
+our and then we’ll download our studio and we’ll go from there so go to our -
+project org click on the download our link and find a site a mere site that’s
+close to you and click on that USA is close to me and click on your platform
+of choice this works for Linux Mac and Windows I’m on a Mac so I’ll click on
+the Mac and then you might have a page that looks something like this you need
+to find the download link usually this PKG is the latest release</p>
+<p>00:02
+click on that and that’ll download the file you need that will download the
+file you need to install our install our and then come back once you’re done
+installing our go to our studio which our studio comm or you can do a quick
+Google search on download our studio and
+the first one that pops up is our studio
+comm / products etc you want to probably download the free version here our
+studio desktop so click on that and follow those download steps Windows Mac
+and Linux as well simple download steps get that one started and you should be
+ready to go okay now that you’ve got our
+and our studio downloaded let’s check to see if your our studio and are are
+working correctly before we go on to the next step so open up your are and it
+should look something like this it might
+be slightly different but it should look like this and let’s see where this</p>
+<p>00:03
+little greater than symbol is where it’s flashing the cursor let’s just type in
+print and then parentheses quotes hello world and we’re gonna hit the enter
+button on that and you’ll see an output line number one in brackets and it’s
+gonna say hello world in quotes very simple this is a test to see that your
+are in our studio is working correctly if it’s not working correctly then you
+have to go back and figure out your download steps make sure that you
+downloaded our 3.6 or later and our studio now that are in our studio are
+correctly installed let’s go to select gadget comm now when you go here there’s
+going to be a quick video here if you want to use that as an introduction
+that’s fine I’m also gonna walk you through the
+steps what you want to do is scroll down to Chrome extension right here just
+install the Chrome extension you click on it and I’ve already have it installed
+so I don’t need to install it again but if you’re using Chrome it should be a</p>
+<p>00:04
+one click install chrome install select your gadget you’ll know it’s installed
+correctly when you have this icon up here on your top right of your browser
+you can barely see it but it looks like a little magnifying glass you want to
+make sure that that is there when you hover over it it should say selector
+gadget once you have that you have all the tools all software necessary to
+start scraping the web alright let’s go back to our studio and let’s start a
+project so we can keep everything nice and and put together file new project and
+new directory new project and type in a name for your project I’m going to call
+this web scraper with an underscore and if the open and new session is not
+checked that means that any other session that you might have open will
+close if this is your first project you have nothing to worry about you can have
+multiple instances of our studio open at the same time not a big deal I usually</p>
+<p>00:05
+leave it unchecked create project now it looks very similar to what we just had
+except we are now inside of a project directory and everything is going to be
+nice and organized this way click on file new file our script now we’re going
+to create our first our script soon I’m not going to teach you are I’m not going
+to teach you how to program I’m going to teach you the bare essentials on how to
+scrape the web and it’s very simple you can almost cut and paste exactly what I
+have and it should work and it’s very commonsensical where you don’t need to
+be a programmer to figure this stuff out
+let’s let’s start off by downloading the packages we need to help us so the
+packages are like helper functions that already do a lot of the work for us the
+two packages I need you to install by clicking on packages here and the
+install button is going to be our vest RV Eest so just type in where it says
+packages RV EST and you’ll see it already pre-populated there and at the</p>
+<p>00:06
+very top of hit stay it should state install from repository cran once you
+type that in click on install and you’ll see some things happening for you it
+might take a little bit longer because it needs to download some dependencies
+but it should all be automatic don’t worry so much about warnings but errors
+are definitely a problem you won’t be able to go forward now that was the
+first package and then you want to install a package called tidy verse this
+one might take a little bit longer tid yve RS e the tidy verse it’s a
+collection of packages that you can use to tidy data and it’s a really good
+collection if you start using are quite a bit you’re gonna love this set of
+features and functions within this package I already have them installed so
+let’s get started if you’re still downloading pause this
+video and we’ll continue on when you’re ready everything should be installed and
+downloaded let’s go ahead and load these packages into our script so that we can
+use the functionality of them the first one we’re going to do is the tidy verse</p>
+<p>00:07
+so we’re gonna type in library and then parentheses and then tidy verse and if
+you hit the tab key while you’re populating this it should automatically
+fill in the rest it’s just a quick tip now what you want to do is you want to
+hit the Run button or the command enter or ctrl enter depending on if you’re
+using a Mac or a PC and that’ll load the tidy verse into our RAM so we can use
+all the functionalities of it the next step is to load another library called
+our vest this is going to help us scrape the actual web so when a command enter
+on that as well or ctrl enter you can repeat these steps all you want you can
+actually highlight all these and click on this little Run button it doesn’t
+matter we’re going to rerun these all the time for various sites that we’re
+going to scrape now before we even get started with scraping anything what I
+want to do is show you the selector gadget and why we need it so let’s go to
+a website now you should have this little icon here at the top right select</p>
+<p>00:08
+gadget it’s very small you should have that still let’s go to a site called
+quotes dot to scrape comm and all it is is a in a practice website for you to
+learn how to scrape now this is a very clean website not all of them are going
+to be this easy so we’ll start with this
+one and we’ll move on to Amazon and just
+check out a couple more features and see
+if you can get things to work there okay so why do I have you download the
+selector gadget let’s go ahead and click on that little selector gadget one time
+you click on it and it doesn’t show much
+but if you look at the very bottom of my screen it says no valid path found and
+you have this little box and now when I move the mouse around it kind of makes a
+box around certain sections of this of this page our goal is to highlight only
+the sections we want to scrape and for this project we’re only going to scrape
+one type of content at a time for example if
+we want to scrape the actual quote to see how it’s boxed right now we want</p>
+<p>00:09
+just a quote we won’t we don’t want who it’s by or any of these tags not yet
+anyways so what we want to do is we want
+to find what we want to scrape I want to scrape the quote itself so try to get
+the box around just the quote in the quote only and you click on it one time
+now you see you clicked on a once it turned green and that’s crucial so the
+green is what you want now if you if you go downwards you see the yellow the
+yellow is what will also be scraped which is perfect because it tells you
+hey I can figure this out where I can scrape just that stuff that you want
+sometimes you’ll have something that is yellow that you don’t want and you’d
+click it again and that would make it so that it will not be scraped let me give
+you an example here this one it actually
+worked out perfect right so let me clear this by click on this Clear button here
+let’s just try a different site let’s try a different site I’m gonna click on
+the scrape button up here and I’m gonna click on the title itself right here of</p>
+<p>00:10
+the site and you see all this other yellow stuff here I don’t want all of
+that yellow so you go now that it’s highlighted green here I want this for
+sure but I don’t want this little thing here so click on that and you’ll see all
+the yellows disappear now as I scroll down you want to check hey do I have
+everything yellow that I want yellow and nothing else because the moment that
+something else is in there everything is going to be messed up so you don’t want
+that so that’s the idea let’s go back I’m gonna close this one out because
+this sites a lot more complicated now this site is working perfectly fine
+let’s go back to scraping just our words up here so clear it let’s click on just
+the quote and you’ll see down here in this little box it tells us that’s dot
+txt that’s what we’re looking for we want to know that now if I clear this
+and I choose something else like for example top 10 tags I click on that you
+see that the little box has an h2 in there or if I clear that and try</p>
+<p>00:11
+something else like one of these it says dot tag so these different CSS
+tags is what we’re looking for and we’re using the selector gadget to help
+find those it’s actually the underlying HTML code behind this website that we’re
+looking at but let’s go back click on just a quote and we see it’s dot text
+that’s all I needed to show you for this now let’s go back to our alright we’re
+back to our and magically automagically i’ve got the code to scrape certain
+sites already created I created this code a few minutes ago
+and what I want to do is just simply walk you through the code a couple of
+times with a couple of different sites then you can learn how to modify it
+yourself I don’t expect you to understand completely all of these
+different aspects of the code because this is not in our programming course
+this is a hey how do you scrape the web quickly and efficiently for your further
+analysis needs ok so I’ve got the code here and remember the libraries are
+there to help us load and use functions that are more complicated like the are</p>
+<p>00:12
+ves is actually used to scrape the web and the tidy verse you don’t have to
+worry about that because to include these and when you run these which will
+run them one by one by one using my command enter command enter and you see
+nothing really happened but they’re loaded those libraries into memory then
+the next line on line five is the site that I actually want to scrape now this
+is not the right site because we’re not on Amazon we’re on a different site so
+let’s go back to the site and copy and paste the actual URL of the site we want
+to scrape I will paste the URL in here ok and once we do that that’s fine now
+the next line well go ahead and hit command enter on that so five is
+completed now we’re on line eight anything with the little pound sign the
+little hash tag is a quote and that’s not actual code so you can skip that
+again you’re really just gonna copy and paste a bunch of stuff to scrape what
+you want what I’m showing you here is so</p>
+<p>00:13
+this is a content variable this is where all of our stuff is gonna actually be
+stored that’s what’s important to us and what I have here is it’s going to say
+hey take the site to scrape which we defined as quotes to scrape comm we’re
+gonna push that output hey this site I want to push it to this thing called
+HTML nodes and the nodes is where you get to select
+like those things I’ve shown you it’s a selector gadget select that CSS
+attribute and in this case why did I say
+the attribute was for selecting all this yellow and this green here
+well it’s dot txt so copy what’s in that box
+and let’s go back over to HTML nodes and inside of those quotes we’re gonna
+delete what’s there and paste the dot txt so that’s our content now we’re
+gonna run line eight as well in fact if you forgot or failed to run some of
+these let’s just highlight from 10 down up to 1 and hit command enter or hit
+this button right here and it’s going to</p>
+<p>00:14
+rerun those let’s ignore the rest of the code for now because I want to show you
+a couple things on the right-hand side where it says
+content and values it’s a character array of 1 through 10 now what does that
+1 through 10 stand for okay let’s count these one quote 2 3 4 5 6 7 8 9 and 10
+and you can see there is a next button so that’s gonna be an issue right we got
+to figure out that that’s what the next part of this code is going to show you
+but before I go into the next part let’s
+go ahead and read what’s in this content now in order to do that I’m gonna go
+down here in the console area and I’m gonna type in the word content and I’m
+gonna subset it and just say hey give me
+the first line of this of this object so if I’m gonna put the 1 in there hit
+enter because I’m in the console and you can see it says the world as we have
+created it as a process bla bla bla bla let’s see if that matches yes it matches
+the second one is it is our choices let’s try the second one so hit the UP</p>
+<p>00:15
+button to repeat the code if you want and hit let’s put in number 2 hit enter
+and we have our second quote so we know that it’s working the way that we want
+for the most part now the problem that we have is we have multiple pages so
+here’s where the trick comes in notice that the URL is quotes to scrape comm
+for the very first page now the most complicated part of all this is usually
+the first page is different than the second third and fourth pages etc etc so
+what we want to do is we want to click on
+this next button click on the inspector button first the selected gadget button
+I mean click on next now we’re on page 2 and everything looks about the same
+except different sets of quotes but you see the URL has changed it is now this
+type of URL we’re gonna look for a pattern so we have page /to /k let’s try
+page 3 and it looks like the pattern repeats let’s just assume it does so</p>
+<p>00:16
+instead of doing it this way we’re gonna copy this well excuse me let’s go back
+to page 1 but instead of going back to the page where it was just to scrape
+calm let’s just see what happens when we put a number 1 in there page forward
+slash 1 which wasn’t there the first time but it turns out it works so those
+are the types of tricks you need to figure out it’s not a necessity because
+usually the first page is slightly different than the subsequent pages but
+now that it does work we can use that to our advantage so let’s copy that URL so
+copy that copy that let’s go back and the site to scrape now we want to put in
+the newly copied one which has that page forward slash 1 luckily luckily the
+pattern was there we don’t need that last forward slash let’s get rid of that
+because what I’m doing in the next set of code is if you come down here to line</p>
+<p>00:17
+13 I have a loop this for loop from here to line 21 is going to be repeated now
+this is our syntax you don’t have to know too much about it except for all
+that all that all that matters is this I
+iterates between the numbers 2 &amp; 4 2 3 4
+you can make this iterate any numbers you want I can go to page 7 I don’t know
+how many pages of quotes there are but if you knew or if you wanted to guess
+you can put in something like that so I’m gonna put in 4 just say hey give me
+the first four pages of quotes now this is similar to what we have up here on
+line 5 except I’m going to reuse this variable and I’m gonna actually paste in
+that I which is numbers two three four two three four
+subsequently so it’s going to run this as good the first time it’s going to be
+a two the second time it’s gonna be 3 and then a 4 and so on and all it’s
+gonna do with this little paste function here is put that number at the end of</p>
+<p>00:18
+this URL right here so it’s very simple don’t worry so much about the syntax
+just know that right here it’s really gonna be a number one then a number two
+the number three etc etc wherever I starts and ends it’ll do that and in
+this case it starts at two and ends at four that’s just the syntax for a
+sequence of numbers and are okay cool either way you’re probably just gonna
+cut and paste this anyways and then I’m gonna create a temporary variable that’s
+gonna hold what I found on that page and our our node is wrong so let’s delete
+this node here and this type in dot txt cuz that’s the CSS attribute we’re
+trying to get that’ll get us the quote okay cool so the temp has been created
+based on this new site which is page according to this it’ll be page two
+three then four but every time it does that we want to store that temp that
+temp information and to do that we’re gonna store it in our content which was</p>
+<p>00:19
+capturing the first page up here every time this loop goes around Tampa is
+going to be appended to the content that’s all I’m trying to say here let’s
+try this out and run it from here up so from line 21 up click on run and if we
+have no errors we’ll check out the the aftermath alright so it looks like we
+have oh we definitely have an error because the websites wrong we want this
+website command C on that and put it down over here there we go let’s try</p>
+<p>00:20
+this again from 21 up I’ll click on run and it looks like we have still 10 hmm
+Oh I’m sorry so we let’s do this one more
+time we don’t want this entire thing we want everything up to the one we don’t
+want the actual one so let’s just go ahead and delete the number one here
+because what we want to do is have the I append it to the very end which will
+make it two three four so you’re gonna find all kinds of little problems like
+that click on run now we have 40 so ten per page that makes sense we have 40 now
+how do we look at those now there’s a couple ways I showed you that you can do
+it down here and say content and then put in the brackets the number of that
+you want say you want number 34 click enter and you get the quote down at the
+bottom let’s save those all to a CSV file so that we can do a further
+analysis so now I have this ripe CSV I want to write the content to a file</p>
+<p>00:21
+called content CSV and Road names equals
+false just means don’t give me row names
+because Excel already has row numbers so let’s run line 23 I’m going to hit
+command enter on line 23 and if you go over here to your files or wherever your
+directory that you chose for this project is you will now have a content
+CSV file in fact I can show you that file let’s go to my web scraper folder
+here and I have content CSV I can reopen it with Microsoft Excel and we have all
+of our quotes right here all in column a so that’s it that’s how you scrape the
+web now that one was pretty straightforward because the site was is
+user friendly for this type of stuff quotes to scrape what we want to do is
+try to scrape something else like Amazon and check out some attributes from that
+site so the next thing we’ll do is we’ll play around with that all right let’s</p>
+<p>00:22
+try to scrape something a little bit more complicated like an Amazon Web site
+let’s type in a search criteria let’s go with shirts we’ll just type in shirts
+now there’s so much content on here it’s going to be hard to figure out what our
+attributes that we want to look for now most likely you’d want to get some sort
+of price information and maybe the title we can probably grab those at the same
+time let’s check it out what I want you to understand is the
+first time you do this you might not be successful so let’s click on this
+selector gadget again and we start getting these boxes everywhere I would
+be careful about selecting like sponsored content or things that are in
+its own category like best seller might be its own category Amazon choice is a
+category but if I do top rated it looks like a lot of these are grouped together
+let’s let’s go with top rated from our brands again you can play your Altis and
+figure it out I’m gonna click on the actual title and here we go we got one</p>
+<p>00:23
+click you see all the yellow that populated I don’t want things like this
+so I’m gonna click that and make it red so now that’s gone now if I scroll down
+it doesn’t it didn’t pick up everything it only picked up the first row here so
+I’m gonna go ahead and clear this I’m gonna clear these ten I’m gonna try it
+again I’m gonna start down here though I’m gonna click on this one now it looks
+like it picked up a bunch of other yellow okay cool but again I don’t want
+these titles so click on that it’s not that easy to figure out so you’re going
+to have to play around with this stuff so this looks pretty good in fact it
+looks like I actually have some pricing data in here as well so hopefully this
+will work again this is going to be a little bit of trial and error so we’re
+gonna go ahead and use this and I’m gonna select this dot a dash color base</p>
+<p>00:24
+control see that let’s go back to our R and we’re gonna put that in place of
+this dot txt and don’t forget to put it up here as well on line nine now let’s
+get a new website so copy that URL and we’re going to plug that bad boy in here
+and we’re gonna plug it in here even though we don’t know the pattern yet I’m
+just setting it there for now we’re not gonna run this code yet let’s just run
+from 1 through 10 so highlight 1 through
+10 and hit the Run button and you should you see your content change see my
+content is one through 319 now but let’s
+take a look at that content before we go any further and try to scrape multiple
+pages I’m going to show you a quick way to look at it within our because it’s
+not a data frame even though you don’t know what that is possibly let’s just do</p>
+<p>00:25
+I’m gonna say content - I’m going to assign it to Khan as data frame content
+and what that’s going to allow me to do is it’s gonna let me to click on content
+- which is now up here it’s just us just a shortcut just to show you what this
+stuff is so here’s what it looks like it looks like it picked up a lot of things
+that we it definitely picked up the title but I don’t see any prices in
+there ah here we go we’re getting some price information now so the problem is
+there’s no order to this like you see and up and up and up it’s not right so
+let’s try a different CSS attribute let’s try to refine this so we’re gonna
+clear this again I’m gonna click on that one more time this time I’m gonna get
+rid of let’s take a little bit better look at what’s yellow ah so this is
+yellow up here we don’t want that so get rid of that and keep scrolling down so</p>
+<p>00:26
+now it’s not picking up a lot of things it’s actually not picking up much at all
+so clear this again you see how complicated this can get let’s just do
+titles so I’m gonna not pick the money and as you see the yellows you want to
+get rid of them and I think that’s about it you notice I had to click on two of
+them to get rid of it see these two right here I had to click on both of
+these to get rid of it now we’re looking pretty good for titles we may not get
+prices with this up we don’t want that either so get rid of that and I actually
+don’t want these up here either so get rid of that you see how you see how this
+works now see I’m d selecting things to make it a much
+cleaner scrape there we go so you might be able to try and play around with the
+numbers either way let’s give this one a go I’m gonna copy this text here and</p>
+<p>00:27
+let’s paste this bad boy right in here and of course we’re gonna eventually if
+it works paste it in here let’s run 1 through 10 again I’m gonna
+do command enter after highlighting it now we have 65 that sounds more like it
+and again we can do the shortcut method content two hasn’t changed yet cuz I
+haven’t reassigned it so you can do content to set it equal to as the data
+frame content that way we can we can just click on it and see it within our
+so it looks like it did capture the titles and it’s got 65 of them awesome
+so let’s take another quick look at that
+URL it’s it’s got all this stuff here at the end let’s go ahead so we have the
+CSS attribute that we want that’s definitely working the stuff in the box
+down here but now let’s go to another page and see how it changes from this
+URL to another one so it looks like we have you know NB underscore s PE nos 1</p>
+<p>00:28
+again let’s just click on next and see what kind of pattern we have most likely
+it’s going to be a little bit more complicated than the previous site we
+scraped oh excuse me I’ve got a I’m gonna toggle this off with the selector
+gadget now click Next and now we are on a different page I’m gonna go ahead and
+click Next again I could find it and you can see how these look right here I’m
+willing to bet that we don’t need any of this here I’m gonna hit backspace on
+that and you see what that number 3 is that looks like a promise in URL for a
+page 3 so I’m going to ctrl C that I’m gonna go back to here now this one is
+fine remember this was our first page but our second page I want to change or
+our subsequent pages I’m gonna delete that pasted in what we just got instead
+of the 3 there I’m gonna leave because remember the in this for loop</p>
+<p>00:29
+it’s going to go from page two three four and so on so maybe we want the
+first seven pages let’s put a seven in there so two through seven remember this
+first one is going to cover the first page for us no problem and it’s going to
+append those numbers right here all right so now let’s go ahead and run
+everything and see if it works see if our our URL naming convention for
+subsequent pages is going to work it’s taking a little bit longer so that’s
+probably a good thing and it looks like content has four hundred and seven
+entries instead of I’m gonna trust it I’m gonna write this to a CSV I’m gonna
+run command enter on line 23 we’re gonna go back and check out our content CSV
+and here we go looks like we have a whole bunch of
+titles and for some reason you know it looks well it looks clean so that’s how
+you grab it now what can you do with these titles let’s say you’re trying to</p>
+<p>00:30
+sell something on Amazon or do some comparison you can figure out okay what
+types of words you can do like a word cloud a word frequency you can figure
+stuff out like that play around with it try to get the price information try to
+get other information try other sites there’s so much you can do and it’s not
+completely straightforward so there will
+be some some there will be some problems
+there’s gonna be some heartaches but you just got to work through them and again
+learn some more are you can do a lot more manipulation and are rather than
+jumping over to excel for your project I want you to pick a different site it
+can’t be a flash site or something like that and you’ll know quickly when you’re
+when your code doesn’t work I want you to pick a different site scrape it and
+see what the contents are tell me about it in the project detailsEnd of file</p>
