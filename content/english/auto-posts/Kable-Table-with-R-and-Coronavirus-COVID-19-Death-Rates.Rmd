@@ -15,3 +15,7 @@ draft: false
 <img src="https://www.cradletograver.com/auto-posts/images/PlotCOVID19coronavirusDatausingRdplyrandggplot.webm.jpg">
 #CradleToGraveR now a Discord! Come say hello: https://discord.gg/f2uDBvA
 Kable Table with R and Coronavirus COVID 19 Death Rates
+
+
+
+c:/ytdl//CradleToGraveR/Absolute Beginners Guide/31 - Kable Table with R and Coronavirus COVID 19 Death Rates/Kable Table with R and Coronavirus COVID 19 Death Rates.webm.en.txt

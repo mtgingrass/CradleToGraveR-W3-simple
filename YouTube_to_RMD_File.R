@@ -90,6 +90,8 @@ draft: false"
                     paste("<img src=", '"https://www.cradletograver.com/auto-posts/images/',
                           image_path,'"', ">", sep = ""),
                     yt_json_file$description,
+                    "\n\n", 
+                    df_yt_partial$VTT[index],
                     sep = "\n")
   
   

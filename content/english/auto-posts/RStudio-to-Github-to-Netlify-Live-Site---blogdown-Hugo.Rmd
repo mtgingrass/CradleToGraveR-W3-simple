@@ -66,3 +66,7 @@ REVIEWS/BLOG - https://www.markgingrass.com/blogs/re...
 OTHER COURSES I CURRENTLY TEACH
 <U+2794> C++ Course: http://bit.ly/cpp_course
 <U+2794> Supply Chain Management:  http://bit.ly/scm_course
+
+
+
+c:/ytdl//CradleToGraveR/Absolute Beginners Guide/58 - RStudio to Github to Netlify Live Site   blogdown Hugo/RStudio to Github to Netlify Live Site   blogdown Hugo.mp4.en.txt

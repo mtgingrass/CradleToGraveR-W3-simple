@@ -14,3 +14,7 @@ draft: false
 
 <img src="https://www.cradletograver.com/auto-posts/images/NA">
 In this video, I will show you how to use the lm and predict functions to predict responses.
+
+
+
+c:/ytdl//CradleToGraveR/Absolute Beginners Guide to Statistical Programming/07 - CradleToGraveR Live Stream - Using predict function/CradleToGraveR Live Stream - Using predict function.mp4.en.txt

@@ -17,3 +17,7 @@ draft: false
 Multi-linear regression is a statistical technique that uses several explanatory variables to predict a response. Learn how to fit linear models in R in this tutorial.
 
 #rstats #rprogramming #rtutorial #programming #data #datascience #rstudio #statistics #math #learntocode
+
+
+
+c:/ytdl//CradleToGraveR/Absolute Beginners Guide to Statistical Programming/09 - Multi Linear Regression with R/Multi Linear Regression with R.mp4.en.txt

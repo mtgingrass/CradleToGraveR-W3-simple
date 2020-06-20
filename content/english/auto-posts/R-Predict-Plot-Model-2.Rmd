@@ -15,3 +15,7 @@ draft: false
 <img src="https://www.cradletograver.com/auto-posts/images/NA">
 #CradleToGraveR now a Discord! Come say hello: https://discord.gg/f2uDBvA
 How to use R and R Studio to predict the outcome using a linear model for new observations data. You will also learn how to display confidence intervals and plot the new points.
+
+
+
+c:/ytdl//CradleToGraveR/Absolute Beginners Guide to Statistical Programming/08 - R Predict Plot Model 2/R Predict Plot Model 2.mp4.en.txt

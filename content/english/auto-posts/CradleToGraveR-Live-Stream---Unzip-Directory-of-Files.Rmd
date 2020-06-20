@@ -16,3 +16,7 @@ draft: false
 The tutorial starts here: https://youtu.be/irOsVaJFdVs?t=159
 
 In this video, I will show you how to use R and RStudio to unzip a directory of files, all automated.
+
+
+
+c:/ytdl//CradleToGraveR/Absolute Beginners Guide/46 - CradleToGraveR Live Stream - Unzip Directory of Files/CradleToGraveR Live Stream - Unzip Directory of Files.mp4.en.txt
