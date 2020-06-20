@@ -12,7 +12,7 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/Custom-Plot-Functions-in-R.webm.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/CustomPlotFunctionsinR.webm.jpg">
 Learn about who I am. My background. Why I teach online.
 
 Join the Discord: https://discord.gg/f2uDBvA

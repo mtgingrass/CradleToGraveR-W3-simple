@@ -65,7 +65,7 @@ for (index in seq_len(nrow(df_yt_partial)))
                     sep = "")
   
   
-  image_path <- gsub(" ", "-", df_yt[index, 3])
+  image_path <- gsub(" ", "", df_yt[index, 3])
   
   yt_tags <- paste("tags:",
                          "Test","Test2",

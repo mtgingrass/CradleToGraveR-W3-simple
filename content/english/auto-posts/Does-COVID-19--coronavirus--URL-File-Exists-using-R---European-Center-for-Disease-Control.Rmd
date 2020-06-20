@@ -12,7 +12,7 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/DT-datatable-COVID-19-coronavirus-sort-with-R.mp4.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/DTdatatableCOVID19coronavirussortwithR.mp4.jpg">
 #CradleToGraveR now a Discord! Come say hello: https://discord.gg/f2uDBvA
 Does COVID-19 (coronavirus) URL File Exists using R - European Center for Disease Control
 

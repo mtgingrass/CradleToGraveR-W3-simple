@@ -12,7 +12,7 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/R-Interaction-Terms-and-Regression.mp4.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/RInteractionTermsandRegression.mp4.jpg">
 How to use Hugo and blogdown and RStudio to push code to GitHub. How to overcome some common problems.
 
 Discord: https://discord.gg/f2uDBvA

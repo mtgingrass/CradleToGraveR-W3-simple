@@ -12,7 +12,7 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/RSS-R-Squared-Math-R-RStudio.mp4.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/RSSRSquaredMathRRStudio.mp4.jpg">
 In this tutorial, I show how to customize your config.toml file to reflect your links and social media sites. I then show you how to serve the site and how layouts work.
 
 Other playlists you may be interested in:
