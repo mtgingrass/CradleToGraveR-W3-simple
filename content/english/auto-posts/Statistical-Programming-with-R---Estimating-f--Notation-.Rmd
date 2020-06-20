@@ -2,7 +2,7 @@
 title: Statistical Programming with R - Estimating f (Notation)
 date: 2020-04-01
 categories:
-  - Random Statistics
+  - Absolute Beginners Guide to Statistical Programming
 tags:
   - Test
   - Test2
@@ -13,84 +13,86 @@ draft: false
 ---
 
 <img src="https://www.cradletograver.com/auto-posts/images/NA">
-#CradleToGraveR now a Discord! Come say hello: https://discord.gg/f2uDBvA
-Statistical Programming with R - Estimating f
-
-<U+0001F447>SUBSCRIBE & HIT THE <U+0001F44D> BUTTON <U+0001F447>
-R Channel: http://bit.ly/38yfFP9
-How I Create Videos: http://bit.ly/sub_to_chan
-
-<U+2794> TubeBuddy: http://bit.ly/t_buddy
-<U+2794> Blue Yeti Mic: https://amzn.to/2IheZTG
-<U+2794> 2 Months SkillShare Free <U+2794>  https://www.skillshare.com/r/profile/Mark-Gingrass/2388101
-
-Do you have more to add? Let me know how you liked the video or if I need anything corrected in the comments below.
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-TECH GEAR I USE DAILY
-<U+2794> MacBook Pro: https://amzn.to/2XxeBsG
-<U+2794> Blue Yeti Mic: https://amzn.to/2IheZTG
-<U+2794> Swissgear Backpack: https://youtu.be/VTTnRMyFkB8
-<U+2794> Canon EOS 90D Camera: https://amzn.to/2u0o52K
-<U+2794> Apple Magic Trackpad 2: https://amzn.to/31XDugG
-<U+2794> mTuber for Title Effects : https://motionvfx.sjv.io/3M3KM
-<U+2794> mArrows for animated arrows: https://motionvfx.sjv.io/9B3oe
-<U+2794> Microphone - https://amzn.to/2LYfJkr
-<U+2794> Backpack - https://amzn.to/2Ep4uez
-<U+2794> Green Screen - https://amzn.to/2JVzMgP
-<U+2794> Tripod Neewer: https://amzn.to/2uF275X
-<U+2794> Tripod (cheap) - https://amzn.to/2Eo2wv4
-
-HOMEPAGE - https://www.markgingrass.com/
-REVIEWS/BLOG - https://www.markgingrass.com/blogs/re...
-
-OTHER COURSES I CURRENTLY TEACH
-<U+2794> C++ Course: http://bit.ly/cpp_course
-<U+2794> Supply Chain Management:  http://bit.ly/scm_course
-
-Let's chat
-https://twitter.com/MarkGingrass
 
 
 
-MARK GINGRASS CHANNEL
-
-<U+0001F447>SUBSCRIBE & HIT THE <U+0001F44D> BUTTON <U+0001F447>
-R Channel: http://bit.ly/38yfFP9
-How I Create Videos: http://bit.ly/sub_to_chan
-
-<U+2794> TubeBuddy: http://bit.ly/t_buddy
-<U+2794> Blue Yeti Mic: https://amzn.to/2IheZTG
-<U+2794> 2 Months SkillShare Free <U+2794>  https://www.skillshare.com/r/profile/Mark-Gingrass/2388101
-
-Do you have more to add? Let me know how you liked the video or if I need anything corrected in the comments below.
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-TECH GEAR I USE DAILY
-<U+2794> MacBook Pro: https://amzn.to/2XxeBsG
-<U+2794> Blue Yeti Mic: https://amzn.to/2IheZTG
-<U+2794> Swissgear Backpack: https://youtu.be/VTTnRMyFkB8
-<U+2794> Canon EOS 90D Camera: https://amzn.to/2u0o52K
-<U+2794> Apple Magic Trackpad 2: https://amzn.to/31XDugG
-<U+2794> mTuber for Title Effects : https://motionvfx.sjv.io/3M3KM
-<U+2794> mArrows for animated arrows: https://motionvfx.sjv.io/9B3oe
-<U+2794> Microphone - https://amzn.to/2LYfJkr
-<U+2794> Backpack - https://amzn.to/2Ep4uez
-<U+2794> Green Screen - https://amzn.to/2JVzMgP
-<U+2794> Tripod Neewer: https://amzn.to/2uF275X
-<U+2794> Tripod (cheap) - https://amzn.to/2Eo2wv4
-<U+2794> Apple Magic Mouse 2: https://amzn.to/2UWw386
-<U+2794> Apple Magic Keyboard: https://amzn.to/2HvfdFi
-<U+2794> Samsung SSD Drive: https://amzn.to/30UVbgz
-
-HOMEPAGE - https://www.markgingrass.com/
-REVIEWS/BLOG - https://www.markgingrass.com/blogs/re...
-
-OTHER COURSES I CURRENTLY TEACH
-<U+2794> C++ Course: http://bit.ly/cpp_course
-<U+2794> Supply Chain Management:  http://bit.ly/scm_course
-
-Let's chat
-https://twitter.com/MarkGingrass
 
 
 
-c:/ytdl//CradleToGraveR/Absolute Beginners Guide to Statistical Programming/01 - Statistical Programming with R - Estimating f (Notation)/Statistical Programming with R - Estimating f (Notation).mp4.en.txt
+
+
+
+00:00
+well it looks like we're doing har but I tricked you
+we're gonna do a little bit of math I'm gonna show you a couple things we're
+gonna create a little coordinate system here this is your basic XY coordinate
+system this is your quadrant one quarter two three four just like the normal XY
+coordinate system that you would normally see but these are not gonna be
+X's and Y's instead we're gonna call it deaths and cases or cases and deaths so
+let's go ahead and label that and so we can do cases along the horizontal axis
+and we will do deaths along the y axis or the vertical axis I should say
+all right so what we want to do is try to make a correlation between a the
+number of cases and the number of deaths
+
+00:01
+so is there anything correlated is there a relationship there we don't know so
+let's try to get the terminology down and the lingo down first and then we'll
+dive into more statistics later but what I want to show you first is that as we
+actually have this data which we have so let's just go ahead I'm not good with
+this thing yet I just started using it now but we have an observation here we
+have an observation we have an observation and we have all these
+observations and it exponential exponentially goes up whatever it might
+be right we have all these observations these are true factual observations we
+know that we counted this many cases can we gather this many deaths now they
+might not might not be any relationship at all that's what we're trying to
+determine at the end of the day but we're going to call this first
+observation a capital X and we'll put a little subscript for one there so X 1 is
+
+00:02
+the first observation and then you know X 2 or X 3 would be here and then it
+keeps on going on and on until you get to X P which is the number of
+observations total so your last observation is your P of P values if P
+observations right so that's how we denote that so we have all these X's and
+we have cases so what can we do to predict the next X well we can kind of
+estimate like well maybe it's kind of an upward trajectory I kind of gave you a
+hint with this which was fade of course but you know maybe the next one will be
+here or maybe here we don't know there's some error term in that
+so to puck to put this in mathematical notation we're gonna start with some
+basic we're gonna do a capital y back it's gonna look like this
+it's a terrible why that's a terrible way anyways y is equal to some function
+of the observations so that particular observation X right so if I have an
+observation X it'll go into this magic box called the function do something to
+the X and tell me how many deaths are except there's more to it there's a
+
+00:03
+little bit of an error rate with that because we can never really know so we
+have this error you call it a 1 or epsilon 1 now this is the actual
+function right we actually don't know the function because tomorrow it could
+be here it could be here it could be here so this is the true real function
+now in real life we don't have an exact function for this data so what we do is
+we estimate the function so this is a reducible error function and this is a
+irreducible error error term so to denote that it's actually just an
+estimate we're going to use a Y with a little hat on top so Y hat equals F hat
+of the observation plus the error term now Y is X not with a hat because we
+know the observation that's a true fact we counted how many cases count how many
+
+00:04
+deaths now on paper we get of course in real life we didn't but this is the way
+you denote this function we estimate a function plus some error rate is going
+to predict some death rate so instead of wise in X's the true at Aransas would
+have been deaths equals some function ups of the observation plus the epsilon
+okay so that's the basics of the notation that we might use to start
+predicting values so the goal is figure out alright there's X P what about X of
+P plus 1 where'd you find or how many deaths would be associated with X of P
+plus 1 you would plug this thing in to this function if you had it but we don't
+have it so instead we've got to plug it into our estimated function our estimate
+could be anything could be a linear estimate it could be quadratic it could
+be all kinds of weird functions plus some error term that you cannot reduce
+that's an irreducible error and that error error with each observation if you
+
+00:05
+average all the errors it will equal to 0 that's the assumptions of our model so
+this is the basic 101 quick and dirty of how to do basic stats and I hope that
+you continue with these lessons and I'll show you how to put some of this into
+the our program and do some predictive analysis [Music] you [Music]End of file
+

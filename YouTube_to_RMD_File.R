@@ -2,13 +2,15 @@
 # ```{r setup II, include=FALSE, eval=TRUE}
 # knitr::opts_chunk$set(eval = TRUE, echo = TRUE)
 #```
-#
+#or set a global option to eval = false
+
 library(jsonlite)
 library(readtext)
 library(ymlthis)
 library(stringr)
 library(here)
 library(stringi)
+library(readr)
 
 #youtube-dl base directory
 yt_dl_JSON <- list.files(path = "c:/ytdl/", 
@@ -58,7 +60,7 @@ for (index in seq_len(nrow(df_yt_partial)))
   yt_title <- yt_json_file[index]$title
   
   #yt_descrip <- readtext(yt_dl_descrip_dir[index])
-  yt_descrip <- readtext(df_yt[index]) #yt_json_file$description
+  yt_descrip <- readtext(df_yt$DESC[index]) #yt_json_file$description
   
   title <- paste("---\ntitle: ", yt_json_file$title, sep = "")
   
@@ -89,7 +91,8 @@ draft: false"
   
   descript <- paste("**","TEST 1","**\n\n",
                     yt_descrip, sep = "\n")
-  
+
+vtt_txt <-  paste(readLines(df_yt_partial$VTT[index]), collapse="\n")  
   # Combined YAML
   yaml_tmp <- paste(title,
                     date_upload,
@@ -101,10 +104,13 @@ draft: false"
                     "",
                     paste("<img src=", '"https://www.cradletograver.com/auto-posts/images/',
                           image_path,'"', ">", sep = ""),
-                    yt_json_file$description,
+                    #yt_json_file$description,
                     "\n\n", 
-                    stri_enc_toutf8(df_yt_partial$VTT[index]),
+                    #descript,
+                    "\n\n\n\n",
+                    vtt_txt,
                     sep = "\n")
+  yaml_tmp <- paste0(yaml_tmp, "End of file\n")
   
   
   
