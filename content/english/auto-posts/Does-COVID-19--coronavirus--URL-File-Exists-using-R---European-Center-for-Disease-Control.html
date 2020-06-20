@@ -1,0 +1,139 @@
+---
+title: Does COVID-19 (coronavirus) URL File Exists using R - European Center for Disease Control
+date: 2020-03-18
+categories:
+  - Scraping Content
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+---
+
+
+
+<p><img src="https://www.cradletograver.com/auto-posts/images/DTdatatableCOVID19coronavirussortwithR.mp4.jpg"></p>
+<p>00:00
+all right every single time I try to update this Cova data file they change
+the pattern of the URL and it’s driving me a little bit insane
+so if we go back to once again the European Centre for disease prevention
+and control site click on publications and data scroll down to the download
+link well guess what today if you look closely it’s an XLS file and not an XLS
+X file this has been causing a headache we
+tried to make this dynamic a couple of times and now old code is not going to
+work old videos probably don’t really work if
+somebody’s following this so if you’re at this video you can go through the
+five tutorials but know that this one fixes yet another problem so what we’re
+gonna do is we’re gonna make the URL a little bit more dynamic this is actually
+gonna be a pretty cool tutorial on how to dynamically check to see if a URL is
+actually in existence or not this can help you with a lot of different things</p>
+<p>00:01
+in the future the first thing you want to do is if you don’t already have this
+package installed is you want to pet you want to download a package called our
+curl our curl so install that by clicking on the install button and then
+as you can see here on line 13 for me is the library our curl already loaded up
+ok so you want to put that library or curl in there alright so basically
+here’s our problem let’s break it down this way we have URL one that we’re
+pasting we tried to make it dynamic by saying ok system dot date is what
+changes so we append the date in between this string for this file not a problem
+but the extension keeps changing between
+XLS and xlsx so we basically want to try each one and see which one actually
+comes up with the file on the Internet itself
+so we’re not gonna worry too much about it quite yet because I’m gonna show you
+a function that’s gonna help us with an if statement if file exists use it if it</p>
+<p>00:02
+doesn’t use something else all right so we have everything here and remember we
+had this function here called read xlsx and sometimes if it’s not xlsx ID be
+read underscore excel so a very confused and very tedious so let’s create a
+helper function here so we’re gonna go I’ll put most of this code in the
+description somewhere all right let’s do a helper function we can do it right at
+the very top let’s start with line 15 and I’m just gonna cut and paste it and
+then I’ll walk you through it because it’s kind of a lot it’s not hard though
+and we’re gonna modify it some more all right so look at I’m at line 15 I’m
+gonna paste it here and hopefully you can see it all so all the way from line
+15 down to 31 is what I just pasted now I got this code from a blog I modified
+it slightly so far because I’ll even put</p>
+<p>00:03
+the name of the blog here where I got it we’ll put that as a note so I got it
+from this site here and it actually had some syntax errors but I fixed them but
+other than that this is where I got the code from all right here’s what it does
+URL exists is going to be a new function
+that we’re creating and this function is gonna take in an address the address is
+whatever we want it to be well it’s going to be the URL all right so it’s
+gonna try and then if it doesn’t work it’s gonna do something else so it’s a
+try-catch statement you haven’t learned too much about that or any at all so let
+me walk you through it though the first thing it’s going to do encapsulate it in
+this bracket so between line 17 and 22 and it’s hard to read that’s a whole set
+of instructions that it’s going to try and if it’s successful it’ll do it if
+it’s not successful it will move on to the error mode so to speak so it’s gonna
+try to make a variable called connection
+based on our address it’s gonna do a URL
+address and then it’s going to read that and close the connection basically hey</p>
+<p>00:04
+does this exist yes or no and that’s what the our curl functions do if it
+doesn’t exist then we’ll know and we’ll get a false so basically at the end of
+the day you’re gonna get a true or a false you don’t have to actually know
+how this entire thing works but we wanted on the line 16 now and hit
+command enter and run that function so the function didn’t really run cuz it
+just kind of put the function in memory so we can use the function now so on
+Lions 29 can you scroll down a little bit on line 29 now I have
+if statement if the URL does exist and then I give it your all one which is our
+URL up here remember actually it’s down here so we got to make some
+modifications if it does exist print out
+URL exists simple as that right so let’s change our code and try something out
+here they’re gonna move URL one copy all that and I know that this might be
+difficult if you’re just joining us in this tutorial but I advise you to go
+back to the previous tutorials to catch up all right so we have URL one above</p>
+<p>00:05
+that so we know we can run that let’s go ahead and run line 29 so command enter
+ok URL 1 is loaded in memory and you can see what it is right here not the whole
+thing we can actually type it in down here so URL 1 hit enter it’s got the XLS
+on there ok now I said if we go back to the site if you hover over it it is XLS
+so it should exist so this should print out URL exists let’s try it out so the
+if statement is if URL exists which calls this function URL exists and in it
+like I said this function returns either true or false
+so we should return it true because we know it does exist and it should print
+this out so let’s try it out so let’s do line 31 command enter and next line and
+you’ll see at the bottom here and my console it says URL exists okay now
+let’s mess with it a little bit just to break it on purpose let’s add the X in
+this URL so command enter now now our URL is not that it is now with the X at</p>
+<p>00:06
+the end right here so now when we do exists it should print nothing so if I
+do command enter on line 31 or 32 you will see that there is no printed of URL
+exists on there so we know that it’s working at least in this case that being
+said let’s get this thing working for this site relatively quick here now so
+we’re gonna do just a couple things we have euro 1 okay let’s keep your l1 as
+xlsx let’s simply just copy this URL paste it right underneath it and change
+it to URL 2 and let’s change this to an XLS no X
+right same thing with this get statement here we’re gonna leave this B for a
+moment so we’re gonna say if the URL exists get it right and we’re gonna set
+that as a temporary file we’ll do all of our stuff in there I think I think</p>
+<p>00:07
+that’ll work let’s see so if your L exists your o1 instead of doing that
+we’re gonna say so copy or cut this let’s get rid of the cat
+although we can keep it there let’s just do a command V on that let’s just say
+xlsx XL s X file exists and then it’s gonna actually get based on your l1 it’s
+gonna write it to disk TF so I’m just worried about this temporary file only
+being local inside of this function so I’m slightly nervous about this working
+tonight we’ll see so if it does exist to go ahead and get it and if it does get
+it let’s go ahead and read using this function command X and paste it in there
+so we have euro 1 URL - and what we can do is we can basically just copy this</p>
+<p>00:08
+command C command V now let’s do URL - if your l2 exists we say XLS file exists
+URL get the URL - and the extension in URL - is XLS without the X and we have a
+different function called read underscore Excel so we have two
+functions or two if statements let’s run
+this and see let’s in first let’s delete our variables over here so we have DF
+here let’s just go ahead and clean that up delete everything start from scratch
+alright let’s run this right now let’s see what kind of errors we get no errors
+that’s always good and we have DF right here now that works just really well we
+don’t know if the other one will work yet because right now how we’re dealing
+with XLS so tomorrow when the CDC European CDC changes to XLS
+we should be caught up I know that was a lot to handle so what I’m gonna do is
+I’ll keep this code for you you can just copy paste it and kind of follow along</p>
+<p>00:09
+with what it’s doing mainly though it’s this URL exists function that we’re
+using to get back a true or a false statement before we start doing other
+types of data gathering [Music] you [Music]End of file</p>

@@ -1,0 +1,137 @@
+---
+title: Equation of Line from Linear Model in R
+date: 2020-04-22
+categories:
+  - Random Statistics
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+---
+
+
+
+<p><img src="https://www.cradletograver.com/auto-posts/images/NetlifyCustomURLandNewPostwithRStudioBlogdownHugo.mp4.jpg"></p>
+<p>00:00
+in the last tutorial we spent about five minutes because plot in three points
+weight and heights on a graph and we decided to figure out what the best
+linear model or straight line fit would be to go through those three points as
+close as possible while minimizing the error and the error is the difference
+between the point on the line itself and the point itself let’s backtrack and
+just rerun all of this code here so we created the data frame with our data
+points we loaded the library ggplot2 and then we went ahead and plotted it with
+the confidence interval and the actual the line the blue that goes through the
+points as best as possible right so let me zoom in on that real quick for you
+and what I want to show you today is how to get the equation of this line now
+when we get to models that are more complicated we’re not going to do this
+think about it as we get some very sophisticated models in the future we’re</p>
+<p>00:01
+gonna have tens of thousands of variables right now we have basically
+one variable we have the weight depends on the weight what’s the height right
+easily done by a human by hand but I just want to give you the confidence
+that this is actually predicting the correct line bichri creating the line
+itself so let’s go ahead and let me zoom back out of this Oh before I do that
+before I do that let me show you one thing that we have to fix this blue line
+as you see it goes all the way across if you look at the X scale you’ll see that
+the scale doesn’t actually go to zero and I kind of need that for my example I
+want it to go from zero to some number may be 225 zero to 225 right so between
+100 and 125 that’s only a 25 unit difference right you can definitely tell
+that to the left of that 100 I don’t have 425 units to get down to zero so
+we’ve got to fix that let me show you how to do that real quick first and then</p>
+<p>00:02
+we’ll go from there alright so in our GG plot we’ve set up all of the parameters
+that we need except for one thing let’s set some limits for our x axis so x lim
+and we put that in parentheses and we say hey give me a vector or atomic
+vector of numbers to show you start finish I want to start at zero zero
+sounds good and we’ll finish at 2:25 so now let’s
+rerun this and you will see and it’s changed let me zoom in for you on that
+now you see if I finish this line if I kept on going straight it’s going to
+keep going keep going keep going and it kind of maybe hits I don’t know
+somewhere around here is my guess but I don’t know we’re about to figure that
+out we’re gonna extend that line is what we’ll do all right
+we’re not gonna extend it on the code yet we’re just gonna do it manually so I
+wanted to show you that just so you don’t get confused with this next step
+all right so we want to find the coefficients of that of that equate of</p>
+<p>00:03
+that line so to do that it’s very simple first let’s create a model look say hey
+this model one because we might do multiple models maybe there’s ten models
+we want to see which one best predicts the data
+remember this was a linear model though we didn’t actually capture what the
+linear model was we just piped it into the guchi plot so let’s go ahead and
+just do a linear model and we’re gonna say what do I want in it I want my X
+data my example data I want the response variable to be weight right I want to
+predict the weight based on my oh no no no let’s go be the way I want to predict
+the height based on the weight so I will do a tilde and do the same thing X data
+dollar sign wait I don’t know why it’s trying to auto populate all those other
+numbers but we don’t need those okay so we have the tilde thing which is new for
+you guys probably all it’s saying is it’s just more syntax it’s saying hey
+here’s the predictor variable based on the weight
+I’m predict I’m gonna say I give you the weight tell me what the response is you</p>
+<p>00:04
+know if I have a hundred pounds what’s my height if I have 200 pounds what’s my
+height that’s all that means just get used to that so do a command enter on
+that and now you have the model saved as
+model one and all we’re gonna do next is find the coefficients coefficient of
+model one and it’s gonna tell us down here below we have an intercept of 24
+and a weight of point it’s not a weight it’s it’s kind of a bad choice of a
+variables but the the X data wait wait so is wait wait is 0.24 in other words
+every time you have some sort of weight multiplied it by 0.24 that’s our slope
+that’s our slope and I’ll show you how that works in just a moment so let me
+switch to my my other camera let’s move this aside and let’s do a
+little bit of manual calculations just to get this through to you okay so we</p>
+<p>00:05
+said that the intercept was 24 so the intercept is also where it intercepts on
+the yeah where it is intercepts to vertical axis so if this is weight and
+this is height I’m just going to abbreviate with H when the weight is
+zero down here when the weight is zero I know that it’s gonna cross because R is
+telling me it’s gonna cross 24 I know there’s a point right here on that line
+mostly because it was given to us it says the intercept so the intercept was
+equal to 24 and it said that the it didn’t explicitly say the slope but the
+M is 0.24 the slope is actually its it’s a weighted amount that you multiply the
+weight by to get the actual height plus the intercept let me show you a better
+example the old equation that we all probably don’t remember anymore is y</p>
+<p>00:06
+equals MX plus B remember the B is the intercept that that 24 is that B the B
+is where it crosses the vertical axis and the M is the slope of our predictor
+variable so this X is not really an X that’s the weight this y is not really
+the y that’s the height so we can change that to a more height equals some sort
+of slope times the weight just do W plus
+some intercept which we know is 24 right so the intercept is 24 height equals
+some slope times the weight but that slope you don’t have to think about it a
+slope think about as a weighted away did parameter right so it’s not M we
+know it’s not M because it’s telling us based on the R that is point two four
+it’s a point to four times the actual weight now using the word weight is kind
+of hard because you can also count this point to four as a weight I’m waiting</p>
+<p>00:07
+this other variable W by 0.2 four so that’s a little confusing and I know
+it’s hard to see that so let me let’s just plot one more point that we know
+this one here because if I plug in zero for weight and I multiply zero by 0.2
+for you still get zero and zero plus 24 is 24 so again if the weight is zero
+bring it all the way over right here I plug in zero zero times 0.04 plus 24 is
+equal to 24 so the height is 24 does not make sense right because it’s just a
+model it’s not real life so this is some of the things we have to fix in the
+future now let’s pick an arbitrary another one let’s pick well 100 we know
+that at 100 wherever that might be that if we plugged in 100 for weight and
+this is just an approximate I’m gonna say that’s 0.25 so 1/4 so 100 times 0.2
+4 is approximately 25 25 plus 24 is you know 49 so when the weight is 100 you go</p>
+<p>00:08
+up to about double this right so there’s another line or another point
+and there’s our line for our actual model those aren’t the real points we
+know we know that when the weight is 100 that the height is 45 because it’s in
+our data but that doesn’t matter it’s whatever’s on this actual line right
+here that matters I hope that kind of makes sense to you
+guys so we created the line let’s go back to our plot and just double check
+and it all makes sense so we have right here it says blue line goes all the way
+down if you kept on going I kept on going I mean I’m kind of bad at judging
+where that goes but it’s probably somewhere here right which would be
+under the 25 mark so maybe 24 right that’s exactly where we just did it on paper
+and at a hundred you can see that the line itself is at forty nine right and</p>
+<p>00:09
+the actual dot if you go back to our data the actual dot if you look up here
+is at forty five so when it’s hundred its forty five so I was a little off
+because I didn’t multiply about point two four and because it’s not truly
+going to contain those data points it is the best fit line that minimizes the
+error between that line and the data point [Music]End of file</p>

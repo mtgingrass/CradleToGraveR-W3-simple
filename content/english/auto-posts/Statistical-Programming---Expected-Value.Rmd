@@ -2,7 +2,7 @@
 title: Statistical Programming - Expected Value
 date: 2020-04-02
 categories:
-  - Absolute Beginners Guide to Statistical Programming
+  - Random Statistics
 tags:
   - Test
   - Test2
@@ -12,7 +12,7 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/StatisticalProgramming-ExpectedValue.mp4.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/HugoBlogdownTutorialwithRRStudioCustomizeMenusLayouts.webm.jpg">
 
 
 

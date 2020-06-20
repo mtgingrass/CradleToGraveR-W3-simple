@@ -1,0 +1,169 @@
+---
+title: R CDC Data Fixed rmarkdown Tutorial
+date: 2020-03-17
+categories:
+  - Scraping Content
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+---
+
+<img src="https://www.cradletograver.com/auto-posts/images/Updated-EndtoEndCovid-19AnalysiswithR-ImportData(1).webm.jpg">
+
+
+
+
+
+
+
+
+
+00:00
+so in the last tutorial I talked about how to make a dynamic string so that we
+can get the Cova 19 or the coronavirus data from the European CDC daily
+automatically well our pattern turned out to not be foolproof so we're gonna
+fix that in this quick tutorial and then we'll go on to a few other things to
+clean it up a little bit let me explain to you what's going on so we had system
+data in here because the date changed now if you go to the actual CDC for the
+European CDC site you would see publications and data and you'll find
+the data right here easily accessible so if you right click on it and you go to
+copy link address what we're gonna notice is if I paste it down here it's
+already pasted actually I paste it down here a letter for letter it's the same
+as what URL 1 would be except for it's got an X at the end of the extinction
+
+00:01
+and our previous one did not so this is a really good example of real world data
+and how it you know the stuff you have to deal with no kiddin but this is not
+it so let me walk walk you through the other problems and we'll add on a little
+bit more to this tutorial so let's add that X in there
+that's fine but now I read excel function still our read excel function
+will only work for the XLS extension and not xlsx so let's change that function
+to read underscore xlsx so read underscore X LS X now it should work so
+now I can run this chunk and it's gonna use the system data as always and it
+should run so let's go ahead and run that simple as that so if you watch the
+previous tutorial that no longer applies
+you have to update it to this now let me
+show you where the next problem is I did
+notice something but I'm not sure why it still worked with this dot XLS function
+here so I the way it works so let's just keep it that way for now now we go down
+
+00:02
+to some and we're gonna sum all the new deaths you're gonna find that this does
+not work huh I'm confused oh it does not work it
+didn't give an error but it gives a warning so if you look at this it says
+unknown or uninitialized column there is no column called new deaths anymore how
+do we know that well let's figure that out as we troubleshoot this I'm hungry
+I'm gonna go down to the console here and let's do names and they just type in
+DF so it's gonna give us all the column names and you'll see I have 1 through 7
+and I have no new deaths I have deaths that change the names of
+the features of the of the columns so we have to fix that so to fix that we can
+get rid of the word new rerun this and we should be fine now that being said
+what let's let's not weren't really cleaning up the data we're just
+exploring the data so let's change this to Cove aid Explorer something like that
+
+00:03
+and we're gonna run this chunk first and then underneath this chunk I'm actually
+gonna do some narrative and say there are or there have been and now instead
+of not assigning this to a variable let's do that let's just call it
+Kovach death total and then we can run it so we can actually store that into a
+variable you see it over here in our environment so there have been and then
+we can do a back tic that's the letter to the left of the one not the quote
+type in the letter R to say hey I'm gonna insert a little bit of our code
+inside of my narrative and the code I want to insert after I've run it above
+is the actual death rate so kovat death total tactic to close it you see it
+turns a different color so there have been blank death sense and then we can
+add backtick R we're going to we're going to use the our language and we're
+
+00:04
+going to use sysdate open parentheses close parentheses and then we'll add a
+period so now we have that you can't see those totals right now because we
+haven't rendered this yet what you could do is you can copy this you could paste
+it down here and kind of get an idea ok 7103 what's the system date you do the
+same and kind of see what its gonna look like
+when it is rendered all right so we've got that figured out
+let's scroll down a little bit further to our we have no other header here but
+we can call this well we're just getting the death rate
+so right here we group by country exposed we don't have that anymore remember
+the names were changed so let's go ahead and do that let's actually talk about
+those names in our narrative and say the features we have are and then I'll name
+
+00:05
+them right so I will do backtick our space names of what's in that data frame
+backtick now we have the names now what are they well we can do it again down
+here names no problem yes so we know that country expose is no longer there
+but countries and territories is so let's go ahead and just change these up
+so we have a working program again countries and territories notice the
+back ticks because there's spaces inside of this feature or a variable named
+mutate is when you're gonna create a brand new variable that's not in the
+data set so you're gonna mutate the data set into adding something else so we're
+gonna call that something else death rate we're going to set it equal to the
+sum of all you're gonna see that this isn't the best way to do it but we take
+the sum of all the new confirmed cases but again they've changed the name now
+this is a real-life business problem that we have the business unit decided
+to rename it because it's more aesthetically pleasing but it breaks all
+of your programming so that's why you have to keep the transparency in the
+
+00:06
+communication between the business unit and the developers the statisticians
+etcetera etcetera so let's call this cases because that's what it's called
+now and then again there's no such thing
+as new deaths it's just called deaths so now we should be good we can hit the
+play button here and we have our data frame now let me show you when we render
+this that it's going to add this data to our rendered file
+so our markdown render and then we're just going to type in
+I in quotes script one RMD because that's what this is called
+hit enter should have no issues you'll see script 1 NB notebook dot HTML so
+click on it view and web browser what do
+we have so we have Kovac cases in our we
+have our hey this is where we're getting our data from we should probably date
+this somehow but the number of deaths we
+have some code here we can hide the code if we like we can not hide it here some
+
+00:07
+of our stats the number of deaths in 2000 since this date is 7103 so it's
+getting up there and then here's the actual data that if somebody wanted to
+and what will change how this looks later on in other tutorials but I want
+to show you one other thing before we call this one quits let's go back to our
+R and you'll notice that some of this code wasn't there so like this actually
+this code was here library HTT R let's see show all code well it's not showing
+that code all right so let's click on this little gear box and see these
+little custom settings here I think we can either click them to the right or
+left it's actually changed since last time I played with this don't want to do
+that so let's put these all to the right never show all code let's just try it
+and I believe which would be good so click down on the console up arrow or
+
+00:08
+repeat the last command and let's see if that worked open in web browser we do
+not have the code oh it's all fun and games until it doesn't work the way you
+want oh I've got to save it ctrl command
+s then render common mistake I do it all the time
+and I just I'm glad that I made this mistake cuz you're probably gonna make
+the same mistake if you don't save it before you render it it won't make the
+changes so now you see the code and the message here but let's say you didn't
+want the code you can just do include equals false I'm really glad I made that
+mistake because I do it all the time I'll make changes on the actual editor
+and then I'll render it again but it's gonna read it's going to
+only render the lace the last saved version of it so you have to save your
+work before you render again let's put this because this code here isn't
+actually telling us anything about our our our data it's just kind of prepping
+
+00:09
+things so let's do include equals false on this command s and then we can render
+it and you'll see that that code is no longer there so let's try this one more
+time view in web browser the code should
+be gone so you want to kind of keep this I would recommend kind of in between
+like a little bit of code when it's necessary but if you're going to show
+this to the business unit maybe just a description of what's going on on where
+you got your data from things like that and here we go so we've got to cleaned
+up just a little bit I wanted to fix those mistakes from yesterday there
+weren't mistakes it's just the CDC site has actually changed and hopefully
+tomorrow it works but if not then we have to go to fix our code again so
+let's just call this one quits and I will see you guys in the very next tutorial
+
+00:10
+[Music] you [Music]End of file
+

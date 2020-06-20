@@ -1,0 +1,149 @@
+---
+title: CradleToGraveR Live Stream - Using predict function
+date: 2020-04-26
+categories:
+  - Absolute Beginners Guide
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+---
+
+
+
+<p><img src="https://www.cradletograver.com/auto-posts/images/"></p>
+<p>00:00
+we are going to create a linear model based on some fake data and then we’ll
+actually predict the future future data excuse me and just go from there so
+let’s start off with first creating some
+random data frames so I’ll do an example data frame look I know my do is example
+data whatever you wanted to call it so my example data is gonna consist of a
+data frame so like a spreadsheet looking
+things so here’s my data frame and again this is live and I might make a few</p>
+<p>00:01
+mistakes but bear with me we’re gonna have a data frame we just make this up
+as you know we could say let’s say there’s a how about I don’t know
+Kovach cases and death rate that sounds terrible but why not covet cases equals
+and we’ll just make that just purely made up so the kovin case is maybe it’s
+per per week per day per month whatever you want to call it let’s just say 100
+200 400 you know kind of X you know maybe won’t make them so multiples of
+each other like exactly maybe 723 something like that let’s just
+make this a little bit off you know 409 185 something like that and we just have
+four four data points so four days worth of deaths so the first day was 100 the
+second day was 185 409 and 723 so how many Cova deaths did we have well we</p>
+<p>00:02
+have Kovach deaths and again I’m just making these numbers up so we have you
+know wait 100 cases maybe we had one death and then weighed 185 we had a
+three deaths and then maybe ten and of course one legs the other etc you know
+but whatever the numbers might be I’m just making this up okay so let’s say we
+have this so we have our data frame let’s do command enter on that and
+you’ll see hopefully let me check something here yeah so you can see up in
+the top right that I have my example data for observations of two variables
+so I click on that and I might be able to zoom in for you
+let me see yeah there we go so we have Kovac cases and you see our data
+it’s Kovac cases and Kovac deaths we have four observations all right so
+let’s go back to the actual code and we have so once we have the data we need to</p>
+<p>00:03
+come up with some sort of model right let me just so we come up with a model
+by doing you know model 1 whatever you want to call it model 1 is equal to it’s
+gonna be a linear model and now I’ll just linear model to be based on I want
+to predict how many deaths based on the cases that’s just what I’m gonna come up
+with so let’s just do so the response variable would be kovat deaths right and
+what explains that they explained a variable will be the kovat cases and
+what data am i using so data equals and it’ll be my example data and that’s it
+so command enter on that we have a model 1 now again we can check out the
+coefficient C OEF model underscore one command enter and you have an intercept
+of negative seven point one and a a slope excuse me a slope of point zero
+five four right now we can plot that but we have to load
+our library remember library ggplot2 so load that if you don’t have it if you’re</p>
+<p>00:04
+just joining this live feed which I don’t do in this channel very often you
+go to packages over here OOP you can’t see that actually so let’s just go ahead
+and zoom out hopefully I’m just making sure that my my view is there for you
+guys I don’t cover anything up that you need you would click on packages here
+and you’d go to install and just type in ggplot2 and select it and then click
+install that’s if you don’t have it which I think most of you should have it
+so I’ll leave my picture up there alright so we have our ggplot let me see
+all right so now we can use it now that we have it and we’ll do a
+do plot of the example data that’s what we want right we’ll make the aesthetic x</p>
+<p>00:05
+equals Cove of death Snoke Ovid yeah we want Kovac cases on the excess of access
+kovaydin cases X data kovat cases yeah and the Y is equal to Co vyd deaths all
+right and of course yeah that’s our aesthetic that makes sense parentheses
+parentheses and we want to add a geometry to it G on point so just
+basically a data a scatter plot and then we can do jump smooth if we’d like G on
+smooth that way we get some cool looking graphs and the method is gonna be equal
+to LM linear model we’re doing linear simple linear models and we might need
+to I’ve had a feeling I did something wrong but anyways that’s our data points
+so we have one two three four points four points and we want to predict later
+on so let’s you know it’s not quite linear you can see some data points are</p>
+<p>00:06
+not touching the line and then of course you have your confident I’ve percent
+confidence interval is that that gray that darker gray so there’s a 95% chance
+that another point would land within those lines but there is a 5% chance
+that will land outside of those that dark gray area simple enough right
+simple enough so cool we’ve got that but now the question is how do we predict
+what would happen with something we don’t even have right now right so we’re
+gonna do that right now we’re gonna say hey I’ve got more data that I think it’s
+gonna happen based on what else whatever
+scenario I want I know so we’ll just say you know more data and we’ll set that
+equal to it we’re gonna set that equal to a list and we’ll say we have Co vyd
+cases equals and it’s a vector of numbers so let’s say we have 1,400
+we have 2,500 what happens if we have a million right what happens if we have</p>
+<p>00:07
+all those cases so this is what I want to do I want to say hey there’s more
+data out there so I’m gonna run that so more data is now equal to a list of of
+kovat cases right but without the deaths
+we don’t know we just don’t know so what we’ll do is we’re gonna actually create
+a predict variable so predict one I’m just naming this now is equal to my
+predict function I’m gonna predict based on the model I just created which the
+model is model one mo de O underscore one so based on that model and my new
+data which is so new data you have to populate that with well it’s more data I
+have more data and that’s what it is and
+then of course we can do interval equals prediction that’s what we want to
+predict I think that’s by default too but I’m
+not sure I’m percent so predict one is that so if I hit enter or command enter
+on that stores predict one and we can say that if we just type it out predict</p>
+<p>00:08
+one come and enter you see you’ve got three rows right and so those three rows
+represent the three new kovat cases and their corresponding output so fourteen
+hundred aligns with the 69 2500 lines with 129 and the 1 million lies with the
+54,000 636 so that’s what you predict using a linear model so using those
+coefficients remember we saw the coefficients up here somewhere if we
+actually plugged in this formula we’re covert cases is the variable so so
+if I type that out let’s see if I can memorize it well I’ll just type it out
+again let’s do coefficients again so if I literally did you know this is not
+gonna run but Cova deaths equals and the
+formula would be the remember a negative B or host I was gonna give you the
+quadratic formula remember the formula y equals MX plus B right and so the M the
+slope is the point O five so Oh point zero five four six times the number of</p>
+<p>00:09
+cases so in this case we had the cases was fourteen hundred for the first one
+fourteen hundred plus the intercept which was negative
+27 so plus or we can just say minus seven point 107 right
+let’s see if I can actually I never actually do so I’m gonna get rid of
+covert kovat deaths and see if this actually give me a answer sixty nine
+point three three all right so if I typed out all the rest of the
+significant digits it would have equalled sixty nine point
+three nine whatever that is right that’s it I just wanted to show you guys a
+quick way to predict because on the previous tutorial I did not do that I
+literally left you hang in with hey here’s a linear model cool play with it
+and I showed you how it works with the equation and how to create that line but
+I didn’t I didn’t actually show you how to add more data to see what the
+prediction is so in the next video I have to keep this one short but in the
+next video perhaps we’ll plot those new points and
+go from there and then we’ll also do multi linear regression where we have</p>
+<p>00:10
+more than one variable that can predict the response which will be pretty
+interesting so anyways this was my first live live video let’s see if I could
+switch to full screen on me I’m just messing around with my live content
+thanks for watching and I appreciate everyone that comes out here to actually
+give me comments and they share my videos you guys are definitely making me
+more motivated to do more of these and I appreciate it I am NOT a statistician
+I’m not an expert expert but I hope that I can convey the message of hey what
+this stuff means maybe you can take it and become a extraordinarily data
+extraordinarily good data science or get that job be a citizen data science
+either way so I appreciate it and I will see you guys in the next videoEnd of file</p>

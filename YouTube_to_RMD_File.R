@@ -48,10 +48,9 @@ df_yt <- data.frame(JSON = yt_dl_JSON,
                     IMAGE = content_files[inds2],
                     DESC = yt_dl_descrip_dir[inds3])
 
-#df_yt_partial <- df_yt[complete.cases(df_yt),]
-df_yt_partial <- df_yt
-### I could use the DF itself instead.
-### Iterate through each json file. 
+df_yt_partial <- df_yt[complete.cases(df_yt),]
+#df_yt_partial <- df_yt
+
 
 for (index in seq_len(nrow(df_yt_partial)))
 {
@@ -60,7 +59,7 @@ for (index in seq_len(nrow(df_yt_partial)))
   yt_title <- yt_json_file[index]$title
   
   #yt_descrip <- readtext(yt_dl_descrip_dir[index])
-  yt_descrip <- readtext(df_yt$DESC[index]) #yt_json_file$description
+  #yt_descrip <- readtext(df_yt$DESC[index]) #yt_json_file$description
   
   title <- paste("---\ntitle: ", yt_json_file$title, sep = "")
   
@@ -77,9 +76,10 @@ for (index in seq_len(nrow(df_yt_partial)))
                     "  - ",
                     yt_json_file$playlist_title,
                     sep = "")
-  
-  
-  image_path <- gsub(" ", "", df_yt[index, 3])
+  image_path <- ""
+  if (!is.na(df_yt$IMAGE[index])){
+    image_path <- gsub(" ", "", df_yt$IMAGE[index])
+  }
   
   yt_tags <- paste("tags:",
                          "Test","Test2",
@@ -89,8 +89,8 @@ for (index in seq_len(nrow(df_yt_partial)))
 w3codecolor: false
 draft: false"
   
-  descript <- paste("**","TEST 1","**\n\n",
-                    yt_descrip, sep = "\n")
+  #descript <- paste("**","TEST 1","**\n\n",
+  #                  yt_descrip, sep = "\n")
 
 vtt_txt <-  paste(readLines(df_yt_partial$VTT[index]), collapse="\n")  
   # Combined YAML

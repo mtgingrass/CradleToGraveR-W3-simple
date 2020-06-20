@@ -2,7 +2,7 @@
 title: Linear Regression with R 01
 date: 2020-04-09
 categories:
-  - Absolute Beginners Guide to Statistical Programming
+  - Random Statistics
 tags:
   - Test
   - Test2
@@ -12,7 +12,7 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/LinearRegressionwithR01.mp4.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/BlogdownHugotoGitHubwithRStudio.mp4.jpg">
 
 
 

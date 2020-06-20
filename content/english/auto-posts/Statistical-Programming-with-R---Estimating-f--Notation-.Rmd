@@ -12,7 +12,7 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/NA">
+<img src="https://www.cradletograver.com/auto-posts/images/">
 
 
 
