@@ -5,7 +5,7 @@ library(stringr)
 library(here)
 
 #youtube-dl base directory
-yt_dl_dir <- list.files(path = "c:/ytdl/", 
+yt_dl_JSON <- list.files(path = "c:/ytdl/", 
                         pattern = "*.json$",
                       recursive = TRUE,
                       full.names = TRUE)
@@ -15,22 +15,18 @@ yt_dl_descrip_dir <- list.files(path = "c:/ytdl/",
                         recursive = TRUE,
                         full.names = TRUE)
 
+# Use this if the json file description is not working correctly
+#yt_dl_vtt_cnvrt <- list.files(path = "c:/ytdl/", 
+#                                pattern = "*.en.txt$",
+#                                recursive = TRUE,
+#                                full.names = TRUE)
 
-yt_dl_vtt_cnvrt <- list.files(path = "c:/ytdl/", 
-                                pattern = "*.en.txt$",
-                                recursive = TRUE,
-                                full.names = TRUE)
-
-L1 <- yt_dl_dir
+L1 <- yt_dl_JSON
 L2 <- yt_dl_vtt_cnvrt
 
 inds <- match(sub('\\..*', '', basename(L1)), sub('\\..*', '', basename(L2)))
-df_yt <- data.frame(JSON = L1, VTT = L2[inds])
-
-
-
-
-#str_split(yt_dl_dir[1], pattern = ".json")
+inds2 <- match(sub('\\..*', '', basename(L1)), sub('\\..*', '', basename(content_files)))
+df_yt <- data.frame(JSON = L1, VTT = L2[inds], IMAGE = content_files[inds2])
 
 #read first json file
 yt_json_file <- read_json(df_yt$JSON[1])
@@ -57,7 +53,7 @@ play_list_cat <- paste("categories:",
                   sep = "")
 
 
-image_path <- content_files[1]
+image_path <- df_yt[1, 3]
 
 yt_tags <- paste("tags:",
                        "Test","Test2",
@@ -68,7 +64,7 @@ w3codecolor: false
 draft: false"
 
 descript <- paste("**","TEST 1","**\n\n",
-                  yt_description[2], sep = "\n")
+                  yt_descrip, sep = "\n")
 
 # Combined YAML
 yaml_tmp <- paste(title,
