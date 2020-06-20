@@ -1,0 +1,123 @@
+---
+title: R DPLYR Joins   Tidy Data
+date: 2019-08-12
+categories:
+  - Uploads from CradleToGraveR
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+---
+
+
+
+<p><a href="https://www.youtube.com/watch?v=NE_GX8PkWUg">
+<img src="https://www.cradletograver.com/auto-posts/images/20190802-RNotebooks-Lesson5-[Fa81eXcAXT4].jpg">
+</a></p>
+<p>00:00
+welcome back I wanted to do a quick very quick introduction to how to use the
+deployer functions left joint and right joint and there’s other joins like inner
+join and full join and you can look those up as you need them but today I’m
+just going to show you a quick and dirty left and right joins just so you can
+have the idea for a future reference so left data I labeled it as left data
+and right data I have it here already I’m gonna leave this in the description
+so you can just copy and paste it I’m not gonna put the rest of the code in
+there but you can copy/paste this so you can duplicate the data what I have is a
+left data frame that has six or seven customer IDs and has seven directions
+associated with it so the features or the column names of the header if that’s
+what you’re used to calling it will have one column called cust ID and the next
+column called area in my right data and I’m just
+labeling these left and right just so that we can not lose track of which ones</p>
+<p>00:01
+which that’s also a data frame or a spreadsheet looking thing if you’re not
+used to data frames yet it has a customer ID column and I risk column but
+in the customer ID column we have customers two four and six only and then
+the corresponding values would be high high and low if you don’t know what rep
+means it means repeat repeat high two times repeat low one time and it knows
+how to put them there let’s just show you the data frames and that’ll give you
+an idea of what I’m talking about so the left-hand-side data frame looks
+like this customer ID one through seven and a bunch of correspondent areas and
+the right hand side data looks like this customer ID and risk high high low so
+that’s all that is that’s all that creates once we create those we want to
+combine them together somehow let’s do what we’re gonna do is a left join first
+and we simply we would simply type in the left under square join except we
+didn’t load the library yet so let’s load the library that we’re going to use
+called applier DP Lyr and once you run that you should have no problems and</p>
+<p>00:02
+using those functions if you don’t have to player installed you can install it
+by clicking on packages install and just start typing in DP lyr and make sure
+install dependencies is there and click on install simple as
+now let’s do a left join real quick so left underscore join it’s so simple and
+then you want to put in your X and your Y which is your the X stands for
+basically the left-hand spreadsheet and y is the right-hand spreadsheet imagine
+you two screens on your computer left and right and you want to join them in
+that fashion everything in the left I want to keep but join it with things
+that are on the right so left join let’s do the left data goes in the left-hand
+side of the left join function and then the right data is on the right-hand side
+now this won’t work as is cuz if I actually run that it’s gonna say error
+by required because the data sources have no common variables I can fix this
+in two ways the first way is not the preferred way but I’ll show you anyways</p>
+<p>00:03
+so instead of customer ID what if we actually just named this trust ID and we
+know hey customer ID is the same as customer ID so let’s run that real quick
+so I reran that and I do left join again and it works and it shows us how the
+join works so on the left hand side which was this data I have customers 137
+and all these different correspondent areas and of course I have seven here as
+well as you can see the risk area some of them are blank so they have na s and
+that’s because the right hand side did not have a corresponding value for it
+but let’s pretend that we never change this customer ID because you know what
+we got this data from the source and we can’t change what the source data is and
+we shouldn’t because it’s we’re relying on it from somewhere else in the
+organization but we know through our business rules through our logic that
+customer ID and our data descriptions that our customer ID is in fact the same
+as cust I D so since we know that but the computer doesn’t we have to</p>
+<p>00:04
+explicitly tell it that so again if I run this and this with the new customer
+ID feature in there and then I run the left join you are gonna get that same
+error so what that what does that mean let’s just put a comma and put the by
+and we’ll say equals and what this is going to equal is a vector I have two
+data frames left data and right data on the left hand side we’re going to say
+custom ID is equal to on the right hand side customer I D just like so now when
+I run that it runs well unexpected equal ah because it’s a like I said it’s a
+vector of data here so there we go what did I do wrong
+Oh cust ID is missing I do this every time the capital D it slow hasty there
+we go and we’re back in business so there it is it’s love to enjoin and it</p>
+<p>00:05
+works because we explicitly said hey tie these together by these criteria let’s
+do a right hand join now so right join and we’ll put in the left of data and
+the right data again and this time we’re doing a we also have to do the buy
+because same scenario crust ID equals customer ID you get used to
+this pretty quick and put that in quotes and what should be good to go so the
+right hand join it only shows us what’s
+on the right hand side 2 4 &amp; 6 and we
+have corresponding high high and low so let’s just say number 2 actually didn’t
+exist in the top 1 so let’s just get rid of 2 and we’ll get rid of the
+corresponding data up for - just to be clear so now we don’t have to in the
+left of data let’s run this again I’m going to the left join and you can see
+when I do the left join we have 1 3 4 5</p>
+<p>00:06
+&amp; 6 we still have the n/a problems and now let’s do the right joint show you
+the slight difference so now we have a right join that did contain two and it
+does have an n/a because two does not exist in the first one because you can
+also do things like inner join and again it tells you exactly how to do that we
+can do left data right data by equals column of values or a vector of values
+customer ID lowercase D equals customer ID by the way I never got an A and my
+naming conventions ever so the inner join does not allow for the
+NA s because it removes them on both sides if they don’t exist on both sides
+so it’s an overlap in two circles overlapping it’s the stuff only in the
+middle maybe I’ll have a diagram for ya so that’s it that’s how you do your left
+and your right join and I showed you the inner join as well I hope that this</p>
+<p>00:07
+helps you in your data journey please do me a favor and subscribe hit a little
+bell down below help me grow this channel it is very new
+I am migrating from one channel to another and I’m making this channel very
+very are specific it will have the cradle-to-grave
+everything you need to know about are from the ground up and then it’ll have
+tips and tricks and then I’m gonna throw in things such as everyday use of our
+for the business casual user so how to manipulate data how to automate reports
+but things that are not really did at sciency but they’re very useful in your
+business environment so stay tuned subscribe to find out when I publish
+these and I will see you on the next one youEnd of file</p>

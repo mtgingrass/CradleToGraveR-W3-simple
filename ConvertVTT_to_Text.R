@@ -4,7 +4,7 @@ library(here)
 # get the vtt (subtitle) information and call python script
 # to convert the vtt to a plain text file. 
 
-files <- list.files(path="/ytdl/CradleToGraveR", pattern="*.vtt", full.names=TRUE, recursive=TRUE)
+files <- list.files(path="/ytdl/CradleToGraveR (UCA-hX4v0FEIKOzY8yikt8ow)", pattern="*.vtt", full.names=TRUE, recursive=TRUE)
 
 lapply(files, function(x) {
     for(i in x){
@@ -19,7 +19,7 @@ play_list_list <- list("",
                        "")
 
 #copy thumbnail images
-thumb_files <- list.files(path = "C:/ytdl/CradleToGraveR/",
+thumb_files <- list.files(path = "C:/ytdl/CradleToGraveR (UCA-hX4v0FEIKOzY8yikt8ow)/",
            pattern = "*.webp$",
            recursive = TRUE,
            full.names = TRUE)
@@ -49,12 +49,12 @@ shell.exec("rename_webp_to_jpg.bat")
 setwd(perm_wd)
 
 #
-content_files <- list.files(path = here("content",
-                                        "english",
-                                        "auto-posts",
-                                        "images"),
-                          pattern = "*.webp$ | *.jpg", 
-                          recursive = FALSE,
-                          full.names = FALSE)
+# content_files <- list.files(path = here("content",
+#                                         "english",
+#                                         "auto-posts",
+#                                         "images"),
+#                           pattern = "*.webp$ | *.jpg", 
+#                           recursive = FALSE,
+#                           full.names = FALSE)
 
 

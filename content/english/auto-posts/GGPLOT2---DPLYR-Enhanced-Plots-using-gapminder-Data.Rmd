@@ -1,8 +1,8 @@
 ---
-title: GGPLOT2 & DPLYR Enhanced Plots using gapminder Data
+title: GGPLOT2   DPLYR Enhanced Plots using gapminder Data
 date: 2020-02-12
 categories:
-  - Absolute Beginners Guide
+  - Uploads from CradleToGraveR
 tags:
   - Test
   - Test2
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=EbZvcQy174M">
-<img src="https://www.cradletograver.com/auto-posts/images/dplyrgroup_bysummarizeatallvarsfun.mp4.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/20191001-DataFrameTip-CreateDataFrames-[tRjrjmTfCxM].jpg">
 </a>
 
 

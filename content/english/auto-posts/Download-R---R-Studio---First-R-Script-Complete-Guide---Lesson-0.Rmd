@@ -1,8 +1,8 @@
 ---
-title: Download R & R Studio - First R Script Complete Guide - Lesson 0
+title: Download R   R Studio   First R Script Complete Guide   Lesson 0
 date: 2019-08-02
 categories:
-  - Absolute Beginners Guide
+  - Uploads from CradleToGraveR
 tags:
   - Test
   - Test2
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=sZo_Ig002Bw">
-<img src="https://www.cradletograver.com/auto-posts/images/GOODAUDIO-InstallR&RStudioonWindows+FirstScript2019.mp4.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/NA">
 </a>
 
 

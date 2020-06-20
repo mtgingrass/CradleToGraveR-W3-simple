@@ -2,7 +2,7 @@
 title: First flexdashboard using R
 date: 2019-10-06
 categories:
-  - Practical R for Business
+  - Uploads from CradleToGraveR
 tags:
   - Test
   - Test2
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=HbkgAUOYvCY">
-<img src="https://www.cradletograver.com/auto-posts/images/RStudiotoGithubtoNetlifyLiveSiteblogdownHugo.mp4.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/20190917-ggplotLabelsandTitles,markdowntabs-RLesson12CradleToGraveR-[1QYgccXBtrI].jpg">
 </a>
 
 

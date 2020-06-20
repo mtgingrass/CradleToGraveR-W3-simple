@@ -2,7 +2,7 @@
 title: R Studio Shortcut Tips
 date: 2020-01-15
 categories:
-  - Practical R for Business
+  - Uploads from CradleToGraveR
 tags:
   - Test
   - Test2
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=UfbBDJogwyQ">
-<img src="https://www.cradletograver.com/auto-posts/images/FirstflexdashboardusingR.webm.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/20190921-CompleteWebScraperforanyone-[o4ds2k9XJTU].jpg">
 </a>
 
 

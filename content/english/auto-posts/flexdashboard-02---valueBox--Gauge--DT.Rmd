@@ -1,8 +1,8 @@
 ---
-title: flexdashboard 02 - valueBox, Gauge, DT
+title: flexdashboard 02   valueBox  Gauge  DT
 date: 2019-10-08
 categories:
-  - Practical R for Business
+  - Uploads from CradleToGraveR
 tags:
   - Test
   - Test2
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=ef8qvUeopN4">
-<img src="https://www.cradletograver.com/auto-posts/images/NetlifyCustomURLandNewPostwithRStudioBlogdownHugo.mp4.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/20190920-DPLYRSelect&RenameColumns-[jCFpdvIDrIs].jpg">
 </a>
 
 

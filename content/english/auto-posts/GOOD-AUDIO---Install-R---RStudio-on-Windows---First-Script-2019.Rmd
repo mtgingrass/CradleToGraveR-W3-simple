@@ -1,8 +1,8 @@
 ---
-title: GOOD AUDIO - Install R & RStudio on Windows + First Script 2019
+title: GOOD AUDIO   Install R   RStudio on Windows   First Script 2019
 date: 2019-09-20
 categories:
-  - Absolute Beginners Guide
+  - Uploads from CradleToGraveR
 tags:
   - Test
   - Test2
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=R7wbCGXKAok">
-<img src="https://www.cradletograver.com/auto-posts/images/RInteractionTermsandRegression.mp4.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/NA">
 </a>
 
 

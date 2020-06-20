@@ -2,7 +2,7 @@
 title: Clean Data Outliers Using R Programming
 date: 2019-08-02
 categories:
-  - Random Statistics
+  - Uploads from CradleToGraveR
 tags:
   - Test
   - Test2
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=wns3fo4QOTs">
-<img src="https://www.cradletograver.com/auto-posts/images/RStudiotoGithubtoNetlifyLiveSiteblogdownHugo.mp4.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/20190802-CleanDataOutliersUsingRProgramming-[wns3fo4QOTs].jpg">
 </a>
 
 

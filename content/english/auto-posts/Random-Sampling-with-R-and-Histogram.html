@@ -1,0 +1,80 @@
+---
+title: Random Sampling with R and Histogram
+date: 2020-01-22
+categories:
+  - Uploads from CradleToGraveR
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+---
+
+
+
+<p><a href="https://www.youtube.com/watch?v=wkHLIWiGLyI">
+<img src="https://www.cradletograver.com/auto-posts/images/20190924-ggplotColors,Size,Alpha-RLesson13-[RL_zk7S_K3E].jpg">
+</a></p>
+<p>00:00
+we are going to talk about random number generation and random sampling in this
+quick tutorial less than five minutes so bear with me here let’s create a bucket
+of numbers and inside of this bucket let’s put our numbers in we’re gonna put
+in number one two three four five six randomly a command enter you see the
+bucket has been filled with these numbers now let’s say we want a sample
+out of this bucket and figure out what’s in the bucket so let’s do a sample
+called s1 and I’m gonna use a built-in function called sample and I’m gonna say
+well what do I want to sample I want to sample from the bucket how many do I
+want to sample I’m gonna take three items from that bucket and replace I
+don’t I am gonna say replace equals false as in if I pull the number out of
+the bucket that is gone is no longer available for my next sample so if I hit
+option enter which is just gonna run that line you’ll see over here in s1</p>
+<p>00:01
+that I have a number three one and four notice that there’s no repeats let’s run
+option return or option enter a few times and keep notice of those numbers 2
+3 6 5 3 2 that they don’t repeat that’s because I have replace equals false if I
+change this to true and I do option return the very first one is 1 4 4
+there’s already a repeat so after I pull the first number from the bucket which
+was in this case the number 1 I put the number 1 back and I pull another item
+from the bucket that’s the number 2 happened or the number 4 I happen to get
+and then I put the 4 back and the third pole I pulled a 4 and so we repeat it so
+let’s make this a little bit more fun and create a bucketful of 3 thought or
+I’m sorry a sample of 3,000 with replace equals true from this bucket of these
+numbers so come and enter on that as you can see there’s repeats because I’m
+there’s no other way to pull 3000 out of a bucket full of 6 so it has to repeat</p>
+<p>00:02
+and you see that there’s tons of numbers they’re too much to even put on here so
+if I actually type in s1 here you’ll see all the numbers here there’s tons of
+them so how do we make sense of this number these numbers well let’s do a quick
+histogram H is T and we’ll just put in the s-1 there you main enter and the
+histogram has been created for us so it’s pretty simple
+it shows the numbers 1 through 6 and the frequency of times that you’ve pulled
+those numbers from my random sample let’s run it a couple times just to see
+the bought the bar plot or the histogram I’m sorry change so you see it changed
+slightly as I do it so you know that we’re getting random numbers okay so
+let’s say we didn’t want a random sample from this bucket but we wanted to do
+purely random numbers but we wanted to do a min and Max so instead of using the
+bucket I’m gonna go ahead and change this bucket into a a run if statement so
+inside of these parentheses I’m gonna put some parameters I wanted to return</p>
+<p>00:03
+me to 20 numbers 20 numbers that’s what I wanted to return and I want the
+numbers to be between a minimum of 10 and a maximum of 20 so I’m gonna pull 20
+numbers randomly and they’re all gonna be between 10 and 20 and what’s going to
+return is a bucket that contains that and of that bucket I’m gonna sample
+3,000 times you’ll see this is gonna get a little crazy here
+so I hit s1 and and then I’m going to do a histogram of that and we have our
+histogram here so it this is very random because the run if I should have done
+the run if I could do a random number is equal to run if 20 min equals 10 max
+equals 20 here that’s whoop what did I do here</p>
+<p>00:04
+how Arden I’m not found I forgot a little equal sign there so that’s fine
+and then instead of having the runoff within this first parameter let’s just
+go ahead and create what are num in there and we have our new histogram and
+we can rerun that and our histogram will
+change quite quite a lot but what I want to show you is that they are num or
+underscore num down here is just a bunch
+of random numbers so we created them but they’re all between 10 and 20 and they
+are all they could be continuous that’s a decimal number but so I wanted to show
+you that you can pick random ones out of that and the histogram automatically
+bins them for us and we’ll talk more about that in the next lesson youEnd of file</p>

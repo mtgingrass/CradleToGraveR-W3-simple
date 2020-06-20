@@ -1,8 +1,8 @@
 ---
-title: here() and ggsave "I will set your computer on fire" - Why?
+title: here   and ggsave  I will set your computer on fire    Why 
 date: 2020-05-21
 categories:
-  - Absolute Beginners Guide
+  - Uploads from CradleToGraveR
 tags:
   - Test
   - Test2
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=RSXXYxCz630">
-<img src="https://www.cradletograver.com/auto-posts/images/RSSRSquaredMathRRStudio.mp4.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/NA">
 </a>
 
 

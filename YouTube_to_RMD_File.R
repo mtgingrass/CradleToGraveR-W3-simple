@@ -13,18 +13,18 @@ library(stringi)
 library(readr)
 
 #youtube-dl base directory
-yt_dl_JSON <- list.files(path = "c:/ytdl/", 
-                        pattern = "*.json$",
+yt_dl_JSON <- list.files(path = "c:/ytdl/CradleToGraveR (UCA-hX4v0FEIKOzY8yikt8ow)/", 
+                        pattern = "*.json",
                       recursive = TRUE,
                       full.names = TRUE)
 
-yt_dl_descrip_dir <- list.files(path = "c:/ytdl/", 
+yt_dl_descrip_dir <- list.files(path = "c:/ytdl/CradleToGraveR (UCA-hX4v0FEIKOzY8yikt8ow)/", 
                         pattern = "*.description$",
                         recursive = TRUE,
                         full.names = TRUE)
 
 
-yt_dl_vtt_cnvrt <- list.files(path = "c:/ytdl/",
+yt_dl_vtt_cnvrt <- list.files(path = "c:/ytdl/CradleToGraveR (UCA-hX4v0FEIKOzY8yikt8ow)/",
                                pattern = "*.en.txt$",
                                recursive = TRUE,
                                full.names = TRUE)
@@ -69,7 +69,7 @@ for (index in seq_len(nrow(df_yt_partial)))
   #yt_descrip <- readtext(yt_dl_descrip_dir[index])
   #yt_descrip <- readtext(df_yt$DESC[index]) #yt_json_file$description
   
-  title <- paste("---\ntitle: ", yt_json_file$title, sep = "")
+  title <- paste("---\ntitle: ", gsub("[[:punct:]]", " ", yt_json_file$title), sep = "")
   
   date_upload <- paste("date: ", 
                        substr(yt_json_file$upload_date,1,4),
@@ -128,3 +128,4 @@ vtt_txt <-  paste(readLines(df_yt_partial$VTT[index]), collapse="\n")
                      append = FALSE)
   
 }
+

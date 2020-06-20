@@ -1,8 +1,8 @@
 ---
-title: ggplot Labels and Titles, markdown tabs - R Lesson 12 CradleToGraveR
+title: ggplot Labels and Titles  markdown tabs   R Lesson 12 CradleToGraveR
 date: 2019-09-17
 categories:
-  - Absolute Beginners Guide
+  - Uploads from CradleToGraveR
 tags:
   - Test
   - Test2
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=1QYgccXBtrI">
-<img src="https://www.cradletograver.com/auto-posts/images/ggplotScatterPlot,geom_point(firstplot)-RLesson11CradleToGraveR.webm.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/20190810-ImportCSVFilesusingTidyverse-RLesson6-[Pa-DuVzrGMo].jpg">
 </a>
 
 

@@ -1,8 +1,8 @@
 ---
-title: ggplot Colors, Size, Alpha -  R Lesson 13
+title: ggplot Colors  Size  Alpha    R Lesson 13
 date: 2019-09-24
 categories:
-  - Absolute Beginners Guide
+  - Uploads from CradleToGraveR
 tags:
   - Test
   - Test2
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=RL_zk7S_K3E">
-<img src="https://www.cradletograver.com/auto-posts/images/ggplotLabelsandTitles,markdowntabs-RLesson12CradleToGraveR.webm.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/20190822-SubsettingData(dataframe),1ofMany-RLesson9-[9zLDvEtGVaQ].jpg">
 </a>
 
 
