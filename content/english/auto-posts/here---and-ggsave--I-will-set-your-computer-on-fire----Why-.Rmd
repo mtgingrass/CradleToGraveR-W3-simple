@@ -12,7 +12,7 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/Vectors and Functions - Lesson 4.webm.webp">
+<img src="https://www.cradletograver.com/auto-posts/images/Vectors-and-Functions---Lesson-4.webm.webp">
 #CradleToGraveR now a Discord! Come say hello: https://discord.gg/f2uDBvA
 In this video, I show you a better way to construct your file paths. The here package in R/Rstudio constructs paths to your project's files.
 

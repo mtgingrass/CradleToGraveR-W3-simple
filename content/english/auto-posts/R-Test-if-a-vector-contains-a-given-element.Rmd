@@ -12,7 +12,7 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/Math Operations - Lesson 1 R Tutorial for Begginers.mp4.webp">
+<img src="https://www.cradletograver.com/auto-posts/images/Math-Operations---Lesson-1-R-Tutorial-for-Begginers.mp4.webp">
 #CradleToGraveR now a Discord! Come say hello: https://discord.gg/f2uDBvA
 How to check if a vector contains a given value? Both the match() (returns the first appearance) and %in% (returns a Boolean) functions are designed for this.
 
