@@ -14,7 +14,7 @@ draft: false
 
 
 
-<p><img src="https://www.cradletograver.com/auto-posts/images/KableTablewithRandCoronavirusCOVID19DeathRates.webm.jpg">
+<p><img src="https://www.cradletograver.com/auto-posts/images/EndtoEndCovid-19AnalysiswithR-ImportData(1).webm.jpg">
 #CradleToGraveR now a Discord! Come say hello: <a href="https://discord.gg/f2uDBvA" class="uri">https://discord.gg/f2uDBvA</a>
 THIS VIDEO HAS BEEN UPDATED - CLICK THIS ONE INSTEAD: <a href="https://youtu.be/cdFIlaKKbkk" class="uri">https://youtu.be/cdFIlaKKbkk</a></p>
 <p>First part, importing Covid-19 (coronavirus) data into R. Note that I changed all of the “less than” symbols to “equal” symbols due to YouTube policy not having angled brackets.</p>
@@ -27,19 +27,19 @@ How I Create Videos: <a href="http://bit.ly/sub_to_chan" class="uri">http://bit.
 <div id="covid-data-import" class="section level1">
 <h1>Covid Data Import</h1>
 <p>This is where we get the data: <a href="https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases" class="uri">https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases</a></p>
-<p>#```{r}
-library(httr)
-library(readxl)</p>
-<p>url1 = “<a href="https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-2020-03-08.xls" class="uri">https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-2020-03-08.xls</a>”</p>
-<p>GET(url1, write_disk(tf = tempfile(fileext = “.xls”)))</p>
-<p>df = read_excel((tf))</p>
-<pre><code>
-# Covid Data Clean Up
+<pre class="r"><code>library(httr)
+library(readxl)
 
-This is cleaning up of the data.
+url1 = &quot;https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-2020-03-08.xls&quot;
 
-#```{r}
-sum(df$NewDeaths)</code></pre>
+GET(url1, write_disk(tf = tempfile(fileext = &quot;.xls&quot;)))
+
+df = read_excel((tf))</code></pre>
+</div>
+<div id="covid-data-clean-up" class="section level1">
+<h1>Covid Data Clean Up</h1>
+<p>This is cleaning up of the data.</p>
+<pre class="r"><code>sum(df$NewDeaths)</code></pre>
 <table>
 <thead>
 <tr class="header">

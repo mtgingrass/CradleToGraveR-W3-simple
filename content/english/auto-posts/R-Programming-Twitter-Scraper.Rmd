@@ -12,7 +12,7 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/EndtoEndCovid-19AnalysiswithR-ImportData(1).webm.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/RProgrammingTwitterScraper.mp4.jpg">
 #CradleToGraveR now a Discord! Come say hello: https://discord.gg/f2uDBvA
 Use the Twitter API to scrape twitter using R and R Studio.
 <U+0001F447>SUBSCRIBE & HIT THE <U+0001F44D> BUTTON <U+0001F447>

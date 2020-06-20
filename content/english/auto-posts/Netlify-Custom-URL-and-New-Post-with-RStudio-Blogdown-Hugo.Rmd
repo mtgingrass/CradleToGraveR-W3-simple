@@ -12,7 +12,7 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/WhoamIWhydoIteachR.mp4.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/NetlifyCustomURLandNewPostwithRStudioBlogdownHugo.mp4.jpg">
 How to customize the Netlify URL after publishing your content using RStudio, blogdown, Hugo, and GitHub. Also, how to actually create a post and publish it. All for free.
 
 Discord: https://discord.gg/f2uDBvA

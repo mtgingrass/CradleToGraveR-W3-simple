@@ -12,7 +12,7 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/Residuals,Predictions,PlotsR.mp4.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/RUnzipEntireDirectoryofFilesplyrpackageRStudio.mp4.jpg">
 #CradleToGraveR now a Discord! Come say hello: https://discord.gg/f2uDBvA
 In this video, I show you how to unzip an entire directory of files using the plyr package in RStudio. The live version had too long of an intro so I wanted to create a condensed version.
 

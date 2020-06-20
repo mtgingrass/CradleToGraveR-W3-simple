@@ -12,7 +12,7 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/BaseRPlotCustomized.webm.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/RInteractionTermsandRegression.mp4.jpg">
 Interaction effect exists when the effect of an independent variable on a dependent variable changes, depending on the value(s) of one or more other independent variables.
 
 In this video, I show you how to create linear models with interaction terms in R/RStudio.

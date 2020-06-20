@@ -12,7 +12,7 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/Updated-EndtoEndCovid-19AnalysiswithR-ImportData(1).webm.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/dput-RReproducibleExampleforStackOverflow.mp4.jpg">
 A reproducible example requires:
 <U+26AB> Minimal dataset, necessary to demonstrate the problem
 <U+26AB> Sample data must be able to replicate the problem

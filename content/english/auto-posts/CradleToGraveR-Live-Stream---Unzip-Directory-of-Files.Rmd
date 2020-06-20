@@ -12,7 +12,7 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/CorrelationMatrixinRwithcorplot.mp4.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/CradleToGraveRLiveStream-UnzipDirectoryofFiles.mp4.jpg">
 The tutorial starts here: https://youtu.be/irOsVaJFdVs?t=159
 
 In this video, I will show you how to use R and RStudio to unzip a directory of files, all automated.

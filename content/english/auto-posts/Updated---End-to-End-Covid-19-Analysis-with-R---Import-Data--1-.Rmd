@@ -12,7 +12,7 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/COVIDCSVDataUpdatePlot-datafromEuropeanCenterforDiseaseandPrevention.mp4.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/Updated-EndtoEndCovid-19AnalysiswithR-ImportData(1).webm.jpg">
 #CradleToGraveR now a Discord! Come say hello: https://discord.gg/f2uDBvA
 First part, importing Covid-19 (coronavirus) data into R. Note that I changed all of the "less than" symbols to "equal" symbols due to YouTube policy not having angled brackets.
 
@@ -32,7 +32,7 @@ output: html_notebook
 
 This is where we get the data: https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases
 
-#```{r}
+```{r eval = FALSE}
 library(httr)
 library(readxl)
 
@@ -47,7 +47,7 @@ df = read_excel((tf))
 
 This is cleaning up of the data.
 
-#```{r}
+```{r eval = FALSE}
 sum(df$NewDeaths)
 ```
 

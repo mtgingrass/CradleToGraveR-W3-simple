@@ -12,7 +12,7 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/RSquaredAdjustedRSquaredRStudioLinearModels.mp4.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/RHugoThemeandDynamicChanges.mp4.jpg">
 How to change Hugo Themes in RStudio and create new blogdown projects. How to dynamically change your site with RStudio.
 
 Discord: https://discord.gg/f2uDBvA

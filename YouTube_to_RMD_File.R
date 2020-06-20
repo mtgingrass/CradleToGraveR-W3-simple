@@ -1,8 +1,14 @@
+#TODO: eval=FALSE string parse "```R" the actual description metadata
+# ```{r setup II, include=FALSE, eval=TRUE}
+# knitr::opts_chunk$set(eval = TRUE, echo = TRUE)
+#```
+#
 library(jsonlite)
 library(readtext)
 library(ymlthis)
 library(stringr)
 library(here)
+library(stringi)
 
 #youtube-dl base directory
 yt_dl_JSON <- list.files(path = "c:/ytdl/", 
@@ -30,12 +36,18 @@ inds <- match(sub('\\..*', '', basename(yt_dl_JSON)),
 inds2 <- match(sub('\\..*', '', basename(yt_dl_JSON)), 
                sub('\\..*', '', basename(content_files)))
 
+inds3 <- match(sub('\\..*', '', basename(yt_dl_JSON)), 
+               sub('\\..*', '', basename(yt_dl_descrip_dir)))
+
+
+
 df_yt <- data.frame(JSON = yt_dl_JSON, 
                     VTT = yt_dl_vtt_cnvrt[inds],
-                    IMAGE = content_files[inds2])
+                    IMAGE = content_files[inds2],
+                    DESC = yt_dl_descrip_dir[inds3])
 
-df_yt_partial <- df_yt[complete.cases(df_yt),]
-df_yt_Partial <- df_yt
+#df_yt_partial <- df_yt[complete.cases(df_yt),]
+df_yt_partial <- df_yt
 ### I could use the DF itself instead.
 ### Iterate through each json file. 
 
@@ -46,7 +58,7 @@ for (index in seq_len(nrow(df_yt_partial)))
   yt_title <- yt_json_file[index]$title
   
   #yt_descrip <- readtext(yt_dl_descrip_dir[index])
-  yt_descrip <- yt_json_file$description
+  yt_descrip <- readtext(df_yt[index]) #yt_json_file$description
   
   title <- paste("---\ntitle: ", yt_json_file$title, sep = "")
   
@@ -91,7 +103,7 @@ draft: false"
                           image_path,'"', ">", sep = ""),
                     yt_json_file$description,
                     "\n\n", 
-                    df_yt_partial$VTT[index],
+                    stri_enc_toutf8(df_yt_partial$VTT[index]),
                     sep = "\n")
   
   

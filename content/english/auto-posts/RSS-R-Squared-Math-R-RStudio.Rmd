@@ -12,7 +12,7 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/NA">
+<img src="https://www.cradletograver.com/auto-posts/images/RSSRSquaredMathRRStudio.mp4.jpg">
 #CradleToGraveR now a Discord! Come say hello: https://discord.gg/f2uDBvA
 The coefficient of determination, R^2, is used to analyze how differences in one variable can be explained by a difference in a second variable.
 

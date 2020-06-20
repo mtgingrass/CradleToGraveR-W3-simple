@@ -1,0 +1,99 @@
+---
+title: GOOD AUDIO - Install R & RStudio on Windows + First Script 2019
+date: 2019-09-20
+categories:
+  - Absolute Beginners Guide
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+---
+
+<img src="https://www.cradletograver.com/auto-posts/images/NA">
+#CradleToGraveR now a Discord! Come say hello: https://discord.gg/f2uDBvA
+Follow the steps below to download R and RStudio and create your first script. Busy? Try putting the video on 1.5x speed or skipping about half after installing with the links below. Good luck and please subscribe and like this video!
+
+MAC
+R 3.6.1.pkg: https://cran.r-project.org/bin/macosx/R-3.6.1.pkg
+RStudio 1.2.5001: https://download1.rstudio.org/desktop/macos/RStudio-1.2.5001.dmg
+
+WINDOWS
+R 3.6.1.exe: https://cran.r-project.org/bin/windows/base/R-3.6.1-win.exe
+RStudio 1.2.5001: https://download1.rstudio.org/desktop/windows/RStudio-1.2.5001.exe
+
+Please subscribe if you found this useful and want to see more.
+
+<U+0001F447>SUBSCRIBE & HIT THE <U+0001F44D> BUTTON <U+0001F447>
+
+<U+2794>Everyone should download TubeBuddy! http://bit.ly/t_buddy
+<U+2794> Blue Yeti Mic: https://amzn.to/2IheZTG
+<U+2794>2 Months SkillShare Free<U+2794>  https://www.skillshare.com/r/profile/...
+
+Do you have more to add? Let me know how you liked the video or if I need anything corrected in the comments below.
+
+In lesson 3, we learned some more cool Markdown features in R. In this lesson, we're going to look at Vectors and Functions.
+
+#rstats #rstudio #rstudiotips #datascience #rprogramming
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+TECH GEAR I USE DAILY
+<U+2794> I work on a MBP: https://amzn.to/2XxeBsG
+<U+2794> Blue Yeti Mic: https://amzn.to/2IheZTG
+<U+2794> Swissgear Backpack: https://youtu.be/VTTnRMyFkB8
+<U+2794> mTuber for Title Effects : https://motionvfx.sjv.io/3M3KM
+<U+2794> mArrows for animated arrows: https://motionvfx.sjv.io/9B3oe
+<U+2794> MICROPHONE - https://amzn.to/2LYfJkr
+<U+2794> BACKPACK - https://amzn.to/2Ep4uez
+<U+2794> GREEN SCREEN - https://amzn.to/2JVzMgP
+<U+2794> TRIPOD - https://amzn.to/2Eo2wv4
+
+HOMEPAGE - https://www.markgingrass.com/
+REVIEWS/BLOG - https://www.markgingrass.com/blogs/re...
+
+OTHER COURSES I CURRENTLY TEACH
+<U+2794> C++ Course: http://bit.ly/cpp_course
+<U+2794> Supply Chain Management:  http://bit.ly/scm_course
+
+Let's chat
+https://www.facebook.com/GingrassOnline/
+https://www.instagram.com/markgingrass/
+<U+0001F447>SUBSCRIBE & HIT THE <U+0001F44D> BUTTON <U+0001F447>
+R Channel: http://bit.ly/38yfFP9
+How I Create Videos: http://bit.ly/sub_to_chan
+
+<U+2794> TubeBuddy: http://bit.ly/t_buddy
+<U+2794> Blue Yeti Mic: https://amzn.to/2IheZTG
+<U+2794> 2 Months SkillShare Free <U+2794>  https://www.skillshare.com/r/profile/Mark-Gingrass/2388101
+
+Do you have more to add? Let me know how you liked the video or if I need anything corrected in the comments below.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+TECH GEAR I USE DAILY
+<U+2794> MacBook Pro: https://amzn.to/2XxeBsG
+<U+2794> Blue Yeti Mic: https://amzn.to/2IheZTG
+<U+2794> Swissgear Backpack: https://youtu.be/VTTnRMyFkB8
+<U+2794> Canon EOS 90D Camera: https://amzn.to/2u0o52K
+<U+2794> Apple Magic Trackpad 2: https://amzn.to/31XDugG
+<U+2794> mTuber for Title Effects : https://motionvfx.sjv.io/3M3KM
+<U+2794> mArrows for animated arrows: https://motionvfx.sjv.io/9B3oe
+<U+2794> Microphone - https://amzn.to/2LYfJkr
+<U+2794> Backpack - https://amzn.to/2Ep4uez
+<U+2794> Green Screen - https://amzn.to/2JVzMgP
+<U+2794> Tripod Neewer: https://amzn.to/2uF275X
+<U+2794> Tripod (cheap) - https://amzn.to/2Eo2wv4
+
+HOMEPAGE - https://www.markgingrass.com/
+REVIEWS/BLOG - https://www.markgingrass.com/blogs/re...
+
+OTHER COURSES I CURRENTLY TEACH
+<U+2794> C++ Course: http://bit.ly/cpp_course
+<U+2794> Supply Chain Management:  http://bit.ly/scm_course
+
+Let's chat
+https://twitter.com/MarkGingrass
+
+
+
+c:/ytdl//CradleToGraveR/Absolute Beginners Guide/01 - GOOD AUDIO - Install R & RStudio on Windows + First Script 2019/GOOD AUDIO - Install R & RStudio on Windows + First Script 2019.mp4.en.txt

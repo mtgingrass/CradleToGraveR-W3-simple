@@ -12,7 +12,7 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/dplyrgroup_bysummarizeatallvarsfun.mp4.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/DataManipulationTwitterScraperusingR.webm.jpg">
 #CradleToGraveR now a Discord! Come say hello: https://discord.gg/f2uDBvA
 Scrape Twitter for keywords or hash tags or people. Use R and R Studio to scrape twitter using their own API, free.
 <U+0001F447>SUBSCRIBE & HIT THE <U+0001F44D> BUTTON <U+0001F447>

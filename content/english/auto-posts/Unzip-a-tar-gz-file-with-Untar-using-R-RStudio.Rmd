@@ -12,7 +12,7 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/CradleToGraveRLiveStream-UnzipDirectoryofFiles.mp4.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/Unzipatar.gzfilewithUntarusingR_RStudio.mp4.jpg">
 In this video, I show you how to unzip a tar.gz file using R and RStudio. No need for third-party apps when RStudio has this built-in!
 
 <U+0001F447>SUBSCRIBE & HIT THE <U+0001F44D> BUTTON <U+0001F447>

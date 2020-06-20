@@ -12,7 +12,7 @@ w3codecolor: false
 draft: false
 ---
 
-<img src="https://www.cradletograver.com/auto-posts/images/Updated-EndtoEndCovid-19AnalysiswithR-ImportData(1).webm.jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/RCDCDataFixedrmarkdownTutorial.webm.jpg">
 #CradleToGraveR now a Discord! Come say hello: https://discord.gg/f2uDBvA
 R CDC Data Fixed rmarkdown Tutorial. Using names(), read_xlsx() and using r within rmarkdown narratives.
 
