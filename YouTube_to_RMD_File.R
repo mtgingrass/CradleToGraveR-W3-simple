@@ -8,19 +8,37 @@ library(here)
 yt_dl_dir <- list.files(path = "c:/ytdl/", 
                         pattern = "*.json$",
                       recursive = TRUE,
-                      full.names = TRUE) 
+                      full.names = TRUE)
 
-yt_dl_description <- list.files(path = "c:/ytdl/", 
+yt_dl_descrip_dir <- list.files(path = "c:/ytdl/", 
                         pattern = "*.description$",
                         recursive = TRUE,
-                        full.names = TRUE) 
+                        full.names = TRUE)
 
 
-yt_json_file <- 
-  read_json(yt_dl_dir[1])
+yt_dl_vtt_cnvrt <- list.files(path = "c:/ytdl/", 
+                                pattern = "*.en.txt$",
+                                recursive = TRUE,
+                                full.names = TRUE)
 
-yt_description <- readtext(yt_dl_description[1])
+L1 <- yt_dl_dir
+L2 <- yt_dl_vtt_cnvrt
 
+inds <- match(sub('\\..*', '', basename(L1)), sub('\\..*', '', basename(L2)))
+df_yt <- data.frame(JSON = L1, VTT = L2[inds])
+
+
+
+
+#str_split(yt_dl_dir[1], pattern = ".json")
+
+#read first json file
+yt_json_file <- read_json(df_yt$JSON[1])
+
+yt_title <- yt_json_file[1]$title
+
+#yt_descrip <- readtext(yt_dl_descrip_dir[1])
+yt_descrip <- yt_json_file$description
 
 title <- paste("---\ntitle: ", yt_json_file$title, sep = "")
 
@@ -63,7 +81,7 @@ yaml_tmp <- paste(title,
                   "",
                   paste("<img src=", '"https://www.cradletograver.com/auto-posts/images/',
                         image_path,'"', ">", sep = ""),
-                  descript,
+                  yt_json_file$description,
                   sep = "\n")
 
 

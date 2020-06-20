@@ -1,3 +1,4 @@
+library(here)
 #Automate YouTube posts
 
 # get the vtt (subtitle) information and call python script
@@ -27,9 +28,21 @@ file.copy(from = thumb_files,
           to = "C:/Users/markg/Documents/CradleToGraveR-W3-simple2/content/english/auto-posts/images")
 
 # Run .bat file first to strip spaces in filenames
+# this is a terrible, terrible, terrible method to use
+perm_wd <- "C:/Users/markg/Documents/CradleToGraveR-W3-simple2"
 
-content_files <- list.files(path = "C:/Users/markg/Documents/CradleToGraveR-W3-simple2/content/english/auto-posts/images",
+setwd(here("content","english","auto-posts","images"))
+
+shell.exec("strip_spaces.bat")
+setwd(perm_wd)
+
+#
+content_files <- list.files(path = here("content",
+                                        "english",
+                                        "auto-posts",
+                                        "images"),
                           pattern = "*.webp$", 
                           recursive = FALSE,
                           full.names = FALSE)
+
 
