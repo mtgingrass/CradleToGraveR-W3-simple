@@ -1,0 +1,150 @@
+---
+title: Random Rhere   and ggsave  I will set your computer on fire    Why 
+date: 2020-05-21
+categories:
+  - Random R
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi_webp/RSXXYxCz630/maxresdefault.webp
+---
+
+
+
+<p><a href="https://www.youtube.com/watch?v=RSXXYxCz630">
+<img src="auto-posts/images/20-RandomR-CradleToGraveRLiveStream-UnzipDirectoryofFiles.mp4.jpg">
+</a></p>
+<p>00:00
+now the day another tutorial let’s get this started we are in the our studio
+environment and I am going to show you the here package and how to organize
+some files and projects I think it’s about time we start cleaning up the way
+we set up our projects and doing it the correct way so that being said let’s
+create a brand new project which will start us fresh by doing if I could find
+my mouse file new project and let’s just jump in new directory new our project
+and call it whatever you want remember the path that you put it in so be my
+here project sure right you could browse
+and figure out where you’re gonna put it that’d be nice so mines under documents
+and this PC so just just so I know we’re going to find it create that project</p>
+<p>00:01
+it’s an empty project it’ll be nothing there except for my actual project so
+documents so in the documents of course to get there and to go through this PC
+local disk users Marjorie documents I hate not having full paths in this
+address bar or drives me insane but I can go to my my here project right here
+double click on it and you’ll see I just have my here project that’s it dot our
+project our project okay so that keep that in mind now
+what’s our working directory we just created a project
+so what automatically happens is the working directory changes to the project
+directory so we get WD in the console command enter or just control enter or
+plain old enter because we’re in the console you can see the entire path of
+where the projects located that’s fine and dandy what we want to do is organize
+our files and make sure we do it the correct way to a point so let’s not put</p>
+<p>00:02
+a lot of things inside of this particular path let’s do a new folder
+and create we’ll create a couple folks here data create a new folder called
+scripts this is where the scripts would lie you might have 2030 scripts in there
+for now a new folder figures so any pictures
+or things you want to use - for reports for some reason you want to save them
+let’s do that under data let’s go ahead and create another subfolder and we’ll
+call that raw data and that’s probably good for now for these small projects
+we’ll keep it simple so we’re gonna do a
+new file I’m going to create an R script and now that we have the script open
+here let’s just do a ctrl s and save it and let’s put it in the right place
+we’re gonna put it under scripts so it’s saved we’ll call this first my first
+script cool got that figured out now let’s play with a couple examples and</p>
+<p>00:03
+work with what we have here what we got going on let’s start with my favorite my
+favorite data set empty cars I’m sorry you’ve probably so sick of me saying
+that okay there it is empty cars has been loaded into my
+environment I have it it’s here but it’s
+not really stored anywhere except for in RAM right now it’s in my RAM but it’s
+not saved on to the disk the file system
+we can do that we can use write CSV I do write
+CSV I have all these options I hit tab see x equals file equals and all that
+stuff so let’s just do I believe we just do I want to bring in my data to write
+just HV and I want to save it to a file named let’s call it a la dot CSV that’s
+all there is to it control-enter on that now where did it save it to let’s check
+it out let’s go to our directories we have it right here in our base path the</p>
+<p>00:04
+blood at CSV you see it right there it’s saved I don’t have Excel or anything on
+this computer so I can’t really open it up without I could open up with notepad
+if I want to but you all know what a CSV file as I would hope by now so we have
+this bit didn’t go into the data you know it didn’t do anything
+let’s let’s delete that and try something new delete gone let’s do /data /index
+control-enter on that era ah no such file or directory oh let’s get rid of
+that /a control-enter there it is I’m actually messing with you a little bit
+so hold on one second data there’s our blah now it’s in the
+raw folder so delete that again we screwed up data slash raw slash blah now</p>
+<p>00:05
+we go back and it’s in the right place right there boom I’m gonna delete it
+anyways bye okay we’re back right down CSP not bad not bad
+we’re gonna do this a different way though cuz we don’t want to deal with
+did I put a forward slash here didn’t do I do any back slashes forward slashes I
+don’t want to mess with all that so let’s do install packages install I’m
+gonna type in here and it should populate and just hit tab and click on
+install as always mine’s already installed so I’m gonna cancel that let’s
+load that library called here at the top and be right here get it I’m just
+kidding okay here and then as soon as you load
+it it says starts at C Drive blah blah blah my here projects all fine and dandy
+what we’re gonna do with this package is it we’re gonna get rid of all this so
+cuz we don’t want to deal with forward slashes of back slashes what file system
+we on Linux that we on Mac going on PC Windows like what are we on so let’s</p>
+<p>00:06
+forget about all that so let’s just do write dot CSV and this time we’re just
+gonna say here I’m gonna write here and where am I going to put it in quotes I’m
+gonna say I want to put this into data the raw data and I’m gonna call it my
+data dot CSV coming in or ctrl enter as you can tell I cannot switch between a
+PC and a Mac very easily with my shortcuts let’s see if it actually
+loaded and it did what did I do oh I have to bring the
+data my data now we’re good it’s always the little things there it
+is my data that’s his fee and you can see it’s under my here projects data row
+so that did the trick pretty cool now we don’t overwrite empty
+cars we don’t want to do anything that’s why we always store it as a as my data
+we can break my data all day long start a fresh new on and create and then</p>
+<p>00:07
+reassign it to empty cars but the idea is sometimes you might have your own
+data or data that you want to really have to be persistent you would save it
+in that raw data and you can always refer back to that raw data to load it
+in fact we can do that instead of an empty cars now we have that file we can
+actually say read CSV and right here you can just say here open French see now
+where is that data we want data raw and it was called my data
+CSV so before I hit enter let’s go ahead
+and remove this gone and I don’t need to write this data anymore because it’s
+written and you can keep this if you want I’ll just put it in a comment so we
+have nothing loaded into our environment let’s do ctrl enter and lo and behold
+it’s 32 observations and twelve variables it did the trick and it did it
+without any forward slashes of back slashes congratulations now let’s just</p>
+<p>00:08
+quickly do one more thing to make this a little bit cooler for us let’s create a
+ggplot so let’s add our library up top ggplot2 and let’s go through just great
+one real quick we will call it ggplot aesthetic well let’s not forget our data
+I want to bring in my data aesthetic x equals weights y equals
+drat that one yeah and we want to create a scatterplot because that’s the best
+way to look at data quickly and efficiently so she um went and that’s it
+oh my data created the plot you can see it right here I just created that plot
+and now let’s save it so we’re gonna save this by doing GG sick doo doo doo</p>
+<p>00:09
+save it’ll save your last plot that you created where do we want to save it
+though save it here not here though in figures figures and what do I want to
+call it I want to call it my my data plot dot PNG right control-enter on that
+could not find juju salve let’s do save instead and go from there Oh save the
+image and six point three by five point seven nine inches let’s take a look at
+it so if we go back to my here project and I go to figures and there it is PNG
+you could post this on Facebook and when you do don’t forget to link this video
+and get other people to watch my videos sorry this was a little long-winded but
+I think it’s important that you learn how to save and create these directories
+and keep that structure going so that it’s nice and organized so you you’ve
+learned how to use the here package a little bit and how to save a tree tree</p>
+<p>00:10
+plot as a PNG file you can also save it as other other formats and there’s a few
+of them I don’t know them all I don’t have them all memorized but PDF works
+let’s take a quick look at that under figures so whatever you want to do with
+it I actually don’t think I have Adobe PDF loaded we’ll see it’ll probably open
+up in chrome Brin it’s not a brand new PC it’s a temporary workaround for my
+set up there we go it’s a PDF file so take a look play around with it save
+your stuff and then now that you saved it posted on Twitter Facebook and don’t
+forget to tag me in there appreciate you
+guys thanks for everything and as always I’ll see you in the next video [Music]End of file</p>

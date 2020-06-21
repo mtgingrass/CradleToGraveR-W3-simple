@@ -1,0 +1,258 @@
+---
+title: Random RScrape Reddit Comments R ExtractoR
+date: 2019-10-27
+categories:
+  - Random R
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/sze_XrE1AzE/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=sze_XrE1AzE">
+<img src="auto-posts/images/05-RandomR-DataFrameTip-CreateDataFrames.webm.jpg">
+</a>
+
+
+
+
+
+
+
+
+
+00:00
+hey welcome back everybody this is marcin grass here and i'm at a website
+called reddit.com if you have not heard of it you probably should check it out
+because it's pretty pretty awesome anyways what I want to show you today is
+how to use are in a package called extractor extract or to extract comments
+and to find URLs that have specific terms in them and what better way to do
+it to actually give you a practical lesson on how to do it in real time here
+so let's go ahead and find first we in do the easy way we're gonna find a
+reddit that we want to check out like I've got quite a few here let's just
+click on just randomly picking one so this is live asked me over 30 I love
+this reddit so let's just click on this particular one here and I'm gonna grab
+that URL so I'm going to come and see that and as you can see there are
+comments but there's not that many comments for this one there's not that
+
+00:01
+many but that's okay because that's part of what I'm going to show you is find a
+way to find her write it that has more comments so we'll do that
+programmatically as well so this is a really good good way to do this so let's
+go back to our I've got a little bit of a shell already built here we're gonna
+skip some of it okay so you're gonna need to be using the tidy verse and the
+reddit extractor package if you don't have those two installed click on
+install and obviously just type in tiny verse which you should have if you
+follow it along with any of my previous exercises and then let it extractor just
+click on install let it do its magic and you're good to go so reddit extractor
+and tidy verse should be installed do that and you can load these libraries so
+let's load those two libraries we're gonna skip lines four through eight I
+know it's hard to see but we're gonna skip this for now so I'm gonna show you
+this in a minute what I'm gonna do with that because we already have a website
+we're also gonna skip line 10 and by skip I'm literally just not gonna run
+
+00:02
+those you should comment them out if you're never gonna run them but we're
+going to leave that there for a second for a placeholder and now what I want to
+show this is this function called reddit content now reddit content comes from
+reddit extractor and all you have to do this is how
+simple this is this is amazingly simple is put it in quotes so add some double
+quotes on both sides and control-v or command-v and paste that URL in there
+see it's all in there and it's in there now so on line for me
+12 I'm gonna do command enter and you'll
+see how fast this is there at the bottom you see it's 100% done what it did was
+it extracted those six comments so there wasn't that many so under content if I
+click on it now what you see is you see the subreddit is called ask a man over
+30 you've got the comment date and you have
+the structure and a few other things on there let's scroll to the right and
+you'll see the actual comments are here so you have all your comments we've just
+literally extracted the comments and the URLs to go with them so what I want to
+
+00:03
+do is I want to write those to a CSV file so that we can maybe cut and paste
+into some sort of I don't know a text-to-speech synthesizer throw a
+YouTube video on there and make money off of it something like that right you
+know so this write dot CSV does just that and I really only want the comments
+so I'm gonna just go ahead and do content dollar signs come comment cuz
+that's the name of the feature or the header that you see the name the header
+name I'm gonna call it test dot CSV and I don't need Road Eames and it doesn't
+mean anything to me so let's go ahead and write that and we go to our files
+here and you see test on CSV you can go find this in your directory if you'd
+like as well and I'm just gonna view it right now so here they are here are the
+comments which is kind of cool because I think oh it actually captures the
+markdown language as well that's pretty interesting
+now there's ways to programmatically strip the markdown as ways to
+programmatically make the markdown happen there's all kinds of things you
+
+00:04
+can do with this but I've got the general idea here so what you can do is
+copy and paste this into us text-to-speech synthesizer make that
+into a mp3 throw it on some sort of video and put it on YouTube right so
+that's the idea is how do i scale something so that I can always have
+youtube content that I don't have to actually produce because there's only so
+much time in the day it's just it's just an idea there's
+there's already tons of that out there people do with Python quite a bit
+honestly so anyways there's one of many many many ideas you can get so we have
+that information there now that's cool because we already have the URL that we
+were looking for now what I want to show you next is this this function here
+called reddit URLs and it has a bunch of different parameters it has more
+parameters than what's shown here but what I want to do is I want to add
+search terms so I'm going to add a search term called Trump in there I
+don't know if it's case sensitive or not though I guess we'll find out and then
+the CM threshold is your comment threshold I don't want it to return any
+
+00:05
+URLs that have the word Trump in it so in reddit the way that they do their
+URL has to do with the name of the title so if the title has Trump in it it's
+gonna pull it back it's gonna give it to
+me and it's gonna be threshold it has to have at least 20 comments or more to
+come back and the page threshold don't worry so much about that but that's just
+the amount of results you want and you can probably get as many URLs as you
+want but when you get them you can't extract all the data at once there's
+limits to how much you can extract at one time I'll get to I'll get more on
+that in just a second let's go ahead and run this we got the word Trump in there
+hit enter let's see if we even get any results so it looks like links this
+might be from previous time I clicked it
+because as you see down here this little
+stop sign oh it's gone now that means it
+ran so 92 observations of five variables let's click on that now I have links so
+I have the title see it all has Trump in
+
+00:06
+it it looks like it's not case-sensitive which is good because really Trump or
+capital Trump so here's Trump here that's lowercase and so you have all the
+URLs and that's what I'm really after the URL now this might be useful in
+itself because it has a number of comments and the title which is kind of cool
+you can sort these by comments if you click on that so 23,000 comments on this
+particular one with this particular URL so you can see how this could be
+beneficial it depends on what you don't and it tells you the subreddit it's
+under a subreddit called to ask reddit so pretty pretty handy information here
+so let's go ahead and take what we've found here this knowledge
+and bring a we're gonna bring the comments in based on maybe the top
+comments or something like that right so let's see if we can do that it looks
+like our Road numbers are over here but I'm not I'm sure if that's really true
+because I'm not sure does so there's 252 and there's only 92
+observations so there's not true statement that is not a true statement
+
+00:07
+so disregard these numbers over here is not true so you've got to be careful
+with that because this is a package that we don't know what it's really doing so
+what it probably does is it goes through every URL and in it district and it
+discards the ones that have less than 20
+comments but it kept the road numbers as if it didn't discard that that's a very
+subtle thing that's hard to see but just so you know
+so these road numbers are not actual observation numbers so be careful with
+that anyways let's just go ahead and close this out and let's go down here
+where I have this other content so I'm gonna comment this one out which
+shouldn't matter if you run these in certain orders but I don't want you to
+get confused so so this particular way right here was when we had the exact URL
+we already had but now we can extract the URLs this way we can actually plug
+in hey I want the fifth URL the tenth URL and do it that way it's gonna do the
+exact same thing is it as if I if I copied and pasted it but we get to
+choose from what we just picked up up here so maybe we want to do the max
+
+00:08
+right maybe we want to find the one with the most amount of comments and extract
+those so how can we do that let's see let's see if we can do this here we can
+do a we can do a max function and I know
+we can get back by bringing in the links
+dollar sign dumb comments this will give us the number though not the actual
+index number like I still don't know what row that is right so that's that's
+also a problem another row so what I can do is I can say bring me back let's
+let's use a tidy verse this is why we have it we're gonna do links I'm gonna
+bring in a links data pipe it over to a filter function on my filter and I'm
+gonna say filter I'm gonna say I want the num comments
+to be equal to the max number of comments and if I hit command enter on
+that you get the actual URL see the URL actually just showed up down here so
+
+00:09
+that's what we want so we're gonna say max URL is equal to that and this is
+just on the fly I don't know let's let's
+try it max URL so I'm gonna command C on that and instead of the this particular
+URL right here where it was just grabbing the first one might delete that
+out command V in there so I have max URL
+I want the max to RL and the wait time 2 is where if in in the API for reddit
+they're gonna let you extract only a certain amount of comments per minute
+per two minutes per whatever and so the default is two minutes and that's the
+least amount so you can you can grab a chunk of comments wait two minutes grab
+another chunk wait two minutes so that way everyone's not using all of their
+comments and bogging down the system and making maybe you know unfair advantages
+or something like that so let's go ahead and run this I'm gonna do command enter
+error invalid URL parameter and knew that was gonna happen so max URL it's
+
+00:10
+actually because of the way this is set up in the tiny burst it's actually a
+data frame itself as you can see right here max URL if I click on it you'll see
+it's a data frame with one observation so but we're almost there so we know we
+want to max URL in the only observation in there the first one boom there we go
+command enter on that ooh double whammy dollar sign URL first URL here we go
+well I'm glad that I could solve those pretty quick but you're gonna run into
+that quite a bit so just don't be discouraged and it happens to everybody
+so I have content now 409 observations of 18 variables let's click on content
+and now based on that URL which you can see over here I still should have the
+URL yep on the right hand side I've grabbed all the comments and you have
+all this different all these features to comment date the number of comments
+things like that which the number of comments are the same because we grabbed
+the max remember was 23,000 something there it is so we have
+
+00:11
+that and over here we have a feature called comments and we have all of the
+comments now I am only particularly interested in the comments so I'm gonna
+go ahead and extract those and put those
+to a CSV file so that's what I have here so I have my content that I just read
+all the comments on and I only want the comments so the dollar sign comment will
+get the feature and I want to bring it to a file write to a file called test
+dot CSV and I don't need the row names I'm gonna hit command enter on that and
+normally you wouldn't quite do it like this where the comment dollar sign is
+just because it's not really a comma separated value in that case I don't
+think let's click on test dot CSV and see what it looks like new file well
+it's more like a every time a comment happens there's a return character in
+this particular case but it's a separated value to see that each comment
+is on its own the line so to speak right and what you'll notice too somewhere
+
+00:12
+maybe is yes so like this one right here that's called markdown language so it
+actually keeps the markdown language now there's ways to strip out markdown and
+convert it to non markdown there's ways to do all kinds of things with this
+right here but this is actual the actual comment that somebody put in read it
+with that language with the brackets with the parentheses with the URLs the
+reddit allows those inside of the comments so we've captured that which is
+actually pretty awesome data to have but it might not make sense if you can do a
+text to speech recognition synthesizer or a text-to-speech synthesizer and put
+this on YouTube and try to monetize other people's content hopefully not
+or something like that so that's the idea so again let me run this run this
+through one more time we have search terms equals Trump this is to get the
+links that have those terms or the titles we didn't have to do that we
+could have plugged in down here on line 14 the actual website that we're
+interested in the URL for the reddit and
+then you wouldn't use this line here but
+
+00:13
+we did one of the max amount of comments we wanted that particular story right
+now there's other terms inside of this reddit URLs you could have put in here
+for example I could have put in comma sort sort by equals and new and that
+would just give us today's let's see so right now links has 92 observations
+let's go ahead and run this one more time the links so anywhere in here just
+do command enter and now I have nothing so there are no nothing new I don't know
+what the threshold is for new on this so we have to look that up if you did a
+question mark reddit extract there and then you'd have
+to go find out through the documentation what new means so new is definitely not
+gonna get us far with this new could be within the hour could be within the day
+I don't know it's a little bit vague but for now just know that there are
+different thresholds you can set different parameters and that's it it's
+
+00:14
+pretty cool now do what you want with those and expand on this and try to
+automate more of your daily life so that's what I'm gonna do I'm gonna take
+these comments I'm gonna try to see if I
+can spit these into like a Final Cut Pro
+if I plug-in maybe and automate comments and they're already out there so I know
+people are doing it but now you can do it just like that alright so if you
+found this helpful or have some modifications or some cool little things
+you want to add to this comment DM e do whatever you can follow me and I will
+see you in the next video youEnd of file
+

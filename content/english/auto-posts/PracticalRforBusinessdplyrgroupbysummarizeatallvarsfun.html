@@ -1,0 +1,120 @@
+---
+title: Practical R for Businessdplyr group by summarize at all vars fun
+date: 2020-02-06
+categories:
+  - Practical R for Business
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/PMhzZ1sAwnQ/maxresdefault.jpg
+---
+
+
+
+<p><a href="https://www.youtube.com/watch?v=PMhzZ1sAwnQ">
+<img src="auto-posts/images/02-PracticalRforBusiness-flexdashboard02-valueBox,Gauge,DT.webm.jpg">
+</a></p>
+<p>00:00
+in this quick tutorial I’m gonna show you how to use the deep liar package to
+summarize specific columns based on variables it’s pretty cool very powerful
+and very quick and succinct so let’s jump right to it
+so we’re gonna start off with just using the empty cars set but first let’s load
+our library the deep liar library and if you don’t have the deep lie library as
+always packages install deep liar and install all right so libraries loaded I
+ran that command enter now I purposely made my console large so that we can see
+the outputs pretty easily so let’s just quickly do a quick run of what empty
+cars is as you probably all know by now it’s got different features miles per
+gallon cylinder etc etc and all these different numbers now let’s do something</p>
+<p>00:01
+with that let’s summarize in certain way so the first one will do remember empty
+cars and then remember the shortcut key command shift M will give you the pipe
+operator and the pipe operator works on two plier package tidy verse things like
+that and so what we want to do is we want to group these by something so
+group under scrub by what do we want to group these by it let’s group these by
+for example cylinder so CY L and what do we want to do with that group and well
+we want to summarize so summarize and we want to summarize basically say we want
+the maximum horsepower so we can do max and put in horsepower in there and
+command enter and lo and behold down below we have alright so with a for the
+four cylinder the maximum horsepower is 113 for the six the maximum HP is 175
+etc etc but we don’t have to stop there we can do we can also do a mean in there
+we can also do the mean horsepower whatever we want to do we can add it in</p>
+<p>00:02
+here I want to summarize by mean horsepower so let’s run that so now we
+have the max and the mean maybe we want the men as well let’s do the men
+some men horsepower it’s that simple folks and what that’s not a very
+aesthetically pleasing column name so let’s go name these so instead of Max
+I’m gonna I’m gonna actually call it max horsepower equals right and same thing
+with the mean and I’m making these names up right now so max me or mean
+horsepower equals and mean and min horsepower equals so let’s run that make
+it a little bit more aesthetically pleasing so now you see down at the
+bottom here we have cylinders we have maximum horsepower the average and the
+minimum pretty cool pretty powerful stuff right there right simple as that
+okay I cleared the output now let’s do something a little bit more fancy here</p>
+<p>00:03
+we’re gonna use the empty cars again except we’ll pipe that into a group by
+and we’re gonna group a by cylinder again but this time we’re gonna do
+something slightly different instead of summarizing a particular
+feature like horsepower we want to summarize all of the features with a
+certain function so with that we’re going to use summarize instead of
+summarized we’re gonna do summarize all and what that means is all the variables
+run this function against so we want to say we want the mean of all the
+variables I’m gonna go ahead and run that so based on the cylinder I have the
+average of all of these features below pretty powerful we could do the max I
+can change it to max and we have the maximum of all the features below min
+any type of function that is no relatively common you can use that for
+pretty powerful powerful stuff now let’s go beyond that let’s get even crazier
+here and let’s do the same thing except alright let’s group AB I will do</p>
+<p>00:04
+cylinder again so group by cylinder and the wrong buttons my keyboard shortcuts
+command shift M my keyboard is not a Mac keyboard but I’m on a Mac so it’s it
+gets confusing sometimes all right so we’re a group by cylinders just like we
+did before and we did summarize all with
+max but this time we wanted to summarize all
+and instead of Mac’s we’re gonna add a few other functions in there so
+Wednesday funds to get like a list of functions will give it a list argument
+the list is going to contain we want min Max and mean now let’s run that and we
+get an error empty car is not found empty car and I found let’s try the
+proper way empty cars and as you can see here it’s got a lot of stuff in here
+that you can’t even see so let’s pipe this right into a view instead so we’re</p>
+<p>00:05
+gonna add the pipe operator and capital VI u W and we can go ahead and just run
+that into our viewer and what you see here is you have cylinders we grouped it
+by cylinder miles per gallon minimum displacement minimum horsepower minimum
+drag minimum everything minimum then we have everything max all after that and
+then at the very end we have the average so just like that that fast you can get
+minimum maximum average of all the features in your entire your entire
+dataset just like that it’s very very very powerful features okay so that’s
+another thing you’ve just learned just like that
+now these you’re gonna to practice because it’s hard to memorize these the
+first couple times you do in fact I don’t use it very often so I have to
+look them up a lot of times alright I’ve cleared my screen again and
+what we’re gonna do is we’re gonna add to what we already have here so as you
+can tell we started off with a simple group by group by cylinder easy
+summarized what I want to summarize I want to summarize these types of things</p>
+<p>00:06
+for all the variables I want max horsepower 404 the horsepower variable
+then we’ve decided we want more than one variable I want all the variables but I
+want to get the maximum of all the variables okay cool but now we decided
+all right I want all the variables but I
+also want multiple functions to plot the to be applied to all the variables so
+that’s min Max and mean we want it to be applied to all of the variables so now
+let’s do summarize a so it’s very simple empty cars same thing group by we want
+to bye let’s do cylinder again as the example and we want to says summarize
+although this time we’re going to do summarise act so it’s just like
+somewhere is all except this time we’re specifying which variables to be really
+one of summarize that so Affairs and then you want to do let’s say we want to
+summarize the wait and the draft only now we can apply functions to those two
+only let’s do min and Max and let’s let’s just pipe that right into the view</p>
+<p>00:07
+so we could see it better well actually I guess that’s pretty short so we have
+the minimum the maximum and the the minimum drat the wait max the minimum
+anyways we have exactly what I just described in just that short period of
+time so let’s let’s do this one more time without the view put it on the our
+viewer and that’s so simple it is so I if you want to find any type of group in
+with some sort of function applied to it and eventually you can apply your own
+functions you don’t need to use min max you can create your own functions and
+apply those it’s very simple you [Music]End of file</p>

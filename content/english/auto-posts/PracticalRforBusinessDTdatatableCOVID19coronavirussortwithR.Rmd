@@ -1,0 +1,91 @@
+---
+title: Practical R for BusinessDT datatable COVID 19 coronavirus sort with R
+date: 2020-03-24
+categories:
+  - Practical R for Business
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/ZGyr199lS9U/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=ZGyr199lS9U">
+<img src="auto-posts/images/10-PracticalRforBusiness-Updated-EndtoEndCovid-19AnalysiswithR-ImportData(1).webm.jpg">
+</a>
+
+
+
+
+
+
+
+
+
+00:00
+for this quick tutorial we're gonna circle back and fix this data table to
+make it a little bit more aesthetically pleasing as you can see it's got too
+many rows to show in one view and it really doesn't have any functionality
+that's too useful if you want to export it or something like that so we've been
+using cable extra which has actually got a lot of really cool features to
+creating tables but we're gonna create one called
+DT data table so let's install that clicking on the install button a package
+called DT and once you install that just click on install and it'll install the
+latest version I already have that version about restarted anyways once it
+installs we're going to replace this cable function with a data table
+function so let's get rid of cable extra and we'll just type in the word or the
+characters DT for data table and running that we can run the line 62 by command
+
+00:01
+enter or control enter if you have a PC now we have this our reduced
+EDF that we had a table we're gonna get rid of this entire line 68-67 and we'll
+create instead we'll create a data table and inside of this table we're going to
+bring in our reduced EDF and we're going to bring in some parameters extinctions
+equals and we're going to type in buttons and we'll have options that will
+be a list and finally we'll actually include some
+buttons with a vector of strings we want to be able to export to all of these
+formats and you don't have to memorize this because once you do it once you can
+
+00:02
+just copy paste you can see which ones you like and it go from there so this is
+a typical data table let's run that and it ran clean
+now don't forget ctrl s to save it this is gonna be a short video we're gonna do
+our markdown and render and we'll type in our script SC RI PT 1 dot R Z and
+let's see what the output looks like okay let's go to files and I believe a
+script window in V dot HTML this last one here view and web browser and I'll
+bring it over take a look let's see what we have so you scroll down you still
+have your code that shows there for transparency now we have this a little
+bit cleaner table with page nation or pagination however you want to say it
+well you can actually set these parameters to you can have 50 or 20 or
+100 whatever you want you can set that in another parameter but you also have
+
+00:03
+these really Oh in the highlight see how as I move the mouse it highlights the
+actual row that I'm referring to and you can sort pretty easily sort by day sort
+by date sort by deaths that must be okay and you can do a search as well so
+if I wanted to search for say you know I
+know what the problem is is when we were in the our code before we actually only
+took the first 100 rows here so we don't really need to do that anymore cuz we
+fix that problem so let's get rid of 966 as well and instead of using our EDF
+we're just write up use EDF we'll get the full data set in there so EDF let's
+
+00:04
+rerun this chunk it should take just a second and we'll re-render it I do it
+every time I forgot to save it command s then render I told you I do that every
+time and I get baffled every time by it now I could be able to open in web
+browser and we have 656 pages and now we
+have a lot more deaths which is not good but our tables a lot cleaner but now we
+also have this copy CSV Excel all that good stuff up there if I want to output
+this to excel or PDF you just click on it and it should as long as you have the
+appropriate software installed it should actually export for you there we go so
+there's our PDF file right here so it created a PDF for us just took a minute
+because the PDF is actually 140 pages long that's it I wanted to show you how
+to create a better looking table and tomorrow we will look at better plots
+
+00:05
+because this plot is just not going to do it for us so don't forget share this
+on social media subscribe and I will see you in the next one [Music] you [Music]End of file
+

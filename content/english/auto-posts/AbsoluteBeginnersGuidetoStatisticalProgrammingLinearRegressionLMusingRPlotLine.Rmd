@@ -1,0 +1,90 @@
+---
+title: Absolute Beginners Guide to Statistical ProgrammingLinear Regression LM using R Plot Line
+date: 2020-04-20
+categories:
+  - Absolute Beginners Guide to Statistical Programming
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/dZjt9lrtxsI/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=dZjt9lrtxsI">
+<img src="auto-posts/images/04-AbsoluteBeginnersGuidetoStatisticalProgramming-RSSwithRStudio.mp4.jpg">
+</a>
+
+
+
+
+
+
+
+
+
+00:00
+welcome back today we're gonna take what
+we did on paper create those linear fit lines based on some data points and the
+best fit right so it's gonna be a very simple simple tutorial less than five
+minutes I promise less than five minutes this time so let's just jump right into
+it we'll start by creating a data frame and go from there so we want to create a
+data frame I'll just call it example data IX data and we will assign that
+into a data frame don't forget right so we want to create a data frame and we'll
+create predictor and response variables we can call it we call it anything we
+want let's do weight and height so let's say we have a weight variable right
+we're going to set that equal to a column of numbers a vector or
+spreadsheet looking column right so when the weight is say 100 pounds does
+another person that weighs 160 pounds and another person that weighs 220 right
+
+00:01
+so let's start off simple with just three three values so that we don't get
+too confused so then I'm going to create
+the heights based on that and we'll just
+I don't know how to convert to inches or
+centimeters but figure hundred pounds is probably you know 45 inches we'll call
+it 160 pounds maybe that's a 69 inches and in 220 pounds this is purely made-up
+maybe that's a 74 inches somebody a little bit taller right so that's our
+data so let's go let's just start off by running that make sure it works and we
+are good to go let me zoom back out for you you can see in my global environment
+that I've created the data frame we can actually go into this data frame and see
+exactly what I just typed in we just created that from thin air we have we
+want to plot that with our GG plot to load that in if you don't have it
+
+00:02
+packages installed ggplot2 simple as that you should know that by now
+so let's just go ahead and create the plot without the line so the first thing
+we'll do is we'll just say hey I want a new plot I'm gonna have my data is going
+to be my example data and my aesthetic I need to map some
+sort of values to this plot so the X is going to be equal to our weight so we're
+gonna say hey based on the weight based on the weight what are the heights so
+that the Y value is height okay now that's not it so we just have our canvas
+or a blank canvas we need to know hey what kind of plot do you want well I
+want a point plot G on Point G on underscore the point and we run that let
+me get me out of the way here you can see the plot now and you see those three
+points they're relatively you know they're almost lined up but you know you
+can't fit a line through all those you know so let's let's go ahead and add
+
+00:03
+another geometry to this and I'll show you how to do that so let's go back to
+[Music] the code and you can see that I'm just
+gonna add to this I'm gonna say G on smooth now you guys might like this it's
+kind of fun if I literally just kommandantur on this you'll see once I
+get out of the way and zoom out there we go it fit a actual more complex line
+that's not a linear line we don't want to start with that we don't want to
+start with that so let's go ahead and change that geometry smooth into a
+linear model like we were discussing before so then we can say method equals
+LM for a linear model and then rerun this code right you ready I'm gonna
+rerun this code and you have a model with some confidence intervals things
+
+00:04
+like that you could see that the line doesn't quite fit any of the points to
+make the best fit line but it used simple linear regression to create that
+line now you don't know what that lines equation is at this point you don't know
+much about it but you know now that you can ply a line through any set of data
+points that you'd like so in the next lesson we'll get into some more of the
+specifics and how to customize this just a little bit better
+simple as that less than five minutes share like and subscribe etc [Music]End of file
+

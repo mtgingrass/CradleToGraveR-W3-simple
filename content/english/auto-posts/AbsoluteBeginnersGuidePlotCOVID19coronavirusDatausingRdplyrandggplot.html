@@ -1,0 +1,134 @@
+---
+title: Absolute Beginners GuidePlot COVID 19 coronavirus Data using R dplyr and ggplot
+date: 2020-03-23
+categories:
+  - Absolute Beginners Guide
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/ioqrwUaSde8/maxresdefault.jpg
+---
+
+
+
+<p><a href="https://www.youtube.com/watch?v=ioqrwUaSde8">
+<img src="auto-posts/images/31-AbsoluteBeginnersGuide-KableTablewithRandCoronavirusCOVID19DeathRates.webm.jpg">
+</a></p>
+<p>00:00
+now now that we’ve done that we’re good to go so we’ve run this set of code
+let’s scroll down to covet explore let’s see if everything else still works
+because remember last time they’ve changed the names of our features let’s
+run this one we’re going to get our cable our cable table I’d like to call
+it so that’s this table here so everything seems to be working fine
+let’s go ahead and throw a graph in here now all right so let’s put a graph in
+let’s go to line 70 on mine like I said I’ll do my best to get you
+that code I’ll probably link it to my to my personal website so you can get it
+there all right so let’s do another our chunk well let’s let’s call this our
+first graph our first graph all right our chunk we’re just gonna do throw-ups
+I control all time so what we want to do me grab something here there we go what
+we’re gonna do is we’re just gonna explore this data a little bit we
+already seen the data you can actually look at it here click on DF and EDF you</p>
+<p>00:01
+have some data here we’re going to apply some deploy our functions again if you
+haven’t already loaded it you should have read up here library deep liar
+we’re gonna use those functions to create a quick graph I’ll show you how
+to download the graph you can post it on your social media set you’ve created
+this from scratch good to go all right so what we want to do is I’m gonna start
+with that EDF function so EDF and what I
+want to do is on a pipe it so ctrl shift M for me it should be the same case for
+you when I pipe it into a filter I’m not interested in all of the countries I’m
+not interested in all of the data I’m only interested in anything that has a
+death because if it doesn’t have a death
+it’s not that I guess informative for my needs right now we’ll call it that I
+can’t use the word excited and excessive at work you use filter I’m gonna say so
+this is the plier function so I’m going to filter based on deaths greater than 0
+so at this point you start off with a full data set
+EDF you pipe it into this filter and that filter says only take deaths that
+are greater than 0 so now we’re there in</p>
+<p>00:02
+fact we can we can always pipe it into a viewer real quick just to see command
+enter on that just as you go death not found death
+death death I think it’s deaths poor oh there we go all right so we should have
+a death rate for everything and we should have a death for everything so if
+you look here I’ll sort it both directions the lowest is 1 the highest
+of 370 okay so the filter works so that’s what I wanted to get at so we’re
+not going to view it yet though we want to filter into filter deaths greater
+than zero and we’re going to group it by country I want to know per country how
+many deaths do you have so we’ll do group underscore by and this
+is it’s it’s intuitive almost once you do this a few times that it almost makes
+like English language sense you know so filter by this group by I want to group
+by and they can type in countries and territories it automatically puts two</p>
+<p>00:03
+back ticks in there so so now I’m going to group this by countries and
+territories and what do I want to group it by and do with it I want to summarize
+so what we normally do with deployer functions is every single time you put a
+pipe operator we actually usually hit the enter button start a whole new line
+so when a group of by countries and territories pipe that into a summarize
+function so summarize and inside of our summarize function we’re gonna create
+variable called cases total I’m gonna set that equal to the sum of all the
+cases so it’s going to group it by countries but it’s also gonna sum all of
+the cases for us and but I also want to summarize the death so I’m gonna say
+deaths total equals the sum of deaths now notice what I’m doing here is I’m
+creating variables on the fly cases total did not exist I’m creating
+it now what am I gonna assign cases total the sum of all the cases I’m</p>
+<p>00:04
+creating deaths total I’m assigning that to the sum of all the deaths but the
+beauty of deployer is now that I’ve done that and I haven’t even run this actual
+code yet I can hardly use those variables in my later on code to the
+right so that’s what I’m gonna do so now that I’ve done that we’re going to pipe
+that into so check this out so pipe it again hit enter
+I’m gonna pipe right into a ggplot the grammar of graphics if you haven’t
+already let’s go 73 new library ggplot2 let’s
+load that up go to space there so now we can user because you plot mine’s
+probability loaded so I just didn’t want to if we get that all right so we’re
+gonna pipe it into GG plot and in GG plot we are going to have an aesthetic
+and because this is just an example we’ll have an aesthetic book here’s the
+country’s one with the countries and territories and that’s it for that and</p>
+<p>00:05
+then I’m going to add so remember the grammar of graphics you can add layers
+I’m not piping it now this is slightly different but you can add and I’m going
+to add a layer called G on point but in the G on point I want my aesthetic a Y
+access to equal to the cases total and I’m gonna go over this again at a couple
+times and I’m also gonna make that color equal to I don’t know what we’ll just
+skip the color Y post cases total so jam point aesthetic y equals cases total
+what am I add another layer because you can add layers so add Jim point this
+time the aesthetic I’m gonna do y is equal to deaths total alright and this
+time I’ll make it color equals red think
+it’s like this so let’s go ahead and run this and see if what kind of errors I</p>
+<p>00:06
+get cuz that’s kind of a lot in one go boom it worked perfectly right but you
+can’t see the x-axis that’s terrible terrible terrible and it looks like
+there’s only one color that’s kind of off to well let’s figure this out in a
+second step by step let’s first do a coordinate flip so I’m gonna add a chord
+flip to this let’s do command enter on that now we have a better looking graph
+it’s not the greatest but close enough for now after a little bit of a struggle
+I found out what the error was and why this was producing this graph with this
+error well if you look closely at line 80 it
+says Gian path instead of Gian point that took me a while to find so now you
+can run it that’s what we’re going to do
+we can we can render this now let’s save it remember command s our markdown</p>
+<p>00:07
+render script one RMD SC our ABT one okay I’ll put created let’s check it out
+real quick open in web browser and here we have it we have our table keeps going
+down which this is not cool that we actually have thousands of rows so I
+think we need to fix that pretty quick like right now let’s go back to our code
+we’re not going to create table with everything that’s showing at the moment
+let’s just do so come up to our table EDF and we’re gonna set a pipe 92 cable
+stylin we will first let’s reduce that so let’s just call this reduced EDF and</p>
+<p>00:08
+make it EDF piped into a head function where we
+can get the first 100 observations I think that’ll work
+command enter on that so reduced EDF right here if you could see it it
+created it and we’ll just plug in the are here for the cable extra alright so
+let’s run that now command s rerun so if I have all kinds errors and we’ll just
+run the render again and now it should actually render a lot faster too
+file scripts open a web browser now we have just the first hundred observations
+which still isn’t we’re not going to keep it this way but I wanted to show
+you that the graph is here so you have the graph or the chart right here quite
+the lesson that didn’t quite turn out as planned but I hope we learned something</p>
+<p>00:09
+from it [Music]End of file</p>

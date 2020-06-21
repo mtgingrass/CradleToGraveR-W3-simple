@@ -1,0 +1,81 @@
+---
+title: Absolute Beginners Guide to Statistical ProgrammingStatistical Programming   Expected Value
+date: 2020-04-02
+categories:
+  - Absolute Beginners Guide to Statistical Programming
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/TXgwAY5EEdA/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=TXgwAY5EEdA">
+<img src="auto-posts/images/02-AbsoluteBeginnersGuidetoStatisticalProgramming-StatisticalProgramming-ExpectedValue.mp4.jpg">
+</a>
+
+
+
+
+
+
+
+
+
+00:00
+all right let's go over one more one more thing here we said that the the
+true function of Y the true function of y is equal to an actual function of the
+observation X plus some epsilon error and the estimated function is y hat is
+equal to some function estimate of the actual observation and before I put plus
+epsilon but really you don't need to put that because the error is actually even
+though it's irreducible we don't need to put that in for it the estimated
+function so keep it as that now what happens is the goal is to reduce the
+amount of error completely so if I know that this epsilon is part of the error
+no matter what so you only have to include a 1 so it doesn't really matter
+if I include it here and then when I add
+
+00:01
+these together which I'll do in a second you'll have 2 epsilon because e plus e
+is 2 e but epsilon is arbitrary so whatever that number is it can factor in
+the 2 and it can be just 1/2 so it doesn't matter if you have it twice or
+not so let's just cross those out not include it to make things more simple so
+what I'm trying to get at is what I want to reduce is the error so I have an
+actual true death rate right here then I have an estimated so to minimize the
+error if I subtracted the true 1 from the estimate and I square that
+difference I want to get that as close to zero as possible right so let's just
+subtract the top one from the bottom one so we have Y so the true death rate
+minus the estimated death rate right and we want to square it because we want to
+make sure that negatives are not involved so we'll just put this in
+parentheses and square it and we're going to set that equal to because we're
+
+00:02
+just adding two functions we're allowed to do that so we have f of X and F
+estimate of X and we have an epsilon so we have and we want to square this two
+we want to subtract them I'm subtracting so I'll put in all parentheses
+f of X the true function reality that we'll never get to plus some epsilon
+plus the F estimate of the X observation and we'll square that as well so the
+goal is to make sure whatever this answer is so we have think about it
+though this is the number of cases plus some error rate I'm sorry that's a
+subtraction sign right here minus this so you want to get this relatively close
+to zero and same thing with this we want the death rate to be close to zero so
+how do we minimize the death rate so you want to minimize the death rate or
+
+00:03
+minimize the error in the y predicted value so how do we do that and that's
+what we're going to talk about in the next few lessons but I wanted you to see
+this type of formulation so that you can make more sense of it as we go
+throughout these lessons so the ultimate goal the ultimate goal is to minimize
+this death rate here or minimize the error here we want this to be as close
+to zero so minimum is zero so the minimum of the actual rate minus the
+estimated rate is what we're going for squared so that's the best we can get
+this is point zero zero zero one that's pretty good but point zero zero zero
+zero zero one is better so that's the whole goal we'll never probably get to
+zero unless it's a fake function or a made-up function now real life you know
+it's very difficult to get to zero because they just don't occur in nature
+
+00:04
+[Music] you [Music]End of file
+

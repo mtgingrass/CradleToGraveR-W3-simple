@@ -1,0 +1,196 @@
+---
+title: Absolute Beginners GuideR Predict Plot Model 2
+date: 2020-04-27
+categories:
+  - Absolute Beginners Guide
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/b0N6bdvM1aM/maxresdefault.jpg
+---
+
+
+
+<p><a href="https://www.youtube.com/watch?v=b0N6bdvM1aM">
+<img src="auto-posts/images/40-AbsoluteBeginnersGuide-EquationofLinefromLinearModelinR.mp4.jpg">
+</a></p>
+<p>00:00
+welcome back to cradle-to-grave our if you haven’t checked out cradle-to-grave
+are.com please check it out it’s a good way to find an organized set of
+tutorials that I put together for you so it’s just a little bit more handy than
+sometimes going to youtube or other venues for my content so check out
+cradle-to-grave our calm today we’re going to talk about
+more predictions and linear models but this time we’ll plot some new points on
+the same line with a different color so you can kind of see what the prediction
+is just to give you a little more insight on what’s going on and I think
+you’ll find this a little bit easier than previous tutorials because you’ve
+already done this once before I’m just gonna expand on what you’ve already done
+so let’s start off with like I always do I want to start off with let me zoom in
+here I want to start off with an example data so e^x data I’m making this up as</p>
+<p>00:01
+empty cars my favorite data set right so
+command enter let’s take a quick look at that I’m going to click on the actual
+example data here you’ll see it’s got 32 rows of data and
+about 11 columns alright so we’re gonna deal with miles per gallon and
+displacement so what we’re gonna do is we’re gonna predict the displacement
+based on the miles per gallon we’ll just see if we can do that right so let’s
+close this out now that we have our variables of interest our VIP very
+important parameters we’ll get there eventually now so what we want to do is
+first let’s first draw a scatterplot right so we’ll need our library ggplot2
+let’s load that in and let’s just go ahead and first create the scatter plot
+so we can get a kind of visual of what’s
+going on so we’ll do ggplot and our data</p>
+<p>00:02
+is going to be equal to our example data right and what’s our aesthetic we have
+aesthetic we want to use miles per gallon and displacement so the X is
+going to equal miles per gallon and the Y will equal our displacement all right
+so we can’t finish there because we don’t actually have
+geometry so let’s add Geum our favorite one to do and just go ahead
+and command enter on that you will see once I get out of the way boom you will
+see that the scatterplot has been created I’ll zoom in for you just a tad
+and you know you can kind of see that there might be a possible linear
+relationship you can kind of draw a line diagonally down here maybe somehow so
+that’s what you can expect when we create our linear model for this let’s
+find out let’s find out not one way to do that remember is to actually add a
+Jeon so plus geum smooth and what’s our method our method equals linear model so</p>
+<p>00:03
+done deal just as predicted what do you know we have our linear model with the
+gray band being the confidence interval so there’s a 95% chance that the average
+data point that’s added to this will be within that interval so that’s what that
+means all right so let’s let’s focus on ad and more data to this plot just to
+see where they would line up but first we need to create that data so let’s go
+ahead and do that let’s say more data hey I’ve got some more data I want to
+check out I want to predict my new stuff based on the model that you created so
+based on the model we create we want to be able to plot the new stuff in fact we
+didn’t actually create the model yet we plotted it don’t get me wrong but we
+didn’t actually save it anywhere we plotted it with a GM smooth method
+equals LM so let’s just do that first let’s first save our model will call
+that model 1 and we call it model 1 because we might have five or six
+different models to play around with and eventually we’re gonna see which model
+is the best one so you might cycle through multiple models with different</p>
+<p>00:04
+ways to predict okay so our our model one or linea model one we might do other
+models we might want a predict displacement based on something else
+let’s go back to that real quick what if displacement in miles per gallon
+were not as correlated as we thought and we decided that displacement and weight
+were more correlated uh we’ll check that out maybe right so that’s why we have
+multiple models this is model 1 and we’re deciding we’re into a linear model
+and we’re going to base our middle idiom we wanna we want every risk we want to
+figure out the response variable which is displacement by the explainer
+variable which is miles per gallon we think that displacement is is explained
+by miles per gallon and what’s our data equal to so our data is equal to example
+data and then we run that and now we have a model once stored we can use that
+model what are we gonna use it for well we’re gonna use it to predict the future
+so we have the model which the model doesn’t show us a whole lot we can do
+coefficients remember modeling to square one boom you have a 580 point eight</p>
+<p>00:05
+eight intercept that’s where it crosses the vertical access which looking at the
+plot if the plot actually went down to zero on the x-axis I could see that
+right it’s not quite we didn’t set our limits to show that and then of course
+the miles per gallon slope see how it’s negative negative seventeen point four
+to remember in y equals MX be days back in algebra two or algebra one a positive
+slope goes up and to the right a negative slope goes down and to the
+right right so this one’s going down as you as you go to the right it’s going
+down so it’s a negative slope it’s a quick way to kind of do a sanity check
+anyways that being said now that we have a model we have a model that we can use
+we know the equation but we don’t really need it because we have our do the math
+for us let’s create some new data now you have a vehicle that you’ve never
+tested before and you want to call it more data I have more data I’m gonna say</p>
+<p>00:06
+hey I have a data frame because it’s got to be the same type of data so data
+frame and data frame would work well together
+you know vectors and vectors work well together so well create the data frame
+the data frames only know miles per gallon it’s all I got I knew what their
+mpg was and I’m gonna set that equal to a list of numbers so let’s say we have a
+twenty two point two miles per gallon we have a twenty seven and we have a I
+don’t know let’s go thirty two right we have these new data points but we only
+have miles per gallon we set it into a data frame so let’s command enter on
+that so now that is stored our more data is three observations of one variable
+you could see that right here so if I click on that you’ll see it’s just
+one parameter miles per gallon or one feature and it’s got three observations
+close that out and what are we gonna do with those well we want to figure out
+the prediction on what would you predict the displacement to be well we could do
+that and we are going to do that but we n do it with data first so I’m gonna</p>
+<p>00:07
+call it you know I’m gonna call it predict one to follow the model one so
+model ones first set of predictions is going to be equal to remember the
+predict function so predict and what do I want to predict let’s see what do I
+want to predict well we need to bring our model in so we we can’t predict
+anything without a model to use to predict so we bring our model in and all
+we do is bring in our new data so here’s
+a model that was created you could store that model anywhere you can save it to
+the desktop you could send it to your friends you send it across the world
+people will be able to use this model if you send it to them they don’t have to
+know the underlying data they just know that that model contains everything you
+need to do to predict so that’s just one way to look at it but our new data is
+and it’s on this new data equals straight-up
+more data that’s it so command enter on that doesn’t show you anything but if I
+type in predict one and we watch the bottom screen here you will see that we</p>
+<p>00:08
+have three new displacements so displacement one is 193 110 and 23 so
+they correspond with 22 27 and 32 so if you have 32 miles-per-gallon your
+displacement is 23 according to the model that we’re using that we created
+based on the data that we had which is a linear model it’s a very simple linear
+model we use that model to predict new outcomes new observations now let’s go
+ahead and plot that so we want to plot that by if we go back up if you take a
+look at our GG plot up here we’ve already done a lot of work up here let’s
+not repeat that let’s not copy pace and all that good stuff so let’s just call
+this our plot underscore 1 and set it equal to this plot so I’m going to do
+command enter on that to rerun it so now a plot 1 is stored over in</p>
+<p>00:09
+my global environment you know its plot one right here list of nine you can’t
+really tell what it is by clicking on it you’ll see like this this mumbo-jumbo
+you won’t understand it quite yet but so model one is I’m sorry the plot one is
+or GG plot that’s stored but now I can reuse plot 1 so how do we do that let me
+scroll down here so we can just say plot 1 let’s do this plot 1 if I can get my
+type into work is gonna be assigned plot
+1 so it’s assign it to itself right plus other things see how I’m doing that so
+it’s like you know you repeat it plus I’m gonna add a geometry what geometry
+am I gonna add I want to add my prediction geometry so I’m going to add
+another geometry geom point this time I’m gonna say data is equal to more data
+but my y-axis for my aesthetic I don’t you can put your aesthetic inside of</p>
+<p>00:10
+here and my aesthetic I’m gonna say Y is equal to the predict 1 values and let’s
+just go ahead and make the color equal to red so we can really see a stand out
+let’s see if this works so now you have to actually type in plot 1 because I
+just stored it as plot 1 so let’s just retype it in and there we have it let me
+zoom in for you and I’ll bring it over you have these three little red points
+which I can zoom in a little bit more you see two of the three on the screen
+and right here is about 20 of 24 this one’s about the 27 and then there’s a
+third one I don’t think you could see from there it is so there’s a third one
+down at the bottom see those three points now notice they’re all on the
+actual line right they’re all in the blue line well that’s what we expect
+it’s a linear model so it’s just a straight line so in order to predict a
+new value you have to pretty much run across that line it’s got to be
+somewhere on that line now is this the best prediction I don’t know we haven’t</p>
+<p>00:11
+figured out ways to measure how good this prediction really is but I wanted
+to show you again how to run this through with a different data set so you
+get a little bit experience a little bit more more muscle
+memory for it but then also to actually show you how to plot those three points
+on top of the points you already have so you can get a better visual you know it
+might not make any sense right so you want to get a good visual all the time
+let me zoom back in on this one more time let me give you the example of not
+making sense and I haven’t looked this over yet but just as an example look at
+this red dot right here notice there’s no other dots inside of this band I mean
+there’s almost nothing there so maybe there’s some sort of weird you know BAM
+that they just will never exist the only way to find out what this red dot truly
+would be is to go out and say hey I’m gonna do a mile per gallon of whatever
+that is twenty two point two two and I’m
+gonna see what the displacement is based on whatever speed they they run it etc</p>
+<p>00:12
+etc and if the point though the displacement they get is truly equal to
+this red dot awesome your prediction worked very well your model worked
+really well which allowed you to predict if every single time you ran this test
+though none of these red dots were close then maybe your model is off and it’s
+not predicted very well but we’ll work on that will create more complex linear
+models and their coming tutorials if you haven’t please subscribe and it
+would really do me wonders if you share this across social media tell people
+about it and check out cradle-to-grave are.com I will be making that a more
+aesthetically pleasing site where you can go in and have all of this very much
+organized so thanks and leave your comments below let me know what kind of
+questions you have and I’ll try to answer them you [Music]End of file</p>

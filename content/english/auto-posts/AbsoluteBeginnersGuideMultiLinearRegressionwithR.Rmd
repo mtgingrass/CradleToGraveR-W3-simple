@@ -1,0 +1,238 @@
+---
+title: Absolute Beginners GuideMulti Linear Regression with R
+date: 2020-05-04
+categories:
+  - Absolute Beginners Guide
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/HLwsnH0lOSA/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=HLwsnH0lOSA">
+<img src="auto-posts/images/41-AbsoluteBeginnersGuide-CradleToGraveRLiveStream-Usingpredictfunction.mp4.jpg">
+</a>
+
+
+
+
+
+
+
+
+
+00:00
+welcome back everyone thanks for sharing
+and liking my video tutorials because I noticed there's definitely a gain in
+traction on my channel so thank you for that today we're going to talk about
+linear regression but more specifically multi linear regression previously we
+talked about how an explainer variable can actually help you figure out what
+the response number is so if I wanted to say hey the miles per gallon can be
+explained by the displacement or the miles per gallons can be explained by
+the weight we've only really taken into account one feature to be that explainer
+so in this video I think we'll maybe dive a little bit more into using more
+than one feature to see if if they're relevant in our predictions let's just
+
+00:01
+start slow and we'll get back to that so let's do my data is equal to empty cars
+our favorite data set right so just load that data in there let's take a quick
+peek at it I'm just gonna click on you can see well no you can't I'm gonna
+click on it you know where it is by now but I'll go ahead and put me down here
+so miles per gallon you know it's it's the first column of data here with the
+various vehicles we have cylinders displacement horsepower drat all these
+things I want to be careful though some of these are not actually numeric they
+look numeric cuz they're numbers but they're actually categorical variables
+like gear and carb there's no 4.1 or 4.3 it's not really a numeric it's a
+category it's hey this has four gears this has three gears this has five years
+right and they can't be anywhere in between so we just have to be careful and
+cognizant of that as we pursue this so we've got an idea of what kind of
+
+00:02
+features we have and again we really don't need to start doing anything until
+we still we plot these so let's go ahead and add our library ggplot2 command
+enter on that and let's just go ahead and plot a couple of these just for our
+sanity and so we're gonna do a ggplot and we will do the data is
+equal to my data that's my pretty much that's how I do it aesthetic we want the
+x axis to equal let's try displacement first and then
+the y we're gonna predict so the response is the Y is the miles per
+gallon simple enough now don't forget we have to add a geometry to this layout
+and that was gonna be G on point for a scatter scatter plot and that's about it
+for now it's just to run that I will disappear and move away from the plot
+area I'll leave it small this time but you can kind of see looks like
+
+00:03
+displacement on the horizontal axis and miles per gallon you can all you could
+kind of fit a line through there right you can see it's a downward slope you
+know so if I think I have it back that's do it backwards on the camera but it's
+it's a negative slope so there's a negative relation as displacement goes
+up miles per gallon goes down okay cool now let's just play around let's change
+it to weight instead of displacement WT and we're just exploring here that looks
+like it could be a linear relationship as well let's try drat and these are
+just random I don't want to do that the features yet but the dret does not look
+linearly correlated so that's the key linear means they fall in a line it does
+not look like drat is linear you can just look at that and tell all right
+knowing that let's just play around a little bit here
+let's change well keep those drat let me
+
+00:04
+show you something here now let's create a model with the draft and only one
+variable so it's just a basic linear model so we'll call this model 1 and
+we'll set it equal to the linear model of we want to explain miles-per-gallon
+explained by the tilde just draft and of course our data is equal to my data
+simple enough I'm just gonna show you a couple things to help you along here so
+let's type in model 1 you gonna see the equation down at the
+bottom is you have an intercept and a and a weight to put on to drat right
+that weight that you put on to drat is like the slope because there's only one
+there's only one weight and that's on drat okay so we have that that doesn't
+tell us a whole lot now so let's just do a summary of model one summary of model
+
+00:05
+one and run that now at the bottom hopefully you could see it I did the
+summary and it gives me the formula of the residuals the median all that but
+what I'm interested in is the p values right the p statistic now I know you
+don't you might not know what that means and that's fine that's perfectly fine
+let me zoom in on the right spot here so
+these p-values here you can see that the intercept doesn't have one but the
+intercept really doesn't count so ignore
+that but the drat it does have a p-value so this PR it's actually stands for a
+probability the probability that it's greater than a certain threshold right
+and so for now for today let's just pretend that you know everything about
+that and these three these three stars mean oops I'm clicking on the wrong
+thing and these three stars mean that it's statistically significant right but
+let's not forget what we did here we only had one variable to explain miles
+
+00:06
+per gallon and that was Draft so it really didn't have much to go by so this
+is not that useful yet okay so just keep that in mind we're gonna
+use this in just a little bit let's go ahead and change it from drat back to
+wait WT I'm gonna run the plot again so we can see the plot so there's the
+weight and now in the model one let's go ahead and change that drat to wait come
+and enter let's see what the equation is
+do you see there's an equation there and
+then the summary so again we have weight here instead let me blow it up for you
+we have the WT and we have three stars here right just like drat so they're
+both statistically significant now I'm gonna show you something that's gonna
+maybe blow your mind maybe not in fact I don't know the answer yet but I'm
+
+00:07
+guessing based on the plot of drat it looked like it wasn't linear so I'm
+going to add in my model so you can see right here in my model I only have
+weight now how do we add the drag to that all we do now you're gonna be like
+oh that was easy + drag done model 1 command enter we can get an equation
+wait did that take something something might have enough let me try this again
+I'm an actor error error drag not found Oh drat
+shoot thought I was going crazy for a second drat ok drats that's what some
+people would say model 1 now we could see it it shows both the weight and the
+drat weights now wait wait wait but you get what I'm saying the parameter weight
+and the WT we'll call it beta 1 and the drat will called beta 2 the beta 1 for
+weight is negative four point seventy three the beta 2 for the drat wait is
+
+00:08
+one point four four - okay cool still not that impressed yet but now let's do
+our summary come and enter on that and I'll zoom in now let's take a look here
+the three stars remember I said to kind of ignore the intercept don't worry
+about that so much now wait has the three stars but drat doesn't notice that
+okay now remember as I was saying the the weight was significant and we saw on
+the chart on the plot that it was pretty much linearly lined up we'd all fairly
+well drat was not but when I gave them independently to the models they're
+significant because there's nothing else to go by there's literally nothing else
+to go by so when you put them together there's more statistics going on in the
+backend more probabilities and it decides based on that p-value
+
+00:09
+that probability value that probability which we'll get into in probably the
+next tutorial maybe we'll start talking about hypothesis testing and whatnot so
+I'm a little out of out of out of line here but just know that the ones with
+the stars are the ones that you probably want to focus on to be statistically
+significant what this is telling you now let me let me zoom in just a little bit
+what this is telling you is that they're saying that the drat is not explaining
+the miles per gallon nearly as much as the weight but when you had that alone
+that was all I had to go by it had to say was it was statistically significant
+right and so when you have both of them together it's basically telling you do
+you want a complicated equation or do you want to make this a little bit
+easier because don't get me wrong we're never gonna be a hundred percent correct
+but think about it if you have five hundred variables to pick from instead
+of just two and you start saying well the computer gave me a result but then
+
+00:10
+you have to calculate that result for thousands of entries possibly right and
+that takes compute time and cycles and that could get very complicated very
+fast it's hard to explain that to somebody
+oh these 500 variables are causing this you know the revenue to go down right
+that's very difficult but if you can really narrow it down to just a few
+explaining variables that truly have an impact that's much more powerful for
+decision makers so let's think about it that way and that's really what I wanted
+to show you we can add let's go ahead and add one more to this we have wait
+drat and let's add what was another number let's take a look at the model no
+not the model the data okay now the number is Cusack we can do
+Q SEC or just see already did displacement let's take a look we didn't
+do displacement let's do displacement just for fun so we're gonna create a new
+
+00:11
+model its model 1 still because I'm overriding it but keep that in mind
+model 1 it shows us an equation but again the equation doesn't tell us a
+whole lot except for the fact that display negatively correlated and it's got a
+pretty small number let's do the summary let's see what really matters
+scrolling down or up intercept ignore wait now all of a sudden the wait has
+only one star instead of three the drat has none and the displacement
+has a point which the point I think means significance yeah so there's our
+number a special number that people like to use is 0.05
+when this p-value is less than 0.05 they typically will say it's statistically
+significant now I'm not gonna tell you exactly what all that means yet because
+it all depends on the circumstance right you like you want your airplane to be -
+never - never crash so 0.05 percent failure would be pretty terrible still
+
+00:12
+right so it all depends in context but in general people tend to use a point O
+5 as a threshold to be statistically significant or not and we'll talk about
+null hypothesis and reject in the hook the nulls in another episode tutorial
+but that's it that's what I wanted to show you was as you add different
+features to your model it doesn't necessarily make the model before that
+any it doesn't have any relationship with the model before that right so the
+relationships all vary based on what you
+put in them they can all be great models in fact we still have no idea which
+model I know I call them all all model one which maybe should have kept them
+separate we still have no idea which model is the best model because we
+didn't actually do any predictions with this so we'll get into that too but that
+was the majority of this tutorial it was just to kind of give you an idea of you
+can add features to these linear models sure but again scatter plots are really
+
+00:13
+important because we're doing linear modeling we're not doing some crazy
+victor polynomial modeling this is just pure line what line will go through
+these things so again we did their aesthetic with weight and miles per
+gallon that looks good but let's go back to drat and I'll show you again that
+it's not that linear that's why it's probably not that significant right
+compared to the other compared to the other features that's
+you get a note now one more thing just because I'm it's on my mind right now is
+I'm not sure if I showed you how to add a color to a ggplot based on a factor so
+remember I said like gear in carb we're not really numbers like you can't have a
+7.5 carb or whatever a2 gear it's only 3
+4 &amp; 5 gear right according to the data
+so in our aesthetic just for fun just to put some color on our thing here let's
+just do color equals and we'll set it equal to deer right now there's a
+problem with that so I'll definitely show you let's see if I can zoom in on
+
+00:14
+this maybe maybe maybe a different screen ok anyways I'm in the way so I'll
+get out of the way and we have our color
+gradient here and again you can see some
+decimal values and that's not cool so we did something wrong here so let's go
+back if I can find it let's go back and instead of using color
+equals gear we're gonna say color equals as dot factor gear add another
+parentheses command enter on that fact I wonder if the zoom is still there if I
+come over here yep so you can see you can see that now it's as a factor you
+only have 3 4 &amp; 5 so 3 colors now the
+size is pretty small we can fix all that
+too but I just wanted to show you how to do that before we go too much further
+hope I didn't confuse you too much we're gonna make these more clear throughout
+the next couple tutorials again thanks everyone for sharing this thanks for
+
+00:15
+liking it I'm seeing some growth I definitely enjoy that and I will see you
+in the next episode in a few days probably you [Music]End of file
+

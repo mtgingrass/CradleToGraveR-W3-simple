@@ -1,0 +1,217 @@
+---
+title: R Blogdown SiteHugo Blogdown Tutorial with R RStudio Customize Menus Layouts
+date: 2020-06-09
+categories:
+  - R Blogdown Site
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/338jZbCVXcw/maxresdefault.jpg
+---
+
+
+
+<p><a href="https://www.youtube.com/watch?v=338jZbCVXcw">
+<img src="auto-posts/images/1-RBlogdownSite-RHugoWebSiteLesson1.mp4.jpg">
+</a></p>
+<p>00:00
+one on this site because time is ticking
+so I’ve changed the theme real quick of my art studio if you’re not sure how to
+do that you can go to tools global options sorry I’m jumping right into it
+appearance and then you can pick your fonts and all that I was not happy with
+my font I like the dark theme but I don’t think recording it is the best for
+the viewer I’m not sure you guys can leave me feedback on the comments and
+that’d be great tell me if you like the darker theme or
+the lighter theme better for viewing I don’t know if you’re looking at this on
+a phone or a tablet or what but hopefully you guys can all see it I have
+the font pretty high mostly for you and because I’m getting old in my eyes can’t
+see anyways so that being said let’s talk more about this blog down and Hugo
+site I didn’t do much I literally just read a couple pages and changed one
+thing but I want to show you a couple of couple of important aspects of the
+site’s let’s go back to files here and make sure that you’re in that project</p>
+<p>00:01
+there’s only this is only tutorial number three for the Hugo blog down site
+so if you’re if you’re not caught up just go back and check them out that
+being said let’s go open up this config T oml file it should be in your
+directory so and what happens is you have this site here your base URL is
+going to be the URL that you’re going to eventually use don’t be don’t worry if
+you don’t have one already I do I own cradle-to-grave
+our comm don’t really use it yet but that’s why I’m building this site I want
+to be able to offer code on there and advice and just you know pull people to
+the site so I need to get one set up don’t look now because it’s actually I
+mean you can but it’s a wordpress site so we’re gonna migrate that alright so a
+lot of these are self-explanatory base URL that’s where you gonna put it
+now if you want a truly free you can get free URLs from like github or get labs
+or things like that and you’ll have like whatever site you want dot github or
+something com right but let’s not worry about that yet we’re not there yet</p>
+<p>00:02
+alright so going down what’s your language of choice for the
+code and your default content language English English for me then the title
+would be website of whatever your name is let’s go with mark
+Jim grass and I want to show you a couple more things here theme I don’t
+know what that is yet so don’t I don’t know what that is there’s no point in me
+trying to explain that one summary length I believe that when you summarize
+it’s how many lines before it goes through like I read more we can look all
+this stuff up later and enable emojis true okay cool
+discuss discuss short name so it’s a static site generator but if you have a
+discuss account which is free dia SC us si is qus com
+you can apply for a site and it’ll actually allow you to have comments on
+the bottom of all your posts so you can actually keep track of comments people
+just log in with like one button and you’d put that short name which disgust
+will give you right here in Hugo and blog down will do the rest</p>
+<p>00:03
+no worries same thing with Google Analytics and now we have some
+parameters here these are the parameters that you have like on our website like
+the title the author description etc etc I exchanged my profile picture just now
+I just random I picked one but images forward slash mark profile dot PNG and
+I’ll show you where that is if you open up your actual site mine was called test
+seven so open up test seven that’s my actual project name again I said don’t
+mess with public don’t so what’s gonna happen probably if you don’t pay too
+much attention is you’re gonna want to make changes you think you’re you’ve got
+it figured out you’re gonna go to public and you can start making changes and
+then when you go to re-render this on are you gonna overwrite that public
+folder in fact I’ll show you how to override that public folder right now
+immediately so let’s go over here where my face is and you can see I have a
+couple of options here I’ve built website and I have more let’s click on
+more and click on clean all now before I do that again I showed you I have a</p>
+<p>00:04
+public site here clean all I’m gonna click it I’ll save my file and let’s go
+to here again test seven top quick I still have public well that did not do
+as I wanted it to warned in Europe and ignore certain files no that’s fine let
+me try it from here real quick build clean all I might be just going too fast
+for my own oh well that works so it’s gone now
+I wasn’t going crazy it did work you know what’s funny is I got these
+shortcuts for my OBS and it changes when I type a man it does stuff too
+to my icons at least I didn’t delete anything so anyway so there’s no public
+folder that’s what I’m trying to get at fine and dandy
+let’s see also if you happen to get the public folder let’s do that let’s build
+so I’m gonna click on build website again I’ll do it up here so you can see</p>
+<p>00:05
+me install and restart hmmm actually let me see if there’s a different option
+here build website save selected and exit with one status that’s normally not
+good oh here we go so my hotkeys that killed me again line
+20 I have a plus and a minus those are my shortcut keys I’ve ctrl Alt + + - 4
+shortcut keys now save it and build website the struggle is real so it’s
+built and now it’s going to open up in the actual our studio viewer and you can
+see that it’s not looking good right don’t worry about that yet you’re also
+gonna notice when you go to your public folder which you’re not supposed to go
+to click there go to index you can pull it right over you will notice that it
+also does not look good that’s because these sites require a server so we now</p>
+<p>00:06
+have a simulated server by doing surf site so would you blog down serve site
+and I’ve showed you this but I’m just kind of trying to give you some more
+lingo of what’s going on now you see in the viewer it actually served it
+correctly but also also I did surf site where did I do surf site I was already
+serving it and so I don’t have the IP address offhand so let’s just do you
+don’t have to do this unless you don’t have the IP address blog down stop
+server and then surf site so it’ll give me this IP address right here and you
+can just copy that IP address and put it in your browser
+I believe I’ve already shown you this let me pull a browser over and show you
+it copied it and will paste it right in and now it’s showing up the correct way
+you can have links working the links are
+definitely working on here you can click on the post you can see the different
+stuff in the post you can see my squashed out weird-looking picture so
+yeah it’s all there you can leave this up if you want make changes or not the</p>
+<p>00:07
+images are under let me show you a couple things about the directory
+structure so on test seven it don’t mess
+with public but if you go to static this is what you might want to store your
+images there under images so mine is called mark profile P entry caps do
+matter so you’ve got to get that right and if you make it relative versus
+absolute which absolute would be you know this entire path so you drive users
+mark don’t make anything absolute just make it relative and that means for here
+you just need to put hey my base directory slash
+images slash mark profile they it’ll always start at the base directory so
+that makes it a lot easier let’s move down a little bit so that’s how I got my
+picture changed I just literally just type mark profile instead of the profile
+dot jpg that was there so main sections post scroll down a little bit I don’t
+the math settings it’ll it’ll do late a cork a tech so what have you want to</p>
+<p>00:08
+call it mathjax so you can actually have
+mathematical let’s see if I can show you one here probably not because I’m there
+I wonder yeah so you could see if I scroll down there should be some math in
+here somewhere well even if there’s no I think you
+understand what I’m talking about math should work in there if not we’ll
+troubleshoot it later okay so it looks like social icons icon FA LinkedIn so it
+looks like LinkedIn here’s the title and you can put your own LinkedIn URL in
+there so whatever that might be I think I could probably pull mine up I don’t
+use a very I don’t use it very often so I think my LinkedIn is called
+linkedin.com slash maybe my name let’s see nope
+well figure that one out later too but I wanted to show you you can put your URL</p>
+<p>00:09
+there and you will I’m sure after this video
+same thing with github or anything you want and if you want to add more you
+know you can just kind of see how this pattern is so just copy all of this you
+can put in say Etsy or something so you put an icon that you like whatever icon
+you can download it doesn’t have to be anything fancy and in the title and then
+the actual website it’s that simple and so let me see if I could find it on the
+actual page so it looks like right here these are where it’s at so LinkedIn
+github Instagram and Mail so it’s all right there very simple and that’s what
+these links are here simple as that menu items so the menu items are going
+to be let me pull it up again at the top you have home posts and about but
+they’re not dropdowns there any things so let’s see if I click on posts or</p>
+<p>00:10
+about yeah there’s no drop-down so it’s not too fancy so we should be able to
+easily figure this one out we can make them fancy I’m sure but looks like you
+have some sort of main menu and menu domain so follow the pattern you can get
+you can get the idea you know cuz we just saw home we saw a post and we saw
+about here’s the idea of how to do that and the weight is probably the position
+of where it’s at so 100 200 300 is my guess so how far apart you want them to
+be from probably a starting point and that’s it for the tomah file for now
+there’s tons of options you can put in here you might see some stuff relative
+URLs equals true things like that but for now keep it like this and just I
+wanted to show you that it wouldn’t work
+if you go to the public folder and check it out because you’re not serving the
+site you have to serve the site so what we’re gonna do next is we’re going to
+create a not in this video but in the next one we’re gonna create a github
+account and a net low fee account and we’re going to try to put this on the
+web and then we’re going to use our which is right here and we’re actually</p>
+<p>00:11
+going to have a button up here soon enough that you click one button and so when
+make your changes you click your button that’ll commit your code to github and
+then net lovely net Liffey is going to monitor github folders and when it
+changes it’ll update the site and you can actually set that up to be your own
+domain name not a given domain name but if you want truly free you have to take
+the one they give you basically probably somewhat customizable but having like a
+net low fee or github extension of some sort but so you could play around with
+all that stuff in there I will show you a couple more things but not too deep
+here though let’s go back to test seven this is
+where my project is under content public
+static and so under public we never mess with remember because it’s gonna be
+generated and rendered and it’s going to change every single time you make
+changes and build your site themes when you do want to play off of the themes to
+make changes to your themes you would have to mess with this and we’ll get</p>
+<p>00:12
+into that later on but for now we’ll leave the theme that we built it
+originally with and so under content let’s double check here we have posts
+don’t worry about that but the static is important under static you have posts
+and images so what you have is under post is but well I could be I am
+definitely wrong on that I’m trying to find something I think it may be under
+content hmm I was looking for maybe ten of themes ah it’s under themes sorry so
+it’s been a long time I played with this a long time ago got it all work
+now I’m redoing it I’m talking like a year and a half two years ago so under
+themes this is where something’s important but not today we’re not gonna
+go there today but under layouts you’re gonna have different things called</p>
+<p>00:13
+default and partials and so a default is hey a single HTML page is going to look
+like this it’s gonna have a pattern to it a single list a list of like here’s
+my list of blogs do I want 10 or 20 to want it to look like this or that so
+those are the things you can play with eventually and partials is the same
+thing if I when I header or a footer how do I want all of them to look and so
+when Hugo and blog down are rendering all of this stuff it takes those themes
+and those layouts and says this is how they want every single page to look and
+it builds it for us so don’t get too far into that yet unless you know a little
+bit more about the structure of a hugo site and the HTML underlying it and it’s
+not just HTML it’s actually the hugo i guess standard language to use you’ll
+see some weird crazy brackets and stuff like that but that’s it I wanted to show
+you that and don’t forget if you restart your are you’re serving your site will
+go away and just always remember that your links and stuff will be broken
+until you serve that site so don’t get too alarmed about that so play around</p>
+<p>00:14
+get these set up to be your parameters maybe add a menu item or add a link and
+let’s see what you come up with and in the next video I think we’ll create the
+other sites so just wanted to give you one quick update have a good oneEnd of file</p>

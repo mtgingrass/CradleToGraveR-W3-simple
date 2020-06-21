@@ -1,0 +1,165 @@
+---
+title: Absolute Beginners GuideRSS R Squared Math R RStudio
+date: 2020-05-19
+categories:
+  - Absolute Beginners Guide
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/j7L1cB1ILcI/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=j7L1cB1ILcI">
+<img src="auto-posts/images/47-AbsoluteBeginnersGuide-RUnzipEntireDirectoryofFilesplyrpackageRStudio.mp4.jpg">
+</a>
+
+
+
+
+
+
+
+
+
+00:00
+all right we've been talking about this r-squared stuff so I might as well give
+you some mathematics for it it's real simple if you really break it down into
+its component parts so r-squared is a statistic that we use to measure a
+models fit so how do we assess the accuracy of a model the way we've been
+doing it for the past couple tutorials was using the R squared statistic today
+I'm gonna show you how to actually calculate that statistic using the
+longhand form that's to a point anyways at least give you the logic behind how
+you calculate it you will be able to calculate it after this quick little
+tutorial so we're gonna do that because we want to have kind of a like you know
+we want to have the big picture of what's going on we don't have to know
+the math behind it but if you're gonna use this as a measure for your models
+accuracy you should kind of know what's going on at least a little bit right so
+
+00:01
+that's what we're gonna do today and the equation for it is equal to TSS which
+I'll explain what all this means in a second but let me write down what it is
+divided by TSS minus RS s divided by t SS which if you do a little basic
+manipulation t SS divided by t SS is equal to 1 so 1 minus R SS / t SS so
+however you want to remember it is fine what you want to do is figure out what
+all this stuff means right so what is t SS it's the total sum of squares that's
+what they call that right so another way to write TSS you can do it in this
+format you could say hey this like a draw correctly the sum that's a
+summation mark the sum of all of the Y eyes minus the average Y that's what
+
+00:02
+that little bar means squared right so let me break this down for you now what
+does this mean so the Y I is the eigth predictor think about it you have some
+sort of equation like y equals something right you have these regret regressors
+on the right hand side and here's what you're trying to predict the y
+so the weii is the eighth prediction right the outcome the real value though
+so if I'm on the fifth row and I say hey plug in your values for all the
+regressors what do you get for y that's what that is
+that's the exact answer so if you have some sort of plot with all these dots
+you know and then you have a a estimated model a linear model that goes straight
+through like that your actual value for that first or that
+particular dot that Y I so this might be the I write on the x-axis that
+particular dot is that number and then you're gonna subtract the average of all
+those dots so the actual number here the actual number here the number here the
+
+00:03
+number here here and here all divided by the number of occurrences I just said
+out loud is the average so you're basically saying hey how far off am i
+from the average for each every single point how far off from the average am i
+square that number that way we don't have negatives and positives and that's
+what that is that's the TSS right so we're gonna worry about the RSS and the
+TSS we we know how to figure out the TSS
+now literally add up all the Y's all the Y values divided by the number of Y
+values to get this y bar or the average or the mean of all the Y's everything
+that you want to predict even though we have the state at the data is here it's
+not a prediction it's real okay so you have the TSS now what is the RSS
+our s is equal to the summation from I equals 1 to N of the actual the actual Y
+
+00:04
+value minus the estimated Y value so the a little hat Y hat I squared so this is
+similar to this TSS but it's RSS so what's the difference let's look at it
+this way TSS right it is the actual numbers I
+mean there's no guessing here you have the actual Y predicted value or you have
+the actual Y value for every single occurrence you have that why that why
+that why that why and so forth you can calculate the
+actual average of your training data set because you have the data you can
+calculate the average this is no joke real it's not fake it is absolutely
+correct that is what TSS is and of course the same goes with RSS except we
+have some assumptions here this Y hat remember the Hat is an estimate so it's
+an estimated right so what would you estimate so you take the actual value
+the Y I which is right here remember that's the Y I your estimated value well
+here's your linear line here's your linear model that you just
+
+00:05
+drew that value is actually on this line so take that value the top one subtract
+it from where it would be on the model that is your predicted square that so
+there we have it right so we're think about that you're gonna do that for each
+and every one of these find the variability and you're gonna do the the
+basically they're predicted divided by the actual and that's how you get your
+r-squared remember we were getting numbers like point seven four zero point
+eight one and the higher the R squared which makes sense if you're predicting
+took a look at here if you're predicting a better result let me pause frame here
+because I said something that wasn't true so I'm gonna tell you what I meant
+to say so as the RSS as you can see as the RSS
+gets a better prediction in other words if your Y hat value is closer to your Y
+I value then of course that numbers going to be smaller and smaller and at
+
+00:06
+that number smaller and smaller look at the ratio between RSS and TSS as RSS
+gets smaller and smaller that that fraction becomes a smaller and smaller
+decimal so you're gonna be subtracting one - that's smaller decimal which will
+get you a higher r-squared ultimately I hope that makes sense and I'll unpause
+it now now there's a caveat to this you know the more features you add now this
+is a simple example with just one regressor but as you add more and more
+predictor variables it becomes more complicated but we talked about why add
+in more and more variables or features to predict or regressors to help you
+predict the y and it can be a bad thing because it adds complexity and it
+doesn't gain you a whole lot the example that a
+lot of things we'll a lot of literature will tell you is you know if you have TV
+adverts advertising and you add radio you get a big increase in your sales
+right so hey you can kind of predict that right you add radio and TV you're
+
+00:07
+gonna get a bit big increase but then you add newspaper and newspaper just ads
+maybe like point zero zero zero zero one percent more sales
+so what's newspaper really needed for that model because I mean there's so
+much variability and there's so many ups and downs and fluctuation fluctuations
+you might want to keep the models simple and just use TV and radio why add that
+third variable of course when we're gonna deal with like real world
+situations you know you dealing with like lots of variables tens of thousands
+of variables they really get complex pretty quick you don't want to have
+extra variables if you don't need them hello our community a little side note
+here I create these videos on another channel and I show how I do it and I
+want to show you guys just in case you want to also create this other channel
+that I have and maybe you're interested in it first of all thank you for
+supporting my our channel and I appreciate that a lot
+so in this channel this is my my name mark Jin grass just YouTube just look up
+
+00:08
+that and you'll find me I teach how I actually teach are and other things like
+C++ programming or anything in general how to use a green screen how to use OBS
+how to do it with a MacBook or a PC how do I embed myself inside of that our
+studio how do I quickly make my workflows better so I can switch between
+screens instead of edit in post-production using Final Cut Pro so
+as you can see I have OBS streaming tips and tutorials I have Final Cut Pro tips
+I have content insider how much money do I make
+how do I make money what am i doing what am I doing wrong then of course you'll
+find some other tutorials that you might find interest in because you're also
+programming so VBA C++ some computer tips in general and of course much more
+supply chain in forecast and you'll find it all so if you appreciate my are
+videos and you want to learn how to make videos like that maybe you like Python
+or you use the go language or you have a C++ course you want to teach
+check out this channel I show you how to actually monetize and try to make money
+
+00:09
+with it and I try to be real with everybody I'm only making about 50 bucks
+a month on YouTube hopefully when you guys subscribe and like and share my
+videos on our hopefully it'll turn into a hundred and that'll be a pretty good
+deal for me so as you can hear my fan on my computer is malfunctioning right now
+and I have to replace it because it's way too loud for using this blue Yeti
+mic so those are some of the struggles and they're real again I appreciate you
+guys helping me out [Music]End of file
+

@@ -1,0 +1,192 @@
+---
+title: Absolute Beginners GuideNetlify Custom URL and New Post with RStudio Blogdown Hugo
+date: 2020-06-14
+categories:
+  - Absolute Beginners Guide
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/NFsNfVZaTto/maxresdefault.jpg
+---
+
+
+
+<p><a href="https://www.youtube.com/watch?v=NFsNfVZaTto">
+<img src="auto-posts/images/57-AbsoluteBeginnersGuide-BlogdownHugotoGitHubwithRStudio.mp4.jpg">
+</a></p>
+<p>00:00
+all right now that we’ve got our site up and live let’s customize that URL to
+make it a little bit more user friendly and human friendly and add a post simple
+as that so let me jump right over to our studio you should be at this point
+already have a project set up a blog down site built pushed to github and
+pulled from net loafie and it should be live so this is tutorial number six
+sorry about my hair it’s been a couple of months now because of the pandemic
+haven’t had a haircut but this is tutorial number 6 so there are 6 total
+if you want to start from the beginning that would probably be your best bet I
+will at the end of all of this have a condensed version with every single step
+included condensed but I still highly recommend going through the entire process</p>
+<p>00:01
+that being said here is my famous intro it’s not much of an intro but what I do
+is I create content online and then I teach you how I actually create that
+content online so that you also can make
+tutorials like this so I’ll give you the
+technology what I use and that’s my blog site or my website mark Jin grass and
+another YouTube channel this is the art channel so let’s stick to that and what
+we’re gonna do is go back to the net Liffey site so you should have that up
+it’s just plain net leafy com so any T Nets lead com there we go right here
+so login and you should get to a page where all of your sites that are
+deployed are available as simple as that let’s make this one quick and simple
+click on the site that we just worked on which was for me the project one it
+should be the top one most likely if you’ve been following okay now simple as
+that let’s figure out how do we get back to that site right so you see it right</p>
+<p>00:02
+here this is where the site is that’s an ugly
+looking website name so let’s fix that click on domain settings and custom
+domains now if you owned your site like cradle-to-grave
+or calm or margin grass calm that’s a different story
+we’re gonna use net low fee free version completely throughout this
+tutorial and then later on in another tutorial I’ll teach you how to add a
+custom domain but what we want to do is just change this particular domain so
+click on options and edit site name that’s how simple it’s going to be so
+we’re going to call this project 1 underscore I guess they don’t like you
+do want to score - test I don’t know how many other projects throughout the
+entire net Liffey ecosystem there are called project 1 slash tests so we might
+run into a problem because as you can see you’re still gonna have the dotnet
+Lafitte ASE or a PP on there but I’ll save it anyways and now our website is a
+little bit more user friendly so you can totally share this website with anybody</p>
+<p>00:03
+in the entire world and it will be up and running now the
+next part the cool part let’s add a actual post to this site and had that
+continuous integration continuous deployment set it all up for us let’s
+jump back to our project here here we are alright so the first thing we’re gonna
+do it’s so simple we go to the add-ins you should have your project open your
+project 1 or what have you called it as a blog down site alright so new post
+simple as that new post and now it gives
+us a bunch of options so let’s give it a title we’ll call this almost done
+categories so whatever category you pick are our studio whatever you pick it’ll
+start to remember your categories and it’ll give you the auto populated list
+next time and same thing with tags what if you want to do now these are all fake
+and I’m gonna delete all this so I’m not too worried about it
+alright then you can post your filename it’s automatically put there however if</p>
+<p>00:04
+you would like a different file name you can totally do that as well I would
+research some SEO like some how do I create web sites that are easily
+searchable by Google or whatever search engine you want to use right and use
+that let’s go ahead and click on our markdown only because the previous ones
+are our markdown and I don’t know if they work for everything yet I haven’t
+tested it you can test it out for me and let me know in the comments but anyways
+I’m going to do our markdown and we’ll go from there we’ll go from
+there so click on done alright so that’s simple enough we have this new file
+that’s set up called 20 2006 13 almost done right this top part where the
+dashes are that’s your y Amal code with some of your metadata that you have like
+the title the author those are all metadata for building the actual site so
+let’s go below the yamo and let’s just start a double header here so header
+header and just say header 1 and say this is some text I don’t care I’m gonna</p>
+<p>00:05
+say header 2 now this is a markdown right so so we can get pretty
+complicated with this we can add tabs we can add new pages I mean there’s a lot
+of stuff we can do but let’s stick to some basic our markdown here and of
+course your code can go here as well so let’s do backticks
+open bracket open brace our and then backticks to close it out I forget the
+shortcut key it’s I switch between a Mac and a PC and and I don’t do this very
+often so alright let’s do my data is equal to the empty cars database and we
+will also plot it and it should be a really good kind of a funky matrix plot
+or some sort I’m gonna go ahead and hit that play button right here and we
+should see the plot because it’s an hour mark down or maybe if it’s in our
+notebook well okay I don’t see it maybe it’s cuz a mark down another notebook</p>
+<p>00:06
+file might be that case let’s continue on anyways because I think it still
+gonna work so ctrl s to save this so make sure it’s saved before you do
+anything let’s jump back down to the console now another in the console let’s
+build rebuild the site you can see up here in the right-hand corner that as I
+make changes anything that’s changed that you’re trying to push to github
+will automatically appear here so you can stage it and commit it and push it
+right so that being said let’s build this site so blog down build build site
+and let it run it’s gonna make some changes to the public folder because
+that’s where it really all the action happens
+that’s quite a bit now again I used the shell to stage all this but there’s not
+that many here so let’s try to do it manually okay I actually don’t need to
+stage the content I only need to stage the public stuff if you are sharing your
+entire content your code everything on github you can share everything that’s</p>
+<p>00:07
+fine but I can select just the public and it should still technically work but
+it’s got to be everything in public also using the command line is actually a
+little bit easier than this because I can just say do the whole directory call
+it call it good so I regret clicking these already but
+that’s okay almost there a static post I don’t think we need that it’s not in
+public we only need what’s in public so as you can see I only have public the
+A’s and the MS mean something I think modified versus added and there’s a
+couple other letters in there all right so that’s what we want to stage we’ve
+built it the key is going to build it first then stage it and commit it so
+remember the name of this is called almost done I’m Oh before I do that
+let’s go back to here to prove that almost done does not exist I just
+adjusted a test post a few minutes ago and almost done is not here okay so it’s</p>
+<p>00:08
+non-existent let’s see how fast this thing will work back to project click on
+commit commit test live because this is I’m gonna not edit this at all guys and
+push unless of course something drastic happens and I have to like go back but
+there we go close exit I’m not even gonna check github because I’m really
+caring about the actual site right now now it automatically detects net Lafitte
+will detect did something change in my public folder and because I pushed it to
+github the new stuff the new post it should have so I’m gonna click on
+refresh and hopefully we see that almost done here which we do we do we do II
+maybe he’s a little bit too soon let’s check over here real quick let’s go to
+our deploys here and this very let’s see published commits lot commits to</p>
+<p>00:09
+life is here this was looks like it should be should be deployed so let me
+click on academic let’s click on posts test post that’s not the what we called
+it right I think we called it almost done let’s double check again I think
+okay it is called almost done and let’s jump back this should be fairly simple
+to fix I believe we should just mmm instead of maybe it doesn’t check the
+site that often so let’s clear cache and deploy site now automatically there
+could be some settings in there that make it check only every like hour ten
+minutes I have no idea how often it’ll ping that public folder to see if
+there’s any differences but it looks like the last deploy was 305 and it’s
+307 now so and it says published so it should have worked well let’s just
+double-check I’ll refresh this and it says published let’s try it one more
+time or what site is this project one test yes</p>
+<p>00:10
+refresh test post you know I had this problem earlier I’m talking a lot hi my
+first real post is the I’m gonna close it let’s click on this post test post
+not almost done hmm interesting interest and very
+interesting let’s click on this I’m gonna go to preview deploy it might be
+something I’m missing test post okay back to our it is back to the editing
+mode uh where did these come from oh those were there hmm interesting
+all right I’ll just let’s just commit it all then why not commit test sorry
+push I’m wondering one other thing I’m wondering if I actually do have to build
+this site at all because I think maybe nettle if he does that for us</p>
+<p>00:11
+so maybe the public folder is not what they need but it’s monitoring the public
+folder so that’s my thought process on that at least I thought they were
+let’s double-check to see if this works now let’s redeploy and while it’s doing
+it I’ll click on it so we could see what’s going on see preparing installing
+dependencies everything seems to be good checksum matched it’s still going
+everything looks good site is live site is live I don’t know why they call it
+preview maybe that’s Hova it is a preview that
+URL does not make sense for us because we changed it so posts almost done is
+there whoo okay that’s now we have to trouble sure to see if it’s because it’s
+not really the public folder that you need in it and it’s everything but the</p>
+<p>00:12
+public folder maybe I am sorry about that I think anyways let me close these now
+that’s a preview why didn’t it work with our actual site name that we just
+created let’s double check just published its published it should be
+this project one dot test I never fee posts almost done well maybe we have to
+put everything in there instead of the public or including the public I don’t
+know and I’m sorry about that I hope this actually works for you I hope that
+the previous tutorials worked in somebody comments showing that hey this
+doesn’t work for me so I can go back and fix it in fact they’re not that hard to
+do so if it is wrong I will probably redo that entire section of the video so
+but I wanted to get you this far guys so there you are there you have it it
+worked you see it’s there it’s under this URL</p>
+<p>00:13
+that’s customized and the posts is there the almost done post and luckily the
+plot showed up so we’ll have to experiment with the our markdown
+notebook and the MD files instead of the our MD files etc etc to see if they’ll
+all publish I don’t know because I didn’t build this theme right so well
+keep exploring I hope this helps and you know please commit
+to continuing to share my content to help this channel grow and I appreciate
+everything you guys have been doing youEnd of file</p>

@@ -1,0 +1,489 @@
+---
+title: COVID 19 AnalysisFastest COVID19 Scrape using R   Complete Tutorial in under 30 min
+date: 2020-04-02
+categories:
+  - COVID-19 Analysis
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/M5tSC3u1lkw/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=M5tSC3u1lkw">
+<img src="auto-posts/images/7-COVID-19Analysis-DTdatatableCOVID19coronavirussortwithR.mp4.jpg">
+</a>
+
+
+
+
+
+
+
+
+
+00:00
+scrape or download data from the web using our programmatically import the
+data do a couple of calculations create some variables analyze it just slightly
+show the death rates and we'll make a data table we'll create an HTML site
+that you can actually publish and an actual plot that you can look at and
+make it somewhat interactive where you can at least show the code if you want
+to to be transparent or not so this is for anybody that has no programming
+experience yes there's gonna be things that you don't know and you'll have to
+play with in Google however if you just follow my lead
+you'll get to at least play with the data enough to get an understanding of
+what's going on I think anybody will find this useful without any program and
+experience whatsoever that being said the first two criteria that you have to
+have is you have to download our let's just called are just type in download
+
+00:01
+our and it's free online and then download our studio next download our
+studio after you've already installed our so as you can see on my screen here
+our version three point six one is the version I'm using you should download
+something very similar and again install our and it will do nothing except do
+stuff in the background for you then download our studio which is what you
+see in front of you here this is my console this is my
+environment where I store variables into RAM and here is where I can store files
+or or get two files see my plots download packages we'll get into all
+that in a second so that's step one step two we're going to create a new project
+so we're gonna go to file new project and we'll click on new directory and new
+project we'll give this a name called Co vyd underscore nineteen
+anything you really want to call it just make sure you know where you're saving
+it I'm saving it on my desktop it's not that important yet or during this
+
+00:02
+tutorial but it will be in the future if you continue with your our journey so
+create the project and you'll see nothing's really changed except we're
+actually in a project so we have certain directories set and things
+like that but don't worry about under-the-hood stuff yet now we want to
+create a new are markdown notebook file I like the notebook files because their
+inner they're a little bit more usable so click on file new file and this time
+we're gonna go all the way down to our notebook so click on our notebook now
+you see all this pre template stuff here we can get rid of all of this so let's
+just highlight from all the way down from line 18 all the way up to 6
+we'll keep the actual Yambol code at the top so that that's called gamal code
+it's yet another markdown language so don't worry about it it's something
+that's going to be rendered into an HTML file later let's go ahead and just
+change the title though so keep the quotes but we're gonna call it you know
+
+00:03
+my first Kovach analysis whatever you want to call it and we want to have the
+output as the HTML notebook that's what's gonna give us a little bit more
+transparency and ways to give it a narrative all right so we're not
+actually coding yet we're just gonna put a little bit of markdown language first
+to describe what we're doing the first thing we want to do is probably put a a
+header saying hey what are we doing here with this website so with that we would
+use hash tags 1 hash tag is like a head and one in like Microsoft Word so you're
+actually creating a head and you can't see it yet because this is just markdown
+language but that's what that means so I'm gonna call this check out my co ved
+analysis what I do want to call it right then you could type in more words and
+say you know this is the approach I use I got the data from and now it's
+
+00:04
+important to cite you source from this source right and we can do we can
+actually put code in here so I connected
+OOP : now to put the actual source first I'll show you the source that'll help a
+little bit so let me go to the website and I'll obviously give this to you so
+this site is the European Centre for disease prevention and control and I
+have the URL here I'm gonna copy that that's what I'm gonna give to you so
+don't worry about memorizing that if you
+scroll down just a little bit though you have all these download links and you
+have a download in CSV you have all kinds of download links I'm gonna put
+their generic page here though I'm not gonna go directly to the CSV just
+because it might update but I think this page might be pretty stagnant now if by
+chance this page is no longer there I actually have the data stored on my
+personal website which I'll also link so
+you could still do this tutorial whether
+or not this site is still up and running or not so I copied that and we're just
+gonna put it here will actually do the yellow code so to do that I'd put it in
+brackets so open and close bracket and in the bracket you want to what you want
+
+00:05
+to be spelled out so European Center for Disease Control prevention whatever the
+acronym is I'm just making this up and then directly after the bracket you put
+an open parenthesis and a closed parenthesis and you can put in your
+actual website without any quotes so I'm going to control-v or command-v on that
+depends if you're a Mac or a PC this does work for Mac and PC so same same
+scenarios now don't worry about what that looks like just yet but no that's
+gonna be like an interactive link that you can click on when you build your
+actual webpage cool we've got the source now let's actually get some code going
+so let's do another header and say import data so in this section I'm going
+to import data so we can say we can also cite a source here too you know or we
+can just say this is where we import data simple as that
+now we're done with the markdown language we're gonna use some actual our
+
+00:06
+code to import this so to insert an are chunk which is to tell this when to
+actually interpret something as code you can do alt command I alt command I what
+I switch between a MacBook and a PC and my shortcut keys are just terrible right
+now because of that anyways you see these little back ticks here these are
+not the apostrophe that's to you you know your pinky finger it's not that
+these back ticks are the number that will the character to the left of the
+number one on your keyboard most likely so those are back ticks so three back
+ticks followed by this bracket far bracket curly brace I should call it and
+then end in by three back back ticks you can see even change the color on my
+integrated development environment my IDE the our studio so I know in between
+these is where my our code goes now how do we start this well luckily if you go
+back to the site if you scroll down you'll actually see download the data in
+
+00:07
+more formats we're not trying to download this manually we want to do it
+programmatically lucky for us they actually provide a script for
+downloading the CSV file into our software so simple as this we're gonna
+copy from this little hash tag look at thing all the way down to where the data
+is so copy from here down to the data command C or control C and they kept
+this little hash tag and I'll tell you what that is in just a moment let's go
+back to our so in between here on line 15 I'm going to do command V and you can
+see I've pasted the code in here now that little hash tag right here just
+means because it's inside of the our chunk now it's different from when it's
+over here where it's our markdown language I know it's a little confusing
+but just bear with me here the hash tag is just a comment within the code
+because you don't actually have to have all of this this is just optional
+alright so we have this code we don't actually have to know much about it
+except for that it does read the CSV file which is a comma
+
+00:08
+separated value basically an excel sheet columns and rows into my our studio for
+me it's nice that they have that however you might run into problems so the
+problem they gonna run into is on line 16 and 17 you have two libraries library
+utils comes with the are so when you download it are itself you've you've got
+that you're all set now HTT TR does not come with base are what you downloaded
+so we have to install that package so what we do is we go over here to
+packages click on packages click on install and then you'll see this dialog
+pop up and you just want to type in HT to TR and then make sure that it says
+repository cran here and I would not mess with the default that comes with
+the install to library directory here don't mess with the default unless you
+really know what you're doing with our and make sure install dependencies is
+
+00:09
+checked because if this particular library HTT TR which is a helper it's
+gonna help us do our work might need other helpers and it'll automatically
+download those helpers that HT t gr needs in order to work so then click on
+install I'm not gonna install it because I already have it but it should take
+roughly depends on your connection less than 30 seconds most likely okay so
+that's installed and then when you do that what you want to do is this little
+play button over here to the right it says run current chunk you'll want to
+use that to run the entire chunk that chunk of our code that would just create
+it so I'm gonna click on it and you'll see this little green bar on the left
+that means it's executed those those lines of code if you have a red bar that
+means there's an error somewhere so if you get an error at this point you
+should sit back and try to figure out what went wrong
+did you actually install the package was there an error it really should run
+smooth but if you did run it to something
+
+00:10
+there's troubleshooting that's probably not really part of this tutorial so but
+what you see over here in the global environment I have now two variables set
+I have a data and I have a TF now the TF is a temporary file but
+again we don't have to worry about it because that was given to us from the
+actual site so kind of ignore that it's just a temporary location to store
+information before you decide to save it
+permanently anyways the data it shows us right here we have 80 304 observations
+so 80 304 rows of data and 10 variables 10 features 10 columns if you click on
+data luckily this IDE gives us a display of what the data looks like so we can
+kind of get a handle of what it looks like before we start playing with it and
+messing with it so let's just recap what's across here we have the date rep
+whatever that means probably the date recorded the day the
+month the year I'm not interested in all of this data right now but I'm just
+
+00:11
+going to walk through it we have cases deaths the countries and territories Jie
+GE old that's probably some standardized way to abbreviate the country country
+territory code same thing population data 2018 but we're not gonna focus on
+that we're really gonna focus on cases and deaths in this it is now on you to
+figure out and go back and research what all these mean this is a very simple
+tutorial let's X s out and remember though these are all low case and it's
+cases deaths countries and territories I'm going to close this out and let's
+continue down the road now so this appeared but we don't need it you can
+either exit out or you can just click on line 24 where those ticks are at the
+last line I have or any line for that matter so I can go to 26 let's do that
+now we're gonna do something different we're gonna we're gonna we're gonna
+create a data table that shows this and I'll show you that so in other words
+we're going to do another header we're gonna call it let's just show show data
+
+00:12
+table hit enter and what we're gonna do is we're gonna enter another chunk now
+does anybody remember what to do was a command alt I first try not bad on that
+one okay it's a command alt I or ctrl shift I I'm not sure what the shortcut
+is on a PC but you can also just manually type in three back ticks and
+then the curly brace RR then remember the back tick is to the left of the
+a quote how to quit single quote that'll definitely be troublesome if you get
+those mixed up alright so we want to add a couple more libraries I'm gonna add
+library called deep liar and another library called DT data table and you
+probably don't have either one of those installed already so remember what you
+have to do click on packages over here install and just type in DT you'll see
+it populate automatically because it's in the cran library that's like an
+
+00:13
+official repository for these libraries so it's you can expect them to be safe
+updated and relevant so DT click on install same thing once that's done do
+deep plyer DPL why our install I've already got him installed so I can do
+now I ran all the chunk the entire chunk with this play button before what you
+could do is you could put your cursor on the end of the line or anywhere on the
+line for that matter and you can either do ctrl enter or command enter if you
+have a Mac so command enter it'll run that particular line only and then go
+down to the next line and as you can see I've got a little bit of information
+down here but it's not it didn't turn red it's these are warnings and those
+warnings are really not relevant to this
+tutorial so library DT let's do the same thing command enter sorry I ran them
+separate that's fine I can run them over and over again it'll just overwrite I
+can run the entire Chuck again so don't worry about that but do know that if
+
+00:14
+something that you rely on is above there and you make changes but you
+didn't rerun it if it will affect and propagate down so you might want to
+rerun the entire thing now that we have the library is loaded we can actually
+use this so I'm gonna create another data frame it's called so basically
+another spreadsheet if you if you will I'm gonna call it EDF and I'm going to
+set it so this arrow says hey what have you do to the right-hand side save it to
+this variable called the idea EDF and when it when I do run that
+command the EDF will be over here in the
+environment so I already have a variable
+called data over here right this goes oh I forgot to mention that
+so this line of code is called is the one that we downloaded
+from the web we read the CSV file using this command here and it stored it into
+a variable called data now we looked at the data just a minute ago it's right
+here so I've got the name data because we controlled that by putting it in line
+23 even though we copied and pasted it from the website just to catch you up on
+
+00:15
+that so I want to take the data that we just imported and I want to do stuff
+with it I want to group it by country and territory control shift M will do
+this pipe operator and on a PC it's probably the same thing but I'm not on
+absentia 12:00 shift M will give this pipe operator and basically what you're
+looking at and say hey take this data pipe it like you're gonna pipe a water
+through a or pipe like a big vat of water through a pipe you're doing
+something to it you're changing it maybe right so we want to pipe it to this
+group by function so group by and we want a group of five countries and
+territories so type that in and if you start typing it in far enough it'll give
+you an option and once you find the the name of the variable you want you can
+hit tab if you want it'll autocomplete and you know that it's correct and
+spelled correctly that way so group by this I want to group it by that it's
+almost like the English language now I'm
+
+00:16
+gonna do command shift Emma again before a pipe I want to pipe that into
+something else I want to I want to create a variable now out of thin air so
+there's no variable in there called death rate and I'm gonna add that in
+there so I'm gonna use this function called mutate and the group by and
+mutate are all coming from the deep liar package by the way so we're gonna do
+mutate and I'm gonna create a variable what I want to call it death rate so I'm
+gonna call it death rate and that's just my name and conventions you can call
+whatever you want but now I'm gonna set it equal I'm gonna set it equal to a sum
+of all the deaths oops of all the deaths divided by the
+sum of all the cases and now I know that deaths and cases were part of that
+original data set so I can use them and sum is just a function in our
+you can sum all of that entire it's gonna sum the entire column except it's
+
+00:17
+gonna group it by because we have the group by here grouped by countries and
+territories alright so once we have that we're gonna pipe that into no we're not
+going to pipe that that's it that's all we want to do is add that one variable
+so I'm gonna do command enter a command in turn on that make sure we get no
+errors if you have an error see if you see if have a misspelling or something
+we can look at ATF now you can see I have 11 variables here and if I click on
+it you're gonna see a death rate on the right hand side right here and it's a
+0.02 yeah you can multiply by 100 if you want make it a percent this tutorial is
+just the bare bones so let's just go to another country to make sure that the
+numbers change and they do Albania has a different percentage okay we can close
+this now we have that we have the death rate next step I'm gonna move this down
+
+00:18
+here so we have a little bit more room and just for your FYI this is the our
+notebook this is the console again this is the environment all right so we have
+EDF now let's create a data a data table that displays this nicely for your
+audience alright so in that case we're gonna use that DT library we're gonna
+call it data table we're gonna call the function called data table so it's built
+in and as you can see if I put the parenthesis there you see this little
+yellow pop up it's probably pretty confusing if you don't know R but with
+this part I would recommend maybe just copying exactly what I have and
+modifying it using a couple of Google searches so inside of here I want to
+bring in my data set so EDF and then I want to bring in something called
+extinctions and I'm going to set that equal to buttons so that we can export
+them and we can xsporter my CSV or PDF or Excel whatever
+we want so then we'll do options equals a list I know this is like a little
+
+00:19
+complicated I'm gonna hit enter now notice the auto population of my right
+parentheses that could confuse some people if you're not careful Dom equals
+now don't be doing me wrong I don't memorize this either I'm using a
+reference right now for this because once you set it and you make it the way
+you want you usually just copy and paste it and change the set of data that goes
+in comma buttons equals and now I'm going to describe the buttons I want I
+want the copy button now these all have them that mean something and they do to
+the data table function and the DT library so I'm a copy CSV Excel make
+sure they're comma separated excl PDF and print that's what I have then I
+should have two more parentheses at the end and that's that now white space
+doesn't matter the parentheses will tell it when if you if you move the mouse to
+the right of the last parenthesis you'll see the first parentheses in that in
+
+00:20
+that statement highlight so you can see where it says data table so that's how
+you know okay they match we're good to go so we have a data table now so now
+let's go ahead and play this entire chunk here and lucky for us it's all
+green we don't know what's really doing yet but luckily this notebook file that
+we have actually gives you a kind of a display of what its gonna look like it's
+this so it's got these peg pagination or peg Nation whatever you want to call it
+you can sort it by different things if you click on it and you'll notice to the
+right there's probably more to the right but you can't see it from this view so
+don't worry about that yet what I want to show you now is how to well let's
+first save it so command S or file save when do command s first time saving you
+have to name it so I'm going to name it you know intro intro to kovat whatever
+
+00:21
+you want to call it it doesn't matter click save now it's saved now we're
+going to render this now there's two ways to render it the shortcut would be can
+scroll shift K and if you want to go down here to the console which is down
+here we can tell the console hey render this into an HTML file let's take a look
+at it let's take a peek so let's do our markdown we're gonna say hey take this
+our markdown this notebook file you have
+there's our markdown language and render it into an HTML file for me thankfully
+for the knitter package but you don't have to worry about that unless you
+don't have the neuter package and we just called it Kovan if you start again
+if you put it in parenthesis and you start typing in covent in hit tab you
+can have a little drop down to help you out we want the RMD file the our
+markdown file so intro to kovat in quotes dot RMD and then hit enter you'll
+see it's going to churn and do some things and while it's doing that it's
+creating the HTML file it says output created now if you don't have if if that
+
+00:22
+doesn't work there's a chance that you need to install a package called knitter
+but if you download the latest version of our studio which should come with it
+but okay and i TC k NT k nit r is what you might have to download I highly
+doubt you'll have to do that because if you downloaded the latest version you
+should be good to go click over your own files and let's go down to what what
+just happened so what happened was intro to Kovac NB dot HTML was just created
+the NB just stands for notebook right click on it and go to actually just left
+click on it and go to open and web browser now you can open it in the
+editor if you'd like but the editor has its own browser and it's not gonna be
+the same as Chrome or ie so you want to view it in your own native browser so
+that you know for a fact it works the way you want just to be extra careful
+about it here's our output so we have all this code here you know that we
+downloaded we have show table we have all this code and we have our death rate
+
+00:23
+we have our page nation or pag nation and you could see that as I move the
+mouse it kind of highlights the row that I'm on and I can export copy do all
+these different things so if I want to export the CSV or to PDF you just click
+on CSV and you'll see down here for me it just downloaded it pretty awesome
+pretty cool you can also hide the code if you'd like if you want
+to present it without the code and you can actually have global options up here
+we can actually download this R&amp;D file or hide or show all code etc etc so
+that's your first taste finally let's scroll down just a tad bit
+more on line 41 I'm gonna hit enter a couple times and you know when you do
+that it usually disappears the stuff above or causes changes don't worry
+about that all right so the last thing we want to
+do is create a graph just to even things out with a little table and a graph and
+then you're on your own so we have graph one we want to go down and create
+
+00:24
+another chunk so alt command I insert and we're gonna I'm gonna go ahead and
+paste the code in there because it's a lot to kind of come up with without
+references and you can just I'll walk you through it but you can change it
+accordingly so what you'll notice is I have a library called the ggplot2 there
+so you'll have to install that if you don't have it packages installed ggplot2
+and just click on install you should be good to go so now what this chunk of
+code is doing is I'm gonna walk you through it let's go ahead and hit play
+first and so it creates a chart that we're gonna have and it takes the ADF
+data frame the set of data that we've created with our death rates and all
+that it's gonna pipe it with that pipe operator right here that's command shift
+M you can get that as a shortcut or you can type in percent greater than percent
+that's the pipe operator it's gonna take
+say take that data pipe it into a filter
+and once this filter gonna do it's gonna say hey only accept deaths that are
+
+00:25
+greater than 100 so it'll actually take this statement here this conditional
+statement deaths greater than 100 and say only one that's true keep the data
+so it's actually going to filter the EDF data down for us once it filters it's
+gonna pipe that output into a new input that input is going to be the group by
+the group by is I want to group everything by countries and territories
+so every angle that you look at this data will be viewed in that perspective
+as countries and territories group two there now we're gonna pipe that so he's
+continuously piping things into more functions into a summarized function
+because I'm curious to know how many deaths they actually have total per
+country because don't forget it's grouped by the countries and territories
+so after you group it tell me the summary of what's inside of this
+function here which is I created a variable called death total came out of
+
+00:26
+thin air does not exist yet until I run this statement I'm gonna set it equal to
+the sum so I'm gonna add up all of the deaths and I remember deaths is part of
+the table we have a deaths column so add
+up all the deaths but not all the deaths all the deaths per country that are
+greater than 100 and then we pipe that into a GG plot that's the actual plot
+and mechanism that we're gonna use and you don't have to know too much about it
+but we need an aesthetic to map to the plot because the GG plot is like a blank
+canvas and then the AES is aesthetic when I say hey let the x-axis equal the
+countries and territories I want that but again don't forget we're only doing
+the deaths out of the gray that are greater than 100 and then we're gonna
+add to that so that notice the plus and not the pipe so with GG plot anything
+with a GG plot and you want to add layers to it you would add it with the
+addition symbol when added geometric points so the actual points that you see
+on the plot is what we're adding and what are the points well the Y we're
+gonna call the deaths total that we just
+
+00:27
+created up here or we're about to create
+when we hit them the go button right and then I flipped the coordinate axes
+because otherwise you would have the countries along the x-axis and they
+would kind of blend together overlap and it's just not going to be aesthetically
+pleasing so that's what that is before we go any further though I want to show
+you a tab set so we can add a little functionality to this we have graph one
+let's do a doubleheader graph two and so
+I'm sorry we'll call it graph a so graph 1 graph a or we can just call it a it
+doesn't matter so this is a and we're gonna copy all of this and I'm gonna go
+ahead and come and see it come down to line 58 command V
+we'll call this graph B and we don't need to load the library more than once
+so we can delete this now we have the same code here but instead of death
+
+00:28
+total let's do cases total so I'm just gonna replace this with cases total and
+I'm gonna make that the sum of the cases and then I'm also gonna plot the cases
+total so it'll be somewhat similar and the filter let's see what it looks like
+the filter yeah because it's still gonna be the deaths that's only a filter but
+notice the numbers on the x-axis you have somewhere on one two three 200,000
+somewhere at 200,000 deaths for the United States of America at this time so
+that sounds about right actually so I think everything is good you'd have to
+obviously double check all that now let's go ahead and save this command S
+and rerun the chunk and I'll show you a couple more things we'll call it quits
+so our markdown render and this is called intro to Cove it RMD let that run
+okay so click on the intro to kovat and b dot HTML opening web browser or view
+and web browser you'll see it's the same
+
+00:29
+thing we had we have the data table here we have graph 1 then notice graph a is
+slightly smaller than we have graph B so they've got different headers right but
+we can do better than that let's go back to our code and I want to show you what
+tab set does so if we do go all the way to graph 1 and then hit a space and do a
+curly brace open which is right there and do dot tab set and then close the
+curly brace if it did not automatically do that for you what that does is it'll
+make tabs into anything that has a higher header by one level so this
+number two hash tag is one level higher and so isn't this one so they're both
+being their own tabs command S save that again and let's go down here click the
+up arrow and you'll get the latest command that you ran and enter again
+let's run that one more time and I'll show you the difference
+all right so let's reopen this up view in web browser and as you scroll down
+
+00:30
+you will see here's our first graph on graph a tab and then graph B so there's
+two different tabs two different axes now you have both so you can show this
+off it's not elaborate but it's a good start I think this will get you started
+with maybe your love for our and statistics and our predictive analysis
+so what your homework is gonna be of course is to you know Google a little
+bit about ggplot and create some different plots maybe do that mute tape
+function that we have up here where we're creating new variables right here
+so it's mutate I'm creating a death rate maybe come up with your own rates for
+example we have populations so maybe you
+can do something with density so you can do a mutate what you do is you would do
+control shift M pipe that into a nether mutate add the variable name equals and
+what do you want it to be you could do other functions besides some I'm not
+going to show you how to do that because that's some of the research you have to
+
+00:31
+do however that being said I think this is a good start so have fun with it and
+leave me some comments and whatnot and I will see you guys in the next oneEnd of file
+

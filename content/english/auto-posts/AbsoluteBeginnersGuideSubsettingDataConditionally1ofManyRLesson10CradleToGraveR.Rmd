@@ -1,0 +1,139 @@
+---
+title: Absolute Beginners GuideSubsetting Data Conditionally  1 of Many   R Lesson 10 CradleToGraveR
+date: 2019-08-28
+categories:
+  - Absolute Beginners Guide
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/yHmD7g-lsr4/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=yHmD7g-lsr4">
+<img src="auto-posts/images/11-AbsoluteBeginnersGuide-SubsettingData(dataframe),1ofMany-RLesson9.webm.jpg">
+</a>
+
+
+
+
+
+
+
+
+
+00:00
+okay all right we're back and we're we did some subset in last time we're gonna
+continue on with subset in this time we're going to put a couple of
+conditional statements in there which will help us narrow down our searches
+we're also going to use a different data
+set we're going to use the iris data set which also comes with our so that makes
+it easy for us to practice with so that being said let's set our data a frame
+we'll call it plants we're gonna let that we're going to assign the iris data
+set to that so iris is just plant iris just like that if I hit command enter
+you'll see in my environment plants 150 observations of five variables remember
+how to do that programmatically you can do dim and do plant we get the
+dimensions and down below in our console
+150 and five right number of columns and call plant and I may have made out of
+showed you these but remember there's tons of ways to do everything you're
+gonna have to learn to use Google and Stack Overflow but by practicing these
+
+00:01
+when you see the results in Stack Overflow you're gonna understand how to
+apply those results to your very specific example and that's crucial
+because you're never gonna find the exact thing that you looking forward
+you'll find something close and if you can read the program in syntax and you
+can say oh oh I get it now and you can modify it to your needs because what is
+it like 90% of all code is just cut and paste from Stack Overflow with a few
+modifications sadly or good I don't not sure quick joke is a Stack
+Overflow was created without Stack Overflow if you don't get it that's ok
+maybe later alright n rows or n row plant and we hit enter 150 rows so we
+get all this stuff out of their names that's very important we want to know
+what kind of header file do we have plant and we have the names down here we
+have length width and that's a sepal length sepal width and we have petal
+length petal width and then the species alright so now that we have kind of an
+idea of guess what this data is we really don't know what kind of data is
+
+00:02
+in there though so let's just do ahead and type in plant and let's just capture
+the first three rows for funsies all right here we go and we have okay some
+numbers have four to five different numbers in there looks like
+the pet pedal with 0.2 maybe we should have done let's do it let's do 10
+observations just get a little better feel okay so it looks like the petal
+width is a decimal number for the most part there might be some greater I don't
+know in fact let's just figure that out by using our subset function so here in
+our in our set of 10 we have up to 0.4 let's see if there's anything point 5 or
+greater so let's just do that as an example so what we're gonna do is going
+to do subset it's a function built-in and we're gonna subset what the plant
+database or data frame sorry and what I didn't show you before was that you can
+type in the word plant then the dollar sign and it gives you all of the names
+of the headers right here so we want to know if there's any petal widths
+
+00:03
+so go down to pedal with hit enter on that so now you have it there we want to
+know if any of those are greater than 0.4 let's do greater than point 4 1
+because we know there's a point 4 in there and I'm gonna hit enter and right
+now we have 10 observations showing but remember the actual observation count is
+150 because that was just a sample or the top 10 top 10 as in the first 10 I
+got to be very careful with what I say here so here we have a bunch of numbers
+but I don't think we have them all well let's find out out let's do a dimension
+on it because let's do a number of rows and row of the subset see how you can
+concatenate functions like this 102 so 102 out of 150 observations have a petal
+width that is greater than 0.40 1 okay cool let's do a petal with greater than
+point 4 1 and it has to have a let's say let's go up to the top here and look at
+
+00:04
+these names again let's say a sepal length greater than 6 so let's do an and
+in there remember these parentheses which is one
+nice thing about our studio is whenever you have your arrow on the parenthesis
+you can see the correspondent pregnancy kind of highlighted so you know okay
+that closes that the next one over closes that function so you can kind of
+keep track of where you're at you want to be within the innermost parentheses
+and instead of a comma you're not gonna do a comma here you can do it
+and so the end is just the ampersand okay and and then we want to put the
+entire condition which is we want the plant sepal length I believe that we've
+said sepal length greater than six now let's do command enter on that and we've
+got o so the number of rows that has that is 61 if you want to see what they
+are you can get rid of the N row parentheses like that should not matter
+and here they are here the outputs well if you want to save that something you
+
+00:05
+can you can say you know your special special plant let's assign it to this
+let's make this look a little better let's let's put an enter here white
+space typically doesn't matter so now you can see it all in one screen okay so
+now we set it as special plant and if you look over here in our environment we
+have special plant sixty one of those revisions now we can do all of our
+analysis on this subset of the data so that's the cool part about subsets in
+and that's one way to do it we can do an or statement let's do a or statement
+let's say we want to subset our plant database or our plant data frame with I
+said sepal length I think I said less than 3 and then anyways the or symbol is
+the pipe which is above the return key usually and a shift or we want plant
+
+00:06
+petal people left less than 3 petal width that's it I said less than 0.2
+okay yeah I don't know anything about plants obviously so we've got a list of
+looks like five observations how do we know it's five well we can do well we
+can do dimensions and get the dimensions
+of it because that might be important so five columns and 5 rows we could have
+done rows remember okay simple as that the main point of this is to subset use
+in one of the features quantities and you can use the or and the end and you
+can combine these as much as you want I can do an or or or I
+can do an and and an you know so basically look at the syntax of how I
+did this the entire conditional statement is on the right-hand side of
+this two parameter function so the first
+parameter is the actual data frame which is plant and then the second parameter
+is this entire thing which leads to a vector of trues and falses and that's
+
+00:07
+kind of important so what it actually returns it's a true false true true true
+false false whatever these conditions satisfies and if it if it satisfies a
+false that gets put into the the subset function and it knows only pluck out the
+truths from the original data set plant more on that as we go but those are some
+terminologies you're gonna have to learn and I hope this helps you with your
+subset in practice don't forget to practice and there's gonna be probably a
+dozen more ways to do the same exact thing and I'll probably go through most
+of them throughout the entire lesson set see you in the next lessonEnd of file
+

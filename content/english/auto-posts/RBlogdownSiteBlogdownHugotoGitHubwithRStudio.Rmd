@@ -1,0 +1,283 @@
+---
+title: R Blogdown SiteBlogdown Hugo to GitHub with RStudio
+date: 2020-06-11
+categories:
+  - R Blogdown Site
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/OG_i6WzRvL4/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=OG_i6WzRvL4">
+<img src="auto-posts/images/2-RBlogdownSite-RHugoThemeandDynamicChanges.mp4.jpg">
+</a>
+
+
+
+
+
+
+
+
+
+00:00
+follow my steps as best you can I would pause this video when you need to
+download or install something because I've already done it I'm gonna skip a
+lot of that step okay so we're gonna get
+out of our and we're gonna run over to a couple of websites the first thing
+you're gonna want to do is create a github account so you want to go to
+github.com run over there and you'll see
+a screen similar to this that's here and just put in a username email and a
+password it's free but note this when you do that your username will be
+publicly available basically if you're gonna use this to get a job pretend it's
+like a LinkedIn account you want to kind of treat it professionally so don't
+create a really wacky name unless you're gonna do like a trial name or something
+like that make it short readable easy to memorize things like that so just keep
+that in mind so let's do a couple of things I'm once you sign up that's it
+
+00:01
+just pause for a moment jump over to another website so pause this video for
+a moment jump to another website if you have Windows I would use get for Windows
+dot org and simply download this get get is a version controller basically a
+version control application or system that allows you to keep multiple
+multiple versions of the same software in the development lifecycle right damn
+I can't talk today but anyways git is just basically a way to keep track of
+version control you can merge you can collaborate merge from other
+repositories you can branch off and create a whole new repository so if you
+have like clones like think of like OBS online broadcast system they have a
+another version called stream labs Stream Labs is like a spin-off of OBS so
+they branched off of OBS and created their own thing called stream labs but
+
+00:02
+you can actually follow that branch all the way up to where it originated so to
+speak alright that being said if you have a Mac the alternative would be
+right here and you should try git - SCM comm slash download
+download that version install it so here we are I'm gonna download this and run
+it you'll see alright and also this is as live as I can get today so we'll see
+you want to read all of the user agreements click on next this is the
+Windows version by the way I know you can't see all these but the default is
+fine next next and then right here is what I'm talking about I might be able
+to zoom in on this maybe nope I don't know how to zoom in yet but the
+middle one is get from the command line and also from third-party software
+that's the one that's key crucial because we're gonna use our studio to
+
+00:03
+actually push this stuff to get and get is literally just gonna be a placeholder
+for us a holder that's it we're not gonna use it for much else yet but I'm
+gonna exit this because I've already installed it and I don't want to mess
+with all that you want to make sure that when you install it it's gonna ask you
+about path variables probably for the novice or the beginner user just go with
+the defaults you want your paths to be registered with Windows or Mac whatever
+it's going to do that way you can use the command line which we will have to
+use in order to push this stuff to get alright so after you've paused this
+downloaded what you had to do installed it you've created the github account log
+into github and we're gonna start fresh so anybody that hasn't seen the last
+couple tutorials I do recommend watching those because they tell you about the
+process of how these sites are built and how the layers and the directory
+structures work etc etc so be very crucial to do that first my introduction
+
+00:04
+all right it still works so my name is Marc Pingris and I basically I teach the
+technology that you can use to create content like this in order to publish it
+for other people to learn from it sounds like a lot but it's really not it's
+basically I have two channels this is the art channel and then I have one that
+teaches me how how you create these videos and make money online so check
+them both out I'm going to log in here into github and you'll see
+maybe a similar screen but what you want to look for is the repositories you
+might have this screen or a different screen but you want to look for the
+repositories and click on new we're gonna create all of this from scratch if
+you have an existent project I might show you how to do that later I did
+actually achieve that so that's possible as well but this is the easiest route
+for the first time alright let's get right to it let's call this one hour
+whatever you want to call it let's call it um project one simple enough
+whatever want to call it I'm gonna leave description blank you can fill it in if
+
+00:05
+you like you can also if you pay for the service you can have a private but it's
+all gonna be public and for the free version so I'd probably stick with
+public for now and initialize this repository with a readme alright and so
+create repository and you'll see you not a whole Lots gonna be done there's a
+couple of things here that's about it what you want to do is you want to go to
+clone or download which is right here I'm waving my mouse and click on that
+little paperclip or copy that URL I know you can't see it completely because I'm
+in the way but just copy that URL right here completely and let's go to our
+studio we're gonna create a brand new project so file new project and this
+time we're gonna go to version control and get now if you've installed get like
+like you just should have a few minutes ago and you didn't restart your are you
+might not have this option so just remember if this doesn't work right away
+
+00:06
+just restart our real quick and do it like by hitting the X don't just hit the
+session restart session actually close our open it back up then you know then
+you'll have this good option actually you might have this option but you might
+not get to this screen right here now paste that URL that you just grabbed in
+there and you'll see that my project 1 are automatically appeared that means
+that it actually did reach out to that website that quickly and pulled in my
+project name and of course put your browser to wherever you want to store
+this particular project we have a blank project here and it's gonna just do its
+thing it's gonna set up its get it's gonna create a couple of hidden folders
+I'll show you those in all right so right now don't do anything
+yet let's go to get tab which is up here and you should have that because you've
+installed get and restarted our and we're gonna stage stage both of these
+files the dot get ignore and the project
+one dot are proj we're just gonna see if
+
+00:07
+this works and then you can move forward so staging it you see that little
+checkbox you should be able to click staged and staged and then so it's
+staged it's getting ready to do something what are we gonna do with it
+we're gonna commit it as in we're committing this code we trust it we know
+it works so let's click on this little commit button here done deal you see
+it's turn green here you want to commit message you have to have a message so
+this is my first commit testing whatever
+you want to call it but you have to have
+that because every version of this every time you commit that code if you made
+some changes you might want to document what those changes are so you can you
+know again get well-well-well version control every single change you
+make you can go back a thousand versions and it's fine right so let's go ahead
+and click on commit then you will see something pop up here and then the close
+button right no errors just hit close and then you're gonna want to hit push
+
+00:08
+and when push happens all right so here's a couple caveats now you might be
+lost right now you might be lost because something might have popped up saying
+there was an error I want to go over a couple more things to things so mine
+worked fine don't worry if yours didn't work yet I'm sorry I forgot to show you
+a step that I've already done so what you want to do is you want to set up
+your git well you might have had a pop-up to say what's your user name and
+password that might have solved your problem if it did not go to shell or
+tools shell it should open up to that project directory that you're on it
+doesn't really matter for this but what you want to do you want to set up your
+email address and your user name basically so I'm gonna just go ahead and
+type in and I'll do it again so get space config space dash dash
+global space username and then in quotes you want to put your username and my
+
+00:09
+username is MT Greengrass you get that from your github which you've just
+created so right here you can see my username is MT gin grass right here so
+let's go back to this I'm gonna go ahead and hit enter
+I got no errors so please if you did get an error I hope you pressed on and saw
+this message here and let's do this again I'm gonna hit the up arrow instead
+of repeating all that I just hit the up arrow like are you can do instead of
+username I'm gonna call this a reading user email user dot email and that's the
+actual email address you use to create your github account and that's for me
+mark dot Jen grass at gmail.com feel free to contact me if you want I guess
+oops let me delete all this stuff boom alright we made it this far huh I feel
+like I should edit this piece and put it to this side I probably will alright
+
+00:10
+close that now we're good now if your are now when you go to commit and do all
+that stuff it should work it should work from this point if it did not work try
+there's a couple things you can try I'm not going to give you all the
+troubleshooting techniques but go to the directory where your project is so in
+mine its site test project one so this is where I created the directory you
+will probably not see the dot git or the dot our project user until you click on
+view this is all windows-based so Mac you've got to kind of extend this
+to a Mac and it should be fine I have filename extensions checked and hidden
+items so on a Mac you'd want to make sure your hidden items are viewable
+alright so under get you would have a lot of files here you'd have one called
+index dot lock sometimes if you're stuck as frozen you might delete index dot
+lock this one is not it's just plain to index all right I'll leave the
+
+00:11
+troubleshooting alone right now I'm hoping that we're all on the same page
+again make sure that you do that get command where you put your username and
+password or username and email in there all right we have nothing on this
+project we haven't done anything yet so let's create that blog down site how do
+we do that now we do blog down : : new site right so this is from scratch theme
+equals and pick your theme from the hugo themes and i think that was called gz g
+CU s h en hugo academic i believe that's what it was you could pick a theme
+anywhere you want just look up hugo blog down themes or
+something and the github name of that person and the theme is the format so
+the author of the github page and then the theme so it's doing its thing it's
+
+00:12
+creating the directories it's creating everything it needs in order to render a
+website right and it's shows the website
+here on the bottom left or right and I'm up here now but I'm not gonna stay up
+there alright so the websites there we could see it everything's work and one
+thing that you might want to try to do before you do anything is stop the
+server we've created the website now let's build the website let me jump back
+in here alright so we do have the server running you can see to run to stop the
+server you can type in this so that's what I'll do I'll just copy paste that I
+don't want the server to be running hit enter okay
+stopped now let's build the site so blog down : : hugo build and that's it so
+let's run this I know it seems like a lot of steps but it's honestly gonna
+save you a lot of time in the end all right that was quick and easy it built
+
+00:13
+it again it's not gonna look like you want yet we're just trying to push stuff
+to github that's it alright so we built the site I'm gonna just go ahead and
+save this you can see I've got hello our markdown free to go man you know that
+was prior to build any but we built it so that created all the public
+stuff now the problem is with git and our studio when there's a lot of files
+it tends to crash a lot so remember how we staged that dot get ignore in that
+other file if I try to stage this public
+folder I've done this like six times now it crashed every single time so I'm not
+even gonna try it again but you can click on it and try to click that little
+stage button right here I don't think you should though but you can give it a
+shot maybe it's just my configuration what we're gonna do instead is go to the
+shell again so tools shell and I wish I knew how to do it by a directory so make
+
+00:14
+sure you're in the directory of your project which you should be and let's
+see there's a couple of commands that you'd want to use I think oh yeah I know
+what it is get a space add okay add now the subfolder is called public PU BL IC
+I'm gonna put that and then I'll put the star in there why not so we're doing
+this with a command line we're staging it looked like it worked there's a
+couple of warnings in there but it has nothing to do with what we're doing so
+now that they're all staged let's alright so are caught up let me
+see if you can see me still yeah so are actually put those checkmarks in there
+again you could try to check public and it'll maybe work but it crashed on me
+six times in a row so I'm staged all of this stuff is now public I'm going to
+now commit all of the staged work that I've done which was basically press a
+few buttons so commit now in the commit you can see that my staged stuff is
+
+00:15
+still to the left and that's all my public stuff that's all I care about
+setting it up to github because we're going to use github literally just for
+like a holding area for an it low fee later commit message first commit test
+for tutorial you want to put this message out there because you might have
+twenty five thirty five different versions and you can kind of just revert
+back based on that message maybe right so click on commit
+and close and then push pushes the final thing it's gonna push it to your github
+account in fact I'll show you now before I click it let's go to my github I'm in
+my project one I can even refresh it you could see what we staged before the
+initial commit and the project but now we're going to commit the rest I'm going
+to click on push I'm gonna push I know it seems like a lot and I you're
+probably run into some issues I think I covered most of them I'm gonna hit the X
+
+00:16
+on that now refresh you see that public folder right there we did it the public
+folder is there we have everything in public now this index dot HTML is not
+going to work the way you suspect because it's literally just gonna be the
+code but don't worry about that so I don't know if we want to reiterate so we
+have github create an account download get for Windows org or this get SCM -
+comm slash downloads download that for Mac go back to our studio create a new
+project which is a version controlled project not a directory click on version
+control paste that URL that you got from github from that new repository and
+it'll automatically plug in your title basically it's a project create it stage
+your dot ignore and your project file commit those two files push those two
+
+00:17
+files again if you didn't set up your Pat your email and your username using
+the shell go back and check out how I just did that
+so you might want to do that first all right and then you would create the blog
+down site I would take off Surfside I would run that demon killer whatever it
+was build the Hugo site then I would stage all of the public using the shell
+not our studio so all right well that's a lot for one little go so call this one
+quits I'm sorry that it's a little bit confusing but if you follow closely I
+think you'll get there let me know in the comments if this was
+just really confusing and you want me to do another run at it I can do that if
+you have any troubles let me know if it works for you also please subscribe and
+share like I do have a discord page as well I'm gonna try to grow that
+
+00:18
+community so please and thank you for all the help you guys have done for me
+so far just by contributing with the comments and likes [Music]End of file
+

@@ -1,0 +1,94 @@
+---
+title: Scraping ContentR Programming Twitter Scraper
+date: 2019-08-02
+categories:
+  - Scraping Content
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/AFTw_6dVOXY/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDyBeI9iEE8LdEvLGfLSLwPPrZhvA
+---
+
+
+
+<p><a href="https://www.youtube.com/watch?v=AFTw_6dVOXY">
+<img src="auto-posts/images/01-ScrapingContent-DataManipulationTwitterScraperusingR.webm.jpg">
+</a></p>
+<p>00:00
+okay today I’m gonna tell you about how to use our programming to capture
+Twitter search results and capturing certain people’s tweets like at real
+Donald Trump or anybody else you want to
+grab their tweets from first you have to go to this site called apps twitter.com
+and you have to register for a Twitter API this is free and really really
+simple to do it’s literally just a couple lines that get to fill out I
+already have one started called Trump grabber Wow let’s go ahead and create a
+new one so this is what you’re gonna see is something similar to this if I click
+on create new app the Internet’s a little slow where I’m at so bear with me
+so the application details you have to name your application so my application
+name was twenty trump grabber then you put a quick description in there no
+problem now website if you don’t have a website it’s okay it’s telling you that
+you don’t have to have a URL down here but you have to put something in there</p>
+<p>00:01
+so just put in some sort of placeholder like whatever website you want to put in
+there put my placeholder your name whatever and then callback URL you don’t
+need to input once you click on create your Twitter application it’s gonna
+allow you to have a API key a secret API key some token keys go see
+more about that in a minute but I’m not gonna show you that part that should be
+intuitive and you should be able to do that pretty easily on your own you have
+to create a what they call a token generator and I’ll show you that in a
+second where that goes so let’s go to our and I’ll show you the code here now
+I’ve already pre processed some of my data so that you can’t see my actual API
+keys or my token keys but when you go to the Twitter account like I showed you
+you would paste those in here so API key it’s very self-explanatory
+cut and paste the API key from Twitter to where these X’s are same thing with
+the API secret and then the access token and access token secret those will be
+generated when you click on that little generate token button on the Twitter</p>
+<p>00:02
+account so that’s the most that’s the hardest part about grabbing tweets from
+Twitter using are the two libraries you have to install it are the twitter are
+and the are oauth libraries you can include the libraries like this as I did
+in the code but you might have to install you can do you can write the command
+line or you can go to packages install and just literally type in Twitter are
+caps matters and then click on install there you have it so what I’m gonna do
+is I’m gonna run through this and show you how to grab grab some tweets in
+various ways and we’ll go from there because it’s
+very simple I want you to be able to use this today so include these libraries
+run the run that code run your API code so they are sort in these variables and
+then on line 11 this is where this is where the magic happens where you
+connect to the Twitter API so set up Twitter
+ooofff off and then you put in your API key your API secret access token and
+access token secret okay so now I’m gonna run these other this other code</p>
+<p>00:03
+where it says grab latest tweets so the first one on line 14 is going to run
+code to grab 50 of real Donald Trump’s latest tweets so it’s from this is the
+key part here from : real Donald Trump that’s how you do that
+the next line here is at real Donald Trump what that’s going to do it’s going
+to grab me the the latest 200 occurrences of a trail Donald Trump so
+anybody could have tagged him and that’s what that will grab so let’s run that
+one then of course the last one is just two keywords we’re looking for is it’s
+gonna have the word morning in there and bacon and I want to grab the latest
+hundred of these one key thing to know is that you can’t just arbitrarily grab
+like 5,000 items per se you can but the the Twitter API will only allow you to
+go back about a week or 10 days for something like that so if I ask for
+Twitter’s last 5,000 tweets it’s gonna give a warning saying warning we’ve only
+grabbed the latest you know 100 tweets because that’s all he’s tweeted in a 7
+day period or whatnot I’ll show you that here in a second too</p>
+<p>00:04
+so we’ve got let’s put these into data frames right here on line 19 20 and 21
+and we can see over here on the right where the data is tweets DF let’s click
+on it and we go to it so we have under President Trump Trump unemployed and it
+goes on and you can you can do it that way and we’ve got all these different
+columns here favorite count how many times it’s been favorited what date was
+created was it a retweet things like that so check out
+these fields see what you can do with it reason why I turn a data frame because
+it’s easier to manipulate that way because if you actually just use these
+tweets that the tweets underscore Trump you’ll it’ll be all mushed together and
+not easily usable then what I like to do sometimes is write these two CSV files
+and that’s it so I created CSV files right here using write CSV and those
+will show up in Excel so you can manipulate them that way as well okay so</p>
+<p>00:05
+that is it for creating a tweet scraper hope you enjoyed the videoEnd of file</p>

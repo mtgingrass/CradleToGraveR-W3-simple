@@ -1,0 +1,155 @@
+---
+title: Absolute Beginners GuideR Squared Adjusted R Squared RStudio Linear Models
+date: 2020-05-18
+categories:
+  - Absolute Beginners Guide
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/UqS0zCMcMVM/maxresdefault.jpg
+---
+
+
+
+<p><a href="https://www.youtube.com/watch?v=UqS0zCMcMVM">
+<img src="auto-posts/images/46-AbsoluteBeginnersGuide-CradleToGraveRLiveStream-UnzipDirectoryofFiles.mp4.jpg">
+</a></p>
+<p>00:00
+welcome back today we’re gonna talk about when to actually stop adding these
+explaining variables the regressors how many variables we
+really need are features do we really need to explain what’s going on to
+predict the outcome right and of course we’re gonna use my favourite data set
+the empty cars data set because it’s very simple and we’ll start off with my
+data is equal to empty cars run that you
+can see we have our observations and our
+variables we have 11 features across the horizontal as you can see here so we
+have miles per gallon cylinders etc etc so let’s create our first linear model
+we’ll call it model 1 and that will be a
+simple one so linear model with our data
+equal to my data and we’re gonna explain how do we explain miles per gallon
+explained by weight and I just picked that one arbitrarily you could pick</p>
+<p>00:01
+whatever one you want doesn’t matter so we’ll just run that right now and the
+model has been created let’s take a quick look at the summary so summary of
+that model one see what when you get out of that and we’ve got all this stuff in
+here we talked about the p value this here and we talked about these little
+stars and again it doesn’t make sense to much with one predictor the weight
+because it’s the only thing that’s explaining the miles per gallon at this
+point but if you had multiple predictors in there or aggressors then the star
+values might matter the p values might matter but that’s not what we’re looking
+at today we’re gonna look at this multiple R squared here
+there’s 0.75 to 8 and the adjusted r-squared point seven four four six
+don’t worry about memorizing them but just know that it’s kind of kind of
+about 0.75 on both of them right in fact we don’t need to display all this other
+stuff so let’s go ahead and fix that by doing the dollar sign after this summary
+so when the dollar sign is outside of the parentheses it goes with the summary
+so it’s like hey what kind of attribute for this summary can we display here and</p>
+<p>00:02
+we’re gonna display our R dot squared value I believe that’s what it is yeah so
+there it is I did that you can see at the bottom here it is 0.75 to 8 and we
+can also do the summary one and we can do the adjusted r-squared
+so I’ve just add r-squared and there we have it point seven point four is
+slightly different so the adjusted r-squared adjusts for how many
+parameters or how many explaining variables you have because when you have
+multiple explaining variables and I’ll show you this in a second it always gets
+a little better and I’ll tell you why that’s kind of not the best way to go so
+let’s do a copy and paste of these lines here so ctrl C we’re gonna create
+something new control V here and we’ll call this model
+2 and over here where the weight is let’s add an explain a variable called</p>
+<p>00:03
+displacement okay and so let’s change all these to model two as well let’s
+take a quick look at what this is all about so number seven run that run that
+run that alright so you have point seven eight and point seven six five for the
+adjusted so remember the previous one was 0.75 two for the R squared and this
+one is 0.78 for the R squared it went up what do you know right in fact let’s go
+ahead and copy this again and try another one this time we will paste it
+and we’re gonna put it as model 3 and we’ll add just placement plus I don’t
+know quarter second value right run that
+change these other ones to model 3 don’t forget and run those as well and you’ll
+see that it’s now up to 0.8 to in point 807 so it’s always going up and that’s
+kind of the lesson I’m trying to tell you is the more you put in there it’s</p>
+<p>00:04
+always gonna go up so let’s do it I’m doing it again this time we’ll add just
+already added displacement will add a cylinders cylinders
+I’ll make this model for I hope you can tell that I just copied and pasted it so
+four and four and let’s try this again fifteen sixteen and seventeen point
+eight two it went up a loop point eight four for my R squared and my R squared
+before that was 0.82 you can see that it’s still jumping up and up and up what
+else do we have left we’re running out of
+features here oh we have vs we have drat let’s try we have cylinders carb I let
+strike let’s try carb so one more and then I
+will move on to something else here so we’re gonna add carb make this model 5 +
+5 + 5 boom boom boom point eight four four so we add point</p>
+<p>00:05
+eight four three here and then I’m up to point eight four four try to tell
+because I’m doing both the R squared and the adjusted R squared so let’s just
+copy one of these R Squared’s and take a quick look at it all together down here
+control V let’s put that in five times and we will change it to one two three
+four five and we’ll see them right after one two three four five so let’s run
+this boom boom boom boom boom here we go alright so we have point eight four no
+that’s not where started so we have point eight one five nope uh what did I
+do wrong here there we go okay screwed up let’s clear this by this little
+paintbrush here boom let’s just run these so we don’t get mixed up and there
+we have it point seven five point seven eight point eight two point eight four
+three point eight four four okay now here’s where the lesson might be for you
+we added these various features as we created these models and as you can see</p>
+<p>00:06
+the jump from model for to model five was just very minut it went from point
+eight four three nine twenty eight four four you know that jump wasn’t very big
+so we’re gonna add a lot of complexity to our model by saying hey let’s add
+this card here right but in reality it’s not really doing us any good because it
+didn’t get us much better model every time you add a feature to this model
+your r-squared will go up in value right
+so no matter what you do what’s going up it’s gonna fit the training data better
+and that’s the key here if it fits the training data that’s fine and dandy you
+can actually with computers you can fit the training data eggs
+exactly I can find an equation with this computer exactly that’ll fit every
+single point on this chart if I wanted to write but we don’t want to do that
+because we’re gonna overfit the data because we know that that’s not reality
+the next vehicle is gonna have different statistics and it’s not gonna line up</p>
+<p>00:07
+there’s no point in making it exact we’re not trying to figure out what we
+already know we know the data here right so if I find an exact equation that’ll
+give me every single number every time of these variables fine and dandy but I
+already have the data I have a table of data here I can give you the exact
+answer I don’t need a formula I just need hey give me the weight give
+me the miles per gallon and I could tell you anything about it right so we don’t
+need that we just need something close so our models getting too complex for
+very little gain that’s all I’m trying to say there let’s go ahead and try this
+again one more time but this time we’re gonna use the adjusted r-squared so
+paste that and I’ll just type in adj for each one sure just yeah there we go
+and let’s just kind of compare these while we’re at it I’m gonna clear this
+with that little paintbrush and rerun these and I’ll see what we have so what
+you see here now is that they’re not always going up so the adjusted r-squared</p>
+<p>00:08
+it takes into account how significant each one of these features truly are now
+the math behind that is too complex for this tutorial right now but just know
+that the adjusted r-squared is usually a
+better indicator for whether or not this model is you know getting better enough
+so let’s take a look here the first one was point seven four four then it went
+to point seven six then I went to point eight point eight
+two then it jumped back down to point eight one right so you know we can
+actually say that possibly without the carb we’re doing a better better job
+fit in this data to this model right so we fit the data to the model we want to
+be able to predict what’s next that’s a goal so knowing that think about this
+other situation that we’re in now we have weight displacement quarter second
+cylinder right and we decided if we add carb we’re over we’re over doing it
+where our adjusted r-square is going down our model is not really getting any
+better so let’s just take this model for for</p>
+<p>00:09
+example and we have weight displacement Q second cylinder but we didn’t use some
+other features that are in the in the data we didn’t use a.m. or gear or
+horsepower we didn’t use those so how do
+we know if we’ve got the best model well we can try every combination of all
+features with a variant amount of features inside of the model we try
+every combination of two every combination of three every combination
+of four and so on and so on and test all these out now that’s pretty cumbersome
+so in the future tutorials we’ll show you how to actually test this without
+doing a whole lot of this repeatability that’s it for this lesson if you found
+these useful again please share like post them all over the place for me
+that’ll help my channel out help me grow and continue to do these and hope you
+guys come back for the next one thanks you [Music]End of file</p>

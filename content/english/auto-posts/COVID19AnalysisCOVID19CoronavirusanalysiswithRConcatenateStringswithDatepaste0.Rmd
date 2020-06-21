@@ -1,0 +1,75 @@
+---
+title: COVID 19 AnalysisCOVID 19 Coronavirus analysis with R Concatenate Strings with Date   paste0
+date: 2020-03-14
+categories:
+  - COVID-19 Analysis
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/mtDTUuLPIsY/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=mtDTUuLPIsY">
+<img src="auto-posts/images/59-AbsoluteBeginnersGuide-NetlifyCustomURLandNewPostwithRStudioBlogdownHugo.mp4.jpg">
+</a>
+
+
+
+
+
+
+
+
+
+00:00
+we're going to continue on with our kovat analysis however I am on vacation
+so the audio is not going to be great and I'm sorry about that in advanced so
+the previous tutorial I showed you how to collect some coded 19 data and
+there's a URL and what I'm gonna do is we're gonna check to see if this URL is
+still valid because the date has changed is no longer 3/8 so I'm going to copy
+this we're gonna go to a website and we're going to just paste it in to see
+if this is still valid we checked and you can see down here that it downloaded
+an XLS file now let's go ahead and change this 8 into a 9 or a 10 or
+whatever date is in the past or currently so let's just go ahead and try
+a number 9 and hit enter and you see that it's downloaded the 9 the day 9
+data so we know that this pattern is good so we can use this pattern to
+
+00:01
+collect the most current to date that is out there so let's go back to our our
+code and instead of using this particular URL we're gonna build a URL
+using a couple of functions this will be
+a very short tutorial but I want to show you how to update this automatically so
+instead of URL 1 equal in this static string we're going to actually make this
+into something more than static so first
+let me show you a couple things let's go down to the console let's type in the
+word sis dot date and then open close parentheses you'll see that the format
+happens to match what we exactly see right here except it's got the current
+date 20 2003 14 so that can help us what we're going to do is we're going to put
+this into a paste 0 function which will basically a pendant or concatenate
+strings so let's go ahead and do paste 0 over Fritzie and we know we want all of
+this information up to the actual date so I'm going to close the parentheses
+
+00:02
+right here I'm sorry ID quote here I'm gonna hit karma and then I'm gonna
+actually just delete this part I'll rip the dot and I'm gonna well let's let's
+put XLS in quotes and then we'll close the parentheses
+we're missing one thing we're missing the actual date so let's put that in
+right in between which is right here and we can call sis date here so this will
+append at the system date this first part of the string and this XLS
+extinction let's see if it works let's go ahead and rerun this entire thing by
+hitting the play button now of course we don't know if today's date I didn't
+check it was actually uploaded but there's no errors there so we've run
+that now let's just go ahead and run our sum
+looks like there is data because 50 408 and we can do whatever we did last time
+so now check our DF right here we have all of our dates
+
+00:03
+we have 3:11 here so it looks like this is working just fine so very quick
+tutorial but I want to show you how to make this more dynamic instead of static
+so now you've learned system date you've learned how to concatenate user base 0
+and I hope this will help you with your analysis [Music] you [Music]End of file
+

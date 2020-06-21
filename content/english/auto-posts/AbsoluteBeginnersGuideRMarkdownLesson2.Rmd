@@ -1,0 +1,164 @@
+---
+title: Absolute Beginners GuideR Markdown   Lesson 2
+date: 2019-08-02
+categories:
+  - Absolute Beginners Guide
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi_webp/W3sC_M1miFc/maxresdefault.webp
+---
+
+<a href="https://www.youtube.com/watch?v=W3sC_M1miFc">
+<img src="auto-posts/images/03-AbsoluteBeginnersGuide-MathOperations-Lesson1RTutorialforBegginers.mp4.jpg">
+</a>
+
+
+
+
+
+
+
+
+
+00:00
+welcome to the next lesson in this lesson we're going to steer away from
+our scripts and the console and we're gonna go towards an R markdown file and
+I'm going to show you how to create your
+first actual project so I'm starting off
+where we left in the last video with all
+of this up I'm gonna go to file new file
+I'm sorry new project and it's gonna ask me if I want to save the current I
+personally do not you can I'm just going to not save it now when new project
+shows up you have a bunch of different options we want to probably put that
+into a new directory and so we can keep it all collected in one little folder or
+a set of folders and it's going to ask you again what type of project do you
+want we will get into some of these as we progress through this tutorial but
+for now we're going to go to new project right here so it's a blank slate we're
+
+00:01
+gonna give it a name I'm gonna call this our project 1 that way we can follow
+along if we had have to come back to it now you'll notice also that there's a
+open and new session if that's checked it'll keep my current environment and
+all of this open and open up a whole nother instance of our studio and you
+can actually run multiple projects side by side it's not a problem but to keep
+everything organized in this tutorial let's go ahead and not check that box
+and we're gonna go ahead and hit create project it's switching to a project view
+now you'll see we have our console window again it looks slightly bigger
+before because remember I change the view to be have a bigger font for me my
+environment still to the top right and my files plots packages all that is
+still at the bottom right again we have a console we can do basic things like
+2+2 we can even make assignments in there X is assigned to 23 and you'll see
+
+00:02
+in their global environment X is equal to 23 I'll show you a quick way to reset
+all of these you click this little broom here and it'll clear all your objects
+from your environment click yes now if I hit X here it's gonna
+valuates a object that's not found okay let's not worry about that because what
+we're going to do is we're going to create a new file in our project new
+file and this time instead of in our script let's go with our markdown now
+it's gonna ask us for a title for this we'll just say whatever you want first
+markdown file you can add in author anything else now the output format for
+now let's just keep it as HTML PDF and Word should work no problem but that's
+going to assume that you do have word and also that everything is kind of
+working as you can see PDF requires something called miktex on Windows and
+
+00:03
+Mac Tex depends how you pronounce it so let's stick with HTML just so that we're
+all on the same page PDF might work out of the box
+we'll see if not then we'll actually mitigate that probably in another
+tutorial let's start with HTML hit OK and what we have here is we have our
+console at the bottom still I'm going to resize this so that we can see more of
+my actual our markdown now this is a I believe in RMD file yes our markdown so
+its dot our MD when you save this right now it's not saved we still have our
+basic environment we have our bottom right let's start at the top here of
+what they generated for us when we created this markdown file these three
+dashes and these three dashes is going to encapsulate our metadata for what
+this document is basically on the HTML file the name of that file is going to
+be under the title so you can call this whatever you want
+
+00:04
+Mark's cool markdown file and that'll be the title on your HTML document and you
+can see the output is HTML document that came with the fact that we selected
+those during the project settings do not mess with lines one through four except
+for what's in the quotes for now so let's keep that there and you're going
+to see line six through eight has a weird knitter options trunk things like that
+don't worry about what all this stuff means yet let me walk you through this
+file so limes six through eight are actually the only place in this document
+that is actually code the rest is basically markdown language and metadata
+metadata is going to be one through four and the markdown language is what you
+see here like these two dashes means hey create a second level heading which you
+might be you might understand from like Microsoft Word and I'll show you how
+
+00:05
+that works in a moment and you have regular text you have some links and
+that's about it I'm sorry if you scroll down we have
+more code and we know this is our code because it's got the letter R inside of
+this curly brace and it's got these back ticks more on that in a just a moment
+and so we have another header called including plots you can also embed plots
+for example and then you have more code and the code is gonna do certain things
+now let's grow up let's get straight to the point
+the point is you can read this stuff and you can hit this little play button
+it'll actually play you see that little green thing that popped up there that's
+it it again and it actually ran everything within these back ticks and
+the back pick is not a apostrophe it's actually to the left of the number one
+very important to know because they look the same especially if you're cutting
+and pasting from the web to our studio you're going to be confused
+
+00:06
+so back tick and they have to be three and versus a single quote not single
+quote you want backticks and they must have a opening set of back
+ticks and then a closing set of back ticks so slide six and eight are
+necessary if I get rid of these last any of the back text you should notice how
+to change the color so there it is so you can tell that's code because it
+changes the highlight color okay we ran that we have a bunch of text we're going
+to run the next set of chunks and that's
+going to be a summary and as you can see it populated right here within our
+document and including plots we can actually run a plot there it is there's
+a plot pretty cool because we have we have
+actual words that isn't code mixed with our code now how do we put this into a
+very awesome HTML file we knit it seems little knit button right here let's
+click on knit to HTML and it's gonna say
+you need to save your file let's save it
+
+00:07
+as first markdown file and it's going to automatically put it in our our project
+file for now that's gonna be fantastic let's just do that hit save and you'll
+see on the right-hand well first it pops up right here actually as a this is our
+studio rendering the HTML file saying hey this is what it will look like when
+it's HTML so it's pretty cool it doesn't have those little hash hash marks it's
+got marks cool markdown file that's the title that we put into the metadata we
+have our markdown that was our header our second level header we have our text
+we have links that work we've got an actual code in gray and here's the
+output of the code output of the code right here pretty awesome and that's it
+first our markdown file now if you actually want to look in the bottom
+right-hand side you have more more files within that directory and it's a little
+weird to navigate but you can see my home's home is right here then my our
+
+00:08
+project is right here so in your art project you should see all of your
+project files what we generated when we when we knitted this was the HTML file
+you see here first MD file dot HTML if I click on that you can open an editor or
+you can view in a web browser it truly is an HTML file so if I open it in
+editor it's not going to look pretty it's got the actual 18 HTML in there and
+if you look at this it's mindboggling lee complicated-looking
+so close that out let's click back on this and do view in web browser by the
+way this is just a regular Chrome browser but you will notice on the URL
+it's actually on my hard drive but you can take this particular file you can
+drop it into your word whatever website that you own and it'll render
+just like this as is so that's one way you can publish it you can publish it on
+github you can publish it on your own WordPress sites there's definitely ways
+
+00:09
+to do all of that in fact once you get really good at are you will be able to
+create a program that will automatically
+push your our code into a wordpress site and I have a link for that too
+ok that's it for your second lesson that's in our markdown file Mort I hope
+this video was useful and if it was leave a comment below let me know how
+and also subscribe that'll help me grow my channel and continue creating videos
+like thisEnd of file
+

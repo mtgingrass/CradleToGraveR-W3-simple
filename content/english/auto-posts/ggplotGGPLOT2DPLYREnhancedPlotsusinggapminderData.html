@@ -1,0 +1,170 @@
+---
+title: ggplotGGPLOT2   DPLYR Enhanced Plots using gapminder Data
+date: 2020-02-12
+categories:
+  - ggplot
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi_webp/EbZvcQy174M/maxresdefault.webp
+---
+
+
+
+<p><a href="https://www.youtube.com/watch?v=EbZvcQy174M">
+<img src="auto-posts/images/03-ggplot-ggplotColors,Size,Alpha-RLesson13.webm.jpg">
+</a></p>
+<p>00:00
+hey just a quick note throughout your career you’re gonna be using data and
+you’re gonna be using all kinds of packages out there it’s nice to know
+that when you’re using our and our packages they’re freely available and
+you can pretty much reproduce this anytime and anywhere with any company at
+no cost so I just wanted to throw that out there before we get into this lesson
+and what we’re gonna show in this particular lesson by we I mean me is the
+gap finder dataset and just a quick tidbit on how to visualize it using
+ggplot2 we’ve done some work with the GG plot and applier package so let’s
+continue that and we’ll work with a really rough looking graph and turn it
+into something more aesthetically pleasing and usable so that being said
+get your first r script open and let’s install the gap finder o gap minder gap</p>
+<p>00:01
+minder let’s start with the right terminology here so Gapminder click on
+install it’ll take just a second to install I already have it installed but
+I I clicked it again just to show you and then of course if you don’t have the
+DES plier package DP Lyr or go ahead and
+do that as well TP ly r so at that point
+install the plier and let’s go ahead and load those two libraries so library D
+plier and run that and library gap minder now before we do anything with
+plot and let’s just take a quick look at the data see what we’re dealing with at
+a very broad view so let’s just go ahead and pipe the Gapminder data into
+remember command command shift M command into capital V aw view and run that now
+you can see on my screen I have country data continent year life expectancy</p>
+<p>00:02
+population and GDP percentage so and there’s a 1,700 1,700 for entries so
+that’s the data we’re dealing with finally before we start plotting we’re
+gonna use you plot like I said so let’s go ahead and install ggplot2 if you
+haven’t already so that’s the third package we’re gonna want to
+install and of course we’ll put it up here in our library and type in ggplot
+to put a little gap in there for aesthetics and now we can use the ggplot
+functions all right so we want to plot this and see what kind of data we can
+get but we’re also going to do some deep liar within our plots so we’re gonna
+reduce the amount of data that we’re gonna look at so let’s go ahead and
+start with the actual data set so Gapminder data set want to pipe that
+into a filter so let’s filter out some data we want to filter by GDP for
+example let’s let’s actually go back and</p>
+<p>00:03
+view the data so I can go back and forth so Gapminder piped into the viewer
+let’s get that running so you can see GDP percent capita so it’s a gross
+domestic product per capita is is what that stands for let’s go ahead and try
+to filter out some of these based on some criteria random criteria so I’m
+going to keep that open what we’ll do is we’ll pipe this into a filter and then
+the filter will say GDP per capita let’s only do what’s less than say 40,000
+right and then we’re gonna pipe that into something else what we’re gonna
+pipe it into we’re gonna pipe it into the actual ggplot function so do plot
+and inside of this plot we have to have an aesthetic we have to tell ggplot what
+to apply to the x and y axis basically so we want our a a es our aesthetic to
+be mapped we want the X to be mapped to GDP percent capita then we’ll have the Y</p>
+<p>00:04
+access map to say life expectancy so life expectancy I’m hitting the tab key
+to auto-complete because it knows based on the on the data that I piped in it
+knows that I’m using those variables or those features so now we have an
+aesthetic cool but we still need to have a layer so we have an external y-axis
+but we don’t tell it what type of plot do you want so let’s add so ggplot is a
+grammar of graphics so we’re gonna add just like the piper operator we’re going
+to use the plus sign instead we’re going to add a geometry called GM
+and from there we hit the command ninja button if all goes well you have a plot
+that looks like this on the bottom right hand side of my screen it’s a little
+busy a little crazy but that’s how you get started so now the beauty of using
+ggplot is with just minor modifications you can make this plot a lot more
+appealing so we’re going to walk through those next the first quick example to
+liven this up is we’re gonna add a legend and with continents we want to
+figure out hey which continents are these countries from so inside of our</p>
+<p>00:05
+aesthetic we mapped remember we map the x and y now let’s map a color so when I
+say color is equal to and that’s gonna be the continent and so here we go let’s
+run this you’ll see the colors change in a little bit I’ll even I’m gonna leave
+this not zoomed in so that I can program the actual Final Cut Pro edit a lot
+easier as you can see here though is we have Africa Americas Asia we have the
+continents and you can see that life expectancy of Europe the blue as your
+GDP goes up your life expectancy seems to go up so there’s a correlation
+possibly right so that’s what we’re looking for things like that so let’s go
+a little bit further then if you find this video helpful you can help me back
+by sharing the video on social media liking and subscribing by sharing the
+video it’ll help expand my audience and grow this channel which will motivate me
+to do more tutorials I’d love to do more but I need your help so just go ahead</p>
+<p>00:06
+and share the video and that’ll definitely make my day thank you so it
+is a little less busy well it’s still busy but you can kind of see some
+differences between the continents now but there’s a lot of overlap so let’s
+get rid of that both so just think about
+what you’re trying to do to this overall
+picture we have an X we have a Y we have color codes we have we want to change
+something let’s change the actual dots themselves so where the dots will the
+dots are the Gion points so inside of Gyan point we can put an alpha value
+alpha equals and we can set that to say point I’ll try point to hit command
+enter and you’ll see now it basically depends on how much density
+how dense those points are well amongst the other points it’ll actually make
+some of them transparent but I’ll point to does look a little bit too
+transparent so let’s try 0.35 and just go from there fiddle around with the try</p>
+<p>00:07
+it so now you can kind of see where the overlaps are but that’s still a little
+bit mmm clutter clustered or cluttered it’s a little bit cluttered let’s fix
+that so we messed with the colors to give us the actual countenance but what
+about if we want to compare like the sizes of the actual concentrations of
+population right so again we have this data in here we have population as a
+variable now you don’t have to use population but I want to see the
+population differences so instead of aesthetically mapping the XY and the
+color color to continent we can actually add another parameter in there called
+size and we set that equal to population
+and you’ll see various size dots now one
+thing that you want to also note is that I swapped the parameters and it’s fine
+because I explicitly said size equals population columns equals continent now
+if I didn’t and I just typed in continent without any Co l equals then</p>
+<p>00:08
+you would have some issues there as well now we can kind of maybe possibly put a
+line that goes across this so let’s add another layer of geometry called P I’m
+smooth and what that’ll do is it’ll put a best guess linear not linear but a
+line you can see the lines now kind of a trend line you can see what’s going on
+with this particular continent it’s based on continent any of your
+population legend down here as well which I didn’t even notice before but
+that’s not very helpful it’s a it’s not aesthetically pleasing to the eye now a
+lot of people are not going to be able to understand the equations involved
+with these sophisticated smooth geometries so let’s make that a linear
+model so as if it was just a straight line so we can add a method inside of
+this camp smooth and we can set that equal to LM linear model now of course
+this is going to be it’s not the best linear</p>
+<p>00:09
+model because the data is so skewed so let’s try to clean up that data just a
+little bit now I’m not going to get into the statistics too much but if you do a
+log transform so just take the log of the GDP percent capital inside of where
+the X mapped is X aesthetic is mapped to the plot let’s run that one more time
+and it’s going to regenerate everything now you can see some more straight lines
+which is good so there you have it that’s a really good way to get started
+with creating geometries and ggplot graphics but let’s take it one step
+further because you know what to me this is still cluttered so finally what I
+want to do is I want to break out this this plot into different facets so we’re
+gonna use facet wrap so + facet and you’ve probably seen this before that’s
+a trap and we want to base it off of this is a shortcut we can use this
+little tilde to say base it off of what let’s let’s base it off the continent</p>
+<p>00:10
+typically cont I and ent I don’t know why I have the worst time spelling there
+and there we have it we have every continent split out with a geometry that
+tells you what the linear model would be based on this log transformation of the
+GDP percent capita now if you don’t want to mess with a lot of transferrin trans
+transformation you can get rid of it but
+again I’m gonna show you the picture and it’s the linear model will not fit it
+very smooth you can see how it’s just see that big cluster at the very
+beginning the data is very skewed so that’s why we did that now if I kept the
+method equals out of there then we can have a better line so depends on what
+you’re going for but this is a quick way to explore some geometries with ggplot
+some layers some facet wrap and various parameters and attributes so so there
+you have it then from there you can export this if you’d like you can export</p>
+<p>00:11
+it as an image or a PDF file copy it to my clipboard paste it in your favorite
+program but ultimately eventually you want to automate everything so we don’t
+want to use the mouse we’re gonna grammatically do all that as these
+future tutorials go on I hope to have all of that for you so stick stick
+around and stay tuned [Music]End of file</p>

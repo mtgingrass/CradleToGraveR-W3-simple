@@ -66,7 +66,7 @@ df_yt_partial <- df_yt[complete.cases(df_yt),]
 for (index in seq_len(nrow(df_yt_partial)))
 {
   #Get the json file
-  yt_json_file <- read_json(df_yt_partial$JSON[index])
+  yt_json_file <- fromJSON(df_yt_partial$JSON[index])
   
   # Extract meta-data from json file
   yt_title <- yt_json_file[index]$title
@@ -75,10 +75,10 @@ for (index in seq_len(nrow(df_yt_partial)))
   #yt_descrip <- readtext(yt_dl_descrip_dir[index])
   #yt_descrip <- readtext(df_yt$DESC[index]) #yt_json_file$description
   
-  title <- paste("---\ntitle: ", gsub("[[:punct:]]", " ", yt_json_file$playlist),
-                 " - ",
-                 gsub("[[:punct:]]", " ", yt_json_file$title), sep = "")
+  title <- paste(gsub("[[:punct:]]", " ", yt_json_file$title), sep = "")
   
+  rmd_filename <-   title <- paste(gsub("[[:punct:]]", " ", yt_json_file$playlist),
+                                   gsub("[[:punct:]]", " ", yt_json_file$title), sep = "")
   date_upload <- paste("date: ", 
                        substr(yt_json_file$upload_date,1,4),
                        "-",
@@ -105,10 +105,11 @@ w3codecolor: false
 draft: false"
   
 
-vtt_txt <-  paste(readLines(df_yt_partial$VTT[index]), collapse="\n") 
+  vtt_txt <-  paste(readLines(df_yt_partial$VTT[index]), collapse="\n") 
 
   # Combined YAML
-  yaml_tmp <- paste(title,
+  yaml_tmp <- paste("---",
+                    paste0("title: ",title),
                     date_upload,
                     play_list_cat,
                     yt_tags,
@@ -134,7 +135,7 @@ vtt_txt <-  paste(readLines(df_yt_partial$VTT[index]), collapse="\n")
   #Create the Rmd file
   write(yaml_tmp,
         file = paste("C:\\Users\\markg\\Documents\\CradleToGraveR-W3-simple2\\content\\english\\auto-posts\\",
-                     str_replace_all(yt_json_file$title, "[^[:alnum:]]", "-"), ".Rmd", sep=""), 
+                     gsub("[[:space:]]", "", rmd_filename), ".Rmd", sep=""), 
                      append = FALSE)
   
 }

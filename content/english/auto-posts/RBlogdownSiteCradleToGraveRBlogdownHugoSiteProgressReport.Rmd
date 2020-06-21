@@ -1,0 +1,141 @@
+---
+title: R Blogdown SiteCradleToGraveR Blogdown Hugo Site Progress Report
+date: 2020-06-20
+categories:
+  - R Blogdown Site
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi_webp/hUeSGNz7I2E/maxresdefault.webp
+---
+
+<a href="https://www.youtube.com/watch?v=hUeSGNz7I2E">
+<img src="auto-posts/images/5-RBlogdownSite-RStudiotoGithubtoNetlifyLiveSiteblogdownHugo.mp4.jpg">
+</a>
+
+
+
+
+
+
+
+
+
+00:00
+welcome back to the channel today I'm gonna talk to you a little bit more
+about what I've been doing rather than showing you more are and I think you'll
+find this interesting especially if you've watched the six tutorials on how
+to create a blog down Hugo website now I'm not gonna walk you through this
+entire process that I'm doing right now but I am gonna show you that I do have
+it on github and you can go ahead and pull it and play with it if you want the
+goal for me was to take all of my videos now I have multiple channels so I might
+have four or five hundred videos total that's a lot but on my art channel I
+might have maybe 60 or 70 right so what I want to do my intention is to create a
+automated flow where it takes all those YouTube videos downloads them all to my
+hard drive the metadata the thumbnails the closed captions that are
+auto-generated if I can get all that data I can create a blog post
+automatically and I've I'm getting pretty successful at that right now
+last two days I've been playing with it probably I put in a lot of hours maybe
+
+00:01
+10 hours in two days maybe three days or something like that but um so what I
+have now is right now what you see is this program called YouTube - DL that's
+downloading all of my content I had to figure out configuration files for that
+to get it to download there correct things in the right order without
+break-in etc etc I have all that it's all in my github and I walk you through
+it but I'm not gonna walk you through it in this tutorial so in the next couple
+tutorials if you're used if you're interested in creating dynamic web pages
+based in our studio then you know stay tuned for awhile
+basically what I do though is I have two different files right so that's
+downloading and it's gonna create all the stuff and all these folders
+everywhere and what I do is I have two different files I have one here that
+what I use it for is to convert okay what do I need let's move them to my
+project file based on the YouTube download stuff let's convert things from
+like one format to another let's strip spaces etc etc I do all that I do
+something like pre-processing with that it's not a lot of code but I'll walk you
+
+00:02
+through that later in more detail and then I have another file here now this
+one actually creates our MD files for me now if you see down here on my
+right-hand side the bottom right all of these are MD files every single one of
+them and the HTML that comes with it because
+it's been rendered but think about the RMD I only have a few here because I
+didn't download all of them yet but all of these every single RMD file I did not
+create I did not create a single one of them let me click on one now show you
+what I'm talking about so that script that you just saw this
+one YouTube the RMD that I created I'm gonna show you how to do that one in the
+next tutorial and in a very basic way I'm gonna say hey let's use a script and
+create an army file and this is all it creates right it puts the yamo code
+which is up top the Yambol that I chose and picked and I self to fix the tags I
+didn't do the tags yet but the categories I've got ooh I could do
+multiple categories anyways of course I can but my categories are gonna
+basically be like in my blog you'd be able to you'll be able to select it just
+
+00:03
+like you'd click a playlist on the YouTube I've got some embedded links
+here which will take you to the YouTube I know you can't see the site from this
+I've got a lot of blank space I need to get rid of but then I have all of my
+narrative this is the YouTube closed captions that they gave me so that's a
+good head start like hey I can like turn this into an actual like grammatically
+correct blog post pretty easy now that I have all this ready to go now this was
+created for every single video that I had that I downloaded if I click on
+another one I can delete these right now rerender it it's back back in no time
+right so I have all these RMD files and now what happens with your empty files
+if they're in your post directory of a blog down Hugo site when you render or
+serve your site it renders all of those posts those are MD files that I didn't
+create and creates actual HTML like it embeds the HTML creates the files and
+you have a site so this is an automated way to make a website let me give you a
+quick show of my site of course it all gets pushed to github which goes to net
+
+00:04
+low fee and then it's Auto deployed alright so let's see I'm gonna pull a
+tab over and I'll just show you what I have up there today now this is still
+just I'm just playing with it I've got a lot more work to do but look I've got
+thumbnails I've got this nice elegant way to look at it and it works
+mobile-friendly as well and I like the mobile-friendly version as well but I
+can click on any one of these let's say the first one and I've got my thumbnail
+here I've got my our blog down site like category you can
+have multiple categories by the way you can I just haven't done that yet but
+then it's got all my narrative right and I didn't write that narrative YouTube
+did so it's like how can we automate the heck out of this and then if I click on
+this it'll go to my YouTube video so I might even make it so it's an external
+click I'm not sure but there it is right so if I click on categories you can see
+all the categories I have I'm trying to I'm gonna try to match those to my
+playlist automatically so that my playlists are like hey it's not a
+category it's a playlist but it's on my website and then tags I haven't done yet
+
+00:05
+but tags will be something similar it'll be whatever tags I have in YouTube on
+those particular videos I'm gonna import them in and then eventually of course I
+will I will update the blogs to be legit blogs but I think this is gonna help
+with SEO traffic like hey you've got a lot of content on there brings somebody
+to my site and then of course I can add a discuss panel where you can comment on
+it I can what I what I really want to do is make sure the code is there for you
+so right now I haven't really been given
+people code because I just didn't really have a good convenient way to do that
+but now I do I'm gonna start creating an arm D file with the code which is funny
+I actually had a description in my youtube video that had like exact code
+you need in the arm D file but because I was pulling the description and putting
+it into my arm D file I was my arm D file was writing was rendering code that
+came from YouTube so was render in that code which caused an error because it
+was actually dealing with like local hard drive stuff which you don't want to
+
+00:06
+not really with an arm D file that you hand off to somebody because you can't
+store and save things through most browsers anyways so this is it it's very
+nice it's a good start and like I said it's all coming from the hugo blog down
+net leafy and github all of this came from that so i will walk you through
+bits and pieces of this throughout some tutorials and i hope that they're useful
+for everybody that being said let's let's call it a day and I will leave the
+link to the github at the bottom so you can at least clone it and mess with it
+if you choose to you're gonna need a lot of help probably with the YouTube - DL
+hopefully I'll have a post for that as well
+I do want to keep this are specific but I do think that since I'm using R this
+is relevant to the channel so if you guys like this type of information and
+you want to do this please subscribe and follow and share and like and all of
+that good stuffEnd of file
+

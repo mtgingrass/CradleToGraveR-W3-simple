@@ -1,0 +1,166 @@
+---
+title: Absolute Beginners Guidefactor level dataframe R
+date: 2020-02-18
+categories:
+  - Absolute Beginners Guide
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi_webp/_FtCMgFFK60/maxresdefault.webp
+---
+
+
+
+<p><a href="https://www.youtube.com/watch?v=_FtCMgFFK60">
+<img src="auto-posts/images/24-AbsoluteBeginnersGuide-GGPLOT2&DPLYREnhancedPlotsusinggapminderData.mp4.jpg">
+</a></p>
+<p>00:00
+welcome back today we’re gonna talk about and probably under six or seven
+minutes a little bit more about factors and levels and categorical variables and
+how they differ from strings a string is a string you know you have a string of
+characters it doesn’t really mean a whole lot to you except for its
+characters that’s the datatype and so we’re gonna talk about something called
+factors a factor is more like a category or a type let me give you some examples
+first before we dive right in like for example if there’s only four
+options up down left and right no other option exists you would call that a
+factor or a compass north-south-east-west factor cylinders
+maybe even though this is a number it can only be a four six or eight cylinder
+car so it’s not really a number it’s a factor it’s a type of engine right
+things like that so if you have say like a drop-down list
+or something like that in Excel that we kind of convert over to a factor now if
+you could put a character string in there that’s a different story</p>
+<p>00:01
+it’s an unlimited amount of different types it could be that’s a different
+story we’re talking about factors specifically they are limited in what
+their options can be right so let’s dive right in with some examples and I’m
+going to show you how it’s good and how it’s it causes you less pain in the long
+run let’s start with some examples nothing beats an example so let’s do our
+let’s do our data is equal to and let’s start with a column vector of female or
+male right so female now we’re creating this data frame from scratch male and
+I’m making this completely up and you can do the same but the key is we create
+that so we have our our data OD and actually let’s not call that OD let’s</p>
+<p>00:02
+call that gender right off the bat gender and then let’s just add a call
+that random numbers I’m just gonna write
+some numbers here and put some commas in so we have 1 2 3 4 5 2 3 4 5 6 there we
+go we’ve just gonna have to make it a square matrix here or a square data
+frame so run that and let’s go ahead and
+put in weight if we want this is this is like a classic example of how to
+demonstrate factors so another weight 233 129 that’s probably not a good way
+maybe the five year old with a four year old 3 no idea let’s try this all right
+so we have some data that’s all that matters and they all have the equal</p>
+<p>00:03
+amount of length now if you haven’t if you want to find the length of them you
+could do the length I want to show you a couple things as we go
+alien 3 to gender length of 6 right so that’s how you would figure it out if
+you didn’t if you had an arbitrary number and you wanted to
+programmatically do it all right so let’s create a data frame out of this
+remember how to create data frame let’s call it our data now I’m gonna override
+OD over there our dater is equal to and we’re gonna
+create data frame with gender age and weight in fact we’re not just gonna do
+that we’re gonna call it gender equals gender I have a really bad naming
+convention going on so I think this will work come and enter on that alright so
+it looks like it worked let’s go ahead and click on it just to show you</p>
+<p>00:04
+od it says gender age and weight you see why my naming convention is kind of bad
+because it really shouldn’t be the same on both sides so name in this particular
+feature gender I’m gonna name it gender but I’m also going to assign it to the
+vector called gender so a little confusing but I think you
+guys get the point on that alright so while we’re here let’s do is factor is
+that factor let’s find out is OD gender a fact factor it says true right
+let’s see if age is a factor the answer is going to be false so it automatically
+knows it’s a factor because I built it and it just assumes it’s a factor when
+you’re importing data from like CSV files or Excel the internet typically
+it’s not gonna go factor it’s gonna say this is a character string so we need to
+do something about that we need to convert that character string to a
+factor let me give you an example because this is actually really</p>
+<p>00:05
+important let’s go ahead and change it from a factor to a character string so
+let’s go ahead and say the OD original data of the OD gender let’s assign that
+to as character OD gender come and enter on that alright so now let’s do we can
+do class I think class or work OD Oh can’t type today character says class
+character right another and also we could do is factor here’s that factor
+well there’s various ways to get the same answer false it says false so we do
+not want character strings there’s a very distinguished or distinct
+difference between them character strings will allow any other string to</p>
+<p>00:06
+be added to it and appended to it you can add male-female neutral rhinoceros
+or whatever you wanted to add because it’s just a string these aren’t strings
+these are types types of gender classifications male female right so
+there’s only a certain limited amount that we want to be able to choose from
+so let’s get to it and convert it back how do we convert it back
+well let’s do oh D gender which is currently a character string and just do
+the function factored into OD gender okay so it’s gonna automatically convert
+it back and again we can do is the factor on it
+OD gender and there we go true true good so we’re we’re on the right path here
+we’re on the right path let’s print out the OD gender because I
+want to show you something OD gender you’re gonna see in the</p>
+<p>00:07
+printout tells me something called levels the levels so you see the data
+Fein F mmm FF and the levels are F and M female and male so it’s very distinct
+there’s no other choices female and male if I try to insert data that was not an
+ad for an M I would get an error let’s try that there’s a couple ways to insert
+data there’s no I don’t know if there’s a more proper way most of the time
+you’re going to be important from a CSV or in Excel but once in a while you’re
+gonna have to do your own data let’s do it this way just for time sake we’re
+gonna say the OD in brackets now this might be new for some of you I’m gonna
+say the number of rows that are in OD so take the number of rows add one row
+comma now I want all the columns so I’m gonna leave that blank I could spell</p>
+<p>00:08
+them out it’s explicitly cuz a one through three or whatever but since I
+leave a blank it’s fine I’m gonna assign this new row because that’s what it is
+it’s a it’s a new row because I added the one I’m gonna say the new row is a
+vector that’s containing we want a gender I’m gonna say male and then I’m
+gonna add the edge and the weight this should work
+okay so we have Odie I got mail 23 to 30 for let’s check it out
+mail 23 to 30 for it is right there you can see it now I’m gonna copy this paste
+it here and now we’re gonna add in a new gender called neutral capital end we’ll
+give it a kept away you’ll see that I got a warning message says invalid
+factor level n/a generated so now let’s look at our our data you see on level 8</p>
+<p>00:09
+I have a gender that’s not acceptable it is not it wasn’t part of so that’s
+what’s so powerful about this is it actually validates your data as you’re
+going right but now you know let’s say that we wanted to create a new level we
+wanted a level called neutral so let’s go ahead and add that in there you have
+to add that in explicitly so you’re programmatically doing it this helps you
+prevent errors it helps you validate data throughout it helps keeps your code
+clean and your data curated and nice and clean all right anyways let’s go ahead
+and do that so we’re gonna do the original data right and we’re gonna set
+that equal to the factor backdoor and we’re gonna bring in the original data
+but now we’re going to say something we’re gonna put something in there
+called levels equals and that’ll be a another vector we’re gonna say hey we</p>
+<p>00:10
+want our levels for actually excuse me we want the OD gender to be factor with
+OD gender with levels we want a level called male a level called female and
+we’re gonna add a level called n now command enter now the data is already
+there for the n/a so we’re not going to go ahead and change that n/a but we’re
+gonna add the same thing here with the N
+and I’ll show you that we’ve in fact now
+because it’s the number of rows plus one we’re good because it’s going to count
+the new number of rows so now we have the letter n in here so that’s pretty
+cool we’ve we’ve created a new factor level and of course if we printed that
+print OD gender we’re gonna get all of our levels male-female and capital n so
+that’s it that’s pretty good then there’s ways to order them you can</p>
+<p>00:11
+order them simply by changing the order so you see that right here on line 21 my
+order was male female and I could have easily changed the order and the order
+does not matter in this particular case because it’s not going to change the
+order of my rows or of my data or anything like that this is going to
+matter when you’re plotting when you’re making bar graphs and histograms and
+whatever so the order will matter later but for now those are the techniques I
+wanted to show you especially add in a row of data in this
+particular fashion there’s multiple ways to do that but I mean takeaway is
+validate your data if you don’t want any other factor to be available or any
+other level for that factor to be available don’t let it be available let
+let the AA’s happen or error proof it and say you know it can’t be an n/a
+things like that so anyways see you next
+time thanks for watching this tutorial I hope it really helps feel free to share
+this video on social media that’ll help my channel grow motivate me to press
+forward and make more videos like this feel free to reference this video</p>
+<p>00:12
+anywhere on the Internet and thank you for watching and see you in the next one
+you [Music]End of file</p>

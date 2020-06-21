@@ -1,0 +1,187 @@
+---
+title: Random RUpdated   End to End Covid 19 Analysis with R   Import Data  1 
+date: 2020-03-21
+categories:
+  - Random R
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/cdFIlaKKbkk/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=cdFIlaKKbkk">
+<img src="auto-posts/images/12-RandomR-factorleveldataframeR.webm.jpg">
+</a>
+
+
+
+
+
+
+
+
+
+00:00
+all right we're gonna get right to the point there's been a lot of cases of
+coronavirus or Kovac 19 since last December up to over 100,000 cases us
+being our users and our programmers let's go ahead and start a project where
+we can start analyzing some of this data so throughout the next couple tutorials
+I'm gonna show you how to import the data daily we're gonna modify the code
+as we go but each tutorial is meant to be very short under five or six minutes
+and we'll go from importing the data to fully on predicting where this possible
+virus is going to go in the future so that being said we have a website here
+called the European center for disease prevention and control luckily for us
+the European CD PC offers this data for free the United States CDC does not
+offer this data for free anymore I believe it's a political thing anyways
+if you scroll down on this website which
+
+00:01
+I'll leave for you you'll see a download today's data if you click on that it's
+an excel file and this file looks like this it's got the date recorded the
+country of exposure the new confirmed cases and the new deaths and then
+columns enf I'm not quite sure what that means I didn't read the data data
+description which you should do we can find out on the website I'm sure okay
+notice another thing that there's only two tabs here and it's a csv underscore
+four underscore comms and sheet one which is the typical excel file sheet
+one all right so that's not that important yet but note that if there's
+multiple tabs we have to be specific on which tab we want to import let's go
+back to our I want to show you a couple things first let's go ahead and do a new
+project file a new project we will do a new directory new project we're gonna
+call this Kovac case whatever you want to name it what about my desktop create
+
+00:02
+the project once that's created let's go ahead and create a our notebook so we
+can add some narrate narrative to it as we need it so a new file our notebook
+and here we go we don't need all of this stuff delete we can keep the title and
+the y mo code up the top let's call this covert cases and are whatever you want
+to call it okay now let's go down so lines one through four that's just some
+metadata that's used to create the HTML file that this will produce at the end
+of the day alright so we want to first put a little narrative in there let's
+just do a hash tag which makes a header so we're gonna say Kovach data import
+and I'm making this very simples to keep this tutorial very short obviously you
+
+00:03
+want to add as much information as you'd like so we can say this is where we get
+the data something like that now for this I'm going to actually put the main
+site here which is right here command C let's just drop that in right
+now this is just not part of my code a part of our narrative so how do we
+insert a our chunk so we can start doing some actual our I believe it's alt ctrl
+I it's been a minute all right so I inserted a chunk here so you can
+actually take these out for anybody that's new these are not the ' it's not
+the pinky finger on your keyboard your QWERTY keyboard is actually the key to
+the left of the number one so it's called the backtick that'll confuse you
+if you didn't know that because they look very similar alright so we have the
+are there let's go ahead and install a couple packages that you will definitely
+need for this so first I want you to click on packages go to install let's do
+
+00:04
+H TTT R and we're going to install that one mine's already installed so I'm not
+gonna install it again the next package is read Excel and then you click on
+install same thing it'll reach out to the cran library and install it for you
+so once you have those installed we can use those libraries so let's go ahead
+and load them make sure your installed HDR and
+library read Excel I'm gonna bed and run
+both these chunks by in this little play button here I got the green light
+nothing no errors so we're good to go totally cool the h TT d r HT t TR will
+help us navigate some of the URLs that we're going to need and the reed XL will
+do the reading of the excel file let's start with naming that URL that we need
+so we'll just call it URL 1 and I'm gonna I'm gonna assign it to some sort
+
+00:05
+of string and that string is going to be
+the actual URL of this excel file so I'm
+going to right click on it click on copy link address and we're gonna go back
+over here and I'm gonna paste it right in there command V and in this tutorial
+we're gonna leave it as is to keep this short but notice the date it's 220 2003
+0 8 we know well we're gonna assume that
+tomorrow 3 9 it's gonna change to 3 9 so that's something that we have to figure
+out how to programmatically do in the next tutorial but for now let's just use
+this and get the basics we're going so we've got the URL I'll go ahead and
+command enter on this line 14 you'll see it's in my global environment now cool
+simple as that now what we want to do we're gonna use a
+get function the get function is from HTTP our and what we're gonna do is
+we're gonna say hey I want URL one that I just loaded into memory I'm gonna
+
+00:06
+write to the disk so write underscore the desk now you don't really have to
+memorize this you can just kind of copy it cuz you don't use it that often I
+want to create a temp file and I'm gonna call it well I'm gonna tell it what the
+extension is gonna be dot XLS I know that's to be true and what's that what
+is that going to do it's gonna call this
+URL right here and it's going to write a temporary file to disk because I don't
+really want to save this every time I want to save my our output but I don't
+really want to save the temporary file you can save it as an output as well but
+so let's go ahead and run line 17 to make sure it works command
+and we've got no problems with that you'll see TF is up here we have TF and
+we have a URL now what are we gonna do with that we're going to read that
+temporary file into memory so let's go ahead and do my data frame kovat data
+
+00:07
+frame is going to be equal to read underscore Excel and I want TF yeah just
+like that that should do the trick command enter on that I want to take a
+moment to pause because the CDC site sometimes has a dot XLS file and then
+other times a dot xlsx file so the case that you have in front of you is fine if
+it's a dot XLS so you'll have to check 914 the URL one if it has the X at the
+end we'll make some minor modifications for example you'd have the X on the end
+on line 14 so xlsx will be the extinction well on line 17 the get
+function on the very right hand side where it shows in quotes dot XLS you
+will have to make that into a dot xlsx and then finally on line 19 you would
+have to instead of using read underscore
+excel it would be read underscore xlsx I hope that's not too confusing but in a
+
+00:08
+later tutorial I actually show you how to dynamically find out if it's an X or
+an S at the end of that extension you'll see DF up here has 45 or 4528
+observations of six variables if I click on it you'll see it looks just like my
+excel file so looks like everything is good to go we've successfully imported
+this data into our into memory okay simple as that now once you've done that
+now you can start doing the analysis so that's what I wanted to show you is how
+to read the data in not tomorrow this will probably turn into a 0 9 let's hope
+the pattern persists because then we can programmatically do that before we get
+too far let's just keep it as is clean it up a little bit let's jump out of our
+our chunk and go back to this header Cova data import
+we've done that now let's create one called
+
+00:09
+Kovac data cleanup we'll call it that I have no idea what we're really going to
+do because this is for next time and we're just going to say this is been up
+of data let's save this command S or a file save let's save it as script one
+and it's in the directory where we created the project hit save now what we
+can do we're not really doing much here let's just go ahead and for fun create
+another our chunk called control I so all control insert think about it that
+way and let's just do something simple as as the we want the sum so we want the
+sum of the data frame that we just created of all the new deaths total
+right I'm gonna hit play on that we should get a number 3584 so 3584 deaths
+total now we're not gonna get to the analysis in this one but what I want to
+
+00:10
+do is control s again save it let's go ahead and render this now show you what
+the output is so I go down here to my console and I can do our markdown : :
+render and then let's type in the exact thing here it's called an output in
+quotes to script one dot our MD and I think I could do yeah let's just leave
+it like that command or just enter because we're in the console hit enter
+it's going to actually create a notebook HTML file which is basically an HTML
+file if you go to your files here and we go to script one at our MD that's that
+but then below that we have script env HTML if you click on that you can open
+an editor or view in browser I like to view it in browser because sometimes the
+editor you do have to rely on our studio to be up-to-date with the editor with
+the browser it truly is what your browser would show if you gave this file
+to somebody or upload it so here it is we have all of our stuff here and as you
+
+00:11
+can see at the bottom its 3584 we can hide the code we can hide
+all the code we have our headers we can globally hide or show all code we can
+download this Rd file so you've successfully created this now
+there's not much here but I wanted to keep this short
+tomorrow let's do a little bit more so every day slightly more I advise you to
+play around with it and try this out again again if you find these useful
+share it with your friends help me out I'm trying to get to a monetization
+status which means I have to have a thousand subscribers and about two
+thousand hours of watch time to be monetized and I'm not even close but as
+long as you guys are continuously watching these videos you're helping me
+out and I appreciate that [Music] you [Music]End of file
+

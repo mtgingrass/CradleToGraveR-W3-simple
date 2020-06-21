@@ -1,0 +1,153 @@
+---
+title: Absolute Beginners GuideCradleToGraveR Live Stream   Unzip Directory of Files
+date: 2020-05-17
+categories:
+  - Absolute Beginners Guide
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/irOsVaJFdVs/maxresdefault.jpg?v=5ec187b2
+---
+
+
+
+<p><a href="https://www.youtube.com/watch?v=irOsVaJFdVs">
+<img src="auto-posts/images/44-AbsoluteBeginnersGuide-CorrelationMatrixinRwithcorplot.mp4.jpg">
+</a></p>
+<p>00:00</p>
+<p>00:01</p>
+<p>00:02
+[Music] you [Music] okay this is my my livestream for our
+and I have just set this all up on Windows as some of you know I have been
+on a MacBook and I still am using a MacBook I’m just trying to make a
+different workflow right now so my workflow is going to be record and do</p>
+<p>00:03
+all of the programming on a PC with Windows and as soon as the record is
+done it’ll drop it right into my MacBook folder and then I can throw it into
+Final Cut Pro and edit it but the goal is to be able to do more not necessarily
+lie that it’s but the minimal amount of editing in general so I’m trying to
+streamline that slowly but surely it’s getting there I’m just practicing right
+now with with my PC setup alright so that being said let me talk to you about
+what we’re going to talk about today we are going to be using our and our studio
+tools to unzip a directory full of files automate automatically so let me go
+ahead and show you an example set of files literally I just put this PC
+together and I’m using it and so I’m downloading all these things I need as
+you can see in my downloads folder I have tests and then a few other zip
+files in there now I don’t really need these anymore this is just an example</p>
+<p>00:04
+but imagine you had 50 or 60 zip files or maybe somebody at your work Center is
+sending you zip files every day daily and they’ve accumulated 230 for the
+whole month and you need to unzip each one well instead of going to the right
+click extract all clicking all these buttons and waiting you know and then
+having all these pop-ups come up for 30 different files we’re gonna do this
+automatically with our so this is a little bit of a deviation from
+statistics and machine learning and things like that but these tools are
+super helpful that I figured I’d throw this in there in the mix just to show
+you how to do it because it’s really simple honestly and with that being said
+let’s do a couple of preliminary things just to get you started you might need
+you need the URL or the address of these the location or the path
+and in Windows you have the path as just plain download so that’s not really
+gonna help you too much you can right-click on the files that</p>
+<p>00:05
+are in this location and click on properties and then we can see down here
+where it says location you can usually get an idea of the location that way we
+can go ahead and copy this entire location here highlight it and do ctrl C
+let’s just keep that so now that we have this let’s go back to our studio and
+what you’re gonna notice too is that I actually have our version 4.0 installed
+if you don’t that’s fine as long as you have a three-point-something version
+this should work so I’m gonna go ahead and go down to line 2 here I’ll zoom in
+a little bit for ya so as you can see I’m gonna create a directory so we just
+we just found that so we’ll call it my directory and we’re gonna set that equal
+to our path but we want to put it in quotes as well so keep that in quotes
+and then finally we don’t need to see colon so delete that and remember
+backslashes like this are actually escape characters so you can either put
+a double backslash for each one or you can convert them all to forward slashes</p>
+<p>00:06
+I’m gonna go ahead and convert them all to forward slashes and you don’t need
+one at the very end here so that’s fine so we’ve got that that’s fine so that’s
+a placeholder for our directory now what we want to do is I’m gonna show you how
+to download a tool that’s gonna help you call plier so click on packages down
+here and then click on install and just type in make sure your repositories
+crayon type in P l yr p ly r and it’s the plier library now mine’s gonna
+install to the default library which is my 4.0 you might have a three point
+something in there that’s fine just click on install it’s gonna take a
+few seconds to install and then you should be good to go
+make sure install dependencies is also checked that way if it requires other</p>
+<p>00:07
+libraries it’ll go ahead and download those as well alright
+now that we have that yours should be loaded by now we’re gonna add that
+library so library P Lyr and do control enter on that to load the library
+control enter on my directory you can see on the right hand side down here you
+have my directory stored my shortcut keys ad minus and plus and things like
+that unto the R so don’t worry about that I just delete them okay so let’s
+get going here we want to get a list of those zip files right so let’s just
+create a list called zip file and this would be the list of files so a
+convenient thing that R has built in is list dot files so we’re gonna use that
+function and we’re gonna say ok what’s the path where do we want to look at
+those files when I say path is equal to and our path is our my directory path so
+we can make that into my directory no problem there and we want it to only
+list files at a zip file so let’s let’s add a pattern our pattern is equal to in</p>
+<p>00:08
+quotes star dot zip so the star if you don’t know stands for basically a
+wild-card but it’s it’s as many letters or characters to the left of that star
+or the left of the the period actually it’ll grab as long as it has a dot zip
+extension at the end that’s all that’s saying I’m sure you’ve seen that before
+all right so then we’ll do what we need to put in full names equals true fold
+that names that way it gets the entire so because we need to doing this we can
+do it’ll actually just do users mark G downloads slash filename one does if
+instead of finally one does it final name to does it find them three does if
+we’re gonna have it have the entire path so that’s why full names equals true
+it’s usually a general bit safer to do because if if if the function doesn’t
+actually know to use a local directory then it’ll take care of it for you
+because it’s gonna give you the entire path and I’ll show you that in just a
+second so on number six I’ll hit come in</p>
+<p>00:09
+I’ll hit ctrl enter let me zoom back out for you now you can see up here on the
+right-hand side I have zip file it’s got three files in there we can go down to
+our command or our console and just type in zip underscore files
+file hit enter and you can see the entire path inside a quotes
+users mark G downloads all of them are in there so that’s what it did pretty
+simple straightforward now that we have that now we’re going to use this cool
+powerful thing called you know the player package I’m gonna use L D ply
+which stands for kind of like l’p lida plier and l’p ly is hey let’s apply a
+function or a set of rules to every single thing in the list and then bring
+it all back together so the plier function and the plier package is really
+meant for us taken like a list of objects doing something to each one and
+then putting them back together that’s all we’re doing it’s real simple so
+we’re gonna set our data is equal to and our data is actually equal to our zip</p>
+<p>00:10
+files we want to send in our zip files but now we’re gonna say what do we want
+to do with these if owls we’re gonna apply a function so the dot fun and then
+the function is called unzip and that’s just part of the our base package so you
+don’t have to download anything for this I don’t think it’s part of plier but
+it’s it’s it could be I’m not a how to ensure on that and then we have to give
+it a directory to actually unzip these two so we’re just gonna do the same
+directory so I’m going to call it my directory again and that should do it so
+let’s go ahead and cut ctrl enter on that actually let me show you my
+downloads again so you should see my downloads here I’ll kind of I’ll try to
+bring it up quickly when I run this to see it working so let’s go ahead and do
+ctrl enter on that and I’ll do alt tab and you can see it was that quick it
+actually just did that so I have three new files here that was are all unzipped
+really fast and all automated that’s it that’s all there is to it it’s extremely</p>
+<p>00:11
+simple to do I hope that you can find our in our studio to be useful not only
+for your statistics or any type of program that you you want to do but use
+it as a tool in your work area to automate the boring stuff automate the
+boring tasks anyways if you find this helpful please like and subscribe but
+more more importantly if you can share this on social media that would be great
+share it on Twitter Facebook anything that you have
+let’s see oh and finally if you thought this was helpful there’s an actual
+playlist that I’ll bring up and it’s got practical art for business it’s not
+really meant as statistics or anything like that so let me bring it up here so
+this right here is my playlist it’s got Flex dashboard it’s got our
+studio shortcut tips but these particular videos and tutorials are
+meant for somebody that’s in the business realm that wants to automate
+some of the boring stuff so that’s it and this was my first live stream on the</p>
+<p>00:12
+new computer I was rushing for it I’m not quite set up completely the way I
+want to but I hope that you found this helpful and again please see you guys
+next time by subscribing have a good oneEnd of file</p>
