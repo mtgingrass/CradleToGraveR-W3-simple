@@ -1,0 +1,163 @@
+---
+title: COVID CSV Data Update Plot   data from European Center for Disease and Prevention
+date: 2020-03-31
+categories:
+  - Tidy
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+---
+
+<a href="https://www.youtube.com/watch?v=px_Cc4Axj7M">
+<img src="https://www.cradletograver.com/auto-posts/images/7-Tidy-PlotCOVID19coronavirusDatausingRdplyrandggplot.webm.jpg">
+</a>
+
+
+
+
+
+
+
+
+
+00:00
+welcome we have been pulling data from the Center for Disease Control site the
+European one and somebody pointed out named destroy on my YouTube comments
+that they actually started posting the script for how to download this data
+that leads me to believe that they're starting to really standardize how
+they're gonna update the data so if you pay attention for the for the past four
+or five videos a lot of our troubleshooting was due to them changing
+the file extinction or the column names etc etc so I expect some of that to
+happen I haven't seen this data yet but we're gonna explore it together all I'm
+gonna do is use their method hope in that sense it's their method they know
+not to change their data update procedures to make to make the code
+break so what we're gonna do is we're gonna I'll send this link to you guys in
+the description to grab this code plus I'll post the code on my website as well
+
+00:01
+but we want to grab this code from the hash tag down to here when do command C
+notice that's a CSV file we're downloading it not an excel file so
+let's go back to our code and I'm gonna show you a couple of things a couple of
+tricks so notice that we have a header that says Cova data import remember we
+can click this little down arrow and it goes away like that's you know that's
+been done it's been proven to work keep on going right but we want to make the
+changes in there so let's go ahead and click on it again luckily it's segmented
+okay so we're just gonna take lines 11 all the way down cuz this entire code
+and all of our error proofing is no longer needed highlight all the
+way down from 11 to 45 and we're not gonna delete it quite yet because what
+if the code doesn't work we want to get it back so I'm gonna show you a quick
+shortcut key command shift C will give us automatic comments for all of those
+lines you can see that they're all commented out it's a little dark for you
+guys but they're all commented out to uncomment them all you would highlight
+
+00:02
+them all again do command shift C or control shift C if you have a PC so we
+have the code here just kind of hittin in the background ultimately in the end
+you want to clean up your code and get rid of it if the new code works so let's
+start off with doing a control V here and now we have their code in our script
+now library utils is a default library that comes with R so you don't have to
+actually install that but HTT TR you do if you don't have it so click on
+packages install and just I've been HT to TR you should be good to go when you
+click on the install button so once you install it let's go ahead and run this
+line by line do command enter utils h2 to TR and the get statement that we've
+already had previously noticed it's a CSV file and not an XLS so that's why
+they use them read CSV instead of read Excel or whatever we were using before
+let's see if it reads the data in now it's called data we actually probably
+
+00:03
+should call it DF because all of our code below uses DF so let's just go
+ahead and make this DF and we'll actually read it in again now obviously
+before you're starting scripts if you really want to see if things work and
+you should probably clear your variables first but I'm not gonna do that right
+now we've already started so I'm gonna go look at DF and see what kind of
+changes they've made the first thing you should do is look at the data no matter
+what and I'm gonna tell you a couple things here like it looks like most of
+the fields are still there countries and territories have changed and I think
+deaths and cases I have a capital C and a capital D so we have to fix that so
+let's fix those things first and we'll go down and fix the rest so as you go
+down you'll see that for example this one here should not produce a number so
+it doesn't print it but I know it's not because deaths was lowercase so let's
+
+00:04
+just delete that and type in deaths lowercase and we'll have to do that
+throughout the code sadly sadly so let's just go ahead and do that I know that
+this has changed I think it was lower case C countries and territories just
+like that deaths was lowercase cases was lowercase and that should be
+good let's rerun these two chunks click nothing's gonna show anything here but I
+wanted to rerun it anyways because it stored the variable anyways that looks
+good okay it's creating the data data table for us it's still good to go down
+here in our plot always have the wrong countries again and we don't need the
+back techs because there's no space in the actual variable name some countries
+
+00:05
+and territories same thing here this is painful hopefully they standardize the
+way they do it so we can grab their data easier alright
+cases as cut as lower case it's a lot here it's a lot here I'm sorry so just
+make the changes I think that's all for now alright so there's a couple things I
+wanted to point out lower case D has to point that out
+try this one more time and so last time we saw this nasty looking plot that just
+isn't gonna cut it for us in fact does a
+lot of things wrong with this plot but I want to I want to clean it up just a
+little bit for you today and again we'll we'll do some more
+exploring later but for one that's just too many on here let's do a couple
+things let's filter out only deaths that are over 100 and let's just see what
+that looks like but I'm gonna show you a problem that we have so we have deaths
+
+00:06
+and cases in here you see the cases are much higher than death so it really
+doesn't make a whole lot of sense to put
+them on the same plot like this with the same axes for now let's just get rid of
+line 93 by putting a comment in there so
+I'm sorry not 93 92 and let's get rid of the actual total cases for now just to
+clean this up a little bit so it's somewhat usable for you it's not quite
+usable yet because I found another error
+when I was looking at it wasn't thinking about it
+anyways click on DD f or EDF we shouldn't have duplicated EDF but that's
+fine if you notice that we have the deaths are daily I'm gonna sort it by
+date and notice that they repeat like so for example this is Italy twice Italy
+Italy and yesterday or whatever did this was 29 yeah the 29th
+there was 887 and then the the next date is 9 71 we don't add those up that's
+
+00:07
+total death so it's already given us total deaths so let's fix that
+I feel like that's a big one so it says some of the deaths we're not gonna do
+some we're gonna do max of the deaths but we're gonna do max to the desk
+grouped by country and territories so that way we get that maximum per country
+territory so that should help our numbers look more realistic and I
+apologize for not seeing the sooner or huh so it looks like we have like 900
+something for Italy that makes sense and we did the top anything over a hundred
+so that narrowed our our y-axis down quite significantly so now we have it we
+can command s save that another youtube comment i had was you can do command
+shift k to knit it so okay so i don't use this but it actually knits it inside
+of the ide this our studio ide you can see it in real time here and so the only
+thing I want to caution you about I mean it's a great tip and it's a great
+
+00:08
+shortcut because he said you don't have to save it when you do that I'm not a
+homicide sure I didn't check it but the only thing I've caution you on is that
+this browser for the our studio may not be the same as your Chrome browser or
+your IE browser you really don't know what it looks like until you actually
+try it in one of those browsers and there are ways to actually have it open
+in your browser in real time and as you make changes to your art studio
+it'll reflect in the browser I'll show you that in another tutorial but that's
+it if we want to actually render this the old way or the way that I typically
+do type in render and then script one-armed D and
+it'll create the file for us over here in this tab here the files which should
+get so let's go ahead and run this in the browser itself and now we have
+exactly what we expected a little cleaner graph it's not the greatest but
+
+00:09
+now you can actually use it it really wanted to so again I apologize for the
+constant change in we can't really help that too much but hopefully this last
+tutorial will get you in the ballpark of learning how to download any data from
+any site any source and understand that we don't control that source so that's
+the difficulties that we have that's part of the whole data wrangling data
+cleanup ETL process that is just like hard to figure out all right
+well again I appreciate the comments those were awesome tips please comment
+with more tips I will be grateful for that and if you can share this tutorial
+with other people that would help my channel well thank you [Music] you [Music]End of file
+

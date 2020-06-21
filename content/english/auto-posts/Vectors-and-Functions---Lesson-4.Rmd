@@ -2,7 +2,7 @@
 title: Vectors and Functions   Lesson 4
 date: 2019-08-02
 categories:
-  - Uploads from CradleToGraveR
+  - Absolute Beginners Guide
 tags:
   - Test
   - Test2
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=bCLlT44WR4g">
-<img src="https://www.cradletograver.com/auto-posts/images/20190802-RMarkdown-Lesson2-[W3sC_M1miFc].jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/05-AbsoluteBeginnersGuide-RMarkdownPart2-Lesson3.mp4.jpg">
 </a>
 
 

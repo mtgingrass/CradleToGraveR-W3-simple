@@ -1,0 +1,168 @@
+---
+title: R Unzip Entire Directory of Files plyr package RStudio
+date: 2020-05-17
+categories:
+  - Random R
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+---
+
+
+
+<p><a href="https://www.youtube.com/watch?v=DggiyPIas5E">
+<img src="https://www.cradletograver.com/auto-posts/images/19-RandomR-DTdatatableCOVID19coronavirussortwithR.mp4.jpg">
+</a></p>
+<p>00:00
+okay this is my my live stream for r and i have just set this all up on windows
+as some of you know i’ve been on a macbook and i still am using a macbook
+i’m just trying to make a different workflow right now
+so my workflow is going to be record and do all of the
+programming on a pc with windows and as soon as the record is done it’ll
+drop it right into my macbook folder and then i can throw it into final cut
+pro and edit it but the goal is to be able to do more
+not necessarily live edits but the uh minimal amount of editing in general so
+i’m trying to streamline that slowly but surely it’s getting there i’m just
+practicing right now with with my pc setup
+all right so that being said let me talk to you about what we’re going to talk
+about today we are going to be using r and r studio tools to</p>
+<p>00:01
+unzip a directory full of files automatic automatically
+so let me go ahead and show you an example set of files
+literally i just put this pc together and i’m using it
+and so i’m downloading all these things i need as you can see in my downloads
+folder i have a test dot zip and then a few other zip files in there
+now i don’t really need these anymore this is just an example but imagine you
+had 50 or 60 zip files or maybe somebody at your work center is sending you zip
+files every day daily and they’ve accumulated to 30 for the whole month
+and you need to unzip each one well instead of going to the right click
+extract all clicking all these buttons and waiting you know and then having all
+these pop-ups come up for 30 different files we’re going to do this
+automatically with r so this is a little bit of a deviation from
+statistics and machine learning things like that but these tools are
+super helpful that i figured i’d throw this in there in the mix</p>
+<p>00:02
+just to show you how to do it because it’s really simple honestly
+and with that being said let’s do a couple of preliminary things just to get
+you started you might need you need the url or the address of these
+the location or the path right and in windows you have the path as
+just plain download so that’s not really going to help you too much
+you can right click on the files that are in this location and click on
+properties and then we can see down here where it says location you can
+usually get an idea of the location that way
+we can go ahead and copy this entire location here
+highlight it and do control c let’s just keep that
+so now that we have this let’s go back to our rstudio
+and what you’re going to notice too is that i actually have our
+version 4.0 installed if you don’t that’s fine as long as you have a three
+point something version this should work so i’m going to go ahead and go down to
+line two here i’ll zoom in a little bit for you
+so as you can see i’m going to create a uh a directory so we just we just found</p>
+<p>00:03
+that so we’ll call it my directory and we’re going to set that equal to our path
+but we want to put it in quotes as well so
+keep that in quotes and then finally we don’t need to see
+colon so delete that and remember backslashes like this
+are actually escape characters so you can either put a double backslash for
+each one or you can convert them all to forward slashes
+i’m going to go ahead and convert them all to forward slashes
+and you don’t need one at the very end here so that’s fine so
+we’ve got that that’s fine so that’s a a placeholder for our directory
+now what we want to do is i’m going to show you how to download
+a tool that’s going to help you called plier so click on
+packages down here and then click on install and just type in make sure your
+repositories cran type in plyr p-l-y-r and supplier library</p>
+<p>00:04
+now mine’s going to install to the default library which is my 4.0 you
+might have a three point something in there that’s fine
+just click on install it’s going to take a few seconds to install
+and then you should be good to go make sure install dependencies is also checked
+that way if it requires other libraries it’ll go ahead and download those as
+well all right now that we have that yours should be
+loaded by now we’re going to add that library so library p-l-y-r
+and do control enter on that to load the library control enter on my directory
+you can see on the right hand side down here
+you have my directory stored my shortcut keys add
+a minus and plus and things like that onto the r so don’t worry about that
+i just delete them okay so let’s get going here
+we want to get a list of those zip files
+right so let’s just create a list called zip file</p>
+<p>00:05
+and this will be the list of files so a convenient thing that r has built in is
+list dot files so we’re going to use that function and we’re going to say
+okay what’s the path where do we want to look at those files we’re going to say
+path is equal to and our path is our my directory path so we can make
+that into my directory no problem there and we want it to only list files that
+are zip files so let’s let’s add a pattern our pattern is equal to in quotes
+star.zip so the star if you don’t know stands for basically a wild card but it’s
+it’s as many letters or characters to the left of that star or the left of the
+the period actually um it’ll grab as long as it has a zip
+extension at the end that’s all that’s saying i’m sure you’ve seen that before
+all right so then we’ll do um for we need to put in full names equals true
+fold.names that way it gets the entire so because when you’re doing this
+we can do it’ll actually just do users mark g
+downloads slash filename1.zip instead of filename1.zip filename2.zip</p>
+<p>00:06
+filename3.zip we’re going to have it have the entire
+path so that’s why fullnames equals true it’s usually a general bet safer to do
+because if if if the function doesn’t actually know to use a local
+directory then it’ll take care of it for you because it’s going to give you the
+entire path and i’ll show you that in just a second
+so on number six i’ll hit command i’ll hit ctrl enter
+let me zoom back out for you now you can see up here on the right hand side
+i have zip file it’s got three files in there we can go down to our
+command or our console and just type in zip underscore files or file hit enter
+and you can see the entire path inside of quotes users mark g downloads
+all of them are in there so that’s what it did pretty simple straightforward
+now that we have that now we’re going to use this cool powerful thing called
+you know the plier package we’re going to use l
+d ply which stands for kind of like uh laplay deployer and laplay is hey let’s</p>
+<p>00:07
+apply a function or set of rules to every
+single thing in the list and then bring it all back together
+so the player function and the player package is really meant for us taking
+like a list of objects doing something to each one and then putting them back
+together that’s all we’re doing it’s real simple
+so we’re going to set our data is equal to and our
+data is actually equal to our zip files we want to send in our zip files
+but now we’re going to say what do we want to do with these zip files we’re
+going to apply a function so the dot fun and then
+the function is called unzip and that’s just part of the
+r base package so you don’t have to download anything for this
+i don’t think it’s part of plier but it’s it’s it could be i’m not 100 sure
+on that and then we have to give it a directory
+to actually unzip these two so we’re just going to do
+the same directory so i’m going to call it my directory again
+and that should do it so let’s go ahead and
+control enter on that actually let me show you my downloads again
+so you should see my downloads here i’ll kind of</p>
+<p>00:08
+i’ll try to bring it up quickly when i run this to see it working so let’s go
+ahead and do control enter on that and i’ll do alt tab
+and you can see it was that quick it actually just did that so i have three
+new files here that were all unzipped really fast
+and all automated that’s it that’s all there is to it it’s
+extremely simple to do i hope that you can find
+rnr studio to be useful not only for your statistics or any type of program
+that you you want to do but use it as a tool in your work area to automate
+the boring stuff automate the boring tasks
+anyways if you find this helpful please like and subscribe but more
+more importantly if you can share this on social media that would be great
+share it on twitter facebook anything that you have
+let’s see oh and finally if you thought this was helpful
+there’s an actual playlist that i’ll bring up and it’s got practical r for
+business it’s not really meant as statistics or</p>
+<p>00:09
+anything like that so let me bring it up here so this right here is my playlist
+it’s got flex dashboard it’s got our studio shortcut tips
+but these particular videos and tutorials are meant for
+somebody that’s in the business realm that wants to automate some of the
+boring stuff so that’s it and this was my first
+live stream on the new computer i was rushing for it i’m not quite set up
+completely the way i want to but i hope that you found this helpful
+and again please see you guys next time by uh subscribing have a good one
+[Music] youEnd of file</p>

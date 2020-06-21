@@ -1,0 +1,828 @@
+---
+title: Live   Tutorial Making Live Site  Free   R RStudio Blogdown Hugo GitHub Netlify
+date: 2020-06-15
+categories:
+  - Live Archived
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+---
+
+<a href="https://www.youtube.com/watch?v=fq_AYx874gs">
+<img src="https://www.cradletograver.com/auto-posts/images/14-ggplot-Residuals,Predictions,PlotsR.mp4.jpg">
+</a>
+
+
+
+
+
+
+
+
+
+00:00
+looks like we are live now so welcome um everybody who
+shows up here i appreciate your support i want to first give everybody a few
+minutes to log in so i'll just kind of talk briefly about what's the motivation
+behind this and what the expectations are that you can get within the next uh
+probably 45 minutes to an hour is my guess we'll see if things break or
+not on the on the way to making this site go live so
+i do expect if you're trying to follow along i will be going
+pretty fast because i'm also going to record this in fact
+i didn't hit record yet let me try that there we go so i'm recording now
+and i'm on i'm on live on youtube so i expect you to have at least r installed
+already and then rstudio which i think most people
+
+00:01
+that are in this chat will because i've posted only a couple places where
+it's r related but uh so yeah i have r and r studio already installed
+and then finally we're going to install a couple of things
+i actually uninstalled a few things so i can actually walk through that process
+to kind of make it as real as possible i do think that because everyone's going
+to have different speeds of their computers and different speeds
+of just navigating to where they're supposed to go
+i'm gonna be ahead of you probably on most of this so
+you can try to follow along but i probably will skip some steps like i've
+already got a github account so i don't have to sign up you
+you might have to i already have a netlafey account etc etc so we'll get
+into that here in just a few minutes i want to give um just another moment or
+two before we begin just so that if anybody really wanted to
+be here for the live session they can be here so we'll give it
+
+00:02
+another two or three minutes and we'll go from there but oh what i have here
+is the book that that i believe would pronounce a ye hoy ji
+he created this book called creating websites with our markdown and that was
+the motivation for the video tutorials that some of you
+have already seen that i did so i skimmed through it fast because
+i've done this a couple years ago like in 2016
+late 2016 maybe things have changed of course but
+and it's been a while so i zoomed through this book pretty fast and that's
+where the motivation came from so i wanted to give credit where
+credit's due and that's right here and i would definitely here let me see
+if i can give you the url for this a little bit bigger
+there we go fact i'm just getting set up here to make sure that
+the stream goes as smooth as possible and if you have any questions i'll try
+to answer them i don't know how often i'll be looking back at the actual
+uh chat but i'll try if i get if my attention goes that way
+
+00:03
+i'll try to answer them i you know the scope of this is going to be creating a
+r project that's going to have the block down
+package installed with hugo as a theme and we're going to push that to github
+and we are going to have netlify pull from github as github changes and
+actually hosts the site live where anybody can go to it
+the only caveat is you know you don't have your own domain name
+like cradle to graver.com so we'll have to use a netlify
+uh you know domain like it'll be my project dot net le fee
+something right all right so we have uh a couple people here now i think we will
+get started here in just a few more moments
+i want to make sure that uh if somebody truly did want to try to follow along as
+best they could they can do it live but again all of these live videos will be
+they'll stay on youtube i'm not going to delete them but what i will probably do
+is condense them and create an edited version
+
+00:04
+that you can always reflect back on but this this should be a really
+easy process it took a couple of tries for me because
+you know the first time for anything is always the hardest so i'm hoping that
+this live video goes smooth um the first time around but if i run into trouble
+maybe you guys can help me out with the chat maybe we give up i don't know but i
+don't think we'll have any trouble so that being said how about we start in
+about one minute when it's 3 50. and i'll try to walk you through end to end and
+again uh have r and r studio already installed if you want to try to keep
+up again i don't think you'll keep up completely but maybe you can get a good
+start on it and refer back to the video and the book the book that's showing
+up in your screen right now is a really easy
+book to read now the videos that i put together
+might go through a little bit more detail you know all these little nuances
+that happen along the way it'll drive you nuts some of the some of
+the problems i had took me like two hours to fix and it was
+
+00:05
+just like the stupidest thing right so hopefully i can walk you through all
+that and you don't have to worry about it
+i've only done this once recently doing those tutorials
+and now i think in my head oh i can do this end-to-end and show everybody live
+we'll see i'm a little nervous but we'll get through it worst case scenario
+is it doesn't work and we try it again but all right it's 3 50. so i am going
+to get started i will probably check back on the chat here and there if
+you guys have questions or compliments or any criticisms whatever you have go
+ahead and let me know so that being said again let's start this thing
+i'll show you my intro my this is what i love showing is my intro here it is
+maybe yeah so that's my uh that's my original
+there we go that's my original intro for my mark gingras.com site that's
+
+00:06
+basically the r site now i use obs online broadcast system to [Music]
+record all of my videos and so in that other channel i actually teach how to
+use obs to do stuff like this all right here we go blog down so we started this
+with blog down book by uh ye hoy ji and it's a really excellent
+book it's a quick read you can follow this and probably get to the same point
+um so that's where i began so let's begin our journey with our
+our rstudio so everybody should have our
+studio we're going to create a brand new project
+actually excuse me we're going to start with github
+let's start with github because we're going to skip a lot of the fluff and
+just get right to it so go to github.com and uh right for me it would be
+i think already up i've got so many sites up here we go so github.com and
+
+00:07
+i will show my url a little bit bigger there so github.com
+if you haven't signed up it's real simple you would just put in a username
+email and password um and sign up you'll probably be able to sign up with
+like linkedin or something else maybe and it'll be a quick process but note
+that this username will probably be like your resume so try to not make it
+ridiculous sound in or hard to get to if you're actually trying to get a data
+science job or a programming job or anything and
+they can't get to your github account because it's
+a weird spelling or it's got too many weird stuff in there
+not good so just try to make it as professional as possible now of course
+i've already got a github account so i'm going to sign right in
+i've got my username take note of your username and the email address you use
+for this process because you'll need it again later alright i signed in and you
+should get a sort of something like this that pops up
+you know might be a slightly different home screen it could be
+
+00:08
+yeah so this is my home screen apparently but what you notice i'm practicing my
+zoom in with obs too what you notice is that up
+here on the left hand side i have this new button so new repository
+i want to be able to place all of my code from r and r studio
+to this repository and so git is a version control
+uh website where you can push and pull soft uh code back and forth and as you do
+that it keeps track of every version you can have collaborations you can
+branch off of your code to create a whole new project
+it's really fantastic so click on new and we're going to create a project
+there we go notice my owner is called mt gen grass that's the name that i used
+for my github it's uh my github username i'm gonna call this cradle to
+grave r everybody should probably kinda know what that means now end to end
+process i like the end to end so cradle to grave show me everything
+
+00:09
+all right there we go we have my username and my repository name now
+that's important but i'll show you why in a second all
+right so the free version you have to have public so if you have errors or
+mistakes and you don't want them to be shown or you want to practice something
+you know it's it's all public if you do private you have to pay for that service
+which by all means go for it if you want to initialize this repository with the
+readme if if you ever see anybody's github account they all have a readme and it
+kind of describes all right here's how you can possibly
+you know clone my not clone not really how to clone it but what is my project
+all about right so i'm going to create that repository very simply
+by clicking that button and now now you see i'm at a new site here and
+over to the right i have this clone or download button
+we're going to click on clone or download and there's a url
+here that's been created i'm just going to copy that
+and once you copy that let's go to our studio
+which i don't have open yet oh yeah i do right here
+
+00:10
+so don't worry about any of this we're going to do file new project
+instead of doing new directory like we would normally do in most of our
+projects we're going to go to version control
+ah excuse me i'm skipping a step already before we do that
+before we do that we have to download git so let's go back here i have this site
+for people with windows called get for windows get for windows.org
+you want to go to that site or if you have a mac i don't
+i haven't done this process with a mac but i'm sure it's very similar
+the website is git dash scm.com download you should be able to find it
+it's just get there's various ways to install things
+in mac that are through like the homebrew or brew
+or versus other means you know just downloading the
+installers and whatnot the dmg files whatever they are
+i hope that you can follow along with the get for mac it'll be a similar
+
+00:11
+process but probably slightly different all right so i have to do this because i
+actually uninstalled this so let's do this and i wanted to do that
+just to show you more of the process so i have a fast machines
+and fast internet so here we go i will see if i can zoom in on this a little bit
+all right so here's the gnu general public license agreement
+um you should probably familiarize familiarize yourself with some of those
+because uh if you're dealing with software and
+programming though that agreement is pretty common
+all right so i'm just going to install it in the installation directory that
+they recommend uh it already exists would you like to
+install that folder anyways sure so i guess when i installed it it
+probably kept my settings you know how that works
+i'm not going to worry about it too much i'm just going to overwrite it
+now these are all defaulted i'm not going to change any of those
+and i am going to continue with this default setting
+
+00:12
+and now here this would be the default editor used by git i'm not going to
+worry about that because we're going to be using rstudio
+and they're going to do most of the work for us all right now this is probably
+the most important setting that you want to make sure you
+select the correct option get from the command line
+and also from third-party software now third-party software i mean
+in our studio is going to do some of the work for us using git as the back end
+that's exactly what you want okay so that's the most important takeaway
+from downloading git i actually have to install it um i'm
+going to continue using the defaults continue continue there's a lot of
+options here a lot of chances to mess up that's for sure
+but as you can see i have actually used the default for absolutely everything
+and i just wanted you to focus on that one option that um that was crucial
+but of course that even that option was defaulted for me so good to go
+
+00:13
+all right so i'm not gonna view the readme notes i just wanted to install it
+and it doesn't ask me to restart my computer or anything so hopefully you
+guys are in the same boat and you're fine so git has been installed now i have
+my r studio already open right that might be a problem so let's close
+it out completely and reopen it because we installed git
+we want our studio to recognize that it's been installed and it will
+automatically do some connections for us so close that out completely uh maybe
+if i clicked it yeah and let's see let's
+see how many people we have we have four concurrent users
+hey i'm building up a little community here i love it
+it is fun uh this is becoming more fun as you guys get more involved by the way
+i and the trick is to not bs anybody with anything if i don't know
+something i don't know it i'm not a statistician right
+i like to use practical r like r to make my life easier you know
+that's what i use it for currently and so hopefully i'm gonna make your life
+
+00:14
+easier by building this site all right so we've restarted it
+you could see already that lost myself okay so i'm in the way i'm
+going to jump out of the way here and under uh this tab here i have git
+you might not have that because you might not have a project open but i
+wanted to show you that that's what we're going to be looking for is that get
+and then also under um build no not build no that's it for now
+so we we're going to do file new project and i don't care about
+the changes normally again we would go to new directory and keep our stuff
+clean and tidy in a nice little spot this time we're going to go to version
+control version control and now we have git here
+if you didn't install git you probably still have this option but when you
+click on it you won't get to this screen here and this is where it's important
+to those are my shortcut keys that i can't help but use right so we want to do
+
+00:15
+a control v or a command v on this and that'll be your url that you were just at
+for the github page right here what you cloned
+i know you can't see the whole thing but that's what we're looking at
+now you notice that the project directory name automatically filled in
+it's either because it grabbed it from most likely it's because it's just part
+of the name and they know that the cradle to grave r
+dot get is the name to use but it might have actually checked the website you
+know i have no idea probably not because we didn't connect
+it yet anyways create project i'm going over to tangent
+oh it already exists well excuse me yours probably doesn't exist
+so let me delete that project first real quick so i've done this
+in the past and i have it i'm just going to go ahead and quickly delete that
+folder in fact i'm going to close out my r again
+i probably didn't need to do that but all right so what did i say under
+
+00:16
+site test cradle to graybar delete gone all right i'm back
+i'm back let's do this again well this is one way you can catch up is
+if i keep making mistakes if i keep making mistakes you can catch
+up maybe unless you make the same mistakes all right new project version control
+git control v cradle to grave r site test i could have easily just put it into a
+different directory but i didn't anyways create project now it's
+going to be an empty project with that readme file because we started this
+process remember on github before we did any code in anything
+we literally went to github created a repository we know we're going to store
+this it's nice because you'll be able to you
+know go to work go somewhere else go down the street and just pull that same
+repository and you'd be in the same exact place as long as you continue to
+use git as your your place to uh hold your code and version control it
+all right that's it i've got nothing here uh it's an empty project
+there's nothing there but you should have this get um tab
+
+00:17
+you should have that right now if you don't then something's off and i'm sorry
+i can't fix your problems probably on the fly
+but at this point you should have that get tab
+all right so what's next install a package we are going to click on oh you can't
+see it because i'm in the way the beauty of live is i can make these
+changes on the fly there we go i'm a little bit smaller now
+okay so click on packages which is right here
+we're going to install and we're going to install the blog down package
+you also might need to install dev tools so
+you could it could ask you to install dev tools d e v l let's see if i can
+zoom in on that um i'm not gonna do that right now but
+you might have to so let's try blog down and i've already i didn't uninstall
+
+00:18
+these packages so that's why i can't test to see if i needed dev tools or not so
+my blog down it says successfully unpacked an md5 sum checked
+if that's the case for you good if it asks you for
+dev tools go ahead and install that and then install blog down
+so that's installed good to go now let's install the hugo themes so blog down
+colon colon install hugo that's what we want to do so everybody
+can see that i hope you install the hugo and hit enter
+and here is where it's going to make it so that we can use
+the hugo theme set for building websites hopefully you have a good um setup
+right now where it's all still working notice this version right here
+that's going to come back later i'll show you how to get that again anyways but
+the latest hugo version is point zero point 0.72.0 the entire thing matters
+
+00:19
+so there's that got that hugo installed we're good to go
+next step next step see if i can remember all these next steps
+the next step would be to actually create a
+site using blog down but before we do that let's check out a website here
+called hugo themes so i'm going to show you this url themes dot
+go hugo dot io forward slash tags forward slash blog i'm sure you can
+get to it either way i just happen to click on blog that's
+why it's there you can do just themes.gohugo.io and you'll get here
+i clicked on blog as a there we go i clicked on blog right here
+to get me to this page and i'm going to choose and i have not tested this one
+out yet i just looked at it and i said oh that looks pretty simple to use
+i'm going to choose this one here called m10c
+
+00:20
+let's see if you can get it a little bit better m10c
+so click on that and this is how it's going to work for all of your hugo
+themes so you can pick all of these different themes and it's just going to work
+hopefully so here we are we are i've clicked on the theme of my choice
+now i want to click on home page you can click on the demo and see what
+it's like first in fact let's do that real quick
+so here's what it looks like it's pretty basic it looks like um
+it's got uh you could put a picture there a little title a couple of links
+to github or twitter i'm sure there's actually
+options for facebook and other things as well we'll figure out
+but then you have your blog post here and if you click on one it's working
+it's probably got some code it's probably get some math in there
+somewhere that's not important right now but what's important is that you
+actually can find this on github and that it's maintained right so every
+every single theme is not treated equally uh look for when it's updated updated
+
+00:21
+2020 6 7. so it's probably actively being updated which is great
+that's good to know all right so we're going to go to home page like i said
+and you can see now this is a github site just like the one you just created
+except this one's got the actual theme here what you want to take notice
+is the username and the theme name or the repository
+name so we're gonna we're gonna copy that we're gonna copy that whole thing
+here ctrl c or command c maybe if you can get it okay so that's what we needed
+so now we go back to our studio if i could find it there we go i'm gonna
+see if anybody uh oh no worries i'm coming late this is all um gonna be recorded
+and sent back on youtube you'll be able to catch up
+all right so the next step is boom boom boom what was my next step
+we installed hugo now we need to actually create a blog okay
+
+00:22
+so blog down and every once in a while i gotta check to make sure i'm still
+recording and i don't like the way that i look right now
+with my camera that's not cool because i there now you can see like my head a
+little bit sorry slight distraction guys i uh i'm a
+little bit weirded out the way that my head is that's weird i'm weirded out
+let me try something here oh well leaving it all right blog down colon colon
+and then we're going to do oh build site no site
+new site new site always difficult theme equals right and in quotes or single
+quotes that's where we're going to paste that guy's uh the
+
+00:23
+author of the site and the theme name whoo
+so i did control v on that and added a couple extra spaces or
+indentations and return care characters so
+i deleted all that so now we're down to just
+what we need that should do it we'll see let's double check by hitting enter and
+just see see what we get um argument one matches multiple formal arguments
+well what does that even mean and i don't think single quote versus double
+quote matters this is where argument 1 matches multiple formal arguments
+oh i think it's supposed to be a dash i am sorry
+boom boom dash these are the little things oops spoke too soon
+all right let's try this again oh it's definitely not a dash
+
+00:24
+going back to the site here hold up vaga just for just for my sanity i think i
+might pick a different one just to see if it's me or
+something else that's causing this it shouldn't be though
+like the one that worked last time was the academic site and i really wanted to
+show you a different one um academic no i can't look at it that way you know
+that should work let's troubleshoot this some more sorry guys a new site
+oh theme is spelled wrong guys come on where's my chat where's my help
+in the chat room for that just kidding so i did theme spelled
+incorrectly and that was probably the problem so it probably isn't that dash
+and it's the forward slash like i originally thought
+all right we're going to press enter on that and hopefully you guys see what i
+just fixed and it's starting to download what i need to download and create the
+
+00:25
+site so give it a few seconds there we go
+here we go everything's looking good now finally
+that was a little scary for a second going live and messing up
+big time all right so we have a site here and you can kind of mess with it in
+this view right here you can click on things you can actually uh
+check the website too so again if you guys are all here see that static or that
+ip address it's colon forward slash forward slash and
+then the ip address you can control c on that open up your browser
+and paste it in there if you want to test it out that way
+right so here it is this is local on my computer from r
+the same exact site and the links should work everything working good
+you can click the back button or do that um i think uh template primer i haven't
+checked all this stuff out but working pretty good so that's a good
+test run i'm going to close this i'm going to go back to our studio
+
+00:26
+and what i want to mention to you is a couple of things
+the site isn't built this is all being basically
+run through our studio right now in order to generate that site
+ip address and to make it look like the site's built
+it technically is not built and it would not work right so you need to build the
+site before it works however you can do that for sure and
+make it work locally on your computer right now it only works locally on my
+computer through our studio if i closed our studio and found the folders
+that it's created it's not going to work
+correctly so just know that when i go to the public folder
+which is right here don't mess with it right now because it it'll haunt you
+and probably never mess with public honestly because
+you want to build everything through rstudio and when rstudio does its thing
+it's going to build it and put all the files necessary in the public folder
+then let the public folder be used on the server that it's run which will be
+
+00:27
+netlafey for us that being said we are going to stop the server
+just in case it has anything to do with um
+what we're doing so i don't want it to interrupt anything we're doing so i'm
+going to copy the serve r control c on that and i'm going to paste
+it over here so it's basically going to stop the server and i've got that number
+one in there as the parameter that says you know kill
+exit right and we did not build the site keep that on in your mind all right we
+stopped the server so now if you go back to that actual ip address it won't work
+right it's still here over here in our viewer but it's not going to be hosted
+on the actual site right here okay so now next step we've got a site
+we saw that it works now we didn't change anything if you want to change
+something like you know hello our markdown feel free don't mess up too much
+until you kind of get used to it but let me show you a couple
+
+00:28
+things next we've built we've downloaded git we've
+created git repository we've created a blog down site with a hugo theme
+we've shown that it works we did not build it
+now the next thing we're going to do is we're going to stage everything that was
+created in this process to eventually commit to
+github so that's what we're doing next all right now one caveat um if you stage
+that public folder from rstudio oh you can't even see it there we go
+wow that helps hero i'm down here now uh if you stage public if you click on
+that little check box you're probably going to crash your system
+so i really hope nobody's done that yet and just don't click it right now
+you could try it out all you want on your own but right now
+i'm not going to do it what you can do what i think i'm going to do is i'm
+going to stage everything yeah let's do that so i'm going to go to tools shell
+and in here hopefully i can get you a little bit closer
+
+00:29
+yeah i could do that and in here you should see that you're already in that
+project directory so that's the beauty of going through
+our studio as it puts you in the right directory we want to do [Music]
+a couple of things first thing if you guys just downloaded git we have to set
+up your git so while we're here let's do that
+so before we do anything we're going to do git space config space dash dash
+i'm reading this uh global my muscles global space user.name
+space in quotes um the first name last name no no no no no no
+username is exactly what you set up in your gitlab uh
+get pages github pages github those are all actually three different things so
+i got to be careful so in your github whatever username you have which mine was
+my name basically mt gengrass so set that up
+
+00:30
+that's important hit enter hit the up key to repeat that instead of username
+we're going to put in user email and then we'll put in your actual
+email address here that you use for github so i'm gonna use the exact
+one boom there we go i'm gonna hit enter on that and once you set that up
+then we can do what i was about to do and that is
+you wanna i'm gonna stage everything the reason why i'm doing it through the
+shell the first time is because when you stage
+a lot of files at once in our studio it sometimes crashes so i'm going to do it
+this way the first time i'll show you again later
+that we're not going to do this ever again including the username and email you
+won't need to do that again all right so first we're going to do get space add
+space dash capital a it's just going to add everything
+probably not good practice for the long run but for now let's do that
+and you can see it did a bunch of stuff a bunch of warnings the warnings have
+
+00:31
+nothing to do with what we're doing so i'm going to x that out
+now you're going to see our studio catch
+up let's see if i'm still with everybody a couple of people on
+so now when i go back to our studio interesting i see a big black box
+i will fix that i will fix that right now before it gets too crazy
+sorry in fact what i'll do is i'll delete that little black box
+maybe just a moment guys i got to fix something on the uh recording
+it's always something you can never get it right
+so there's a shortcut key i'm missing that didn't go with one of my
+
+00:32
+things i think yeah good for now we're back we're back we're back i believe
+we are not back i'm deleting that thing neutral delete i hope that works and
+everything else is fine all right all right we're good i'm sorry
+guys got distracted all right so they're all staged they're all staged
+let's click on oh geez i don't need that up there either let's click on commit
+and you'll see everything is still checked off here we're going to say first
+commit this message is used so that when you do the version control you can
+always go back and see when you committed something what were the changes so
+if you made like a change you can kind of describe what you did so that you can
+
+00:33
+always come back and version control it later so i'm going to click on commit
+it's going to do its thing when you get this close button you're good to go
+and then finally you want to push push so stage
+commit push i'm pushing to github now that's the final answer
+push so that one might take a few seconds because
+uh the first time there's a lot of data that's never been in there remember we
+started with an empty empty repository except for the readme
+file but anyways the close button is available i'm going to click it
+hit the x just to show you i'll go to my github account and this is what it
+looked like before cradle to grave r i'm going to refresh that and now you
+see all those files here including the public folder which we
+never built the website just keep that in mind because i'm
+i made a mistake before and okay so we've done that we've done that now
+the next step this is just literally holding our stuff our files for us
+
+00:34
+now let's go to netlify so new site netlify www.netlify.com
+and again you have to sign up if you didn't already it's free
+and you'll probably be able to use your github account to actually sign up with
+it so please do that and catch up uh with me after i'm going to log in because i
+already have an account i think i guess i'll click on github
+this should be a similar process and very simple uh for you guys as well
+once you sign up so you've done the github you've already signed up and you
+sign up for this you'll be able to connect to your github
+it's going to ask you for permissions probably the first time it didn't ask me
+but it probably asks you do i permission to look at your github
+account and the answer is yes if you want to do this project
+new site from git just like that i'm going to click on it
+and continuous deployment git git lab or bitbucket i'm going to click on git lap
+github this is how simple it is and again most
+of these steps are the one time only now every update you make will be simple
+
+00:35
+you're going to be able to update your blog every single day no problem
+it lists all of my projects i wanted to have it host cradle to grave r so i
+click on that and there's some settings here i'm going
+to see if i can zoom in a little bit there we go these are important all
+right so i'm fine with the owner i'm fine with branch to deploy
+down here in basic build settings make sure you have the build command
+set as hugo and the publish directory as public
+so that public is basically where it's going to publish everything live
+and it's the first go-to place and then you want to click on show advanced
+and when you do show advanced you should get this new variable here it's an
+environment variable we need to set that up
+when you set up at least one variable i hope click on new variable and we're
+
+00:36
+going to type in capitals hugo version all caps it matters and the value
+that's that point that's at 0.72.0 and where do i get that from let's go
+back to our studio real quick and let's just type in uh blog down hugo
+underscore version right there this is pretty important
+so now it shows you 0.72.0 so let's type that in in our little netlifie here 0.6
+and that lead in zero does matter put that in
+all right so that's it i'm going to deploy site and see what happens
+it's not quite over yet we're almost there i mean we're pretty much there
+right now but i'm going to click on this right now so i can see what's going on
+i didn't have to click on it but i want to show you that it's deploying the site
+
+00:37
+right now doing all of these commands and it's building our site for us we
+didn't build it in our studio we didn't need to
+we never need to you can serve the site in rstudio so you can see if it's good
+and if it's good push it to get which netliftee will go check
+git and see if anything's changed if it's changed it's going to update the
+site for you continuous integration continuous
+deployment that's how it's going to be set by default
+it's going to check every x amount of minutes to see if anything's ever changed
+you can also manually click the retry button or the deploy button
+finished processing build request in 34 seconds
+i feel like it was even shorter than that that's it right
+so now we can click on preview or yeah let's click on preview ooh
+that's not good it did not work right so that i mean it's live but it's not
+right if i click on something example domain i mean interesting bad deal there
+
+00:38
+what did we do wrong uh first i'm going to see if there's any errors in here
+which i don't think no config file i knew that site is live
+i gotta put my thinking cap on for this so we deployed it let's look at deploy
+settings again um we have i know we created that environment
+variable called hugo version but i want to say there might be another no
+there might be something else in the deploy status we might build the site in
+our studio and try it again so we can do that and see if that's the trick
+let's try it let's try it that might be the problem so
+this will show you also the continuous integration continuous deployment as well
+so i'm back in our studio let me um put myself up here again i swear
+
+00:39
+my camera is either shifting downward or something
+let's build a site we never built it so let's build it let's do
+blog down colon colon build site and that's it
+i tried it earlier and i used build site and it worked fine
+but there's also a hugo build so i'd be careful with which one you pick i'm
+using build site i'm gonna hit enter as you can see up here
+i've just generated a bunch of modified files in my public area
+um i'm going to push all of those to github in just a moment
+let me jump down here again i don't want to risk crashing right now
+but you could select them all individually there's probably plenty of
+ways to do it i'm going to go to and as you can see they're all public
+nothing's changed anywhere else i haven't done
+any changes to the code the only thing i've done
+was build the site which generates all the files necessary in the public i
+thought that the um netlafy was going to do that and
+
+00:40
+maybe there is a way and it's we've got some sort of setting wrong but
+let's try this and see if it fixes our site
+um so i don't need to save anything but what i want to do is go to shell the i
+mean tools shell and i'm just going to go ahead and do the get
+space add space dash i could do a uh i'm just going to do the word public
+forward slash star that means everything in the public folder
+nothing else change there's no point adding stuff that didn't change
+hit enter and i think we should be good to go let's jump back into rstudio and
+you can see they've all been checked click on commit
+click on uh or let's type in built site for the first time
+using um build underscore site that way we kind of know not like
+we're going to go back to it all right so it's been committed i'm
+
+00:41
+going to push it to github and once it pushes to github netlift
+should see and recognize that it's changed and start the deployment process
+for us let's go check maybe we can catch it in action
+maybe so we're here we're going to go to uh deploys and you can see right now it
+says building it already is building our site right now
+whether it's going to work or not that's another story i'm going to click on it
+and follow the commands just for fun just to see that it's still working
+you'll get some failures in here probably here and there and you have to
+figure out why but it is helpful to have this here so
+you can copy and paste it and say hey why am i getting this failure and try to
+get some answers but it says site is live let's try it
+again let's hope that fixed our problem and it did not
+that's not cool all right well where are we at where are we at good
+thought though huh so that did not fix our problem well you guys are in a live
+
+00:42
+troubleshooting session now all right i'm gonna go to my deploys for another
+let's see my deploys i think i have oh let me go all the way back
+my project one test was working so i'm gonna click on that one and see
+what kind of settings i might have that might be different i've got
+and sadly it could be the theme itself that's causing the issue i don't know
+but it worked fine in our studio so i don't think so okay so we have
+all right build and deploy settings deploy key now environment hugo
+underscore version 0.72.0 everything seemed to build
+
+00:43
+built fine though that's the problem i'm having
+right i mean it didn't give us any errors whatsoever environment analytics
+i don't know going back to this one let's click on site settings
+again and double check we've got everything correct
+i'm looking at build and deploy public hugo public so that seems to be correct
+0.72.0 hugo version let's check github make sure that public
+folder i'm sure it's there uh so there's a public folder there
+
+00:44
+three minutes ago it should be fine go back to rstudio
+everything works here there might be a build local local equals true maybe
+local equals false all right i'm gonna try one more thing and if this doesn't
+work we'll have to come back and do this live thing again
+we're close though we're close you guys got a lot pretty far
+uh there's a couple other things i want to show you before i call it quits
+anyways is first let's try this build one more time
+blog down build site and then i'm going to put i think
+local equals i think local equals false is the default it is the default so
+that's what i was going to put local equals false that's not going to
+fix it because that was the default so that's what we did let's see
+thinking thinking anybody have any suggestions on the chat
+well i'm thinking about that let me show
+
+00:45
+you another thing in netlify when you do get it working
+maybe it's perhaps the theme i don't know but it worked with the other
+project of mine so it could be the theme itself i don't
+want to put blame on the theme though i don't i bet you it's anything it's user
+error for sure all right so one thing that you want to do is check
+your domain settings as well so let me go back to the overview tab here
+and you see the domain settings click on domain settings
+and you you can create your own domain or sub domain
+and click on options edit site name and now you can put a more user-friendly
+site name on there so i will call this i don't want to call it cradle to grave
+r because i don't want to accidentally never be able to use that again so i'll
+put a little one in there so i'm gonna hit save on that
+and then that's our website so cradle to graver
+one dot netliffy.app app click click on that
+
+00:46
+again something's wrong with our links and i'm not sure what that is let's see
+every link is broken so there's a key every single link is broken let's do a
+quick google um hugo site net netliffy every link broken what am i doing wrong
+let's see solved solved hi hugo environment equals production did you go version
+hugo underscore environment i didn't use an environment variable last time
+
+00:47
+double check one more here published failed failed
+in the example below the publish directory is dist publish directory we
+have public for hours so let's go back to netlify real quick
+we did have public i'm certain so overview site settings
+site details creatorgraver1 build and deploy hugo lower case
+public lower case let's just go and double check yep hugo public base directory
+nope that should do it that should be fine and we have our environment
+
+00:48
+variable here as hugo version v-e-r-s-i-o-n right that's how you spell version
+and it actually doesn't give us an error so deploys
+it says publish i'm going to click on it again
+and read through this one more time well i'm gonna try one more thing and
+then that's it and then if it's not then we'll call it quits and
+try again maybe try a different theme all right so i'm gonna do clear cache
+and deploy site one more time everything worked up until the end
+though so i'm pretty happy about that i just didn't want to waste a whole lot
+of time not having the solution for you but considering you know it's live you
+
+00:49
+never know what you're going to get i do hope that people can get value out
+of this as you know as much as they can up until this point
+soon though because i in my tutorial i show how to do this and it works fine so
+what's probably gonna happen is someone's gonna look at the last
+tutorial and say here's what you did different
+and hopefully solve the problem so i'm going to click refresh here just to see
+if it changes so it says published i'm going to click on it and click on
+preview again and no go no go no go what we could do
+is probably google that exact theme whatever it was called um let's go to
+rstudio and check it bothers me a little bit that we
+couldn't get it completely working what do we do for theme oh i'm lost here too
+
+00:50
+blog down download the blog down create the gray bar our theme should say
+somewhere around here live streaming let's see hugo themes what did we use
+for a theme i forgot the name of the theme guys
+not a big deal like i said i think we've covered everything up to that point and
+it it's at least live but it's not looking correct and i know
+i know there's some issues what how do we fix that issue
+
+00:51
+block down build site hugo version demon stop
+this is where that book's going to come in handy
+theme vaga hugo theme i'm just going to double check
+if maybe other people are having issues with this particular theme
+i kind of doubt it i do think it's user error
+yeah i don't see a whole lot of people having this problem so i think we will
+still call this one quits and try it again i'd like to try it again and be a
+little bit more streamlined with this what other build could we do all right
+let's go to that book i'll show you that book that i was reading to get all this
+information that was the uh where is it at
+right here so on the left hand side we can easily just scroll down to
+
+00:52
+deployment netlify and this gives us some instructions um i don't know if you
+guys can see it let me see if i can do a shortcut to get it closer not quite
+i'm in the way as well all right there we go let me just zoom in that way
+branch master build command hugo publish directory public
+hugo version and that's it that should be it all right maybe it's
+
+00:53
+not the deployment it is configuration static sites in hugo oh
+relative urls equals true let's try this one last thing all right
+so what i didn't show you before was the files here over here you see the files
+and i have a config.tomo file it's a i don't know what it's another markdown
+language but inside of here you have a bunch
+of parameters that you can set to change like your github and your twitters
+and add things and subtract things and you know there's all kinds of stuff in
+here we can add a parameter here called relative urls equals true i wonder if
+that's our problem so i'm going to control
+s hope you guys are still following me along on this one ctrl
+s you see that my config.tomo file showed up over here
+so now i'm going to show you that you can just click it to stage it and it
+
+00:54
+should be fine so click it staged commit i'm going to say change relative urls
+to true i think this is our problem i am sorry that it took so long to get there
+and i'm already putting the cart before the horse by saying it's fixing it but
+who knows did i push it pushed it again cool everything's up to
+date uh just a little side note as well uh when you open up our studio tomorrow
+the next day and you start making changes to
+this particular code before you even do any of that
+click this little down arrow and that's pulling the latest version from github
+otherwise you're gonna you're gonna run into problems like uh because it's not
+gonna be synced up and you'll have to google how to fix
+that because it's a good thing and it's purposely done to you know not make you
+screw things up but it will kind of uh set you up set you back a little bit
+because you'll have to google how to do it anyway so we did that
+
+00:55
+let's go back to our netlify and see if that fixed the problem
+um i'll click refresh no go on the refresh close that go back here i'm gonna do
+that whole um delete the deploy and or the cache and do it again so we have
+the latest one trigger deploy clear cache and deploy site
+last try then i'm calling it quits we were so close and anybody that's
+still sticking with me now to this point troubleshooting this very last bit i
+appreciate it but i will probably have to do this one more
+time in the future and make sure i get it streamlined enough that i can just
+zip right through it maybe 35 minutes it says live let's preview it
+and no go sorry guys i failed you on the very last part but you do have
+up to there to work with and i hope that you come back let's see what is that
+
+00:56
+site cradle to grave our nether fee yep no go no go let's go back to me
+i tried and i failed um hopefully i can edit this
+down and use most of it but if not i'm not worried about it because i feel like
+i feel like because of that mistake at the end i should have tested out this
+theme beforehand is key um so we'll do this again in a couple of days
+hopefully i'll get some more people that are interested and go from there so
+sorry once again uh you saw some live troubleshooting that did not work for
+the very ending but i will see you guys on the next one byeEnd of file
+

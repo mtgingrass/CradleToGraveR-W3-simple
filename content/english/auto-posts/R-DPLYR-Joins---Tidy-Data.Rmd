@@ -2,7 +2,7 @@
 title: R DPLYR Joins   Tidy Data
 date: 2019-08-12
 categories:
-  - Uploads from CradleToGraveR
+  - Tidy
 tags:
   - Test
   - Test2
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=NE_GX8PkWUg">
-<img src="https://www.cradletograver.com/auto-posts/images/20190802-RNotebooks-Lesson5-[Fa81eXcAXT4].jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/14-ScrapingContent-COVIDCSVDataUpdatePlot-datafromEuropeanCenterforDiseaseandPrevention.mp4.jpg">
 </a>
 
 

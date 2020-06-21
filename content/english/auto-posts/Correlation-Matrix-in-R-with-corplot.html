@@ -1,0 +1,180 @@
+---
+title: Correlation Matrix in R with corplot
+date: 2020-05-13
+categories:
+  - Absolute Beginners Guide
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+---
+
+
+
+<p><a href="https://www.youtube.com/watch?v=voOJRNDv0Yw">
+<img src="https://www.cradletograver.com/auto-posts/images/42-AbsoluteBeginnersGuide-RPredictPlotModel2.mp4.jpg">
+</a></p>
+<p>00:00
+welcome back last uh tutorial we talked about multi-linear regression
+and some p-values and i was telling you if it’s below 0.05
+it’s probably significant if it’s greater than 0.05 it’s not
+of course all dependent on the use case but you know that was pretty cool and we
+just kind of randomly guessed at which variables or features we wanted to
+include but now we’re going to do something a little bit more
+um programmatic and and we’re going to go from there so
+so let’s start with our empty cars so we’re going to say my data
+is equal to empty cars as usual and just to take a quick peek
+at the data we have this and what we have here is features across the horizontal
+and that’s the miles per gallon cylinders displacement horsepower
+drat weight etc etc so we have all these things so how do we know</p>
+<p>00:01
+what might be correlated with something else right or what what’s definitely not
+correlated now this is just one measure remember everything you do
+in statistics all depends on a lot of circumstances
+i am literally just giving you some ideas on where to go now scatter plots are
+good you can do a scatter plot and see if something is related to
+something else like like we’ve done with the gg plot so
+let’s do that one more time just to get a refresher
+so we’ll just do we’ll include the library ggplot 2
+and do a quick plot so let’s just do a gg plot we’re going to say
+that our oh well first let’s bring in the data my data
+and we’re going to use aesthetic x equals miles per gallon y
+equals weight this is just a pure example okay we have that
+let’s add a geometry to it so we’re going to add geom point and this is</p>
+<p>00:02
+literally just to get us back in the game we haven’t done this in a while all
+right so we have let me unzoom this so now you can see
+on the bottom right you see a it looks like it could fit a linear line almost
+obviously not because all the points won’t fit on the line but you can kind
+of draw a line and the line is going downward so it’s a
+negative slope so mods per gallon of weight might be related sort of linearly so
+we’d expect a correlation between the two if the miles per gallon is high
+the weight is probably low the most per gallon is low
+the weight is probably high okay so let’s do this a little bit more
+programmatically or just kind of get a different view of this using something
+called correlation a core or the pearson’s correlation
+you can find all that uh you’re gonna have a lot more of that coming up
+so let’s start by calling a correlation of we’ll call it my core is equal to</p>
+<p>00:03
+and it’s a base r function so core and it’s literally put in your data my data
+command enter and then just let’s just type in my core
+and hit command enter on that you can see down at the bottom here
+maybe once i figure out how to there we go so we scroll up
+and it looks like a bunch of numbers and you’re like what is all this
+right what is all this so we have miles per gallon
+cylinders displacement across the horizontal with miles per gallon
+cylinders and displacement across the vertical you can see that
+miles per gallon is 100 or one correlated with miles per gallon
+miles per gallon is correlated with cylinders negatively
+by 0.85 miles per gallon is coordinated correlated with displacement by negative
+point eight four now these numbers mean something right what it usually means
+well what it means in a lot of cases is that if it’s closer to the</p>
+<p>00:04
+to the number one it’s highly correlated if it’s closer to a negative one
+it’s it’s exactly oppositely correlated et cetera et cetera so numbers that are
+in the middle are really not that correlated
+but this visual here is not that good it’s a lot of numbers in fact it doesn’t
+even fit so there’s two more features on the bottom here that didn’t
+fit over to the right so let’s let’s see if we can
+get a little bit better picture of this and i’m not going to explain exactly
+what the pearson correlation is uh doing yet because sometimes it’s going to
+haunt us but we’ll get there just just a moment
+so now that we have this we’re going to load a library called
+core plot and another library called our color brewer to help us out with
+aesthetics so let’s do packages install and we’ll just do core plot
+install that one by clicking on install and then r</p>
+<p>00:05
+color brewer install that one i just installed them
+uh recently so i don’t have to do it again but you can
+and let’s go and load those libraries once you have them installed so
+core plot this is real easy by the way but it’s just a real cool way
+to display correlations our color brewer will load that up
+and now that they’re loaded let’s use them so we’re going to create a core plot
+so that’s why we have library core plot core plots are really cool they’re
+really interesting and they’re really aesthetically pleasing to the eye
+so we’re going to bring in our data which is actually we’re not going to
+bring in our data we’re going to bring in our correlation data so the my core
+we’ve got the my core right there we’re going to bring that in
+and then we’re going to say hey what type do you want well i’m going to do
+type equals upper i want my upper side to be shown
+at the lower because as you saw in this matrix below
+it shows everything twice if you actually look at it closely it’s really
+hard to even see but it’s actually mimicked twice along
+the diagonal is all you need is either the upper diagonal or the lower</p>
+<p>00:06
+diagonal get into some matrix algebra and you can figure out some of these
+eigen matrices you can you can do it a lot with this but for now we’re going to
+keep it extremely simple when you type equals upper we’re going
+to say the order is equal to the hierarchical cluster h clust and then
+we’re going to use the color brewer to have that over
+color is equal to and then this is just yeah you could kind of memorize this the
+brewer palette that we’re going to be using
+and we’re going to say we’re going to have eight colors and we’re going to
+use a a predefined color palette named rdy u right so it’s hard to
+you can look these up in the color brewer package say hey
+what are the some of the color packages or predefined packages that are already
+there so let’s see if this works i probably have an error ah nope i figured that
+there’s a comma h cluster i don’t need a parenthesis there
+boom and i think i need one here i think that’ll do the trick
+there we go all right cool we got a nice looking chart here let me zoom in</p>
+<p>00:07
+a little bit here now that is much more aesthetically pleasing to the eye
+am i wrong so what we see here is uh we have carb carb related to carb
+carb related to weight and you know there’s a a legend here see this
+the one up here the very blue is extremely correlated so
+obviously carb is rated to carb they’re the same thing of course they’re
+related 100 related so of course you can explain carbs
+with carbs so think about this explainer variable thing again
+that we did with linear regression we wanted to explain things with something
+else but now if you keep going down the list let’s look for some
+extreme red so these negative ones right so these are pretty red right here this
+group here right here so miles per gallon see that red and
+weight remember we said that they were negatively correlated and it kind of went
+it sloped down so you can see that here miles per gallon
+is red and weight over here weight in miles per gallon you’ve lined those up</p>
+<p>00:08
+you’re extremely negatively correlated i don’t know what the number
+is but we know that it’s very red so it’s definitely closer to the negative one
+that’s fine so we can possibly describe if we had an equation it said hey
+whatever the miles per gallon is multiply it by some factor and flip the
+sign and you’re good to go it’s correlated right so you can you can imagine you
+don’t have to guess so much on what’s correlated with your
+uh linear multi-linear regression so when you’re trying to get that equation
+of that model to predict you can look at this
+first and say well maybe i’ll include miles per gallon because that looks
+pretty heavily correlated horsepower seems correlated cylinders seems correlated
+with miles per gallon but then you can even go down here and
+of course miles per gallon is correlated with miles per gallon
+uh one to one right but quarter second mile yeah there’s some correlation there
+because it’s you know but it’s closer to zero so it’s not going to be as helpful
+probably right now this is not foolproof this is not foolproof that’s</p>
+<p>00:09
+one key thing you have to know um sometimes things are
+extremely correlated but they have nothing to do with each other just for some
+odd reason they’re correlated but they actually don’t have anything to do with
+each other and secondly sometimes um things that are not
+looking like they’re correlated can actually have some significant um
+correlations in the long run or predictability patterns
+right but this is really a a stepping stone to get to where you want to go
+and that’s all i wanted to show you was this cool little palette and what they
+mean highly correlated versus not highly
+correlated there’s a lot more to it than this
+so you just don’t use this at face value all the time but it’s a good start you
+know because we did predict in the previous tutorial that miles per gallon and
+weight were correlated and you can see it’s very big and it’s
+very red so that tells you how it is all right well i’ll see you guys in the
+next episode hey thanks for watching my tutorials
+some of you who have left some really good comments below
+some of you guys have liked it and shared your stories with me and i</p>
+<p>00:10
+appreciate that keep them coming i definitely want to
+continue to do this sometimes it’s hard to pick up where i left off
+and i might get sidetracked but i assure you that a lot of this will be relevant
+to the previous tutorial as much as possible so if you haven’t started from the
+beginning of all these different beginner type
+tutorials please go ahead and check them out again like
+comment and share this and i hope everyone stays safe in this
+environment we’re in today [Music] youEnd of file</p>

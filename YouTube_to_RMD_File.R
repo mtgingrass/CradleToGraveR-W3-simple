@@ -12,19 +12,24 @@ library(here)
 library(stringi)
 library(readr)
 
+#set base URL where you downloadd all of the content from youtube-dl
+#e.g. "c:/ytdl/CradleToGraveR/"
+
+base_yt_url <- "c:/ytdl/CradleToGraveR/"
+
 #youtube-dl base directory
-yt_dl_JSON <- list.files(path = "c:/ytdl/CradleToGraveR (UCA-hX4v0FEIKOzY8yikt8ow)/", 
+yt_dl_JSON <- list.files(path = base_yt_url, 
                         pattern = "*.json",
                       recursive = TRUE,
                       full.names = TRUE)
 
-yt_dl_descrip_dir <- list.files(path = "c:/ytdl/CradleToGraveR (UCA-hX4v0FEIKOzY8yikt8ow)/", 
+yt_dl_descrip_dir <- list.files(path = base_yt_url, 
                         pattern = "*.description$",
                         recursive = TRUE,
                         full.names = TRUE)
 
 
-yt_dl_vtt_cnvrt <- list.files(path = "c:/ytdl/CradleToGraveR (UCA-hX4v0FEIKOzY8yikt8ow)/",
+yt_dl_vtt_cnvrt <- list.files(path = base_yt_url,
                                pattern = "*.en.txt$",
                                recursive = TRUE,
                                full.names = TRUE)
@@ -54,8 +59,6 @@ df_yt <- data.frame(JSON = yt_dl_JSON,
 
 # Use only if no NAs are in the row
 df_yt_partial <- df_yt[complete.cases(df_yt),]
-
-
 
 for (index in seq_len(nrow(df_yt_partial)))
 {
@@ -120,6 +123,8 @@ vtt_txt <-  paste(readLines(df_yt_partial$VTT[index]), collapse="\n")
   
   
   yaml_tmp <- paste0(yaml_tmp, "End of file\n")
+  
+  
   
   #Create the Rmd file
   write(yaml_tmp,

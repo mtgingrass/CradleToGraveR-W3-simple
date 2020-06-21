@@ -2,7 +2,7 @@
 title: Math Operations   Lesson 1 R Tutorial for Begginers
 date: 2019-08-02
 categories:
-  - Uploads from CradleToGraveR
+  - Absolute Beginners Guide
 tags:
   - Test
   - Test2
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=oYopG3UBr-U">
-<img src="https://www.cradletograver.com/auto-posts/images/NA">
+<img src="https://www.cradletograver.com/auto-posts/images/02-AbsoluteBeginnersGuide-DownloadR&RStudio-FirstRScriptCompleteGuide-Lesson0.webm.jpg">
 </a>
 
 

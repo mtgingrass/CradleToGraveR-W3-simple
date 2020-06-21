@@ -2,7 +2,7 @@
 title: DPLYR Select   Rename Columns
 date: 2019-09-20
 categories:
-  - Uploads from CradleToGraveR
+  - Tidy
 tags:
   - Test
   - Test2
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=jCFpdvIDrIs">
-<img src="https://www.cradletograver.com/auto-posts/images/20190812-RDPLYRJoins-TidyData-[NE_GX8PkWUg].jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/15-ScrapingContent-FastestCOVID19ScrapeusingR-CompleteTutorialinunder30min.mp4.jpg">
 </a>
 
 

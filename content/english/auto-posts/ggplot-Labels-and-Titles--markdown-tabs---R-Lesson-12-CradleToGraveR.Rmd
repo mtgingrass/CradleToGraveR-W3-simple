@@ -2,7 +2,7 @@
 title: ggplot Labels and Titles  markdown tabs   R Lesson 12 CradleToGraveR
 date: 2019-09-17
 categories:
-  - Uploads from CradleToGraveR
+  - ggplot
 tags:
   - Test
   - Test2
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=1QYgccXBtrI">
-<img src="https://www.cradletograver.com/auto-posts/images/20190810-ImportCSVFilesusingTidyverse-RLesson6-[Pa-DuVzrGMo].jpg">
+<img src="https://www.cradletograver.com/auto-posts/images/9-COVID-19Analysis-FastestCOVID19ScrapeusingR-CompleteTutorialinunder30min.mp4.jpg">
 </a>
 
 

@@ -2,7 +2,7 @@
 title: here   and ggsave  I will set your computer on fire    Why 
 date: 2020-05-21
 categories:
-  - Uploads from CradleToGraveR
+  - Random R
 tags:
   - Test
   - Test2
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=RSXXYxCz630">
-<img src="https://www.cradletograver.com/auto-posts/images/NA">
+<img src="https://www.cradletograver.com/auto-posts/images/20-RandomR-CradleToGraveRLiveStream-UnzipDirectoryofFiles.mp4.jpg">
 </a>
 
 

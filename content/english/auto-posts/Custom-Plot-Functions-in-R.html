@@ -1,0 +1,180 @@
+---
+title: Custom Plot Functions in R
+date: 2020-02-29
+categories:
+  - ggplot
+tags:
+  - Test
+  - Test2
+
+type:  "post"
+w3codecolor: false
+draft: false
+---
+
+
+
+<p><a href="https://www.youtube.com/watch?v=x1yaEDLMKVo">
+<img src="https://www.cradletograver.com/auto-posts/images/06-ggplot-GGPLOT2&DPLYREnhancedPlotsusinggapminderData.mp4.jpg">
+</a></p>
+<p>00:00
+in the last tutorial we learned how to make some more elaborate base our plots
+we added a bunch of parameters to our plot function now we don’t want to read
+we want to reuse this plot function but we don’t want to keep copy and paste in
+all of this work with different data so I’m going to show you in this tutorial
+how to put this into a function form so that we can reuse it and have different
+numbers and it’ll work just fine with ease and reusability so let’s start off
+with the basic function first I want to show you what a function is you’ve
+already been using them throughout these tutorials so I’m gonna do the mean
+function I’m gonna take the average of some numbers right so I’m gonna take the
+mean of numbers and I will take the average of two three and four and I’m
+just gonna do command enter on that and let’s break this down and dissect it the
+name of the function is called mean and it takes in a parameter now it looks
+like there’s multiple numbers in here but there’s really only one argument or
+parameter in here and that is the one vector that contains these three numbers</p>
+<p>00:01
+so it’s one argument went inside of this mean function so let me write this
+function structure down for you first so you get the idea so whatever function
+name you want to call it so my function we’re gonna say my function equals a
+function see it’s a reserved word it changed colors on you and you got to
+have open parentheses close parentheses open bracket close bracket so your
+function definition the structure of your function is contained within those
+brackets now what do you want to bring into that function I want to bring
+certain things in sometimes you don’t have to we can do a function that just
+prints hello now let’s this won’t do anything in it
+of itself you have to blow this function into memory and then call the function
+so let’s do that command enter on line 22 and you’ll see over on the right hand
+side where my functions are it says my function function right so it’s loaded
+in memory now let’s use it so now I can just do I can call my underscore
+function open parenthesis close prints too cuz it’s a function now you can see</p>
+<p>00:02
+in my console that says hello pretty simple right
+but now let’s do a little bit more elaborate let’s let’s take this to a new
+level let’s create our own mean function but it only will take the average of
+three digits so I’m going to add parameters or argument
+in our function so let’s say mean 3 is our the name of the function we’re going
+to call it function open prints 2 close parenthesis I want to bring in numbers
+right because I have to use them in my function so I want to bring in I’m going
+to call it a B and C you can call it whatever you want open bracket close
+bracket simple as that so now we’re bringing in those numbers we can use
+them so I’m gonna say result is equal to a plus B plus C all divided by 3 right
+and I’m not gonna run this yet now let’s print the results so we’ll just say</p>
+<p>00:03
+print paste we’ll say the average is that average is comma your results so
+there we have it now you can paste you can paste you can allow variables and
+strings I’ll paste it together so prints nicely so let’s run this as in I mean
+let’s load this into memory so go back to win 28 where that is hit command hit
+the command enter button no errors which is good now you see up in my functions
+area I mean underscore 3 function ABC let’s use that real quick so now I’m
+going to say mean 3 open paren see now you can see the pop-up it says a B and C
+right there it tells us gives us a hint
+so let’s put in 2 3 &amp; 4 we should get
+the same result as before the average is 3 so the average is 3 that worked we
+could try different numbers it doesn’t matter it should always work so we’re
+really making reusable pieces of our code here so now thinking about all that
+let’s go back to our plot and see if we can make that into a function instead so
+that we can plot multiple things before we do that there is something called</p>
+<p>00:04
+default arguments in your functions you’ll see up here and mean 3 I have a B
+and C here now if you didn’t always want to have the third argument in there now
+this this example is not going to make sense you’re gonna actually it’ll make
+sense let’s say that you always had this is an example
+you always have either 5 in your set of numbers or some other number but if the
+5 is not there it’s automatically put there so let’s say let’s put
+see is we’re gonna say C is equal to five now we’re gonna rerun this function
+we can’t if I run this now you get the same result because I didn’t reload the
+function into memory so take that into consideration so command enter now still
+no errors mice equals five that’s true but now when I call mean three you’re
+gonna see two five and four that four will override the C so C does equal five
+if it’s not explicitly stated but it is it’s saying make that CF four so you’re
+gonna still get the same result once again now if I got rid of that four and</p>
+<p>00:05
+you do it with just the two parameters you get a different average right
+because it automatically put the five in there so that’s a default argument to
+your function I think you kind of get the idea there you can default them all
+to whatever you choose you can override them but be careful that if you default
+say the first one like the a but you don’t default the second one a third one
+and you only put in one parameter it’s going to confuse the system at the
+program it doesn’t know which one you’re trying to assign it to so just be
+careful on the number of parameters and the orders and things like that we’ll
+talk more in later episodes but we’ve got this figured out functions are cool
+now let’s go back up if you haven’t caught up with me from the last tutorial
+we created a Fibonacci series the first six or seven digits and we wanted to
+plot them so let’s go ahead and do that again you can pause this video and write
+this code down to catch up if you don’t have it so I’m gonna command enter on
+the FIB we’ve got the fib vector loaded now let’s plot that Fibonacci series</p>
+<p>00:06
+once again command enter we’ve got this cool looking plot that’s ridiculously
+sized and whatnot but who cares so we want to reuse this for other things
+besides fib and I don’t want to cut and paste like what if I had a different set
+of numbers called another sequence seq one and we’ll just make this one
+arbitrary whatever numbers you want to use and a different number of numbers
+you know it doesn’t hack this him it’s anything you want to plot it could be a
+column of numbers from your excel file or your sheet so command enter on that
+you’ll see that I can I can now change fib to
+sequence one command enter and now look at this cool little plot it’s not called
+Fibonacci series but we can we can change that that’s what we’re about to
+do let’s do that so we’re gonna create a plot function
+that plots a title and a set of data and so we get to do that so let’s think</p>
+<p>00:07
+about this plot as a function instead of a plot so in fact we want to plot
+something so let’s just encapsulate and close this plot function within a
+function of our own that’s actually called composition by the way when you
+have functions within functions which is perfectly valid
+that’s called composition so we’re gonna call this my plot and I’m going to open
+closed parentheses oh no I’m sorry I’m going to say my plot function is
+equal to and now we’re gonna define the word defined function how many
+parameters we want to bring in there well we said we want to bring in some
+data so let’s call it my data we’re gonna bring in some data so the sequence
+1 or the Fibonacci series or whatever data you want to bring in and I said we
+want to change the title so let’s change the title so let’s call it my title you
+can call it whatever you want now open bracket close bracket right now this
+time I want to encapsulate that plot though so let’s go ahead and delete that
+second close bracket bring it way down here after the plot now now you’ve
+encapsulated that now you might want to also tab this out this is typically what</p>
+<p>00:08
+you do in programming is you will use white space and hit the tab button and
+bring it up a little bit so you know you
+can kind of see I have my fonts a little high so that you guys can see it better
+on the screen but you can see how between that bracket and my plot you can
+really see what’s enclosed inside of that function now if I do this here
+we’re still in trouble because we didn’t
+replace sequence 1 with my data so let’s do that because right now if I run this
+function in fact let’s do that just to give you a little taste of it you should
+get no errors ran it no errors we called it my plot now if I let’s delete this
+here just so you know it’s not the same one we’re gonna call I’ll call it down
+here I’ll call it my plot my underscore with no oh it’s got two arguments I can
+put the two arguments in there I’ll put in say the number two and a vector and a
+title my title and you’ll see that nothing is really gonna change when I
+run this it still says if Evan actually series and still has that data well</p>
+<p>00:09
+that’s because we didn’t replace it with these two parameters that we are trying
+to bring in so sequence one we don’t want sequence one we want my data and we
+don’t want this title we want my title let’s reuse and make this more versatile
+my title okay now with the reload this function into memory command and enter ah
+error let’s see what the error is my data not found I do this all the time
+you need to go to line four and hit enter to reload the whole function you
+can actually run pieces of the function inside of if I click on line ten and I
+hit enter you know that’s why I got the error we loaded into memory now now if I
+go back or now if I want to actually call this function I can say my plot fea
+tab see it automatically thanks to our studio automatically gives you the
+functions that you’ve created in a list form so my plot I want to bring in data
+and title what data let’s bring in the sequence one data that we have above and</p>
+<p>00:10
+I’m going to call it sequence one command enter on that now you see on the
+on the plot we have sequence one and it’s got the data oh we can also do fib
+there we go we have sequence one with fib we can
+call it whatever you want and that’s how you can reuse plots very simply so
+create the most beautiful aesthetically pleasing plot you want and then
+encapsulate it into a function and you can reuse it all day long and of course
+you’re gonna bring in more parameters and set more values if you don’t want to
+but the idea is you get a lot of these attributes set the way you like so that
+you don’t have to keep bringing in all that data every time you want to plot
+something minimal use I like this one because it’s got two arguments only so
+once we make this as pretty and aesthetically pleasing as we like with
+all of our phonce our sizes the look and feel make
+it into a function and reuse it so my goal is to grow this channel into a</p>
+<p>00:11
+monetize channel I’m not even close but that is a goal so if you share and
+subscribe and let the world know that I exist please do so and I’ll continue
+these these tutorials Thanks [Music]End of file</p>

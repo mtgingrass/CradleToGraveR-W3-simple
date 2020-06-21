@@ -2,7 +2,7 @@
 title: Random Numbers  Seeds   R Lesson 8
 date: 2019-08-17
 categories:
-  - Uploads from CradleToGraveR
+  - Absolute Beginners Guide
 tags:
   - Test
   - Test2
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=TwzmPV_zJKw">
-<img src="https://www.cradletograver.com/auto-posts/images/NA">
+<img src="https://www.cradletograver.com/auto-posts/images/09-AbsoluteBeginnersGuide-Sequence,RepeatandSample-RLesson7.webm.jpg">
 </a>
 
 
