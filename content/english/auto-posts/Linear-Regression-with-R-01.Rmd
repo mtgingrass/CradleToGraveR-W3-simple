@@ -10,6 +10,7 @@ tags:
 type:  "post"
 w3codecolor: false
 draft: false
+thumbnail: https://i.ytimg.com/vi/2RePBoDNiMg/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=2RePBoDNiMg">

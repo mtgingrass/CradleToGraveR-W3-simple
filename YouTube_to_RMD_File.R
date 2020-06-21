@@ -114,6 +114,7 @@ vtt_txt <-  paste(readLines(df_yt_partial$VTT[index]), collapse="\n")
                     yt_tags,
                     "",
                     w3yaml,
+                    paste0("thumbnail: ", yt_json_file$thumbnail),
                     "---",
                     "",
                     paste("<a href=\"", yt_json_file$webpage_url,'">', sep = ""),
