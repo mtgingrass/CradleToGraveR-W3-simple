@@ -100,7 +100,7 @@ for (index in seq_len(nrow(df_yt_partial)))
                          "Test","Test2",
                          sep = "\n  - ")
   
-  w3yaml <- "type:  \"post\"
+  w3yaml <- "type: post
 w3codecolor: false
 draft: false"
   

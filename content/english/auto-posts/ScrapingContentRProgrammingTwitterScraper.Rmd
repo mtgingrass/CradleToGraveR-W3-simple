@@ -7,7 +7,7 @@ tags:
   - Test
   - Test2
 
-type:  "post"
+type: post
 w3codecolor: false
 draft: false
 thumbnail: https://i.ytimg.com/vi/AFTw_6dVOXY/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDyBeI9iEE8LdEvLGfLSLwPPrZhvA
