@@ -1,5 +1,5 @@
 ---
-title: Absolute Beginners Guideggplot Colors  Size  Alpha    R Lesson 13
+title: ggplot Colors  Size  Alpha    R Lesson 13
 date: 2019-09-24
 categories:
   - Absolute Beginners Guide
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi_webp/RL_zk7S_K3E/maxresdefault.webp
 ---
 
 <a href="https://www.youtube.com/watch?v=RL_zk7S_K3E">
-<img src="auto-posts/images/14-AbsoluteBeginnersGuide-ggplotLabelsandTitles,markdowntabs-RLesson12CradleToGraveR.webm.jpg">
+<img src="https://i.ytimg.com/vi_webp/RL_zk7S_K3E/maxresdefault.webp">
 </a>
 
 

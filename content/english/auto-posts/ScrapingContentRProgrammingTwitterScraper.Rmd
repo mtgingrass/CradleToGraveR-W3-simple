@@ -1,5 +1,5 @@
 ---
-title: Scraping ContentR Programming Twitter Scraper
+title: R Programming Twitter Scraper
 date: 2019-08-02
 categories:
   - Scraping Content
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/AFTw_6dVOXY/hqdefault.jpg?sqp=-oaymwEZCNACELwB
 ---
 
 <a href="https://www.youtube.com/watch?v=AFTw_6dVOXY">
-<img src="auto-posts/images/01-ScrapingContent-DataManipulationTwitterScraperusingR.webm.jpg">
+<img src="https://i.ytimg.com/vi/AFTw_6dVOXY/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDyBeI9iEE8LdEvLGfLSLwPPrZhvA">
 </a>
 
 

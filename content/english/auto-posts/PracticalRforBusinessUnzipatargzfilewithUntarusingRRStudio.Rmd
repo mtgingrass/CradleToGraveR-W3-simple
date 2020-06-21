@@ -1,5 +1,5 @@
 ---
-title: Practical R for BusinessUnzip a tar gz file with Untar using R RStudio
+title: Unzip a tar gz file with Untar using R RStudio
 date: 2020-06-08
 categories:
   - Practical R for Business
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/-7s03AzEvag/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=-7s03AzEvag">
-<img src="auto-posts/images/14-PracticalRforBusiness-CradleToGraveRLiveStream-UnzipDirectoryofFiles.mp4.jpg">
+<img src="https://i.ytimg.com/vi/-7s03AzEvag/maxresdefault.jpg">
 </a>
 
 

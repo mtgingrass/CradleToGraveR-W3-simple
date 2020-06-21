@@ -1,5 +1,5 @@
 ---
-title: Absolute Beginners GuideBar Charts using ggplot geom bar   R Lesson 16
+title: Bar Charts using ggplot geom bar   R Lesson 16
 date: 2019-10-01
 categories:
   - Absolute Beginners Guide
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi_webp/2uOIKE-cp6w/maxresdefault.webp
 ---
 
 <a href="https://www.youtube.com/watch?v=2uOIKE-cp6w">
-<img src="auto-posts/images/15-AbsoluteBeginnersGuide-ggplotColors,Size,Alpha-RLesson13.webm.jpg">
+<img src="https://i.ytimg.com/vi_webp/2uOIKE-cp6w/maxresdefault.webp">
 </a>
 
 

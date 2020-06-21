@@ -1,5 +1,5 @@
 ---
-title: Scraping ContentPlot COVID 19 coronavirus Data using R dplyr and ggplot
+title: Plot COVID 19 coronavirus Data using R dplyr and ggplot
 date: 2020-03-23
 categories:
   - Scraping Content
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/ioqrwUaSde8/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=ioqrwUaSde8">
-<img src="auto-posts/images/09-ScrapingContent-KableTablewithRandCoronavirusCOVID19DeathRates.webm.jpg">
+<img src="https://i.ytimg.com/vi/ioqrwUaSde8/maxresdefault.jpg">
 </a>
 
 

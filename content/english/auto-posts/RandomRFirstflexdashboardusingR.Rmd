@@ -1,5 +1,5 @@
 ---
-title: Random RFirst flexdashboard using R
+title: First flexdashboard using R
 date: 2019-10-06
 categories:
   - Random R
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi_webp/HbkgAUOYvCY/maxresdefault.webp
 ---
 
 <a href="https://www.youtube.com/watch?v=HbkgAUOYvCY">
-<img src="auto-posts/images/04-RandomR-CompleteWebScraperforanyone.webm.jpg">
+<img src="https://i.ytimg.com/vi_webp/HbkgAUOYvCY/maxresdefault.webp">
 </a>
 
 

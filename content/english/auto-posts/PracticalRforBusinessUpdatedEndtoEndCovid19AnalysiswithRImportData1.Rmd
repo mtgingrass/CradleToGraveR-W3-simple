@@ -1,5 +1,5 @@
 ---
-title: Practical R for BusinessUpdated   End to End Covid 19 Analysis with R   Import Data  1 
+title: Updated   End to End Covid 19 Analysis with R   Import Data  1 
 date: 2020-03-21
 categories:
   - Practical R for Business
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/cdFIlaKKbkk/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=cdFIlaKKbkk">
-<img src="auto-posts/images/07-PracticalRforBusiness-RCDCDataFixedrmarkdownTutorial.webm.jpg">
+<img src="https://i.ytimg.com/vi/cdFIlaKKbkk/maxresdefault.jpg">
 </a>
 
 

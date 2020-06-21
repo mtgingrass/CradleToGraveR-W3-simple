@@ -1,5 +1,5 @@
 ---
-title: Practical R for Businessflexdashboard 02   valueBox  Gauge  DT
+title: flexdashboard 02   valueBox  Gauge  DT
 date: 2019-10-08
 categories:
   - Practical R for Business
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi_webp/ef8qvUeopN4/maxresdefault.webp
 ---
 
 <a href="https://www.youtube.com/watch?v=ef8qvUeopN4">
-<img src="auto-posts/images/4-LiveArchived-CradleToGraveRLiveStream-Usingpredictfunction.mp4.jpg">
+<img src="https://i.ytimg.com/vi_webp/ef8qvUeopN4/maxresdefault.webp">
 </a>
 
 

@@ -1,5 +1,5 @@
 ---
-title: Absolute Beginners Guide to Statistical ProgrammingCorrelation Matrix in R with corplot
+title: Correlation Matrix in R with corplot
 date: 2020-05-13
 categories:
   - Absolute Beginners Guide to Statistical Programming
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/voOJRNDv0Yw/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=voOJRNDv0Yw">
-<img src="auto-posts/images/09-AbsoluteBeginnersGuidetoStatisticalProgramming-MultiLinearRegressionwithR.mp4.jpg">
+<img src="https://i.ytimg.com/vi/voOJRNDv0Yw/maxresdefault.jpg">
 </a>
 
 

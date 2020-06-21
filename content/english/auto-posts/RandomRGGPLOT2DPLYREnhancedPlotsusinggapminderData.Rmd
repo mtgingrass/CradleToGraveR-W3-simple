@@ -1,5 +1,5 @@
 ---
-title: Random RGGPLOT2   DPLYR Enhanced Plots using gapminder Data
+title: GGPLOT2   DPLYR Enhanced Plots using gapminder Data
 date: 2020-02-12
 categories:
   - Random R
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi_webp/EbZvcQy174M/maxresdefault.webp
 ---
 
 <a href="https://www.youtube.com/watch?v=EbZvcQy174M">
-<img src="auto-posts/images/11-RandomR-dplyrgroup_bysummarizeatallvarsfun.mp4.jpg">
+<img src="https://i.ytimg.com/vi_webp/EbZvcQy174M/maxresdefault.webp">
 </a>
 
 

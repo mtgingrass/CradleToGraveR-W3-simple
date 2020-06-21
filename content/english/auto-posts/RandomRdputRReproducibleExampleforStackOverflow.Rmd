@@ -1,5 +1,5 @@
 ---
-title: Random Rdput   R Reproducible Example for Stack Overflow
+title: dput   R Reproducible Example for Stack Overflow
 date: 2020-05-29
 categories:
   - Random R
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/Rn6BgT15yIs/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=Rn6BgT15yIs">
-<img src="auto-posts/images/21-RandomR-RUnzipEntireDirectoryofFilesplyrpackageRStudio.mp4.jpg">
+<img src="https://i.ytimg.com/vi/Rn6BgT15yIs/maxresdefault.jpg">
 </a>
 
 

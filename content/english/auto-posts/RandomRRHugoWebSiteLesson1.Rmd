@@ -1,5 +1,5 @@
 ---
-title: Random RR Hugo Web Site Lesson 1
+title: R Hugo Web Site Lesson 1
 date: 2020-06-05
 categories:
   - Random R
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/oXFPOOrkogA/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=oXFPOOrkogA">
-<img src="auto-posts/images/22-RandomR-here()andggsave'Iwillsetyourcomputeronfire'-Why.mp4.jpg">
+<img src="https://i.ytimg.com/vi/oXFPOOrkogA/maxresdefault.jpg">
 </a>
 
 

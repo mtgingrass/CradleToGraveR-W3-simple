@@ -1,5 +1,5 @@
 ---
-title: Random RR Hugo Theme and Dynamic Changes
+title: R Hugo Theme and Dynamic Changes
 date: 2020-06-06
 categories:
   - Random R
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/fImF3Rd1GBA/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=fImF3Rd1GBA">
-<img src="auto-posts/images/23-RandomR-dput-RReproducibleExampleforStackOverflow.mp4.jpg">
+<img src="https://i.ytimg.com/vi/fImF3Rd1GBA/maxresdefault.jpg">
 </a>
 
 

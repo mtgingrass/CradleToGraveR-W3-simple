@@ -1,5 +1,5 @@
 ---
-title: Absolute Beginners Guide to Statistical ProgrammingStatistical Programming   Expected Value
+title: Statistical Programming   Expected Value
 date: 2020-04-02
 categories:
   - Absolute Beginners Guide to Statistical Programming
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/TXgwAY5EEdA/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=TXgwAY5EEdA">
-<img src="auto-posts/images/02-AbsoluteBeginnersGuidetoStatisticalProgramming-StatisticalProgramming-ExpectedValue.mp4.jpg">
+<img src="https://i.ytimg.com/vi/TXgwAY5EEdA/maxresdefault.jpg">
 </a>
 
 

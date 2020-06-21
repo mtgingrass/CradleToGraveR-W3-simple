@@ -1,5 +1,5 @@
 ---
-title: Absolute Beginners Guideggplot Scatter Plot  geom point  first plot    R Lesson 11 CradleToGraveR
+title: ggplot Scatter Plot  geom point  first plot    R Lesson 11 CradleToGraveR
 date: 2019-09-16
 categories:
   - Absolute Beginners Guide
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi_webp/gCAwHbmOqCo/maxresdefault.webp
 ---
 
 <a href="https://www.youtube.com/watch?v=gCAwHbmOqCo">
-<img src="auto-posts/images/12-AbsoluteBeginnersGuide-SubsettingDataConditionally,1ofMany-RLesson10CradleToGraveR.webm.jpg">
+<img src="https://i.ytimg.com/vi_webp/gCAwHbmOqCo/maxresdefault.webp">
 </a>
 
 

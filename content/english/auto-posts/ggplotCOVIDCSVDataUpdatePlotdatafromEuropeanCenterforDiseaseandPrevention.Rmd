@@ -1,5 +1,5 @@
 ---
-title: ggplotCOVID CSV Data Update Plot   data from European Center for Disease and Prevention
+title: COVID CSV Data Update Plot   data from European Center for Disease and Prevention
 date: 2020-03-31
 categories:
   - ggplot
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/px_Cc4Axj7M/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=px_Cc4Axj7M">
-<img src="auto-posts/images/08-ggplot-CustomPlotFunctionsinR.webm.jpg">
+<img src="https://i.ytimg.com/vi/px_Cc4Axj7M/maxresdefault.jpg">
 </a>
 
 

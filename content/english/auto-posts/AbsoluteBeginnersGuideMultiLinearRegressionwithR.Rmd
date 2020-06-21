@@ -1,5 +1,5 @@
 ---
-title: Absolute Beginners GuideMulti Linear Regression with R
+title: Multi Linear Regression with R
 date: 2020-05-04
 categories:
   - Absolute Beginners Guide
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/HLwsnH0lOSA/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=HLwsnH0lOSA">
-<img src="auto-posts/images/41-AbsoluteBeginnersGuide-CradleToGraveRLiveStream-Usingpredictfunction.mp4.jpg">
+<img src="https://i.ytimg.com/vi/HLwsnH0lOSA/maxresdefault.jpg">
 </a>
 
 

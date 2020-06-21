@@ -1,5 +1,5 @@
 ---
-title: COVID 19 AnalysisR CDC Data Fixed rmarkdown Tutorial
+title: R CDC Data Fixed rmarkdown Tutorial
 date: 2020-03-17
 categories:
   - COVID-19 Analysis
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/sSWHFXCBtQg/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=sSWHFXCBtQg">
-<img src="auto-posts/images/1-COVID-19Analysis-Updated-EndtoEndCovid-19AnalysiswithR-ImportData(1).webm.jpg">
+<img src="https://i.ytimg.com/vi/sSWHFXCBtQg/maxresdefault.jpg">
 </a>
 
 

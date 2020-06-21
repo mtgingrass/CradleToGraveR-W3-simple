@@ -1,5 +1,5 @@
 ---
-title: Absolute Beginners GuideR Test if a vector contains a given element
+title: R Test if a vector contains a given element
 date: 2020-02-04
 categories:
   - Absolute Beginners Guide
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi_webp/gHJzrHFJGNw/maxresdefault.webp
 ---
 
 <a href="https://www.youtube.com/watch?v=gHJzrHFJGNw">
-<img src="auto-posts/images/21-AbsoluteBeginnersGuide-RStudioShortcutTips.webm.jpg">
+<img src="https://i.ytimg.com/vi_webp/gHJzrHFJGNw/maxresdefault.webp">
 </a>
 
 

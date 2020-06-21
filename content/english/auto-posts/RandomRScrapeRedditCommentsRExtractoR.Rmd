@@ -1,5 +1,5 @@
 ---
-title: Random RScrape Reddit Comments R ExtractoR
+title: Scrape Reddit Comments R ExtractoR
 date: 2019-10-27
 categories:
   - Random R
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/sze_XrE1AzE/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=sze_XrE1AzE">
-<img src="auto-posts/images/05-RandomR-DataFrameTip-CreateDataFrames.webm.jpg">
+<img src="https://i.ytimg.com/vi/sze_XrE1AzE/maxresdefault.jpg">
 </a>
 
 

@@ -1,5 +1,5 @@
 ---
-title: Absolute Beginners Guidedplyr group by summarize at all vars fun
+title: dplyr group by summarize at all vars fun
 date: 2020-02-06
 categories:
   - Absolute Beginners Guide
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/PMhzZ1sAwnQ/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=PMhzZ1sAwnQ">
-<img src="auto-posts/images/22-AbsoluteBeginnersGuide-RTestifavectorcontainsagivenelement.mp4.jpg">
+<img src="https://i.ytimg.com/vi/PMhzZ1sAwnQ/maxresdefault.jpg">
 </a>
 
 

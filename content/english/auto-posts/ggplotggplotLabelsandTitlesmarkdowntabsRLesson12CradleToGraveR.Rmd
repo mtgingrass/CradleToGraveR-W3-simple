@@ -1,5 +1,5 @@
 ---
-title: ggplotggplot Labels and Titles  markdown tabs   R Lesson 12 CradleToGraveR
+title: ggplot Labels and Titles  markdown tabs   R Lesson 12 CradleToGraveR
 date: 2019-09-17
 categories:
   - ggplot
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi_webp/1QYgccXBtrI/maxresdefault.webp
 ---
 
 <a href="https://www.youtube.com/watch?v=1QYgccXBtrI">
-<img src="auto-posts/images/9-COVID-19Analysis-FastestCOVID19ScrapeusingR-CompleteTutorialinunder30min.mp4.jpg">
+<img src="https://i.ytimg.com/vi_webp/1QYgccXBtrI/maxresdefault.webp">
 </a>
 
 

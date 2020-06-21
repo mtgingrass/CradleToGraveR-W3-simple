@@ -1,5 +1,5 @@
 ---
-title: Absolute Beginners GuideR Notebooks   Lesson 5
+title: R Notebooks   Lesson 5
 date: 2019-08-02
 categories:
   - Absolute Beginners Guide
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi_webp/Fa81eXcAXT4/maxresdefault.webp
 ---
 
 <a href="https://www.youtube.com/watch?v=Fa81eXcAXT4">
-<img src="auto-posts/images/06-AbsoluteBeginnersGuide-VectorsandFunctions-Lesson4.webm.jpg">
+<img src="https://i.ytimg.com/vi_webp/Fa81eXcAXT4/maxresdefault.webp">
 </a>
 
 

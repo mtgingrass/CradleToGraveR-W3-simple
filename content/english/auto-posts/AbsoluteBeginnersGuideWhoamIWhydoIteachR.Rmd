@@ -1,5 +1,5 @@
 ---
-title: Absolute Beginners GuideWho am I  Why do I teach R 
+title: Who am I  Why do I teach R 
 date: 2020-05-25
 categories:
   - Absolute Beginners Guide
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/_D12UM7iP_Q/maxresdefault.jpg?v=5ecc0b5b
 ---
 
 <a href="https://www.youtube.com/watch?v=_D12UM7iP_Q">
-<img src="auto-posts/images/50-AbsoluteBeginnersGuide-RInteractionTermsandRegression.mp4.jpg">
+<img src="https://i.ytimg.com/vi/_D12UM7iP_Q/maxresdefault.jpg?v=5ecc0b5b">
 </a>
 
 

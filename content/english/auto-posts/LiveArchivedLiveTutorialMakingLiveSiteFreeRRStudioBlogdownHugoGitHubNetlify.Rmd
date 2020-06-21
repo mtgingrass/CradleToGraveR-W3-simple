@@ -1,5 +1,5 @@
 ---
-title: Live ArchivedLive   Tutorial Making Live Site  Free   R RStudio Blogdown Hugo GitHub Netlify
+title: Live   Tutorial Making Live Site  Free   R RStudio Blogdown Hugo GitHub Netlify
 date: 2020-06-15
 categories:
   - Live Archived
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/fq_AYx874gs/maxresdefault.jpg?v=5ee66cbe
 ---
 
 <a href="https://www.youtube.com/watch?v=fq_AYx874gs">
-<img src="auto-posts/images/14-ggplot-Residuals,Predictions,PlotsR.mp4.jpg">
+<img src="https://i.ytimg.com/vi/fq_AYx874gs/maxresdefault.jpg?v=5ee66cbe">
 </a>
 
 

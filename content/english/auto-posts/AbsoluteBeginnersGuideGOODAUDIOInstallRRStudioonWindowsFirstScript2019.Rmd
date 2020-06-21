@@ -1,5 +1,5 @@
 ---
-title: Absolute Beginners GuideGOOD AUDIO   Install R   RStudio on Windows   First Script 2019
+title: GOOD AUDIO   Install R   RStudio on Windows   First Script 2019
 date: 2019-09-20
 categories:
   - Absolute Beginners Guide
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi_webp/R7wbCGXKAok/maxresdefault.webp
 ---
 
 <a href="https://www.youtube.com/watch?v=R7wbCGXKAok">
-<img src="auto-posts/images/14-AbsoluteBeginnersGuidetoStatisticalProgramming-RInteractionTermsandRegression.mp4.jpg">
+<img src="https://i.ytimg.com/vi_webp/R7wbCGXKAok/maxresdefault.webp">
 </a>
 
 

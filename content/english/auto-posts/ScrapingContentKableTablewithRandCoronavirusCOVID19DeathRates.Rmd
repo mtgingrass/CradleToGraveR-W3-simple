@@ -1,5 +1,5 @@
 ---
-title: Scraping ContentKable Table with R and Coronavirus COVID 19 Death Rates
+title: Kable Table with R and Coronavirus COVID 19 Death Rates
 date: 2020-03-18
 categories:
   - Scraping Content
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/dmAgm3ULyvo/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=dmAgm3ULyvo">
-<img src="auto-posts/images/07-ScrapingContent-EndtoEndCovid-19AnalysiswithR-ImportData(1).webm.jpg">
+<img src="https://i.ytimg.com/vi/dmAgm3ULyvo/maxresdefault.jpg">
 </a>
 
 

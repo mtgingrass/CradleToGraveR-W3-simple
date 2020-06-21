@@ -1,5 +1,5 @@
 ---
-title: Absolute Beginners GuideMath Operations   Lesson 1 R Tutorial for Begginers
+title: Math Operations   Lesson 1 R Tutorial for Begginers
 date: 2019-08-02
 categories:
   - Absolute Beginners Guide
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi_webp/oYopG3UBr-U/maxresdefault.webp
 ---
 
 <a href="https://www.youtube.com/watch?v=oYopG3UBr-U">
-<img src="auto-posts/images/02-AbsoluteBeginnersGuide-DownloadR&RStudio-FirstRScriptCompleteGuide-Lesson0.webm.jpg">
+<img src="https://i.ytimg.com/vi_webp/oYopG3UBr-U/maxresdefault.webp">
 </a>
 
 

@@ -1,5 +1,5 @@
 ---
-title: Absolute Beginners GuideLinear Regression LM using R Plot Line
+title: Linear Regression LM using R Plot Line
 date: 2020-04-20
 categories:
   - Absolute Beginners Guide
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/dZjt9lrtxsI/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=dZjt9lrtxsI">
-<img src="auto-posts/images/37-AbsoluteBeginnersGuide-LinearRegressionwithR01.mp4.jpg">
+<img src="https://i.ytimg.com/vi/dZjt9lrtxsI/maxresdefault.jpg">
 </a>
 
 

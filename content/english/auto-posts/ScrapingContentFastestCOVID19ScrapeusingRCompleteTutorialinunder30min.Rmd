@@ -1,5 +1,5 @@
 ---
-title: Scraping ContentFastest COVID19 Scrape using R   Complete Tutorial in under 30 min
+title: Fastest COVID19 Scrape using R   Complete Tutorial in under 30 min
 date: 2020-04-02
 categories:
   - Scraping Content
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/M5tSC3u1lkw/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=M5tSC3u1lkw">
-<img src="auto-posts/images/13-ScrapingContent-DTdatatableCOVID19coronavirussortwithR.mp4.jpg">
+<img src="https://i.ytimg.com/vi/M5tSC3u1lkw/maxresdefault.jpg">
 </a>
 
 

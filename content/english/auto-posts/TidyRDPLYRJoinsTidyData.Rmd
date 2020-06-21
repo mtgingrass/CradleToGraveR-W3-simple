@@ -1,5 +1,5 @@
 ---
-title: TidyR DPLYR Joins   Tidy Data
+title: R DPLYR Joins   Tidy Data
 date: 2019-08-12
 categories:
   - Tidy
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi_webp/NE_GX8PkWUg/maxresdefault.webp
 ---
 
 <a href="https://www.youtube.com/watch?v=NE_GX8PkWUg">
-<img src="auto-posts/images/14-ScrapingContent-COVIDCSVDataUpdatePlot-datafromEuropeanCenterforDiseaseandPrevention.mp4.jpg">
+<img src="https://i.ytimg.com/vi_webp/NE_GX8PkWUg/maxresdefault.webp">
 </a>
 
 

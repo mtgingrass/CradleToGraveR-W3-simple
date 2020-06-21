@@ -1,5 +1,5 @@
 ---
-title: Absolute Beginners GuideHugo Blogdown Tutorial with R RStudio Customize Menus Layouts
+title: Hugo Blogdown Tutorial with R RStudio Customize Menus Layouts
 date: 2020-06-09
 categories:
   - Absolute Beginners Guide
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/338jZbCVXcw/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=338jZbCVXcw">
-<img src="auto-posts/images/54-AbsoluteBeginnersGuide-RHugoWebSiteLesson1.mp4.jpg">
+<img src="https://i.ytimg.com/vi/338jZbCVXcw/maxresdefault.jpg">
 </a>
 
 

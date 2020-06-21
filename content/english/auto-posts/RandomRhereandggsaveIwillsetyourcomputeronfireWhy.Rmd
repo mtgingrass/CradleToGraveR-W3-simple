@@ -1,5 +1,5 @@
 ---
-title: Random Rhere   and ggsave  I will set your computer on fire    Why 
+title: here   and ggsave  I will set your computer on fire    Why 
 date: 2020-05-21
 categories:
   - Random R
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi_webp/RSXXYxCz630/maxresdefault.webp
 ---
 
 <a href="https://www.youtube.com/watch?v=RSXXYxCz630">
-<img src="auto-posts/images/20-RandomR-CradleToGraveRLiveStream-UnzipDirectoryofFiles.mp4.jpg">
+<img src="https://i.ytimg.com/vi_webp/RSXXYxCz630/maxresdefault.webp">
 </a>
 
 

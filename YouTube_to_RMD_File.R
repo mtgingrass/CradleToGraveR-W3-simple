@@ -77,7 +77,7 @@ for (index in seq_len(nrow(df_yt_partial)))
   
   title <- paste(gsub("[[:punct:]]", " ", yt_json_file$title), sep = "")
   
-  rmd_filename <-   title <- paste(gsub("[[:punct:]]", " ", yt_json_file$playlist),
+  rmd_filename <- paste(gsub("[[:punct:]]", " ", yt_json_file$playlist),
                                    gsub("[[:punct:]]", " ", yt_json_file$title), sep = "")
   date_upload <- paste("date: ", 
                        substr(yt_json_file$upload_date,1,4),
@@ -93,8 +93,8 @@ for (index in seq_len(nrow(df_yt_partial)))
                     yt_json_file$playlist_title,
                     sep = "")
 
-  image_path <- gsub(" ", "", df_yt$IMAGE[index])
-  #image_path <- yt_json_file$thumbnail
+  #image_path <- gsub(" ", "", df_yt$IMAGE[index])
+  image_path <- yt_json_file$thumbnail
 
   yt_tags <- paste("tags:",
                          "Test","Test2",
@@ -119,7 +119,7 @@ draft: false"
                     "---",
                     "",
                     paste("<a href=\"", yt_json_file$webpage_url,'">', sep = ""),
-                    paste("<img src=", '"',"auto-posts/images/",
+                    paste("<img src=", '"',
                           image_path,'"', ">", sep = ""),
                     paste0("</a>"),
                     #yt_json_file$description,

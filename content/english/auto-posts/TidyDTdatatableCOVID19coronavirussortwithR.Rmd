@@ -1,5 +1,5 @@
 ---
-title: TidyDT datatable COVID 19 coronavirus sort with R
+title: DT datatable COVID 19 coronavirus sort with R
 date: 2020-03-24
 categories:
   - Tidy
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/ZGyr199lS9U/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=ZGyr199lS9U">
-<img src="auto-posts/images/6-Tidy-KableTablewithRandCoronavirusCOVID19DeathRates.webm.jpg">
+<img src="https://i.ytimg.com/vi/ZGyr199lS9U/maxresdefault.jpg">
 </a>
 
 

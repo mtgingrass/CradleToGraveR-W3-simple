@@ -1,5 +1,5 @@
 ---
-title: TidyEnd to End Covid 19 Analysis with R   Import Data  1 
+title: End to End Covid 19 Analysis with R   Import Data  1 
 date: 2020-03-09
 categories:
   - Tidy
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/U6ebbTaf-70/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=U6ebbTaf-70">
-<img src="auto-posts/images/3-Tidy-dplyrgroup_bysummarizeatallvarsfun.mp4.jpg">
+<img src="https://i.ytimg.com/vi/U6ebbTaf-70/maxresdefault.jpg">
 </a>
 
 

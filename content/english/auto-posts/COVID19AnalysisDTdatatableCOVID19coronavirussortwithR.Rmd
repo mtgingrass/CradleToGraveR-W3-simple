@@ -1,5 +1,5 @@
 ---
-title: COVID 19 AnalysisDT datatable COVID 19 coronavirus sort with R
+title: DT datatable COVID 19 coronavirus sort with R
 date: 2020-03-24
 categories:
   - COVID-19 Analysis
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/ZGyr199lS9U/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=ZGyr199lS9U">
-<img src="auto-posts/images/4-COVID-19Analysis-KableTablewithRandCoronavirusCOVID19DeathRates.webm.jpg">
+<img src="https://i.ytimg.com/vi/ZGyr199lS9U/maxresdefault.jpg">
 </a>
 
 

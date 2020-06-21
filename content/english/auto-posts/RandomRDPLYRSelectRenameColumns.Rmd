@@ -1,5 +1,5 @@
 ---
-title: Random RDPLYR Select   Rename Columns
+title: DPLYR Select   Rename Columns
 date: 2019-09-20
 categories:
   - Random R
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi_webp/jCFpdvIDrIs/maxresdefault.webp
 ---
 
 <a href="https://www.youtube.com/watch?v=jCFpdvIDrIs">
-<img src="auto-posts/images/01-RandomR-RDPLYRJoins-TidyData.webm.jpg">
+<img src="https://i.ytimg.com/vi_webp/jCFpdvIDrIs/maxresdefault.webp">
 </a>
 
 

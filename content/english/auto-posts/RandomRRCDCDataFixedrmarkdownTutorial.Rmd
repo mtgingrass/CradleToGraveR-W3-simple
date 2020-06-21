@@ -1,5 +1,5 @@
 ---
-title: Random RR CDC Data Fixed rmarkdown Tutorial
+title: R CDC Data Fixed rmarkdown Tutorial
 date: 2020-03-17
 categories:
   - Random R
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/sSWHFXCBtQg/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=sSWHFXCBtQg">
-<img src="auto-posts/images/13-RandomR-GGPLOT2&DPLYREnhancedPlotsusinggapminderData.mp4.jpg">
+<img src="https://i.ytimg.com/vi/sSWHFXCBtQg/maxresdefault.jpg">
 </a>
 
 

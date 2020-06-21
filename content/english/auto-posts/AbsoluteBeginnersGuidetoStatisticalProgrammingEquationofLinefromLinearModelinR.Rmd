@@ -1,5 +1,5 @@
 ---
-title: Absolute Beginners Guide to Statistical ProgrammingEquation of Line from Linear Model in R
+title: Equation of Line from Linear Model in R
 date: 2020-04-22
 categories:
   - Absolute Beginners Guide to Statistical Programming
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/l8dBfjq6lR4/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=l8dBfjq6lR4">
-<img src="auto-posts/images/05-AbsoluteBeginnersGuidetoStatisticalProgramming-LinearRegressionLMusingRPlotLine.mp4.jpg">
+<img src="https://i.ytimg.com/vi/l8dBfjq6lR4/maxresdefault.jpg">
 </a>
 
 

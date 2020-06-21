@@ -1,5 +1,5 @@
 ---
-title: Absolute Beginners Guide to Statistical ProgrammingLinear Regression with R 01
+title: Linear Regression with R 01
 date: 2020-04-09
 categories:
   - Absolute Beginners Guide to Statistical Programming
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/2RePBoDNiMg/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=2RePBoDNiMg">
-<img src="auto-posts/images/03-AbsoluteBeginnersGuidetoStatisticalProgramming-LinearRegressionwithR01.mp4.jpg">
+<img src="https://i.ytimg.com/vi/2RePBoDNiMg/maxresdefault.jpg">
 </a>
 
 

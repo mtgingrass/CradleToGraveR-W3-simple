@@ -1,5 +1,5 @@
 ---
-title: Scraping ContentData Manipulation Twitter Scraper using R
+title: Data Manipulation Twitter Scraper using R
 date: 2019-08-02
 categories:
   - Scraping Content
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/SetpW7m45iw/hqdefault.jpg?sqp=-oaymwEZCNACELwB
 ---
 
 <a href="https://www.youtube.com/watch?v=SetpW7m45iw">
-<img src="auto-posts/images/27-RandomR-CradleToGraveRBlogdownHugoSiteProgressReport.mp4.jpg">
+<img src="https://i.ytimg.com/vi/SetpW7m45iw/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLBp93L7SinXiS8OtY8bxXE-CeAzPg">
 </a>
 
 

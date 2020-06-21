@@ -1,5 +1,5 @@
 ---
-title: Absolute Beginners GuideR Unzip Entire Directory of Files plyr package RStudio
+title: R Unzip Entire Directory of Files plyr package RStudio
 date: 2020-05-17
 categories:
   - Absolute Beginners Guide
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/DggiyPIas5E/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=DggiyPIas5E">
-<img src="auto-posts/images/45-AbsoluteBeginnersGuide-Residuals,Predictions,PlotsR.mp4.jpg">
+<img src="https://i.ytimg.com/vi/DggiyPIas5E/maxresdefault.jpg">
 </a>
 
 

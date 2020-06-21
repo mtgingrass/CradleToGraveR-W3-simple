@@ -1,5 +1,5 @@
 ---
-title: Absolute Beginners GuideBase R Plot Customized
+title: Base R Plot Customized
 date: 2020-02-27
 categories:
   - Absolute Beginners Guide
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/Ojt7eVnIV4c/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=Ojt7eVnIV4c">
-<img src="auto-posts/images/25-AbsoluteBeginnersGuide-factorleveldataframeR.webm.jpg">
+<img src="https://i.ytimg.com/vi/Ojt7eVnIV4c/maxresdefault.jpg">
 </a>
 
 

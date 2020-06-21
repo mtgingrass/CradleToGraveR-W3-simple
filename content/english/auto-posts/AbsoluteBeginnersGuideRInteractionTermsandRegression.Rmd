@@ -1,5 +1,5 @@
 ---
-title: Absolute Beginners GuideR Interaction Terms and Regression
+title: R Interaction Terms and Regression
 date: 2020-06-09
 categories:
   - Absolute Beginners Guide
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/vu81gBUkiek/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=vu81gBUkiek">
-<img src="auto-posts/images/48-AbsoluteBeginnersGuide-RSquaredAdjustedRSquaredRStudioLinearModels.mp4.jpg">
+<img src="https://i.ytimg.com/vi/vu81gBUkiek/maxresdefault.jpg">
 </a>
 
 

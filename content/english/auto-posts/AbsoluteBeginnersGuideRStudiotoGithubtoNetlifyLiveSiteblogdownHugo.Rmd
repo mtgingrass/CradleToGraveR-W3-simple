@@ -1,5 +1,5 @@
 ---
-title: Absolute Beginners GuideRStudio to Github to Netlify Live Site   blogdown Hugo
+title: RStudio to Github to Netlify Live Site   blogdown Hugo
 date: 2020-06-13
 categories:
   - Absolute Beginners Guide
@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg
 ---
 
 <a href="https://www.youtube.com/watch?v=vVHZ76OwPow">
-<img src="auto-posts/images/56-AbsoluteBeginnersGuide-HugoBlogdownTutorialwithRRStudioCustomizeMenusLayouts.webm.jpg">
+<img src="https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg">
 </a>
 
 
