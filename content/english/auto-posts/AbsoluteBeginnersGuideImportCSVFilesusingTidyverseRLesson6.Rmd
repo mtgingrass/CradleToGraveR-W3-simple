@@ -14,7 +14,7 @@ thumbnail: https://i.ytimg.com/vi_webp/Pa-DuVzrGMo/maxresdefault.webp
 ---
 
 <a href="https://www.youtube.com/watch?v=Pa-DuVzrGMo">
-<img src="https://i.ytimg.com/vi_webp/Pa-DuVzrGMo/maxresdefault.webp">
+<picture><img src="https://i.ytimg.com/vi_webp/Pa-DuVzrGMo/maxresdefault.webp"></picture>
 </a>
 
 

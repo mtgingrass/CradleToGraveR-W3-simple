@@ -49,15 +49,15 @@ inds <- match(sub('\\..*', '', basename(yt_dl_JSON)),
 inds3 <- match(sub('\\..*', '', basename(yt_dl_JSON)),
                sub('\\..*', '', basename(yt_dl_descrip_dir)))
 
-inds4 <- match(gsub(' ', '', sub('\\..*', '', basename(yt_dl_JSON))),
-               sub('\\..*', '', basename(yt_dl_images)))
+#inds4 <- match(gsub(' ', '', sub('\\..*', '', basename(yt_dl_JSON))),
+#               sub('\\..*', '', basename(yt_dl_images)))
 
 
 
 
 df_yt <- data.frame(JSON = yt_dl_JSON, 
                     VTT = yt_dl_vtt_cnvrt[inds],
-                    IMAGE = yt_dl_images[inds4],
+                    #IMAGE = yt_dl_images[inds4],
                     DESC = yt_dl_descrip_dir[inds3])
 
 # Use only if no NAs are in the row
@@ -119,8 +119,8 @@ draft: false"
                     "---",
                     "",
                     paste("<a href=\"", yt_json_file$webpage_url,'">', sep = ""),
-                    paste("<img src=", '"',
-                          image_path,'"', ">", sep = ""),
+                    paste("<picture><img src=", '"',
+                          image_path,'"', "></picture>", sep = ""),
                     paste0("</a>"),
                     #yt_json_file$description,
                     "\n\n", 
