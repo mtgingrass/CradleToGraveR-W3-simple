@@ -125,7 +125,8 @@ draft: false"
                     #yt_json_file$description,
                     "\n\n", 
                     #descript,
-                    "\n\n\n\n",
+                    "## Click the image to play video.",
+                    "\n",
                     vtt_txt,
                     sep = "\n")
   
