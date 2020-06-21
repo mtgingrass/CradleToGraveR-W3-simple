@@ -1,5 +1,5 @@
 ---
-title: Import CSV Files using Tidyverse   R Lesson 6
+title: Absolute Beginners Guide - Import CSV Files using Tidyverse   R Lesson 6
 date: 2019-08-10
 categories:
   - Absolute Beginners Guide
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=Pa-DuVzrGMo">
-<img src="https://www.cradletograver.com/auto-posts/images/07-AbsoluteBeginnersGuide-RNotebooks-Lesson5.mp4.jpg">
+<img src="auto-posts/images/07-AbsoluteBeginnersGuide-RNotebooks-Lesson5.mp4.jpg">
 </a>
 
 

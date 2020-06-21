@@ -42,14 +42,17 @@ yt_dl_images <- list.files(path = here("content","english","auto-posts","images"
 L1 <- yt_dl_JSON
 L2 <- yt_dl_vtt_cnvrt
 
-inds <- match(sub('\\..*', '', basename(yt_dl_JSON)), 
+
+inds <- match(sub('\\..*', '', basename(yt_dl_JSON)),
               sub('\\..*', '', basename(yt_dl_vtt_cnvrt)))
 
-inds3 <- match(sub('\\..*', '', basename(yt_dl_JSON)), 
+inds3 <- match(sub('\\..*', '', basename(yt_dl_JSON)),
                sub('\\..*', '', basename(yt_dl_descrip_dir)))
 
-inds4 <- match(gsub(' ', '', sub('\\..*', '', basename(yt_dl_JSON))), 
+inds4 <- match(gsub(' ', '', sub('\\..*', '', basename(yt_dl_JSON))),
                sub('\\..*', '', basename(yt_dl_images)))
+
+
 
 
 df_yt <- data.frame(JSON = yt_dl_JSON, 
@@ -72,7 +75,9 @@ for (index in seq_len(nrow(df_yt_partial)))
   #yt_descrip <- readtext(yt_dl_descrip_dir[index])
   #yt_descrip <- readtext(df_yt$DESC[index]) #yt_json_file$description
   
-  title <- paste("---\ntitle: ", gsub("[[:punct:]]", " ", yt_json_file$title), sep = "")
+  title <- paste("---\ntitle: ", gsub("[[:punct:]]", " ", yt_json_file$playlist),
+                 " - ",
+                 gsub("[[:punct:]]", " ", yt_json_file$title), sep = "")
   
   date_upload <- paste("date: ", 
                        substr(yt_json_file$upload_date,1,4),
@@ -89,6 +94,7 @@ for (index in seq_len(nrow(df_yt_partial)))
                     sep = "")
 
   image_path <- gsub(" ", "", df_yt$IMAGE[index])
+  #image_path <- yt_json_file$thumbnail
 
   yt_tags <- paste("tags:",
                          "Test","Test2",
@@ -111,7 +117,7 @@ vtt_txt <-  paste(readLines(df_yt_partial$VTT[index]), collapse="\n")
                     "---",
                     "",
                     paste("<a href=\"", yt_json_file$webpage_url,'">', sep = ""),
-                    paste("<img src=", '"https://www.cradletograver.com/auto-posts/images/',
+                    paste("<img src=", '"',"auto-posts/images/",
                           image_path,'"', ">", sep = ""),
                     paste0("</a>"),
                     #yt_json_file$description,
@@ -121,9 +127,7 @@ vtt_txt <-  paste(readLines(df_yt_partial$VTT[index]), collapse="\n")
                     vtt_txt,
                     sep = "\n")
   
-  
   yaml_tmp <- paste0(yaml_tmp, "End of file\n")
-  
   
   
   #Create the Rmd file

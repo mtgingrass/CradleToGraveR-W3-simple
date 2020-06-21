@@ -1,5 +1,5 @@
 ---
-title: factor level dataframe R
+title: Random R - factor level dataframe R
 date: 2020-02-18
 categories:
   - Random R
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=_FtCMgFFK60">
-<img src="https://www.cradletograver.com/auto-posts/images/10-RandomR-RTestifavectorcontainsagivenelement.mp4.jpg">
+<img src="auto-posts/images/10-RandomR-RTestifavectorcontainsagivenelement.mp4.jpg">
 </a>
 
 

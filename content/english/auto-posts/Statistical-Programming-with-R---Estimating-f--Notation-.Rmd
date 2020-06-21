@@ -1,5 +1,5 @@
 ---
-title: Statistical Programming with R   Estimating f  Notation 
+title: Absolute Beginners Guide - Statistical Programming with R   Estimating f  Notation 
 date: 2020-04-01
 categories:
   - Absolute Beginners Guide
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=Owi5GJWuV8o">
-<img src="https://www.cradletograver.com/auto-posts/images/33-AbsoluteBeginnersGuide-DTdatatableCOVID19coronavirussortwithR.mp4.jpg">
+<img src="auto-posts/images/33-AbsoluteBeginnersGuide-DTdatatableCOVID19coronavirussortwithR.mp4.jpg">
 </a>
 
 

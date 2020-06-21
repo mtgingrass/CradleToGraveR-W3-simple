@@ -1,5 +1,5 @@
 ---
-title: Unzip a tar gz file with Untar using R RStudio
+title: Random R - Unzip a tar gz file with Untar using R RStudio
 date: 2020-06-08
 categories:
   - Random R
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=-7s03AzEvag">
-<img src="https://www.cradletograver.com/auto-posts/images/24-RandomR-RHugoWebSiteLesson1.mp4.jpg">
+<img src="auto-posts/images/24-RandomR-RHugoWebSiteLesson1.mp4.jpg">
 </a>
 
 

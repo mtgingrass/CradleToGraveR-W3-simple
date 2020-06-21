@@ -1,5 +1,5 @@
 ---
-title: R Hugo Web Site Lesson 1
+title: Random R - R Hugo Web Site Lesson 1
 date: 2020-06-05
 categories:
   - Random R
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=oXFPOOrkogA">
-<img src="https://www.cradletograver.com/auto-posts/images/22-RandomR-here()andggsave'Iwillsetyourcomputeronfire'-Why.mp4.jpg">
+<img src="auto-posts/images/22-RandomR-here()andggsave'Iwillsetyourcomputeronfire'-Why.mp4.jpg">
 </a>
 
 

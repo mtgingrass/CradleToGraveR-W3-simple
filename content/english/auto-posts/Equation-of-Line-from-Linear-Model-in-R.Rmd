@@ -1,5 +1,5 @@
 ---
-title: Equation of Line from Linear Model in R
+title: Absolute Beginners Guide - Equation of Line from Linear Model in R
 date: 2020-04-22
 categories:
   - Absolute Beginners Guide
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=l8dBfjq6lR4">
-<img src="https://www.cradletograver.com/auto-posts/images/38-AbsoluteBeginnersGuide-RSSwithRStudio.mp4.jpg">
+<img src="auto-posts/images/38-AbsoluteBeginnersGuide-RSSwithRStudio.mp4.jpg">
 </a>
 
 

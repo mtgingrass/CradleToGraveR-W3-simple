@@ -1,5 +1,5 @@
 ---
-title: Residuals  Predictions  Plots R
+title: ggplot - Residuals  Predictions  Plots R
 date: 2020-05-14
 categories:
   - ggplot
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=DK11khHTMs0">
-<img src="https://www.cradletograver.com/auto-posts/images/12-ggplot-RPredictPlotModel2.mp4.jpg">
+<img src="auto-posts/images/12-ggplot-RPredictPlotModel2.mp4.jpg">
 </a>
 
 

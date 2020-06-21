@@ -1,5 +1,5 @@
 ---
-title: Scrape Twitter using R and RStudio   R Programming for Beginners Tutorial
+title: Scraping Content - Scrape Twitter using R and RStudio   R Programming for Beginners Tutorial
 date: 2019-08-02
 categories:
   - Scraping Content
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=GnN2yvGJWQc">
-<img src="https://www.cradletograver.com/auto-posts/images/1-RealLifeAnswers-WhoamIWhydoIteachR.mp4.jpg">
+<img src="auto-posts/images/1-RealLifeAnswers-WhoamIWhydoIteachR.mp4.jpg">
 </a>
 
 

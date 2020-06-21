@@ -1,5 +1,5 @@
 ---
-title: Linear Regression with R 01
+title: Absolute Beginners Guide - Linear Regression with R 01
 date: 2020-04-09
 categories:
   - Absolute Beginners Guide
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=2RePBoDNiMg">
-<img src="https://www.cradletograver.com/auto-posts/images/36-AbsoluteBeginnersGuide-StatisticalProgramming-ExpectedValue.mp4.jpg">
+<img src="auto-posts/images/36-AbsoluteBeginnersGuide-StatisticalProgramming-ExpectedValue.mp4.jpg">
 </a>
 
 

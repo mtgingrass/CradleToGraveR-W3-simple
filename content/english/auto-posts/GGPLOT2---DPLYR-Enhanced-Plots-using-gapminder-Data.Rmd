@@ -1,5 +1,5 @@
 ---
-title: GGPLOT2   DPLYR Enhanced Plots using gapminder Data
+title: Tidy - GGPLOT2   DPLYR Enhanced Plots using gapminder Data
 date: 2020-02-12
 categories:
   - Tidy
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=EbZvcQy174M">
-<img src="https://www.cradletograver.com/auto-posts/images/2-Tidy-DPLYRSelect&RenameColumns.webm.jpg">
+<img src="auto-posts/images/2-Tidy-DPLYRSelect&RenameColumns.webm.jpg">
 </a>
 
 

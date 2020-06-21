@@ -1,5 +1,5 @@
 ---
-title: Netlify Custom URL and New Post with RStudio Blogdown Hugo
+title: R Blogdown Site - Netlify Custom URL and New Post with RStudio Blogdown Hugo
 date: 2020-06-14
 categories:
   - R Blogdown Site
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=NFsNfVZaTto">
-<img src="https://www.cradletograver.com/auto-posts/images/4-RBlogdownSite-BlogdownHugotoGitHubwithRStudio.mp4.jpg">
+<img src="auto-posts/images/4-RBlogdownSite-BlogdownHugotoGitHubwithRStudio.mp4.jpg">
 </a>
 
 

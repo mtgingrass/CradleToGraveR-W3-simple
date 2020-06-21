@@ -1,5 +1,5 @@
 ---
-title: R Studio Shortcut Tips
+title: Random R - R Studio Shortcut Tips
 date: 2020-01-15
 categories:
   - Random R
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=UfbBDJogwyQ">
-<img src="https://www.cradletograver.com/auto-posts/images/06-RandomR-FirstflexdashboardusingR.webm.jpg">
+<img src="auto-posts/images/06-RandomR-FirstflexdashboardusingR.webm.jpg">
 </a>
 
 

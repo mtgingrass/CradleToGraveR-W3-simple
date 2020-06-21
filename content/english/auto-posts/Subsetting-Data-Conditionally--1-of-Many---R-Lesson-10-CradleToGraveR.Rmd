@@ -1,5 +1,5 @@
 ---
-title: Subsetting Data Conditionally  1 of Many   R Lesson 10 CradleToGraveR
+title: Absolute Beginners Guide - Subsetting Data Conditionally  1 of Many   R Lesson 10 CradleToGraveR
 date: 2019-08-28
 categories:
   - Absolute Beginners Guide
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=yHmD7g-lsr4">
-<img src="https://www.cradletograver.com/auto-posts/images/11-AbsoluteBeginnersGuide-SubsettingData(dataframe),1ofMany-RLesson9.webm.jpg">
+<img src="auto-posts/images/11-AbsoluteBeginnersGuide-SubsettingData(dataframe),1ofMany-RLesson9.webm.jpg">
 </a>
 
 

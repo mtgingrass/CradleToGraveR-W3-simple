@@ -1,5 +1,5 @@
 ---
-title: DPLYR Select   Rename Columns
+title: Tidy - DPLYR Select   Rename Columns
 date: 2019-09-20
 categories:
   - Tidy
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=jCFpdvIDrIs">
-<img src="https://www.cradletograver.com/auto-posts/images/15-ScrapingContent-FastestCOVID19ScrapeusingR-CompleteTutorialinunder30min.mp4.jpg">
+<img src="auto-posts/images/15-ScrapingContent-FastestCOVID19ScrapeusingR-CompleteTutorialinunder30min.mp4.jpg">
 </a>
 
 

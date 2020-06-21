@@ -1,5 +1,5 @@
 ---
-title: Plot COVID 19 coronavirus Data using R dplyr and ggplot
+title: Tidy - Plot COVID 19 coronavirus Data using R dplyr and ggplot
 date: 2020-03-23
 categories:
   - Tidy
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=ioqrwUaSde8">
-<img src="https://www.cradletograver.com/auto-posts/images/5-Tidy-EndtoEndCovid-19AnalysiswithR-ImportData(1).webm.jpg">
+<img src="auto-posts/images/5-Tidy-EndtoEndCovid-19AnalysiswithR-ImportData(1).webm.jpg">
 </a>
 
 

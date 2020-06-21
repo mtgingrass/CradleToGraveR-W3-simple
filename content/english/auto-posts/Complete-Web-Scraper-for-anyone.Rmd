@@ -1,5 +1,5 @@
 ---
-title: Complete Web Scraper for anyone
+title: Scraping Content - Complete Web Scraper for anyone
 date: 2019-09-21
 categories:
   - Scraping Content
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=o4ds2k9XJTU">
-<img src="https://www.cradletograver.com/auto-posts/images/02-ScrapingContent-ScrapeTwitterusingRandRStudioRProgrammingforBeginnersTutorial.webm.jpg">
+<img src="auto-posts/images/02-ScrapingContent-ScrapeTwitterusingRandRStudioRProgrammingforBeginnersTutorial.webm.jpg">
 </a>
 
 

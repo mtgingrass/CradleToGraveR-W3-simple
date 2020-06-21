@@ -1,5 +1,5 @@
 ---
-title: CradleToGraveR Live Stream   Unzip Directory of Files
+title: Random R - CradleToGraveR Live Stream   Unzip Directory of Files
 date: 2020-05-17
 categories:
   - Random R
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=irOsVaJFdVs">
-<img src="https://www.cradletograver.com/auto-posts/images/18-RandomR-PlotCOVID19coronavirusDatausingRdplyrandggplot.webm.jpg">
+<img src="auto-posts/images/18-RandomR-PlotCOVID19coronavirusDatausingRdplyrandggplot.webm.jpg">
 </a>
 
 

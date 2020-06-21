@@ -1,5 +1,5 @@
 ---
-title: GOOD AUDIO   Install R   RStudio on Windows   First Script 2019
+title: Random R - GOOD AUDIO   Install R   RStudio on Windows   First Script 2019
 date: 2019-09-20
 categories:
   - Random R
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=R7wbCGXKAok">
-<img src="https://www.cradletograver.com/auto-posts/images/7-RBlogdownSite-CradleToGraveRBlogdownHugoSiteProgressReport.mp4.jpg">
+<img src="auto-posts/images/7-RBlogdownSite-CradleToGraveRBlogdownHugoSiteProgressReport.mp4.jpg">
 </a>
 
 

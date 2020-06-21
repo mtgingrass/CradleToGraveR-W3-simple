@@ -1,5 +1,5 @@
 ---
-title: R Test if a vector contains a given element
+title: Random R - R Test if a vector contains a given element
 date: 2020-02-04
 categories:
   - Random R
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=gHJzrHFJGNw">
-<img src="https://www.cradletograver.com/auto-posts/images/07-RandomR-ScrapeRedditCommentsRExtractoR.mp4.jpg">
+<img src="auto-posts/images/07-RandomR-ScrapeRedditCommentsRExtractoR.mp4.jpg">
 </a>
 
 

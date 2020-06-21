@@ -1,5 +1,5 @@
 ---
-title: R CDC Data Fixed rmarkdown Tutorial
+title: Scraping Content - R CDC Data Fixed rmarkdown Tutorial
 date: 2020-03-17
 categories:
   - Scraping Content
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=sSWHFXCBtQg">
-<img src="https://www.cradletograver.com/auto-posts/images/06-ScrapingContent-COVID-19CoronavirusanalysiswithRConcatenateStringswithDate&paste0.webm.jpg">
+<img src="auto-posts/images/06-ScrapingContent-COVID-19CoronavirusanalysiswithRConcatenateStringswithDate&paste0.webm.jpg">
 </a>
 
 

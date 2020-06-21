@@ -1,5 +1,5 @@
 ---
-title: R Programming Twitter Scraper
+title: Scraping Content - R Programming Twitter Scraper
 date: 2019-08-02
 categories:
   - Scraping Content
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=AFTw_6dVOXY">
-<img src="https://www.cradletograver.com/auto-posts/images/01-ScrapingContent-DataManipulationTwitterScraperusingR.webm.jpg">
+<img src="auto-posts/images/01-ScrapingContent-DataManipulationTwitterScraperusingR.webm.jpg">
 </a>
 
 

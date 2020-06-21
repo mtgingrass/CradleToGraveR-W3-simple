@@ -1,5 +1,5 @@
 ---
-title: Sequence  Repeat and Sample   R Lesson 7
+title: Absolute Beginners Guide - Sequence  Repeat and Sample   R Lesson 7
 date: 2019-08-13
 categories:
   - Absolute Beginners Guide
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=UkqZuSy1Zso">
-<img src="https://www.cradletograver.com/auto-posts/images/08-AbsoluteBeginnersGuide-ImportCSVFilesusingTidyverse-RLesson6.webm.jpg">
+<img src="auto-posts/images/08-AbsoluteBeginnersGuide-ImportCSVFilesusingTidyverse-RLesson6.webm.jpg">
 </a>
 
 

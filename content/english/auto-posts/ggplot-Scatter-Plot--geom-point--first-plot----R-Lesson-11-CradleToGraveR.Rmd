@@ -1,5 +1,5 @@
 ---
-title: ggplot Scatter Plot  geom point  first plot    R Lesson 11 CradleToGraveR
+title: ggplot - ggplot Scatter Plot  geom point  first plot    R Lesson 11 CradleToGraveR
 date: 2019-09-16
 categories:
   - ggplot
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=gCAwHbmOqCo">
-<img src="https://www.cradletograver.com/auto-posts/images/8-COVID-19Analysis-COVIDCSVDataUpdatePlot-datafromEuropeanCenterforDiseaseandPrevention.mp4.jpg">
+<img src="auto-posts/images/8-COVID-19Analysis-COVIDCSVDataUpdatePlot-datafromEuropeanCenterforDiseaseandPrevention.mp4.jpg">
 </a>
 
 

@@ -1,5 +1,5 @@
 ---
-title: R Predict Plot Model 2
+title: ggplot - R Predict Plot Model 2
 date: 2020-04-27
 categories:
   - ggplot
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=b0N6bdvM1aM">
-<img src="https://www.cradletograver.com/auto-posts/images/11-ggplot-LinearRegressionLMusingRPlotLine.mp4.jpg">
+<img src="auto-posts/images/11-ggplot-LinearRegressionLMusingRPlotLine.mp4.jpg">
 </a>
 
 

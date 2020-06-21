@@ -1,5 +1,5 @@
 ---
-title: COVID CSV Data Update Plot   data from European Center for Disease and Prevention
+title: Tidy - COVID CSV Data Update Plot   data from European Center for Disease and Prevention
 date: 2020-03-31
 categories:
   - Tidy
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=px_Cc4Axj7M">
-<img src="https://www.cradletograver.com/auto-posts/images/7-Tidy-PlotCOVID19coronavirusDatausingRdplyrandggplot.webm.jpg">
+<img src="auto-posts/images/7-Tidy-PlotCOVID19coronavirusDatausingRdplyrandggplot.webm.jpg">
 </a>
 
 

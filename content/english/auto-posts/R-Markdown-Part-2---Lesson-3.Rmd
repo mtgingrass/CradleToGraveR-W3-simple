@@ -1,5 +1,5 @@
 ---
-title: R Markdown Part 2   Lesson 3
+title: Absolute Beginners Guide - R Markdown Part 2   Lesson 3
 date: 2019-08-02
 categories:
   - Absolute Beginners Guide
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=j7Xo7xFA3Bg">
-<img src="https://www.cradletograver.com/auto-posts/images/04-AbsoluteBeginnersGuide-RMarkdown-Lesson2.mp4.jpg">
+<img src="auto-posts/images/04-AbsoluteBeginnersGuide-RMarkdown-Lesson2.mp4.jpg">
 </a>
 
 

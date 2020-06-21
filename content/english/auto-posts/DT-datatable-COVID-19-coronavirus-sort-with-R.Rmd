@@ -1,5 +1,5 @@
 ---
-title: DT datatable COVID 19 coronavirus sort with R
+title: Tidy - DT datatable COVID 19 coronavirus sort with R
 date: 2020-03-24
 categories:
   - Tidy
@@ -13,7 +13,7 @@ draft: false
 ---
 
 <a href="https://www.youtube.com/watch?v=ZGyr199lS9U">
-<img src="https://www.cradletograver.com/auto-posts/images/6-Tidy-KableTablewithRandCoronavirusCOVID19DeathRates.webm.jpg">
+<img src="auto-posts/images/6-Tidy-KableTablewithRandCoronavirusCOVID19DeathRates.webm.jpg">
 </a>
 
 
