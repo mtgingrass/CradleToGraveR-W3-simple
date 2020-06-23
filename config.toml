@@ -10,6 +10,7 @@ hasCJKLanguage = true # has chinese/japanese/korean ?
 [markup.goldmark.renderer]
 unsafe= true
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown", "_files$", "_cache$"]
+
 [languages.en]
 weight = 0
 languageName = "English"
@@ -80,8 +81,8 @@ contentDir = "content/chinese"
 
 [params]
     welcomemessage = false #if set true. The home page will display the content of _index.md 
-    authorandlicense = true 
-    authorimgurl = "https://raw.githubusercontent.com/jesselau76/hugo-w3-simple/master/exampleSite/images/johndoe.jpg" #if authorandlicense set true, this one must be set too
+    authorandlicense = false 
+    authorimgurl = "" #if authorandlicense set true, this one must be set too
     
     relatedPosts = true
     backtotop = true

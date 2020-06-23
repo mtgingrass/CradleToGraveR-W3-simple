@@ -4,6 +4,10 @@
 #```
 #or set a global option to eval = false
 
+#TODO: duplicate posts due to dupilicate playlists. Need to make a category list and post once
+#TODO: check if youtube link is .webp and if so, use local .jpg file
+
+
 library(jsonlite)
 library(readtext)
 library(ymlthis)
