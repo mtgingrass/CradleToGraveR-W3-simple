@@ -17,7 +17,7 @@ library(readr)
 
 base_yt_url <- "c:/ytdl/CradleToGraveR/"
 
-#youtube-dl base directory
+
 yt_dl_JSON <- list.files(path = base_yt_url, 
                         pattern = "*.json",
                       recursive = TRUE,
@@ -27,7 +27,6 @@ yt_dl_descrip_dir <- list.files(path = base_yt_url,
                         pattern = "*.description$",
                         recursive = TRUE,
                         full.names = TRUE)
-
 
 yt_dl_vtt_cnvrt <- list.files(path = base_yt_url,
                                pattern = "*.en.txt$",
@@ -49,6 +48,8 @@ inds <- match(sub('\\..*', '', basename(yt_dl_JSON)),
 inds3 <- match(sub('\\..*', '', basename(yt_dl_JSON)),
                sub('\\..*', '', basename(yt_dl_descrip_dir)))
 
+
+# Not working I think due to spaces in names. 
 #inds4 <- match(gsub(' ', '', sub('\\..*', '', basename(yt_dl_JSON))),
 #               sub('\\..*', '', basename(yt_dl_images)))
 
@@ -77,8 +78,8 @@ for (index in seq_len(nrow(df_yt_partial)))
   
   title <- paste(gsub("[[:punct:]]", " ", yt_json_file$title), sep = "")
   
-  rmd_filename <- paste(gsub("[[:punct:]]", " ", yt_json_file$playlist),
-                                   gsub("[[:punct:]]", " ", yt_json_file$title), sep = "")
+  rmd_filename <- gsub("[[:space:]]", "", paste(gsub("[[:punct:]]", " ", yt_json_file$playlist),
+                                   gsub("[[:punct:]]", " ", yt_json_file$title), sep = ""))
   date_upload <- paste("date: ", 
                        substr(yt_json_file$upload_date,1,4),
                        "-",
@@ -131,12 +132,13 @@ draft: false"
                     sep = "\n")
   
   yaml_tmp <- paste0(yaml_tmp, "End of file\n")
-  
+
   
   #Create the Rmd file
   write(yaml_tmp,
-        file = paste("C:\\Users\\markg\\Documents\\CradleToGraveR-W3-simple2\\content\\english\\auto-posts\\",
-                     gsub("[[:space:]]", "", rmd_filename), ".Rmd", sep=""), 
+        file = paste(here("content","english","auto-posts"),
+                     "/",
+                     rmd_filename, ".Rmd", sep=""), 
                      append = FALSE)
   
 }

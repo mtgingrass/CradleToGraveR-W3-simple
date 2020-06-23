@@ -1,0 +1,245 @@
+---
+title: Create Dynamic Rmd Files from R Script   Auto create Hugo and Blogdown Posts 
+date: 2020-06-22
+categories:
+  - Random R
+tags:
+  - Test
+  - Test2
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/nBIzgdUBDOk/maxresdefault.jpg
+---
+
+
+
+<p><a href="https://www.youtube.com/watch?v=nBIzgdUBDOk">
+<picture><img src="https://i.ytimg.com/vi/nBIzgdUBDOk/maxresdefault.jpg"></picture>
+</a></p>
+<div id="click-the-image-to-play-video." class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+hey welcome back to the channel today I’m gonna teach you how to create
+dynamic RMD files and so dynamic RMD files will help us in a few ways one way
+is I’m gonna automate the shell of how my blogs are going to look with the tags
+and the categories everything that you want in there
+I’m you could put whatever Yam will code
+you want in there any type of headers or
+make it a template it doesn’t matter but the point is if you have external
+documents that you want to convert to our MD files this particular tutorial
+might help you in that case so I created a blank project so I just did file new
+project empty directory set it up and just to be a little bit more realistic
+let’s create a let’s set this up as a hugo site you don’t have to do this you
+can create any project you want and do this but I’m I’m gonna do it with the
+hugo site just because to kind of give it a real aspect to it so i have red up
+here is the hugo themes i’m gonna select this theme right here go to the home
+page or the download page which should get you to a github site i’m gonna copy</p>
+<p>00:01
+this author and a repository name of this Hugo site so again if you haven’t
+caught up with the Hugo playlist that I have start with start start with the
+first tutorial and you’ll probably get a
+better understanding of what we’re doing here but anyways we’re gonna create a
+site that looks kind of like this we’re just gonna copy this and we’re gonna go
+back to our studio somewhere here our studio and I’m not gonna paste it yet
+I’ll paste it just just one moment so I’m gonna use this particular method for
+creating the blog down site hugo site because i’ve run into problems with the
+other methods mostly due to the config tamil file being in different places
+with these new projects so for some reason it works best if i use this right
+here so blog down calling : new site and then in the theme we’re gonna say</p>
+<p>00:02
+basically set equal to what we just copied i’m gonna erase all those spaces
+though and then let’s put in some other parameters here and i’ve got a little
+cheat sheet that i’m using me to hit enter parameters sample equals true and
+then d directories equals true and then finally to - yeah mall equals true let’s
+see if that works error up theme you know I’ve done this multiple times where
+the biggest mistake I make is I don’t spell things correctly so theme and hit
+enter on that so it’s downloading the theme it’s doing this thing they should
+probably render and show here we go so we have this already set up we have an
+IP address we can copy this and don’t forget this is not the point of this
+tutorial but I’m just still kind of setting you up for what we’re doing so
+here’s our here’s our nice little blog setup here actually I kind of like it
+mm-hmm that’s interest enough so click on one</p>
+<p>00:03
+and you can get to the actual blog site go back that’s what we have right but I
+want to create another post on this so let’s do that but I’m gonna do it
+dynamically so first I’m going to create an R script so file new file R script
+make sure everything’s good so we have an R script and what’s this our script
+gonna do it’s basically just gonna create our post so remember if you go to
+files and you go to content posts this is these are where the posts are that
+you just saw so if I go back to here you know all these posts markdown syntax if
+I click on it you’d get to markdown - syntax right up here but anyways that
+should be right here so this RMD file let’s take a quick look at it we want it
+to look something like this let’s say we wanted to just create a
+basic template what did I do oh okay so here’s the syntax right here
+what does this one up close that don’t need it alright so we basically need to</p>
+<p>00:04
+replicate this so there’s a couple of ways to do this and I think we’re going
+to start off with this method it’s gonna
+be pretty for pretty laid-back way to do it probably not the best way but I want
+to show you how to do this right now so I’m gonna just paste that here in my R
+syntax just as a reference I’m gonna I’m
+gonna ctrl shift C to comment it all out
+because remember this is an R script not an RMD file I’m going to create an RMD
+file so let’s see so basically what we want to do I’m
+gonna I’m gonna bring in a library called here just to help me with paths
+you know like if I just type in down here now I can use here and it tells me
+what my current path is and it’s gonna set like the here function is always
+going to be this path the dynamic RMD files so I’m I can always start right
+here and I know that I want to write something to the posts right so content
+posts and here it is and I’ll show you how to easily get to that with here</p>
+<p>00:05
+function you just do here and then a quote you say content because remember
+it starts at the RMD file dynamic CarMD files content posts and I think that was
+it hit enter and and it brings you there so that’s that’s a little shortcut for
+us alright so what we want to do we want to create some sort of yeah mol string
+and that string is going to contain all the stuff that we need which is this
+right here so let’s just kind of put that in there now don’t forget we can
+we’re gonna make things dynamic here in a moment so let me give you the basic
+basic version as if we’re just gonna copy this exactly in fact that date has
+to be over because the ML code is very specific with whitespace like very
+specific don’t have a space after any of these like it’s it’s very specific so
+let’s just create something just to see that it works dot dot dot or dash dash
+dash right and then why well we want to put a return character right because if
+you look at number one here this row it’s got the three dashes and then a</p>
+<p>00:06
+return ignore the comments of course one
+way to do that let’s just put everything
+into a paste so paste and what I’m gonna do is I would say my separator after
+each one of these little quotes is going
+to be equal to a new line so that’s what that equals so if I do that we can set
+that UML to equal that so if I come down here I can just say what is my mo type
+it in hit enter and you see the dashes and no new line yet but now let’s
+pretend okay when I hit enter here we’re gonna add more to this so I’m gonna do
+comma and I’m just gonna type in the word date colon a space quote comma so
+now if I do control a on line 14 or control-enter we get an error what’s my air
+[Music] paste comma I’ve got two commas in a row there it is
+alright let’s try it again there we go so yeah Moe YAML and I’m just showing</p>
+<p>00:07
+you kind of like what’s going on here the backslash n did not work that’s
+interesting in itself oh oh oh I am so sorry so what you want to do is you want
+to cat this out even though it doesn’t show it it’s showing you like the the
+actual string that it is and it is that string backslash end date but if we do
+cat and we type in yeah mo that’s where we see what it would look like to the
+end user to the very end where we’re gonna put this now you see that it
+worked with the the actual backslash n so that’s very confusing when you use
+them paste it’s going to give you the literal string just as it you type it
+out which is what we want because when it finally does its thing to the next
+pipe you know pipeline activity it’ll actually be what I just showed you here
+with the actual enter so now we want description well we could put in a date
+let’s you know what let’s let’s automate putting in a date so let’s just say</p>
+<p>00:08
+today’s date I don’t know is there a system file for that system date system
+date so let’s just say today is equal to system date hit enter now we have some
+sort of date there now if we do if we put in the word date here right and then
+comma because we can continue to add to this paste remember that this backslash
+n is gonna apply to every single aspect of this right so this is not gonna work
+so if I if I do gamble now if I hit enter on that oh I also say to the date
+type that and error error error error date date to date cannot coerce type
+closure to vector of type character what does that even mean let’s do this let’s
+do as dot character for system date and see if that works cuz I’m not sure it
+looks like the same error I didn’t come into this prepared</p>
+<p>00:09
+accommodate what’s wrong with my date or today I’m an idiot
+it’s today so let’s try that let’s get rid of this ass character and there we
+go let’s try it one more time there we go back I’m just showing you again this
+is not gonna work so yeah mo again if we just type that in it’s not gonna look
+correct let’s do cat and then we’re gonna
+basically see what it looks like to the end user and you see that date and the
+actual date are on two different lines we don’t want that so what we’re gonna
+do is within soon with inside of this paste we’re gonna do another paste but
+we’ll call this one paste is zero so we want date so we’re gonna do paste zero
+open parenthesis and then I’ll add in the date to that and in close
+parentheses comma so this entire line 17 is acting as if it’s one entity so its
+first gonna execute date and today and that zero means there is no separator
+whatsoever there’s no backslash and there’s no space there’s nothing so just
+concatenate that’s all it’s doing it’s concatenate in that lab for us and</p>
+<p>00:10
+that’s it so now if I do command enter on that yeah mo and we do cat yeah well
+what you should get the three dashes the date and then that’s it but we have to
+continue you know we have more than date let’s add I’m not gonna do the whole
+thing I’m just gonna show you a couple more let’s do description and you can
+imagine that’s in quotes by the way so let’s do quote description colon space
+don’t get space comma now again if you’re gonna add the description without
+a separator like the backslash n let’s just do another pace zero so paste 0 we
+want description and what we’re gonna have is this is my script that’s my mo
+code and then close parentheses that face 0 comma and then let’s just close
+this out we’re gonna say dash dash dash comma right so now yeah mo boom that
+worked no errors sorry about the other errors cat yeah mo we have a full yeah</p>
+<p>00:11
+mo sort of you know you can add to this and imagine just like I used the
+variable for the date which was today your description could be coming from
+another file could be coming from somewhere
+could be dynamically created so that’s the whole point I’m trying to
+dynamically create Yemma files now the next thing we want to do is write this
+to a file basically so let’s just do that and we’ll go from there
+so back back over here alright so what we want to do is just basically do a
+write right to file function which is just plain right WRI T and what do I
+want to write I want to write that Y mo where do I want to so that’s the the
+string I’m bringing in is y mo what we’re just defined and what’s our file
+equal to basically we want to file to equal somewhere in the post right so let
+me just check I don’t think you can have spaces or anything in there so we’re</p>
+<p>00:12
+gonna do file equals and I’m going to say paste 0 again I love the space 0 and
+paste I’m gonna say here remember we have that here function that I showed
+you here we want to under content comma pose was it plural or not let’s just
+find out content post singular and lower
+case okay that’s where I want it but I’m
+also gonna paste in the actual file name
+so you can make that dynamic as well but we’re gonna call this file name let me
+say forward slash test dot R MD and then
+I’ll also do in a pend equals false so I want to bring it’s gonna overwrite it
+every time and let’s just see if this works I think that should do the trick
+I’m gonna do command enter on that rendering I wrote it the fact that it
+rendered a is good because I didn’t tell it to but because we’re in a Hugo
+project right now blog down Hugo Project</p>
+<p>00:13
+it automatically rendered it so let’s go
+to that arm D file test arm D boom right here
+and there we go this is this is Midas script it created this camel file now
+you can create a new one every single day with because it has today in here so
+if you run the script every day it’ll be a new day a new
+a new file I guess it’ll just make a little bit more sense if now don’t get
+me wrong as this gets more complicated you might want to separate out and have
+more variables but after the - - - we can add more content we can say I’m
+gonna do another backslash and an extra one so a separator plus another
+backslash in just to give it some space and then I’ll say I’m gonna say hashtag
+head in one so I’m gonna set this template up that’s what I want
+comma oops I didn’t want to save that but you could save this document of course
+so let’s rerun the ammo boom rerun the right and it’s gonna overwrite something</p>
+<p>00:14
+failed I think a non-empty title element
+let’s see what it looks like so test out our MD what did I do wrong oh there is
+no title element so apparently you need to have a title in this ya mole for this
+Hugo blog down to work which makes sense because that’s how it works so but you
+can see that the head and one is there let’s just add that title because it
+said so and for fun in fact let me show you another thing you can add the title
+up here of course you can do title equals in quotes right we could do that
+but and you should because this is your script for doing this you can go
+actually to this markdown syntax right here in the test and you can actually
+add it and you’ll say title now this will be overwritten though so if you
+don’t do it in your script it’s going to be a written test title and when you
+save this which it should already be saved because you wrote it to file
+already that’s why it’s over here on the bottom right now when I go to test out</p>
+<p>00:15
+our MD which is this that’s fine I don’t know if it rewrote this test out HTML
+but remember we’re serving this site right now if I could find it right here
+let’s see if we go back to site test title is right here it showed up click
+on it and here’s our heading right now it doesn’t mean March but that’s what I
+wanted to show you was how you can dynamically create these yellow files
+and now remember if this test our MD you can delete it I can just completely
+delete it let’s let’s go ahead and do that I don’t need this one so test out
+our MD delete test our HTML to click on delete yes gone right oh good
+thing I have this script that creates automatic Rd files for me so let’s just
+rerun the script boom all of a sudden my test out RMB is there and my test out
+HTML which is what Hugo is gonna use to build the website so that’s all there is
+to it I really hope that this was helpful a little long-winded but I think
+the process you learned a little bit about paste and paste zero how yellow</p>
+<p>00:16
+files work a little bit better how to dynamically create Rd files I imagine
+most of those strings are variables that you’ve gathered from somewhere else the
+report the actual data that you’re using instead of you know something else so I
+appreciate you guys listening to these videos and like and share and subscribe
+if you want to hear moreEnd of file</p>
+</div>

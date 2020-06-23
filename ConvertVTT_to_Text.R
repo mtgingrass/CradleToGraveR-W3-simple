@@ -8,6 +8,7 @@ base_yt_url <- "c:/ytdl/CradleToGraveR/"
 project_image_path <- "C:/Users/markg/Documents/CradleToGraveR-W3-simple2/content/english/auto-posts/images"
 
 
+
 #get the vtt (subtitle) information and call python script
 # to convert the vtt to a plain text file. 
 
@@ -29,7 +30,7 @@ thumb_files <- list.files(path = base_yt_url,
            full.names = TRUE)
 
 file.copy(from = thumb_files, 
-          to = project_image_path)
+          to = project_image_path, overwrite = FALSE)
 
 thumb_files <- list.files(path = base_yt_url,
                           pattern = "*jpg$",
@@ -37,7 +38,7 @@ thumb_files <- list.files(path = base_yt_url,
                           full.names = TRUE)
 
 file.copy(from = thumb_files, 
-          to = project_image_path)
+          to = project_image_path, overwrite = FALSE)
 
 
 # Run .bat file first to strip spaces in filenames
@@ -47,7 +48,7 @@ perm_wd <- "C:/Users/markg/Documents/CradleToGraveR-W3-simple2"
 setwd(here("content","english","auto-posts","images"))
 shell.exec("strip_spaces2.bat")
 # allow time for first shell command to process
-Sys.sleep(5)
+Sys.sleep(10)
 shell.exec("rename_webp_to_jpg.bat")
 setwd(perm_wd)
 
