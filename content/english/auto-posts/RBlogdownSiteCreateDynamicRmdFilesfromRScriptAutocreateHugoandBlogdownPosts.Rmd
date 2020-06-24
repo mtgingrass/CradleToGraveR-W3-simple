@@ -18,44 +18,9 @@ thumbnail: https://i.ytimg.com/vi/nBIzgdUBDOk/maxresdefault.jpg
 </a>
 
 
+
 ## Click the image to play video.
 
-### Code Used in Video
-
-
-```{r eval = FALSE}
-#Example YAML to use as a reference
-
-# ---
-# date: "2020-05-11"
-# description: Markdown Syntax test page
-# tags:
-#   - markdown
-# - css
-# - html
-# - themes
-# title: Markdown Syntax
-# ---
-
-
-library(here) #great for working with directory paths
-
-today <- Sys.Date()
-yaml <- paste("---",
-              paste0("date: ",today),
-              paste0('description: ',"THIS IS MY DESCRIPT"),
-              "---",
-              "\n",
-              "# Heading 1",
-              sep = "\n")
-
-
-write(yaml, 
-      file = paste0(here("content","post"), "/test.Rmd"),
-      append = FALSE)
-
-
-```
 
 
 00:00

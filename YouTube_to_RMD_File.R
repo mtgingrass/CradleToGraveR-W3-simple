@@ -15,6 +15,7 @@ library(stringr)
 library(here)
 library(stringi)
 library(readr)
+library(tools)
 
 #set base URL where you downloadd all of the content from youtube-dl
 #e.g. "c:/ytdl/CradleToGraveR/"
@@ -40,10 +41,7 @@ yt_dl_vtt_cnvrt <- list.files(path = base_yt_url,
 yt_dl_images <- list.files(path = here("content","english","auto-posts","images"),
                               pattern = "*.jpg",
                               recursive = FALSE,
-                              full.names = FALSE)
-
-L1 <- yt_dl_JSON
-L2 <- yt_dl_vtt_cnvrt
+                              full.names = TRUE)
 
 
 inds <- match(sub('\\..*', '', basename(yt_dl_JSON)),
@@ -53,22 +51,24 @@ inds3 <- match(sub('\\..*', '', basename(yt_dl_JSON)),
                sub('\\..*', '', basename(yt_dl_descrip_dir)))
 
 
-# Not working I think due to spaces in names. 
-#inds4 <- match(gsub(' ', '', sub('\\..*', '', basename(yt_dl_JSON))),
-#               sub('\\..*', '', basename(yt_dl_images)))
+inds4 <- match(gsub(' ', '', sub('\\..*', '', basename(yt_dl_JSON))),
+               sub('\\..*', '', basename(yt_dl_images)))
 
-
+inds5 <- match(gsub(' ', '', sub('\\..*', '', basename(yt_dl_JSON))),
+               gsub("[[:space:]]", "", sub('\\..*', '', basename(thumb_files2$full_path))))
 
 
 df_yt <- data.frame(JSON = yt_dl_JSON, 
                     VTT = yt_dl_vtt_cnvrt[inds],
-                    #IMAGE = yt_dl_images[inds4],
-                    DESC = yt_dl_descrip_dir[inds3])
+                    IMAGE = yt_dl_images[inds4],
+                    DESC = yt_dl_descrip_dir[inds3],
+                    thumbnail_orig = thumb_files2$full_path[inds5])
 
-# Use only if no NAs are in the row
-df_yt_partial <- df_yt[complete.cases(df_yt),]
+# replace NA with empty string
+df_yt$VTT[is.na(df_yt$VTT)] <- "No VTT Found" 
 
-for (index in seq_len(nrow(df_yt_partial)))
+
+for (index in seq_len(nrow(df_yt)))
 {
   #Get the json file
   yt_json_file <- fromJSON(df_yt_partial$JSON[index])
@@ -99,8 +99,12 @@ for (index in seq_len(nrow(df_yt_partial)))
                     sep = "")
 
   #image_path <- gsub(" ", "", df_yt$IMAGE[index])
-  image_path <- yt_json_file$thumbnail
-
+#  image_path <- yt_json_file$thumbnail
+  ifelse(file_ext((yt_json_file$thumbnail)) == ".webp",
+     image_path <- df_yt$IMAGE[index],
+     image_path <- yt_json_file$thumbnail)
+  
+  
   yt_tags <- paste("tags:",
                          "Test","Test2",
                          sep = "\n  - ")
@@ -120,7 +124,7 @@ draft: false"
                     yt_tags,
                     "",
                     w3yaml,
-                    paste0("thumbnail: ", yt_json_file$thumbnail),
+                    paste0("thumbnail: ", image_path),
                     "---",
                     "",
                     paste("<a href=\"", yt_json_file$webpage_url,'">', sep = ""),

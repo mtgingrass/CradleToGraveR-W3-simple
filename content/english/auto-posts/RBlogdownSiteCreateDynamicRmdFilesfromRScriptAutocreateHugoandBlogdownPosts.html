@@ -20,37 +20,6 @@ thumbnail: https://i.ytimg.com/vi/nBIzgdUBDOk/maxresdefault.jpg
 </a></p>
 <div id="click-the-image-to-play-video." class="section level2">
 <h2>Click the image to play video.</h2>
-<div id="code-used-in-video" class="section level3">
-<h3>Code Used in Video</h3>
-<pre class="r"><code>#Example YAML to use as a reference
-
-# ---
-# date: &quot;2020-05-11&quot;
-# description: Markdown Syntax test page
-# tags:
-#   - markdown
-# - css
-# - html
-# - themes
-# title: Markdown Syntax
-# ---
-
-
-library(here) #great for working with directory paths
-
-today &lt;- Sys.Date()
-yaml &lt;- paste(&quot;---&quot;,
-              paste0(&quot;date: &quot;,today),
-              paste0(&#39;description: &#39;,&quot;THIS IS MY DESCRIPT&quot;),
-              &quot;---&quot;,
-              &quot;\n&quot;,
-              &quot;# Heading 1&quot;,
-              sep = &quot;\n&quot;)
-
-
-write(yaml, 
-      file = paste0(here(&quot;content&quot;,&quot;post&quot;), &quot;/test.Rmd&quot;),
-      append = FALSE)</code></pre>
 <p>00:00
 hey welcome back to the channel today I’m gonna teach you how to create
 dynamic RMD files and so dynamic RMD files will help us in a few ways one way
@@ -273,5 +242,4 @@ most of those strings are variables that you’ve gathered from somewhere else t
 report the actual data that you’re using instead of you know something else so I
 appreciate you guys listening to these videos and like and share and subscribe
 if you want to hear moreEnd of file</p>
-</div>
 </div>

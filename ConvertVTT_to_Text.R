@@ -43,6 +43,8 @@ file.copy(from = thumb_files,
 
 # Run .bat file first to strip spaces in filenames
 # this is a terrible, terrible, terrible method to use
+# TODO: I need to re-write the .bat file to go to the full path instead of doing
+# in in R. 
 
 perm_wd <- "C:/Users/markg/Documents/CradleToGraveR-W3-simple2"
 setwd(here("content","english","auto-posts","images"))
@@ -51,4 +53,7 @@ shell.exec("strip_spaces2.bat")
 Sys.sleep(10)
 shell.exec("rename_webp_to_jpg.bat")
 setwd(perm_wd)
+
+thumb_files2 <- data.frame(full_path = thumb_files,
+                              base_name =  sub('\\..*', '',basename(thumb_files)))
 
