@@ -4,8 +4,2215 @@ date: 2019-08-02
 categories:
   - Absolute Beginners Guide
 tags:
-  - Test
-  - Test2
+  - r studio
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi_webp/sZo_Ig002Bw/maxresdefault.webp
+---
+
+<a href="https://www.youtube.com/watch?v=sZo_Ig002Bw">
+<picture><img src="https://i.ytimg.com/vi_webp/sZo_Ig002Bw/maxresdefault.webp"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+hi we're gonna download our into our studio and I'm gonna get you started on
+your first couple of scripts really basic but let's get right to it so just
+go to Google and click on download R or type that in you're gonna get the our
+project the our project so you can go straight here or you can go to most
+likely if you're using Windows it'll show up on the top left as a download
+option here or Mac whatever it should default to it so just click on this
+download R for Windows usually the latest version is gonna be up in this
+box and just save the file open the executable and go through the steps I
+didn't see any bloatware or any spyware and it'll install R now don't worry
+about our just yet because we're gonna download our studio as well so let's go
+to google and type in download our studio and it should be the first link
+
+00:01
+our studio comm products download so it's very easy to find so download our
+studio as well and you're gonna get to this page and the free version let's
+just go ahead and click on that and you can click either one the whatever's free
+is the one you want to use same deal that's gonna open up a link installers
+so I have window so I'm gonna click on the Windows version and save it run
+through the steps if you need to pause this video come back to it when you're
+done okay okay so once you've downloaded them both now they're not gonna just
+show up as Start menus most likely so you're gonna have to know how to
+navigate to them go to your Explorer whatever way you do that so File
+Explorer click on your C Drive usually it's C Drive local disk whatever that is
+it's going to be under Program Files if you have Windows and you go to Program
+Files gonna see our and you'll see our studio
+
+00:02
+both okay so our is just going to be we're gonna use the back end of our and
+all all of its features but we're really going to use the the IDE the our studio
+so this is where our is located it's under our sixty
+four-bit and you can click on our you're gonna get to your command prompt it's
+very basic command prompt you can do things like two plus two and there it'll
+give you four we're not gonna use this this is going to be very difficult to
+write scripts in unless you're somewhat of an expert but so let's get out of our
+and never think about that for a while let's go to our studio and let's create
+a link to it so our studio you go to your binary and you go to your down at
+the bottom it'll say our studio Exe what I did was I just dragged and dropped it
+to my taskbar so I have a shortcut route didn't read it I don't know what I
+
+00:03
+clicked on there anyway so our studio I just click on our studio and it opens up
+my workspace my environment my integrated development environment so to
+speak what we have here is we're in the console window that's basically the same
+exact thing is that Dass looking Cronk window
+we're global environments to the top right that'll store all of our variables
+and their values and I'll show you that more in a minute plots packages all the
+different things down here you're gonna see navigation panes let's get started
+right away so like I showed you with that DOS prompt looking thing and if you
+could enter on twoplustwo it's gonna give you four right notice nothing's up
+here but if I said a equals two plus two now we have a variable called a and the
+value that's stored is four so if I just type in the letter A and hit enter over
+here it's going to show you the well it's gonna print out 4 here and that's
+that okay now we don't want our work so much
+inside this console area so let's go to file new file our script
+
+00:04
+control-shift-n it's going to open up this notepad looking area this is kind
+of you the place that you want to store your scripts or your code so you're
+gonna have multiple lines you can repeat them and run them multiple times so let
+me start by giving you a comment this is a comment it will not be executed no
+matter what so let's do the same thing we're gonna do two plus two we're just
+gonna hit enter you see nothing happens because it's just like notepad highlight
+that line or get to that line with your arrow keys or Mouse hold
+control if you have a Windows hold command if you have a Mac and hit enter
+then you'll see it populated the console
+down here so you can repeat steps 2 plus 2 8 plus well let's do 8 plus a we have
+a variable named a so let's try that so that should be 12 right hit enter or
+ctrl enter I should say and we've got 8 plus a is 12 well let's make 8 plus a
+
+00:05
+let's store that in to a variable called B so B equals and hit control enter
+now B equals 8 plus a so if I type in B control enter it's gonna equal 12 every
+time right plus I decided to change it and I actually do I can do B less than
+symbol - and say let's make that equal to 0 control enter and now we're back at
+0 so if I if I do now I can go back and forth to the console oh there's some
+testing I can just type in B and C it should equal 0 at this time right
+because if you look up here on the top right a is 4 B is 0 right now if I want
+to rerun parts of this I can just highlight it and it'll run just that so
+it showed displayed 4 and then it made B
+equals 8 plus a so B is now if I go down to the console these should be back to
+12 see how that works now if I ran the whole thing B is going to equal 0 again
+because at the end of the day B is going
+
+00:06
+to equal 0 you can also do it this way B
+I'm sorry 0 and store it into me I don't use this method very often but that'll
+work too let's do a different number so we know if it works ok let's let's do a
+10 ctrl enter and now let's do down here
+at the console let's just type in B okay so there's your 10 how do we how do we
+remove these variables I'm gonna show you that real quick and then one more
+thing and we'll call this one good so we're removing by doing the RM remove
+and we will type in list equals LS currencies close mercies
+okay now they're all gone now I want to get you this far so you can start
+googling and kind of understand how the syntax works and how the layout works
+here one other thing if you do the question mark at the console and then
+you type in RM it will give you all the help features which I'm not gonna go
+
+00:07
+over what all this means yet but that's how you would get to them for now Google
+is going to be a friend I'm gonna show you one more very useful thing about
+this to get you started with more of a real-world situation is what if you had
+your own CSV file or excel file that you saved as a CSV comma separated value if
+you have an excel file with headers and you want to save it and you want to use
+it in R the easiest way right off the bat without downloading any packages is
+to just convert that into a CSV file because R really likes CSV comma
+separated values no extra fluff in there so I have a file that's located on my
+desktop let's go to file explorer now I was gonna say you can just go straight
+to your desktop and copy and paste the URL in the address bar but with windows
+and everything it's not that simple so let's go to our local disk C Drive and
+start from there I'm gonna go to users Canton is where it's under and then
+
+00:08
+desktop okay so that's where my file is located is desktop and it's called test
+dot CSV my file is located right here so
+what I'm gonna do is I'm gonna copy this URL or this address that's now an
+address and we're gonna go up here to our console I'm gonna erase all this
+because we don't need it we need to read dot CSV open parenthesis and you should
+see well let's let's start back read dot CSV and now just let it sit there and
+you see this yellow box pop up that kind of gives you an idea of what kind of
+parameters go inside of that function so they're read CSV it's pretty
+self-explanatory it's gonna read a CSV file into our studio what's the file
+that's the first parameter and then these other parameters like header
+equals true those are all optional at this point I'll get into more
+later on with some more tutorials so header equals true that's a default so
+if you don't put anything in there it means there's a header in there if you
+
+00:09
+don't have a header just make that a capital false I'll show you that in a
+second so let's go ahead and put this in there so if you have Windows you'd put
+them in quotes and paste that URL in there and then I'm gonna show you how
+this is not gonna work first test dot CSV
+it's very finicky it's gonna read those back slashes as escape characters so
+when I hit ctrl enter you see the error down here so that's an error and it's
+telling you basically that hey back slashes are used for special characters
+and it doesn't recognize them as back slashes so make those forward slashes
+like I think most other operating systems we do automatically max even
+worse max has some weird funky stuff going on with layers but I'm now if I do
+that I've entered there's my database it showed up and showed headers and it
+showed the actual data and it numbered the data with the rows so what are we
+gonna do with that we're gonna actually store that as a variable say my data
+equals that control-enter now you see on the top right my data two
+
+00:10
+observations of three variables what are the three variables name state and city
+two observations observation mark that an observation day of that row so that's
+how you read it in there you can you can do many things with with this like if
+you names my data and it's gonna spit out if you hit control enter the header
+name so that's kind of nice but if I wanted to select say header the city
+header one knows the third one so I can do names my data and you can use this as
+an array basically or a vector and you can just put in the number three in
+there and it'll print out city and you can make that equal to something as as
+two so city header whatever you want to use it for equals okay so you see down
+here you have a value called city header and it's called City these are just
+examples I wanted to get you started to where you can actually read a file of
+your own to make this more useable to you feel free to comment any questions
+
+00:11
+and I hope to put some more of these tutorials out laterEnd of file
+
+---
+title: Download R   R Studio   First R Script Complete Guide   Lesson 0
+date: 2019-08-02
+categories:
+  - Absolute Beginners Guide
+tags:
+  - r statistics
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi_webp/sZo_Ig002Bw/maxresdefault.webp
+---
+
+<a href="https://www.youtube.com/watch?v=sZo_Ig002Bw">
+<picture><img src="https://i.ytimg.com/vi_webp/sZo_Ig002Bw/maxresdefault.webp"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+hi we're gonna download our into our studio and I'm gonna get you started on
+your first couple of scripts really basic but let's get right to it so just
+go to Google and click on download R or type that in you're gonna get the our
+project the our project so you can go straight here or you can go to most
+likely if you're using Windows it'll show up on the top left as a download
+option here or Mac whatever it should default to it so just click on this
+download R for Windows usually the latest version is gonna be up in this
+box and just save the file open the executable and go through the steps I
+didn't see any bloatware or any spyware and it'll install R now don't worry
+about our just yet because we're gonna download our studio as well so let's go
+to google and type in download our studio and it should be the first link
+
+00:01
+our studio comm products download so it's very easy to find so download our
+studio as well and you're gonna get to this page and the free version let's
+just go ahead and click on that and you can click either one the whatever's free
+is the one you want to use same deal that's gonna open up a link installers
+so I have window so I'm gonna click on the Windows version and save it run
+through the steps if you need to pause this video come back to it when you're
+done okay okay so once you've downloaded them both now they're not gonna just
+show up as Start menus most likely so you're gonna have to know how to
+navigate to them go to your Explorer whatever way you do that so File
+Explorer click on your C Drive usually it's C Drive local disk whatever that is
+it's going to be under Program Files if you have Windows and you go to Program
+Files gonna see our and you'll see our studio
+
+00:02
+both okay so our is just going to be we're gonna use the back end of our and
+all all of its features but we're really going to use the the IDE the our studio
+so this is where our is located it's under our sixty
+four-bit and you can click on our you're gonna get to your command prompt it's
+very basic command prompt you can do things like two plus two and there it'll
+give you four we're not gonna use this this is going to be very difficult to
+write scripts in unless you're somewhat of an expert but so let's get out of our
+and never think about that for a while let's go to our studio and let's create
+a link to it so our studio you go to your binary and you go to your down at
+the bottom it'll say our studio Exe what I did was I just dragged and dropped it
+to my taskbar so I have a shortcut route didn't read it I don't know what I
+
+00:03
+clicked on there anyway so our studio I just click on our studio and it opens up
+my workspace my environment my integrated development environment so to
+speak what we have here is we're in the console window that's basically the same
+exact thing is that Dass looking Cronk window
+we're global environments to the top right that'll store all of our variables
+and their values and I'll show you that more in a minute plots packages all the
+different things down here you're gonna see navigation panes let's get started
+right away so like I showed you with that DOS prompt looking thing and if you
+could enter on twoplustwo it's gonna give you four right notice nothing's up
+here but if I said a equals two plus two now we have a variable called a and the
+value that's stored is four so if I just type in the letter A and hit enter over
+here it's going to show you the well it's gonna print out 4 here and that's
+that okay now we don't want our work so much
+inside this console area so let's go to file new file our script
+
+00:04
+control-shift-n it's going to open up this notepad looking area this is kind
+of you the place that you want to store your scripts or your code so you're
+gonna have multiple lines you can repeat them and run them multiple times so let
+me start by giving you a comment this is a comment it will not be executed no
+matter what so let's do the same thing we're gonna do two plus two we're just
+gonna hit enter you see nothing happens because it's just like notepad highlight
+that line or get to that line with your arrow keys or Mouse hold
+control if you have a Windows hold command if you have a Mac and hit enter
+then you'll see it populated the console
+down here so you can repeat steps 2 plus 2 8 plus well let's do 8 plus a we have
+a variable named a so let's try that so that should be 12 right hit enter or
+ctrl enter I should say and we've got 8 plus a is 12 well let's make 8 plus a
+
+00:05
+let's store that in to a variable called B so B equals and hit control enter
+now B equals 8 plus a so if I type in B control enter it's gonna equal 12 every
+time right plus I decided to change it and I actually do I can do B less than
+symbol - and say let's make that equal to 0 control enter and now we're back at
+0 so if I if I do now I can go back and forth to the console oh there's some
+testing I can just type in B and C it should equal 0 at this time right
+because if you look up here on the top right a is 4 B is 0 right now if I want
+to rerun parts of this I can just highlight it and it'll run just that so
+it showed displayed 4 and then it made B
+equals 8 plus a so B is now if I go down to the console these should be back to
+12 see how that works now if I ran the whole thing B is going to equal 0 again
+because at the end of the day B is going
+
+00:06
+to equal 0 you can also do it this way B
+I'm sorry 0 and store it into me I don't use this method very often but that'll
+work too let's do a different number so we know if it works ok let's let's do a
+10 ctrl enter and now let's do down here
+at the console let's just type in B okay so there's your 10 how do we how do we
+remove these variables I'm gonna show you that real quick and then one more
+thing and we'll call this one good so we're removing by doing the RM remove
+and we will type in list equals LS currencies close mercies
+okay now they're all gone now I want to get you this far so you can start
+googling and kind of understand how the syntax works and how the layout works
+here one other thing if you do the question mark at the console and then
+you type in RM it will give you all the help features which I'm not gonna go
+
+00:07
+over what all this means yet but that's how you would get to them for now Google
+is going to be a friend I'm gonna show you one more very useful thing about
+this to get you started with more of a real-world situation is what if you had
+your own CSV file or excel file that you saved as a CSV comma separated value if
+you have an excel file with headers and you want to save it and you want to use
+it in R the easiest way right off the bat without downloading any packages is
+to just convert that into a CSV file because R really likes CSV comma
+separated values no extra fluff in there so I have a file that's located on my
+desktop let's go to file explorer now I was gonna say you can just go straight
+to your desktop and copy and paste the URL in the address bar but with windows
+and everything it's not that simple so let's go to our local disk C Drive and
+start from there I'm gonna go to users Canton is where it's under and then
+
+00:08
+desktop okay so that's where my file is located is desktop and it's called test
+dot CSV my file is located right here so
+what I'm gonna do is I'm gonna copy this URL or this address that's now an
+address and we're gonna go up here to our console I'm gonna erase all this
+because we don't need it we need to read dot CSV open parenthesis and you should
+see well let's let's start back read dot CSV and now just let it sit there and
+you see this yellow box pop up that kind of gives you an idea of what kind of
+parameters go inside of that function so they're read CSV it's pretty
+self-explanatory it's gonna read a CSV file into our studio what's the file
+that's the first parameter and then these other parameters like header
+equals true those are all optional at this point I'll get into more
+later on with some more tutorials so header equals true that's a default so
+if you don't put anything in there it means there's a header in there if you
+
+00:09
+don't have a header just make that a capital false I'll show you that in a
+second so let's go ahead and put this in there so if you have Windows you'd put
+them in quotes and paste that URL in there and then I'm gonna show you how
+this is not gonna work first test dot CSV
+it's very finicky it's gonna read those back slashes as escape characters so
+when I hit ctrl enter you see the error down here so that's an error and it's
+telling you basically that hey back slashes are used for special characters
+and it doesn't recognize them as back slashes so make those forward slashes
+like I think most other operating systems we do automatically max even
+worse max has some weird funky stuff going on with layers but I'm now if I do
+that I've entered there's my database it showed up and showed headers and it
+showed the actual data and it numbered the data with the rows so what are we
+gonna do with that we're gonna actually store that as a variable say my data
+equals that control-enter now you see on the top right my data two
+
+00:10
+observations of three variables what are the three variables name state and city
+two observations observation mark that an observation day of that row so that's
+how you read it in there you can you can do many things with with this like if
+you names my data and it's gonna spit out if you hit control enter the header
+name so that's kind of nice but if I wanted to select say header the city
+header one knows the third one so I can do names my data and you can use this as
+an array basically or a vector and you can just put in the number three in
+there and it'll print out city and you can make that equal to something as as
+two so city header whatever you want to use it for equals okay so you see down
+here you have a value called city header and it's called City these are just
+examples I wanted to get you started to where you can actually read a file of
+your own to make this more useable to you feel free to comment any questions
+
+00:11
+and I hope to put some more of these tutorials out laterEnd of file
+
+---
+title: Download R   R Studio   First R Script Complete Guide   Lesson 0
+date: 2019-08-02
+categories:
+  - Absolute Beginners Guide
+tags:
+  - statistics
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi_webp/sZo_Ig002Bw/maxresdefault.webp
+---
+
+<a href="https://www.youtube.com/watch?v=sZo_Ig002Bw">
+<picture><img src="https://i.ytimg.com/vi_webp/sZo_Ig002Bw/maxresdefault.webp"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+hi we're gonna download our into our studio and I'm gonna get you started on
+your first couple of scripts really basic but let's get right to it so just
+go to Google and click on download R or type that in you're gonna get the our
+project the our project so you can go straight here or you can go to most
+likely if you're using Windows it'll show up on the top left as a download
+option here or Mac whatever it should default to it so just click on this
+download R for Windows usually the latest version is gonna be up in this
+box and just save the file open the executable and go through the steps I
+didn't see any bloatware or any spyware and it'll install R now don't worry
+about our just yet because we're gonna download our studio as well so let's go
+to google and type in download our studio and it should be the first link
+
+00:01
+our studio comm products download so it's very easy to find so download our
+studio as well and you're gonna get to this page and the free version let's
+just go ahead and click on that and you can click either one the whatever's free
+is the one you want to use same deal that's gonna open up a link installers
+so I have window so I'm gonna click on the Windows version and save it run
+through the steps if you need to pause this video come back to it when you're
+done okay okay so once you've downloaded them both now they're not gonna just
+show up as Start menus most likely so you're gonna have to know how to
+navigate to them go to your Explorer whatever way you do that so File
+Explorer click on your C Drive usually it's C Drive local disk whatever that is
+it's going to be under Program Files if you have Windows and you go to Program
+Files gonna see our and you'll see our studio
+
+00:02
+both okay so our is just going to be we're gonna use the back end of our and
+all all of its features but we're really going to use the the IDE the our studio
+so this is where our is located it's under our sixty
+four-bit and you can click on our you're gonna get to your command prompt it's
+very basic command prompt you can do things like two plus two and there it'll
+give you four we're not gonna use this this is going to be very difficult to
+write scripts in unless you're somewhat of an expert but so let's get out of our
+and never think about that for a while let's go to our studio and let's create
+a link to it so our studio you go to your binary and you go to your down at
+the bottom it'll say our studio Exe what I did was I just dragged and dropped it
+to my taskbar so I have a shortcut route didn't read it I don't know what I
+
+00:03
+clicked on there anyway so our studio I just click on our studio and it opens up
+my workspace my environment my integrated development environment so to
+speak what we have here is we're in the console window that's basically the same
+exact thing is that Dass looking Cronk window
+we're global environments to the top right that'll store all of our variables
+and their values and I'll show you that more in a minute plots packages all the
+different things down here you're gonna see navigation panes let's get started
+right away so like I showed you with that DOS prompt looking thing and if you
+could enter on twoplustwo it's gonna give you four right notice nothing's up
+here but if I said a equals two plus two now we have a variable called a and the
+value that's stored is four so if I just type in the letter A and hit enter over
+here it's going to show you the well it's gonna print out 4 here and that's
+that okay now we don't want our work so much
+inside this console area so let's go to file new file our script
+
+00:04
+control-shift-n it's going to open up this notepad looking area this is kind
+of you the place that you want to store your scripts or your code so you're
+gonna have multiple lines you can repeat them and run them multiple times so let
+me start by giving you a comment this is a comment it will not be executed no
+matter what so let's do the same thing we're gonna do two plus two we're just
+gonna hit enter you see nothing happens because it's just like notepad highlight
+that line or get to that line with your arrow keys or Mouse hold
+control if you have a Windows hold command if you have a Mac and hit enter
+then you'll see it populated the console
+down here so you can repeat steps 2 plus 2 8 plus well let's do 8 plus a we have
+a variable named a so let's try that so that should be 12 right hit enter or
+ctrl enter I should say and we've got 8 plus a is 12 well let's make 8 plus a
+
+00:05
+let's store that in to a variable called B so B equals and hit control enter
+now B equals 8 plus a so if I type in B control enter it's gonna equal 12 every
+time right plus I decided to change it and I actually do I can do B less than
+symbol - and say let's make that equal to 0 control enter and now we're back at
+0 so if I if I do now I can go back and forth to the console oh there's some
+testing I can just type in B and C it should equal 0 at this time right
+because if you look up here on the top right a is 4 B is 0 right now if I want
+to rerun parts of this I can just highlight it and it'll run just that so
+it showed displayed 4 and then it made B
+equals 8 plus a so B is now if I go down to the console these should be back to
+12 see how that works now if I ran the whole thing B is going to equal 0 again
+because at the end of the day B is going
+
+00:06
+to equal 0 you can also do it this way B
+I'm sorry 0 and store it into me I don't use this method very often but that'll
+work too let's do a different number so we know if it works ok let's let's do a
+10 ctrl enter and now let's do down here
+at the console let's just type in B okay so there's your 10 how do we how do we
+remove these variables I'm gonna show you that real quick and then one more
+thing and we'll call this one good so we're removing by doing the RM remove
+and we will type in list equals LS currencies close mercies
+okay now they're all gone now I want to get you this far so you can start
+googling and kind of understand how the syntax works and how the layout works
+here one other thing if you do the question mark at the console and then
+you type in RM it will give you all the help features which I'm not gonna go
+
+00:07
+over what all this means yet but that's how you would get to them for now Google
+is going to be a friend I'm gonna show you one more very useful thing about
+this to get you started with more of a real-world situation is what if you had
+your own CSV file or excel file that you saved as a CSV comma separated value if
+you have an excel file with headers and you want to save it and you want to use
+it in R the easiest way right off the bat without downloading any packages is
+to just convert that into a CSV file because R really likes CSV comma
+separated values no extra fluff in there so I have a file that's located on my
+desktop let's go to file explorer now I was gonna say you can just go straight
+to your desktop and copy and paste the URL in the address bar but with windows
+and everything it's not that simple so let's go to our local disk C Drive and
+start from there I'm gonna go to users Canton is where it's under and then
+
+00:08
+desktop okay so that's where my file is located is desktop and it's called test
+dot CSV my file is located right here so
+what I'm gonna do is I'm gonna copy this URL or this address that's now an
+address and we're gonna go up here to our console I'm gonna erase all this
+because we don't need it we need to read dot CSV open parenthesis and you should
+see well let's let's start back read dot CSV and now just let it sit there and
+you see this yellow box pop up that kind of gives you an idea of what kind of
+parameters go inside of that function so they're read CSV it's pretty
+self-explanatory it's gonna read a CSV file into our studio what's the file
+that's the first parameter and then these other parameters like header
+equals true those are all optional at this point I'll get into more
+later on with some more tutorials so header equals true that's a default so
+if you don't put anything in there it means there's a header in there if you
+
+00:09
+don't have a header just make that a capital false I'll show you that in a
+second so let's go ahead and put this in there so if you have Windows you'd put
+them in quotes and paste that URL in there and then I'm gonna show you how
+this is not gonna work first test dot CSV
+it's very finicky it's gonna read those back slashes as escape characters so
+when I hit ctrl enter you see the error down here so that's an error and it's
+telling you basically that hey back slashes are used for special characters
+and it doesn't recognize them as back slashes so make those forward slashes
+like I think most other operating systems we do automatically max even
+worse max has some weird funky stuff going on with layers but I'm now if I do
+that I've entered there's my database it showed up and showed headers and it
+showed the actual data and it numbered the data with the rows so what are we
+gonna do with that we're gonna actually store that as a variable say my data
+equals that control-enter now you see on the top right my data two
+
+00:10
+observations of three variables what are the three variables name state and city
+two observations observation mark that an observation day of that row so that's
+how you read it in there you can you can do many things with with this like if
+you names my data and it's gonna spit out if you hit control enter the header
+name so that's kind of nice but if I wanted to select say header the city
+header one knows the third one so I can do names my data and you can use this as
+an array basically or a vector and you can just put in the number three in
+there and it'll print out city and you can make that equal to something as as
+two so city header whatever you want to use it for equals okay so you see down
+here you have a value called city header and it's called City these are just
+examples I wanted to get you started to where you can actually read a file of
+your own to make this more useable to you feel free to comment any questions
+
+00:11
+and I hope to put some more of these tutorials out laterEnd of file
+
+---
+title: Download R   R Studio   First R Script Complete Guide   Lesson 0
+date: 2019-08-02
+categories:
+  - Absolute Beginners Guide
+tags:
+  - program
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi_webp/sZo_Ig002Bw/maxresdefault.webp
+---
+
+<a href="https://www.youtube.com/watch?v=sZo_Ig002Bw">
+<picture><img src="https://i.ytimg.com/vi_webp/sZo_Ig002Bw/maxresdefault.webp"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+hi we're gonna download our into our studio and I'm gonna get you started on
+your first couple of scripts really basic but let's get right to it so just
+go to Google and click on download R or type that in you're gonna get the our
+project the our project so you can go straight here or you can go to most
+likely if you're using Windows it'll show up on the top left as a download
+option here or Mac whatever it should default to it so just click on this
+download R for Windows usually the latest version is gonna be up in this
+box and just save the file open the executable and go through the steps I
+didn't see any bloatware or any spyware and it'll install R now don't worry
+about our just yet because we're gonna download our studio as well so let's go
+to google and type in download our studio and it should be the first link
+
+00:01
+our studio comm products download so it's very easy to find so download our
+studio as well and you're gonna get to this page and the free version let's
+just go ahead and click on that and you can click either one the whatever's free
+is the one you want to use same deal that's gonna open up a link installers
+so I have window so I'm gonna click on the Windows version and save it run
+through the steps if you need to pause this video come back to it when you're
+done okay okay so once you've downloaded them both now they're not gonna just
+show up as Start menus most likely so you're gonna have to know how to
+navigate to them go to your Explorer whatever way you do that so File
+Explorer click on your C Drive usually it's C Drive local disk whatever that is
+it's going to be under Program Files if you have Windows and you go to Program
+Files gonna see our and you'll see our studio
+
+00:02
+both okay so our is just going to be we're gonna use the back end of our and
+all all of its features but we're really going to use the the IDE the our studio
+so this is where our is located it's under our sixty
+four-bit and you can click on our you're gonna get to your command prompt it's
+very basic command prompt you can do things like two plus two and there it'll
+give you four we're not gonna use this this is going to be very difficult to
+write scripts in unless you're somewhat of an expert but so let's get out of our
+and never think about that for a while let's go to our studio and let's create
+a link to it so our studio you go to your binary and you go to your down at
+the bottom it'll say our studio Exe what I did was I just dragged and dropped it
+to my taskbar so I have a shortcut route didn't read it I don't know what I
+
+00:03
+clicked on there anyway so our studio I just click on our studio and it opens up
+my workspace my environment my integrated development environment so to
+speak what we have here is we're in the console window that's basically the same
+exact thing is that Dass looking Cronk window
+we're global environments to the top right that'll store all of our variables
+and their values and I'll show you that more in a minute plots packages all the
+different things down here you're gonna see navigation panes let's get started
+right away so like I showed you with that DOS prompt looking thing and if you
+could enter on twoplustwo it's gonna give you four right notice nothing's up
+here but if I said a equals two plus two now we have a variable called a and the
+value that's stored is four so if I just type in the letter A and hit enter over
+here it's going to show you the well it's gonna print out 4 here and that's
+that okay now we don't want our work so much
+inside this console area so let's go to file new file our script
+
+00:04
+control-shift-n it's going to open up this notepad looking area this is kind
+of you the place that you want to store your scripts or your code so you're
+gonna have multiple lines you can repeat them and run them multiple times so let
+me start by giving you a comment this is a comment it will not be executed no
+matter what so let's do the same thing we're gonna do two plus two we're just
+gonna hit enter you see nothing happens because it's just like notepad highlight
+that line or get to that line with your arrow keys or Mouse hold
+control if you have a Windows hold command if you have a Mac and hit enter
+then you'll see it populated the console
+down here so you can repeat steps 2 plus 2 8 plus well let's do 8 plus a we have
+a variable named a so let's try that so that should be 12 right hit enter or
+ctrl enter I should say and we've got 8 plus a is 12 well let's make 8 plus a
+
+00:05
+let's store that in to a variable called B so B equals and hit control enter
+now B equals 8 plus a so if I type in B control enter it's gonna equal 12 every
+time right plus I decided to change it and I actually do I can do B less than
+symbol - and say let's make that equal to 0 control enter and now we're back at
+0 so if I if I do now I can go back and forth to the console oh there's some
+testing I can just type in B and C it should equal 0 at this time right
+because if you look up here on the top right a is 4 B is 0 right now if I want
+to rerun parts of this I can just highlight it and it'll run just that so
+it showed displayed 4 and then it made B
+equals 8 plus a so B is now if I go down to the console these should be back to
+12 see how that works now if I ran the whole thing B is going to equal 0 again
+because at the end of the day B is going
+
+00:06
+to equal 0 you can also do it this way B
+I'm sorry 0 and store it into me I don't use this method very often but that'll
+work too let's do a different number so we know if it works ok let's let's do a
+10 ctrl enter and now let's do down here
+at the console let's just type in B okay so there's your 10 how do we how do we
+remove these variables I'm gonna show you that real quick and then one more
+thing and we'll call this one good so we're removing by doing the RM remove
+and we will type in list equals LS currencies close mercies
+okay now they're all gone now I want to get you this far so you can start
+googling and kind of understand how the syntax works and how the layout works
+here one other thing if you do the question mark at the console and then
+you type in RM it will give you all the help features which I'm not gonna go
+
+00:07
+over what all this means yet but that's how you would get to them for now Google
+is going to be a friend I'm gonna show you one more very useful thing about
+this to get you started with more of a real-world situation is what if you had
+your own CSV file or excel file that you saved as a CSV comma separated value if
+you have an excel file with headers and you want to save it and you want to use
+it in R the easiest way right off the bat without downloading any packages is
+to just convert that into a CSV file because R really likes CSV comma
+separated values no extra fluff in there so I have a file that's located on my
+desktop let's go to file explorer now I was gonna say you can just go straight
+to your desktop and copy and paste the URL in the address bar but with windows
+and everything it's not that simple so let's go to our local disk C Drive and
+start from there I'm gonna go to users Canton is where it's under and then
+
+00:08
+desktop okay so that's where my file is located is desktop and it's called test
+dot CSV my file is located right here so
+what I'm gonna do is I'm gonna copy this URL or this address that's now an
+address and we're gonna go up here to our console I'm gonna erase all this
+because we don't need it we need to read dot CSV open parenthesis and you should
+see well let's let's start back read dot CSV and now just let it sit there and
+you see this yellow box pop up that kind of gives you an idea of what kind of
+parameters go inside of that function so they're read CSV it's pretty
+self-explanatory it's gonna read a CSV file into our studio what's the file
+that's the first parameter and then these other parameters like header
+equals true those are all optional at this point I'll get into more
+later on with some more tutorials so header equals true that's a default so
+if you don't put anything in there it means there's a header in there if you
+
+00:09
+don't have a header just make that a capital false I'll show you that in a
+second so let's go ahead and put this in there so if you have Windows you'd put
+them in quotes and paste that URL in there and then I'm gonna show you how
+this is not gonna work first test dot CSV
+it's very finicky it's gonna read those back slashes as escape characters so
+when I hit ctrl enter you see the error down here so that's an error and it's
+telling you basically that hey back slashes are used for special characters
+and it doesn't recognize them as back slashes so make those forward slashes
+like I think most other operating systems we do automatically max even
+worse max has some weird funky stuff going on with layers but I'm now if I do
+that I've entered there's my database it showed up and showed headers and it
+showed the actual data and it numbered the data with the rows so what are we
+gonna do with that we're gonna actually store that as a variable say my data
+equals that control-enter now you see on the top right my data two
+
+00:10
+observations of three variables what are the three variables name state and city
+two observations observation mark that an observation day of that row so that's
+how you read it in there you can you can do many things with with this like if
+you names my data and it's gonna spit out if you hit control enter the header
+name so that's kind of nice but if I wanted to select say header the city
+header one knows the third one so I can do names my data and you can use this as
+an array basically or a vector and you can just put in the number three in
+there and it'll print out city and you can make that equal to something as as
+two so city header whatever you want to use it for equals okay so you see down
+here you have a value called city header and it's called City these are just
+examples I wanted to get you started to where you can actually read a file of
+your own to make this more useable to you feel free to comment any questions
+
+00:11
+and I hope to put some more of these tutorials out laterEnd of file
+
+---
+title: Download R   R Studio   First R Script Complete Guide   Lesson 0
+date: 2019-08-02
+categories:
+  - Absolute Beginners Guide
+tags:
+  - first
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi_webp/sZo_Ig002Bw/maxresdefault.webp
+---
+
+<a href="https://www.youtube.com/watch?v=sZo_Ig002Bw">
+<picture><img src="https://i.ytimg.com/vi_webp/sZo_Ig002Bw/maxresdefault.webp"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+hi we're gonna download our into our studio and I'm gonna get you started on
+your first couple of scripts really basic but let's get right to it so just
+go to Google and click on download R or type that in you're gonna get the our
+project the our project so you can go straight here or you can go to most
+likely if you're using Windows it'll show up on the top left as a download
+option here or Mac whatever it should default to it so just click on this
+download R for Windows usually the latest version is gonna be up in this
+box and just save the file open the executable and go through the steps I
+didn't see any bloatware or any spyware and it'll install R now don't worry
+about our just yet because we're gonna download our studio as well so let's go
+to google and type in download our studio and it should be the first link
+
+00:01
+our studio comm products download so it's very easy to find so download our
+studio as well and you're gonna get to this page and the free version let's
+just go ahead and click on that and you can click either one the whatever's free
+is the one you want to use same deal that's gonna open up a link installers
+so I have window so I'm gonna click on the Windows version and save it run
+through the steps if you need to pause this video come back to it when you're
+done okay okay so once you've downloaded them both now they're not gonna just
+show up as Start menus most likely so you're gonna have to know how to
+navigate to them go to your Explorer whatever way you do that so File
+Explorer click on your C Drive usually it's C Drive local disk whatever that is
+it's going to be under Program Files if you have Windows and you go to Program
+Files gonna see our and you'll see our studio
+
+00:02
+both okay so our is just going to be we're gonna use the back end of our and
+all all of its features but we're really going to use the the IDE the our studio
+so this is where our is located it's under our sixty
+four-bit and you can click on our you're gonna get to your command prompt it's
+very basic command prompt you can do things like two plus two and there it'll
+give you four we're not gonna use this this is going to be very difficult to
+write scripts in unless you're somewhat of an expert but so let's get out of our
+and never think about that for a while let's go to our studio and let's create
+a link to it so our studio you go to your binary and you go to your down at
+the bottom it'll say our studio Exe what I did was I just dragged and dropped it
+to my taskbar so I have a shortcut route didn't read it I don't know what I
+
+00:03
+clicked on there anyway so our studio I just click on our studio and it opens up
+my workspace my environment my integrated development environment so to
+speak what we have here is we're in the console window that's basically the same
+exact thing is that Dass looking Cronk window
+we're global environments to the top right that'll store all of our variables
+and their values and I'll show you that more in a minute plots packages all the
+different things down here you're gonna see navigation panes let's get started
+right away so like I showed you with that DOS prompt looking thing and if you
+could enter on twoplustwo it's gonna give you four right notice nothing's up
+here but if I said a equals two plus two now we have a variable called a and the
+value that's stored is four so if I just type in the letter A and hit enter over
+here it's going to show you the well it's gonna print out 4 here and that's
+that okay now we don't want our work so much
+inside this console area so let's go to file new file our script
+
+00:04
+control-shift-n it's going to open up this notepad looking area this is kind
+of you the place that you want to store your scripts or your code so you're
+gonna have multiple lines you can repeat them and run them multiple times so let
+me start by giving you a comment this is a comment it will not be executed no
+matter what so let's do the same thing we're gonna do two plus two we're just
+gonna hit enter you see nothing happens because it's just like notepad highlight
+that line or get to that line with your arrow keys or Mouse hold
+control if you have a Windows hold command if you have a Mac and hit enter
+then you'll see it populated the console
+down here so you can repeat steps 2 plus 2 8 plus well let's do 8 plus a we have
+a variable named a so let's try that so that should be 12 right hit enter or
+ctrl enter I should say and we've got 8 plus a is 12 well let's make 8 plus a
+
+00:05
+let's store that in to a variable called B so B equals and hit control enter
+now B equals 8 plus a so if I type in B control enter it's gonna equal 12 every
+time right plus I decided to change it and I actually do I can do B less than
+symbol - and say let's make that equal to 0 control enter and now we're back at
+0 so if I if I do now I can go back and forth to the console oh there's some
+testing I can just type in B and C it should equal 0 at this time right
+because if you look up here on the top right a is 4 B is 0 right now if I want
+to rerun parts of this I can just highlight it and it'll run just that so
+it showed displayed 4 and then it made B
+equals 8 plus a so B is now if I go down to the console these should be back to
+12 see how that works now if I ran the whole thing B is going to equal 0 again
+because at the end of the day B is going
+
+00:06
+to equal 0 you can also do it this way B
+I'm sorry 0 and store it into me I don't use this method very often but that'll
+work too let's do a different number so we know if it works ok let's let's do a
+10 ctrl enter and now let's do down here
+at the console let's just type in B okay so there's your 10 how do we how do we
+remove these variables I'm gonna show you that real quick and then one more
+thing and we'll call this one good so we're removing by doing the RM remove
+and we will type in list equals LS currencies close mercies
+okay now they're all gone now I want to get you this far so you can start
+googling and kind of understand how the syntax works and how the layout works
+here one other thing if you do the question mark at the console and then
+you type in RM it will give you all the help features which I'm not gonna go
+
+00:07
+over what all this means yet but that's how you would get to them for now Google
+is going to be a friend I'm gonna show you one more very useful thing about
+this to get you started with more of a real-world situation is what if you had
+your own CSV file or excel file that you saved as a CSV comma separated value if
+you have an excel file with headers and you want to save it and you want to use
+it in R the easiest way right off the bat without downloading any packages is
+to just convert that into a CSV file because R really likes CSV comma
+separated values no extra fluff in there so I have a file that's located on my
+desktop let's go to file explorer now I was gonna say you can just go straight
+to your desktop and copy and paste the URL in the address bar but with windows
+and everything it's not that simple so let's go to our local disk C Drive and
+start from there I'm gonna go to users Canton is where it's under and then
+
+00:08
+desktop okay so that's where my file is located is desktop and it's called test
+dot CSV my file is located right here so
+what I'm gonna do is I'm gonna copy this URL or this address that's now an
+address and we're gonna go up here to our console I'm gonna erase all this
+because we don't need it we need to read dot CSV open parenthesis and you should
+see well let's let's start back read dot CSV and now just let it sit there and
+you see this yellow box pop up that kind of gives you an idea of what kind of
+parameters go inside of that function so they're read CSV it's pretty
+self-explanatory it's gonna read a CSV file into our studio what's the file
+that's the first parameter and then these other parameters like header
+equals true those are all optional at this point I'll get into more
+later on with some more tutorials so header equals true that's a default so
+if you don't put anything in there it means there's a header in there if you
+
+00:09
+don't have a header just make that a capital false I'll show you that in a
+second so let's go ahead and put this in there so if you have Windows you'd put
+them in quotes and paste that URL in there and then I'm gonna show you how
+this is not gonna work first test dot CSV
+it's very finicky it's gonna read those back slashes as escape characters so
+when I hit ctrl enter you see the error down here so that's an error and it's
+telling you basically that hey back slashes are used for special characters
+and it doesn't recognize them as back slashes so make those forward slashes
+like I think most other operating systems we do automatically max even
+worse max has some weird funky stuff going on with layers but I'm now if I do
+that I've entered there's my database it showed up and showed headers and it
+showed the actual data and it numbered the data with the rows so what are we
+gonna do with that we're gonna actually store that as a variable say my data
+equals that control-enter now you see on the top right my data two
+
+00:10
+observations of three variables what are the three variables name state and city
+two observations observation mark that an observation day of that row so that's
+how you read it in there you can you can do many things with with this like if
+you names my data and it's gonna spit out if you hit control enter the header
+name so that's kind of nice but if I wanted to select say header the city
+header one knows the third one so I can do names my data and you can use this as
+an array basically or a vector and you can just put in the number three in
+there and it'll print out city and you can make that equal to something as as
+two so city header whatever you want to use it for equals okay so you see down
+here you have a value called city header and it's called City these are just
+examples I wanted to get you started to where you can actually read a file of
+your own to make this more useable to you feel free to comment any questions
+
+00:11
+and I hope to put some more of these tutorials out laterEnd of file
+
+---
+title: Download R   R Studio   First R Script Complete Guide   Lesson 0
+date: 2019-08-02
+categories:
+  - Absolute Beginners Guide
+tags:
+  - tutorial
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi_webp/sZo_Ig002Bw/maxresdefault.webp
+---
+
+<a href="https://www.youtube.com/watch?v=sZo_Ig002Bw">
+<picture><img src="https://i.ytimg.com/vi_webp/sZo_Ig002Bw/maxresdefault.webp"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+hi we're gonna download our into our studio and I'm gonna get you started on
+your first couple of scripts really basic but let's get right to it so just
+go to Google and click on download R or type that in you're gonna get the our
+project the our project so you can go straight here or you can go to most
+likely if you're using Windows it'll show up on the top left as a download
+option here or Mac whatever it should default to it so just click on this
+download R for Windows usually the latest version is gonna be up in this
+box and just save the file open the executable and go through the steps I
+didn't see any bloatware or any spyware and it'll install R now don't worry
+about our just yet because we're gonna download our studio as well so let's go
+to google and type in download our studio and it should be the first link
+
+00:01
+our studio comm products download so it's very easy to find so download our
+studio as well and you're gonna get to this page and the free version let's
+just go ahead and click on that and you can click either one the whatever's free
+is the one you want to use same deal that's gonna open up a link installers
+so I have window so I'm gonna click on the Windows version and save it run
+through the steps if you need to pause this video come back to it when you're
+done okay okay so once you've downloaded them both now they're not gonna just
+show up as Start menus most likely so you're gonna have to know how to
+navigate to them go to your Explorer whatever way you do that so File
+Explorer click on your C Drive usually it's C Drive local disk whatever that is
+it's going to be under Program Files if you have Windows and you go to Program
+Files gonna see our and you'll see our studio
+
+00:02
+both okay so our is just going to be we're gonna use the back end of our and
+all all of its features but we're really going to use the the IDE the our studio
+so this is where our is located it's under our sixty
+four-bit and you can click on our you're gonna get to your command prompt it's
+very basic command prompt you can do things like two plus two and there it'll
+give you four we're not gonna use this this is going to be very difficult to
+write scripts in unless you're somewhat of an expert but so let's get out of our
+and never think about that for a while let's go to our studio and let's create
+a link to it so our studio you go to your binary and you go to your down at
+the bottom it'll say our studio Exe what I did was I just dragged and dropped it
+to my taskbar so I have a shortcut route didn't read it I don't know what I
+
+00:03
+clicked on there anyway so our studio I just click on our studio and it opens up
+my workspace my environment my integrated development environment so to
+speak what we have here is we're in the console window that's basically the same
+exact thing is that Dass looking Cronk window
+we're global environments to the top right that'll store all of our variables
+and their values and I'll show you that more in a minute plots packages all the
+different things down here you're gonna see navigation panes let's get started
+right away so like I showed you with that DOS prompt looking thing and if you
+could enter on twoplustwo it's gonna give you four right notice nothing's up
+here but if I said a equals two plus two now we have a variable called a and the
+value that's stored is four so if I just type in the letter A and hit enter over
+here it's going to show you the well it's gonna print out 4 here and that's
+that okay now we don't want our work so much
+inside this console area so let's go to file new file our script
+
+00:04
+control-shift-n it's going to open up this notepad looking area this is kind
+of you the place that you want to store your scripts or your code so you're
+gonna have multiple lines you can repeat them and run them multiple times so let
+me start by giving you a comment this is a comment it will not be executed no
+matter what so let's do the same thing we're gonna do two plus two we're just
+gonna hit enter you see nothing happens because it's just like notepad highlight
+that line or get to that line with your arrow keys or Mouse hold
+control if you have a Windows hold command if you have a Mac and hit enter
+then you'll see it populated the console
+down here so you can repeat steps 2 plus 2 8 plus well let's do 8 plus a we have
+a variable named a so let's try that so that should be 12 right hit enter or
+ctrl enter I should say and we've got 8 plus a is 12 well let's make 8 plus a
+
+00:05
+let's store that in to a variable called B so B equals and hit control enter
+now B equals 8 plus a so if I type in B control enter it's gonna equal 12 every
+time right plus I decided to change it and I actually do I can do B less than
+symbol - and say let's make that equal to 0 control enter and now we're back at
+0 so if I if I do now I can go back and forth to the console oh there's some
+testing I can just type in B and C it should equal 0 at this time right
+because if you look up here on the top right a is 4 B is 0 right now if I want
+to rerun parts of this I can just highlight it and it'll run just that so
+it showed displayed 4 and then it made B
+equals 8 plus a so B is now if I go down to the console these should be back to
+12 see how that works now if I ran the whole thing B is going to equal 0 again
+because at the end of the day B is going
+
+00:06
+to equal 0 you can also do it this way B
+I'm sorry 0 and store it into me I don't use this method very often but that'll
+work too let's do a different number so we know if it works ok let's let's do a
+10 ctrl enter and now let's do down here
+at the console let's just type in B okay so there's your 10 how do we how do we
+remove these variables I'm gonna show you that real quick and then one more
+thing and we'll call this one good so we're removing by doing the RM remove
+and we will type in list equals LS currencies close mercies
+okay now they're all gone now I want to get you this far so you can start
+googling and kind of understand how the syntax works and how the layout works
+here one other thing if you do the question mark at the console and then
+you type in RM it will give you all the help features which I'm not gonna go
+
+00:07
+over what all this means yet but that's how you would get to them for now Google
+is going to be a friend I'm gonna show you one more very useful thing about
+this to get you started with more of a real-world situation is what if you had
+your own CSV file or excel file that you saved as a CSV comma separated value if
+you have an excel file with headers and you want to save it and you want to use
+it in R the easiest way right off the bat without downloading any packages is
+to just convert that into a CSV file because R really likes CSV comma
+separated values no extra fluff in there so I have a file that's located on my
+desktop let's go to file explorer now I was gonna say you can just go straight
+to your desktop and copy and paste the URL in the address bar but with windows
+and everything it's not that simple so let's go to our local disk C Drive and
+start from there I'm gonna go to users Canton is where it's under and then
+
+00:08
+desktop okay so that's where my file is located is desktop and it's called test
+dot CSV my file is located right here so
+what I'm gonna do is I'm gonna copy this URL or this address that's now an
+address and we're gonna go up here to our console I'm gonna erase all this
+because we don't need it we need to read dot CSV open parenthesis and you should
+see well let's let's start back read dot CSV and now just let it sit there and
+you see this yellow box pop up that kind of gives you an idea of what kind of
+parameters go inside of that function so they're read CSV it's pretty
+self-explanatory it's gonna read a CSV file into our studio what's the file
+that's the first parameter and then these other parameters like header
+equals true those are all optional at this point I'll get into more
+later on with some more tutorials so header equals true that's a default so
+if you don't put anything in there it means there's a header in there if you
+
+00:09
+don't have a header just make that a capital false I'll show you that in a
+second so let's go ahead and put this in there so if you have Windows you'd put
+them in quotes and paste that URL in there and then I'm gonna show you how
+this is not gonna work first test dot CSV
+it's very finicky it's gonna read those back slashes as escape characters so
+when I hit ctrl enter you see the error down here so that's an error and it's
+telling you basically that hey back slashes are used for special characters
+and it doesn't recognize them as back slashes so make those forward slashes
+like I think most other operating systems we do automatically max even
+worse max has some weird funky stuff going on with layers but I'm now if I do
+that I've entered there's my database it showed up and showed headers and it
+showed the actual data and it numbered the data with the rows so what are we
+gonna do with that we're gonna actually store that as a variable say my data
+equals that control-enter now you see on the top right my data two
+
+00:10
+observations of three variables what are the three variables name state and city
+two observations observation mark that an observation day of that row so that's
+how you read it in there you can you can do many things with with this like if
+you names my data and it's gonna spit out if you hit control enter the header
+name so that's kind of nice but if I wanted to select say header the city
+header one knows the third one so I can do names my data and you can use this as
+an array basically or a vector and you can just put in the number three in
+there and it'll print out city and you can make that equal to something as as
+two so city header whatever you want to use it for equals okay so you see down
+here you have a value called city header and it's called City these are just
+examples I wanted to get you started to where you can actually read a file of
+your own to make this more useable to you feel free to comment any questions
+
+00:11
+and I hope to put some more of these tutorials out laterEnd of file
+
+---
+title: Download R   R Studio   First R Script Complete Guide   Lesson 0
+date: 2019-08-02
+categories:
+  - Absolute Beginners Guide
+tags:
+  - review
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi_webp/sZo_Ig002Bw/maxresdefault.webp
+---
+
+<a href="https://www.youtube.com/watch?v=sZo_Ig002Bw">
+<picture><img src="https://i.ytimg.com/vi_webp/sZo_Ig002Bw/maxresdefault.webp"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+hi we're gonna download our into our studio and I'm gonna get you started on
+your first couple of scripts really basic but let's get right to it so just
+go to Google and click on download R or type that in you're gonna get the our
+project the our project so you can go straight here or you can go to most
+likely if you're using Windows it'll show up on the top left as a download
+option here or Mac whatever it should default to it so just click on this
+download R for Windows usually the latest version is gonna be up in this
+box and just save the file open the executable and go through the steps I
+didn't see any bloatware or any spyware and it'll install R now don't worry
+about our just yet because we're gonna download our studio as well so let's go
+to google and type in download our studio and it should be the first link
+
+00:01
+our studio comm products download so it's very easy to find so download our
+studio as well and you're gonna get to this page and the free version let's
+just go ahead and click on that and you can click either one the whatever's free
+is the one you want to use same deal that's gonna open up a link installers
+so I have window so I'm gonna click on the Windows version and save it run
+through the steps if you need to pause this video come back to it when you're
+done okay okay so once you've downloaded them both now they're not gonna just
+show up as Start menus most likely so you're gonna have to know how to
+navigate to them go to your Explorer whatever way you do that so File
+Explorer click on your C Drive usually it's C Drive local disk whatever that is
+it's going to be under Program Files if you have Windows and you go to Program
+Files gonna see our and you'll see our studio
+
+00:02
+both okay so our is just going to be we're gonna use the back end of our and
+all all of its features but we're really going to use the the IDE the our studio
+so this is where our is located it's under our sixty
+four-bit and you can click on our you're gonna get to your command prompt it's
+very basic command prompt you can do things like two plus two and there it'll
+give you four we're not gonna use this this is going to be very difficult to
+write scripts in unless you're somewhat of an expert but so let's get out of our
+and never think about that for a while let's go to our studio and let's create
+a link to it so our studio you go to your binary and you go to your down at
+the bottom it'll say our studio Exe what I did was I just dragged and dropped it
+to my taskbar so I have a shortcut route didn't read it I don't know what I
+
+00:03
+clicked on there anyway so our studio I just click on our studio and it opens up
+my workspace my environment my integrated development environment so to
+speak what we have here is we're in the console window that's basically the same
+exact thing is that Dass looking Cronk window
+we're global environments to the top right that'll store all of our variables
+and their values and I'll show you that more in a minute plots packages all the
+different things down here you're gonna see navigation panes let's get started
+right away so like I showed you with that DOS prompt looking thing and if you
+could enter on twoplustwo it's gonna give you four right notice nothing's up
+here but if I said a equals two plus two now we have a variable called a and the
+value that's stored is four so if I just type in the letter A and hit enter over
+here it's going to show you the well it's gonna print out 4 here and that's
+that okay now we don't want our work so much
+inside this console area so let's go to file new file our script
+
+00:04
+control-shift-n it's going to open up this notepad looking area this is kind
+of you the place that you want to store your scripts or your code so you're
+gonna have multiple lines you can repeat them and run them multiple times so let
+me start by giving you a comment this is a comment it will not be executed no
+matter what so let's do the same thing we're gonna do two plus two we're just
+gonna hit enter you see nothing happens because it's just like notepad highlight
+that line or get to that line with your arrow keys or Mouse hold
+control if you have a Windows hold command if you have a Mac and hit enter
+then you'll see it populated the console
+down here so you can repeat steps 2 plus 2 8 plus well let's do 8 plus a we have
+a variable named a so let's try that so that should be 12 right hit enter or
+ctrl enter I should say and we've got 8 plus a is 12 well let's make 8 plus a
+
+00:05
+let's store that in to a variable called B so B equals and hit control enter
+now B equals 8 plus a so if I type in B control enter it's gonna equal 12 every
+time right plus I decided to change it and I actually do I can do B less than
+symbol - and say let's make that equal to 0 control enter and now we're back at
+0 so if I if I do now I can go back and forth to the console oh there's some
+testing I can just type in B and C it should equal 0 at this time right
+because if you look up here on the top right a is 4 B is 0 right now if I want
+to rerun parts of this I can just highlight it and it'll run just that so
+it showed displayed 4 and then it made B
+equals 8 plus a so B is now if I go down to the console these should be back to
+12 see how that works now if I ran the whole thing B is going to equal 0 again
+because at the end of the day B is going
+
+00:06
+to equal 0 you can also do it this way B
+I'm sorry 0 and store it into me I don't use this method very often but that'll
+work too let's do a different number so we know if it works ok let's let's do a
+10 ctrl enter and now let's do down here
+at the console let's just type in B okay so there's your 10 how do we how do we
+remove these variables I'm gonna show you that real quick and then one more
+thing and we'll call this one good so we're removing by doing the RM remove
+and we will type in list equals LS currencies close mercies
+okay now they're all gone now I want to get you this far so you can start
+googling and kind of understand how the syntax works and how the layout works
+here one other thing if you do the question mark at the console and then
+you type in RM it will give you all the help features which I'm not gonna go
+
+00:07
+over what all this means yet but that's how you would get to them for now Google
+is going to be a friend I'm gonna show you one more very useful thing about
+this to get you started with more of a real-world situation is what if you had
+your own CSV file or excel file that you saved as a CSV comma separated value if
+you have an excel file with headers and you want to save it and you want to use
+it in R the easiest way right off the bat without downloading any packages is
+to just convert that into a CSV file because R really likes CSV comma
+separated values no extra fluff in there so I have a file that's located on my
+desktop let's go to file explorer now I was gonna say you can just go straight
+to your desktop and copy and paste the URL in the address bar but with windows
+and everything it's not that simple so let's go to our local disk C Drive and
+start from there I'm gonna go to users Canton is where it's under and then
+
+00:08
+desktop okay so that's where my file is located is desktop and it's called test
+dot CSV my file is located right here so
+what I'm gonna do is I'm gonna copy this URL or this address that's now an
+address and we're gonna go up here to our console I'm gonna erase all this
+because we don't need it we need to read dot CSV open parenthesis and you should
+see well let's let's start back read dot CSV and now just let it sit there and
+you see this yellow box pop up that kind of gives you an idea of what kind of
+parameters go inside of that function so they're read CSV it's pretty
+self-explanatory it's gonna read a CSV file into our studio what's the file
+that's the first parameter and then these other parameters like header
+equals true those are all optional at this point I'll get into more
+later on with some more tutorials so header equals true that's a default so
+if you don't put anything in there it means there's a header in there if you
+
+00:09
+don't have a header just make that a capital false I'll show you that in a
+second so let's go ahead and put this in there so if you have Windows you'd put
+them in quotes and paste that URL in there and then I'm gonna show you how
+this is not gonna work first test dot CSV
+it's very finicky it's gonna read those back slashes as escape characters so
+when I hit ctrl enter you see the error down here so that's an error and it's
+telling you basically that hey back slashes are used for special characters
+and it doesn't recognize them as back slashes so make those forward slashes
+like I think most other operating systems we do automatically max even
+worse max has some weird funky stuff going on with layers but I'm now if I do
+that I've entered there's my database it showed up and showed headers and it
+showed the actual data and it numbered the data with the rows so what are we
+gonna do with that we're gonna actually store that as a variable say my data
+equals that control-enter now you see on the top right my data two
+
+00:10
+observations of three variables what are the three variables name state and city
+two observations observation mark that an observation day of that row so that's
+how you read it in there you can you can do many things with with this like if
+you names my data and it's gonna spit out if you hit control enter the header
+name so that's kind of nice but if I wanted to select say header the city
+header one knows the third one so I can do names my data and you can use this as
+an array basically or a vector and you can just put in the number three in
+there and it'll print out city and you can make that equal to something as as
+two so city header whatever you want to use it for equals okay so you see down
+here you have a value called city header and it's called City these are just
+examples I wanted to get you started to where you can actually read a file of
+your own to make this more useable to you feel free to comment any questions
+
+00:11
+and I hope to put some more of these tutorials out laterEnd of file
+
+---
+title: Download R   R Studio   First R Script Complete Guide   Lesson 0
+date: 2019-08-02
+categories:
+  - Absolute Beginners Guide
+tags:
+  - install
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi_webp/sZo_Ig002Bw/maxresdefault.webp
+---
+
+<a href="https://www.youtube.com/watch?v=sZo_Ig002Bw">
+<picture><img src="https://i.ytimg.com/vi_webp/sZo_Ig002Bw/maxresdefault.webp"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+hi we're gonna download our into our studio and I'm gonna get you started on
+your first couple of scripts really basic but let's get right to it so just
+go to Google and click on download R or type that in you're gonna get the our
+project the our project so you can go straight here or you can go to most
+likely if you're using Windows it'll show up on the top left as a download
+option here or Mac whatever it should default to it so just click on this
+download R for Windows usually the latest version is gonna be up in this
+box and just save the file open the executable and go through the steps I
+didn't see any bloatware or any spyware and it'll install R now don't worry
+about our just yet because we're gonna download our studio as well so let's go
+to google and type in download our studio and it should be the first link
+
+00:01
+our studio comm products download so it's very easy to find so download our
+studio as well and you're gonna get to this page and the free version let's
+just go ahead and click on that and you can click either one the whatever's free
+is the one you want to use same deal that's gonna open up a link installers
+so I have window so I'm gonna click on the Windows version and save it run
+through the steps if you need to pause this video come back to it when you're
+done okay okay so once you've downloaded them both now they're not gonna just
+show up as Start menus most likely so you're gonna have to know how to
+navigate to them go to your Explorer whatever way you do that so File
+Explorer click on your C Drive usually it's C Drive local disk whatever that is
+it's going to be under Program Files if you have Windows and you go to Program
+Files gonna see our and you'll see our studio
+
+00:02
+both okay so our is just going to be we're gonna use the back end of our and
+all all of its features but we're really going to use the the IDE the our studio
+so this is where our is located it's under our sixty
+four-bit and you can click on our you're gonna get to your command prompt it's
+very basic command prompt you can do things like two plus two and there it'll
+give you four we're not gonna use this this is going to be very difficult to
+write scripts in unless you're somewhat of an expert but so let's get out of our
+and never think about that for a while let's go to our studio and let's create
+a link to it so our studio you go to your binary and you go to your down at
+the bottom it'll say our studio Exe what I did was I just dragged and dropped it
+to my taskbar so I have a shortcut route didn't read it I don't know what I
+
+00:03
+clicked on there anyway so our studio I just click on our studio and it opens up
+my workspace my environment my integrated development environment so to
+speak what we have here is we're in the console window that's basically the same
+exact thing is that Dass looking Cronk window
+we're global environments to the top right that'll store all of our variables
+and their values and I'll show you that more in a minute plots packages all the
+different things down here you're gonna see navigation panes let's get started
+right away so like I showed you with that DOS prompt looking thing and if you
+could enter on twoplustwo it's gonna give you four right notice nothing's up
+here but if I said a equals two plus two now we have a variable called a and the
+value that's stored is four so if I just type in the letter A and hit enter over
+here it's going to show you the well it's gonna print out 4 here and that's
+that okay now we don't want our work so much
+inside this console area so let's go to file new file our script
+
+00:04
+control-shift-n it's going to open up this notepad looking area this is kind
+of you the place that you want to store your scripts or your code so you're
+gonna have multiple lines you can repeat them and run them multiple times so let
+me start by giving you a comment this is a comment it will not be executed no
+matter what so let's do the same thing we're gonna do two plus two we're just
+gonna hit enter you see nothing happens because it's just like notepad highlight
+that line or get to that line with your arrow keys or Mouse hold
+control if you have a Windows hold command if you have a Mac and hit enter
+then you'll see it populated the console
+down here so you can repeat steps 2 plus 2 8 plus well let's do 8 plus a we have
+a variable named a so let's try that so that should be 12 right hit enter or
+ctrl enter I should say and we've got 8 plus a is 12 well let's make 8 plus a
+
+00:05
+let's store that in to a variable called B so B equals and hit control enter
+now B equals 8 plus a so if I type in B control enter it's gonna equal 12 every
+time right plus I decided to change it and I actually do I can do B less than
+symbol - and say let's make that equal to 0 control enter and now we're back at
+0 so if I if I do now I can go back and forth to the console oh there's some
+testing I can just type in B and C it should equal 0 at this time right
+because if you look up here on the top right a is 4 B is 0 right now if I want
+to rerun parts of this I can just highlight it and it'll run just that so
+it showed displayed 4 and then it made B
+equals 8 plus a so B is now if I go down to the console these should be back to
+12 see how that works now if I ran the whole thing B is going to equal 0 again
+because at the end of the day B is going
+
+00:06
+to equal 0 you can also do it this way B
+I'm sorry 0 and store it into me I don't use this method very often but that'll
+work too let's do a different number so we know if it works ok let's let's do a
+10 ctrl enter and now let's do down here
+at the console let's just type in B okay so there's your 10 how do we how do we
+remove these variables I'm gonna show you that real quick and then one more
+thing and we'll call this one good so we're removing by doing the RM remove
+and we will type in list equals LS currencies close mercies
+okay now they're all gone now I want to get you this far so you can start
+googling and kind of understand how the syntax works and how the layout works
+here one other thing if you do the question mark at the console and then
+you type in RM it will give you all the help features which I'm not gonna go
+
+00:07
+over what all this means yet but that's how you would get to them for now Google
+is going to be a friend I'm gonna show you one more very useful thing about
+this to get you started with more of a real-world situation is what if you had
+your own CSV file or excel file that you saved as a CSV comma separated value if
+you have an excel file with headers and you want to save it and you want to use
+it in R the easiest way right off the bat without downloading any packages is
+to just convert that into a CSV file because R really likes CSV comma
+separated values no extra fluff in there so I have a file that's located on my
+desktop let's go to file explorer now I was gonna say you can just go straight
+to your desktop and copy and paste the URL in the address bar but with windows
+and everything it's not that simple so let's go to our local disk C Drive and
+start from there I'm gonna go to users Canton is where it's under and then
+
+00:08
+desktop okay so that's where my file is located is desktop and it's called test
+dot CSV my file is located right here so
+what I'm gonna do is I'm gonna copy this URL or this address that's now an
+address and we're gonna go up here to our console I'm gonna erase all this
+because we don't need it we need to read dot CSV open parenthesis and you should
+see well let's let's start back read dot CSV and now just let it sit there and
+you see this yellow box pop up that kind of gives you an idea of what kind of
+parameters go inside of that function so they're read CSV it's pretty
+self-explanatory it's gonna read a CSV file into our studio what's the file
+that's the first parameter and then these other parameters like header
+equals true those are all optional at this point I'll get into more
+later on with some more tutorials so header equals true that's a default so
+if you don't put anything in there it means there's a header in there if you
+
+00:09
+don't have a header just make that a capital false I'll show you that in a
+second so let's go ahead and put this in there so if you have Windows you'd put
+them in quotes and paste that URL in there and then I'm gonna show you how
+this is not gonna work first test dot CSV
+it's very finicky it's gonna read those back slashes as escape characters so
+when I hit ctrl enter you see the error down here so that's an error and it's
+telling you basically that hey back slashes are used for special characters
+and it doesn't recognize them as back slashes so make those forward slashes
+like I think most other operating systems we do automatically max even
+worse max has some weird funky stuff going on with layers but I'm now if I do
+that I've entered there's my database it showed up and showed headers and it
+showed the actual data and it numbered the data with the rows so what are we
+gonna do with that we're gonna actually store that as a variable say my data
+equals that control-enter now you see on the top right my data two
+
+00:10
+observations of three variables what are the three variables name state and city
+two observations observation mark that an observation day of that row so that's
+how you read it in there you can you can do many things with with this like if
+you names my data and it's gonna spit out if you hit control enter the header
+name so that's kind of nice but if I wanted to select say header the city
+header one knows the third one so I can do names my data and you can use this as
+an array basically or a vector and you can just put in the number three in
+there and it'll print out city and you can make that equal to something as as
+two so city header whatever you want to use it for equals okay so you see down
+here you have a value called city header and it's called City these are just
+examples I wanted to get you started to where you can actually read a file of
+your own to make this more useable to you feel free to comment any questions
+
+00:11
+and I hope to put some more of these tutorials out laterEnd of file
+
+---
+title: Download R   R Studio   First R Script Complete Guide   Lesson 0
+date: 2019-08-02
+categories:
+  - Absolute Beginners Guide
+tags:
+  - download
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi_webp/sZo_Ig002Bw/maxresdefault.webp
+---
+
+<a href="https://www.youtube.com/watch?v=sZo_Ig002Bw">
+<picture><img src="https://i.ytimg.com/vi_webp/sZo_Ig002Bw/maxresdefault.webp"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+hi we're gonna download our into our studio and I'm gonna get you started on
+your first couple of scripts really basic but let's get right to it so just
+go to Google and click on download R or type that in you're gonna get the our
+project the our project so you can go straight here or you can go to most
+likely if you're using Windows it'll show up on the top left as a download
+option here or Mac whatever it should default to it so just click on this
+download R for Windows usually the latest version is gonna be up in this
+box and just save the file open the executable and go through the steps I
+didn't see any bloatware or any spyware and it'll install R now don't worry
+about our just yet because we're gonna download our studio as well so let's go
+to google and type in download our studio and it should be the first link
+
+00:01
+our studio comm products download so it's very easy to find so download our
+studio as well and you're gonna get to this page and the free version let's
+just go ahead and click on that and you can click either one the whatever's free
+is the one you want to use same deal that's gonna open up a link installers
+so I have window so I'm gonna click on the Windows version and save it run
+through the steps if you need to pause this video come back to it when you're
+done okay okay so once you've downloaded them both now they're not gonna just
+show up as Start menus most likely so you're gonna have to know how to
+navigate to them go to your Explorer whatever way you do that so File
+Explorer click on your C Drive usually it's C Drive local disk whatever that is
+it's going to be under Program Files if you have Windows and you go to Program
+Files gonna see our and you'll see our studio
+
+00:02
+both okay so our is just going to be we're gonna use the back end of our and
+all all of its features but we're really going to use the the IDE the our studio
+so this is where our is located it's under our sixty
+four-bit and you can click on our you're gonna get to your command prompt it's
+very basic command prompt you can do things like two plus two and there it'll
+give you four we're not gonna use this this is going to be very difficult to
+write scripts in unless you're somewhat of an expert but so let's get out of our
+and never think about that for a while let's go to our studio and let's create
+a link to it so our studio you go to your binary and you go to your down at
+the bottom it'll say our studio Exe what I did was I just dragged and dropped it
+to my taskbar so I have a shortcut route didn't read it I don't know what I
+
+00:03
+clicked on there anyway so our studio I just click on our studio and it opens up
+my workspace my environment my integrated development environment so to
+speak what we have here is we're in the console window that's basically the same
+exact thing is that Dass looking Cronk window
+we're global environments to the top right that'll store all of our variables
+and their values and I'll show you that more in a minute plots packages all the
+different things down here you're gonna see navigation panes let's get started
+right away so like I showed you with that DOS prompt looking thing and if you
+could enter on twoplustwo it's gonna give you four right notice nothing's up
+here but if I said a equals two plus two now we have a variable called a and the
+value that's stored is four so if I just type in the letter A and hit enter over
+here it's going to show you the well it's gonna print out 4 here and that's
+that okay now we don't want our work so much
+inside this console area so let's go to file new file our script
+
+00:04
+control-shift-n it's going to open up this notepad looking area this is kind
+of you the place that you want to store your scripts or your code so you're
+gonna have multiple lines you can repeat them and run them multiple times so let
+me start by giving you a comment this is a comment it will not be executed no
+matter what so let's do the same thing we're gonna do two plus two we're just
+gonna hit enter you see nothing happens because it's just like notepad highlight
+that line or get to that line with your arrow keys or Mouse hold
+control if you have a Windows hold command if you have a Mac and hit enter
+then you'll see it populated the console
+down here so you can repeat steps 2 plus 2 8 plus well let's do 8 plus a we have
+a variable named a so let's try that so that should be 12 right hit enter or
+ctrl enter I should say and we've got 8 plus a is 12 well let's make 8 plus a
+
+00:05
+let's store that in to a variable called B so B equals and hit control enter
+now B equals 8 plus a so if I type in B control enter it's gonna equal 12 every
+time right plus I decided to change it and I actually do I can do B less than
+symbol - and say let's make that equal to 0 control enter and now we're back at
+0 so if I if I do now I can go back and forth to the console oh there's some
+testing I can just type in B and C it should equal 0 at this time right
+because if you look up here on the top right a is 4 B is 0 right now if I want
+to rerun parts of this I can just highlight it and it'll run just that so
+it showed displayed 4 and then it made B
+equals 8 plus a so B is now if I go down to the console these should be back to
+12 see how that works now if I ran the whole thing B is going to equal 0 again
+because at the end of the day B is going
+
+00:06
+to equal 0 you can also do it this way B
+I'm sorry 0 and store it into me I don't use this method very often but that'll
+work too let's do a different number so we know if it works ok let's let's do a
+10 ctrl enter and now let's do down here
+at the console let's just type in B okay so there's your 10 how do we how do we
+remove these variables I'm gonna show you that real quick and then one more
+thing and we'll call this one good so we're removing by doing the RM remove
+and we will type in list equals LS currencies close mercies
+okay now they're all gone now I want to get you this far so you can start
+googling and kind of understand how the syntax works and how the layout works
+here one other thing if you do the question mark at the console and then
+you type in RM it will give you all the help features which I'm not gonna go
+
+00:07
+over what all this means yet but that's how you would get to them for now Google
+is going to be a friend I'm gonna show you one more very useful thing about
+this to get you started with more of a real-world situation is what if you had
+your own CSV file or excel file that you saved as a CSV comma separated value if
+you have an excel file with headers and you want to save it and you want to use
+it in R the easiest way right off the bat without downloading any packages is
+to just convert that into a CSV file because R really likes CSV comma
+separated values no extra fluff in there so I have a file that's located on my
+desktop let's go to file explorer now I was gonna say you can just go straight
+to your desktop and copy and paste the URL in the address bar but with windows
+and everything it's not that simple so let's go to our local disk C Drive and
+start from there I'm gonna go to users Canton is where it's under and then
+
+00:08
+desktop okay so that's where my file is located is desktop and it's called test
+dot CSV my file is located right here so
+what I'm gonna do is I'm gonna copy this URL or this address that's now an
+address and we're gonna go up here to our console I'm gonna erase all this
+because we don't need it we need to read dot CSV open parenthesis and you should
+see well let's let's start back read dot CSV and now just let it sit there and
+you see this yellow box pop up that kind of gives you an idea of what kind of
+parameters go inside of that function so they're read CSV it's pretty
+self-explanatory it's gonna read a CSV file into our studio what's the file
+that's the first parameter and then these other parameters like header
+equals true those are all optional at this point I'll get into more
+later on with some more tutorials so header equals true that's a default so
+if you don't put anything in there it means there's a header in there if you
+
+00:09
+don't have a header just make that a capital false I'll show you that in a
+second so let's go ahead and put this in there so if you have Windows you'd put
+them in quotes and paste that URL in there and then I'm gonna show you how
+this is not gonna work first test dot CSV
+it's very finicky it's gonna read those back slashes as escape characters so
+when I hit ctrl enter you see the error down here so that's an error and it's
+telling you basically that hey back slashes are used for special characters
+and it doesn't recognize them as back slashes so make those forward slashes
+like I think most other operating systems we do automatically max even
+worse max has some weird funky stuff going on with layers but I'm now if I do
+that I've entered there's my database it showed up and showed headers and it
+showed the actual data and it numbered the data with the rows so what are we
+gonna do with that we're gonna actually store that as a variable say my data
+equals that control-enter now you see on the top right my data two
+
+00:10
+observations of three variables what are the three variables name state and city
+two observations observation mark that an observation day of that row so that's
+how you read it in there you can you can do many things with with this like if
+you names my data and it's gonna spit out if you hit control enter the header
+name so that's kind of nice but if I wanted to select say header the city
+header one knows the third one so I can do names my data and you can use this as
+an array basically or a vector and you can just put in the number three in
+there and it'll print out city and you can make that equal to something as as
+two so city header whatever you want to use it for equals okay so you see down
+here you have a value called city header and it's called City these are just
+examples I wanted to get you started to where you can actually read a file of
+your own to make this more useable to you feel free to comment any questions
+
+00:11
+and I hope to put some more of these tutorials out laterEnd of file
+
+---
+title: Download R   R Studio   First R Script Complete Guide   Lesson 0
+date: 2019-08-02
+categories:
+  - Absolute Beginners Guide
+tags:
+  - read.csv
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi_webp/sZo_Ig002Bw/maxresdefault.webp
+---
+
+<a href="https://www.youtube.com/watch?v=sZo_Ig002Bw">
+<picture><img src="https://i.ytimg.com/vi_webp/sZo_Ig002Bw/maxresdefault.webp"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+hi we're gonna download our into our studio and I'm gonna get you started on
+your first couple of scripts really basic but let's get right to it so just
+go to Google and click on download R or type that in you're gonna get the our
+project the our project so you can go straight here or you can go to most
+likely if you're using Windows it'll show up on the top left as a download
+option here or Mac whatever it should default to it so just click on this
+download R for Windows usually the latest version is gonna be up in this
+box and just save the file open the executable and go through the steps I
+didn't see any bloatware or any spyware and it'll install R now don't worry
+about our just yet because we're gonna download our studio as well so let's go
+to google and type in download our studio and it should be the first link
+
+00:01
+our studio comm products download so it's very easy to find so download our
+studio as well and you're gonna get to this page and the free version let's
+just go ahead and click on that and you can click either one the whatever's free
+is the one you want to use same deal that's gonna open up a link installers
+so I have window so I'm gonna click on the Windows version and save it run
+through the steps if you need to pause this video come back to it when you're
+done okay okay so once you've downloaded them both now they're not gonna just
+show up as Start menus most likely so you're gonna have to know how to
+navigate to them go to your Explorer whatever way you do that so File
+Explorer click on your C Drive usually it's C Drive local disk whatever that is
+it's going to be under Program Files if you have Windows and you go to Program
+Files gonna see our and you'll see our studio
+
+00:02
+both okay so our is just going to be we're gonna use the back end of our and
+all all of its features but we're really going to use the the IDE the our studio
+so this is where our is located it's under our sixty
+four-bit and you can click on our you're gonna get to your command prompt it's
+very basic command prompt you can do things like two plus two and there it'll
+give you four we're not gonna use this this is going to be very difficult to
+write scripts in unless you're somewhat of an expert but so let's get out of our
+and never think about that for a while let's go to our studio and let's create
+a link to it so our studio you go to your binary and you go to your down at
+the bottom it'll say our studio Exe what I did was I just dragged and dropped it
+to my taskbar so I have a shortcut route didn't read it I don't know what I
+
+00:03
+clicked on there anyway so our studio I just click on our studio and it opens up
+my workspace my environment my integrated development environment so to
+speak what we have here is we're in the console window that's basically the same
+exact thing is that Dass looking Cronk window
+we're global environments to the top right that'll store all of our variables
+and their values and I'll show you that more in a minute plots packages all the
+different things down here you're gonna see navigation panes let's get started
+right away so like I showed you with that DOS prompt looking thing and if you
+could enter on twoplustwo it's gonna give you four right notice nothing's up
+here but if I said a equals two plus two now we have a variable called a and the
+value that's stored is four so if I just type in the letter A and hit enter over
+here it's going to show you the well it's gonna print out 4 here and that's
+that okay now we don't want our work so much
+inside this console area so let's go to file new file our script
+
+00:04
+control-shift-n it's going to open up this notepad looking area this is kind
+of you the place that you want to store your scripts or your code so you're
+gonna have multiple lines you can repeat them and run them multiple times so let
+me start by giving you a comment this is a comment it will not be executed no
+matter what so let's do the same thing we're gonna do two plus two we're just
+gonna hit enter you see nothing happens because it's just like notepad highlight
+that line or get to that line with your arrow keys or Mouse hold
+control if you have a Windows hold command if you have a Mac and hit enter
+then you'll see it populated the console
+down here so you can repeat steps 2 plus 2 8 plus well let's do 8 plus a we have
+a variable named a so let's try that so that should be 12 right hit enter or
+ctrl enter I should say and we've got 8 plus a is 12 well let's make 8 plus a
+
+00:05
+let's store that in to a variable called B so B equals and hit control enter
+now B equals 8 plus a so if I type in B control enter it's gonna equal 12 every
+time right plus I decided to change it and I actually do I can do B less than
+symbol - and say let's make that equal to 0 control enter and now we're back at
+0 so if I if I do now I can go back and forth to the console oh there's some
+testing I can just type in B and C it should equal 0 at this time right
+because if you look up here on the top right a is 4 B is 0 right now if I want
+to rerun parts of this I can just highlight it and it'll run just that so
+it showed displayed 4 and then it made B
+equals 8 plus a so B is now if I go down to the console these should be back to
+12 see how that works now if I ran the whole thing B is going to equal 0 again
+because at the end of the day B is going
+
+00:06
+to equal 0 you can also do it this way B
+I'm sorry 0 and store it into me I don't use this method very often but that'll
+work too let's do a different number so we know if it works ok let's let's do a
+10 ctrl enter and now let's do down here
+at the console let's just type in B okay so there's your 10 how do we how do we
+remove these variables I'm gonna show you that real quick and then one more
+thing and we'll call this one good so we're removing by doing the RM remove
+and we will type in list equals LS currencies close mercies
+okay now they're all gone now I want to get you this far so you can start
+googling and kind of understand how the syntax works and how the layout works
+here one other thing if you do the question mark at the console and then
+you type in RM it will give you all the help features which I'm not gonna go
+
+00:07
+over what all this means yet but that's how you would get to them for now Google
+is going to be a friend I'm gonna show you one more very useful thing about
+this to get you started with more of a real-world situation is what if you had
+your own CSV file or excel file that you saved as a CSV comma separated value if
+you have an excel file with headers and you want to save it and you want to use
+it in R the easiest way right off the bat without downloading any packages is
+to just convert that into a CSV file because R really likes CSV comma
+separated values no extra fluff in there so I have a file that's located on my
+desktop let's go to file explorer now I was gonna say you can just go straight
+to your desktop and copy and paste the URL in the address bar but with windows
+and everything it's not that simple so let's go to our local disk C Drive and
+start from there I'm gonna go to users Canton is where it's under and then
+
+00:08
+desktop okay so that's where my file is located is desktop and it's called test
+dot CSV my file is located right here so
+what I'm gonna do is I'm gonna copy this URL or this address that's now an
+address and we're gonna go up here to our console I'm gonna erase all this
+because we don't need it we need to read dot CSV open parenthesis and you should
+see well let's let's start back read dot CSV and now just let it sit there and
+you see this yellow box pop up that kind of gives you an idea of what kind of
+parameters go inside of that function so they're read CSV it's pretty
+self-explanatory it's gonna read a CSV file into our studio what's the file
+that's the first parameter and then these other parameters like header
+equals true those are all optional at this point I'll get into more
+later on with some more tutorials so header equals true that's a default so
+if you don't put anything in there it means there's a header in there if you
+
+00:09
+don't have a header just make that a capital false I'll show you that in a
+second so let's go ahead and put this in there so if you have Windows you'd put
+them in quotes and paste that URL in there and then I'm gonna show you how
+this is not gonna work first test dot CSV
+it's very finicky it's gonna read those back slashes as escape characters so
+when I hit ctrl enter you see the error down here so that's an error and it's
+telling you basically that hey back slashes are used for special characters
+and it doesn't recognize them as back slashes so make those forward slashes
+like I think most other operating systems we do automatically max even
+worse max has some weird funky stuff going on with layers but I'm now if I do
+that I've entered there's my database it showed up and showed headers and it
+showed the actual data and it numbered the data with the rows so what are we
+gonna do with that we're gonna actually store that as a variable say my data
+equals that control-enter now you see on the top right my data two
+
+00:10
+observations of three variables what are the three variables name state and city
+two observations observation mark that an observation day of that row so that's
+how you read it in there you can you can do many things with with this like if
+you names my data and it's gonna spit out if you hit control enter the header
+name so that's kind of nice but if I wanted to select say header the city
+header one knows the third one so I can do names my data and you can use this as
+an array basically or a vector and you can just put in the number three in
+there and it'll print out city and you can make that equal to something as as
+two so city header whatever you want to use it for equals okay so you see down
+here you have a value called city header and it's called City these are just
+examples I wanted to get you started to where you can actually read a file of
+your own to make this more useable to you feel free to comment any questions
+
+00:11
+and I hope to put some more of these tutorials out laterEnd of file
+
+---
+title: Download R   R Studio   First R Script Complete Guide   Lesson 0
+date: 2019-08-02
+categories:
+  - Absolute Beginners Guide
+tags:
+  - read csv
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi_webp/sZo_Ig002Bw/maxresdefault.webp
+---
+
+<a href="https://www.youtube.com/watch?v=sZo_Ig002Bw">
+<picture><img src="https://i.ytimg.com/vi_webp/sZo_Ig002Bw/maxresdefault.webp"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+hi we're gonna download our into our studio and I'm gonna get you started on
+your first couple of scripts really basic but let's get right to it so just
+go to Google and click on download R or type that in you're gonna get the our
+project the our project so you can go straight here or you can go to most
+likely if you're using Windows it'll show up on the top left as a download
+option here or Mac whatever it should default to it so just click on this
+download R for Windows usually the latest version is gonna be up in this
+box and just save the file open the executable and go through the steps I
+didn't see any bloatware or any spyware and it'll install R now don't worry
+about our just yet because we're gonna download our studio as well so let's go
+to google and type in download our studio and it should be the first link
+
+00:01
+our studio comm products download so it's very easy to find so download our
+studio as well and you're gonna get to this page and the free version let's
+just go ahead and click on that and you can click either one the whatever's free
+is the one you want to use same deal that's gonna open up a link installers
+so I have window so I'm gonna click on the Windows version and save it run
+through the steps if you need to pause this video come back to it when you're
+done okay okay so once you've downloaded them both now they're not gonna just
+show up as Start menus most likely so you're gonna have to know how to
+navigate to them go to your Explorer whatever way you do that so File
+Explorer click on your C Drive usually it's C Drive local disk whatever that is
+it's going to be under Program Files if you have Windows and you go to Program
+Files gonna see our and you'll see our studio
+
+00:02
+both okay so our is just going to be we're gonna use the back end of our and
+all all of its features but we're really going to use the the IDE the our studio
+so this is where our is located it's under our sixty
+four-bit and you can click on our you're gonna get to your command prompt it's
+very basic command prompt you can do things like two plus two and there it'll
+give you four we're not gonna use this this is going to be very difficult to
+write scripts in unless you're somewhat of an expert but so let's get out of our
+and never think about that for a while let's go to our studio and let's create
+a link to it so our studio you go to your binary and you go to your down at
+the bottom it'll say our studio Exe what I did was I just dragged and dropped it
+to my taskbar so I have a shortcut route didn't read it I don't know what I
+
+00:03
+clicked on there anyway so our studio I just click on our studio and it opens up
+my workspace my environment my integrated development environment so to
+speak what we have here is we're in the console window that's basically the same
+exact thing is that Dass looking Cronk window
+we're global environments to the top right that'll store all of our variables
+and their values and I'll show you that more in a minute plots packages all the
+different things down here you're gonna see navigation panes let's get started
+right away so like I showed you with that DOS prompt looking thing and if you
+could enter on twoplustwo it's gonna give you four right notice nothing's up
+here but if I said a equals two plus two now we have a variable called a and the
+value that's stored is four so if I just type in the letter A and hit enter over
+here it's going to show you the well it's gonna print out 4 here and that's
+that okay now we don't want our work so much
+inside this console area so let's go to file new file our script
+
+00:04
+control-shift-n it's going to open up this notepad looking area this is kind
+of you the place that you want to store your scripts or your code so you're
+gonna have multiple lines you can repeat them and run them multiple times so let
+me start by giving you a comment this is a comment it will not be executed no
+matter what so let's do the same thing we're gonna do two plus two we're just
+gonna hit enter you see nothing happens because it's just like notepad highlight
+that line or get to that line with your arrow keys or Mouse hold
+control if you have a Windows hold command if you have a Mac and hit enter
+then you'll see it populated the console
+down here so you can repeat steps 2 plus 2 8 plus well let's do 8 plus a we have
+a variable named a so let's try that so that should be 12 right hit enter or
+ctrl enter I should say and we've got 8 plus a is 12 well let's make 8 plus a
+
+00:05
+let's store that in to a variable called B so B equals and hit control enter
+now B equals 8 plus a so if I type in B control enter it's gonna equal 12 every
+time right plus I decided to change it and I actually do I can do B less than
+symbol - and say let's make that equal to 0 control enter and now we're back at
+0 so if I if I do now I can go back and forth to the console oh there's some
+testing I can just type in B and C it should equal 0 at this time right
+because if you look up here on the top right a is 4 B is 0 right now if I want
+to rerun parts of this I can just highlight it and it'll run just that so
+it showed displayed 4 and then it made B
+equals 8 plus a so B is now if I go down to the console these should be back to
+12 see how that works now if I ran the whole thing B is going to equal 0 again
+because at the end of the day B is going
+
+00:06
+to equal 0 you can also do it this way B
+I'm sorry 0 and store it into me I don't use this method very often but that'll
+work too let's do a different number so we know if it works ok let's let's do a
+10 ctrl enter and now let's do down here
+at the console let's just type in B okay so there's your 10 how do we how do we
+remove these variables I'm gonna show you that real quick and then one more
+thing and we'll call this one good so we're removing by doing the RM remove
+and we will type in list equals LS currencies close mercies
+okay now they're all gone now I want to get you this far so you can start
+googling and kind of understand how the syntax works and how the layout works
+here one other thing if you do the question mark at the console and then
+you type in RM it will give you all the help features which I'm not gonna go
+
+00:07
+over what all this means yet but that's how you would get to them for now Google
+is going to be a friend I'm gonna show you one more very useful thing about
+this to get you started with more of a real-world situation is what if you had
+your own CSV file or excel file that you saved as a CSV comma separated value if
+you have an excel file with headers and you want to save it and you want to use
+it in R the easiest way right off the bat without downloading any packages is
+to just convert that into a CSV file because R really likes CSV comma
+separated values no extra fluff in there so I have a file that's located on my
+desktop let's go to file explorer now I was gonna say you can just go straight
+to your desktop and copy and paste the URL in the address bar but with windows
+and everything it's not that simple so let's go to our local disk C Drive and
+start from there I'm gonna go to users Canton is where it's under and then
+
+00:08
+desktop okay so that's where my file is located is desktop and it's called test
+dot CSV my file is located right here so
+what I'm gonna do is I'm gonna copy this URL or this address that's now an
+address and we're gonna go up here to our console I'm gonna erase all this
+because we don't need it we need to read dot CSV open parenthesis and you should
+see well let's let's start back read dot CSV and now just let it sit there and
+you see this yellow box pop up that kind of gives you an idea of what kind of
+parameters go inside of that function so they're read CSV it's pretty
+self-explanatory it's gonna read a CSV file into our studio what's the file
+that's the first parameter and then these other parameters like header
+equals true those are all optional at this point I'll get into more
+later on with some more tutorials so header equals true that's a default so
+if you don't put anything in there it means there's a header in there if you
+
+00:09
+don't have a header just make that a capital false I'll show you that in a
+second so let's go ahead and put this in there so if you have Windows you'd put
+them in quotes and paste that URL in there and then I'm gonna show you how
+this is not gonna work first test dot CSV
+it's very finicky it's gonna read those back slashes as escape characters so
+when I hit ctrl enter you see the error down here so that's an error and it's
+telling you basically that hey back slashes are used for special characters
+and it doesn't recognize them as back slashes so make those forward slashes
+like I think most other operating systems we do automatically max even
+worse max has some weird funky stuff going on with layers but I'm now if I do
+that I've entered there's my database it showed up and showed headers and it
+showed the actual data and it numbered the data with the rows so what are we
+gonna do with that we're gonna actually store that as a variable say my data
+equals that control-enter now you see on the top right my data two
+
+00:10
+observations of three variables what are the three variables name state and city
+two observations observation mark that an observation day of that row so that's
+how you read it in there you can you can do many things with with this like if
+you names my data and it's gonna spit out if you hit control enter the header
+name so that's kind of nice but if I wanted to select say header the city
+header one knows the third one so I can do names my data and you can use this as
+an array basically or a vector and you can just put in the number three in
+there and it'll print out city and you can make that equal to something as as
+two so city header whatever you want to use it for equals okay so you see down
+here you have a value called city header and it's called City these are just
+examples I wanted to get you started to where you can actually read a file of
+your own to make this more useable to you feel free to comment any questions
+
+00:11
+and I hope to put some more of these tutorials out laterEnd of file
+
+---
+title: Download R   R Studio   First R Script Complete Guide   Lesson 0
+date: 2019-08-02
+categories:
+  - Absolute Beginners Guide
+tags:
+  - csv files
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi_webp/sZo_Ig002Bw/maxresdefault.webp
+---
+
+<a href="https://www.youtube.com/watch?v=sZo_Ig002Bw">
+<picture><img src="https://i.ytimg.com/vi_webp/sZo_Ig002Bw/maxresdefault.webp"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+hi we're gonna download our into our studio and I'm gonna get you started on
+your first couple of scripts really basic but let's get right to it so just
+go to Google and click on download R or type that in you're gonna get the our
+project the our project so you can go straight here or you can go to most
+likely if you're using Windows it'll show up on the top left as a download
+option here or Mac whatever it should default to it so just click on this
+download R for Windows usually the latest version is gonna be up in this
+box and just save the file open the executable and go through the steps I
+didn't see any bloatware or any spyware and it'll install R now don't worry
+about our just yet because we're gonna download our studio as well so let's go
+to google and type in download our studio and it should be the first link
+
+00:01
+our studio comm products download so it's very easy to find so download our
+studio as well and you're gonna get to this page and the free version let's
+just go ahead and click on that and you can click either one the whatever's free
+is the one you want to use same deal that's gonna open up a link installers
+so I have window so I'm gonna click on the Windows version and save it run
+through the steps if you need to pause this video come back to it when you're
+done okay okay so once you've downloaded them both now they're not gonna just
+show up as Start menus most likely so you're gonna have to know how to
+navigate to them go to your Explorer whatever way you do that so File
+Explorer click on your C Drive usually it's C Drive local disk whatever that is
+it's going to be under Program Files if you have Windows and you go to Program
+Files gonna see our and you'll see our studio
+
+00:02
+both okay so our is just going to be we're gonna use the back end of our and
+all all of its features but we're really going to use the the IDE the our studio
+so this is where our is located it's under our sixty
+four-bit and you can click on our you're gonna get to your command prompt it's
+very basic command prompt you can do things like two plus two and there it'll
+give you four we're not gonna use this this is going to be very difficult to
+write scripts in unless you're somewhat of an expert but so let's get out of our
+and never think about that for a while let's go to our studio and let's create
+a link to it so our studio you go to your binary and you go to your down at
+the bottom it'll say our studio Exe what I did was I just dragged and dropped it
+to my taskbar so I have a shortcut route didn't read it I don't know what I
+
+00:03
+clicked on there anyway so our studio I just click on our studio and it opens up
+my workspace my environment my integrated development environment so to
+speak what we have here is we're in the console window that's basically the same
+exact thing is that Dass looking Cronk window
+we're global environments to the top right that'll store all of our variables
+and their values and I'll show you that more in a minute plots packages all the
+different things down here you're gonna see navigation panes let's get started
+right away so like I showed you with that DOS prompt looking thing and if you
+could enter on twoplustwo it's gonna give you four right notice nothing's up
+here but if I said a equals two plus two now we have a variable called a and the
+value that's stored is four so if I just type in the letter A and hit enter over
+here it's going to show you the well it's gonna print out 4 here and that's
+that okay now we don't want our work so much
+inside this console area so let's go to file new file our script
+
+00:04
+control-shift-n it's going to open up this notepad looking area this is kind
+of you the place that you want to store your scripts or your code so you're
+gonna have multiple lines you can repeat them and run them multiple times so let
+me start by giving you a comment this is a comment it will not be executed no
+matter what so let's do the same thing we're gonna do two plus two we're just
+gonna hit enter you see nothing happens because it's just like notepad highlight
+that line or get to that line with your arrow keys or Mouse hold
+control if you have a Windows hold command if you have a Mac and hit enter
+then you'll see it populated the console
+down here so you can repeat steps 2 plus 2 8 plus well let's do 8 plus a we have
+a variable named a so let's try that so that should be 12 right hit enter or
+ctrl enter I should say and we've got 8 plus a is 12 well let's make 8 plus a
+
+00:05
+let's store that in to a variable called B so B equals and hit control enter
+now B equals 8 plus a so if I type in B control enter it's gonna equal 12 every
+time right plus I decided to change it and I actually do I can do B less than
+symbol - and say let's make that equal to 0 control enter and now we're back at
+0 so if I if I do now I can go back and forth to the console oh there's some
+testing I can just type in B and C it should equal 0 at this time right
+because if you look up here on the top right a is 4 B is 0 right now if I want
+to rerun parts of this I can just highlight it and it'll run just that so
+it showed displayed 4 and then it made B
+equals 8 plus a so B is now if I go down to the console these should be back to
+12 see how that works now if I ran the whole thing B is going to equal 0 again
+because at the end of the day B is going
+
+00:06
+to equal 0 you can also do it this way B
+I'm sorry 0 and store it into me I don't use this method very often but that'll
+work too let's do a different number so we know if it works ok let's let's do a
+10 ctrl enter and now let's do down here
+at the console let's just type in B okay so there's your 10 how do we how do we
+remove these variables I'm gonna show you that real quick and then one more
+thing and we'll call this one good so we're removing by doing the RM remove
+and we will type in list equals LS currencies close mercies
+okay now they're all gone now I want to get you this far so you can start
+googling and kind of understand how the syntax works and how the layout works
+here one other thing if you do the question mark at the console and then
+you type in RM it will give you all the help features which I'm not gonna go
+
+00:07
+over what all this means yet but that's how you would get to them for now Google
+is going to be a friend I'm gonna show you one more very useful thing about
+this to get you started with more of a real-world situation is what if you had
+your own CSV file or excel file that you saved as a CSV comma separated value if
+you have an excel file with headers and you want to save it and you want to use
+it in R the easiest way right off the bat without downloading any packages is
+to just convert that into a CSV file because R really likes CSV comma
+separated values no extra fluff in there so I have a file that's located on my
+desktop let's go to file explorer now I was gonna say you can just go straight
+to your desktop and copy and paste the URL in the address bar but with windows
+and everything it's not that simple so let's go to our local disk C Drive and
+start from there I'm gonna go to users Canton is where it's under and then
+
+00:08
+desktop okay so that's where my file is located is desktop and it's called test
+dot CSV my file is located right here so
+what I'm gonna do is I'm gonna copy this URL or this address that's now an
+address and we're gonna go up here to our console I'm gonna erase all this
+because we don't need it we need to read dot CSV open parenthesis and you should
+see well let's let's start back read dot CSV and now just let it sit there and
+you see this yellow box pop up that kind of gives you an idea of what kind of
+parameters go inside of that function so they're read CSV it's pretty
+self-explanatory it's gonna read a CSV file into our studio what's the file
+that's the first parameter and then these other parameters like header
+equals true those are all optional at this point I'll get into more
+later on with some more tutorials so header equals true that's a default so
+if you don't put anything in there it means there's a header in there if you
+
+00:09
+don't have a header just make that a capital false I'll show you that in a
+second so let's go ahead and put this in there so if you have Windows you'd put
+them in quotes and paste that URL in there and then I'm gonna show you how
+this is not gonna work first test dot CSV
+it's very finicky it's gonna read those back slashes as escape characters so
+when I hit ctrl enter you see the error down here so that's an error and it's
+telling you basically that hey back slashes are used for special characters
+and it doesn't recognize them as back slashes so make those forward slashes
+like I think most other operating systems we do automatically max even
+worse max has some weird funky stuff going on with layers but I'm now if I do
+that I've entered there's my database it showed up and showed headers and it
+showed the actual data and it numbered the data with the rows so what are we
+gonna do with that we're gonna actually store that as a variable say my data
+equals that control-enter now you see on the top right my data two
+
+00:10
+observations of three variables what are the three variables name state and city
+two observations observation mark that an observation day of that row so that's
+how you read it in there you can you can do many things with with this like if
+you names my data and it's gonna spit out if you hit control enter the header
+name so that's kind of nice but if I wanted to select say header the city
+header one knows the third one so I can do names my data and you can use this as
+an array basically or a vector and you can just put in the number three in
+there and it'll print out city and you can make that equal to something as as
+two so city header whatever you want to use it for equals okay so you see down
+here you have a value called city header and it's called City these are just
+examples I wanted to get you started to where you can actually read a file of
+your own to make this more useable to you feel free to comment any questions
+
+00:11
+and I hope to put some more of these tutorials out laterEnd of file
+
+---
+title: Download R   R Studio   First R Script Complete Guide   Lesson 0
+date: 2019-08-02
+categories:
+  - Absolute Beginners Guide
+tags:
+  - ide
 
 type: post
 w3codecolor: false

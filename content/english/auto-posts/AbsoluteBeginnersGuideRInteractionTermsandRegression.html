@@ -4,8 +4,7 @@ date: 2020-06-09
 categories:
   - Absolute Beginners Guide
 tags:
-  - Test
-  - Test2
+  - rstudio
 
 type: post
 w3codecolor: false
@@ -19,6 +18,2802 @@ thumbnail: https://i.ytimg.com/vi/vu81gBUkiek/maxresdefault.jpg
 <picture><img src="https://i.ytimg.com/vi/vu81gBUkiek/maxresdefault.jpg"></picture>
 </a></p>
 <div id="click-the-image-to-play-video." class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+welcome back let’s get back into the a statistics mode here we can’t really
+complete regression analysis without something called interaction terms and
+I’m gonna try to explain to you what those are with good ol pen and paper so
+that being said let me break it out so interaction terms we’ve discussed a
+lot of things and and we talked about adding features to our models to make
+them predict better so let’s start off with our basic model without interaction
+terms so we have some sort of y hat is the this is the equation and I’ll walk
+you through it here in a second B sub o plus B 1 X 1 plus B 2 X 2 so again this
+is our basic form of creating some sort of model that might predict the next
+data point right so this y hat means the Y hat is it’s an estimate hey I’m</p>
+<p>00:01
+estimating the the perfect value of y if I knew everything if I was the almighty
+whatever and I knew what Y would be then I wouldn’t need a y hat so this is just
+an estimate so our B 0 is just some coefficient that says hey we’re gonna
+start on this part of the y axis right the b1 is our first coefficient that is
+it’s a parameter you set or a weight you’re setting for your X 1 variable and
+then plus your B 2 coefficient and your X 2 variable now what are the x’s now
+think about the X’s as the feature values whatever that feature might be
+this could be the weight of the car this
+could be the horsepower of the car right and now if you have horsepower and
+weight so we can actually write it that way let’s do this let’s our Y hat is now
+our miles per gallon hat right picture that is one variable equals some
+starting value no matter what it’s gonna start at this value plus your beta one</p>
+<p>00:02
+which we don’t know and our X 1 is now our what did I say wait so I will just
+call it W and then be 2 times our horsepower so for an H so now we have
+like a real sorry about the glare but we have a real situation here maybe I can
+this is tad there we go move it up so we want to estimate our miles per gallon
+because we don’t know if we put a new W and a new H in there we’ve never seen
+before we don’t know what the true miles
+per gallon is right all right and that’s important to know especially when we
+start validating these predictions that we have now what the computer is gonna
+do and what regression does it’s gonna estimate these values the b1 the b0 and
+the B - how can you adjust all of those to get the best miles per gallon for all
+of the trainings it’s gonna base it off the training data so the data that you
+do have it’s going to say how can I reduce the amount of errors we’ve talked
+about this throughout some previous tutorials how do you reduce the error
+and that’s what we’re doing here right but now we don’t have to limit ourselves</p>
+<p>00:03
+to this particular linear equation we keep calling it linear models and it is
+it’s it’s a linear model but we don’t have to use just wait and an horsepower
+we can use a combination of weight and horsepower we can use anything we want
+we could say what if a better estimate from miles per gallon so big hat is
+equal to some starting condition plus our beta 1 times weight plus our beta 2
+times horsepower plus now we have a lot of other features but we’re gonna reuse
+these two features we’re gonna say how about a beta 3 weight and horsepower
+multiplied together right we created a variable out of thin air it doesn’t
+matter because what we’re trying to do is predict miles per gallon we’re trying
+to predict that there’s no equation out there we are inventing this equation on
+the fly it does not exist right so to speak now granted with the computer you
+can actually get an exact equation if you wanted to but that would be
+overfitting your data based on the training data and we’ll get into that as</p>
+<p>00:04
+well but I don’t want you to overfit the data so we’re just going to estimate as
+best we can and we’ll get more into that when we
+talk about cross-validation and things like that but I just wanted to show you
+this equation adding I know it’s I know it’s a little Glary but you can see that
+bottom equation here miles per gallon equals to some starting coefficient
+value plus some weight times the weight plus some weight times the horsepower
+plus some other way times weight and horsepower in other words weight and
+horsepower may have an interaction that they actually depend on each other a
+little bit right I’m excused my terminology I might be off with that
+word depends so but weight and horsepower together combined could have
+an effect let me erase this and show you
+one more one more little thing I’ll give you the examples that they always give
+when you’re trying to look this stuff up is people that are on a diet so if
+you’re on a diet you have two different food diets right so we can say food one</p>
+<p>00:05
+food one and I’m gonna put it into a table here and food two right now this
+might be well this is diet food one diet food - they’re both diets we don’t have
+an on diet group and now we have males yeah we have males and we have females
+on this particular diet and then we have you know did it work or did it not work
+right or whatever the numbers are for that particular table right for males if
+you just used males you’d end up with some coefficient so let’s not make this
+a binary here so food one and male you might have had some sort of beta value
+that’s different than the beta two for females if you separated the equations
+out the same thing for it’s probably not
+a good idea to use the beta for all four but they’re there for different beta
+values but when you add them together on the same set of data you don’t really</p>
+<p>00:06
+see male and female separately right they’re combined in the data so if you
+ignore male and female you would only have two betas not four so I think maybe
+that’ll help explain it there’s not four betas there’s only two but we can look
+at it as well what if there were four right we don’t know and that’s what
+interaction is going to help us determine is hey is it could it be
+possible that we can have a really predictable equation with just males and
+maybe not so good female so if we separated out maybe we can get some good
+male predictions right but maybe together they are actually better
+combined we don’t know we don’t know there’s a lot to learn about interaction
+and it’s actually gets pretty a little bit more complex than that you
+know they talk about interacting graphs where you have like the male and the
+female and if they cross at some point they would they would have interaction
+but if they never cross in their parallel then they don’t have any
+interaction but again if you’re doing some predictions now this is pretty high</p>
+<p>00:07
+level this is pretty high level if they were kind of parallel lines for the male
+and the female they’re parallel you know if you’re gonna predict something it’s
+always going to try to predict sort of in the middle and that’s not good for
+male or female so it’s nice to know that
+if there’s an interaction if there is an interaction that we can use it to help
+our model become better more to come on that as we go but I wanted to give you
+like the mathematics sort of behind it at least the equation remember the Y hat
+is equal to some starting coefficient value plus another coefficient for your
+first feature which we called the weight plus a coefficient for our second
+feature in third and fourth in fact you can get some very high order features
+you can do wait times for power at times quarter second mile you can get very
+complex but again remember we don’t want complex equations because they’re very
+hard to use in real life the computational power and they may not be
+that that accurate right you might add features and your accuracy doesn’t go up</p>
+<p>00:08
+much but you added a lot of complexity right we don’t want to do that we want
+to keep the complexity to a minimum let me see if I can remember how to get rid
+of that boom okay so now let’s just go ahead and do this real quick in our
+and we’ll go from there so open up your are get a script going and let’s just
+jump right in with the old favorite data set I’m gonna say my data my data is
+equal to the empty cars alright so let’s load that up into
+memory into our environment you see my data over here 32 observations of 11
+variables ok so remember how to create linear models it’s been a minute so
+let’s just do model 1 is equal to LM for linear model and we’re gonna say miles
+per gallon we want to know miles per gallon is a is explained by and we’re</p>
+<p>00:09
+gonna say I think I used weight first so weight plus horsepower right and the
+data is equal to my data so we got that satisfied let’s just run that model and
+do a quick summary stats on that so model 1 boom you can see down below that
+we have and we’re not gonna look at all these stats we’re just gonna look at the
+weight and the horsepower here yeah here and here and you have the P values that
+are actually significant so point 0 1 and this one’s very small they’re both
+very small so the bulk P values are valid so weight and horsepower are both
+significant in this equation alright but the other thing you want to look at is
+the adjusted R squared remember the difference between R squared and
+adjusted R squared is digested R squared takes into account multiple parameters
+if you add features to your model you actually could be hurt in your model and
+that’s it takes care of that for you so look at this R squared value the
+adjusted r-square 0.8 1 for 8 they remember that now I said we can use a</p>
+<p>00:10
+horsepower x weight and get a new model so let’s just create model to below that
+so we’ll do model two and we’ll just compare them is a linear model I want to
+know miles per gallon explained by I’m sorry that little thing pops up by
+weight and horsepower but there’s a little shortcut to add weight horsepower
+and wait times horsepower so we can do weight actually time Swiss power that
+does not mean multiply that means inside this function it has a
+different meaning it means weight is a feature horsepower is a feature and
+weight time suppose power is going to be a feature and I’ll show you that in a
+second too so let’s run that and we have our summary of model one we could do
+summary of model two here command enter and that error oh I forgot to add the
+data so data equals my data as well boom run that again I’ll run model one and</p>
+<p>00:11
+model two and let’s take a quick look so model - we just ran second and look at
+the adjusted r-squared value 0.87 so it’s higher you’d expect the higher
+r-squared as you add as you as you add parameters parameters the wrong term
+features I’m gonna get that mixed up a few times but if you add features your
+are your multiple r-squared will increase but that’s not a good indicator
+that your model is actually getting better and more on that later as well
+look up here you have your intercept that’s that’d be zero that’d be not that
+I keep talking about and you have your weight and you have your HP and you have
+your weight : HP and that : actually means it’s a variable called weight
+horsepower so it’s weight x horsepower and so you have all of those people use
+which they all show that they could be significant right because they’re all
+below point zero five finally let’s just get that equation of that model we’re
+not gonna do this for all of them but the coefficient of model - we can</p>
+<p>00:12
+actually get those by doing qoph cof model - and we have the intercept the
+weight the horsepower and the weight horsepower those coefficients remember
+so let me jump back to this you know let’s plug those in and that’s what we
+have so we have our miles per gallon estimate is equal to now our weight is
+got the coefficient of negative eight point two one so negative well actually
+we’ve got the intercept first which is forty nine point eight forty nine point
+eight I don’t know what the units are excuse me for not putting them on here
+I’m sure we can figure it out if we really want to but plus some beta one
+which the beta one is I’m pointing at the screen like you guys can see it
+negative eight point so plus negative eight point two one
+times your weight WT plus I’m gonna go on multiple lines here and I know it’s
+messy but hopefully with my audio you can get get to the point here the HP is</p>
+<p>00:13
+negative 0.12 horsepower plus you’re gonna have a point zero two
+seven eight I’m sorry the significant digits are off the chart here times WT
+HP right and that’s a multiplication so you can actually go back to your data
+set here’s the actual equation you get used you can do the old school math way
+plug in numbers for weight horsepower and get an approximate miles per gallon
+then you can actually check here I think
+a little exercise for you which would be kind of fun if you’re nerdy like me
+where I’m trying to be anyways if you go to my data don’t look at it ahead of
+time but pick kind of a weight and a horsepower that’s available so don’t
+pick one that’s not on this chart so we have a random weight three point one
+five oh and a horsepower of ninety five do the equation that we just gave you</p>
+<p>00:14
+see how close you come to the miles per gallon because you have the true answer
+so looking at this you have the weight in the horsepower then you have the true
+answer where the miles per gallon is pretend that you don’t have the true
+answer check it and see how far off you are try a couple different ones I think
+that’s a great little assignment to prove that this equation may be
+something you’re interested in to predict the future with it right so in
+the end ultimately what we’re going to do is we’re going to chop this data set
+into at least two different parts eighty
+percent training data 20 percent pretend we never had data so the test data with
+a validation set right that’s the idea that’s what we’re getting into so you
+cut that data into pieces then you can train all day long on that eighty
+percent now you can get 100 cent accuracy on that piece of on that chunk
+of data that you using but then you then you test out that data on the test set
+or the validation set and you say oh man I was off well that means you over
+fitted the model because we don’t know the future we don’t know if the model
+truly is gonna follow that pattern you know it’s not going to go
+we’re not gonna be able to predict like that we have to just get close we don’t</p>
+<p>00:15
+want to overfit and that’s why you want to keep your variables or your models a
+little less complex than you think right now certain situations you want more
+complexity but in most cases that we’re gonna deal with anytime soon we want to
+minimize the complexity of the models not everybody has a crazy GPU to run
+these models on so again hey guys I appreciate you guys sharing this all the
+time and I appreciate you liking and I’m always appreciating everything you guys
+do and the comments are getting good oh and somebody actually I should have said
+stay tuned for this shortcut somebody commented today and I can show you maybe
+okay we’re back here so somebody commented on a previous video I was
+trying to get the full path and I appreciate this comment because it was
+super helpful all right so let’s say we’re in the downloads folder and I said
+hey how do you get this path of one of these tar.gz files so I’m glad that you
+guys came back to witness this I’m gonna</p>
+<p>00:16
+hold the shift key and right-click on it and down here you have copy as path
+click on that then if I paste it back into my R whatever and I did the
+untargeted the much easier than the way I did it in the last video however you
+still have to change these to I that /or double backslashes don’t forget that
+because that will probably cause you some pain points and I know that had
+nothing to do with this particular video but the previous one or the previous
+video that I did on another playlist this will be helpful hint so have a good
+one you [Music]End of file</p>
+<p><a href="https://www.youtube.com/watch?v=vu81gBUkiek">
+<picture><img src="https://i.ytimg.com/vi/vu81gBUkiek/maxresdefault.jpg"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-1" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+welcome back let’s get back into the a statistics mode here we can’t really
+complete regression analysis without something called interaction terms and
+I’m gonna try to explain to you what those are with good ol pen and paper so
+that being said let me break it out so interaction terms we’ve discussed a
+lot of things and and we talked about adding features to our models to make
+them predict better so let’s start off with our basic model without interaction
+terms so we have some sort of y hat is the this is the equation and I’ll walk
+you through it here in a second B sub o plus B 1 X 1 plus B 2 X 2 so again this
+is our basic form of creating some sort of model that might predict the next
+data point right so this y hat means the Y hat is it’s an estimate hey I’m</p>
+<p>00:01
+estimating the the perfect value of y if I knew everything if I was the almighty
+whatever and I knew what Y would be then I wouldn’t need a y hat so this is just
+an estimate so our B 0 is just some coefficient that says hey we’re gonna
+start on this part of the y axis right the b1 is our first coefficient that is
+it’s a parameter you set or a weight you’re setting for your X 1 variable and
+then plus your B 2 coefficient and your X 2 variable now what are the x’s now
+think about the X’s as the feature values whatever that feature might be
+this could be the weight of the car this
+could be the horsepower of the car right and now if you have horsepower and
+weight so we can actually write it that way let’s do this let’s our Y hat is now
+our miles per gallon hat right picture that is one variable equals some
+starting value no matter what it’s gonna start at this value plus your beta one</p>
+<p>00:02
+which we don’t know and our X 1 is now our what did I say wait so I will just
+call it W and then be 2 times our horsepower so for an H so now we have
+like a real sorry about the glare but we have a real situation here maybe I can
+this is tad there we go move it up so we want to estimate our miles per gallon
+because we don’t know if we put a new W and a new H in there we’ve never seen
+before we don’t know what the true miles
+per gallon is right all right and that’s important to know especially when we
+start validating these predictions that we have now what the computer is gonna
+do and what regression does it’s gonna estimate these values the b1 the b0 and
+the B - how can you adjust all of those to get the best miles per gallon for all
+of the trainings it’s gonna base it off the training data so the data that you
+do have it’s going to say how can I reduce the amount of errors we’ve talked
+about this throughout some previous tutorials how do you reduce the error
+and that’s what we’re doing here right but now we don’t have to limit ourselves</p>
+<p>00:03
+to this particular linear equation we keep calling it linear models and it is
+it’s it’s a linear model but we don’t have to use just wait and an horsepower
+we can use a combination of weight and horsepower we can use anything we want
+we could say what if a better estimate from miles per gallon so big hat is
+equal to some starting condition plus our beta 1 times weight plus our beta 2
+times horsepower plus now we have a lot of other features but we’re gonna reuse
+these two features we’re gonna say how about a beta 3 weight and horsepower
+multiplied together right we created a variable out of thin air it doesn’t
+matter because what we’re trying to do is predict miles per gallon we’re trying
+to predict that there’s no equation out there we are inventing this equation on
+the fly it does not exist right so to speak now granted with the computer you
+can actually get an exact equation if you wanted to but that would be
+overfitting your data based on the training data and we’ll get into that as</p>
+<p>00:04
+well but I don’t want you to overfit the data so we’re just going to estimate as
+best we can and we’ll get more into that when we
+talk about cross-validation and things like that but I just wanted to show you
+this equation adding I know it’s I know it’s a little Glary but you can see that
+bottom equation here miles per gallon equals to some starting coefficient
+value plus some weight times the weight plus some weight times the horsepower
+plus some other way times weight and horsepower in other words weight and
+horsepower may have an interaction that they actually depend on each other a
+little bit right I’m excused my terminology I might be off with that
+word depends so but weight and horsepower together combined could have
+an effect let me erase this and show you
+one more one more little thing I’ll give you the examples that they always give
+when you’re trying to look this stuff up is people that are on a diet so if
+you’re on a diet you have two different food diets right so we can say food one</p>
+<p>00:05
+food one and I’m gonna put it into a table here and food two right now this
+might be well this is diet food one diet food - they’re both diets we don’t have
+an on diet group and now we have males yeah we have males and we have females
+on this particular diet and then we have you know did it work or did it not work
+right or whatever the numbers are for that particular table right for males if
+you just used males you’d end up with some coefficient so let’s not make this
+a binary here so food one and male you might have had some sort of beta value
+that’s different than the beta two for females if you separated the equations
+out the same thing for it’s probably not
+a good idea to use the beta for all four but they’re there for different beta
+values but when you add them together on the same set of data you don’t really</p>
+<p>00:06
+see male and female separately right they’re combined in the data so if you
+ignore male and female you would only have two betas not four so I think maybe
+that’ll help explain it there’s not four betas there’s only two but we can look
+at it as well what if there were four right we don’t know and that’s what
+interaction is going to help us determine is hey is it could it be
+possible that we can have a really predictable equation with just males and
+maybe not so good female so if we separated out maybe we can get some good
+male predictions right but maybe together they are actually better
+combined we don’t know we don’t know there’s a lot to learn about interaction
+and it’s actually gets pretty a little bit more complex than that you
+know they talk about interacting graphs where you have like the male and the
+female and if they cross at some point they would they would have interaction
+but if they never cross in their parallel then they don’t have any
+interaction but again if you’re doing some predictions now this is pretty high</p>
+<p>00:07
+level this is pretty high level if they were kind of parallel lines for the male
+and the female they’re parallel you know if you’re gonna predict something it’s
+always going to try to predict sort of in the middle and that’s not good for
+male or female so it’s nice to know that
+if there’s an interaction if there is an interaction that we can use it to help
+our model become better more to come on that as we go but I wanted to give you
+like the mathematics sort of behind it at least the equation remember the Y hat
+is equal to some starting coefficient value plus another coefficient for your
+first feature which we called the weight plus a coefficient for our second
+feature in third and fourth in fact you can get some very high order features
+you can do wait times for power at times quarter second mile you can get very
+complex but again remember we don’t want complex equations because they’re very
+hard to use in real life the computational power and they may not be
+that that accurate right you might add features and your accuracy doesn’t go up</p>
+<p>00:08
+much but you added a lot of complexity right we don’t want to do that we want
+to keep the complexity to a minimum let me see if I can remember how to get rid
+of that boom okay so now let’s just go ahead and do this real quick in our
+and we’ll go from there so open up your are get a script going and let’s just
+jump right in with the old favorite data set I’m gonna say my data my data is
+equal to the empty cars alright so let’s load that up into
+memory into our environment you see my data over here 32 observations of 11
+variables ok so remember how to create linear models it’s been a minute so
+let’s just do model 1 is equal to LM for linear model and we’re gonna say miles
+per gallon we want to know miles per gallon is a is explained by and we’re</p>
+<p>00:09
+gonna say I think I used weight first so weight plus horsepower right and the
+data is equal to my data so we got that satisfied let’s just run that model and
+do a quick summary stats on that so model 1 boom you can see down below that
+we have and we’re not gonna look at all these stats we’re just gonna look at the
+weight and the horsepower here yeah here and here and you have the P values that
+are actually significant so point 0 1 and this one’s very small they’re both
+very small so the bulk P values are valid so weight and horsepower are both
+significant in this equation alright but the other thing you want to look at is
+the adjusted R squared remember the difference between R squared and
+adjusted R squared is digested R squared takes into account multiple parameters
+if you add features to your model you actually could be hurt in your model and
+that’s it takes care of that for you so look at this R squared value the
+adjusted r-square 0.8 1 for 8 they remember that now I said we can use a</p>
+<p>00:10
+horsepower x weight and get a new model so let’s just create model to below that
+so we’ll do model two and we’ll just compare them is a linear model I want to
+know miles per gallon explained by I’m sorry that little thing pops up by
+weight and horsepower but there’s a little shortcut to add weight horsepower
+and wait times horsepower so we can do weight actually time Swiss power that
+does not mean multiply that means inside this function it has a
+different meaning it means weight is a feature horsepower is a feature and
+weight time suppose power is going to be a feature and I’ll show you that in a
+second too so let’s run that and we have our summary of model one we could do
+summary of model two here command enter and that error oh I forgot to add the
+data so data equals my data as well boom run that again I’ll run model one and</p>
+<p>00:11
+model two and let’s take a quick look so model - we just ran second and look at
+the adjusted r-squared value 0.87 so it’s higher you’d expect the higher
+r-squared as you add as you as you add parameters parameters the wrong term
+features I’m gonna get that mixed up a few times but if you add features your
+are your multiple r-squared will increase but that’s not a good indicator
+that your model is actually getting better and more on that later as well
+look up here you have your intercept that’s that’d be zero that’d be not that
+I keep talking about and you have your weight and you have your HP and you have
+your weight : HP and that : actually means it’s a variable called weight
+horsepower so it’s weight x horsepower and so you have all of those people use
+which they all show that they could be significant right because they’re all
+below point zero five finally let’s just get that equation of that model we’re
+not gonna do this for all of them but the coefficient of model - we can</p>
+<p>00:12
+actually get those by doing qoph cof model - and we have the intercept the
+weight the horsepower and the weight horsepower those coefficients remember
+so let me jump back to this you know let’s plug those in and that’s what we
+have so we have our miles per gallon estimate is equal to now our weight is
+got the coefficient of negative eight point two one so negative well actually
+we’ve got the intercept first which is forty nine point eight forty nine point
+eight I don’t know what the units are excuse me for not putting them on here
+I’m sure we can figure it out if we really want to but plus some beta one
+which the beta one is I’m pointing at the screen like you guys can see it
+negative eight point so plus negative eight point two one
+times your weight WT plus I’m gonna go on multiple lines here and I know it’s
+messy but hopefully with my audio you can get get to the point here the HP is</p>
+<p>00:13
+negative 0.12 horsepower plus you’re gonna have a point zero two
+seven eight I’m sorry the significant digits are off the chart here times WT
+HP right and that’s a multiplication so you can actually go back to your data
+set here’s the actual equation you get used you can do the old school math way
+plug in numbers for weight horsepower and get an approximate miles per gallon
+then you can actually check here I think
+a little exercise for you which would be kind of fun if you’re nerdy like me
+where I’m trying to be anyways if you go to my data don’t look at it ahead of
+time but pick kind of a weight and a horsepower that’s available so don’t
+pick one that’s not on this chart so we have a random weight three point one
+five oh and a horsepower of ninety five do the equation that we just gave you</p>
+<p>00:14
+see how close you come to the miles per gallon because you have the true answer
+so looking at this you have the weight in the horsepower then you have the true
+answer where the miles per gallon is pretend that you don’t have the true
+answer check it and see how far off you are try a couple different ones I think
+that’s a great little assignment to prove that this equation may be
+something you’re interested in to predict the future with it right so in
+the end ultimately what we’re going to do is we’re going to chop this data set
+into at least two different parts eighty
+percent training data 20 percent pretend we never had data so the test data with
+a validation set right that’s the idea that’s what we’re getting into so you
+cut that data into pieces then you can train all day long on that eighty
+percent now you can get 100 cent accuracy on that piece of on that chunk
+of data that you using but then you then you test out that data on the test set
+or the validation set and you say oh man I was off well that means you over
+fitted the model because we don’t know the future we don’t know if the model
+truly is gonna follow that pattern you know it’s not going to go
+we’re not gonna be able to predict like that we have to just get close we don’t</p>
+<p>00:15
+want to overfit and that’s why you want to keep your variables or your models a
+little less complex than you think right now certain situations you want more
+complexity but in most cases that we’re gonna deal with anytime soon we want to
+minimize the complexity of the models not everybody has a crazy GPU to run
+these models on so again hey guys I appreciate you guys sharing this all the
+time and I appreciate you liking and I’m always appreciating everything you guys
+do and the comments are getting good oh and somebody actually I should have said
+stay tuned for this shortcut somebody commented today and I can show you maybe
+okay we’re back here so somebody commented on a previous video I was
+trying to get the full path and I appreciate this comment because it was
+super helpful all right so let’s say we’re in the downloads folder and I said
+hey how do you get this path of one of these tar.gz files so I’m glad that you
+guys came back to witness this I’m gonna</p>
+<p>00:16
+hold the shift key and right-click on it and down here you have copy as path
+click on that then if I paste it back into my R whatever and I did the
+untargeted the much easier than the way I did it in the last video however you
+still have to change these to I that /or double backslashes don’t forget that
+because that will probably cause you some pain points and I know that had
+nothing to do with this particular video but the previous one or the previous
+video that I did on another playlist this will be helpful hint so have a good
+one you [Music]End of file</p>
+<p><a href="https://www.youtube.com/watch?v=vu81gBUkiek">
+<picture><img src="https://i.ytimg.com/vi/vu81gBUkiek/maxresdefault.jpg"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-2" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+welcome back let’s get back into the a statistics mode here we can’t really
+complete regression analysis without something called interaction terms and
+I’m gonna try to explain to you what those are with good ol pen and paper so
+that being said let me break it out so interaction terms we’ve discussed a
+lot of things and and we talked about adding features to our models to make
+them predict better so let’s start off with our basic model without interaction
+terms so we have some sort of y hat is the this is the equation and I’ll walk
+you through it here in a second B sub o plus B 1 X 1 plus B 2 X 2 so again this
+is our basic form of creating some sort of model that might predict the next
+data point right so this y hat means the Y hat is it’s an estimate hey I’m</p>
+<p>00:01
+estimating the the perfect value of y if I knew everything if I was the almighty
+whatever and I knew what Y would be then I wouldn’t need a y hat so this is just
+an estimate so our B 0 is just some coefficient that says hey we’re gonna
+start on this part of the y axis right the b1 is our first coefficient that is
+it’s a parameter you set or a weight you’re setting for your X 1 variable and
+then plus your B 2 coefficient and your X 2 variable now what are the x’s now
+think about the X’s as the feature values whatever that feature might be
+this could be the weight of the car this
+could be the horsepower of the car right and now if you have horsepower and
+weight so we can actually write it that way let’s do this let’s our Y hat is now
+our miles per gallon hat right picture that is one variable equals some
+starting value no matter what it’s gonna start at this value plus your beta one</p>
+<p>00:02
+which we don’t know and our X 1 is now our what did I say wait so I will just
+call it W and then be 2 times our horsepower so for an H so now we have
+like a real sorry about the glare but we have a real situation here maybe I can
+this is tad there we go move it up so we want to estimate our miles per gallon
+because we don’t know if we put a new W and a new H in there we’ve never seen
+before we don’t know what the true miles
+per gallon is right all right and that’s important to know especially when we
+start validating these predictions that we have now what the computer is gonna
+do and what regression does it’s gonna estimate these values the b1 the b0 and
+the B - how can you adjust all of those to get the best miles per gallon for all
+of the trainings it’s gonna base it off the training data so the data that you
+do have it’s going to say how can I reduce the amount of errors we’ve talked
+about this throughout some previous tutorials how do you reduce the error
+and that’s what we’re doing here right but now we don’t have to limit ourselves</p>
+<p>00:03
+to this particular linear equation we keep calling it linear models and it is
+it’s it’s a linear model but we don’t have to use just wait and an horsepower
+we can use a combination of weight and horsepower we can use anything we want
+we could say what if a better estimate from miles per gallon so big hat is
+equal to some starting condition plus our beta 1 times weight plus our beta 2
+times horsepower plus now we have a lot of other features but we’re gonna reuse
+these two features we’re gonna say how about a beta 3 weight and horsepower
+multiplied together right we created a variable out of thin air it doesn’t
+matter because what we’re trying to do is predict miles per gallon we’re trying
+to predict that there’s no equation out there we are inventing this equation on
+the fly it does not exist right so to speak now granted with the computer you
+can actually get an exact equation if you wanted to but that would be
+overfitting your data based on the training data and we’ll get into that as</p>
+<p>00:04
+well but I don’t want you to overfit the data so we’re just going to estimate as
+best we can and we’ll get more into that when we
+talk about cross-validation and things like that but I just wanted to show you
+this equation adding I know it’s I know it’s a little Glary but you can see that
+bottom equation here miles per gallon equals to some starting coefficient
+value plus some weight times the weight plus some weight times the horsepower
+plus some other way times weight and horsepower in other words weight and
+horsepower may have an interaction that they actually depend on each other a
+little bit right I’m excused my terminology I might be off with that
+word depends so but weight and horsepower together combined could have
+an effect let me erase this and show you
+one more one more little thing I’ll give you the examples that they always give
+when you’re trying to look this stuff up is people that are on a diet so if
+you’re on a diet you have two different food diets right so we can say food one</p>
+<p>00:05
+food one and I’m gonna put it into a table here and food two right now this
+might be well this is diet food one diet food - they’re both diets we don’t have
+an on diet group and now we have males yeah we have males and we have females
+on this particular diet and then we have you know did it work or did it not work
+right or whatever the numbers are for that particular table right for males if
+you just used males you’d end up with some coefficient so let’s not make this
+a binary here so food one and male you might have had some sort of beta value
+that’s different than the beta two for females if you separated the equations
+out the same thing for it’s probably not
+a good idea to use the beta for all four but they’re there for different beta
+values but when you add them together on the same set of data you don’t really</p>
+<p>00:06
+see male and female separately right they’re combined in the data so if you
+ignore male and female you would only have two betas not four so I think maybe
+that’ll help explain it there’s not four betas there’s only two but we can look
+at it as well what if there were four right we don’t know and that’s what
+interaction is going to help us determine is hey is it could it be
+possible that we can have a really predictable equation with just males and
+maybe not so good female so if we separated out maybe we can get some good
+male predictions right but maybe together they are actually better
+combined we don’t know we don’t know there’s a lot to learn about interaction
+and it’s actually gets pretty a little bit more complex than that you
+know they talk about interacting graphs where you have like the male and the
+female and if they cross at some point they would they would have interaction
+but if they never cross in their parallel then they don’t have any
+interaction but again if you’re doing some predictions now this is pretty high</p>
+<p>00:07
+level this is pretty high level if they were kind of parallel lines for the male
+and the female they’re parallel you know if you’re gonna predict something it’s
+always going to try to predict sort of in the middle and that’s not good for
+male or female so it’s nice to know that
+if there’s an interaction if there is an interaction that we can use it to help
+our model become better more to come on that as we go but I wanted to give you
+like the mathematics sort of behind it at least the equation remember the Y hat
+is equal to some starting coefficient value plus another coefficient for your
+first feature which we called the weight plus a coefficient for our second
+feature in third and fourth in fact you can get some very high order features
+you can do wait times for power at times quarter second mile you can get very
+complex but again remember we don’t want complex equations because they’re very
+hard to use in real life the computational power and they may not be
+that that accurate right you might add features and your accuracy doesn’t go up</p>
+<p>00:08
+much but you added a lot of complexity right we don’t want to do that we want
+to keep the complexity to a minimum let me see if I can remember how to get rid
+of that boom okay so now let’s just go ahead and do this real quick in our
+and we’ll go from there so open up your are get a script going and let’s just
+jump right in with the old favorite data set I’m gonna say my data my data is
+equal to the empty cars alright so let’s load that up into
+memory into our environment you see my data over here 32 observations of 11
+variables ok so remember how to create linear models it’s been a minute so
+let’s just do model 1 is equal to LM for linear model and we’re gonna say miles
+per gallon we want to know miles per gallon is a is explained by and we’re</p>
+<p>00:09
+gonna say I think I used weight first so weight plus horsepower right and the
+data is equal to my data so we got that satisfied let’s just run that model and
+do a quick summary stats on that so model 1 boom you can see down below that
+we have and we’re not gonna look at all these stats we’re just gonna look at the
+weight and the horsepower here yeah here and here and you have the P values that
+are actually significant so point 0 1 and this one’s very small they’re both
+very small so the bulk P values are valid so weight and horsepower are both
+significant in this equation alright but the other thing you want to look at is
+the adjusted R squared remember the difference between R squared and
+adjusted R squared is digested R squared takes into account multiple parameters
+if you add features to your model you actually could be hurt in your model and
+that’s it takes care of that for you so look at this R squared value the
+adjusted r-square 0.8 1 for 8 they remember that now I said we can use a</p>
+<p>00:10
+horsepower x weight and get a new model so let’s just create model to below that
+so we’ll do model two and we’ll just compare them is a linear model I want to
+know miles per gallon explained by I’m sorry that little thing pops up by
+weight and horsepower but there’s a little shortcut to add weight horsepower
+and wait times horsepower so we can do weight actually time Swiss power that
+does not mean multiply that means inside this function it has a
+different meaning it means weight is a feature horsepower is a feature and
+weight time suppose power is going to be a feature and I’ll show you that in a
+second too so let’s run that and we have our summary of model one we could do
+summary of model two here command enter and that error oh I forgot to add the
+data so data equals my data as well boom run that again I’ll run model one and</p>
+<p>00:11
+model two and let’s take a quick look so model - we just ran second and look at
+the adjusted r-squared value 0.87 so it’s higher you’d expect the higher
+r-squared as you add as you as you add parameters parameters the wrong term
+features I’m gonna get that mixed up a few times but if you add features your
+are your multiple r-squared will increase but that’s not a good indicator
+that your model is actually getting better and more on that later as well
+look up here you have your intercept that’s that’d be zero that’d be not that
+I keep talking about and you have your weight and you have your HP and you have
+your weight : HP and that : actually means it’s a variable called weight
+horsepower so it’s weight x horsepower and so you have all of those people use
+which they all show that they could be significant right because they’re all
+below point zero five finally let’s just get that equation of that model we’re
+not gonna do this for all of them but the coefficient of model - we can</p>
+<p>00:12
+actually get those by doing qoph cof model - and we have the intercept the
+weight the horsepower and the weight horsepower those coefficients remember
+so let me jump back to this you know let’s plug those in and that’s what we
+have so we have our miles per gallon estimate is equal to now our weight is
+got the coefficient of negative eight point two one so negative well actually
+we’ve got the intercept first which is forty nine point eight forty nine point
+eight I don’t know what the units are excuse me for not putting them on here
+I’m sure we can figure it out if we really want to but plus some beta one
+which the beta one is I’m pointing at the screen like you guys can see it
+negative eight point so plus negative eight point two one
+times your weight WT plus I’m gonna go on multiple lines here and I know it’s
+messy but hopefully with my audio you can get get to the point here the HP is</p>
+<p>00:13
+negative 0.12 horsepower plus you’re gonna have a point zero two
+seven eight I’m sorry the significant digits are off the chart here times WT
+HP right and that’s a multiplication so you can actually go back to your data
+set here’s the actual equation you get used you can do the old school math way
+plug in numbers for weight horsepower and get an approximate miles per gallon
+then you can actually check here I think
+a little exercise for you which would be kind of fun if you’re nerdy like me
+where I’m trying to be anyways if you go to my data don’t look at it ahead of
+time but pick kind of a weight and a horsepower that’s available so don’t
+pick one that’s not on this chart so we have a random weight three point one
+five oh and a horsepower of ninety five do the equation that we just gave you</p>
+<p>00:14
+see how close you come to the miles per gallon because you have the true answer
+so looking at this you have the weight in the horsepower then you have the true
+answer where the miles per gallon is pretend that you don’t have the true
+answer check it and see how far off you are try a couple different ones I think
+that’s a great little assignment to prove that this equation may be
+something you’re interested in to predict the future with it right so in
+the end ultimately what we’re going to do is we’re going to chop this data set
+into at least two different parts eighty
+percent training data 20 percent pretend we never had data so the test data with
+a validation set right that’s the idea that’s what we’re getting into so you
+cut that data into pieces then you can train all day long on that eighty
+percent now you can get 100 cent accuracy on that piece of on that chunk
+of data that you using but then you then you test out that data on the test set
+or the validation set and you say oh man I was off well that means you over
+fitted the model because we don’t know the future we don’t know if the model
+truly is gonna follow that pattern you know it’s not going to go
+we’re not gonna be able to predict like that we have to just get close we don’t</p>
+<p>00:15
+want to overfit and that’s why you want to keep your variables or your models a
+little less complex than you think right now certain situations you want more
+complexity but in most cases that we’re gonna deal with anytime soon we want to
+minimize the complexity of the models not everybody has a crazy GPU to run
+these models on so again hey guys I appreciate you guys sharing this all the
+time and I appreciate you liking and I’m always appreciating everything you guys
+do and the comments are getting good oh and somebody actually I should have said
+stay tuned for this shortcut somebody commented today and I can show you maybe
+okay we’re back here so somebody commented on a previous video I was
+trying to get the full path and I appreciate this comment because it was
+super helpful all right so let’s say we’re in the downloads folder and I said
+hey how do you get this path of one of these tar.gz files so I’m glad that you
+guys came back to witness this I’m gonna</p>
+<p>00:16
+hold the shift key and right-click on it and down here you have copy as path
+click on that then if I paste it back into my R whatever and I did the
+untargeted the much easier than the way I did it in the last video however you
+still have to change these to I that /or double backslashes don’t forget that
+because that will probably cause you some pain points and I know that had
+nothing to do with this particular video but the previous one or the previous
+video that I did on another playlist this will be helpful hint so have a good
+one you [Music]End of file</p>
+<p><a href="https://www.youtube.com/watch?v=vu81gBUkiek">
+<picture><img src="https://i.ytimg.com/vi/vu81gBUkiek/maxresdefault.jpg"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-3" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+welcome back let’s get back into the a statistics mode here we can’t really
+complete regression analysis without something called interaction terms and
+I’m gonna try to explain to you what those are with good ol pen and paper so
+that being said let me break it out so interaction terms we’ve discussed a
+lot of things and and we talked about adding features to our models to make
+them predict better so let’s start off with our basic model without interaction
+terms so we have some sort of y hat is the this is the equation and I’ll walk
+you through it here in a second B sub o plus B 1 X 1 plus B 2 X 2 so again this
+is our basic form of creating some sort of model that might predict the next
+data point right so this y hat means the Y hat is it’s an estimate hey I’m</p>
+<p>00:01
+estimating the the perfect value of y if I knew everything if I was the almighty
+whatever and I knew what Y would be then I wouldn’t need a y hat so this is just
+an estimate so our B 0 is just some coefficient that says hey we’re gonna
+start on this part of the y axis right the b1 is our first coefficient that is
+it’s a parameter you set or a weight you’re setting for your X 1 variable and
+then plus your B 2 coefficient and your X 2 variable now what are the x’s now
+think about the X’s as the feature values whatever that feature might be
+this could be the weight of the car this
+could be the horsepower of the car right and now if you have horsepower and
+weight so we can actually write it that way let’s do this let’s our Y hat is now
+our miles per gallon hat right picture that is one variable equals some
+starting value no matter what it’s gonna start at this value plus your beta one</p>
+<p>00:02
+which we don’t know and our X 1 is now our what did I say wait so I will just
+call it W and then be 2 times our horsepower so for an H so now we have
+like a real sorry about the glare but we have a real situation here maybe I can
+this is tad there we go move it up so we want to estimate our miles per gallon
+because we don’t know if we put a new W and a new H in there we’ve never seen
+before we don’t know what the true miles
+per gallon is right all right and that’s important to know especially when we
+start validating these predictions that we have now what the computer is gonna
+do and what regression does it’s gonna estimate these values the b1 the b0 and
+the B - how can you adjust all of those to get the best miles per gallon for all
+of the trainings it’s gonna base it off the training data so the data that you
+do have it’s going to say how can I reduce the amount of errors we’ve talked
+about this throughout some previous tutorials how do you reduce the error
+and that’s what we’re doing here right but now we don’t have to limit ourselves</p>
+<p>00:03
+to this particular linear equation we keep calling it linear models and it is
+it’s it’s a linear model but we don’t have to use just wait and an horsepower
+we can use a combination of weight and horsepower we can use anything we want
+we could say what if a better estimate from miles per gallon so big hat is
+equal to some starting condition plus our beta 1 times weight plus our beta 2
+times horsepower plus now we have a lot of other features but we’re gonna reuse
+these two features we’re gonna say how about a beta 3 weight and horsepower
+multiplied together right we created a variable out of thin air it doesn’t
+matter because what we’re trying to do is predict miles per gallon we’re trying
+to predict that there’s no equation out there we are inventing this equation on
+the fly it does not exist right so to speak now granted with the computer you
+can actually get an exact equation if you wanted to but that would be
+overfitting your data based on the training data and we’ll get into that as</p>
+<p>00:04
+well but I don’t want you to overfit the data so we’re just going to estimate as
+best we can and we’ll get more into that when we
+talk about cross-validation and things like that but I just wanted to show you
+this equation adding I know it’s I know it’s a little Glary but you can see that
+bottom equation here miles per gallon equals to some starting coefficient
+value plus some weight times the weight plus some weight times the horsepower
+plus some other way times weight and horsepower in other words weight and
+horsepower may have an interaction that they actually depend on each other a
+little bit right I’m excused my terminology I might be off with that
+word depends so but weight and horsepower together combined could have
+an effect let me erase this and show you
+one more one more little thing I’ll give you the examples that they always give
+when you’re trying to look this stuff up is people that are on a diet so if
+you’re on a diet you have two different food diets right so we can say food one</p>
+<p>00:05
+food one and I’m gonna put it into a table here and food two right now this
+might be well this is diet food one diet food - they’re both diets we don’t have
+an on diet group and now we have males yeah we have males and we have females
+on this particular diet and then we have you know did it work or did it not work
+right or whatever the numbers are for that particular table right for males if
+you just used males you’d end up with some coefficient so let’s not make this
+a binary here so food one and male you might have had some sort of beta value
+that’s different than the beta two for females if you separated the equations
+out the same thing for it’s probably not
+a good idea to use the beta for all four but they’re there for different beta
+values but when you add them together on the same set of data you don’t really</p>
+<p>00:06
+see male and female separately right they’re combined in the data so if you
+ignore male and female you would only have two betas not four so I think maybe
+that’ll help explain it there’s not four betas there’s only two but we can look
+at it as well what if there were four right we don’t know and that’s what
+interaction is going to help us determine is hey is it could it be
+possible that we can have a really predictable equation with just males and
+maybe not so good female so if we separated out maybe we can get some good
+male predictions right but maybe together they are actually better
+combined we don’t know we don’t know there’s a lot to learn about interaction
+and it’s actually gets pretty a little bit more complex than that you
+know they talk about interacting graphs where you have like the male and the
+female and if they cross at some point they would they would have interaction
+but if they never cross in their parallel then they don’t have any
+interaction but again if you’re doing some predictions now this is pretty high</p>
+<p>00:07
+level this is pretty high level if they were kind of parallel lines for the male
+and the female they’re parallel you know if you’re gonna predict something it’s
+always going to try to predict sort of in the middle and that’s not good for
+male or female so it’s nice to know that
+if there’s an interaction if there is an interaction that we can use it to help
+our model become better more to come on that as we go but I wanted to give you
+like the mathematics sort of behind it at least the equation remember the Y hat
+is equal to some starting coefficient value plus another coefficient for your
+first feature which we called the weight plus a coefficient for our second
+feature in third and fourth in fact you can get some very high order features
+you can do wait times for power at times quarter second mile you can get very
+complex but again remember we don’t want complex equations because they’re very
+hard to use in real life the computational power and they may not be
+that that accurate right you might add features and your accuracy doesn’t go up</p>
+<p>00:08
+much but you added a lot of complexity right we don’t want to do that we want
+to keep the complexity to a minimum let me see if I can remember how to get rid
+of that boom okay so now let’s just go ahead and do this real quick in our
+and we’ll go from there so open up your are get a script going and let’s just
+jump right in with the old favorite data set I’m gonna say my data my data is
+equal to the empty cars alright so let’s load that up into
+memory into our environment you see my data over here 32 observations of 11
+variables ok so remember how to create linear models it’s been a minute so
+let’s just do model 1 is equal to LM for linear model and we’re gonna say miles
+per gallon we want to know miles per gallon is a is explained by and we’re</p>
+<p>00:09
+gonna say I think I used weight first so weight plus horsepower right and the
+data is equal to my data so we got that satisfied let’s just run that model and
+do a quick summary stats on that so model 1 boom you can see down below that
+we have and we’re not gonna look at all these stats we’re just gonna look at the
+weight and the horsepower here yeah here and here and you have the P values that
+are actually significant so point 0 1 and this one’s very small they’re both
+very small so the bulk P values are valid so weight and horsepower are both
+significant in this equation alright but the other thing you want to look at is
+the adjusted R squared remember the difference between R squared and
+adjusted R squared is digested R squared takes into account multiple parameters
+if you add features to your model you actually could be hurt in your model and
+that’s it takes care of that for you so look at this R squared value the
+adjusted r-square 0.8 1 for 8 they remember that now I said we can use a</p>
+<p>00:10
+horsepower x weight and get a new model so let’s just create model to below that
+so we’ll do model two and we’ll just compare them is a linear model I want to
+know miles per gallon explained by I’m sorry that little thing pops up by
+weight and horsepower but there’s a little shortcut to add weight horsepower
+and wait times horsepower so we can do weight actually time Swiss power that
+does not mean multiply that means inside this function it has a
+different meaning it means weight is a feature horsepower is a feature and
+weight time suppose power is going to be a feature and I’ll show you that in a
+second too so let’s run that and we have our summary of model one we could do
+summary of model two here command enter and that error oh I forgot to add the
+data so data equals my data as well boom run that again I’ll run model one and</p>
+<p>00:11
+model two and let’s take a quick look so model - we just ran second and look at
+the adjusted r-squared value 0.87 so it’s higher you’d expect the higher
+r-squared as you add as you as you add parameters parameters the wrong term
+features I’m gonna get that mixed up a few times but if you add features your
+are your multiple r-squared will increase but that’s not a good indicator
+that your model is actually getting better and more on that later as well
+look up here you have your intercept that’s that’d be zero that’d be not that
+I keep talking about and you have your weight and you have your HP and you have
+your weight : HP and that : actually means it’s a variable called weight
+horsepower so it’s weight x horsepower and so you have all of those people use
+which they all show that they could be significant right because they’re all
+below point zero five finally let’s just get that equation of that model we’re
+not gonna do this for all of them but the coefficient of model - we can</p>
+<p>00:12
+actually get those by doing qoph cof model - and we have the intercept the
+weight the horsepower and the weight horsepower those coefficients remember
+so let me jump back to this you know let’s plug those in and that’s what we
+have so we have our miles per gallon estimate is equal to now our weight is
+got the coefficient of negative eight point two one so negative well actually
+we’ve got the intercept first which is forty nine point eight forty nine point
+eight I don’t know what the units are excuse me for not putting them on here
+I’m sure we can figure it out if we really want to but plus some beta one
+which the beta one is I’m pointing at the screen like you guys can see it
+negative eight point so plus negative eight point two one
+times your weight WT plus I’m gonna go on multiple lines here and I know it’s
+messy but hopefully with my audio you can get get to the point here the HP is</p>
+<p>00:13
+negative 0.12 horsepower plus you’re gonna have a point zero two
+seven eight I’m sorry the significant digits are off the chart here times WT
+HP right and that’s a multiplication so you can actually go back to your data
+set here’s the actual equation you get used you can do the old school math way
+plug in numbers for weight horsepower and get an approximate miles per gallon
+then you can actually check here I think
+a little exercise for you which would be kind of fun if you’re nerdy like me
+where I’m trying to be anyways if you go to my data don’t look at it ahead of
+time but pick kind of a weight and a horsepower that’s available so don’t
+pick one that’s not on this chart so we have a random weight three point one
+five oh and a horsepower of ninety five do the equation that we just gave you</p>
+<p>00:14
+see how close you come to the miles per gallon because you have the true answer
+so looking at this you have the weight in the horsepower then you have the true
+answer where the miles per gallon is pretend that you don’t have the true
+answer check it and see how far off you are try a couple different ones I think
+that’s a great little assignment to prove that this equation may be
+something you’re interested in to predict the future with it right so in
+the end ultimately what we’re going to do is we’re going to chop this data set
+into at least two different parts eighty
+percent training data 20 percent pretend we never had data so the test data with
+a validation set right that’s the idea that’s what we’re getting into so you
+cut that data into pieces then you can train all day long on that eighty
+percent now you can get 100 cent accuracy on that piece of on that chunk
+of data that you using but then you then you test out that data on the test set
+or the validation set and you say oh man I was off well that means you over
+fitted the model because we don’t know the future we don’t know if the model
+truly is gonna follow that pattern you know it’s not going to go
+we’re not gonna be able to predict like that we have to just get close we don’t</p>
+<p>00:15
+want to overfit and that’s why you want to keep your variables or your models a
+little less complex than you think right now certain situations you want more
+complexity but in most cases that we’re gonna deal with anytime soon we want to
+minimize the complexity of the models not everybody has a crazy GPU to run
+these models on so again hey guys I appreciate you guys sharing this all the
+time and I appreciate you liking and I’m always appreciating everything you guys
+do and the comments are getting good oh and somebody actually I should have said
+stay tuned for this shortcut somebody commented today and I can show you maybe
+okay we’re back here so somebody commented on a previous video I was
+trying to get the full path and I appreciate this comment because it was
+super helpful all right so let’s say we’re in the downloads folder and I said
+hey how do you get this path of one of these tar.gz files so I’m glad that you
+guys came back to witness this I’m gonna</p>
+<p>00:16
+hold the shift key and right-click on it and down here you have copy as path
+click on that then if I paste it back into my R whatever and I did the
+untargeted the much easier than the way I did it in the last video however you
+still have to change these to I that /or double backslashes don’t forget that
+because that will probably cause you some pain points and I know that had
+nothing to do with this particular video but the previous one or the previous
+video that I did on another playlist this will be helpful hint so have a good
+one you [Music]End of file</p>
+<p><a href="https://www.youtube.com/watch?v=vu81gBUkiek">
+<picture><img src="https://i.ytimg.com/vi/vu81gBUkiek/maxresdefault.jpg"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-4" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+welcome back let’s get back into the a statistics mode here we can’t really
+complete regression analysis without something called interaction terms and
+I’m gonna try to explain to you what those are with good ol pen and paper so
+that being said let me break it out so interaction terms we’ve discussed a
+lot of things and and we talked about adding features to our models to make
+them predict better so let’s start off with our basic model without interaction
+terms so we have some sort of y hat is the this is the equation and I’ll walk
+you through it here in a second B sub o plus B 1 X 1 plus B 2 X 2 so again this
+is our basic form of creating some sort of model that might predict the next
+data point right so this y hat means the Y hat is it’s an estimate hey I’m</p>
+<p>00:01
+estimating the the perfect value of y if I knew everything if I was the almighty
+whatever and I knew what Y would be then I wouldn’t need a y hat so this is just
+an estimate so our B 0 is just some coefficient that says hey we’re gonna
+start on this part of the y axis right the b1 is our first coefficient that is
+it’s a parameter you set or a weight you’re setting for your X 1 variable and
+then plus your B 2 coefficient and your X 2 variable now what are the x’s now
+think about the X’s as the feature values whatever that feature might be
+this could be the weight of the car this
+could be the horsepower of the car right and now if you have horsepower and
+weight so we can actually write it that way let’s do this let’s our Y hat is now
+our miles per gallon hat right picture that is one variable equals some
+starting value no matter what it’s gonna start at this value plus your beta one</p>
+<p>00:02
+which we don’t know and our X 1 is now our what did I say wait so I will just
+call it W and then be 2 times our horsepower so for an H so now we have
+like a real sorry about the glare but we have a real situation here maybe I can
+this is tad there we go move it up so we want to estimate our miles per gallon
+because we don’t know if we put a new W and a new H in there we’ve never seen
+before we don’t know what the true miles
+per gallon is right all right and that’s important to know especially when we
+start validating these predictions that we have now what the computer is gonna
+do and what regression does it’s gonna estimate these values the b1 the b0 and
+the B - how can you adjust all of those to get the best miles per gallon for all
+of the trainings it’s gonna base it off the training data so the data that you
+do have it’s going to say how can I reduce the amount of errors we’ve talked
+about this throughout some previous tutorials how do you reduce the error
+and that’s what we’re doing here right but now we don’t have to limit ourselves</p>
+<p>00:03
+to this particular linear equation we keep calling it linear models and it is
+it’s it’s a linear model but we don’t have to use just wait and an horsepower
+we can use a combination of weight and horsepower we can use anything we want
+we could say what if a better estimate from miles per gallon so big hat is
+equal to some starting condition plus our beta 1 times weight plus our beta 2
+times horsepower plus now we have a lot of other features but we’re gonna reuse
+these two features we’re gonna say how about a beta 3 weight and horsepower
+multiplied together right we created a variable out of thin air it doesn’t
+matter because what we’re trying to do is predict miles per gallon we’re trying
+to predict that there’s no equation out there we are inventing this equation on
+the fly it does not exist right so to speak now granted with the computer you
+can actually get an exact equation if you wanted to but that would be
+overfitting your data based on the training data and we’ll get into that as</p>
+<p>00:04
+well but I don’t want you to overfit the data so we’re just going to estimate as
+best we can and we’ll get more into that when we
+talk about cross-validation and things like that but I just wanted to show you
+this equation adding I know it’s I know it’s a little Glary but you can see that
+bottom equation here miles per gallon equals to some starting coefficient
+value plus some weight times the weight plus some weight times the horsepower
+plus some other way times weight and horsepower in other words weight and
+horsepower may have an interaction that they actually depend on each other a
+little bit right I’m excused my terminology I might be off with that
+word depends so but weight and horsepower together combined could have
+an effect let me erase this and show you
+one more one more little thing I’ll give you the examples that they always give
+when you’re trying to look this stuff up is people that are on a diet so if
+you’re on a diet you have two different food diets right so we can say food one</p>
+<p>00:05
+food one and I’m gonna put it into a table here and food two right now this
+might be well this is diet food one diet food - they’re both diets we don’t have
+an on diet group and now we have males yeah we have males and we have females
+on this particular diet and then we have you know did it work or did it not work
+right or whatever the numbers are for that particular table right for males if
+you just used males you’d end up with some coefficient so let’s not make this
+a binary here so food one and male you might have had some sort of beta value
+that’s different than the beta two for females if you separated the equations
+out the same thing for it’s probably not
+a good idea to use the beta for all four but they’re there for different beta
+values but when you add them together on the same set of data you don’t really</p>
+<p>00:06
+see male and female separately right they’re combined in the data so if you
+ignore male and female you would only have two betas not four so I think maybe
+that’ll help explain it there’s not four betas there’s only two but we can look
+at it as well what if there were four right we don’t know and that’s what
+interaction is going to help us determine is hey is it could it be
+possible that we can have a really predictable equation with just males and
+maybe not so good female so if we separated out maybe we can get some good
+male predictions right but maybe together they are actually better
+combined we don’t know we don’t know there’s a lot to learn about interaction
+and it’s actually gets pretty a little bit more complex than that you
+know they talk about interacting graphs where you have like the male and the
+female and if they cross at some point they would they would have interaction
+but if they never cross in their parallel then they don’t have any
+interaction but again if you’re doing some predictions now this is pretty high</p>
+<p>00:07
+level this is pretty high level if they were kind of parallel lines for the male
+and the female they’re parallel you know if you’re gonna predict something it’s
+always going to try to predict sort of in the middle and that’s not good for
+male or female so it’s nice to know that
+if there’s an interaction if there is an interaction that we can use it to help
+our model become better more to come on that as we go but I wanted to give you
+like the mathematics sort of behind it at least the equation remember the Y hat
+is equal to some starting coefficient value plus another coefficient for your
+first feature which we called the weight plus a coefficient for our second
+feature in third and fourth in fact you can get some very high order features
+you can do wait times for power at times quarter second mile you can get very
+complex but again remember we don’t want complex equations because they’re very
+hard to use in real life the computational power and they may not be
+that that accurate right you might add features and your accuracy doesn’t go up</p>
+<p>00:08
+much but you added a lot of complexity right we don’t want to do that we want
+to keep the complexity to a minimum let me see if I can remember how to get rid
+of that boom okay so now let’s just go ahead and do this real quick in our
+and we’ll go from there so open up your are get a script going and let’s just
+jump right in with the old favorite data set I’m gonna say my data my data is
+equal to the empty cars alright so let’s load that up into
+memory into our environment you see my data over here 32 observations of 11
+variables ok so remember how to create linear models it’s been a minute so
+let’s just do model 1 is equal to LM for linear model and we’re gonna say miles
+per gallon we want to know miles per gallon is a is explained by and we’re</p>
+<p>00:09
+gonna say I think I used weight first so weight plus horsepower right and the
+data is equal to my data so we got that satisfied let’s just run that model and
+do a quick summary stats on that so model 1 boom you can see down below that
+we have and we’re not gonna look at all these stats we’re just gonna look at the
+weight and the horsepower here yeah here and here and you have the P values that
+are actually significant so point 0 1 and this one’s very small they’re both
+very small so the bulk P values are valid so weight and horsepower are both
+significant in this equation alright but the other thing you want to look at is
+the adjusted R squared remember the difference between R squared and
+adjusted R squared is digested R squared takes into account multiple parameters
+if you add features to your model you actually could be hurt in your model and
+that’s it takes care of that for you so look at this R squared value the
+adjusted r-square 0.8 1 for 8 they remember that now I said we can use a</p>
+<p>00:10
+horsepower x weight and get a new model so let’s just create model to below that
+so we’ll do model two and we’ll just compare them is a linear model I want to
+know miles per gallon explained by I’m sorry that little thing pops up by
+weight and horsepower but there’s a little shortcut to add weight horsepower
+and wait times horsepower so we can do weight actually time Swiss power that
+does not mean multiply that means inside this function it has a
+different meaning it means weight is a feature horsepower is a feature and
+weight time suppose power is going to be a feature and I’ll show you that in a
+second too so let’s run that and we have our summary of model one we could do
+summary of model two here command enter and that error oh I forgot to add the
+data so data equals my data as well boom run that again I’ll run model one and</p>
+<p>00:11
+model two and let’s take a quick look so model - we just ran second and look at
+the adjusted r-squared value 0.87 so it’s higher you’d expect the higher
+r-squared as you add as you as you add parameters parameters the wrong term
+features I’m gonna get that mixed up a few times but if you add features your
+are your multiple r-squared will increase but that’s not a good indicator
+that your model is actually getting better and more on that later as well
+look up here you have your intercept that’s that’d be zero that’d be not that
+I keep talking about and you have your weight and you have your HP and you have
+your weight : HP and that : actually means it’s a variable called weight
+horsepower so it’s weight x horsepower and so you have all of those people use
+which they all show that they could be significant right because they’re all
+below point zero five finally let’s just get that equation of that model we’re
+not gonna do this for all of them but the coefficient of model - we can</p>
+<p>00:12
+actually get those by doing qoph cof model - and we have the intercept the
+weight the horsepower and the weight horsepower those coefficients remember
+so let me jump back to this you know let’s plug those in and that’s what we
+have so we have our miles per gallon estimate is equal to now our weight is
+got the coefficient of negative eight point two one so negative well actually
+we’ve got the intercept first which is forty nine point eight forty nine point
+eight I don’t know what the units are excuse me for not putting them on here
+I’m sure we can figure it out if we really want to but plus some beta one
+which the beta one is I’m pointing at the screen like you guys can see it
+negative eight point so plus negative eight point two one
+times your weight WT plus I’m gonna go on multiple lines here and I know it’s
+messy but hopefully with my audio you can get get to the point here the HP is</p>
+<p>00:13
+negative 0.12 horsepower plus you’re gonna have a point zero two
+seven eight I’m sorry the significant digits are off the chart here times WT
+HP right and that’s a multiplication so you can actually go back to your data
+set here’s the actual equation you get used you can do the old school math way
+plug in numbers for weight horsepower and get an approximate miles per gallon
+then you can actually check here I think
+a little exercise for you which would be kind of fun if you’re nerdy like me
+where I’m trying to be anyways if you go to my data don’t look at it ahead of
+time but pick kind of a weight and a horsepower that’s available so don’t
+pick one that’s not on this chart so we have a random weight three point one
+five oh and a horsepower of ninety five do the equation that we just gave you</p>
+<p>00:14
+see how close you come to the miles per gallon because you have the true answer
+so looking at this you have the weight in the horsepower then you have the true
+answer where the miles per gallon is pretend that you don’t have the true
+answer check it and see how far off you are try a couple different ones I think
+that’s a great little assignment to prove that this equation may be
+something you’re interested in to predict the future with it right so in
+the end ultimately what we’re going to do is we’re going to chop this data set
+into at least two different parts eighty
+percent training data 20 percent pretend we never had data so the test data with
+a validation set right that’s the idea that’s what we’re getting into so you
+cut that data into pieces then you can train all day long on that eighty
+percent now you can get 100 cent accuracy on that piece of on that chunk
+of data that you using but then you then you test out that data on the test set
+or the validation set and you say oh man I was off well that means you over
+fitted the model because we don’t know the future we don’t know if the model
+truly is gonna follow that pattern you know it’s not going to go
+we’re not gonna be able to predict like that we have to just get close we don’t</p>
+<p>00:15
+want to overfit and that’s why you want to keep your variables or your models a
+little less complex than you think right now certain situations you want more
+complexity but in most cases that we’re gonna deal with anytime soon we want to
+minimize the complexity of the models not everybody has a crazy GPU to run
+these models on so again hey guys I appreciate you guys sharing this all the
+time and I appreciate you liking and I’m always appreciating everything you guys
+do and the comments are getting good oh and somebody actually I should have said
+stay tuned for this shortcut somebody commented today and I can show you maybe
+okay we’re back here so somebody commented on a previous video I was
+trying to get the full path and I appreciate this comment because it was
+super helpful all right so let’s say we’re in the downloads folder and I said
+hey how do you get this path of one of these tar.gz files so I’m glad that you
+guys came back to witness this I’m gonna</p>
+<p>00:16
+hold the shift key and right-click on it and down here you have copy as path
+click on that then if I paste it back into my R whatever and I did the
+untargeted the much easier than the way I did it in the last video however you
+still have to change these to I that /or double backslashes don’t forget that
+because that will probably cause you some pain points and I know that had
+nothing to do with this particular video but the previous one or the previous
+video that I did on another playlist this will be helpful hint so have a good
+one you [Music]End of file</p>
+<p><a href="https://www.youtube.com/watch?v=vu81gBUkiek">
+<picture><img src="https://i.ytimg.com/vi/vu81gBUkiek/maxresdefault.jpg"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-5" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+welcome back let’s get back into the a statistics mode here we can’t really
+complete regression analysis without something called interaction terms and
+I’m gonna try to explain to you what those are with good ol pen and paper so
+that being said let me break it out so interaction terms we’ve discussed a
+lot of things and and we talked about adding features to our models to make
+them predict better so let’s start off with our basic model without interaction
+terms so we have some sort of y hat is the this is the equation and I’ll walk
+you through it here in a second B sub o plus B 1 X 1 plus B 2 X 2 so again this
+is our basic form of creating some sort of model that might predict the next
+data point right so this y hat means the Y hat is it’s an estimate hey I’m</p>
+<p>00:01
+estimating the the perfect value of y if I knew everything if I was the almighty
+whatever and I knew what Y would be then I wouldn’t need a y hat so this is just
+an estimate so our B 0 is just some coefficient that says hey we’re gonna
+start on this part of the y axis right the b1 is our first coefficient that is
+it’s a parameter you set or a weight you’re setting for your X 1 variable and
+then plus your B 2 coefficient and your X 2 variable now what are the x’s now
+think about the X’s as the feature values whatever that feature might be
+this could be the weight of the car this
+could be the horsepower of the car right and now if you have horsepower and
+weight so we can actually write it that way let’s do this let’s our Y hat is now
+our miles per gallon hat right picture that is one variable equals some
+starting value no matter what it’s gonna start at this value plus your beta one</p>
+<p>00:02
+which we don’t know and our X 1 is now our what did I say wait so I will just
+call it W and then be 2 times our horsepower so for an H so now we have
+like a real sorry about the glare but we have a real situation here maybe I can
+this is tad there we go move it up so we want to estimate our miles per gallon
+because we don’t know if we put a new W and a new H in there we’ve never seen
+before we don’t know what the true miles
+per gallon is right all right and that’s important to know especially when we
+start validating these predictions that we have now what the computer is gonna
+do and what regression does it’s gonna estimate these values the b1 the b0 and
+the B - how can you adjust all of those to get the best miles per gallon for all
+of the trainings it’s gonna base it off the training data so the data that you
+do have it’s going to say how can I reduce the amount of errors we’ve talked
+about this throughout some previous tutorials how do you reduce the error
+and that’s what we’re doing here right but now we don’t have to limit ourselves</p>
+<p>00:03
+to this particular linear equation we keep calling it linear models and it is
+it’s it’s a linear model but we don’t have to use just wait and an horsepower
+we can use a combination of weight and horsepower we can use anything we want
+we could say what if a better estimate from miles per gallon so big hat is
+equal to some starting condition plus our beta 1 times weight plus our beta 2
+times horsepower plus now we have a lot of other features but we’re gonna reuse
+these two features we’re gonna say how about a beta 3 weight and horsepower
+multiplied together right we created a variable out of thin air it doesn’t
+matter because what we’re trying to do is predict miles per gallon we’re trying
+to predict that there’s no equation out there we are inventing this equation on
+the fly it does not exist right so to speak now granted with the computer you
+can actually get an exact equation if you wanted to but that would be
+overfitting your data based on the training data and we’ll get into that as</p>
+<p>00:04
+well but I don’t want you to overfit the data so we’re just going to estimate as
+best we can and we’ll get more into that when we
+talk about cross-validation and things like that but I just wanted to show you
+this equation adding I know it’s I know it’s a little Glary but you can see that
+bottom equation here miles per gallon equals to some starting coefficient
+value plus some weight times the weight plus some weight times the horsepower
+plus some other way times weight and horsepower in other words weight and
+horsepower may have an interaction that they actually depend on each other a
+little bit right I’m excused my terminology I might be off with that
+word depends so but weight and horsepower together combined could have
+an effect let me erase this and show you
+one more one more little thing I’ll give you the examples that they always give
+when you’re trying to look this stuff up is people that are on a diet so if
+you’re on a diet you have two different food diets right so we can say food one</p>
+<p>00:05
+food one and I’m gonna put it into a table here and food two right now this
+might be well this is diet food one diet food - they’re both diets we don’t have
+an on diet group and now we have males yeah we have males and we have females
+on this particular diet and then we have you know did it work or did it not work
+right or whatever the numbers are for that particular table right for males if
+you just used males you’d end up with some coefficient so let’s not make this
+a binary here so food one and male you might have had some sort of beta value
+that’s different than the beta two for females if you separated the equations
+out the same thing for it’s probably not
+a good idea to use the beta for all four but they’re there for different beta
+values but when you add them together on the same set of data you don’t really</p>
+<p>00:06
+see male and female separately right they’re combined in the data so if you
+ignore male and female you would only have two betas not four so I think maybe
+that’ll help explain it there’s not four betas there’s only two but we can look
+at it as well what if there were four right we don’t know and that’s what
+interaction is going to help us determine is hey is it could it be
+possible that we can have a really predictable equation with just males and
+maybe not so good female so if we separated out maybe we can get some good
+male predictions right but maybe together they are actually better
+combined we don’t know we don’t know there’s a lot to learn about interaction
+and it’s actually gets pretty a little bit more complex than that you
+know they talk about interacting graphs where you have like the male and the
+female and if they cross at some point they would they would have interaction
+but if they never cross in their parallel then they don’t have any
+interaction but again if you’re doing some predictions now this is pretty high</p>
+<p>00:07
+level this is pretty high level if they were kind of parallel lines for the male
+and the female they’re parallel you know if you’re gonna predict something it’s
+always going to try to predict sort of in the middle and that’s not good for
+male or female so it’s nice to know that
+if there’s an interaction if there is an interaction that we can use it to help
+our model become better more to come on that as we go but I wanted to give you
+like the mathematics sort of behind it at least the equation remember the Y hat
+is equal to some starting coefficient value plus another coefficient for your
+first feature which we called the weight plus a coefficient for our second
+feature in third and fourth in fact you can get some very high order features
+you can do wait times for power at times quarter second mile you can get very
+complex but again remember we don’t want complex equations because they’re very
+hard to use in real life the computational power and they may not be
+that that accurate right you might add features and your accuracy doesn’t go up</p>
+<p>00:08
+much but you added a lot of complexity right we don’t want to do that we want
+to keep the complexity to a minimum let me see if I can remember how to get rid
+of that boom okay so now let’s just go ahead and do this real quick in our
+and we’ll go from there so open up your are get a script going and let’s just
+jump right in with the old favorite data set I’m gonna say my data my data is
+equal to the empty cars alright so let’s load that up into
+memory into our environment you see my data over here 32 observations of 11
+variables ok so remember how to create linear models it’s been a minute so
+let’s just do model 1 is equal to LM for linear model and we’re gonna say miles
+per gallon we want to know miles per gallon is a is explained by and we’re</p>
+<p>00:09
+gonna say I think I used weight first so weight plus horsepower right and the
+data is equal to my data so we got that satisfied let’s just run that model and
+do a quick summary stats on that so model 1 boom you can see down below that
+we have and we’re not gonna look at all these stats we’re just gonna look at the
+weight and the horsepower here yeah here and here and you have the P values that
+are actually significant so point 0 1 and this one’s very small they’re both
+very small so the bulk P values are valid so weight and horsepower are both
+significant in this equation alright but the other thing you want to look at is
+the adjusted R squared remember the difference between R squared and
+adjusted R squared is digested R squared takes into account multiple parameters
+if you add features to your model you actually could be hurt in your model and
+that’s it takes care of that for you so look at this R squared value the
+adjusted r-square 0.8 1 for 8 they remember that now I said we can use a</p>
+<p>00:10
+horsepower x weight and get a new model so let’s just create model to below that
+so we’ll do model two and we’ll just compare them is a linear model I want to
+know miles per gallon explained by I’m sorry that little thing pops up by
+weight and horsepower but there’s a little shortcut to add weight horsepower
+and wait times horsepower so we can do weight actually time Swiss power that
+does not mean multiply that means inside this function it has a
+different meaning it means weight is a feature horsepower is a feature and
+weight time suppose power is going to be a feature and I’ll show you that in a
+second too so let’s run that and we have our summary of model one we could do
+summary of model two here command enter and that error oh I forgot to add the
+data so data equals my data as well boom run that again I’ll run model one and</p>
+<p>00:11
+model two and let’s take a quick look so model - we just ran second and look at
+the adjusted r-squared value 0.87 so it’s higher you’d expect the higher
+r-squared as you add as you as you add parameters parameters the wrong term
+features I’m gonna get that mixed up a few times but if you add features your
+are your multiple r-squared will increase but that’s not a good indicator
+that your model is actually getting better and more on that later as well
+look up here you have your intercept that’s that’d be zero that’d be not that
+I keep talking about and you have your weight and you have your HP and you have
+your weight : HP and that : actually means it’s a variable called weight
+horsepower so it’s weight x horsepower and so you have all of those people use
+which they all show that they could be significant right because they’re all
+below point zero five finally let’s just get that equation of that model we’re
+not gonna do this for all of them but the coefficient of model - we can</p>
+<p>00:12
+actually get those by doing qoph cof model - and we have the intercept the
+weight the horsepower and the weight horsepower those coefficients remember
+so let me jump back to this you know let’s plug those in and that’s what we
+have so we have our miles per gallon estimate is equal to now our weight is
+got the coefficient of negative eight point two one so negative well actually
+we’ve got the intercept first which is forty nine point eight forty nine point
+eight I don’t know what the units are excuse me for not putting them on here
+I’m sure we can figure it out if we really want to but plus some beta one
+which the beta one is I’m pointing at the screen like you guys can see it
+negative eight point so plus negative eight point two one
+times your weight WT plus I’m gonna go on multiple lines here and I know it’s
+messy but hopefully with my audio you can get get to the point here the HP is</p>
+<p>00:13
+negative 0.12 horsepower plus you’re gonna have a point zero two
+seven eight I’m sorry the significant digits are off the chart here times WT
+HP right and that’s a multiplication so you can actually go back to your data
+set here’s the actual equation you get used you can do the old school math way
+plug in numbers for weight horsepower and get an approximate miles per gallon
+then you can actually check here I think
+a little exercise for you which would be kind of fun if you’re nerdy like me
+where I’m trying to be anyways if you go to my data don’t look at it ahead of
+time but pick kind of a weight and a horsepower that’s available so don’t
+pick one that’s not on this chart so we have a random weight three point one
+five oh and a horsepower of ninety five do the equation that we just gave you</p>
+<p>00:14
+see how close you come to the miles per gallon because you have the true answer
+so looking at this you have the weight in the horsepower then you have the true
+answer where the miles per gallon is pretend that you don’t have the true
+answer check it and see how far off you are try a couple different ones I think
+that’s a great little assignment to prove that this equation may be
+something you’re interested in to predict the future with it right so in
+the end ultimately what we’re going to do is we’re going to chop this data set
+into at least two different parts eighty
+percent training data 20 percent pretend we never had data so the test data with
+a validation set right that’s the idea that’s what we’re getting into so you
+cut that data into pieces then you can train all day long on that eighty
+percent now you can get 100 cent accuracy on that piece of on that chunk
+of data that you using but then you then you test out that data on the test set
+or the validation set and you say oh man I was off well that means you over
+fitted the model because we don’t know the future we don’t know if the model
+truly is gonna follow that pattern you know it’s not going to go
+we’re not gonna be able to predict like that we have to just get close we don’t</p>
+<p>00:15
+want to overfit and that’s why you want to keep your variables or your models a
+little less complex than you think right now certain situations you want more
+complexity but in most cases that we’re gonna deal with anytime soon we want to
+minimize the complexity of the models not everybody has a crazy GPU to run
+these models on so again hey guys I appreciate you guys sharing this all the
+time and I appreciate you liking and I’m always appreciating everything you guys
+do and the comments are getting good oh and somebody actually I should have said
+stay tuned for this shortcut somebody commented today and I can show you maybe
+okay we’re back here so somebody commented on a previous video I was
+trying to get the full path and I appreciate this comment because it was
+super helpful all right so let’s say we’re in the downloads folder and I said
+hey how do you get this path of one of these tar.gz files so I’m glad that you
+guys came back to witness this I’m gonna</p>
+<p>00:16
+hold the shift key and right-click on it and down here you have copy as path
+click on that then if I paste it back into my R whatever and I did the
+untargeted the much easier than the way I did it in the last video however you
+still have to change these to I that /or double backslashes don’t forget that
+because that will probably cause you some pain points and I know that had
+nothing to do with this particular video but the previous one or the previous
+video that I did on another playlist this will be helpful hint so have a good
+one you [Music]End of file</p>
+<p><a href="https://www.youtube.com/watch?v=vu81gBUkiek">
+<picture><img src="https://i.ytimg.com/vi/vu81gBUkiek/maxresdefault.jpg"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-6" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+welcome back let’s get back into the a statistics mode here we can’t really
+complete regression analysis without something called interaction terms and
+I’m gonna try to explain to you what those are with good ol pen and paper so
+that being said let me break it out so interaction terms we’ve discussed a
+lot of things and and we talked about adding features to our models to make
+them predict better so let’s start off with our basic model without interaction
+terms so we have some sort of y hat is the this is the equation and I’ll walk
+you through it here in a second B sub o plus B 1 X 1 plus B 2 X 2 so again this
+is our basic form of creating some sort of model that might predict the next
+data point right so this y hat means the Y hat is it’s an estimate hey I’m</p>
+<p>00:01
+estimating the the perfect value of y if I knew everything if I was the almighty
+whatever and I knew what Y would be then I wouldn’t need a y hat so this is just
+an estimate so our B 0 is just some coefficient that says hey we’re gonna
+start on this part of the y axis right the b1 is our first coefficient that is
+it’s a parameter you set or a weight you’re setting for your X 1 variable and
+then plus your B 2 coefficient and your X 2 variable now what are the x’s now
+think about the X’s as the feature values whatever that feature might be
+this could be the weight of the car this
+could be the horsepower of the car right and now if you have horsepower and
+weight so we can actually write it that way let’s do this let’s our Y hat is now
+our miles per gallon hat right picture that is one variable equals some
+starting value no matter what it’s gonna start at this value plus your beta one</p>
+<p>00:02
+which we don’t know and our X 1 is now our what did I say wait so I will just
+call it W and then be 2 times our horsepower so for an H so now we have
+like a real sorry about the glare but we have a real situation here maybe I can
+this is tad there we go move it up so we want to estimate our miles per gallon
+because we don’t know if we put a new W and a new H in there we’ve never seen
+before we don’t know what the true miles
+per gallon is right all right and that’s important to know especially when we
+start validating these predictions that we have now what the computer is gonna
+do and what regression does it’s gonna estimate these values the b1 the b0 and
+the B - how can you adjust all of those to get the best miles per gallon for all
+of the trainings it’s gonna base it off the training data so the data that you
+do have it’s going to say how can I reduce the amount of errors we’ve talked
+about this throughout some previous tutorials how do you reduce the error
+and that’s what we’re doing here right but now we don’t have to limit ourselves</p>
+<p>00:03
+to this particular linear equation we keep calling it linear models and it is
+it’s it’s a linear model but we don’t have to use just wait and an horsepower
+we can use a combination of weight and horsepower we can use anything we want
+we could say what if a better estimate from miles per gallon so big hat is
+equal to some starting condition plus our beta 1 times weight plus our beta 2
+times horsepower plus now we have a lot of other features but we’re gonna reuse
+these two features we’re gonna say how about a beta 3 weight and horsepower
+multiplied together right we created a variable out of thin air it doesn’t
+matter because what we’re trying to do is predict miles per gallon we’re trying
+to predict that there’s no equation out there we are inventing this equation on
+the fly it does not exist right so to speak now granted with the computer you
+can actually get an exact equation if you wanted to but that would be
+overfitting your data based on the training data and we’ll get into that as</p>
+<p>00:04
+well but I don’t want you to overfit the data so we’re just going to estimate as
+best we can and we’ll get more into that when we
+talk about cross-validation and things like that but I just wanted to show you
+this equation adding I know it’s I know it’s a little Glary but you can see that
+bottom equation here miles per gallon equals to some starting coefficient
+value plus some weight times the weight plus some weight times the horsepower
+plus some other way times weight and horsepower in other words weight and
+horsepower may have an interaction that they actually depend on each other a
+little bit right I’m excused my terminology I might be off with that
+word depends so but weight and horsepower together combined could have
+an effect let me erase this and show you
+one more one more little thing I’ll give you the examples that they always give
+when you’re trying to look this stuff up is people that are on a diet so if
+you’re on a diet you have two different food diets right so we can say food one</p>
+<p>00:05
+food one and I’m gonna put it into a table here and food two right now this
+might be well this is diet food one diet food - they’re both diets we don’t have
+an on diet group and now we have males yeah we have males and we have females
+on this particular diet and then we have you know did it work or did it not work
+right or whatever the numbers are for that particular table right for males if
+you just used males you’d end up with some coefficient so let’s not make this
+a binary here so food one and male you might have had some sort of beta value
+that’s different than the beta two for females if you separated the equations
+out the same thing for it’s probably not
+a good idea to use the beta for all four but they’re there for different beta
+values but when you add them together on the same set of data you don’t really</p>
+<p>00:06
+see male and female separately right they’re combined in the data so if you
+ignore male and female you would only have two betas not four so I think maybe
+that’ll help explain it there’s not four betas there’s only two but we can look
+at it as well what if there were four right we don’t know and that’s what
+interaction is going to help us determine is hey is it could it be
+possible that we can have a really predictable equation with just males and
+maybe not so good female so if we separated out maybe we can get some good
+male predictions right but maybe together they are actually better
+combined we don’t know we don’t know there’s a lot to learn about interaction
+and it’s actually gets pretty a little bit more complex than that you
+know they talk about interacting graphs where you have like the male and the
+female and if they cross at some point they would they would have interaction
+but if they never cross in their parallel then they don’t have any
+interaction but again if you’re doing some predictions now this is pretty high</p>
+<p>00:07
+level this is pretty high level if they were kind of parallel lines for the male
+and the female they’re parallel you know if you’re gonna predict something it’s
+always going to try to predict sort of in the middle and that’s not good for
+male or female so it’s nice to know that
+if there’s an interaction if there is an interaction that we can use it to help
+our model become better more to come on that as we go but I wanted to give you
+like the mathematics sort of behind it at least the equation remember the Y hat
+is equal to some starting coefficient value plus another coefficient for your
+first feature which we called the weight plus a coefficient for our second
+feature in third and fourth in fact you can get some very high order features
+you can do wait times for power at times quarter second mile you can get very
+complex but again remember we don’t want complex equations because they’re very
+hard to use in real life the computational power and they may not be
+that that accurate right you might add features and your accuracy doesn’t go up</p>
+<p>00:08
+much but you added a lot of complexity right we don’t want to do that we want
+to keep the complexity to a minimum let me see if I can remember how to get rid
+of that boom okay so now let’s just go ahead and do this real quick in our
+and we’ll go from there so open up your are get a script going and let’s just
+jump right in with the old favorite data set I’m gonna say my data my data is
+equal to the empty cars alright so let’s load that up into
+memory into our environment you see my data over here 32 observations of 11
+variables ok so remember how to create linear models it’s been a minute so
+let’s just do model 1 is equal to LM for linear model and we’re gonna say miles
+per gallon we want to know miles per gallon is a is explained by and we’re</p>
+<p>00:09
+gonna say I think I used weight first so weight plus horsepower right and the
+data is equal to my data so we got that satisfied let’s just run that model and
+do a quick summary stats on that so model 1 boom you can see down below that
+we have and we’re not gonna look at all these stats we’re just gonna look at the
+weight and the horsepower here yeah here and here and you have the P values that
+are actually significant so point 0 1 and this one’s very small they’re both
+very small so the bulk P values are valid so weight and horsepower are both
+significant in this equation alright but the other thing you want to look at is
+the adjusted R squared remember the difference between R squared and
+adjusted R squared is digested R squared takes into account multiple parameters
+if you add features to your model you actually could be hurt in your model and
+that’s it takes care of that for you so look at this R squared value the
+adjusted r-square 0.8 1 for 8 they remember that now I said we can use a</p>
+<p>00:10
+horsepower x weight and get a new model so let’s just create model to below that
+so we’ll do model two and we’ll just compare them is a linear model I want to
+know miles per gallon explained by I’m sorry that little thing pops up by
+weight and horsepower but there’s a little shortcut to add weight horsepower
+and wait times horsepower so we can do weight actually time Swiss power that
+does not mean multiply that means inside this function it has a
+different meaning it means weight is a feature horsepower is a feature and
+weight time suppose power is going to be a feature and I’ll show you that in a
+second too so let’s run that and we have our summary of model one we could do
+summary of model two here command enter and that error oh I forgot to add the
+data so data equals my data as well boom run that again I’ll run model one and</p>
+<p>00:11
+model two and let’s take a quick look so model - we just ran second and look at
+the adjusted r-squared value 0.87 so it’s higher you’d expect the higher
+r-squared as you add as you as you add parameters parameters the wrong term
+features I’m gonna get that mixed up a few times but if you add features your
+are your multiple r-squared will increase but that’s not a good indicator
+that your model is actually getting better and more on that later as well
+look up here you have your intercept that’s that’d be zero that’d be not that
+I keep talking about and you have your weight and you have your HP and you have
+your weight : HP and that : actually means it’s a variable called weight
+horsepower so it’s weight x horsepower and so you have all of those people use
+which they all show that they could be significant right because they’re all
+below point zero five finally let’s just get that equation of that model we’re
+not gonna do this for all of them but the coefficient of model - we can</p>
+<p>00:12
+actually get those by doing qoph cof model - and we have the intercept the
+weight the horsepower and the weight horsepower those coefficients remember
+so let me jump back to this you know let’s plug those in and that’s what we
+have so we have our miles per gallon estimate is equal to now our weight is
+got the coefficient of negative eight point two one so negative well actually
+we’ve got the intercept first which is forty nine point eight forty nine point
+eight I don’t know what the units are excuse me for not putting them on here
+I’m sure we can figure it out if we really want to but plus some beta one
+which the beta one is I’m pointing at the screen like you guys can see it
+negative eight point so plus negative eight point two one
+times your weight WT plus I’m gonna go on multiple lines here and I know it’s
+messy but hopefully with my audio you can get get to the point here the HP is</p>
+<p>00:13
+negative 0.12 horsepower plus you’re gonna have a point zero two
+seven eight I’m sorry the significant digits are off the chart here times WT
+HP right and that’s a multiplication so you can actually go back to your data
+set here’s the actual equation you get used you can do the old school math way
+plug in numbers for weight horsepower and get an approximate miles per gallon
+then you can actually check here I think
+a little exercise for you which would be kind of fun if you’re nerdy like me
+where I’m trying to be anyways if you go to my data don’t look at it ahead of
+time but pick kind of a weight and a horsepower that’s available so don’t
+pick one that’s not on this chart so we have a random weight three point one
+five oh and a horsepower of ninety five do the equation that we just gave you</p>
+<p>00:14
+see how close you come to the miles per gallon because you have the true answer
+so looking at this you have the weight in the horsepower then you have the true
+answer where the miles per gallon is pretend that you don’t have the true
+answer check it and see how far off you are try a couple different ones I think
+that’s a great little assignment to prove that this equation may be
+something you’re interested in to predict the future with it right so in
+the end ultimately what we’re going to do is we’re going to chop this data set
+into at least two different parts eighty
+percent training data 20 percent pretend we never had data so the test data with
+a validation set right that’s the idea that’s what we’re getting into so you
+cut that data into pieces then you can train all day long on that eighty
+percent now you can get 100 cent accuracy on that piece of on that chunk
+of data that you using but then you then you test out that data on the test set
+or the validation set and you say oh man I was off well that means you over
+fitted the model because we don’t know the future we don’t know if the model
+truly is gonna follow that pattern you know it’s not going to go
+we’re not gonna be able to predict like that we have to just get close we don’t</p>
+<p>00:15
+want to overfit and that’s why you want to keep your variables or your models a
+little less complex than you think right now certain situations you want more
+complexity but in most cases that we’re gonna deal with anytime soon we want to
+minimize the complexity of the models not everybody has a crazy GPU to run
+these models on so again hey guys I appreciate you guys sharing this all the
+time and I appreciate you liking and I’m always appreciating everything you guys
+do and the comments are getting good oh and somebody actually I should have said
+stay tuned for this shortcut somebody commented today and I can show you maybe
+okay we’re back here so somebody commented on a previous video I was
+trying to get the full path and I appreciate this comment because it was
+super helpful all right so let’s say we’re in the downloads folder and I said
+hey how do you get this path of one of these tar.gz files so I’m glad that you
+guys came back to witness this I’m gonna</p>
+<p>00:16
+hold the shift key and right-click on it and down here you have copy as path
+click on that then if I paste it back into my R whatever and I did the
+untargeted the much easier than the way I did it in the last video however you
+still have to change these to I that /or double backslashes don’t forget that
+because that will probably cause you some pain points and I know that had
+nothing to do with this particular video but the previous one or the previous
+video that I did on another playlist this will be helpful hint so have a good
+one you [Music]End of file</p>
+<p><a href="https://www.youtube.com/watch?v=vu81gBUkiek">
+<picture><img src="https://i.ytimg.com/vi/vu81gBUkiek/maxresdefault.jpg"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-7" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+welcome back let’s get back into the a statistics mode here we can’t really
+complete regression analysis without something called interaction terms and
+I’m gonna try to explain to you what those are with good ol pen and paper so
+that being said let me break it out so interaction terms we’ve discussed a
+lot of things and and we talked about adding features to our models to make
+them predict better so let’s start off with our basic model without interaction
+terms so we have some sort of y hat is the this is the equation and I’ll walk
+you through it here in a second B sub o plus B 1 X 1 plus B 2 X 2 so again this
+is our basic form of creating some sort of model that might predict the next
+data point right so this y hat means the Y hat is it’s an estimate hey I’m</p>
+<p>00:01
+estimating the the perfect value of y if I knew everything if I was the almighty
+whatever and I knew what Y would be then I wouldn’t need a y hat so this is just
+an estimate so our B 0 is just some coefficient that says hey we’re gonna
+start on this part of the y axis right the b1 is our first coefficient that is
+it’s a parameter you set or a weight you’re setting for your X 1 variable and
+then plus your B 2 coefficient and your X 2 variable now what are the x’s now
+think about the X’s as the feature values whatever that feature might be
+this could be the weight of the car this
+could be the horsepower of the car right and now if you have horsepower and
+weight so we can actually write it that way let’s do this let’s our Y hat is now
+our miles per gallon hat right picture that is one variable equals some
+starting value no matter what it’s gonna start at this value plus your beta one</p>
+<p>00:02
+which we don’t know and our X 1 is now our what did I say wait so I will just
+call it W and then be 2 times our horsepower so for an H so now we have
+like a real sorry about the glare but we have a real situation here maybe I can
+this is tad there we go move it up so we want to estimate our miles per gallon
+because we don’t know if we put a new W and a new H in there we’ve never seen
+before we don’t know what the true miles
+per gallon is right all right and that’s important to know especially when we
+start validating these predictions that we have now what the computer is gonna
+do and what regression does it’s gonna estimate these values the b1 the b0 and
+the B - how can you adjust all of those to get the best miles per gallon for all
+of the trainings it’s gonna base it off the training data so the data that you
+do have it’s going to say how can I reduce the amount of errors we’ve talked
+about this throughout some previous tutorials how do you reduce the error
+and that’s what we’re doing here right but now we don’t have to limit ourselves</p>
+<p>00:03
+to this particular linear equation we keep calling it linear models and it is
+it’s it’s a linear model but we don’t have to use just wait and an horsepower
+we can use a combination of weight and horsepower we can use anything we want
+we could say what if a better estimate from miles per gallon so big hat is
+equal to some starting condition plus our beta 1 times weight plus our beta 2
+times horsepower plus now we have a lot of other features but we’re gonna reuse
+these two features we’re gonna say how about a beta 3 weight and horsepower
+multiplied together right we created a variable out of thin air it doesn’t
+matter because what we’re trying to do is predict miles per gallon we’re trying
+to predict that there’s no equation out there we are inventing this equation on
+the fly it does not exist right so to speak now granted with the computer you
+can actually get an exact equation if you wanted to but that would be
+overfitting your data based on the training data and we’ll get into that as</p>
+<p>00:04
+well but I don’t want you to overfit the data so we’re just going to estimate as
+best we can and we’ll get more into that when we
+talk about cross-validation and things like that but I just wanted to show you
+this equation adding I know it’s I know it’s a little Glary but you can see that
+bottom equation here miles per gallon equals to some starting coefficient
+value plus some weight times the weight plus some weight times the horsepower
+plus some other way times weight and horsepower in other words weight and
+horsepower may have an interaction that they actually depend on each other a
+little bit right I’m excused my terminology I might be off with that
+word depends so but weight and horsepower together combined could have
+an effect let me erase this and show you
+one more one more little thing I’ll give you the examples that they always give
+when you’re trying to look this stuff up is people that are on a diet so if
+you’re on a diet you have two different food diets right so we can say food one</p>
+<p>00:05
+food one and I’m gonna put it into a table here and food two right now this
+might be well this is diet food one diet food - they’re both diets we don’t have
+an on diet group and now we have males yeah we have males and we have females
+on this particular diet and then we have you know did it work or did it not work
+right or whatever the numbers are for that particular table right for males if
+you just used males you’d end up with some coefficient so let’s not make this
+a binary here so food one and male you might have had some sort of beta value
+that’s different than the beta two for females if you separated the equations
+out the same thing for it’s probably not
+a good idea to use the beta for all four but they’re there for different beta
+values but when you add them together on the same set of data you don’t really</p>
+<p>00:06
+see male and female separately right they’re combined in the data so if you
+ignore male and female you would only have two betas not four so I think maybe
+that’ll help explain it there’s not four betas there’s only two but we can look
+at it as well what if there were four right we don’t know and that’s what
+interaction is going to help us determine is hey is it could it be
+possible that we can have a really predictable equation with just males and
+maybe not so good female so if we separated out maybe we can get some good
+male predictions right but maybe together they are actually better
+combined we don’t know we don’t know there’s a lot to learn about interaction
+and it’s actually gets pretty a little bit more complex than that you
+know they talk about interacting graphs where you have like the male and the
+female and if they cross at some point they would they would have interaction
+but if they never cross in their parallel then they don’t have any
+interaction but again if you’re doing some predictions now this is pretty high</p>
+<p>00:07
+level this is pretty high level if they were kind of parallel lines for the male
+and the female they’re parallel you know if you’re gonna predict something it’s
+always going to try to predict sort of in the middle and that’s not good for
+male or female so it’s nice to know that
+if there’s an interaction if there is an interaction that we can use it to help
+our model become better more to come on that as we go but I wanted to give you
+like the mathematics sort of behind it at least the equation remember the Y hat
+is equal to some starting coefficient value plus another coefficient for your
+first feature which we called the weight plus a coefficient for our second
+feature in third and fourth in fact you can get some very high order features
+you can do wait times for power at times quarter second mile you can get very
+complex but again remember we don’t want complex equations because they’re very
+hard to use in real life the computational power and they may not be
+that that accurate right you might add features and your accuracy doesn’t go up</p>
+<p>00:08
+much but you added a lot of complexity right we don’t want to do that we want
+to keep the complexity to a minimum let me see if I can remember how to get rid
+of that boom okay so now let’s just go ahead and do this real quick in our
+and we’ll go from there so open up your are get a script going and let’s just
+jump right in with the old favorite data set I’m gonna say my data my data is
+equal to the empty cars alright so let’s load that up into
+memory into our environment you see my data over here 32 observations of 11
+variables ok so remember how to create linear models it’s been a minute so
+let’s just do model 1 is equal to LM for linear model and we’re gonna say miles
+per gallon we want to know miles per gallon is a is explained by and we’re</p>
+<p>00:09
+gonna say I think I used weight first so weight plus horsepower right and the
+data is equal to my data so we got that satisfied let’s just run that model and
+do a quick summary stats on that so model 1 boom you can see down below that
+we have and we’re not gonna look at all these stats we’re just gonna look at the
+weight and the horsepower here yeah here and here and you have the P values that
+are actually significant so point 0 1 and this one’s very small they’re both
+very small so the bulk P values are valid so weight and horsepower are both
+significant in this equation alright but the other thing you want to look at is
+the adjusted R squared remember the difference between R squared and
+adjusted R squared is digested R squared takes into account multiple parameters
+if you add features to your model you actually could be hurt in your model and
+that’s it takes care of that for you so look at this R squared value the
+adjusted r-square 0.8 1 for 8 they remember that now I said we can use a</p>
+<p>00:10
+horsepower x weight and get a new model so let’s just create model to below that
+so we’ll do model two and we’ll just compare them is a linear model I want to
+know miles per gallon explained by I’m sorry that little thing pops up by
+weight and horsepower but there’s a little shortcut to add weight horsepower
+and wait times horsepower so we can do weight actually time Swiss power that
+does not mean multiply that means inside this function it has a
+different meaning it means weight is a feature horsepower is a feature and
+weight time suppose power is going to be a feature and I’ll show you that in a
+second too so let’s run that and we have our summary of model one we could do
+summary of model two here command enter and that error oh I forgot to add the
+data so data equals my data as well boom run that again I’ll run model one and</p>
+<p>00:11
+model two and let’s take a quick look so model - we just ran second and look at
+the adjusted r-squared value 0.87 so it’s higher you’d expect the higher
+r-squared as you add as you as you add parameters parameters the wrong term
+features I’m gonna get that mixed up a few times but if you add features your
+are your multiple r-squared will increase but that’s not a good indicator
+that your model is actually getting better and more on that later as well
+look up here you have your intercept that’s that’d be zero that’d be not that
+I keep talking about and you have your weight and you have your HP and you have
+your weight : HP and that : actually means it’s a variable called weight
+horsepower so it’s weight x horsepower and so you have all of those people use
+which they all show that they could be significant right because they’re all
+below point zero five finally let’s just get that equation of that model we’re
+not gonna do this for all of them but the coefficient of model - we can</p>
+<p>00:12
+actually get those by doing qoph cof model - and we have the intercept the
+weight the horsepower and the weight horsepower those coefficients remember
+so let me jump back to this you know let’s plug those in and that’s what we
+have so we have our miles per gallon estimate is equal to now our weight is
+got the coefficient of negative eight point two one so negative well actually
+we’ve got the intercept first which is forty nine point eight forty nine point
+eight I don’t know what the units are excuse me for not putting them on here
+I’m sure we can figure it out if we really want to but plus some beta one
+which the beta one is I’m pointing at the screen like you guys can see it
+negative eight point so plus negative eight point two one
+times your weight WT plus I’m gonna go on multiple lines here and I know it’s
+messy but hopefully with my audio you can get get to the point here the HP is</p>
+<p>00:13
+negative 0.12 horsepower plus you’re gonna have a point zero two
+seven eight I’m sorry the significant digits are off the chart here times WT
+HP right and that’s a multiplication so you can actually go back to your data
+set here’s the actual equation you get used you can do the old school math way
+plug in numbers for weight horsepower and get an approximate miles per gallon
+then you can actually check here I think
+a little exercise for you which would be kind of fun if you’re nerdy like me
+where I’m trying to be anyways if you go to my data don’t look at it ahead of
+time but pick kind of a weight and a horsepower that’s available so don’t
+pick one that’s not on this chart so we have a random weight three point one
+five oh and a horsepower of ninety five do the equation that we just gave you</p>
+<p>00:14
+see how close you come to the miles per gallon because you have the true answer
+so looking at this you have the weight in the horsepower then you have the true
+answer where the miles per gallon is pretend that you don’t have the true
+answer check it and see how far off you are try a couple different ones I think
+that’s a great little assignment to prove that this equation may be
+something you’re interested in to predict the future with it right so in
+the end ultimately what we’re going to do is we’re going to chop this data set
+into at least two different parts eighty
+percent training data 20 percent pretend we never had data so the test data with
+a validation set right that’s the idea that’s what we’re getting into so you
+cut that data into pieces then you can train all day long on that eighty
+percent now you can get 100 cent accuracy on that piece of on that chunk
+of data that you using but then you then you test out that data on the test set
+or the validation set and you say oh man I was off well that means you over
+fitted the model because we don’t know the future we don’t know if the model
+truly is gonna follow that pattern you know it’s not going to go
+we’re not gonna be able to predict like that we have to just get close we don’t</p>
+<p>00:15
+want to overfit and that’s why you want to keep your variables or your models a
+little less complex than you think right now certain situations you want more
+complexity but in most cases that we’re gonna deal with anytime soon we want to
+minimize the complexity of the models not everybody has a crazy GPU to run
+these models on so again hey guys I appreciate you guys sharing this all the
+time and I appreciate you liking and I’m always appreciating everything you guys
+do and the comments are getting good oh and somebody actually I should have said
+stay tuned for this shortcut somebody commented today and I can show you maybe
+okay we’re back here so somebody commented on a previous video I was
+trying to get the full path and I appreciate this comment because it was
+super helpful all right so let’s say we’re in the downloads folder and I said
+hey how do you get this path of one of these tar.gz files so I’m glad that you
+guys came back to witness this I’m gonna</p>
+<p>00:16
+hold the shift key and right-click on it and down here you have copy as path
+click on that then if I paste it back into my R whatever and I did the
+untargeted the much easier than the way I did it in the last video however you
+still have to change these to I that /or double backslashes don’t forget that
+because that will probably cause you some pain points and I know that had
+nothing to do with this particular video but the previous one or the previous
+video that I did on another playlist this will be helpful hint so have a good
+one you [Music]End of file</p>
+<p><a href="https://www.youtube.com/watch?v=vu81gBUkiek">
+<picture><img src="https://i.ytimg.com/vi/vu81gBUkiek/maxresdefault.jpg"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-8" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+welcome back let’s get back into the a statistics mode here we can’t really
+complete regression analysis without something called interaction terms and
+I’m gonna try to explain to you what those are with good ol pen and paper so
+that being said let me break it out so interaction terms we’ve discussed a
+lot of things and and we talked about adding features to our models to make
+them predict better so let’s start off with our basic model without interaction
+terms so we have some sort of y hat is the this is the equation and I’ll walk
+you through it here in a second B sub o plus B 1 X 1 plus B 2 X 2 so again this
+is our basic form of creating some sort of model that might predict the next
+data point right so this y hat means the Y hat is it’s an estimate hey I’m</p>
+<p>00:01
+estimating the the perfect value of y if I knew everything if I was the almighty
+whatever and I knew what Y would be then I wouldn’t need a y hat so this is just
+an estimate so our B 0 is just some coefficient that says hey we’re gonna
+start on this part of the y axis right the b1 is our first coefficient that is
+it’s a parameter you set or a weight you’re setting for your X 1 variable and
+then plus your B 2 coefficient and your X 2 variable now what are the x’s now
+think about the X’s as the feature values whatever that feature might be
+this could be the weight of the car this
+could be the horsepower of the car right and now if you have horsepower and
+weight so we can actually write it that way let’s do this let’s our Y hat is now
+our miles per gallon hat right picture that is one variable equals some
+starting value no matter what it’s gonna start at this value plus your beta one</p>
+<p>00:02
+which we don’t know and our X 1 is now our what did I say wait so I will just
+call it W and then be 2 times our horsepower so for an H so now we have
+like a real sorry about the glare but we have a real situation here maybe I can
+this is tad there we go move it up so we want to estimate our miles per gallon
+because we don’t know if we put a new W and a new H in there we’ve never seen
+before we don’t know what the true miles
+per gallon is right all right and that’s important to know especially when we
+start validating these predictions that we have now what the computer is gonna
+do and what regression does it’s gonna estimate these values the b1 the b0 and
+the B - how can you adjust all of those to get the best miles per gallon for all
+of the trainings it’s gonna base it off the training data so the data that you
+do have it’s going to say how can I reduce the amount of errors we’ve talked
+about this throughout some previous tutorials how do you reduce the error
+and that’s what we’re doing here right but now we don’t have to limit ourselves</p>
+<p>00:03
+to this particular linear equation we keep calling it linear models and it is
+it’s it’s a linear model but we don’t have to use just wait and an horsepower
+we can use a combination of weight and horsepower we can use anything we want
+we could say what if a better estimate from miles per gallon so big hat is
+equal to some starting condition plus our beta 1 times weight plus our beta 2
+times horsepower plus now we have a lot of other features but we’re gonna reuse
+these two features we’re gonna say how about a beta 3 weight and horsepower
+multiplied together right we created a variable out of thin air it doesn’t
+matter because what we’re trying to do is predict miles per gallon we’re trying
+to predict that there’s no equation out there we are inventing this equation on
+the fly it does not exist right so to speak now granted with the computer you
+can actually get an exact equation if you wanted to but that would be
+overfitting your data based on the training data and we’ll get into that as</p>
+<p>00:04
+well but I don’t want you to overfit the data so we’re just going to estimate as
+best we can and we’ll get more into that when we
+talk about cross-validation and things like that but I just wanted to show you
+this equation adding I know it’s I know it’s a little Glary but you can see that
+bottom equation here miles per gallon equals to some starting coefficient
+value plus some weight times the weight plus some weight times the horsepower
+plus some other way times weight and horsepower in other words weight and
+horsepower may have an interaction that they actually depend on each other a
+little bit right I’m excused my terminology I might be off with that
+word depends so but weight and horsepower together combined could have
+an effect let me erase this and show you
+one more one more little thing I’ll give you the examples that they always give
+when you’re trying to look this stuff up is people that are on a diet so if
+you’re on a diet you have two different food diets right so we can say food one</p>
+<p>00:05
+food one and I’m gonna put it into a table here and food two right now this
+might be well this is diet food one diet food - they’re both diets we don’t have
+an on diet group and now we have males yeah we have males and we have females
+on this particular diet and then we have you know did it work or did it not work
+right or whatever the numbers are for that particular table right for males if
+you just used males you’d end up with some coefficient so let’s not make this
+a binary here so food one and male you might have had some sort of beta value
+that’s different than the beta two for females if you separated the equations
+out the same thing for it’s probably not
+a good idea to use the beta for all four but they’re there for different beta
+values but when you add them together on the same set of data you don’t really</p>
+<p>00:06
+see male and female separately right they’re combined in the data so if you
+ignore male and female you would only have two betas not four so I think maybe
+that’ll help explain it there’s not four betas there’s only two but we can look
+at it as well what if there were four right we don’t know and that’s what
+interaction is going to help us determine is hey is it could it be
+possible that we can have a really predictable equation with just males and
+maybe not so good female so if we separated out maybe we can get some good
+male predictions right but maybe together they are actually better
+combined we don’t know we don’t know there’s a lot to learn about interaction
+and it’s actually gets pretty a little bit more complex than that you
+know they talk about interacting graphs where you have like the male and the
+female and if they cross at some point they would they would have interaction
+but if they never cross in their parallel then they don’t have any
+interaction but again if you’re doing some predictions now this is pretty high</p>
+<p>00:07
+level this is pretty high level if they were kind of parallel lines for the male
+and the female they’re parallel you know if you’re gonna predict something it’s
+always going to try to predict sort of in the middle and that’s not good for
+male or female so it’s nice to know that
+if there’s an interaction if there is an interaction that we can use it to help
+our model become better more to come on that as we go but I wanted to give you
+like the mathematics sort of behind it at least the equation remember the Y hat
+is equal to some starting coefficient value plus another coefficient for your
+first feature which we called the weight plus a coefficient for our second
+feature in third and fourth in fact you can get some very high order features
+you can do wait times for power at times quarter second mile you can get very
+complex but again remember we don’t want complex equations because they’re very
+hard to use in real life the computational power and they may not be
+that that accurate right you might add features and your accuracy doesn’t go up</p>
+<p>00:08
+much but you added a lot of complexity right we don’t want to do that we want
+to keep the complexity to a minimum let me see if I can remember how to get rid
+of that boom okay so now let’s just go ahead and do this real quick in our
+and we’ll go from there so open up your are get a script going and let’s just
+jump right in with the old favorite data set I’m gonna say my data my data is
+equal to the empty cars alright so let’s load that up into
+memory into our environment you see my data over here 32 observations of 11
+variables ok so remember how to create linear models it’s been a minute so
+let’s just do model 1 is equal to LM for linear model and we’re gonna say miles
+per gallon we want to know miles per gallon is a is explained by and we’re</p>
+<p>00:09
+gonna say I think I used weight first so weight plus horsepower right and the
+data is equal to my data so we got that satisfied let’s just run that model and
+do a quick summary stats on that so model 1 boom you can see down below that
+we have and we’re not gonna look at all these stats we’re just gonna look at the
+weight and the horsepower here yeah here and here and you have the P values that
+are actually significant so point 0 1 and this one’s very small they’re both
+very small so the bulk P values are valid so weight and horsepower are both
+significant in this equation alright but the other thing you want to look at is
+the adjusted R squared remember the difference between R squared and
+adjusted R squared is digested R squared takes into account multiple parameters
+if you add features to your model you actually could be hurt in your model and
+that’s it takes care of that for you so look at this R squared value the
+adjusted r-square 0.8 1 for 8 they remember that now I said we can use a</p>
+<p>00:10
+horsepower x weight and get a new model so let’s just create model to below that
+so we’ll do model two and we’ll just compare them is a linear model I want to
+know miles per gallon explained by I’m sorry that little thing pops up by
+weight and horsepower but there’s a little shortcut to add weight horsepower
+and wait times horsepower so we can do weight actually time Swiss power that
+does not mean multiply that means inside this function it has a
+different meaning it means weight is a feature horsepower is a feature and
+weight time suppose power is going to be a feature and I’ll show you that in a
+second too so let’s run that and we have our summary of model one we could do
+summary of model two here command enter and that error oh I forgot to add the
+data so data equals my data as well boom run that again I’ll run model one and</p>
+<p>00:11
+model two and let’s take a quick look so model - we just ran second and look at
+the adjusted r-squared value 0.87 so it’s higher you’d expect the higher
+r-squared as you add as you as you add parameters parameters the wrong term
+features I’m gonna get that mixed up a few times but if you add features your
+are your multiple r-squared will increase but that’s not a good indicator
+that your model is actually getting better and more on that later as well
+look up here you have your intercept that’s that’d be zero that’d be not that
+I keep talking about and you have your weight and you have your HP and you have
+your weight : HP and that : actually means it’s a variable called weight
+horsepower so it’s weight x horsepower and so you have all of those people use
+which they all show that they could be significant right because they’re all
+below point zero five finally let’s just get that equation of that model we’re
+not gonna do this for all of them but the coefficient of model - we can</p>
+<p>00:12
+actually get those by doing qoph cof model - and we have the intercept the
+weight the horsepower and the weight horsepower those coefficients remember
+so let me jump back to this you know let’s plug those in and that’s what we
+have so we have our miles per gallon estimate is equal to now our weight is
+got the coefficient of negative eight point two one so negative well actually
+we’ve got the intercept first which is forty nine point eight forty nine point
+eight I don’t know what the units are excuse me for not putting them on here
+I’m sure we can figure it out if we really want to but plus some beta one
+which the beta one is I’m pointing at the screen like you guys can see it
+negative eight point so plus negative eight point two one
+times your weight WT plus I’m gonna go on multiple lines here and I know it’s
+messy but hopefully with my audio you can get get to the point here the HP is</p>
+<p>00:13
+negative 0.12 horsepower plus you’re gonna have a point zero two
+seven eight I’m sorry the significant digits are off the chart here times WT
+HP right and that’s a multiplication so you can actually go back to your data
+set here’s the actual equation you get used you can do the old school math way
+plug in numbers for weight horsepower and get an approximate miles per gallon
+then you can actually check here I think
+a little exercise for you which would be kind of fun if you’re nerdy like me
+where I’m trying to be anyways if you go to my data don’t look at it ahead of
+time but pick kind of a weight and a horsepower that’s available so don’t
+pick one that’s not on this chart so we have a random weight three point one
+five oh and a horsepower of ninety five do the equation that we just gave you</p>
+<p>00:14
+see how close you come to the miles per gallon because you have the true answer
+so looking at this you have the weight in the horsepower then you have the true
+answer where the miles per gallon is pretend that you don’t have the true
+answer check it and see how far off you are try a couple different ones I think
+that’s a great little assignment to prove that this equation may be
+something you’re interested in to predict the future with it right so in
+the end ultimately what we’re going to do is we’re going to chop this data set
+into at least two different parts eighty
+percent training data 20 percent pretend we never had data so the test data with
+a validation set right that’s the idea that’s what we’re getting into so you
+cut that data into pieces then you can train all day long on that eighty
+percent now you can get 100 cent accuracy on that piece of on that chunk
+of data that you using but then you then you test out that data on the test set
+or the validation set and you say oh man I was off well that means you over
+fitted the model because we don’t know the future we don’t know if the model
+truly is gonna follow that pattern you know it’s not going to go
+we’re not gonna be able to predict like that we have to just get close we don’t</p>
+<p>00:15
+want to overfit and that’s why you want to keep your variables or your models a
+little less complex than you think right now certain situations you want more
+complexity but in most cases that we’re gonna deal with anytime soon we want to
+minimize the complexity of the models not everybody has a crazy GPU to run
+these models on so again hey guys I appreciate you guys sharing this all the
+time and I appreciate you liking and I’m always appreciating everything you guys
+do and the comments are getting good oh and somebody actually I should have said
+stay tuned for this shortcut somebody commented today and I can show you maybe
+okay we’re back here so somebody commented on a previous video I was
+trying to get the full path and I appreciate this comment because it was
+super helpful all right so let’s say we’re in the downloads folder and I said
+hey how do you get this path of one of these tar.gz files so I’m glad that you
+guys came back to witness this I’m gonna</p>
+<p>00:16
+hold the shift key and right-click on it and down here you have copy as path
+click on that then if I paste it back into my R whatever and I did the
+untargeted the much easier than the way I did it in the last video however you
+still have to change these to I that /or double backslashes don’t forget that
+because that will probably cause you some pain points and I know that had
+nothing to do with this particular video but the previous one or the previous
+video that I did on another playlist this will be helpful hint so have a good
+one you [Music]End of file</p>
+<p><a href="https://www.youtube.com/watch?v=vu81gBUkiek">
+<picture><img src="https://i.ytimg.com/vi/vu81gBUkiek/maxresdefault.jpg"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-9" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+welcome back let’s get back into the a statistics mode here we can’t really
+complete regression analysis without something called interaction terms and
+I’m gonna try to explain to you what those are with good ol pen and paper so
+that being said let me break it out so interaction terms we’ve discussed a
+lot of things and and we talked about adding features to our models to make
+them predict better so let’s start off with our basic model without interaction
+terms so we have some sort of y hat is the this is the equation and I’ll walk
+you through it here in a second B sub o plus B 1 X 1 plus B 2 X 2 so again this
+is our basic form of creating some sort of model that might predict the next
+data point right so this y hat means the Y hat is it’s an estimate hey I’m</p>
+<p>00:01
+estimating the the perfect value of y if I knew everything if I was the almighty
+whatever and I knew what Y would be then I wouldn’t need a y hat so this is just
+an estimate so our B 0 is just some coefficient that says hey we’re gonna
+start on this part of the y axis right the b1 is our first coefficient that is
+it’s a parameter you set or a weight you’re setting for your X 1 variable and
+then plus your B 2 coefficient and your X 2 variable now what are the x’s now
+think about the X’s as the feature values whatever that feature might be
+this could be the weight of the car this
+could be the horsepower of the car right and now if you have horsepower and
+weight so we can actually write it that way let’s do this let’s our Y hat is now
+our miles per gallon hat right picture that is one variable equals some
+starting value no matter what it’s gonna start at this value plus your beta one</p>
+<p>00:02
+which we don’t know and our X 1 is now our what did I say wait so I will just
+call it W and then be 2 times our horsepower so for an H so now we have
+like a real sorry about the glare but we have a real situation here maybe I can
+this is tad there we go move it up so we want to estimate our miles per gallon
+because we don’t know if we put a new W and a new H in there we’ve never seen
+before we don’t know what the true miles
+per gallon is right all right and that’s important to know especially when we
+start validating these predictions that we have now what the computer is gonna
+do and what regression does it’s gonna estimate these values the b1 the b0 and
+the B - how can you adjust all of those to get the best miles per gallon for all
+of the trainings it’s gonna base it off the training data so the data that you
+do have it’s going to say how can I reduce the amount of errors we’ve talked
+about this throughout some previous tutorials how do you reduce the error
+and that’s what we’re doing here right but now we don’t have to limit ourselves</p>
+<p>00:03
+to this particular linear equation we keep calling it linear models and it is
+it’s it’s a linear model but we don’t have to use just wait and an horsepower
+we can use a combination of weight and horsepower we can use anything we want
+we could say what if a better estimate from miles per gallon so big hat is
+equal to some starting condition plus our beta 1 times weight plus our beta 2
+times horsepower plus now we have a lot of other features but we’re gonna reuse
+these two features we’re gonna say how about a beta 3 weight and horsepower
+multiplied together right we created a variable out of thin air it doesn’t
+matter because what we’re trying to do is predict miles per gallon we’re trying
+to predict that there’s no equation out there we are inventing this equation on
+the fly it does not exist right so to speak now granted with the computer you
+can actually get an exact equation if you wanted to but that would be
+overfitting your data based on the training data and we’ll get into that as</p>
+<p>00:04
+well but I don’t want you to overfit the data so we’re just going to estimate as
+best we can and we’ll get more into that when we
+talk about cross-validation and things like that but I just wanted to show you
+this equation adding I know it’s I know it’s a little Glary but you can see that
+bottom equation here miles per gallon equals to some starting coefficient
+value plus some weight times the weight plus some weight times the horsepower
+plus some other way times weight and horsepower in other words weight and
+horsepower may have an interaction that they actually depend on each other a
+little bit right I’m excused my terminology I might be off with that
+word depends so but weight and horsepower together combined could have
+an effect let me erase this and show you
+one more one more little thing I’ll give you the examples that they always give
+when you’re trying to look this stuff up is people that are on a diet so if
+you’re on a diet you have two different food diets right so we can say food one</p>
+<p>00:05
+food one and I’m gonna put it into a table here and food two right now this
+might be well this is diet food one diet food - they’re both diets we don’t have
+an on diet group and now we have males yeah we have males and we have females
+on this particular diet and then we have you know did it work or did it not work
+right or whatever the numbers are for that particular table right for males if
+you just used males you’d end up with some coefficient so let’s not make this
+a binary here so food one and male you might have had some sort of beta value
+that’s different than the beta two for females if you separated the equations
+out the same thing for it’s probably not
+a good idea to use the beta for all four but they’re there for different beta
+values but when you add them together on the same set of data you don’t really</p>
+<p>00:06
+see male and female separately right they’re combined in the data so if you
+ignore male and female you would only have two betas not four so I think maybe
+that’ll help explain it there’s not four betas there’s only two but we can look
+at it as well what if there were four right we don’t know and that’s what
+interaction is going to help us determine is hey is it could it be
+possible that we can have a really predictable equation with just males and
+maybe not so good female so if we separated out maybe we can get some good
+male predictions right but maybe together they are actually better
+combined we don’t know we don’t know there’s a lot to learn about interaction
+and it’s actually gets pretty a little bit more complex than that you
+know they talk about interacting graphs where you have like the male and the
+female and if they cross at some point they would they would have interaction
+but if they never cross in their parallel then they don’t have any
+interaction but again if you’re doing some predictions now this is pretty high</p>
+<p>00:07
+level this is pretty high level if they were kind of parallel lines for the male
+and the female they’re parallel you know if you’re gonna predict something it’s
+always going to try to predict sort of in the middle and that’s not good for
+male or female so it’s nice to know that
+if there’s an interaction if there is an interaction that we can use it to help
+our model become better more to come on that as we go but I wanted to give you
+like the mathematics sort of behind it at least the equation remember the Y hat
+is equal to some starting coefficient value plus another coefficient for your
+first feature which we called the weight plus a coefficient for our second
+feature in third and fourth in fact you can get some very high order features
+you can do wait times for power at times quarter second mile you can get very
+complex but again remember we don’t want complex equations because they’re very
+hard to use in real life the computational power and they may not be
+that that accurate right you might add features and your accuracy doesn’t go up</p>
+<p>00:08
+much but you added a lot of complexity right we don’t want to do that we want
+to keep the complexity to a minimum let me see if I can remember how to get rid
+of that boom okay so now let’s just go ahead and do this real quick in our
+and we’ll go from there so open up your are get a script going and let’s just
+jump right in with the old favorite data set I’m gonna say my data my data is
+equal to the empty cars alright so let’s load that up into
+memory into our environment you see my data over here 32 observations of 11
+variables ok so remember how to create linear models it’s been a minute so
+let’s just do model 1 is equal to LM for linear model and we’re gonna say miles
+per gallon we want to know miles per gallon is a is explained by and we’re</p>
+<p>00:09
+gonna say I think I used weight first so weight plus horsepower right and the
+data is equal to my data so we got that satisfied let’s just run that model and
+do a quick summary stats on that so model 1 boom you can see down below that
+we have and we’re not gonna look at all these stats we’re just gonna look at the
+weight and the horsepower here yeah here and here and you have the P values that
+are actually significant so point 0 1 and this one’s very small they’re both
+very small so the bulk P values are valid so weight and horsepower are both
+significant in this equation alright but the other thing you want to look at is
+the adjusted R squared remember the difference between R squared and
+adjusted R squared is digested R squared takes into account multiple parameters
+if you add features to your model you actually could be hurt in your model and
+that’s it takes care of that for you so look at this R squared value the
+adjusted r-square 0.8 1 for 8 they remember that now I said we can use a</p>
+<p>00:10
+horsepower x weight and get a new model so let’s just create model to below that
+so we’ll do model two and we’ll just compare them is a linear model I want to
+know miles per gallon explained by I’m sorry that little thing pops up by
+weight and horsepower but there’s a little shortcut to add weight horsepower
+and wait times horsepower so we can do weight actually time Swiss power that
+does not mean multiply that means inside this function it has a
+different meaning it means weight is a feature horsepower is a feature and
+weight time suppose power is going to be a feature and I’ll show you that in a
+second too so let’s run that and we have our summary of model one we could do
+summary of model two here command enter and that error oh I forgot to add the
+data so data equals my data as well boom run that again I’ll run model one and</p>
+<p>00:11
+model two and let’s take a quick look so model - we just ran second and look at
+the adjusted r-squared value 0.87 so it’s higher you’d expect the higher
+r-squared as you add as you as you add parameters parameters the wrong term
+features I’m gonna get that mixed up a few times but if you add features your
+are your multiple r-squared will increase but that’s not a good indicator
+that your model is actually getting better and more on that later as well
+look up here you have your intercept that’s that’d be zero that’d be not that
+I keep talking about and you have your weight and you have your HP and you have
+your weight : HP and that : actually means it’s a variable called weight
+horsepower so it’s weight x horsepower and so you have all of those people use
+which they all show that they could be significant right because they’re all
+below point zero five finally let’s just get that equation of that model we’re
+not gonna do this for all of them but the coefficient of model - we can</p>
+<p>00:12
+actually get those by doing qoph cof model - and we have the intercept the
+weight the horsepower and the weight horsepower those coefficients remember
+so let me jump back to this you know let’s plug those in and that’s what we
+have so we have our miles per gallon estimate is equal to now our weight is
+got the coefficient of negative eight point two one so negative well actually
+we’ve got the intercept first which is forty nine point eight forty nine point
+eight I don’t know what the units are excuse me for not putting them on here
+I’m sure we can figure it out if we really want to but plus some beta one
+which the beta one is I’m pointing at the screen like you guys can see it
+negative eight point so plus negative eight point two one
+times your weight WT plus I’m gonna go on multiple lines here and I know it’s
+messy but hopefully with my audio you can get get to the point here the HP is</p>
+<p>00:13
+negative 0.12 horsepower plus you’re gonna have a point zero two
+seven eight I’m sorry the significant digits are off the chart here times WT
+HP right and that’s a multiplication so you can actually go back to your data
+set here’s the actual equation you get used you can do the old school math way
+plug in numbers for weight horsepower and get an approximate miles per gallon
+then you can actually check here I think
+a little exercise for you which would be kind of fun if you’re nerdy like me
+where I’m trying to be anyways if you go to my data don’t look at it ahead of
+time but pick kind of a weight and a horsepower that’s available so don’t
+pick one that’s not on this chart so we have a random weight three point one
+five oh and a horsepower of ninety five do the equation that we just gave you</p>
+<p>00:14
+see how close you come to the miles per gallon because you have the true answer
+so looking at this you have the weight in the horsepower then you have the true
+answer where the miles per gallon is pretend that you don’t have the true
+answer check it and see how far off you are try a couple different ones I think
+that’s a great little assignment to prove that this equation may be
+something you’re interested in to predict the future with it right so in
+the end ultimately what we’re going to do is we’re going to chop this data set
+into at least two different parts eighty
+percent training data 20 percent pretend we never had data so the test data with
+a validation set right that’s the idea that’s what we’re getting into so you
+cut that data into pieces then you can train all day long on that eighty
+percent now you can get 100 cent accuracy on that piece of on that chunk
+of data that you using but then you then you test out that data on the test set
+or the validation set and you say oh man I was off well that means you over
+fitted the model because we don’t know the future we don’t know if the model
+truly is gonna follow that pattern you know it’s not going to go
+we’re not gonna be able to predict like that we have to just get close we don’t</p>
+<p>00:15
+want to overfit and that’s why you want to keep your variables or your models a
+little less complex than you think right now certain situations you want more
+complexity but in most cases that we’re gonna deal with anytime soon we want to
+minimize the complexity of the models not everybody has a crazy GPU to run
+these models on so again hey guys I appreciate you guys sharing this all the
+time and I appreciate you liking and I’m always appreciating everything you guys
+do and the comments are getting good oh and somebody actually I should have said
+stay tuned for this shortcut somebody commented today and I can show you maybe
+okay we’re back here so somebody commented on a previous video I was
+trying to get the full path and I appreciate this comment because it was
+super helpful all right so let’s say we’re in the downloads folder and I said
+hey how do you get this path of one of these tar.gz files so I’m glad that you
+guys came back to witness this I’m gonna</p>
+<p>00:16
+hold the shift key and right-click on it and down here you have copy as path
+click on that then if I paste it back into my R whatever and I did the
+untargeted the much easier than the way I did it in the last video however you
+still have to change these to I that /or double backslashes don’t forget that
+because that will probably cause you some pain points and I know that had
+nothing to do with this particular video but the previous one or the previous
+video that I did on another playlist this will be helpful hint so have a good
+one you [Music]End of file</p>
+<p><a href="https://www.youtube.com/watch?v=vu81gBUkiek">
+<picture><img src="https://i.ytimg.com/vi/vu81gBUkiek/maxresdefault.jpg"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-10" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+welcome back let’s get back into the a statistics mode here we can’t really
+complete regression analysis without something called interaction terms and
+I’m gonna try to explain to you what those are with good ol pen and paper so
+that being said let me break it out so interaction terms we’ve discussed a
+lot of things and and we talked about adding features to our models to make
+them predict better so let’s start off with our basic model without interaction
+terms so we have some sort of y hat is the this is the equation and I’ll walk
+you through it here in a second B sub o plus B 1 X 1 plus B 2 X 2 so again this
+is our basic form of creating some sort of model that might predict the next
+data point right so this y hat means the Y hat is it’s an estimate hey I’m</p>
+<p>00:01
+estimating the the perfect value of y if I knew everything if I was the almighty
+whatever and I knew what Y would be then I wouldn’t need a y hat so this is just
+an estimate so our B 0 is just some coefficient that says hey we’re gonna
+start on this part of the y axis right the b1 is our first coefficient that is
+it’s a parameter you set or a weight you’re setting for your X 1 variable and
+then plus your B 2 coefficient and your X 2 variable now what are the x’s now
+think about the X’s as the feature values whatever that feature might be
+this could be the weight of the car this
+could be the horsepower of the car right and now if you have horsepower and
+weight so we can actually write it that way let’s do this let’s our Y hat is now
+our miles per gallon hat right picture that is one variable equals some
+starting value no matter what it’s gonna start at this value plus your beta one</p>
+<p>00:02
+which we don’t know and our X 1 is now our what did I say wait so I will just
+call it W and then be 2 times our horsepower so for an H so now we have
+like a real sorry about the glare but we have a real situation here maybe I can
+this is tad there we go move it up so we want to estimate our miles per gallon
+because we don’t know if we put a new W and a new H in there we’ve never seen
+before we don’t know what the true miles
+per gallon is right all right and that’s important to know especially when we
+start validating these predictions that we have now what the computer is gonna
+do and what regression does it’s gonna estimate these values the b1 the b0 and
+the B - how can you adjust all of those to get the best miles per gallon for all
+of the trainings it’s gonna base it off the training data so the data that you
+do have it’s going to say how can I reduce the amount of errors we’ve talked
+about this throughout some previous tutorials how do you reduce the error
+and that’s what we’re doing here right but now we don’t have to limit ourselves</p>
+<p>00:03
+to this particular linear equation we keep calling it linear models and it is
+it’s it’s a linear model but we don’t have to use just wait and an horsepower
+we can use a combination of weight and horsepower we can use anything we want
+we could say what if a better estimate from miles per gallon so big hat is
+equal to some starting condition plus our beta 1 times weight plus our beta 2
+times horsepower plus now we have a lot of other features but we’re gonna reuse
+these two features we’re gonna say how about a beta 3 weight and horsepower
+multiplied together right we created a variable out of thin air it doesn’t
+matter because what we’re trying to do is predict miles per gallon we’re trying
+to predict that there’s no equation out there we are inventing this equation on
+the fly it does not exist right so to speak now granted with the computer you
+can actually get an exact equation if you wanted to but that would be
+overfitting your data based on the training data and we’ll get into that as</p>
+<p>00:04
+well but I don’t want you to overfit the data so we’re just going to estimate as
+best we can and we’ll get more into that when we
+talk about cross-validation and things like that but I just wanted to show you
+this equation adding I know it’s I know it’s a little Glary but you can see that
+bottom equation here miles per gallon equals to some starting coefficient
+value plus some weight times the weight plus some weight times the horsepower
+plus some other way times weight and horsepower in other words weight and
+horsepower may have an interaction that they actually depend on each other a
+little bit right I’m excused my terminology I might be off with that
+word depends so but weight and horsepower together combined could have
+an effect let me erase this and show you
+one more one more little thing I’ll give you the examples that they always give
+when you’re trying to look this stuff up is people that are on a diet so if
+you’re on a diet you have two different food diets right so we can say food one</p>
+<p>00:05
+food one and I’m gonna put it into a table here and food two right now this
+might be well this is diet food one diet food - they’re both diets we don’t have
+an on diet group and now we have males yeah we have males and we have females
+on this particular diet and then we have you know did it work or did it not work
+right or whatever the numbers are for that particular table right for males if
+you just used males you’d end up with some coefficient so let’s not make this
+a binary here so food one and male you might have had some sort of beta value
+that’s different than the beta two for females if you separated the equations
+out the same thing for it’s probably not
+a good idea to use the beta for all four but they’re there for different beta
+values but when you add them together on the same set of data you don’t really</p>
+<p>00:06
+see male and female separately right they’re combined in the data so if you
+ignore male and female you would only have two betas not four so I think maybe
+that’ll help explain it there’s not four betas there’s only two but we can look
+at it as well what if there were four right we don’t know and that’s what
+interaction is going to help us determine is hey is it could it be
+possible that we can have a really predictable equation with just males and
+maybe not so good female so if we separated out maybe we can get some good
+male predictions right but maybe together they are actually better
+combined we don’t know we don’t know there’s a lot to learn about interaction
+and it’s actually gets pretty a little bit more complex than that you
+know they talk about interacting graphs where you have like the male and the
+female and if they cross at some point they would they would have interaction
+but if they never cross in their parallel then they don’t have any
+interaction but again if you’re doing some predictions now this is pretty high</p>
+<p>00:07
+level this is pretty high level if they were kind of parallel lines for the male
+and the female they’re parallel you know if you’re gonna predict something it’s
+always going to try to predict sort of in the middle and that’s not good for
+male or female so it’s nice to know that
+if there’s an interaction if there is an interaction that we can use it to help
+our model become better more to come on that as we go but I wanted to give you
+like the mathematics sort of behind it at least the equation remember the Y hat
+is equal to some starting coefficient value plus another coefficient for your
+first feature which we called the weight plus a coefficient for our second
+feature in third and fourth in fact you can get some very high order features
+you can do wait times for power at times quarter second mile you can get very
+complex but again remember we don’t want complex equations because they’re very
+hard to use in real life the computational power and they may not be
+that that accurate right you might add features and your accuracy doesn’t go up</p>
+<p>00:08
+much but you added a lot of complexity right we don’t want to do that we want
+to keep the complexity to a minimum let me see if I can remember how to get rid
+of that boom okay so now let’s just go ahead and do this real quick in our
+and we’ll go from there so open up your are get a script going and let’s just
+jump right in with the old favorite data set I’m gonna say my data my data is
+equal to the empty cars alright so let’s load that up into
+memory into our environment you see my data over here 32 observations of 11
+variables ok so remember how to create linear models it’s been a minute so
+let’s just do model 1 is equal to LM for linear model and we’re gonna say miles
+per gallon we want to know miles per gallon is a is explained by and we’re</p>
+<p>00:09
+gonna say I think I used weight first so weight plus horsepower right and the
+data is equal to my data so we got that satisfied let’s just run that model and
+do a quick summary stats on that so model 1 boom you can see down below that
+we have and we’re not gonna look at all these stats we’re just gonna look at the
+weight and the horsepower here yeah here and here and you have the P values that
+are actually significant so point 0 1 and this one’s very small they’re both
+very small so the bulk P values are valid so weight and horsepower are both
+significant in this equation alright but the other thing you want to look at is
+the adjusted R squared remember the difference between R squared and
+adjusted R squared is digested R squared takes into account multiple parameters
+if you add features to your model you actually could be hurt in your model and
+that’s it takes care of that for you so look at this R squared value the
+adjusted r-square 0.8 1 for 8 they remember that now I said we can use a</p>
+<p>00:10
+horsepower x weight and get a new model so let’s just create model to below that
+so we’ll do model two and we’ll just compare them is a linear model I want to
+know miles per gallon explained by I’m sorry that little thing pops up by
+weight and horsepower but there’s a little shortcut to add weight horsepower
+and wait times horsepower so we can do weight actually time Swiss power that
+does not mean multiply that means inside this function it has a
+different meaning it means weight is a feature horsepower is a feature and
+weight time suppose power is going to be a feature and I’ll show you that in a
+second too so let’s run that and we have our summary of model one we could do
+summary of model two here command enter and that error oh I forgot to add the
+data so data equals my data as well boom run that again I’ll run model one and</p>
+<p>00:11
+model two and let’s take a quick look so model - we just ran second and look at
+the adjusted r-squared value 0.87 so it’s higher you’d expect the higher
+r-squared as you add as you as you add parameters parameters the wrong term
+features I’m gonna get that mixed up a few times but if you add features your
+are your multiple r-squared will increase but that’s not a good indicator
+that your model is actually getting better and more on that later as well
+look up here you have your intercept that’s that’d be zero that’d be not that
+I keep talking about and you have your weight and you have your HP and you have
+your weight : HP and that : actually means it’s a variable called weight
+horsepower so it’s weight x horsepower and so you have all of those people use
+which they all show that they could be significant right because they’re all
+below point zero five finally let’s just get that equation of that model we’re
+not gonna do this for all of them but the coefficient of model - we can</p>
+<p>00:12
+actually get those by doing qoph cof model - and we have the intercept the
+weight the horsepower and the weight horsepower those coefficients remember
+so let me jump back to this you know let’s plug those in and that’s what we
+have so we have our miles per gallon estimate is equal to now our weight is
+got the coefficient of negative eight point two one so negative well actually
+we’ve got the intercept first which is forty nine point eight forty nine point
+eight I don’t know what the units are excuse me for not putting them on here
+I’m sure we can figure it out if we really want to but plus some beta one
+which the beta one is I’m pointing at the screen like you guys can see it
+negative eight point so plus negative eight point two one
+times your weight WT plus I’m gonna go on multiple lines here and I know it’s
+messy but hopefully with my audio you can get get to the point here the HP is</p>
+<p>00:13
+negative 0.12 horsepower plus you’re gonna have a point zero two
+seven eight I’m sorry the significant digits are off the chart here times WT
+HP right and that’s a multiplication so you can actually go back to your data
+set here’s the actual equation you get used you can do the old school math way
+plug in numbers for weight horsepower and get an approximate miles per gallon
+then you can actually check here I think
+a little exercise for you which would be kind of fun if you’re nerdy like me
+where I’m trying to be anyways if you go to my data don’t look at it ahead of
+time but pick kind of a weight and a horsepower that’s available so don’t
+pick one that’s not on this chart so we have a random weight three point one
+five oh and a horsepower of ninety five do the equation that we just gave you</p>
+<p>00:14
+see how close you come to the miles per gallon because you have the true answer
+so looking at this you have the weight in the horsepower then you have the true
+answer where the miles per gallon is pretend that you don’t have the true
+answer check it and see how far off you are try a couple different ones I think
+that’s a great little assignment to prove that this equation may be
+something you’re interested in to predict the future with it right so in
+the end ultimately what we’re going to do is we’re going to chop this data set
+into at least two different parts eighty
+percent training data 20 percent pretend we never had data so the test data with
+a validation set right that’s the idea that’s what we’re getting into so you
+cut that data into pieces then you can train all day long on that eighty
+percent now you can get 100 cent accuracy on that piece of on that chunk
+of data that you using but then you then you test out that data on the test set
+or the validation set and you say oh man I was off well that means you over
+fitted the model because we don’t know the future we don’t know if the model
+truly is gonna follow that pattern you know it’s not going to go
+we’re not gonna be able to predict like that we have to just get close we don’t</p>
+<p>00:15
+want to overfit and that’s why you want to keep your variables or your models a
+little less complex than you think right now certain situations you want more
+complexity but in most cases that we’re gonna deal with anytime soon we want to
+minimize the complexity of the models not everybody has a crazy GPU to run
+these models on so again hey guys I appreciate you guys sharing this all the
+time and I appreciate you liking and I’m always appreciating everything you guys
+do and the comments are getting good oh and somebody actually I should have said
+stay tuned for this shortcut somebody commented today and I can show you maybe
+okay we’re back here so somebody commented on a previous video I was
+trying to get the full path and I appreciate this comment because it was
+super helpful all right so let’s say we’re in the downloads folder and I said
+hey how do you get this path of one of these tar.gz files so I’m glad that you
+guys came back to witness this I’m gonna</p>
+<p>00:16
+hold the shift key and right-click on it and down here you have copy as path
+click on that then if I paste it back into my R whatever and I did the
+untargeted the much easier than the way I did it in the last video however you
+still have to change these to I that /or double backslashes don’t forget that
+because that will probably cause you some pain points and I know that had
+nothing to do with this particular video but the previous one or the previous
+video that I did on another playlist this will be helpful hint so have a good
+one you [Music]End of file</p>
+<p><a href="https://www.youtube.com/watch?v=vu81gBUkiek">
+<picture><img src="https://i.ytimg.com/vi/vu81gBUkiek/maxresdefault.jpg"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-11" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+welcome back let’s get back into the a statistics mode here we can’t really
+complete regression analysis without something called interaction terms and
+I’m gonna try to explain to you what those are with good ol pen and paper so
+that being said let me break it out so interaction terms we’ve discussed a
+lot of things and and we talked about adding features to our models to make
+them predict better so let’s start off with our basic model without interaction
+terms so we have some sort of y hat is the this is the equation and I’ll walk
+you through it here in a second B sub o plus B 1 X 1 plus B 2 X 2 so again this
+is our basic form of creating some sort of model that might predict the next
+data point right so this y hat means the Y hat is it’s an estimate hey I’m</p>
+<p>00:01
+estimating the the perfect value of y if I knew everything if I was the almighty
+whatever and I knew what Y would be then I wouldn’t need a y hat so this is just
+an estimate so our B 0 is just some coefficient that says hey we’re gonna
+start on this part of the y axis right the b1 is our first coefficient that is
+it’s a parameter you set or a weight you’re setting for your X 1 variable and
+then plus your B 2 coefficient and your X 2 variable now what are the x’s now
+think about the X’s as the feature values whatever that feature might be
+this could be the weight of the car this
+could be the horsepower of the car right and now if you have horsepower and
+weight so we can actually write it that way let’s do this let’s our Y hat is now
+our miles per gallon hat right picture that is one variable equals some
+starting value no matter what it’s gonna start at this value plus your beta one</p>
+<p>00:02
+which we don’t know and our X 1 is now our what did I say wait so I will just
+call it W and then be 2 times our horsepower so for an H so now we have
+like a real sorry about the glare but we have a real situation here maybe I can
+this is tad there we go move it up so we want to estimate our miles per gallon
+because we don’t know if we put a new W and a new H in there we’ve never seen
+before we don’t know what the true miles
+per gallon is right all right and that’s important to know especially when we
+start validating these predictions that we have now what the computer is gonna
+do and what regression does it’s gonna estimate these values the b1 the b0 and
+the B - how can you adjust all of those to get the best miles per gallon for all
+of the trainings it’s gonna base it off the training data so the data that you
+do have it’s going to say how can I reduce the amount of errors we’ve talked
+about this throughout some previous tutorials how do you reduce the error
+and that’s what we’re doing here right but now we don’t have to limit ourselves</p>
+<p>00:03
+to this particular linear equation we keep calling it linear models and it is
+it’s it’s a linear model but we don’t have to use just wait and an horsepower
+we can use a combination of weight and horsepower we can use anything we want
+we could say what if a better estimate from miles per gallon so big hat is
+equal to some starting condition plus our beta 1 times weight plus our beta 2
+times horsepower plus now we have a lot of other features but we’re gonna reuse
+these two features we’re gonna say how about a beta 3 weight and horsepower
+multiplied together right we created a variable out of thin air it doesn’t
+matter because what we’re trying to do is predict miles per gallon we’re trying
+to predict that there’s no equation out there we are inventing this equation on
+the fly it does not exist right so to speak now granted with the computer you
+can actually get an exact equation if you wanted to but that would be
+overfitting your data based on the training data and we’ll get into that as</p>
+<p>00:04
+well but I don’t want you to overfit the data so we’re just going to estimate as
+best we can and we’ll get more into that when we
+talk about cross-validation and things like that but I just wanted to show you
+this equation adding I know it’s I know it’s a little Glary but you can see that
+bottom equation here miles per gallon equals to some starting coefficient
+value plus some weight times the weight plus some weight times the horsepower
+plus some other way times weight and horsepower in other words weight and
+horsepower may have an interaction that they actually depend on each other a
+little bit right I’m excused my terminology I might be off with that
+word depends so but weight and horsepower together combined could have
+an effect let me erase this and show you
+one more one more little thing I’ll give you the examples that they always give
+when you’re trying to look this stuff up is people that are on a diet so if
+you’re on a diet you have two different food diets right so we can say food one</p>
+<p>00:05
+food one and I’m gonna put it into a table here and food two right now this
+might be well this is diet food one diet food - they’re both diets we don’t have
+an on diet group and now we have males yeah we have males and we have females
+on this particular diet and then we have you know did it work or did it not work
+right or whatever the numbers are for that particular table right for males if
+you just used males you’d end up with some coefficient so let’s not make this
+a binary here so food one and male you might have had some sort of beta value
+that’s different than the beta two for females if you separated the equations
+out the same thing for it’s probably not
+a good idea to use the beta for all four but they’re there for different beta
+values but when you add them together on the same set of data you don’t really</p>
+<p>00:06
+see male and female separately right they’re combined in the data so if you
+ignore male and female you would only have two betas not four so I think maybe
+that’ll help explain it there’s not four betas there’s only two but we can look
+at it as well what if there were four right we don’t know and that’s what
+interaction is going to help us determine is hey is it could it be
+possible that we can have a really predictable equation with just males and
+maybe not so good female so if we separated out maybe we can get some good
+male predictions right but maybe together they are actually better
+combined we don’t know we don’t know there’s a lot to learn about interaction
+and it’s actually gets pretty a little bit more complex than that you
+know they talk about interacting graphs where you have like the male and the
+female and if they cross at some point they would they would have interaction
+but if they never cross in their parallel then they don’t have any
+interaction but again if you’re doing some predictions now this is pretty high</p>
+<p>00:07
+level this is pretty high level if they were kind of parallel lines for the male
+and the female they’re parallel you know if you’re gonna predict something it’s
+always going to try to predict sort of in the middle and that’s not good for
+male or female so it’s nice to know that
+if there’s an interaction if there is an interaction that we can use it to help
+our model become better more to come on that as we go but I wanted to give you
+like the mathematics sort of behind it at least the equation remember the Y hat
+is equal to some starting coefficient value plus another coefficient for your
+first feature which we called the weight plus a coefficient for our second
+feature in third and fourth in fact you can get some very high order features
+you can do wait times for power at times quarter second mile you can get very
+complex but again remember we don’t want complex equations because they’re very
+hard to use in real life the computational power and they may not be
+that that accurate right you might add features and your accuracy doesn’t go up</p>
+<p>00:08
+much but you added a lot of complexity right we don’t want to do that we want
+to keep the complexity to a minimum let me see if I can remember how to get rid
+of that boom okay so now let’s just go ahead and do this real quick in our
+and we’ll go from there so open up your are get a script going and let’s just
+jump right in with the old favorite data set I’m gonna say my data my data is
+equal to the empty cars alright so let’s load that up into
+memory into our environment you see my data over here 32 observations of 11
+variables ok so remember how to create linear models it’s been a minute so
+let’s just do model 1 is equal to LM for linear model and we’re gonna say miles
+per gallon we want to know miles per gallon is a is explained by and we’re</p>
+<p>00:09
+gonna say I think I used weight first so weight plus horsepower right and the
+data is equal to my data so we got that satisfied let’s just run that model and
+do a quick summary stats on that so model 1 boom you can see down below that
+we have and we’re not gonna look at all these stats we’re just gonna look at the
+weight and the horsepower here yeah here and here and you have the P values that
+are actually significant so point 0 1 and this one’s very small they’re both
+very small so the bulk P values are valid so weight and horsepower are both
+significant in this equation alright but the other thing you want to look at is
+the adjusted R squared remember the difference between R squared and
+adjusted R squared is digested R squared takes into account multiple parameters
+if you add features to your model you actually could be hurt in your model and
+that’s it takes care of that for you so look at this R squared value the
+adjusted r-square 0.8 1 for 8 they remember that now I said we can use a</p>
+<p>00:10
+horsepower x weight and get a new model so let’s just create model to below that
+so we’ll do model two and we’ll just compare them is a linear model I want to
+know miles per gallon explained by I’m sorry that little thing pops up by
+weight and horsepower but there’s a little shortcut to add weight horsepower
+and wait times horsepower so we can do weight actually time Swiss power that
+does not mean multiply that means inside this function it has a
+different meaning it means weight is a feature horsepower is a feature and
+weight time suppose power is going to be a feature and I’ll show you that in a
+second too so let’s run that and we have our summary of model one we could do
+summary of model two here command enter and that error oh I forgot to add the
+data so data equals my data as well boom run that again I’ll run model one and</p>
+<p>00:11
+model two and let’s take a quick look so model - we just ran second and look at
+the adjusted r-squared value 0.87 so it’s higher you’d expect the higher
+r-squared as you add as you as you add parameters parameters the wrong term
+features I’m gonna get that mixed up a few times but if you add features your
+are your multiple r-squared will increase but that’s not a good indicator
+that your model is actually getting better and more on that later as well
+look up here you have your intercept that’s that’d be zero that’d be not that
+I keep talking about and you have your weight and you have your HP and you have
+your weight : HP and that : actually means it’s a variable called weight
+horsepower so it’s weight x horsepower and so you have all of those people use
+which they all show that they could be significant right because they’re all
+below point zero five finally let’s just get that equation of that model we’re
+not gonna do this for all of them but the coefficient of model - we can</p>
+<p>00:12
+actually get those by doing qoph cof model - and we have the intercept the
+weight the horsepower and the weight horsepower those coefficients remember
+so let me jump back to this you know let’s plug those in and that’s what we
+have so we have our miles per gallon estimate is equal to now our weight is
+got the coefficient of negative eight point two one so negative well actually
+we’ve got the intercept first which is forty nine point eight forty nine point
+eight I don’t know what the units are excuse me for not putting them on here
+I’m sure we can figure it out if we really want to but plus some beta one
+which the beta one is I’m pointing at the screen like you guys can see it
+negative eight point so plus negative eight point two one
+times your weight WT plus I’m gonna go on multiple lines here and I know it’s
+messy but hopefully with my audio you can get get to the point here the HP is</p>
+<p>00:13
+negative 0.12 horsepower plus you’re gonna have a point zero two
+seven eight I’m sorry the significant digits are off the chart here times WT
+HP right and that’s a multiplication so you can actually go back to your data
+set here’s the actual equation you get used you can do the old school math way
+plug in numbers for weight horsepower and get an approximate miles per gallon
+then you can actually check here I think
+a little exercise for you which would be kind of fun if you’re nerdy like me
+where I’m trying to be anyways if you go to my data don’t look at it ahead of
+time but pick kind of a weight and a horsepower that’s available so don’t
+pick one that’s not on this chart so we have a random weight three point one
+five oh and a horsepower of ninety five do the equation that we just gave you</p>
+<p>00:14
+see how close you come to the miles per gallon because you have the true answer
+so looking at this you have the weight in the horsepower then you have the true
+answer where the miles per gallon is pretend that you don’t have the true
+answer check it and see how far off you are try a couple different ones I think
+that’s a great little assignment to prove that this equation may be
+something you’re interested in to predict the future with it right so in
+the end ultimately what we’re going to do is we’re going to chop this data set
+into at least two different parts eighty
+percent training data 20 percent pretend we never had data so the test data with
+a validation set right that’s the idea that’s what we’re getting into so you
+cut that data into pieces then you can train all day long on that eighty
+percent now you can get 100 cent accuracy on that piece of on that chunk
+of data that you using but then you then you test out that data on the test set
+or the validation set and you say oh man I was off well that means you over
+fitted the model because we don’t know the future we don’t know if the model
+truly is gonna follow that pattern you know it’s not going to go
+we’re not gonna be able to predict like that we have to just get close we don’t</p>
+<p>00:15
+want to overfit and that’s why you want to keep your variables or your models a
+little less complex than you think right now certain situations you want more
+complexity but in most cases that we’re gonna deal with anytime soon we want to
+minimize the complexity of the models not everybody has a crazy GPU to run
+these models on so again hey guys I appreciate you guys sharing this all the
+time and I appreciate you liking and I’m always appreciating everything you guys
+do and the comments are getting good oh and somebody actually I should have said
+stay tuned for this shortcut somebody commented today and I can show you maybe
+okay we’re back here so somebody commented on a previous video I was
+trying to get the full path and I appreciate this comment because it was
+super helpful all right so let’s say we’re in the downloads folder and I said
+hey how do you get this path of one of these tar.gz files so I’m glad that you
+guys came back to witness this I’m gonna</p>
+<p>00:16
+hold the shift key and right-click on it and down here you have copy as path
+click on that then if I paste it back into my R whatever and I did the
+untargeted the much easier than the way I did it in the last video however you
+still have to change these to I that /or double backslashes don’t forget that
+because that will probably cause you some pain points and I know that had
+nothing to do with this particular video but the previous one or the previous
+video that I did on another playlist this will be helpful hint so have a good
+one you [Music]End of file</p>
+<p><a href="https://www.youtube.com/watch?v=vu81gBUkiek">
+<picture><img src="https://i.ytimg.com/vi/vu81gBUkiek/maxresdefault.jpg"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-12" class="section level2">
 <h2>Click the image to play video.</h2>
 <p>00:00
 welcome back let’s get back into the a statistics mode here we can’t really

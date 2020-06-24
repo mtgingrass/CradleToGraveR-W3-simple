@@ -4,8 +4,7 @@ date: 2020-02-06
 categories:
   - Random R
 tags:
-  - Test
-  - Test2
+  - No Tags
 
 type: post
 w3codecolor: false

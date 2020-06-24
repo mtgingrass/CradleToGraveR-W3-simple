@@ -4,8 +4,7 @@ date: 2019-09-16
 categories:
   - Absolute Beginners Guide
 tags:
-  - Test
-  - Test2
+  - ggplot
 
 type: post
 w3codecolor: false
@@ -19,6 +18,1862 @@ thumbnail: https://i.ytimg.com/vi_webp/gCAwHbmOqCo/maxresdefault.webp
 <picture><img src="https://i.ytimg.com/vi_webp/gCAwHbmOqCo/maxresdefault.webp"></picture>
 </a></p>
 <div id="click-the-image-to-play-video." class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+today we’re going to learn about plotting so let’s go to packages and
+install a package and we’re going to type in ggplot2 and we’re going to get
+that from the crown library if you haven’t already installed it go ahead
+and install that and what ggplot is it’s a very elegant and aesthetically
+pleasing way to graph all kinds of plots and a lot of people refer to it as the
+grammar of graphics because you can basically do anything with these with
+ggplot it’s super powerful and you’re gonna see why here in just a moment so
+now that it’s downloaded and installed let’s load the library which is you plot
+to and we’re gonna play with a dataset called the diamond data set so let’s
+take a look at that first let’s do a view and just type in diamond Oh</p>
+<p>00:01
+diamonds okay so here we have the caret the cut color clarity is etc etc and we
+have a bunch of data on here I’m gonna look at mostly maybe price and the carat
+just whatever we really feel like doing it we’re going to play around with this
+stuff so I’m not sure what all this stuff means again how do you find more
+data about it you can do question mark and then type in diamonds because
+diamonds is another one of those data sets that comes with it so here we go
+here’s all the description of the data set
+looks like fifty three thousand rows and ten variables cool how else could we
+have done that we could have done I mentioned Jim there we go fifty-three
+thousand nine hundred forty by ten cool alright let’s play with ggplot so the
+first thing you want to do is you want to bring in a data frame diamonds data
+frame again when I’m going to be late in
+this we’re not gonna change it so we can we don’t have to store it in our RAM in</p>
+<p>00:02
+our environment our environment is empty because we’re just gonna hit command
+editor on this and you’re gonna see that nothing happens so it’s it’s a function
+called ggplot as you can see over here on the right hand side where it says
+plots it’s just a blank slate so we’ve we’ve told you do plots hey get ready
+we’re gonna use you but we do do anything with it so what we have to
+do is we have to set up this plot and get get it ready get it going
+we need to supply some more information so let’s put some aesthetics on it so
+inside of the parameter of Juji plot the second parameter here we could put an
+aesthetic AES and as you can see here it says aesthetic mappings describe how
+variables in the data are mapped to visual properties aesthetics of geum’s
+jia mystic a layer like what geometry is at a point at a bar graph what is it
+let’s start off with just doing something simple here and saying X is
+equal to the caret because that was one of the features and we’ll say Y is equal</p>
+<p>00:03
+to the price and now let’s hit enter as you can see nothing plots but we did get
+a couple things here we’ve got a grid we’ve got carat across the x-axis is 0
+through 5 and we have price along the y axis or the vertical axis so it didn’t
+know what the plot because we can tell it what kind of plot so in order to do
+that we could add layers or add a geometry so we can add just like math we
+can hit the plus button and I’m gonna put this on the next line because
+remember white space doesn’t really matter so much I’m gonna add a we want a
+scatterplot so I’m gonna add something called the Jian GE OM underscore point
+and just like that open and close parentheses and we’re gonna hit command
+enter on that and now let’s see if we get an actual plot now there’s 53,000
+rows here we go so we said X is 2 carat and y is the</p>
+<p>00:04
+price and we have a scatter plot pretty ugly let’s just say that so let’s add
+another aesthetic let’s add an aesthetic called color and will will relate the
+color to something called the cut if you remember let’s go back and view this
+view diamonds the cut is either ideal premium good very good
+so aced on the cut let’s see if there’s any any places within this scatterplot
+that a certain cut might be you say more expensive than another cut let’s just
+try that out so in order to do that we have aesthetics that says x equals caret
+y equals price but there’s also one called color we can add we say color is
+equal to and cut and if you’re not sure what the features are you can always do
+diamonds and then hit the dollar sign and then do cut and it should do the</p>
+<p>00:05
+same thing it’s just a little Messier when you’re typing it all out here we go
+we’ve got some cool plot here let’s zoom
+in and take a better look here we go and it obviously comes with a legend over
+here fair good very good ideal so we have carat price and it doesn’t really
+look like this a lot of correlation that I can see maybe maybe the yellows are a
+little bit to the left and upper part I’m not sure doesn’t know I can’t see
+anything in there so that’s the idea between I plot in so we can plot various
+things X doesn’t have to be carried and Y doesn’t have to be priced but if you
+look at it again let’s view this again both care in price to both numerix so we
+have carry and price we also have XY and Z which I’m sure has to do something
+with the cut we have table we have depth
+let’s do color actual color as a feature and see if we get anything good out of</p>
+<p>00:06
+that so instead of the color actually be
+in the cut we’re going to make the color the actual color feature and see if
+anything pops up and notice that color is a move that looks pretty cool it’s a
+factor it’s not a digit it’s a categorical variable what I meant to say
+so there we go and that’s how you do a basic plot now it’s rerender and every
+time I change the size here so it does take just a moment to re-render
+and now you can see some pretty cool things here
+it looks like the darker blues are always on the top left some yellows are
+kind of you know they’re all kind of in line sort of almost like a a curve can
+fit that almost and we’ll get into curve fit in here in the next lesson let’s
+pick a different data set remember we learned about the iris data set so let’s</p>
+<p>00:07
+let’s plot the iris data set so remember if you just plot like this could you
+plot it says hey get ready here’s a blank slate but I’m not gonna do
+anything with it by the way your aesthetics does not have to be within
+your ggplot function you can actually add that into your geometry function so
+another geometry we wanted to do geom we want to do another scatter plot jam
+point let’s put our aesthetics inside of there x equals and I’m not sure what we
+have for choices here but we’ll do let’s do sepal length for X comma we’ll do y
+is equal to remember you could type an iris a dollar sign to get the things
+here let’s see if lengthen width have any correlation or draws something cool
+this is just gonna be black and white oh it looks like a bunch of just scatter
+plot that’s one of this and let’s just go ahead and add a color for fun so
+color equals and then do this and let’s make the color the actual species</p>
+<p>00:08
+because that’s most likely a categorical variable obviously and here we go
+there we go so now what do we see here we’ve got some sort of cluster in here
+all that’s red and then you have this little outlier red one here you’ve got
+the green and blue a little bit mixed up so pretty cool and so the species type
+is on the legend here and we have our axes here and the next lesson I’ll show
+you how to change some of the axes and make them look more pretty aesthetically
+pleasing that’s it play around with that
+and I change up the different parameters and there’s many many many tweaks to
+this but this will get you started on plot inEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=gCAwHbmOqCo">
+<picture><img src="https://i.ytimg.com/vi_webp/gCAwHbmOqCo/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-1" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+today we’re going to learn about plotting so let’s go to packages and
+install a package and we’re going to type in ggplot2 and we’re going to get
+that from the crown library if you haven’t already installed it go ahead
+and install that and what ggplot is it’s a very elegant and aesthetically
+pleasing way to graph all kinds of plots and a lot of people refer to it as the
+grammar of graphics because you can basically do anything with these with
+ggplot it’s super powerful and you’re gonna see why here in just a moment so
+now that it’s downloaded and installed let’s load the library which is you plot
+to and we’re gonna play with a dataset called the diamond data set so let’s
+take a look at that first let’s do a view and just type in diamond Oh</p>
+<p>00:01
+diamonds okay so here we have the caret the cut color clarity is etc etc and we
+have a bunch of data on here I’m gonna look at mostly maybe price and the carat
+just whatever we really feel like doing it we’re going to play around with this
+stuff so I’m not sure what all this stuff means again how do you find more
+data about it you can do question mark and then type in diamonds because
+diamonds is another one of those data sets that comes with it so here we go
+here’s all the description of the data set
+looks like fifty three thousand rows and ten variables cool how else could we
+have done that we could have done I mentioned Jim there we go fifty-three
+thousand nine hundred forty by ten cool alright let’s play with ggplot so the
+first thing you want to do is you want to bring in a data frame diamonds data
+frame again when I’m going to be late in
+this we’re not gonna change it so we can we don’t have to store it in our RAM in</p>
+<p>00:02
+our environment our environment is empty because we’re just gonna hit command
+editor on this and you’re gonna see that nothing happens so it’s it’s a function
+called ggplot as you can see over here on the right hand side where it says
+plots it’s just a blank slate so we’ve we’ve told you do plots hey get ready
+we’re gonna use you but we do do anything with it so what we have to
+do is we have to set up this plot and get get it ready get it going
+we need to supply some more information so let’s put some aesthetics on it so
+inside of the parameter of Juji plot the second parameter here we could put an
+aesthetic AES and as you can see here it says aesthetic mappings describe how
+variables in the data are mapped to visual properties aesthetics of geum’s
+jia mystic a layer like what geometry is at a point at a bar graph what is it
+let’s start off with just doing something simple here and saying X is
+equal to the caret because that was one of the features and we’ll say Y is equal</p>
+<p>00:03
+to the price and now let’s hit enter as you can see nothing plots but we did get
+a couple things here we’ve got a grid we’ve got carat across the x-axis is 0
+through 5 and we have price along the y axis or the vertical axis so it didn’t
+know what the plot because we can tell it what kind of plot so in order to do
+that we could add layers or add a geometry so we can add just like math we
+can hit the plus button and I’m gonna put this on the next line because
+remember white space doesn’t really matter so much I’m gonna add a we want a
+scatterplot so I’m gonna add something called the Jian GE OM underscore point
+and just like that open and close parentheses and we’re gonna hit command
+enter on that and now let’s see if we get an actual plot now there’s 53,000
+rows here we go so we said X is 2 carat and y is the</p>
+<p>00:04
+price and we have a scatter plot pretty ugly let’s just say that so let’s add
+another aesthetic let’s add an aesthetic called color and will will relate the
+color to something called the cut if you remember let’s go back and view this
+view diamonds the cut is either ideal premium good very good
+so aced on the cut let’s see if there’s any any places within this scatterplot
+that a certain cut might be you say more expensive than another cut let’s just
+try that out so in order to do that we have aesthetics that says x equals caret
+y equals price but there’s also one called color we can add we say color is
+equal to and cut and if you’re not sure what the features are you can always do
+diamonds and then hit the dollar sign and then do cut and it should do the</p>
+<p>00:05
+same thing it’s just a little Messier when you’re typing it all out here we go
+we’ve got some cool plot here let’s zoom
+in and take a better look here we go and it obviously comes with a legend over
+here fair good very good ideal so we have carat price and it doesn’t really
+look like this a lot of correlation that I can see maybe maybe the yellows are a
+little bit to the left and upper part I’m not sure doesn’t know I can’t see
+anything in there so that’s the idea between I plot in so we can plot various
+things X doesn’t have to be carried and Y doesn’t have to be priced but if you
+look at it again let’s view this again both care in price to both numerix so we
+have carry and price we also have XY and Z which I’m sure has to do something
+with the cut we have table we have depth
+let’s do color actual color as a feature and see if we get anything good out of</p>
+<p>00:06
+that so instead of the color actually be
+in the cut we’re going to make the color the actual color feature and see if
+anything pops up and notice that color is a move that looks pretty cool it’s a
+factor it’s not a digit it’s a categorical variable what I meant to say
+so there we go and that’s how you do a basic plot now it’s rerender and every
+time I change the size here so it does take just a moment to re-render
+and now you can see some pretty cool things here
+it looks like the darker blues are always on the top left some yellows are
+kind of you know they’re all kind of in line sort of almost like a a curve can
+fit that almost and we’ll get into curve fit in here in the next lesson let’s
+pick a different data set remember we learned about the iris data set so let’s</p>
+<p>00:07
+let’s plot the iris data set so remember if you just plot like this could you
+plot it says hey get ready here’s a blank slate but I’m not gonna do
+anything with it by the way your aesthetics does not have to be within
+your ggplot function you can actually add that into your geometry function so
+another geometry we wanted to do geom we want to do another scatter plot jam
+point let’s put our aesthetics inside of there x equals and I’m not sure what we
+have for choices here but we’ll do let’s do sepal length for X comma we’ll do y
+is equal to remember you could type an iris a dollar sign to get the things
+here let’s see if lengthen width have any correlation or draws something cool
+this is just gonna be black and white oh it looks like a bunch of just scatter
+plot that’s one of this and let’s just go ahead and add a color for fun so
+color equals and then do this and let’s make the color the actual species</p>
+<p>00:08
+because that’s most likely a categorical variable obviously and here we go
+there we go so now what do we see here we’ve got some sort of cluster in here
+all that’s red and then you have this little outlier red one here you’ve got
+the green and blue a little bit mixed up so pretty cool and so the species type
+is on the legend here and we have our axes here and the next lesson I’ll show
+you how to change some of the axes and make them look more pretty aesthetically
+pleasing that’s it play around with that
+and I change up the different parameters and there’s many many many tweaks to
+this but this will get you started on plot inEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=gCAwHbmOqCo">
+<picture><img src="https://i.ytimg.com/vi_webp/gCAwHbmOqCo/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-2" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+today we’re going to learn about plotting so let’s go to packages and
+install a package and we’re going to type in ggplot2 and we’re going to get
+that from the crown library if you haven’t already installed it go ahead
+and install that and what ggplot is it’s a very elegant and aesthetically
+pleasing way to graph all kinds of plots and a lot of people refer to it as the
+grammar of graphics because you can basically do anything with these with
+ggplot it’s super powerful and you’re gonna see why here in just a moment so
+now that it’s downloaded and installed let’s load the library which is you plot
+to and we’re gonna play with a dataset called the diamond data set so let’s
+take a look at that first let’s do a view and just type in diamond Oh</p>
+<p>00:01
+diamonds okay so here we have the caret the cut color clarity is etc etc and we
+have a bunch of data on here I’m gonna look at mostly maybe price and the carat
+just whatever we really feel like doing it we’re going to play around with this
+stuff so I’m not sure what all this stuff means again how do you find more
+data about it you can do question mark and then type in diamonds because
+diamonds is another one of those data sets that comes with it so here we go
+here’s all the description of the data set
+looks like fifty three thousand rows and ten variables cool how else could we
+have done that we could have done I mentioned Jim there we go fifty-three
+thousand nine hundred forty by ten cool alright let’s play with ggplot so the
+first thing you want to do is you want to bring in a data frame diamonds data
+frame again when I’m going to be late in
+this we’re not gonna change it so we can we don’t have to store it in our RAM in</p>
+<p>00:02
+our environment our environment is empty because we’re just gonna hit command
+editor on this and you’re gonna see that nothing happens so it’s it’s a function
+called ggplot as you can see over here on the right hand side where it says
+plots it’s just a blank slate so we’ve we’ve told you do plots hey get ready
+we’re gonna use you but we do do anything with it so what we have to
+do is we have to set up this plot and get get it ready get it going
+we need to supply some more information so let’s put some aesthetics on it so
+inside of the parameter of Juji plot the second parameter here we could put an
+aesthetic AES and as you can see here it says aesthetic mappings describe how
+variables in the data are mapped to visual properties aesthetics of geum’s
+jia mystic a layer like what geometry is at a point at a bar graph what is it
+let’s start off with just doing something simple here and saying X is
+equal to the caret because that was one of the features and we’ll say Y is equal</p>
+<p>00:03
+to the price and now let’s hit enter as you can see nothing plots but we did get
+a couple things here we’ve got a grid we’ve got carat across the x-axis is 0
+through 5 and we have price along the y axis or the vertical axis so it didn’t
+know what the plot because we can tell it what kind of plot so in order to do
+that we could add layers or add a geometry so we can add just like math we
+can hit the plus button and I’m gonna put this on the next line because
+remember white space doesn’t really matter so much I’m gonna add a we want a
+scatterplot so I’m gonna add something called the Jian GE OM underscore point
+and just like that open and close parentheses and we’re gonna hit command
+enter on that and now let’s see if we get an actual plot now there’s 53,000
+rows here we go so we said X is 2 carat and y is the</p>
+<p>00:04
+price and we have a scatter plot pretty ugly let’s just say that so let’s add
+another aesthetic let’s add an aesthetic called color and will will relate the
+color to something called the cut if you remember let’s go back and view this
+view diamonds the cut is either ideal premium good very good
+so aced on the cut let’s see if there’s any any places within this scatterplot
+that a certain cut might be you say more expensive than another cut let’s just
+try that out so in order to do that we have aesthetics that says x equals caret
+y equals price but there’s also one called color we can add we say color is
+equal to and cut and if you’re not sure what the features are you can always do
+diamonds and then hit the dollar sign and then do cut and it should do the</p>
+<p>00:05
+same thing it’s just a little Messier when you’re typing it all out here we go
+we’ve got some cool plot here let’s zoom
+in and take a better look here we go and it obviously comes with a legend over
+here fair good very good ideal so we have carat price and it doesn’t really
+look like this a lot of correlation that I can see maybe maybe the yellows are a
+little bit to the left and upper part I’m not sure doesn’t know I can’t see
+anything in there so that’s the idea between I plot in so we can plot various
+things X doesn’t have to be carried and Y doesn’t have to be priced but if you
+look at it again let’s view this again both care in price to both numerix so we
+have carry and price we also have XY and Z which I’m sure has to do something
+with the cut we have table we have depth
+let’s do color actual color as a feature and see if we get anything good out of</p>
+<p>00:06
+that so instead of the color actually be
+in the cut we’re going to make the color the actual color feature and see if
+anything pops up and notice that color is a move that looks pretty cool it’s a
+factor it’s not a digit it’s a categorical variable what I meant to say
+so there we go and that’s how you do a basic plot now it’s rerender and every
+time I change the size here so it does take just a moment to re-render
+and now you can see some pretty cool things here
+it looks like the darker blues are always on the top left some yellows are
+kind of you know they’re all kind of in line sort of almost like a a curve can
+fit that almost and we’ll get into curve fit in here in the next lesson let’s
+pick a different data set remember we learned about the iris data set so let’s</p>
+<p>00:07
+let’s plot the iris data set so remember if you just plot like this could you
+plot it says hey get ready here’s a blank slate but I’m not gonna do
+anything with it by the way your aesthetics does not have to be within
+your ggplot function you can actually add that into your geometry function so
+another geometry we wanted to do geom we want to do another scatter plot jam
+point let’s put our aesthetics inside of there x equals and I’m not sure what we
+have for choices here but we’ll do let’s do sepal length for X comma we’ll do y
+is equal to remember you could type an iris a dollar sign to get the things
+here let’s see if lengthen width have any correlation or draws something cool
+this is just gonna be black and white oh it looks like a bunch of just scatter
+plot that’s one of this and let’s just go ahead and add a color for fun so
+color equals and then do this and let’s make the color the actual species</p>
+<p>00:08
+because that’s most likely a categorical variable obviously and here we go
+there we go so now what do we see here we’ve got some sort of cluster in here
+all that’s red and then you have this little outlier red one here you’ve got
+the green and blue a little bit mixed up so pretty cool and so the species type
+is on the legend here and we have our axes here and the next lesson I’ll show
+you how to change some of the axes and make them look more pretty aesthetically
+pleasing that’s it play around with that
+and I change up the different parameters and there’s many many many tweaks to
+this but this will get you started on plot inEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=gCAwHbmOqCo">
+<picture><img src="https://i.ytimg.com/vi_webp/gCAwHbmOqCo/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-3" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+today we’re going to learn about plotting so let’s go to packages and
+install a package and we’re going to type in ggplot2 and we’re going to get
+that from the crown library if you haven’t already installed it go ahead
+and install that and what ggplot is it’s a very elegant and aesthetically
+pleasing way to graph all kinds of plots and a lot of people refer to it as the
+grammar of graphics because you can basically do anything with these with
+ggplot it’s super powerful and you’re gonna see why here in just a moment so
+now that it’s downloaded and installed let’s load the library which is you plot
+to and we’re gonna play with a dataset called the diamond data set so let’s
+take a look at that first let’s do a view and just type in diamond Oh</p>
+<p>00:01
+diamonds okay so here we have the caret the cut color clarity is etc etc and we
+have a bunch of data on here I’m gonna look at mostly maybe price and the carat
+just whatever we really feel like doing it we’re going to play around with this
+stuff so I’m not sure what all this stuff means again how do you find more
+data about it you can do question mark and then type in diamonds because
+diamonds is another one of those data sets that comes with it so here we go
+here’s all the description of the data set
+looks like fifty three thousand rows and ten variables cool how else could we
+have done that we could have done I mentioned Jim there we go fifty-three
+thousand nine hundred forty by ten cool alright let’s play with ggplot so the
+first thing you want to do is you want to bring in a data frame diamonds data
+frame again when I’m going to be late in
+this we’re not gonna change it so we can we don’t have to store it in our RAM in</p>
+<p>00:02
+our environment our environment is empty because we’re just gonna hit command
+editor on this and you’re gonna see that nothing happens so it’s it’s a function
+called ggplot as you can see over here on the right hand side where it says
+plots it’s just a blank slate so we’ve we’ve told you do plots hey get ready
+we’re gonna use you but we do do anything with it so what we have to
+do is we have to set up this plot and get get it ready get it going
+we need to supply some more information so let’s put some aesthetics on it so
+inside of the parameter of Juji plot the second parameter here we could put an
+aesthetic AES and as you can see here it says aesthetic mappings describe how
+variables in the data are mapped to visual properties aesthetics of geum’s
+jia mystic a layer like what geometry is at a point at a bar graph what is it
+let’s start off with just doing something simple here and saying X is
+equal to the caret because that was one of the features and we’ll say Y is equal</p>
+<p>00:03
+to the price and now let’s hit enter as you can see nothing plots but we did get
+a couple things here we’ve got a grid we’ve got carat across the x-axis is 0
+through 5 and we have price along the y axis or the vertical axis so it didn’t
+know what the plot because we can tell it what kind of plot so in order to do
+that we could add layers or add a geometry so we can add just like math we
+can hit the plus button and I’m gonna put this on the next line because
+remember white space doesn’t really matter so much I’m gonna add a we want a
+scatterplot so I’m gonna add something called the Jian GE OM underscore point
+and just like that open and close parentheses and we’re gonna hit command
+enter on that and now let’s see if we get an actual plot now there’s 53,000
+rows here we go so we said X is 2 carat and y is the</p>
+<p>00:04
+price and we have a scatter plot pretty ugly let’s just say that so let’s add
+another aesthetic let’s add an aesthetic called color and will will relate the
+color to something called the cut if you remember let’s go back and view this
+view diamonds the cut is either ideal premium good very good
+so aced on the cut let’s see if there’s any any places within this scatterplot
+that a certain cut might be you say more expensive than another cut let’s just
+try that out so in order to do that we have aesthetics that says x equals caret
+y equals price but there’s also one called color we can add we say color is
+equal to and cut and if you’re not sure what the features are you can always do
+diamonds and then hit the dollar sign and then do cut and it should do the</p>
+<p>00:05
+same thing it’s just a little Messier when you’re typing it all out here we go
+we’ve got some cool plot here let’s zoom
+in and take a better look here we go and it obviously comes with a legend over
+here fair good very good ideal so we have carat price and it doesn’t really
+look like this a lot of correlation that I can see maybe maybe the yellows are a
+little bit to the left and upper part I’m not sure doesn’t know I can’t see
+anything in there so that’s the idea between I plot in so we can plot various
+things X doesn’t have to be carried and Y doesn’t have to be priced but if you
+look at it again let’s view this again both care in price to both numerix so we
+have carry and price we also have XY and Z which I’m sure has to do something
+with the cut we have table we have depth
+let’s do color actual color as a feature and see if we get anything good out of</p>
+<p>00:06
+that so instead of the color actually be
+in the cut we’re going to make the color the actual color feature and see if
+anything pops up and notice that color is a move that looks pretty cool it’s a
+factor it’s not a digit it’s a categorical variable what I meant to say
+so there we go and that’s how you do a basic plot now it’s rerender and every
+time I change the size here so it does take just a moment to re-render
+and now you can see some pretty cool things here
+it looks like the darker blues are always on the top left some yellows are
+kind of you know they’re all kind of in line sort of almost like a a curve can
+fit that almost and we’ll get into curve fit in here in the next lesson let’s
+pick a different data set remember we learned about the iris data set so let’s</p>
+<p>00:07
+let’s plot the iris data set so remember if you just plot like this could you
+plot it says hey get ready here’s a blank slate but I’m not gonna do
+anything with it by the way your aesthetics does not have to be within
+your ggplot function you can actually add that into your geometry function so
+another geometry we wanted to do geom we want to do another scatter plot jam
+point let’s put our aesthetics inside of there x equals and I’m not sure what we
+have for choices here but we’ll do let’s do sepal length for X comma we’ll do y
+is equal to remember you could type an iris a dollar sign to get the things
+here let’s see if lengthen width have any correlation or draws something cool
+this is just gonna be black and white oh it looks like a bunch of just scatter
+plot that’s one of this and let’s just go ahead and add a color for fun so
+color equals and then do this and let’s make the color the actual species</p>
+<p>00:08
+because that’s most likely a categorical variable obviously and here we go
+there we go so now what do we see here we’ve got some sort of cluster in here
+all that’s red and then you have this little outlier red one here you’ve got
+the green and blue a little bit mixed up so pretty cool and so the species type
+is on the legend here and we have our axes here and the next lesson I’ll show
+you how to change some of the axes and make them look more pretty aesthetically
+pleasing that’s it play around with that
+and I change up the different parameters and there’s many many many tweaks to
+this but this will get you started on plot inEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=gCAwHbmOqCo">
+<picture><img src="https://i.ytimg.com/vi_webp/gCAwHbmOqCo/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-4" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+today we’re going to learn about plotting so let’s go to packages and
+install a package and we’re going to type in ggplot2 and we’re going to get
+that from the crown library if you haven’t already installed it go ahead
+and install that and what ggplot is it’s a very elegant and aesthetically
+pleasing way to graph all kinds of plots and a lot of people refer to it as the
+grammar of graphics because you can basically do anything with these with
+ggplot it’s super powerful and you’re gonna see why here in just a moment so
+now that it’s downloaded and installed let’s load the library which is you plot
+to and we’re gonna play with a dataset called the diamond data set so let’s
+take a look at that first let’s do a view and just type in diamond Oh</p>
+<p>00:01
+diamonds okay so here we have the caret the cut color clarity is etc etc and we
+have a bunch of data on here I’m gonna look at mostly maybe price and the carat
+just whatever we really feel like doing it we’re going to play around with this
+stuff so I’m not sure what all this stuff means again how do you find more
+data about it you can do question mark and then type in diamonds because
+diamonds is another one of those data sets that comes with it so here we go
+here’s all the description of the data set
+looks like fifty three thousand rows and ten variables cool how else could we
+have done that we could have done I mentioned Jim there we go fifty-three
+thousand nine hundred forty by ten cool alright let’s play with ggplot so the
+first thing you want to do is you want to bring in a data frame diamonds data
+frame again when I’m going to be late in
+this we’re not gonna change it so we can we don’t have to store it in our RAM in</p>
+<p>00:02
+our environment our environment is empty because we’re just gonna hit command
+editor on this and you’re gonna see that nothing happens so it’s it’s a function
+called ggplot as you can see over here on the right hand side where it says
+plots it’s just a blank slate so we’ve we’ve told you do plots hey get ready
+we’re gonna use you but we do do anything with it so what we have to
+do is we have to set up this plot and get get it ready get it going
+we need to supply some more information so let’s put some aesthetics on it so
+inside of the parameter of Juji plot the second parameter here we could put an
+aesthetic AES and as you can see here it says aesthetic mappings describe how
+variables in the data are mapped to visual properties aesthetics of geum’s
+jia mystic a layer like what geometry is at a point at a bar graph what is it
+let’s start off with just doing something simple here and saying X is
+equal to the caret because that was one of the features and we’ll say Y is equal</p>
+<p>00:03
+to the price and now let’s hit enter as you can see nothing plots but we did get
+a couple things here we’ve got a grid we’ve got carat across the x-axis is 0
+through 5 and we have price along the y axis or the vertical axis so it didn’t
+know what the plot because we can tell it what kind of plot so in order to do
+that we could add layers or add a geometry so we can add just like math we
+can hit the plus button and I’m gonna put this on the next line because
+remember white space doesn’t really matter so much I’m gonna add a we want a
+scatterplot so I’m gonna add something called the Jian GE OM underscore point
+and just like that open and close parentheses and we’re gonna hit command
+enter on that and now let’s see if we get an actual plot now there’s 53,000
+rows here we go so we said X is 2 carat and y is the</p>
+<p>00:04
+price and we have a scatter plot pretty ugly let’s just say that so let’s add
+another aesthetic let’s add an aesthetic called color and will will relate the
+color to something called the cut if you remember let’s go back and view this
+view diamonds the cut is either ideal premium good very good
+so aced on the cut let’s see if there’s any any places within this scatterplot
+that a certain cut might be you say more expensive than another cut let’s just
+try that out so in order to do that we have aesthetics that says x equals caret
+y equals price but there’s also one called color we can add we say color is
+equal to and cut and if you’re not sure what the features are you can always do
+diamonds and then hit the dollar sign and then do cut and it should do the</p>
+<p>00:05
+same thing it’s just a little Messier when you’re typing it all out here we go
+we’ve got some cool plot here let’s zoom
+in and take a better look here we go and it obviously comes with a legend over
+here fair good very good ideal so we have carat price and it doesn’t really
+look like this a lot of correlation that I can see maybe maybe the yellows are a
+little bit to the left and upper part I’m not sure doesn’t know I can’t see
+anything in there so that’s the idea between I plot in so we can plot various
+things X doesn’t have to be carried and Y doesn’t have to be priced but if you
+look at it again let’s view this again both care in price to both numerix so we
+have carry and price we also have XY and Z which I’m sure has to do something
+with the cut we have table we have depth
+let’s do color actual color as a feature and see if we get anything good out of</p>
+<p>00:06
+that so instead of the color actually be
+in the cut we’re going to make the color the actual color feature and see if
+anything pops up and notice that color is a move that looks pretty cool it’s a
+factor it’s not a digit it’s a categorical variable what I meant to say
+so there we go and that’s how you do a basic plot now it’s rerender and every
+time I change the size here so it does take just a moment to re-render
+and now you can see some pretty cool things here
+it looks like the darker blues are always on the top left some yellows are
+kind of you know they’re all kind of in line sort of almost like a a curve can
+fit that almost and we’ll get into curve fit in here in the next lesson let’s
+pick a different data set remember we learned about the iris data set so let’s</p>
+<p>00:07
+let’s plot the iris data set so remember if you just plot like this could you
+plot it says hey get ready here’s a blank slate but I’m not gonna do
+anything with it by the way your aesthetics does not have to be within
+your ggplot function you can actually add that into your geometry function so
+another geometry we wanted to do geom we want to do another scatter plot jam
+point let’s put our aesthetics inside of there x equals and I’m not sure what we
+have for choices here but we’ll do let’s do sepal length for X comma we’ll do y
+is equal to remember you could type an iris a dollar sign to get the things
+here let’s see if lengthen width have any correlation or draws something cool
+this is just gonna be black and white oh it looks like a bunch of just scatter
+plot that’s one of this and let’s just go ahead and add a color for fun so
+color equals and then do this and let’s make the color the actual species</p>
+<p>00:08
+because that’s most likely a categorical variable obviously and here we go
+there we go so now what do we see here we’ve got some sort of cluster in here
+all that’s red and then you have this little outlier red one here you’ve got
+the green and blue a little bit mixed up so pretty cool and so the species type
+is on the legend here and we have our axes here and the next lesson I’ll show
+you how to change some of the axes and make them look more pretty aesthetically
+pleasing that’s it play around with that
+and I change up the different parameters and there’s many many many tweaks to
+this but this will get you started on plot inEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=gCAwHbmOqCo">
+<picture><img src="https://i.ytimg.com/vi_webp/gCAwHbmOqCo/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-5" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+today we’re going to learn about plotting so let’s go to packages and
+install a package and we’re going to type in ggplot2 and we’re going to get
+that from the crown library if you haven’t already installed it go ahead
+and install that and what ggplot is it’s a very elegant and aesthetically
+pleasing way to graph all kinds of plots and a lot of people refer to it as the
+grammar of graphics because you can basically do anything with these with
+ggplot it’s super powerful and you’re gonna see why here in just a moment so
+now that it’s downloaded and installed let’s load the library which is you plot
+to and we’re gonna play with a dataset called the diamond data set so let’s
+take a look at that first let’s do a view and just type in diamond Oh</p>
+<p>00:01
+diamonds okay so here we have the caret the cut color clarity is etc etc and we
+have a bunch of data on here I’m gonna look at mostly maybe price and the carat
+just whatever we really feel like doing it we’re going to play around with this
+stuff so I’m not sure what all this stuff means again how do you find more
+data about it you can do question mark and then type in diamonds because
+diamonds is another one of those data sets that comes with it so here we go
+here’s all the description of the data set
+looks like fifty three thousand rows and ten variables cool how else could we
+have done that we could have done I mentioned Jim there we go fifty-three
+thousand nine hundred forty by ten cool alright let’s play with ggplot so the
+first thing you want to do is you want to bring in a data frame diamonds data
+frame again when I’m going to be late in
+this we’re not gonna change it so we can we don’t have to store it in our RAM in</p>
+<p>00:02
+our environment our environment is empty because we’re just gonna hit command
+editor on this and you’re gonna see that nothing happens so it’s it’s a function
+called ggplot as you can see over here on the right hand side where it says
+plots it’s just a blank slate so we’ve we’ve told you do plots hey get ready
+we’re gonna use you but we do do anything with it so what we have to
+do is we have to set up this plot and get get it ready get it going
+we need to supply some more information so let’s put some aesthetics on it so
+inside of the parameter of Juji plot the second parameter here we could put an
+aesthetic AES and as you can see here it says aesthetic mappings describe how
+variables in the data are mapped to visual properties aesthetics of geum’s
+jia mystic a layer like what geometry is at a point at a bar graph what is it
+let’s start off with just doing something simple here and saying X is
+equal to the caret because that was one of the features and we’ll say Y is equal</p>
+<p>00:03
+to the price and now let’s hit enter as you can see nothing plots but we did get
+a couple things here we’ve got a grid we’ve got carat across the x-axis is 0
+through 5 and we have price along the y axis or the vertical axis so it didn’t
+know what the plot because we can tell it what kind of plot so in order to do
+that we could add layers or add a geometry so we can add just like math we
+can hit the plus button and I’m gonna put this on the next line because
+remember white space doesn’t really matter so much I’m gonna add a we want a
+scatterplot so I’m gonna add something called the Jian GE OM underscore point
+and just like that open and close parentheses and we’re gonna hit command
+enter on that and now let’s see if we get an actual plot now there’s 53,000
+rows here we go so we said X is 2 carat and y is the</p>
+<p>00:04
+price and we have a scatter plot pretty ugly let’s just say that so let’s add
+another aesthetic let’s add an aesthetic called color and will will relate the
+color to something called the cut if you remember let’s go back and view this
+view diamonds the cut is either ideal premium good very good
+so aced on the cut let’s see if there’s any any places within this scatterplot
+that a certain cut might be you say more expensive than another cut let’s just
+try that out so in order to do that we have aesthetics that says x equals caret
+y equals price but there’s also one called color we can add we say color is
+equal to and cut and if you’re not sure what the features are you can always do
+diamonds and then hit the dollar sign and then do cut and it should do the</p>
+<p>00:05
+same thing it’s just a little Messier when you’re typing it all out here we go
+we’ve got some cool plot here let’s zoom
+in and take a better look here we go and it obviously comes with a legend over
+here fair good very good ideal so we have carat price and it doesn’t really
+look like this a lot of correlation that I can see maybe maybe the yellows are a
+little bit to the left and upper part I’m not sure doesn’t know I can’t see
+anything in there so that’s the idea between I plot in so we can plot various
+things X doesn’t have to be carried and Y doesn’t have to be priced but if you
+look at it again let’s view this again both care in price to both numerix so we
+have carry and price we also have XY and Z which I’m sure has to do something
+with the cut we have table we have depth
+let’s do color actual color as a feature and see if we get anything good out of</p>
+<p>00:06
+that so instead of the color actually be
+in the cut we’re going to make the color the actual color feature and see if
+anything pops up and notice that color is a move that looks pretty cool it’s a
+factor it’s not a digit it’s a categorical variable what I meant to say
+so there we go and that’s how you do a basic plot now it’s rerender and every
+time I change the size here so it does take just a moment to re-render
+and now you can see some pretty cool things here
+it looks like the darker blues are always on the top left some yellows are
+kind of you know they’re all kind of in line sort of almost like a a curve can
+fit that almost and we’ll get into curve fit in here in the next lesson let’s
+pick a different data set remember we learned about the iris data set so let’s</p>
+<p>00:07
+let’s plot the iris data set so remember if you just plot like this could you
+plot it says hey get ready here’s a blank slate but I’m not gonna do
+anything with it by the way your aesthetics does not have to be within
+your ggplot function you can actually add that into your geometry function so
+another geometry we wanted to do geom we want to do another scatter plot jam
+point let’s put our aesthetics inside of there x equals and I’m not sure what we
+have for choices here but we’ll do let’s do sepal length for X comma we’ll do y
+is equal to remember you could type an iris a dollar sign to get the things
+here let’s see if lengthen width have any correlation or draws something cool
+this is just gonna be black and white oh it looks like a bunch of just scatter
+plot that’s one of this and let’s just go ahead and add a color for fun so
+color equals and then do this and let’s make the color the actual species</p>
+<p>00:08
+because that’s most likely a categorical variable obviously and here we go
+there we go so now what do we see here we’ve got some sort of cluster in here
+all that’s red and then you have this little outlier red one here you’ve got
+the green and blue a little bit mixed up so pretty cool and so the species type
+is on the legend here and we have our axes here and the next lesson I’ll show
+you how to change some of the axes and make them look more pretty aesthetically
+pleasing that’s it play around with that
+and I change up the different parameters and there’s many many many tweaks to
+this but this will get you started on plot inEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=gCAwHbmOqCo">
+<picture><img src="https://i.ytimg.com/vi_webp/gCAwHbmOqCo/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-6" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+today we’re going to learn about plotting so let’s go to packages and
+install a package and we’re going to type in ggplot2 and we’re going to get
+that from the crown library if you haven’t already installed it go ahead
+and install that and what ggplot is it’s a very elegant and aesthetically
+pleasing way to graph all kinds of plots and a lot of people refer to it as the
+grammar of graphics because you can basically do anything with these with
+ggplot it’s super powerful and you’re gonna see why here in just a moment so
+now that it’s downloaded and installed let’s load the library which is you plot
+to and we’re gonna play with a dataset called the diamond data set so let’s
+take a look at that first let’s do a view and just type in diamond Oh</p>
+<p>00:01
+diamonds okay so here we have the caret the cut color clarity is etc etc and we
+have a bunch of data on here I’m gonna look at mostly maybe price and the carat
+just whatever we really feel like doing it we’re going to play around with this
+stuff so I’m not sure what all this stuff means again how do you find more
+data about it you can do question mark and then type in diamonds because
+diamonds is another one of those data sets that comes with it so here we go
+here’s all the description of the data set
+looks like fifty three thousand rows and ten variables cool how else could we
+have done that we could have done I mentioned Jim there we go fifty-three
+thousand nine hundred forty by ten cool alright let’s play with ggplot so the
+first thing you want to do is you want to bring in a data frame diamonds data
+frame again when I’m going to be late in
+this we’re not gonna change it so we can we don’t have to store it in our RAM in</p>
+<p>00:02
+our environment our environment is empty because we’re just gonna hit command
+editor on this and you’re gonna see that nothing happens so it’s it’s a function
+called ggplot as you can see over here on the right hand side where it says
+plots it’s just a blank slate so we’ve we’ve told you do plots hey get ready
+we’re gonna use you but we do do anything with it so what we have to
+do is we have to set up this plot and get get it ready get it going
+we need to supply some more information so let’s put some aesthetics on it so
+inside of the parameter of Juji plot the second parameter here we could put an
+aesthetic AES and as you can see here it says aesthetic mappings describe how
+variables in the data are mapped to visual properties aesthetics of geum’s
+jia mystic a layer like what geometry is at a point at a bar graph what is it
+let’s start off with just doing something simple here and saying X is
+equal to the caret because that was one of the features and we’ll say Y is equal</p>
+<p>00:03
+to the price and now let’s hit enter as you can see nothing plots but we did get
+a couple things here we’ve got a grid we’ve got carat across the x-axis is 0
+through 5 and we have price along the y axis or the vertical axis so it didn’t
+know what the plot because we can tell it what kind of plot so in order to do
+that we could add layers or add a geometry so we can add just like math we
+can hit the plus button and I’m gonna put this on the next line because
+remember white space doesn’t really matter so much I’m gonna add a we want a
+scatterplot so I’m gonna add something called the Jian GE OM underscore point
+and just like that open and close parentheses and we’re gonna hit command
+enter on that and now let’s see if we get an actual plot now there’s 53,000
+rows here we go so we said X is 2 carat and y is the</p>
+<p>00:04
+price and we have a scatter plot pretty ugly let’s just say that so let’s add
+another aesthetic let’s add an aesthetic called color and will will relate the
+color to something called the cut if you remember let’s go back and view this
+view diamonds the cut is either ideal premium good very good
+so aced on the cut let’s see if there’s any any places within this scatterplot
+that a certain cut might be you say more expensive than another cut let’s just
+try that out so in order to do that we have aesthetics that says x equals caret
+y equals price but there’s also one called color we can add we say color is
+equal to and cut and if you’re not sure what the features are you can always do
+diamonds and then hit the dollar sign and then do cut and it should do the</p>
+<p>00:05
+same thing it’s just a little Messier when you’re typing it all out here we go
+we’ve got some cool plot here let’s zoom
+in and take a better look here we go and it obviously comes with a legend over
+here fair good very good ideal so we have carat price and it doesn’t really
+look like this a lot of correlation that I can see maybe maybe the yellows are a
+little bit to the left and upper part I’m not sure doesn’t know I can’t see
+anything in there so that’s the idea between I plot in so we can plot various
+things X doesn’t have to be carried and Y doesn’t have to be priced but if you
+look at it again let’s view this again both care in price to both numerix so we
+have carry and price we also have XY and Z which I’m sure has to do something
+with the cut we have table we have depth
+let’s do color actual color as a feature and see if we get anything good out of</p>
+<p>00:06
+that so instead of the color actually be
+in the cut we’re going to make the color the actual color feature and see if
+anything pops up and notice that color is a move that looks pretty cool it’s a
+factor it’s not a digit it’s a categorical variable what I meant to say
+so there we go and that’s how you do a basic plot now it’s rerender and every
+time I change the size here so it does take just a moment to re-render
+and now you can see some pretty cool things here
+it looks like the darker blues are always on the top left some yellows are
+kind of you know they’re all kind of in line sort of almost like a a curve can
+fit that almost and we’ll get into curve fit in here in the next lesson let’s
+pick a different data set remember we learned about the iris data set so let’s</p>
+<p>00:07
+let’s plot the iris data set so remember if you just plot like this could you
+plot it says hey get ready here’s a blank slate but I’m not gonna do
+anything with it by the way your aesthetics does not have to be within
+your ggplot function you can actually add that into your geometry function so
+another geometry we wanted to do geom we want to do another scatter plot jam
+point let’s put our aesthetics inside of there x equals and I’m not sure what we
+have for choices here but we’ll do let’s do sepal length for X comma we’ll do y
+is equal to remember you could type an iris a dollar sign to get the things
+here let’s see if lengthen width have any correlation or draws something cool
+this is just gonna be black and white oh it looks like a bunch of just scatter
+plot that’s one of this and let’s just go ahead and add a color for fun so
+color equals and then do this and let’s make the color the actual species</p>
+<p>00:08
+because that’s most likely a categorical variable obviously and here we go
+there we go so now what do we see here we’ve got some sort of cluster in here
+all that’s red and then you have this little outlier red one here you’ve got
+the green and blue a little bit mixed up so pretty cool and so the species type
+is on the legend here and we have our axes here and the next lesson I’ll show
+you how to change some of the axes and make them look more pretty aesthetically
+pleasing that’s it play around with that
+and I change up the different parameters and there’s many many many tweaks to
+this but this will get you started on plot inEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=gCAwHbmOqCo">
+<picture><img src="https://i.ytimg.com/vi_webp/gCAwHbmOqCo/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-7" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+today we’re going to learn about plotting so let’s go to packages and
+install a package and we’re going to type in ggplot2 and we’re going to get
+that from the crown library if you haven’t already installed it go ahead
+and install that and what ggplot is it’s a very elegant and aesthetically
+pleasing way to graph all kinds of plots and a lot of people refer to it as the
+grammar of graphics because you can basically do anything with these with
+ggplot it’s super powerful and you’re gonna see why here in just a moment so
+now that it’s downloaded and installed let’s load the library which is you plot
+to and we’re gonna play with a dataset called the diamond data set so let’s
+take a look at that first let’s do a view and just type in diamond Oh</p>
+<p>00:01
+diamonds okay so here we have the caret the cut color clarity is etc etc and we
+have a bunch of data on here I’m gonna look at mostly maybe price and the carat
+just whatever we really feel like doing it we’re going to play around with this
+stuff so I’m not sure what all this stuff means again how do you find more
+data about it you can do question mark and then type in diamonds because
+diamonds is another one of those data sets that comes with it so here we go
+here’s all the description of the data set
+looks like fifty three thousand rows and ten variables cool how else could we
+have done that we could have done I mentioned Jim there we go fifty-three
+thousand nine hundred forty by ten cool alright let’s play with ggplot so the
+first thing you want to do is you want to bring in a data frame diamonds data
+frame again when I’m going to be late in
+this we’re not gonna change it so we can we don’t have to store it in our RAM in</p>
+<p>00:02
+our environment our environment is empty because we’re just gonna hit command
+editor on this and you’re gonna see that nothing happens so it’s it’s a function
+called ggplot as you can see over here on the right hand side where it says
+plots it’s just a blank slate so we’ve we’ve told you do plots hey get ready
+we’re gonna use you but we do do anything with it so what we have to
+do is we have to set up this plot and get get it ready get it going
+we need to supply some more information so let’s put some aesthetics on it so
+inside of the parameter of Juji plot the second parameter here we could put an
+aesthetic AES and as you can see here it says aesthetic mappings describe how
+variables in the data are mapped to visual properties aesthetics of geum’s
+jia mystic a layer like what geometry is at a point at a bar graph what is it
+let’s start off with just doing something simple here and saying X is
+equal to the caret because that was one of the features and we’ll say Y is equal</p>
+<p>00:03
+to the price and now let’s hit enter as you can see nothing plots but we did get
+a couple things here we’ve got a grid we’ve got carat across the x-axis is 0
+through 5 and we have price along the y axis or the vertical axis so it didn’t
+know what the plot because we can tell it what kind of plot so in order to do
+that we could add layers or add a geometry so we can add just like math we
+can hit the plus button and I’m gonna put this on the next line because
+remember white space doesn’t really matter so much I’m gonna add a we want a
+scatterplot so I’m gonna add something called the Jian GE OM underscore point
+and just like that open and close parentheses and we’re gonna hit command
+enter on that and now let’s see if we get an actual plot now there’s 53,000
+rows here we go so we said X is 2 carat and y is the</p>
+<p>00:04
+price and we have a scatter plot pretty ugly let’s just say that so let’s add
+another aesthetic let’s add an aesthetic called color and will will relate the
+color to something called the cut if you remember let’s go back and view this
+view diamonds the cut is either ideal premium good very good
+so aced on the cut let’s see if there’s any any places within this scatterplot
+that a certain cut might be you say more expensive than another cut let’s just
+try that out so in order to do that we have aesthetics that says x equals caret
+y equals price but there’s also one called color we can add we say color is
+equal to and cut and if you’re not sure what the features are you can always do
+diamonds and then hit the dollar sign and then do cut and it should do the</p>
+<p>00:05
+same thing it’s just a little Messier when you’re typing it all out here we go
+we’ve got some cool plot here let’s zoom
+in and take a better look here we go and it obviously comes with a legend over
+here fair good very good ideal so we have carat price and it doesn’t really
+look like this a lot of correlation that I can see maybe maybe the yellows are a
+little bit to the left and upper part I’m not sure doesn’t know I can’t see
+anything in there so that’s the idea between I plot in so we can plot various
+things X doesn’t have to be carried and Y doesn’t have to be priced but if you
+look at it again let’s view this again both care in price to both numerix so we
+have carry and price we also have XY and Z which I’m sure has to do something
+with the cut we have table we have depth
+let’s do color actual color as a feature and see if we get anything good out of</p>
+<p>00:06
+that so instead of the color actually be
+in the cut we’re going to make the color the actual color feature and see if
+anything pops up and notice that color is a move that looks pretty cool it’s a
+factor it’s not a digit it’s a categorical variable what I meant to say
+so there we go and that’s how you do a basic plot now it’s rerender and every
+time I change the size here so it does take just a moment to re-render
+and now you can see some pretty cool things here
+it looks like the darker blues are always on the top left some yellows are
+kind of you know they’re all kind of in line sort of almost like a a curve can
+fit that almost and we’ll get into curve fit in here in the next lesson let’s
+pick a different data set remember we learned about the iris data set so let’s</p>
+<p>00:07
+let’s plot the iris data set so remember if you just plot like this could you
+plot it says hey get ready here’s a blank slate but I’m not gonna do
+anything with it by the way your aesthetics does not have to be within
+your ggplot function you can actually add that into your geometry function so
+another geometry we wanted to do geom we want to do another scatter plot jam
+point let’s put our aesthetics inside of there x equals and I’m not sure what we
+have for choices here but we’ll do let’s do sepal length for X comma we’ll do y
+is equal to remember you could type an iris a dollar sign to get the things
+here let’s see if lengthen width have any correlation or draws something cool
+this is just gonna be black and white oh it looks like a bunch of just scatter
+plot that’s one of this and let’s just go ahead and add a color for fun so
+color equals and then do this and let’s make the color the actual species</p>
+<p>00:08
+because that’s most likely a categorical variable obviously and here we go
+there we go so now what do we see here we’ve got some sort of cluster in here
+all that’s red and then you have this little outlier red one here you’ve got
+the green and blue a little bit mixed up so pretty cool and so the species type
+is on the legend here and we have our axes here and the next lesson I’ll show
+you how to change some of the axes and make them look more pretty aesthetically
+pleasing that’s it play around with that
+and I change up the different parameters and there’s many many many tweaks to
+this but this will get you started on plot inEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=gCAwHbmOqCo">
+<picture><img src="https://i.ytimg.com/vi_webp/gCAwHbmOqCo/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-8" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+today we’re going to learn about plotting so let’s go to packages and
+install a package and we’re going to type in ggplot2 and we’re going to get
+that from the crown library if you haven’t already installed it go ahead
+and install that and what ggplot is it’s a very elegant and aesthetically
+pleasing way to graph all kinds of plots and a lot of people refer to it as the
+grammar of graphics because you can basically do anything with these with
+ggplot it’s super powerful and you’re gonna see why here in just a moment so
+now that it’s downloaded and installed let’s load the library which is you plot
+to and we’re gonna play with a dataset called the diamond data set so let’s
+take a look at that first let’s do a view and just type in diamond Oh</p>
+<p>00:01
+diamonds okay so here we have the caret the cut color clarity is etc etc and we
+have a bunch of data on here I’m gonna look at mostly maybe price and the carat
+just whatever we really feel like doing it we’re going to play around with this
+stuff so I’m not sure what all this stuff means again how do you find more
+data about it you can do question mark and then type in diamonds because
+diamonds is another one of those data sets that comes with it so here we go
+here’s all the description of the data set
+looks like fifty three thousand rows and ten variables cool how else could we
+have done that we could have done I mentioned Jim there we go fifty-three
+thousand nine hundred forty by ten cool alright let’s play with ggplot so the
+first thing you want to do is you want to bring in a data frame diamonds data
+frame again when I’m going to be late in
+this we’re not gonna change it so we can we don’t have to store it in our RAM in</p>
+<p>00:02
+our environment our environment is empty because we’re just gonna hit command
+editor on this and you’re gonna see that nothing happens so it’s it’s a function
+called ggplot as you can see over here on the right hand side where it says
+plots it’s just a blank slate so we’ve we’ve told you do plots hey get ready
+we’re gonna use you but we do do anything with it so what we have to
+do is we have to set up this plot and get get it ready get it going
+we need to supply some more information so let’s put some aesthetics on it so
+inside of the parameter of Juji plot the second parameter here we could put an
+aesthetic AES and as you can see here it says aesthetic mappings describe how
+variables in the data are mapped to visual properties aesthetics of geum’s
+jia mystic a layer like what geometry is at a point at a bar graph what is it
+let’s start off with just doing something simple here and saying X is
+equal to the caret because that was one of the features and we’ll say Y is equal</p>
+<p>00:03
+to the price and now let’s hit enter as you can see nothing plots but we did get
+a couple things here we’ve got a grid we’ve got carat across the x-axis is 0
+through 5 and we have price along the y axis or the vertical axis so it didn’t
+know what the plot because we can tell it what kind of plot so in order to do
+that we could add layers or add a geometry so we can add just like math we
+can hit the plus button and I’m gonna put this on the next line because
+remember white space doesn’t really matter so much I’m gonna add a we want a
+scatterplot so I’m gonna add something called the Jian GE OM underscore point
+and just like that open and close parentheses and we’re gonna hit command
+enter on that and now let’s see if we get an actual plot now there’s 53,000
+rows here we go so we said X is 2 carat and y is the</p>
+<p>00:04
+price and we have a scatter plot pretty ugly let’s just say that so let’s add
+another aesthetic let’s add an aesthetic called color and will will relate the
+color to something called the cut if you remember let’s go back and view this
+view diamonds the cut is either ideal premium good very good
+so aced on the cut let’s see if there’s any any places within this scatterplot
+that a certain cut might be you say more expensive than another cut let’s just
+try that out so in order to do that we have aesthetics that says x equals caret
+y equals price but there’s also one called color we can add we say color is
+equal to and cut and if you’re not sure what the features are you can always do
+diamonds and then hit the dollar sign and then do cut and it should do the</p>
+<p>00:05
+same thing it’s just a little Messier when you’re typing it all out here we go
+we’ve got some cool plot here let’s zoom
+in and take a better look here we go and it obviously comes with a legend over
+here fair good very good ideal so we have carat price and it doesn’t really
+look like this a lot of correlation that I can see maybe maybe the yellows are a
+little bit to the left and upper part I’m not sure doesn’t know I can’t see
+anything in there so that’s the idea between I plot in so we can plot various
+things X doesn’t have to be carried and Y doesn’t have to be priced but if you
+look at it again let’s view this again both care in price to both numerix so we
+have carry and price we also have XY and Z which I’m sure has to do something
+with the cut we have table we have depth
+let’s do color actual color as a feature and see if we get anything good out of</p>
+<p>00:06
+that so instead of the color actually be
+in the cut we’re going to make the color the actual color feature and see if
+anything pops up and notice that color is a move that looks pretty cool it’s a
+factor it’s not a digit it’s a categorical variable what I meant to say
+so there we go and that’s how you do a basic plot now it’s rerender and every
+time I change the size here so it does take just a moment to re-render
+and now you can see some pretty cool things here
+it looks like the darker blues are always on the top left some yellows are
+kind of you know they’re all kind of in line sort of almost like a a curve can
+fit that almost and we’ll get into curve fit in here in the next lesson let’s
+pick a different data set remember we learned about the iris data set so let’s</p>
+<p>00:07
+let’s plot the iris data set so remember if you just plot like this could you
+plot it says hey get ready here’s a blank slate but I’m not gonna do
+anything with it by the way your aesthetics does not have to be within
+your ggplot function you can actually add that into your geometry function so
+another geometry we wanted to do geom we want to do another scatter plot jam
+point let’s put our aesthetics inside of there x equals and I’m not sure what we
+have for choices here but we’ll do let’s do sepal length for X comma we’ll do y
+is equal to remember you could type an iris a dollar sign to get the things
+here let’s see if lengthen width have any correlation or draws something cool
+this is just gonna be black and white oh it looks like a bunch of just scatter
+plot that’s one of this and let’s just go ahead and add a color for fun so
+color equals and then do this and let’s make the color the actual species</p>
+<p>00:08
+because that’s most likely a categorical variable obviously and here we go
+there we go so now what do we see here we’ve got some sort of cluster in here
+all that’s red and then you have this little outlier red one here you’ve got
+the green and blue a little bit mixed up so pretty cool and so the species type
+is on the legend here and we have our axes here and the next lesson I’ll show
+you how to change some of the axes and make them look more pretty aesthetically
+pleasing that’s it play around with that
+and I change up the different parameters and there’s many many many tweaks to
+this but this will get you started on plot inEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=gCAwHbmOqCo">
+<picture><img src="https://i.ytimg.com/vi_webp/gCAwHbmOqCo/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-9" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+today we’re going to learn about plotting so let’s go to packages and
+install a package and we’re going to type in ggplot2 and we’re going to get
+that from the crown library if you haven’t already installed it go ahead
+and install that and what ggplot is it’s a very elegant and aesthetically
+pleasing way to graph all kinds of plots and a lot of people refer to it as the
+grammar of graphics because you can basically do anything with these with
+ggplot it’s super powerful and you’re gonna see why here in just a moment so
+now that it’s downloaded and installed let’s load the library which is you plot
+to and we’re gonna play with a dataset called the diamond data set so let’s
+take a look at that first let’s do a view and just type in diamond Oh</p>
+<p>00:01
+diamonds okay so here we have the caret the cut color clarity is etc etc and we
+have a bunch of data on here I’m gonna look at mostly maybe price and the carat
+just whatever we really feel like doing it we’re going to play around with this
+stuff so I’m not sure what all this stuff means again how do you find more
+data about it you can do question mark and then type in diamonds because
+diamonds is another one of those data sets that comes with it so here we go
+here’s all the description of the data set
+looks like fifty three thousand rows and ten variables cool how else could we
+have done that we could have done I mentioned Jim there we go fifty-three
+thousand nine hundred forty by ten cool alright let’s play with ggplot so the
+first thing you want to do is you want to bring in a data frame diamonds data
+frame again when I’m going to be late in
+this we’re not gonna change it so we can we don’t have to store it in our RAM in</p>
+<p>00:02
+our environment our environment is empty because we’re just gonna hit command
+editor on this and you’re gonna see that nothing happens so it’s it’s a function
+called ggplot as you can see over here on the right hand side where it says
+plots it’s just a blank slate so we’ve we’ve told you do plots hey get ready
+we’re gonna use you but we do do anything with it so what we have to
+do is we have to set up this plot and get get it ready get it going
+we need to supply some more information so let’s put some aesthetics on it so
+inside of the parameter of Juji plot the second parameter here we could put an
+aesthetic AES and as you can see here it says aesthetic mappings describe how
+variables in the data are mapped to visual properties aesthetics of geum’s
+jia mystic a layer like what geometry is at a point at a bar graph what is it
+let’s start off with just doing something simple here and saying X is
+equal to the caret because that was one of the features and we’ll say Y is equal</p>
+<p>00:03
+to the price and now let’s hit enter as you can see nothing plots but we did get
+a couple things here we’ve got a grid we’ve got carat across the x-axis is 0
+through 5 and we have price along the y axis or the vertical axis so it didn’t
+know what the plot because we can tell it what kind of plot so in order to do
+that we could add layers or add a geometry so we can add just like math we
+can hit the plus button and I’m gonna put this on the next line because
+remember white space doesn’t really matter so much I’m gonna add a we want a
+scatterplot so I’m gonna add something called the Jian GE OM underscore point
+and just like that open and close parentheses and we’re gonna hit command
+enter on that and now let’s see if we get an actual plot now there’s 53,000
+rows here we go so we said X is 2 carat and y is the</p>
+<p>00:04
+price and we have a scatter plot pretty ugly let’s just say that so let’s add
+another aesthetic let’s add an aesthetic called color and will will relate the
+color to something called the cut if you remember let’s go back and view this
+view diamonds the cut is either ideal premium good very good
+so aced on the cut let’s see if there’s any any places within this scatterplot
+that a certain cut might be you say more expensive than another cut let’s just
+try that out so in order to do that we have aesthetics that says x equals caret
+y equals price but there’s also one called color we can add we say color is
+equal to and cut and if you’re not sure what the features are you can always do
+diamonds and then hit the dollar sign and then do cut and it should do the</p>
+<p>00:05
+same thing it’s just a little Messier when you’re typing it all out here we go
+we’ve got some cool plot here let’s zoom
+in and take a better look here we go and it obviously comes with a legend over
+here fair good very good ideal so we have carat price and it doesn’t really
+look like this a lot of correlation that I can see maybe maybe the yellows are a
+little bit to the left and upper part I’m not sure doesn’t know I can’t see
+anything in there so that’s the idea between I plot in so we can plot various
+things X doesn’t have to be carried and Y doesn’t have to be priced but if you
+look at it again let’s view this again both care in price to both numerix so we
+have carry and price we also have XY and Z which I’m sure has to do something
+with the cut we have table we have depth
+let’s do color actual color as a feature and see if we get anything good out of</p>
+<p>00:06
+that so instead of the color actually be
+in the cut we’re going to make the color the actual color feature and see if
+anything pops up and notice that color is a move that looks pretty cool it’s a
+factor it’s not a digit it’s a categorical variable what I meant to say
+so there we go and that’s how you do a basic plot now it’s rerender and every
+time I change the size here so it does take just a moment to re-render
+and now you can see some pretty cool things here
+it looks like the darker blues are always on the top left some yellows are
+kind of you know they’re all kind of in line sort of almost like a a curve can
+fit that almost and we’ll get into curve fit in here in the next lesson let’s
+pick a different data set remember we learned about the iris data set so let’s</p>
+<p>00:07
+let’s plot the iris data set so remember if you just plot like this could you
+plot it says hey get ready here’s a blank slate but I’m not gonna do
+anything with it by the way your aesthetics does not have to be within
+your ggplot function you can actually add that into your geometry function so
+another geometry we wanted to do geom we want to do another scatter plot jam
+point let’s put our aesthetics inside of there x equals and I’m not sure what we
+have for choices here but we’ll do let’s do sepal length for X comma we’ll do y
+is equal to remember you could type an iris a dollar sign to get the things
+here let’s see if lengthen width have any correlation or draws something cool
+this is just gonna be black and white oh it looks like a bunch of just scatter
+plot that’s one of this and let’s just go ahead and add a color for fun so
+color equals and then do this and let’s make the color the actual species</p>
+<p>00:08
+because that’s most likely a categorical variable obviously and here we go
+there we go so now what do we see here we’ve got some sort of cluster in here
+all that’s red and then you have this little outlier red one here you’ve got
+the green and blue a little bit mixed up so pretty cool and so the species type
+is on the legend here and we have our axes here and the next lesson I’ll show
+you how to change some of the axes and make them look more pretty aesthetically
+pleasing that’s it play around with that
+and I change up the different parameters and there’s many many many tweaks to
+this but this will get you started on plot inEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=gCAwHbmOqCo">
+<picture><img src="https://i.ytimg.com/vi_webp/gCAwHbmOqCo/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-10" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+today we’re going to learn about plotting so let’s go to packages and
+install a package and we’re going to type in ggplot2 and we’re going to get
+that from the crown library if you haven’t already installed it go ahead
+and install that and what ggplot is it’s a very elegant and aesthetically
+pleasing way to graph all kinds of plots and a lot of people refer to it as the
+grammar of graphics because you can basically do anything with these with
+ggplot it’s super powerful and you’re gonna see why here in just a moment so
+now that it’s downloaded and installed let’s load the library which is you plot
+to and we’re gonna play with a dataset called the diamond data set so let’s
+take a look at that first let’s do a view and just type in diamond Oh</p>
+<p>00:01
+diamonds okay so here we have the caret the cut color clarity is etc etc and we
+have a bunch of data on here I’m gonna look at mostly maybe price and the carat
+just whatever we really feel like doing it we’re going to play around with this
+stuff so I’m not sure what all this stuff means again how do you find more
+data about it you can do question mark and then type in diamonds because
+diamonds is another one of those data sets that comes with it so here we go
+here’s all the description of the data set
+looks like fifty three thousand rows and ten variables cool how else could we
+have done that we could have done I mentioned Jim there we go fifty-three
+thousand nine hundred forty by ten cool alright let’s play with ggplot so the
+first thing you want to do is you want to bring in a data frame diamonds data
+frame again when I’m going to be late in
+this we’re not gonna change it so we can we don’t have to store it in our RAM in</p>
+<p>00:02
+our environment our environment is empty because we’re just gonna hit command
+editor on this and you’re gonna see that nothing happens so it’s it’s a function
+called ggplot as you can see over here on the right hand side where it says
+plots it’s just a blank slate so we’ve we’ve told you do plots hey get ready
+we’re gonna use you but we do do anything with it so what we have to
+do is we have to set up this plot and get get it ready get it going
+we need to supply some more information so let’s put some aesthetics on it so
+inside of the parameter of Juji plot the second parameter here we could put an
+aesthetic AES and as you can see here it says aesthetic mappings describe how
+variables in the data are mapped to visual properties aesthetics of geum’s
+jia mystic a layer like what geometry is at a point at a bar graph what is it
+let’s start off with just doing something simple here and saying X is
+equal to the caret because that was one of the features and we’ll say Y is equal</p>
+<p>00:03
+to the price and now let’s hit enter as you can see nothing plots but we did get
+a couple things here we’ve got a grid we’ve got carat across the x-axis is 0
+through 5 and we have price along the y axis or the vertical axis so it didn’t
+know what the plot because we can tell it what kind of plot so in order to do
+that we could add layers or add a geometry so we can add just like math we
+can hit the plus button and I’m gonna put this on the next line because
+remember white space doesn’t really matter so much I’m gonna add a we want a
+scatterplot so I’m gonna add something called the Jian GE OM underscore point
+and just like that open and close parentheses and we’re gonna hit command
+enter on that and now let’s see if we get an actual plot now there’s 53,000
+rows here we go so we said X is 2 carat and y is the</p>
+<p>00:04
+price and we have a scatter plot pretty ugly let’s just say that so let’s add
+another aesthetic let’s add an aesthetic called color and will will relate the
+color to something called the cut if you remember let’s go back and view this
+view diamonds the cut is either ideal premium good very good
+so aced on the cut let’s see if there’s any any places within this scatterplot
+that a certain cut might be you say more expensive than another cut let’s just
+try that out so in order to do that we have aesthetics that says x equals caret
+y equals price but there’s also one called color we can add we say color is
+equal to and cut and if you’re not sure what the features are you can always do
+diamonds and then hit the dollar sign and then do cut and it should do the</p>
+<p>00:05
+same thing it’s just a little Messier when you’re typing it all out here we go
+we’ve got some cool plot here let’s zoom
+in and take a better look here we go and it obviously comes with a legend over
+here fair good very good ideal so we have carat price and it doesn’t really
+look like this a lot of correlation that I can see maybe maybe the yellows are a
+little bit to the left and upper part I’m not sure doesn’t know I can’t see
+anything in there so that’s the idea between I plot in so we can plot various
+things X doesn’t have to be carried and Y doesn’t have to be priced but if you
+look at it again let’s view this again both care in price to both numerix so we
+have carry and price we also have XY and Z which I’m sure has to do something
+with the cut we have table we have depth
+let’s do color actual color as a feature and see if we get anything good out of</p>
+<p>00:06
+that so instead of the color actually be
+in the cut we’re going to make the color the actual color feature and see if
+anything pops up and notice that color is a move that looks pretty cool it’s a
+factor it’s not a digit it’s a categorical variable what I meant to say
+so there we go and that’s how you do a basic plot now it’s rerender and every
+time I change the size here so it does take just a moment to re-render
+and now you can see some pretty cool things here
+it looks like the darker blues are always on the top left some yellows are
+kind of you know they’re all kind of in line sort of almost like a a curve can
+fit that almost and we’ll get into curve fit in here in the next lesson let’s
+pick a different data set remember we learned about the iris data set so let’s</p>
+<p>00:07
+let’s plot the iris data set so remember if you just plot like this could you
+plot it says hey get ready here’s a blank slate but I’m not gonna do
+anything with it by the way your aesthetics does not have to be within
+your ggplot function you can actually add that into your geometry function so
+another geometry we wanted to do geom we want to do another scatter plot jam
+point let’s put our aesthetics inside of there x equals and I’m not sure what we
+have for choices here but we’ll do let’s do sepal length for X comma we’ll do y
+is equal to remember you could type an iris a dollar sign to get the things
+here let’s see if lengthen width have any correlation or draws something cool
+this is just gonna be black and white oh it looks like a bunch of just scatter
+plot that’s one of this and let’s just go ahead and add a color for fun so
+color equals and then do this and let’s make the color the actual species</p>
+<p>00:08
+because that’s most likely a categorical variable obviously and here we go
+there we go so now what do we see here we’ve got some sort of cluster in here
+all that’s red and then you have this little outlier red one here you’ve got
+the green and blue a little bit mixed up so pretty cool and so the species type
+is on the legend here and we have our axes here and the next lesson I’ll show
+you how to change some of the axes and make them look more pretty aesthetically
+pleasing that’s it play around with that
+and I change up the different parameters and there’s many many many tweaks to
+this but this will get you started on plot inEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=gCAwHbmOqCo">
+<picture><img src="https://i.ytimg.com/vi_webp/gCAwHbmOqCo/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-11" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+today we’re going to learn about plotting so let’s go to packages and
+install a package and we’re going to type in ggplot2 and we’re going to get
+that from the crown library if you haven’t already installed it go ahead
+and install that and what ggplot is it’s a very elegant and aesthetically
+pleasing way to graph all kinds of plots and a lot of people refer to it as the
+grammar of graphics because you can basically do anything with these with
+ggplot it’s super powerful and you’re gonna see why here in just a moment so
+now that it’s downloaded and installed let’s load the library which is you plot
+to and we’re gonna play with a dataset called the diamond data set so let’s
+take a look at that first let’s do a view and just type in diamond Oh</p>
+<p>00:01
+diamonds okay so here we have the caret the cut color clarity is etc etc and we
+have a bunch of data on here I’m gonna look at mostly maybe price and the carat
+just whatever we really feel like doing it we’re going to play around with this
+stuff so I’m not sure what all this stuff means again how do you find more
+data about it you can do question mark and then type in diamonds because
+diamonds is another one of those data sets that comes with it so here we go
+here’s all the description of the data set
+looks like fifty three thousand rows and ten variables cool how else could we
+have done that we could have done I mentioned Jim there we go fifty-three
+thousand nine hundred forty by ten cool alright let’s play with ggplot so the
+first thing you want to do is you want to bring in a data frame diamonds data
+frame again when I’m going to be late in
+this we’re not gonna change it so we can we don’t have to store it in our RAM in</p>
+<p>00:02
+our environment our environment is empty because we’re just gonna hit command
+editor on this and you’re gonna see that nothing happens so it’s it’s a function
+called ggplot as you can see over here on the right hand side where it says
+plots it’s just a blank slate so we’ve we’ve told you do plots hey get ready
+we’re gonna use you but we do do anything with it so what we have to
+do is we have to set up this plot and get get it ready get it going
+we need to supply some more information so let’s put some aesthetics on it so
+inside of the parameter of Juji plot the second parameter here we could put an
+aesthetic AES and as you can see here it says aesthetic mappings describe how
+variables in the data are mapped to visual properties aesthetics of geum’s
+jia mystic a layer like what geometry is at a point at a bar graph what is it
+let’s start off with just doing something simple here and saying X is
+equal to the caret because that was one of the features and we’ll say Y is equal</p>
+<p>00:03
+to the price and now let’s hit enter as you can see nothing plots but we did get
+a couple things here we’ve got a grid we’ve got carat across the x-axis is 0
+through 5 and we have price along the y axis or the vertical axis so it didn’t
+know what the plot because we can tell it what kind of plot so in order to do
+that we could add layers or add a geometry so we can add just like math we
+can hit the plus button and I’m gonna put this on the next line because
+remember white space doesn’t really matter so much I’m gonna add a we want a
+scatterplot so I’m gonna add something called the Jian GE OM underscore point
+and just like that open and close parentheses and we’re gonna hit command
+enter on that and now let’s see if we get an actual plot now there’s 53,000
+rows here we go so we said X is 2 carat and y is the</p>
+<p>00:04
+price and we have a scatter plot pretty ugly let’s just say that so let’s add
+another aesthetic let’s add an aesthetic called color and will will relate the
+color to something called the cut if you remember let’s go back and view this
+view diamonds the cut is either ideal premium good very good
+so aced on the cut let’s see if there’s any any places within this scatterplot
+that a certain cut might be you say more expensive than another cut let’s just
+try that out so in order to do that we have aesthetics that says x equals caret
+y equals price but there’s also one called color we can add we say color is
+equal to and cut and if you’re not sure what the features are you can always do
+diamonds and then hit the dollar sign and then do cut and it should do the</p>
+<p>00:05
+same thing it’s just a little Messier when you’re typing it all out here we go
+we’ve got some cool plot here let’s zoom
+in and take a better look here we go and it obviously comes with a legend over
+here fair good very good ideal so we have carat price and it doesn’t really
+look like this a lot of correlation that I can see maybe maybe the yellows are a
+little bit to the left and upper part I’m not sure doesn’t know I can’t see
+anything in there so that’s the idea between I plot in so we can plot various
+things X doesn’t have to be carried and Y doesn’t have to be priced but if you
+look at it again let’s view this again both care in price to both numerix so we
+have carry and price we also have XY and Z which I’m sure has to do something
+with the cut we have table we have depth
+let’s do color actual color as a feature and see if we get anything good out of</p>
+<p>00:06
+that so instead of the color actually be
+in the cut we’re going to make the color the actual color feature and see if
+anything pops up and notice that color is a move that looks pretty cool it’s a
+factor it’s not a digit it’s a categorical variable what I meant to say
+so there we go and that’s how you do a basic plot now it’s rerender and every
+time I change the size here so it does take just a moment to re-render
+and now you can see some pretty cool things here
+it looks like the darker blues are always on the top left some yellows are
+kind of you know they’re all kind of in line sort of almost like a a curve can
+fit that almost and we’ll get into curve fit in here in the next lesson let’s
+pick a different data set remember we learned about the iris data set so let’s</p>
+<p>00:07
+let’s plot the iris data set so remember if you just plot like this could you
+plot it says hey get ready here’s a blank slate but I’m not gonna do
+anything with it by the way your aesthetics does not have to be within
+your ggplot function you can actually add that into your geometry function so
+another geometry we wanted to do geom we want to do another scatter plot jam
+point let’s put our aesthetics inside of there x equals and I’m not sure what we
+have for choices here but we’ll do let’s do sepal length for X comma we’ll do y
+is equal to remember you could type an iris a dollar sign to get the things
+here let’s see if lengthen width have any correlation or draws something cool
+this is just gonna be black and white oh it looks like a bunch of just scatter
+plot that’s one of this and let’s just go ahead and add a color for fun so
+color equals and then do this and let’s make the color the actual species</p>
+<p>00:08
+because that’s most likely a categorical variable obviously and here we go
+there we go so now what do we see here we’ve got some sort of cluster in here
+all that’s red and then you have this little outlier red one here you’ve got
+the green and blue a little bit mixed up so pretty cool and so the species type
+is on the legend here and we have our axes here and the next lesson I’ll show
+you how to change some of the axes and make them look more pretty aesthetically
+pleasing that’s it play around with that
+and I change up the different parameters and there’s many many many tweaks to
+this but this will get you started on plot inEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=gCAwHbmOqCo">
+<picture><img src="https://i.ytimg.com/vi_webp/gCAwHbmOqCo/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-12" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+today we’re going to learn about plotting so let’s go to packages and
+install a package and we’re going to type in ggplot2 and we’re going to get
+that from the crown library if you haven’t already installed it go ahead
+and install that and what ggplot is it’s a very elegant and aesthetically
+pleasing way to graph all kinds of plots and a lot of people refer to it as the
+grammar of graphics because you can basically do anything with these with
+ggplot it’s super powerful and you’re gonna see why here in just a moment so
+now that it’s downloaded and installed let’s load the library which is you plot
+to and we’re gonna play with a dataset called the diamond data set so let’s
+take a look at that first let’s do a view and just type in diamond Oh</p>
+<p>00:01
+diamonds okay so here we have the caret the cut color clarity is etc etc and we
+have a bunch of data on here I’m gonna look at mostly maybe price and the carat
+just whatever we really feel like doing it we’re going to play around with this
+stuff so I’m not sure what all this stuff means again how do you find more
+data about it you can do question mark and then type in diamonds because
+diamonds is another one of those data sets that comes with it so here we go
+here’s all the description of the data set
+looks like fifty three thousand rows and ten variables cool how else could we
+have done that we could have done I mentioned Jim there we go fifty-three
+thousand nine hundred forty by ten cool alright let’s play with ggplot so the
+first thing you want to do is you want to bring in a data frame diamonds data
+frame again when I’m going to be late in
+this we’re not gonna change it so we can we don’t have to store it in our RAM in</p>
+<p>00:02
+our environment our environment is empty because we’re just gonna hit command
+editor on this and you’re gonna see that nothing happens so it’s it’s a function
+called ggplot as you can see over here on the right hand side where it says
+plots it’s just a blank slate so we’ve we’ve told you do plots hey get ready
+we’re gonna use you but we do do anything with it so what we have to
+do is we have to set up this plot and get get it ready get it going
+we need to supply some more information so let’s put some aesthetics on it so
+inside of the parameter of Juji plot the second parameter here we could put an
+aesthetic AES and as you can see here it says aesthetic mappings describe how
+variables in the data are mapped to visual properties aesthetics of geum’s
+jia mystic a layer like what geometry is at a point at a bar graph what is it
+let’s start off with just doing something simple here and saying X is
+equal to the caret because that was one of the features and we’ll say Y is equal</p>
+<p>00:03
+to the price and now let’s hit enter as you can see nothing plots but we did get
+a couple things here we’ve got a grid we’ve got carat across the x-axis is 0
+through 5 and we have price along the y axis or the vertical axis so it didn’t
+know what the plot because we can tell it what kind of plot so in order to do
+that we could add layers or add a geometry so we can add just like math we
+can hit the plus button and I’m gonna put this on the next line because
+remember white space doesn’t really matter so much I’m gonna add a we want a
+scatterplot so I’m gonna add something called the Jian GE OM underscore point
+and just like that open and close parentheses and we’re gonna hit command
+enter on that and now let’s see if we get an actual plot now there’s 53,000
+rows here we go so we said X is 2 carat and y is the</p>
+<p>00:04
+price and we have a scatter plot pretty ugly let’s just say that so let’s add
+another aesthetic let’s add an aesthetic called color and will will relate the
+color to something called the cut if you remember let’s go back and view this
+view diamonds the cut is either ideal premium good very good
+so aced on the cut let’s see if there’s any any places within this scatterplot
+that a certain cut might be you say more expensive than another cut let’s just
+try that out so in order to do that we have aesthetics that says x equals caret
+y equals price but there’s also one called color we can add we say color is
+equal to and cut and if you’re not sure what the features are you can always do
+diamonds and then hit the dollar sign and then do cut and it should do the</p>
+<p>00:05
+same thing it’s just a little Messier when you’re typing it all out here we go
+we’ve got some cool plot here let’s zoom
+in and take a better look here we go and it obviously comes with a legend over
+here fair good very good ideal so we have carat price and it doesn’t really
+look like this a lot of correlation that I can see maybe maybe the yellows are a
+little bit to the left and upper part I’m not sure doesn’t know I can’t see
+anything in there so that’s the idea between I plot in so we can plot various
+things X doesn’t have to be carried and Y doesn’t have to be priced but if you
+look at it again let’s view this again both care in price to both numerix so we
+have carry and price we also have XY and Z which I’m sure has to do something
+with the cut we have table we have depth
+let’s do color actual color as a feature and see if we get anything good out of</p>
+<p>00:06
+that so instead of the color actually be
+in the cut we’re going to make the color the actual color feature and see if
+anything pops up and notice that color is a move that looks pretty cool it’s a
+factor it’s not a digit it’s a categorical variable what I meant to say
+so there we go and that’s how you do a basic plot now it’s rerender and every
+time I change the size here so it does take just a moment to re-render
+and now you can see some pretty cool things here
+it looks like the darker blues are always on the top left some yellows are
+kind of you know they’re all kind of in line sort of almost like a a curve can
+fit that almost and we’ll get into curve fit in here in the next lesson let’s
+pick a different data set remember we learned about the iris data set so let’s</p>
+<p>00:07
+let’s plot the iris data set so remember if you just plot like this could you
+plot it says hey get ready here’s a blank slate but I’m not gonna do
+anything with it by the way your aesthetics does not have to be within
+your ggplot function you can actually add that into your geometry function so
+another geometry we wanted to do geom we want to do another scatter plot jam
+point let’s put our aesthetics inside of there x equals and I’m not sure what we
+have for choices here but we’ll do let’s do sepal length for X comma we’ll do y
+is equal to remember you could type an iris a dollar sign to get the things
+here let’s see if lengthen width have any correlation or draws something cool
+this is just gonna be black and white oh it looks like a bunch of just scatter
+plot that’s one of this and let’s just go ahead and add a color for fun so
+color equals and then do this and let’s make the color the actual species</p>
+<p>00:08
+because that’s most likely a categorical variable obviously and here we go
+there we go so now what do we see here we’ve got some sort of cluster in here
+all that’s red and then you have this little outlier red one here you’ve got
+the green and blue a little bit mixed up so pretty cool and so the species type
+is on the legend here and we have our axes here and the next lesson I’ll show
+you how to change some of the axes and make them look more pretty aesthetically
+pleasing that’s it play around with that
+and I change up the different parameters and there’s many many many tweaks to
+this but this will get you started on plot inEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=gCAwHbmOqCo">
+<picture><img src="https://i.ytimg.com/vi_webp/gCAwHbmOqCo/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-13" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+today we’re going to learn about plotting so let’s go to packages and
+install a package and we’re going to type in ggplot2 and we’re going to get
+that from the crown library if you haven’t already installed it go ahead
+and install that and what ggplot is it’s a very elegant and aesthetically
+pleasing way to graph all kinds of plots and a lot of people refer to it as the
+grammar of graphics because you can basically do anything with these with
+ggplot it’s super powerful and you’re gonna see why here in just a moment so
+now that it’s downloaded and installed let’s load the library which is you plot
+to and we’re gonna play with a dataset called the diamond data set so let’s
+take a look at that first let’s do a view and just type in diamond Oh</p>
+<p>00:01
+diamonds okay so here we have the caret the cut color clarity is etc etc and we
+have a bunch of data on here I’m gonna look at mostly maybe price and the carat
+just whatever we really feel like doing it we’re going to play around with this
+stuff so I’m not sure what all this stuff means again how do you find more
+data about it you can do question mark and then type in diamonds because
+diamonds is another one of those data sets that comes with it so here we go
+here’s all the description of the data set
+looks like fifty three thousand rows and ten variables cool how else could we
+have done that we could have done I mentioned Jim there we go fifty-three
+thousand nine hundred forty by ten cool alright let’s play with ggplot so the
+first thing you want to do is you want to bring in a data frame diamonds data
+frame again when I’m going to be late in
+this we’re not gonna change it so we can we don’t have to store it in our RAM in</p>
+<p>00:02
+our environment our environment is empty because we’re just gonna hit command
+editor on this and you’re gonna see that nothing happens so it’s it’s a function
+called ggplot as you can see over here on the right hand side where it says
+plots it’s just a blank slate so we’ve we’ve told you do plots hey get ready
+we’re gonna use you but we do do anything with it so what we have to
+do is we have to set up this plot and get get it ready get it going
+we need to supply some more information so let’s put some aesthetics on it so
+inside of the parameter of Juji plot the second parameter here we could put an
+aesthetic AES and as you can see here it says aesthetic mappings describe how
+variables in the data are mapped to visual properties aesthetics of geum’s
+jia mystic a layer like what geometry is at a point at a bar graph what is it
+let’s start off with just doing something simple here and saying X is
+equal to the caret because that was one of the features and we’ll say Y is equal</p>
+<p>00:03
+to the price and now let’s hit enter as you can see nothing plots but we did get
+a couple things here we’ve got a grid we’ve got carat across the x-axis is 0
+through 5 and we have price along the y axis or the vertical axis so it didn’t
+know what the plot because we can tell it what kind of plot so in order to do
+that we could add layers or add a geometry so we can add just like math we
+can hit the plus button and I’m gonna put this on the next line because
+remember white space doesn’t really matter so much I’m gonna add a we want a
+scatterplot so I’m gonna add something called the Jian GE OM underscore point
+and just like that open and close parentheses and we’re gonna hit command
+enter on that and now let’s see if we get an actual plot now there’s 53,000
+rows here we go so we said X is 2 carat and y is the</p>
+<p>00:04
+price and we have a scatter plot pretty ugly let’s just say that so let’s add
+another aesthetic let’s add an aesthetic called color and will will relate the
+color to something called the cut if you remember let’s go back and view this
+view diamonds the cut is either ideal premium good very good
+so aced on the cut let’s see if there’s any any places within this scatterplot
+that a certain cut might be you say more expensive than another cut let’s just
+try that out so in order to do that we have aesthetics that says x equals caret
+y equals price but there’s also one called color we can add we say color is
+equal to and cut and if you’re not sure what the features are you can always do
+diamonds and then hit the dollar sign and then do cut and it should do the</p>
+<p>00:05
+same thing it’s just a little Messier when you’re typing it all out here we go
+we’ve got some cool plot here let’s zoom
+in and take a better look here we go and it obviously comes with a legend over
+here fair good very good ideal so we have carat price and it doesn’t really
+look like this a lot of correlation that I can see maybe maybe the yellows are a
+little bit to the left and upper part I’m not sure doesn’t know I can’t see
+anything in there so that’s the idea between I plot in so we can plot various
+things X doesn’t have to be carried and Y doesn’t have to be priced but if you
+look at it again let’s view this again both care in price to both numerix so we
+have carry and price we also have XY and Z which I’m sure has to do something
+with the cut we have table we have depth
+let’s do color actual color as a feature and see if we get anything good out of</p>
+<p>00:06
+that so instead of the color actually be
+in the cut we’re going to make the color the actual color feature and see if
+anything pops up and notice that color is a move that looks pretty cool it’s a
+factor it’s not a digit it’s a categorical variable what I meant to say
+so there we go and that’s how you do a basic plot now it’s rerender and every
+time I change the size here so it does take just a moment to re-render
+and now you can see some pretty cool things here
+it looks like the darker blues are always on the top left some yellows are
+kind of you know they’re all kind of in line sort of almost like a a curve can
+fit that almost and we’ll get into curve fit in here in the next lesson let’s
+pick a different data set remember we learned about the iris data set so let’s</p>
+<p>00:07
+let’s plot the iris data set so remember if you just plot like this could you
+plot it says hey get ready here’s a blank slate but I’m not gonna do
+anything with it by the way your aesthetics does not have to be within
+your ggplot function you can actually add that into your geometry function so
+another geometry we wanted to do geom we want to do another scatter plot jam
+point let’s put our aesthetics inside of there x equals and I’m not sure what we
+have for choices here but we’ll do let’s do sepal length for X comma we’ll do y
+is equal to remember you could type an iris a dollar sign to get the things
+here let’s see if lengthen width have any correlation or draws something cool
+this is just gonna be black and white oh it looks like a bunch of just scatter
+plot that’s one of this and let’s just go ahead and add a color for fun so
+color equals and then do this and let’s make the color the actual species</p>
+<p>00:08
+because that’s most likely a categorical variable obviously and here we go
+there we go so now what do we see here we’ve got some sort of cluster in here
+all that’s red and then you have this little outlier red one here you’ve got
+the green and blue a little bit mixed up so pretty cool and so the species type
+is on the legend here and we have our axes here and the next lesson I’ll show
+you how to change some of the axes and make them look more pretty aesthetically
+pleasing that’s it play around with that
+and I change up the different parameters and there’s many many many tweaks to
+this but this will get you started on plot inEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=gCAwHbmOqCo">
+<picture><img src="https://i.ytimg.com/vi_webp/gCAwHbmOqCo/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-14" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+today we’re going to learn about plotting so let’s go to packages and
+install a package and we’re going to type in ggplot2 and we’re going to get
+that from the crown library if you haven’t already installed it go ahead
+and install that and what ggplot is it’s a very elegant and aesthetically
+pleasing way to graph all kinds of plots and a lot of people refer to it as the
+grammar of graphics because you can basically do anything with these with
+ggplot it’s super powerful and you’re gonna see why here in just a moment so
+now that it’s downloaded and installed let’s load the library which is you plot
+to and we’re gonna play with a dataset called the diamond data set so let’s
+take a look at that first let’s do a view and just type in diamond Oh</p>
+<p>00:01
+diamonds okay so here we have the caret the cut color clarity is etc etc and we
+have a bunch of data on here I’m gonna look at mostly maybe price and the carat
+just whatever we really feel like doing it we’re going to play around with this
+stuff so I’m not sure what all this stuff means again how do you find more
+data about it you can do question mark and then type in diamonds because
+diamonds is another one of those data sets that comes with it so here we go
+here’s all the description of the data set
+looks like fifty three thousand rows and ten variables cool how else could we
+have done that we could have done I mentioned Jim there we go fifty-three
+thousand nine hundred forty by ten cool alright let’s play with ggplot so the
+first thing you want to do is you want to bring in a data frame diamonds data
+frame again when I’m going to be late in
+this we’re not gonna change it so we can we don’t have to store it in our RAM in</p>
+<p>00:02
+our environment our environment is empty because we’re just gonna hit command
+editor on this and you’re gonna see that nothing happens so it’s it’s a function
+called ggplot as you can see over here on the right hand side where it says
+plots it’s just a blank slate so we’ve we’ve told you do plots hey get ready
+we’re gonna use you but we do do anything with it so what we have to
+do is we have to set up this plot and get get it ready get it going
+we need to supply some more information so let’s put some aesthetics on it so
+inside of the parameter of Juji plot the second parameter here we could put an
+aesthetic AES and as you can see here it says aesthetic mappings describe how
+variables in the data are mapped to visual properties aesthetics of geum’s
+jia mystic a layer like what geometry is at a point at a bar graph what is it
+let’s start off with just doing something simple here and saying X is
+equal to the caret because that was one of the features and we’ll say Y is equal</p>
+<p>00:03
+to the price and now let’s hit enter as you can see nothing plots but we did get
+a couple things here we’ve got a grid we’ve got carat across the x-axis is 0
+through 5 and we have price along the y axis or the vertical axis so it didn’t
+know what the plot because we can tell it what kind of plot so in order to do
+that we could add layers or add a geometry so we can add just like math we
+can hit the plus button and I’m gonna put this on the next line because
+remember white space doesn’t really matter so much I’m gonna add a we want a
+scatterplot so I’m gonna add something called the Jian GE OM underscore point
+and just like that open and close parentheses and we’re gonna hit command
+enter on that and now let’s see if we get an actual plot now there’s 53,000
+rows here we go so we said X is 2 carat and y is the</p>
+<p>00:04
+price and we have a scatter plot pretty ugly let’s just say that so let’s add
+another aesthetic let’s add an aesthetic called color and will will relate the
+color to something called the cut if you remember let’s go back and view this
+view diamonds the cut is either ideal premium good very good
+so aced on the cut let’s see if there’s any any places within this scatterplot
+that a certain cut might be you say more expensive than another cut let’s just
+try that out so in order to do that we have aesthetics that says x equals caret
+y equals price but there’s also one called color we can add we say color is
+equal to and cut and if you’re not sure what the features are you can always do
+diamonds and then hit the dollar sign and then do cut and it should do the</p>
+<p>00:05
+same thing it’s just a little Messier when you’re typing it all out here we go
+we’ve got some cool plot here let’s zoom
+in and take a better look here we go and it obviously comes with a legend over
+here fair good very good ideal so we have carat price and it doesn’t really
+look like this a lot of correlation that I can see maybe maybe the yellows are a
+little bit to the left and upper part I’m not sure doesn’t know I can’t see
+anything in there so that’s the idea between I plot in so we can plot various
+things X doesn’t have to be carried and Y doesn’t have to be priced but if you
+look at it again let’s view this again both care in price to both numerix so we
+have carry and price we also have XY and Z which I’m sure has to do something
+with the cut we have table we have depth
+let’s do color actual color as a feature and see if we get anything good out of</p>
+<p>00:06
+that so instead of the color actually be
+in the cut we’re going to make the color the actual color feature and see if
+anything pops up and notice that color is a move that looks pretty cool it’s a
+factor it’s not a digit it’s a categorical variable what I meant to say
+so there we go and that’s how you do a basic plot now it’s rerender and every
+time I change the size here so it does take just a moment to re-render
+and now you can see some pretty cool things here
+it looks like the darker blues are always on the top left some yellows are
+kind of you know they’re all kind of in line sort of almost like a a curve can
+fit that almost and we’ll get into curve fit in here in the next lesson let’s
+pick a different data set remember we learned about the iris data set so let’s</p>
+<p>00:07
+let’s plot the iris data set so remember if you just plot like this could you
+plot it says hey get ready here’s a blank slate but I’m not gonna do
+anything with it by the way your aesthetics does not have to be within
+your ggplot function you can actually add that into your geometry function so
+another geometry we wanted to do geom we want to do another scatter plot jam
+point let’s put our aesthetics inside of there x equals and I’m not sure what we
+have for choices here but we’ll do let’s do sepal length for X comma we’ll do y
+is equal to remember you could type an iris a dollar sign to get the things
+here let’s see if lengthen width have any correlation or draws something cool
+this is just gonna be black and white oh it looks like a bunch of just scatter
+plot that’s one of this and let’s just go ahead and add a color for fun so
+color equals and then do this and let’s make the color the actual species</p>
+<p>00:08
+because that’s most likely a categorical variable obviously and here we go
+there we go so now what do we see here we’ve got some sort of cluster in here
+all that’s red and then you have this little outlier red one here you’ve got
+the green and blue a little bit mixed up so pretty cool and so the species type
+is on the legend here and we have our axes here and the next lesson I’ll show
+you how to change some of the axes and make them look more pretty aesthetically
+pleasing that’s it play around with that
+and I change up the different parameters and there’s many many many tweaks to
+this but this will get you started on plot inEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=gCAwHbmOqCo">
+<picture><img src="https://i.ytimg.com/vi_webp/gCAwHbmOqCo/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-15" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+today we’re going to learn about plotting so let’s go to packages and
+install a package and we’re going to type in ggplot2 and we’re going to get
+that from the crown library if you haven’t already installed it go ahead
+and install that and what ggplot is it’s a very elegant and aesthetically
+pleasing way to graph all kinds of plots and a lot of people refer to it as the
+grammar of graphics because you can basically do anything with these with
+ggplot it’s super powerful and you’re gonna see why here in just a moment so
+now that it’s downloaded and installed let’s load the library which is you plot
+to and we’re gonna play with a dataset called the diamond data set so let’s
+take a look at that first let’s do a view and just type in diamond Oh</p>
+<p>00:01
+diamonds okay so here we have the caret the cut color clarity is etc etc and we
+have a bunch of data on here I’m gonna look at mostly maybe price and the carat
+just whatever we really feel like doing it we’re going to play around with this
+stuff so I’m not sure what all this stuff means again how do you find more
+data about it you can do question mark and then type in diamonds because
+diamonds is another one of those data sets that comes with it so here we go
+here’s all the description of the data set
+looks like fifty three thousand rows and ten variables cool how else could we
+have done that we could have done I mentioned Jim there we go fifty-three
+thousand nine hundred forty by ten cool alright let’s play with ggplot so the
+first thing you want to do is you want to bring in a data frame diamonds data
+frame again when I’m going to be late in
+this we’re not gonna change it so we can we don’t have to store it in our RAM in</p>
+<p>00:02
+our environment our environment is empty because we’re just gonna hit command
+editor on this and you’re gonna see that nothing happens so it’s it’s a function
+called ggplot as you can see over here on the right hand side where it says
+plots it’s just a blank slate so we’ve we’ve told you do plots hey get ready
+we’re gonna use you but we do do anything with it so what we have to
+do is we have to set up this plot and get get it ready get it going
+we need to supply some more information so let’s put some aesthetics on it so
+inside of the parameter of Juji plot the second parameter here we could put an
+aesthetic AES and as you can see here it says aesthetic mappings describe how
+variables in the data are mapped to visual properties aesthetics of geum’s
+jia mystic a layer like what geometry is at a point at a bar graph what is it
+let’s start off with just doing something simple here and saying X is
+equal to the caret because that was one of the features and we’ll say Y is equal</p>
+<p>00:03
+to the price and now let’s hit enter as you can see nothing plots but we did get
+a couple things here we’ve got a grid we’ve got carat across the x-axis is 0
+through 5 and we have price along the y axis or the vertical axis so it didn’t
+know what the plot because we can tell it what kind of plot so in order to do
+that we could add layers or add a geometry so we can add just like math we
+can hit the plus button and I’m gonna put this on the next line because
+remember white space doesn’t really matter so much I’m gonna add a we want a
+scatterplot so I’m gonna add something called the Jian GE OM underscore point
+and just like that open and close parentheses and we’re gonna hit command
+enter on that and now let’s see if we get an actual plot now there’s 53,000
+rows here we go so we said X is 2 carat and y is the</p>
+<p>00:04
+price and we have a scatter plot pretty ugly let’s just say that so let’s add
+another aesthetic let’s add an aesthetic called color and will will relate the
+color to something called the cut if you remember let’s go back and view this
+view diamonds the cut is either ideal premium good very good
+so aced on the cut let’s see if there’s any any places within this scatterplot
+that a certain cut might be you say more expensive than another cut let’s just
+try that out so in order to do that we have aesthetics that says x equals caret
+y equals price but there’s also one called color we can add we say color is
+equal to and cut and if you’re not sure what the features are you can always do
+diamonds and then hit the dollar sign and then do cut and it should do the</p>
+<p>00:05
+same thing it’s just a little Messier when you’re typing it all out here we go
+we’ve got some cool plot here let’s zoom
+in and take a better look here we go and it obviously comes with a legend over
+here fair good very good ideal so we have carat price and it doesn’t really
+look like this a lot of correlation that I can see maybe maybe the yellows are a
+little bit to the left and upper part I’m not sure doesn’t know I can’t see
+anything in there so that’s the idea between I plot in so we can plot various
+things X doesn’t have to be carried and Y doesn’t have to be priced but if you
+look at it again let’s view this again both care in price to both numerix so we
+have carry and price we also have XY and Z which I’m sure has to do something
+with the cut we have table we have depth
+let’s do color actual color as a feature and see if we get anything good out of</p>
+<p>00:06
+that so instead of the color actually be
+in the cut we’re going to make the color the actual color feature and see if
+anything pops up and notice that color is a move that looks pretty cool it’s a
+factor it’s not a digit it’s a categorical variable what I meant to say
+so there we go and that’s how you do a basic plot now it’s rerender and every
+time I change the size here so it does take just a moment to re-render
+and now you can see some pretty cool things here
+it looks like the darker blues are always on the top left some yellows are
+kind of you know they’re all kind of in line sort of almost like a a curve can
+fit that almost and we’ll get into curve fit in here in the next lesson let’s
+pick a different data set remember we learned about the iris data set so let’s</p>
+<p>00:07
+let’s plot the iris data set so remember if you just plot like this could you
+plot it says hey get ready here’s a blank slate but I’m not gonna do
+anything with it by the way your aesthetics does not have to be within
+your ggplot function you can actually add that into your geometry function so
+another geometry we wanted to do geom we want to do another scatter plot jam
+point let’s put our aesthetics inside of there x equals and I’m not sure what we
+have for choices here but we’ll do let’s do sepal length for X comma we’ll do y
+is equal to remember you could type an iris a dollar sign to get the things
+here let’s see if lengthen width have any correlation or draws something cool
+this is just gonna be black and white oh it looks like a bunch of just scatter
+plot that’s one of this and let’s just go ahead and add a color for fun so
+color equals and then do this and let’s make the color the actual species</p>
+<p>00:08
+because that’s most likely a categorical variable obviously and here we go
+there we go so now what do we see here we’ve got some sort of cluster in here
+all that’s red and then you have this little outlier red one here you’ve got
+the green and blue a little bit mixed up so pretty cool and so the species type
+is on the legend here and we have our axes here and the next lesson I’ll show
+you how to change some of the axes and make them look more pretty aesthetically
+pleasing that’s it play around with that
+and I change up the different parameters and there’s many many many tweaks to
+this but this will get you started on plot inEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=gCAwHbmOqCo">
+<picture><img src="https://i.ytimg.com/vi_webp/gCAwHbmOqCo/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-16" class="section level2">
 <h2>Click the image to play video.</h2>
 <p>00:00
 today we’re going to learn about plotting so let’s go to packages and

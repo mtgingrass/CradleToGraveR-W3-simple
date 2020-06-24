@@ -58,7 +58,9 @@ inds5 <- match(gsub(' ', '', sub('\\..*', '', basename(yt_dl_JSON))),
                gsub("[[:space:]]", "", sub('\\..*', '', basename(thumb_files2$full_path))))
 
 
-df_yt <- data.frame(JSON = yt_dl_JSON, 
+df_yt <- data.frame(File_Name = basename(yt_dl_JSON),
+                    File_Name_remove_space = gsub("[[:space:]]", "", basename(yt_dl_JSON)),
+                    JSON = yt_dl_JSON, 
                     VTT = yt_dl_vtt_cnvrt[inds],
                     IMAGE = yt_dl_images[inds4],
                     DESC = yt_dl_descrip_dir[inds3],
@@ -104,9 +106,11 @@ for (index in seq_len(nrow(df_yt)))
      image_path <- df_yt$IMAGE[index],
      image_path <- yt_json_file$thumbnail)
   
-  
+  yt_tags_list <- yt_json_file$tags
+  if(is.null(yt_tags_list)) {yt_tags_list <- c("No Tags")}
+    
   yt_tags <- paste("tags:",
-                         "Test","Test2",
+                        yt_tags_list,
                          sep = "\n  - ")
   
   w3yaml <- "type: post

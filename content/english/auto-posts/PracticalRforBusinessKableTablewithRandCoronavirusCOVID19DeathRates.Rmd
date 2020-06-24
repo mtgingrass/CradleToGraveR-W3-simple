@@ -4,8 +4,7 @@ date: 2020-03-18
 categories:
   - Practical R for Business
 tags:
-  - Test
-  - Test2
+  - No Tags
 
 type: post
 w3codecolor: false

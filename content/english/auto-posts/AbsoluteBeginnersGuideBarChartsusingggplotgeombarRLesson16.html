@@ -4,8 +4,7 @@ date: 2019-10-01
 categories:
   - Absolute Beginners Guide
 tags:
-  - Test
-  - Test2
+  - ggplot
 
 type: post
 w3codecolor: false
@@ -19,6 +18,1714 @@ thumbnail: https://i.ytimg.com/vi_webp/2uOIKE-cp6w/maxresdefault.webp
 <picture><img src="https://i.ytimg.com/vi_webp/2uOIKE-cp6w/maxresdefault.webp"></picture>
 </a></p>
 <div id="click-the-image-to-play-video." class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+previously we played around with some G on point or scatterplots
+today I’m gonna show you how to create some bar plots and so follow along add
+library ggplot and we’re going to create our own data frame as well which we
+haven’t had a lot of practice with so we
+can create a data frame we will assign a data frame structure so to get that
+structure we include data frame as a function the function data frame will
+return a data frame structure so a data frame we’re going to input random data
+so I’m going to put people and we’re going to set people equal to and
+remember the c is like reminds me of column so if i have a column of people
+the header is called people and the people that are in that column is
+whatever we want them to be let’s do Dave Jackie</p>
+<p>00:01
+mark and then we’ll do for an example we’re gonna repeat a couple of these
+let’s do mark mark a couple times and let’s add a another one Jill okay so we
+have some people here now this data frame only consists of one column at the
+moment so let’s create another column let’s add something by hitting a comma
+here I’m gonna hit enter just to get some white space in there I want to add
+their ages so we’ll do the same thing we’ll use a column let’s put that C
+there and let’s put in ages twenty three
+twenty five I’m just making these up and I think there should be at least six of
+them right and they don’t have to be in any order something like that so there
+are some ages for us and let’s add one more and put gender in there so a column
+that says gender we’re gonna do male female male male</p>
+<p>00:02
+male and finally female let’s hit command to enter on that and make sure
+your data frame your DF the object returned is a data frame you can see it
+over here and in our environment click on DF you can see what I’m talking about
+the columns of people columns of Ages and gender and they’re all lined up it’s
+a little confusing sometimes because you’re kind of looking at it
+horizontally here and then when it actually displays in the GUI interface
+or the view it goes downward so let’s let’s keep that in mind ok now we’re
+ready to create some bar plots let me show you the basic way to do it we’re
+gonna create our base plot we’re gonna call that our I don’t know DF base we’re
+going to assign this to DF base a GG plot remember and then we add the data
+equals data is equal to our data frame that we just created above that comma
+our aesthetic let’s say we want to plot our x equals let’s just go ahead and say</p>
+<p>00:03
+people across the x-axis and let’s let’s hit command enter on that you’ll see
+there’s no error but it also doesn’t plot anything even if I did DF base here
+and I hit command enter it plots remember it just set up our plots but it
+didn’t actually plot anything because there’s no us there’s no geometry to
+this so let’s go ahead and add a geometry let’s do a DF base and we’re
+going to add a geometry geometry gonna do G on bar now inside of this bar there
+is a parameter you have to set and that is the statistic we want a statistic to
+be equal to something if we put in the statistic to equal count let’s let’s see
+what happens so we are gonna we are going to plot
+this right now in real time on line 9 by hitting command enter and what you see
+here on the bottom is you see our names Dave Jacky Jill and mark but you see
+mark has a count of 3 on the top left here as you can see I am in there 3</p>
+<p>00:04
+times so that makes perfect sense but what if we wanted to plot instead of the
+occurrences of my name but we wanted to plot some of the values like let’s plot
+our ages that correspond with our names which is a little bit different here so
+instead of our x equals people which it will we’re also going to
+add an aesthetic 4y is equal to age and let’s see what we get here so we’re
+going to do command enter to refresh our DF base and when add to that base our
+geometry now let’s see what happens here
+we probably will get an error so it says down here that the stat count must not
+be used with a Y aesthetic so we can’t do a count here but what we do is we put
+in identity and once we do that we hit enter we have our identity it just means
+hey use this age as the value on our y-axis so we have our ages across the
+y-axis however as you can tell here since my name was repeated three times</p>
+<p>00:05
+it actually added up our ages so it a grenaded them so typically let’s just
+get rid of the other marks typically you
+would use this so we’ll delete two males
+and let’s rerun this again and it should make more sense did I get in here oh we
+didn’t get rid of the yeah just get rid of to two ages as well run that again
+and here we go so now the ages are there so 60 Jill is 60 you see it here it
+lines up so the difference between identity and count is very important one
+more thing here we want to also know which one’s male and which ones female
+that would be kind of fun to have let’s see if we can add anything to that so we
+have a geometry of stat equals identity comma AES fill equals and we’re gonna
+put the fill as our gender let’s see what happens there
+and these are fun to play around with so you can tell that the female is the red</p>
+<p>00:06
+and the male is the green and it did exactly what we were saying lots of
+different options on here you have to also learn how to use the help features
+within our itself by doing question mark you can type in things like G on
+went or G on bar and you can read the help down here if that doesn’t quite do
+it for you when you go to you stack over or something in google you google it
+you’re gonna see things that are similar and just getting used to the syntax is
+really what matters because you know this could have easily have been let’s
+let’s see what happens if we put this in our actual geometry plot up here as an
+aesthetic and we say fill equals gender rerun that and run it and it does the
+same thing so when you see things that are slightly different don’t be afraid
+to try them out as all I’m saying but yeah now we have a colorful pretty chart</p>
+<p>00:07
+and that’s the basics of bar charts so when you use identity you’re actually
+using the y-axis as some sort of value in your data in this case our age and
+when we’re using stat we’re doing a count of how many occurrences for
+example let’s do one more example and let’s let’s go and say let’s make this
+60 into a 23 so we should have if we do the stat equals count again but with the
+count remember we can’t have in a y-axis because we’re just doing a count of
+occurrences and we’re not doing people we’re doing age now let’s keep the fill
+as gender there and just see what happens so we hit enter gender not found
+let’s see there we go something just wasn’t loaded
+and now we run this again and we do have the gender works now of course this</p>
+<p>00:08
+doesn’t make too much sense because we have our ages as a continuous variable
+when we know it’s discrete so what we could do is what we have to do is we can
+say factor age and do it this way because remember it all depends on what
+you’re doing but if we do it as factor it actually stacks them up like that
+again factors are like categories instead of saying hey we have a
+continuous amount of ages which we really we do but not in this data you
+know we have a very specific age 23 doesn’t matter if you 23 and a half or
+23.2 so remember that if you run into that problem where this is gone and it
+like this you know you’re looking at a continuous spectrum between zero and
+whatever that highest number is you probably want this to be a factor or a
+category I want to know how categorically how many people are age 23
+that’s male and how many that are female and that’s what this chart shows you</p>
+<p>00:09
+simple and there are so many things you can do with ggplot I just wanted to give
+you a very quick explanation of how bar charts work so there you go let’s move
+on to the next lessonEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=2uOIKE-cp6w">
+<picture><img src="https://i.ytimg.com/vi_webp/2uOIKE-cp6w/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-1" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+previously we played around with some G on point or scatterplots
+today I’m gonna show you how to create some bar plots and so follow along add
+library ggplot and we’re going to create our own data frame as well which we
+haven’t had a lot of practice with so we
+can create a data frame we will assign a data frame structure so to get that
+structure we include data frame as a function the function data frame will
+return a data frame structure so a data frame we’re going to input random data
+so I’m going to put people and we’re going to set people equal to and
+remember the c is like reminds me of column so if i have a column of people
+the header is called people and the people that are in that column is
+whatever we want them to be let’s do Dave Jackie</p>
+<p>00:01
+mark and then we’ll do for an example we’re gonna repeat a couple of these
+let’s do mark mark a couple times and let’s add a another one Jill okay so we
+have some people here now this data frame only consists of one column at the
+moment so let’s create another column let’s add something by hitting a comma
+here I’m gonna hit enter just to get some white space in there I want to add
+their ages so we’ll do the same thing we’ll use a column let’s put that C
+there and let’s put in ages twenty three
+twenty five I’m just making these up and I think there should be at least six of
+them right and they don’t have to be in any order something like that so there
+are some ages for us and let’s add one more and put gender in there so a column
+that says gender we’re gonna do male female male male</p>
+<p>00:02
+male and finally female let’s hit command to enter on that and make sure
+your data frame your DF the object returned is a data frame you can see it
+over here and in our environment click on DF you can see what I’m talking about
+the columns of people columns of Ages and gender and they’re all lined up it’s
+a little confusing sometimes because you’re kind of looking at it
+horizontally here and then when it actually displays in the GUI interface
+or the view it goes downward so let’s let’s keep that in mind ok now we’re
+ready to create some bar plots let me show you the basic way to do it we’re
+gonna create our base plot we’re gonna call that our I don’t know DF base we’re
+going to assign this to DF base a GG plot remember and then we add the data
+equals data is equal to our data frame that we just created above that comma
+our aesthetic let’s say we want to plot our x equals let’s just go ahead and say</p>
+<p>00:03
+people across the x-axis and let’s let’s hit command enter on that you’ll see
+there’s no error but it also doesn’t plot anything even if I did DF base here
+and I hit command enter it plots remember it just set up our plots but it
+didn’t actually plot anything because there’s no us there’s no geometry to
+this so let’s go ahead and add a geometry let’s do a DF base and we’re
+going to add a geometry geometry gonna do G on bar now inside of this bar there
+is a parameter you have to set and that is the statistic we want a statistic to
+be equal to something if we put in the statistic to equal count let’s let’s see
+what happens so we are gonna we are going to plot
+this right now in real time on line 9 by hitting command enter and what you see
+here on the bottom is you see our names Dave Jacky Jill and mark but you see
+mark has a count of 3 on the top left here as you can see I am in there 3</p>
+<p>00:04
+times so that makes perfect sense but what if we wanted to plot instead of the
+occurrences of my name but we wanted to plot some of the values like let’s plot
+our ages that correspond with our names which is a little bit different here so
+instead of our x equals people which it will we’re also going to
+add an aesthetic 4y is equal to age and let’s see what we get here so we’re
+going to do command enter to refresh our DF base and when add to that base our
+geometry now let’s see what happens here
+we probably will get an error so it says down here that the stat count must not
+be used with a Y aesthetic so we can’t do a count here but what we do is we put
+in identity and once we do that we hit enter we have our identity it just means
+hey use this age as the value on our y-axis so we have our ages across the
+y-axis however as you can tell here since my name was repeated three times</p>
+<p>00:05
+it actually added up our ages so it a grenaded them so typically let’s just
+get rid of the other marks typically you
+would use this so we’ll delete two males
+and let’s rerun this again and it should make more sense did I get in here oh we
+didn’t get rid of the yeah just get rid of to two ages as well run that again
+and here we go so now the ages are there so 60 Jill is 60 you see it here it
+lines up so the difference between identity and count is very important one
+more thing here we want to also know which one’s male and which ones female
+that would be kind of fun to have let’s see if we can add anything to that so we
+have a geometry of stat equals identity comma AES fill equals and we’re gonna
+put the fill as our gender let’s see what happens there
+and these are fun to play around with so you can tell that the female is the red</p>
+<p>00:06
+and the male is the green and it did exactly what we were saying lots of
+different options on here you have to also learn how to use the help features
+within our itself by doing question mark you can type in things like G on
+went or G on bar and you can read the help down here if that doesn’t quite do
+it for you when you go to you stack over or something in google you google it
+you’re gonna see things that are similar and just getting used to the syntax is
+really what matters because you know this could have easily have been let’s
+let’s see what happens if we put this in our actual geometry plot up here as an
+aesthetic and we say fill equals gender rerun that and run it and it does the
+same thing so when you see things that are slightly different don’t be afraid
+to try them out as all I’m saying but yeah now we have a colorful pretty chart</p>
+<p>00:07
+and that’s the basics of bar charts so when you use identity you’re actually
+using the y-axis as some sort of value in your data in this case our age and
+when we’re using stat we’re doing a count of how many occurrences for
+example let’s do one more example and let’s let’s go and say let’s make this
+60 into a 23 so we should have if we do the stat equals count again but with the
+count remember we can’t have in a y-axis because we’re just doing a count of
+occurrences and we’re not doing people we’re doing age now let’s keep the fill
+as gender there and just see what happens so we hit enter gender not found
+let’s see there we go something just wasn’t loaded
+and now we run this again and we do have the gender works now of course this</p>
+<p>00:08
+doesn’t make too much sense because we have our ages as a continuous variable
+when we know it’s discrete so what we could do is what we have to do is we can
+say factor age and do it this way because remember it all depends on what
+you’re doing but if we do it as factor it actually stacks them up like that
+again factors are like categories instead of saying hey we have a
+continuous amount of ages which we really we do but not in this data you
+know we have a very specific age 23 doesn’t matter if you 23 and a half or
+23.2 so remember that if you run into that problem where this is gone and it
+like this you know you’re looking at a continuous spectrum between zero and
+whatever that highest number is you probably want this to be a factor or a
+category I want to know how categorically how many people are age 23
+that’s male and how many that are female and that’s what this chart shows you</p>
+<p>00:09
+simple and there are so many things you can do with ggplot I just wanted to give
+you a very quick explanation of how bar charts work so there you go let’s move
+on to the next lessonEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=2uOIKE-cp6w">
+<picture><img src="https://i.ytimg.com/vi_webp/2uOIKE-cp6w/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-2" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+previously we played around with some G on point or scatterplots
+today I’m gonna show you how to create some bar plots and so follow along add
+library ggplot and we’re going to create our own data frame as well which we
+haven’t had a lot of practice with so we
+can create a data frame we will assign a data frame structure so to get that
+structure we include data frame as a function the function data frame will
+return a data frame structure so a data frame we’re going to input random data
+so I’m going to put people and we’re going to set people equal to and
+remember the c is like reminds me of column so if i have a column of people
+the header is called people and the people that are in that column is
+whatever we want them to be let’s do Dave Jackie</p>
+<p>00:01
+mark and then we’ll do for an example we’re gonna repeat a couple of these
+let’s do mark mark a couple times and let’s add a another one Jill okay so we
+have some people here now this data frame only consists of one column at the
+moment so let’s create another column let’s add something by hitting a comma
+here I’m gonna hit enter just to get some white space in there I want to add
+their ages so we’ll do the same thing we’ll use a column let’s put that C
+there and let’s put in ages twenty three
+twenty five I’m just making these up and I think there should be at least six of
+them right and they don’t have to be in any order something like that so there
+are some ages for us and let’s add one more and put gender in there so a column
+that says gender we’re gonna do male female male male</p>
+<p>00:02
+male and finally female let’s hit command to enter on that and make sure
+your data frame your DF the object returned is a data frame you can see it
+over here and in our environment click on DF you can see what I’m talking about
+the columns of people columns of Ages and gender and they’re all lined up it’s
+a little confusing sometimes because you’re kind of looking at it
+horizontally here and then when it actually displays in the GUI interface
+or the view it goes downward so let’s let’s keep that in mind ok now we’re
+ready to create some bar plots let me show you the basic way to do it we’re
+gonna create our base plot we’re gonna call that our I don’t know DF base we’re
+going to assign this to DF base a GG plot remember and then we add the data
+equals data is equal to our data frame that we just created above that comma
+our aesthetic let’s say we want to plot our x equals let’s just go ahead and say</p>
+<p>00:03
+people across the x-axis and let’s let’s hit command enter on that you’ll see
+there’s no error but it also doesn’t plot anything even if I did DF base here
+and I hit command enter it plots remember it just set up our plots but it
+didn’t actually plot anything because there’s no us there’s no geometry to
+this so let’s go ahead and add a geometry let’s do a DF base and we’re
+going to add a geometry geometry gonna do G on bar now inside of this bar there
+is a parameter you have to set and that is the statistic we want a statistic to
+be equal to something if we put in the statistic to equal count let’s let’s see
+what happens so we are gonna we are going to plot
+this right now in real time on line 9 by hitting command enter and what you see
+here on the bottom is you see our names Dave Jacky Jill and mark but you see
+mark has a count of 3 on the top left here as you can see I am in there 3</p>
+<p>00:04
+times so that makes perfect sense but what if we wanted to plot instead of the
+occurrences of my name but we wanted to plot some of the values like let’s plot
+our ages that correspond with our names which is a little bit different here so
+instead of our x equals people which it will we’re also going to
+add an aesthetic 4y is equal to age and let’s see what we get here so we’re
+going to do command enter to refresh our DF base and when add to that base our
+geometry now let’s see what happens here
+we probably will get an error so it says down here that the stat count must not
+be used with a Y aesthetic so we can’t do a count here but what we do is we put
+in identity and once we do that we hit enter we have our identity it just means
+hey use this age as the value on our y-axis so we have our ages across the
+y-axis however as you can tell here since my name was repeated three times</p>
+<p>00:05
+it actually added up our ages so it a grenaded them so typically let’s just
+get rid of the other marks typically you
+would use this so we’ll delete two males
+and let’s rerun this again and it should make more sense did I get in here oh we
+didn’t get rid of the yeah just get rid of to two ages as well run that again
+and here we go so now the ages are there so 60 Jill is 60 you see it here it
+lines up so the difference between identity and count is very important one
+more thing here we want to also know which one’s male and which ones female
+that would be kind of fun to have let’s see if we can add anything to that so we
+have a geometry of stat equals identity comma AES fill equals and we’re gonna
+put the fill as our gender let’s see what happens there
+and these are fun to play around with so you can tell that the female is the red</p>
+<p>00:06
+and the male is the green and it did exactly what we were saying lots of
+different options on here you have to also learn how to use the help features
+within our itself by doing question mark you can type in things like G on
+went or G on bar and you can read the help down here if that doesn’t quite do
+it for you when you go to you stack over or something in google you google it
+you’re gonna see things that are similar and just getting used to the syntax is
+really what matters because you know this could have easily have been let’s
+let’s see what happens if we put this in our actual geometry plot up here as an
+aesthetic and we say fill equals gender rerun that and run it and it does the
+same thing so when you see things that are slightly different don’t be afraid
+to try them out as all I’m saying but yeah now we have a colorful pretty chart</p>
+<p>00:07
+and that’s the basics of bar charts so when you use identity you’re actually
+using the y-axis as some sort of value in your data in this case our age and
+when we’re using stat we’re doing a count of how many occurrences for
+example let’s do one more example and let’s let’s go and say let’s make this
+60 into a 23 so we should have if we do the stat equals count again but with the
+count remember we can’t have in a y-axis because we’re just doing a count of
+occurrences and we’re not doing people we’re doing age now let’s keep the fill
+as gender there and just see what happens so we hit enter gender not found
+let’s see there we go something just wasn’t loaded
+and now we run this again and we do have the gender works now of course this</p>
+<p>00:08
+doesn’t make too much sense because we have our ages as a continuous variable
+when we know it’s discrete so what we could do is what we have to do is we can
+say factor age and do it this way because remember it all depends on what
+you’re doing but if we do it as factor it actually stacks them up like that
+again factors are like categories instead of saying hey we have a
+continuous amount of ages which we really we do but not in this data you
+know we have a very specific age 23 doesn’t matter if you 23 and a half or
+23.2 so remember that if you run into that problem where this is gone and it
+like this you know you’re looking at a continuous spectrum between zero and
+whatever that highest number is you probably want this to be a factor or a
+category I want to know how categorically how many people are age 23
+that’s male and how many that are female and that’s what this chart shows you</p>
+<p>00:09
+simple and there are so many things you can do with ggplot I just wanted to give
+you a very quick explanation of how bar charts work so there you go let’s move
+on to the next lessonEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=2uOIKE-cp6w">
+<picture><img src="https://i.ytimg.com/vi_webp/2uOIKE-cp6w/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-3" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+previously we played around with some G on point or scatterplots
+today I’m gonna show you how to create some bar plots and so follow along add
+library ggplot and we’re going to create our own data frame as well which we
+haven’t had a lot of practice with so we
+can create a data frame we will assign a data frame structure so to get that
+structure we include data frame as a function the function data frame will
+return a data frame structure so a data frame we’re going to input random data
+so I’m going to put people and we’re going to set people equal to and
+remember the c is like reminds me of column so if i have a column of people
+the header is called people and the people that are in that column is
+whatever we want them to be let’s do Dave Jackie</p>
+<p>00:01
+mark and then we’ll do for an example we’re gonna repeat a couple of these
+let’s do mark mark a couple times and let’s add a another one Jill okay so we
+have some people here now this data frame only consists of one column at the
+moment so let’s create another column let’s add something by hitting a comma
+here I’m gonna hit enter just to get some white space in there I want to add
+their ages so we’ll do the same thing we’ll use a column let’s put that C
+there and let’s put in ages twenty three
+twenty five I’m just making these up and I think there should be at least six of
+them right and they don’t have to be in any order something like that so there
+are some ages for us and let’s add one more and put gender in there so a column
+that says gender we’re gonna do male female male male</p>
+<p>00:02
+male and finally female let’s hit command to enter on that and make sure
+your data frame your DF the object returned is a data frame you can see it
+over here and in our environment click on DF you can see what I’m talking about
+the columns of people columns of Ages and gender and they’re all lined up it’s
+a little confusing sometimes because you’re kind of looking at it
+horizontally here and then when it actually displays in the GUI interface
+or the view it goes downward so let’s let’s keep that in mind ok now we’re
+ready to create some bar plots let me show you the basic way to do it we’re
+gonna create our base plot we’re gonna call that our I don’t know DF base we’re
+going to assign this to DF base a GG plot remember and then we add the data
+equals data is equal to our data frame that we just created above that comma
+our aesthetic let’s say we want to plot our x equals let’s just go ahead and say</p>
+<p>00:03
+people across the x-axis and let’s let’s hit command enter on that you’ll see
+there’s no error but it also doesn’t plot anything even if I did DF base here
+and I hit command enter it plots remember it just set up our plots but it
+didn’t actually plot anything because there’s no us there’s no geometry to
+this so let’s go ahead and add a geometry let’s do a DF base and we’re
+going to add a geometry geometry gonna do G on bar now inside of this bar there
+is a parameter you have to set and that is the statistic we want a statistic to
+be equal to something if we put in the statistic to equal count let’s let’s see
+what happens so we are gonna we are going to plot
+this right now in real time on line 9 by hitting command enter and what you see
+here on the bottom is you see our names Dave Jacky Jill and mark but you see
+mark has a count of 3 on the top left here as you can see I am in there 3</p>
+<p>00:04
+times so that makes perfect sense but what if we wanted to plot instead of the
+occurrences of my name but we wanted to plot some of the values like let’s plot
+our ages that correspond with our names which is a little bit different here so
+instead of our x equals people which it will we’re also going to
+add an aesthetic 4y is equal to age and let’s see what we get here so we’re
+going to do command enter to refresh our DF base and when add to that base our
+geometry now let’s see what happens here
+we probably will get an error so it says down here that the stat count must not
+be used with a Y aesthetic so we can’t do a count here but what we do is we put
+in identity and once we do that we hit enter we have our identity it just means
+hey use this age as the value on our y-axis so we have our ages across the
+y-axis however as you can tell here since my name was repeated three times</p>
+<p>00:05
+it actually added up our ages so it a grenaded them so typically let’s just
+get rid of the other marks typically you
+would use this so we’ll delete two males
+and let’s rerun this again and it should make more sense did I get in here oh we
+didn’t get rid of the yeah just get rid of to two ages as well run that again
+and here we go so now the ages are there so 60 Jill is 60 you see it here it
+lines up so the difference between identity and count is very important one
+more thing here we want to also know which one’s male and which ones female
+that would be kind of fun to have let’s see if we can add anything to that so we
+have a geometry of stat equals identity comma AES fill equals and we’re gonna
+put the fill as our gender let’s see what happens there
+and these are fun to play around with so you can tell that the female is the red</p>
+<p>00:06
+and the male is the green and it did exactly what we were saying lots of
+different options on here you have to also learn how to use the help features
+within our itself by doing question mark you can type in things like G on
+went or G on bar and you can read the help down here if that doesn’t quite do
+it for you when you go to you stack over or something in google you google it
+you’re gonna see things that are similar and just getting used to the syntax is
+really what matters because you know this could have easily have been let’s
+let’s see what happens if we put this in our actual geometry plot up here as an
+aesthetic and we say fill equals gender rerun that and run it and it does the
+same thing so when you see things that are slightly different don’t be afraid
+to try them out as all I’m saying but yeah now we have a colorful pretty chart</p>
+<p>00:07
+and that’s the basics of bar charts so when you use identity you’re actually
+using the y-axis as some sort of value in your data in this case our age and
+when we’re using stat we’re doing a count of how many occurrences for
+example let’s do one more example and let’s let’s go and say let’s make this
+60 into a 23 so we should have if we do the stat equals count again but with the
+count remember we can’t have in a y-axis because we’re just doing a count of
+occurrences and we’re not doing people we’re doing age now let’s keep the fill
+as gender there and just see what happens so we hit enter gender not found
+let’s see there we go something just wasn’t loaded
+and now we run this again and we do have the gender works now of course this</p>
+<p>00:08
+doesn’t make too much sense because we have our ages as a continuous variable
+when we know it’s discrete so what we could do is what we have to do is we can
+say factor age and do it this way because remember it all depends on what
+you’re doing but if we do it as factor it actually stacks them up like that
+again factors are like categories instead of saying hey we have a
+continuous amount of ages which we really we do but not in this data you
+know we have a very specific age 23 doesn’t matter if you 23 and a half or
+23.2 so remember that if you run into that problem where this is gone and it
+like this you know you’re looking at a continuous spectrum between zero and
+whatever that highest number is you probably want this to be a factor or a
+category I want to know how categorically how many people are age 23
+that’s male and how many that are female and that’s what this chart shows you</p>
+<p>00:09
+simple and there are so many things you can do with ggplot I just wanted to give
+you a very quick explanation of how bar charts work so there you go let’s move
+on to the next lessonEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=2uOIKE-cp6w">
+<picture><img src="https://i.ytimg.com/vi_webp/2uOIKE-cp6w/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-4" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+previously we played around with some G on point or scatterplots
+today I’m gonna show you how to create some bar plots and so follow along add
+library ggplot and we’re going to create our own data frame as well which we
+haven’t had a lot of practice with so we
+can create a data frame we will assign a data frame structure so to get that
+structure we include data frame as a function the function data frame will
+return a data frame structure so a data frame we’re going to input random data
+so I’m going to put people and we’re going to set people equal to and
+remember the c is like reminds me of column so if i have a column of people
+the header is called people and the people that are in that column is
+whatever we want them to be let’s do Dave Jackie</p>
+<p>00:01
+mark and then we’ll do for an example we’re gonna repeat a couple of these
+let’s do mark mark a couple times and let’s add a another one Jill okay so we
+have some people here now this data frame only consists of one column at the
+moment so let’s create another column let’s add something by hitting a comma
+here I’m gonna hit enter just to get some white space in there I want to add
+their ages so we’ll do the same thing we’ll use a column let’s put that C
+there and let’s put in ages twenty three
+twenty five I’m just making these up and I think there should be at least six of
+them right and they don’t have to be in any order something like that so there
+are some ages for us and let’s add one more and put gender in there so a column
+that says gender we’re gonna do male female male male</p>
+<p>00:02
+male and finally female let’s hit command to enter on that and make sure
+your data frame your DF the object returned is a data frame you can see it
+over here and in our environment click on DF you can see what I’m talking about
+the columns of people columns of Ages and gender and they’re all lined up it’s
+a little confusing sometimes because you’re kind of looking at it
+horizontally here and then when it actually displays in the GUI interface
+or the view it goes downward so let’s let’s keep that in mind ok now we’re
+ready to create some bar plots let me show you the basic way to do it we’re
+gonna create our base plot we’re gonna call that our I don’t know DF base we’re
+going to assign this to DF base a GG plot remember and then we add the data
+equals data is equal to our data frame that we just created above that comma
+our aesthetic let’s say we want to plot our x equals let’s just go ahead and say</p>
+<p>00:03
+people across the x-axis and let’s let’s hit command enter on that you’ll see
+there’s no error but it also doesn’t plot anything even if I did DF base here
+and I hit command enter it plots remember it just set up our plots but it
+didn’t actually plot anything because there’s no us there’s no geometry to
+this so let’s go ahead and add a geometry let’s do a DF base and we’re
+going to add a geometry geometry gonna do G on bar now inside of this bar there
+is a parameter you have to set and that is the statistic we want a statistic to
+be equal to something if we put in the statistic to equal count let’s let’s see
+what happens so we are gonna we are going to plot
+this right now in real time on line 9 by hitting command enter and what you see
+here on the bottom is you see our names Dave Jacky Jill and mark but you see
+mark has a count of 3 on the top left here as you can see I am in there 3</p>
+<p>00:04
+times so that makes perfect sense but what if we wanted to plot instead of the
+occurrences of my name but we wanted to plot some of the values like let’s plot
+our ages that correspond with our names which is a little bit different here so
+instead of our x equals people which it will we’re also going to
+add an aesthetic 4y is equal to age and let’s see what we get here so we’re
+going to do command enter to refresh our DF base and when add to that base our
+geometry now let’s see what happens here
+we probably will get an error so it says down here that the stat count must not
+be used with a Y aesthetic so we can’t do a count here but what we do is we put
+in identity and once we do that we hit enter we have our identity it just means
+hey use this age as the value on our y-axis so we have our ages across the
+y-axis however as you can tell here since my name was repeated three times</p>
+<p>00:05
+it actually added up our ages so it a grenaded them so typically let’s just
+get rid of the other marks typically you
+would use this so we’ll delete two males
+and let’s rerun this again and it should make more sense did I get in here oh we
+didn’t get rid of the yeah just get rid of to two ages as well run that again
+and here we go so now the ages are there so 60 Jill is 60 you see it here it
+lines up so the difference between identity and count is very important one
+more thing here we want to also know which one’s male and which ones female
+that would be kind of fun to have let’s see if we can add anything to that so we
+have a geometry of stat equals identity comma AES fill equals and we’re gonna
+put the fill as our gender let’s see what happens there
+and these are fun to play around with so you can tell that the female is the red</p>
+<p>00:06
+and the male is the green and it did exactly what we were saying lots of
+different options on here you have to also learn how to use the help features
+within our itself by doing question mark you can type in things like G on
+went or G on bar and you can read the help down here if that doesn’t quite do
+it for you when you go to you stack over or something in google you google it
+you’re gonna see things that are similar and just getting used to the syntax is
+really what matters because you know this could have easily have been let’s
+let’s see what happens if we put this in our actual geometry plot up here as an
+aesthetic and we say fill equals gender rerun that and run it and it does the
+same thing so when you see things that are slightly different don’t be afraid
+to try them out as all I’m saying but yeah now we have a colorful pretty chart</p>
+<p>00:07
+and that’s the basics of bar charts so when you use identity you’re actually
+using the y-axis as some sort of value in your data in this case our age and
+when we’re using stat we’re doing a count of how many occurrences for
+example let’s do one more example and let’s let’s go and say let’s make this
+60 into a 23 so we should have if we do the stat equals count again but with the
+count remember we can’t have in a y-axis because we’re just doing a count of
+occurrences and we’re not doing people we’re doing age now let’s keep the fill
+as gender there and just see what happens so we hit enter gender not found
+let’s see there we go something just wasn’t loaded
+and now we run this again and we do have the gender works now of course this</p>
+<p>00:08
+doesn’t make too much sense because we have our ages as a continuous variable
+when we know it’s discrete so what we could do is what we have to do is we can
+say factor age and do it this way because remember it all depends on what
+you’re doing but if we do it as factor it actually stacks them up like that
+again factors are like categories instead of saying hey we have a
+continuous amount of ages which we really we do but not in this data you
+know we have a very specific age 23 doesn’t matter if you 23 and a half or
+23.2 so remember that if you run into that problem where this is gone and it
+like this you know you’re looking at a continuous spectrum between zero and
+whatever that highest number is you probably want this to be a factor or a
+category I want to know how categorically how many people are age 23
+that’s male and how many that are female and that’s what this chart shows you</p>
+<p>00:09
+simple and there are so many things you can do with ggplot I just wanted to give
+you a very quick explanation of how bar charts work so there you go let’s move
+on to the next lessonEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=2uOIKE-cp6w">
+<picture><img src="https://i.ytimg.com/vi_webp/2uOIKE-cp6w/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-5" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+previously we played around with some G on point or scatterplots
+today I’m gonna show you how to create some bar plots and so follow along add
+library ggplot and we’re going to create our own data frame as well which we
+haven’t had a lot of practice with so we
+can create a data frame we will assign a data frame structure so to get that
+structure we include data frame as a function the function data frame will
+return a data frame structure so a data frame we’re going to input random data
+so I’m going to put people and we’re going to set people equal to and
+remember the c is like reminds me of column so if i have a column of people
+the header is called people and the people that are in that column is
+whatever we want them to be let’s do Dave Jackie</p>
+<p>00:01
+mark and then we’ll do for an example we’re gonna repeat a couple of these
+let’s do mark mark a couple times and let’s add a another one Jill okay so we
+have some people here now this data frame only consists of one column at the
+moment so let’s create another column let’s add something by hitting a comma
+here I’m gonna hit enter just to get some white space in there I want to add
+their ages so we’ll do the same thing we’ll use a column let’s put that C
+there and let’s put in ages twenty three
+twenty five I’m just making these up and I think there should be at least six of
+them right and they don’t have to be in any order something like that so there
+are some ages for us and let’s add one more and put gender in there so a column
+that says gender we’re gonna do male female male male</p>
+<p>00:02
+male and finally female let’s hit command to enter on that and make sure
+your data frame your DF the object returned is a data frame you can see it
+over here and in our environment click on DF you can see what I’m talking about
+the columns of people columns of Ages and gender and they’re all lined up it’s
+a little confusing sometimes because you’re kind of looking at it
+horizontally here and then when it actually displays in the GUI interface
+or the view it goes downward so let’s let’s keep that in mind ok now we’re
+ready to create some bar plots let me show you the basic way to do it we’re
+gonna create our base plot we’re gonna call that our I don’t know DF base we’re
+going to assign this to DF base a GG plot remember and then we add the data
+equals data is equal to our data frame that we just created above that comma
+our aesthetic let’s say we want to plot our x equals let’s just go ahead and say</p>
+<p>00:03
+people across the x-axis and let’s let’s hit command enter on that you’ll see
+there’s no error but it also doesn’t plot anything even if I did DF base here
+and I hit command enter it plots remember it just set up our plots but it
+didn’t actually plot anything because there’s no us there’s no geometry to
+this so let’s go ahead and add a geometry let’s do a DF base and we’re
+going to add a geometry geometry gonna do G on bar now inside of this bar there
+is a parameter you have to set and that is the statistic we want a statistic to
+be equal to something if we put in the statistic to equal count let’s let’s see
+what happens so we are gonna we are going to plot
+this right now in real time on line 9 by hitting command enter and what you see
+here on the bottom is you see our names Dave Jacky Jill and mark but you see
+mark has a count of 3 on the top left here as you can see I am in there 3</p>
+<p>00:04
+times so that makes perfect sense but what if we wanted to plot instead of the
+occurrences of my name but we wanted to plot some of the values like let’s plot
+our ages that correspond with our names which is a little bit different here so
+instead of our x equals people which it will we’re also going to
+add an aesthetic 4y is equal to age and let’s see what we get here so we’re
+going to do command enter to refresh our DF base and when add to that base our
+geometry now let’s see what happens here
+we probably will get an error so it says down here that the stat count must not
+be used with a Y aesthetic so we can’t do a count here but what we do is we put
+in identity and once we do that we hit enter we have our identity it just means
+hey use this age as the value on our y-axis so we have our ages across the
+y-axis however as you can tell here since my name was repeated three times</p>
+<p>00:05
+it actually added up our ages so it a grenaded them so typically let’s just
+get rid of the other marks typically you
+would use this so we’ll delete two males
+and let’s rerun this again and it should make more sense did I get in here oh we
+didn’t get rid of the yeah just get rid of to two ages as well run that again
+and here we go so now the ages are there so 60 Jill is 60 you see it here it
+lines up so the difference between identity and count is very important one
+more thing here we want to also know which one’s male and which ones female
+that would be kind of fun to have let’s see if we can add anything to that so we
+have a geometry of stat equals identity comma AES fill equals and we’re gonna
+put the fill as our gender let’s see what happens there
+and these are fun to play around with so you can tell that the female is the red</p>
+<p>00:06
+and the male is the green and it did exactly what we were saying lots of
+different options on here you have to also learn how to use the help features
+within our itself by doing question mark you can type in things like G on
+went or G on bar and you can read the help down here if that doesn’t quite do
+it for you when you go to you stack over or something in google you google it
+you’re gonna see things that are similar and just getting used to the syntax is
+really what matters because you know this could have easily have been let’s
+let’s see what happens if we put this in our actual geometry plot up here as an
+aesthetic and we say fill equals gender rerun that and run it and it does the
+same thing so when you see things that are slightly different don’t be afraid
+to try them out as all I’m saying but yeah now we have a colorful pretty chart</p>
+<p>00:07
+and that’s the basics of bar charts so when you use identity you’re actually
+using the y-axis as some sort of value in your data in this case our age and
+when we’re using stat we’re doing a count of how many occurrences for
+example let’s do one more example and let’s let’s go and say let’s make this
+60 into a 23 so we should have if we do the stat equals count again but with the
+count remember we can’t have in a y-axis because we’re just doing a count of
+occurrences and we’re not doing people we’re doing age now let’s keep the fill
+as gender there and just see what happens so we hit enter gender not found
+let’s see there we go something just wasn’t loaded
+and now we run this again and we do have the gender works now of course this</p>
+<p>00:08
+doesn’t make too much sense because we have our ages as a continuous variable
+when we know it’s discrete so what we could do is what we have to do is we can
+say factor age and do it this way because remember it all depends on what
+you’re doing but if we do it as factor it actually stacks them up like that
+again factors are like categories instead of saying hey we have a
+continuous amount of ages which we really we do but not in this data you
+know we have a very specific age 23 doesn’t matter if you 23 and a half or
+23.2 so remember that if you run into that problem where this is gone and it
+like this you know you’re looking at a continuous spectrum between zero and
+whatever that highest number is you probably want this to be a factor or a
+category I want to know how categorically how many people are age 23
+that’s male and how many that are female and that’s what this chart shows you</p>
+<p>00:09
+simple and there are so many things you can do with ggplot I just wanted to give
+you a very quick explanation of how bar charts work so there you go let’s move
+on to the next lessonEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=2uOIKE-cp6w">
+<picture><img src="https://i.ytimg.com/vi_webp/2uOIKE-cp6w/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-6" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+previously we played around with some G on point or scatterplots
+today I’m gonna show you how to create some bar plots and so follow along add
+library ggplot and we’re going to create our own data frame as well which we
+haven’t had a lot of practice with so we
+can create a data frame we will assign a data frame structure so to get that
+structure we include data frame as a function the function data frame will
+return a data frame structure so a data frame we’re going to input random data
+so I’m going to put people and we’re going to set people equal to and
+remember the c is like reminds me of column so if i have a column of people
+the header is called people and the people that are in that column is
+whatever we want them to be let’s do Dave Jackie</p>
+<p>00:01
+mark and then we’ll do for an example we’re gonna repeat a couple of these
+let’s do mark mark a couple times and let’s add a another one Jill okay so we
+have some people here now this data frame only consists of one column at the
+moment so let’s create another column let’s add something by hitting a comma
+here I’m gonna hit enter just to get some white space in there I want to add
+their ages so we’ll do the same thing we’ll use a column let’s put that C
+there and let’s put in ages twenty three
+twenty five I’m just making these up and I think there should be at least six of
+them right and they don’t have to be in any order something like that so there
+are some ages for us and let’s add one more and put gender in there so a column
+that says gender we’re gonna do male female male male</p>
+<p>00:02
+male and finally female let’s hit command to enter on that and make sure
+your data frame your DF the object returned is a data frame you can see it
+over here and in our environment click on DF you can see what I’m talking about
+the columns of people columns of Ages and gender and they’re all lined up it’s
+a little confusing sometimes because you’re kind of looking at it
+horizontally here and then when it actually displays in the GUI interface
+or the view it goes downward so let’s let’s keep that in mind ok now we’re
+ready to create some bar plots let me show you the basic way to do it we’re
+gonna create our base plot we’re gonna call that our I don’t know DF base we’re
+going to assign this to DF base a GG plot remember and then we add the data
+equals data is equal to our data frame that we just created above that comma
+our aesthetic let’s say we want to plot our x equals let’s just go ahead and say</p>
+<p>00:03
+people across the x-axis and let’s let’s hit command enter on that you’ll see
+there’s no error but it also doesn’t plot anything even if I did DF base here
+and I hit command enter it plots remember it just set up our plots but it
+didn’t actually plot anything because there’s no us there’s no geometry to
+this so let’s go ahead and add a geometry let’s do a DF base and we’re
+going to add a geometry geometry gonna do G on bar now inside of this bar there
+is a parameter you have to set and that is the statistic we want a statistic to
+be equal to something if we put in the statistic to equal count let’s let’s see
+what happens so we are gonna we are going to plot
+this right now in real time on line 9 by hitting command enter and what you see
+here on the bottom is you see our names Dave Jacky Jill and mark but you see
+mark has a count of 3 on the top left here as you can see I am in there 3</p>
+<p>00:04
+times so that makes perfect sense but what if we wanted to plot instead of the
+occurrences of my name but we wanted to plot some of the values like let’s plot
+our ages that correspond with our names which is a little bit different here so
+instead of our x equals people which it will we’re also going to
+add an aesthetic 4y is equal to age and let’s see what we get here so we’re
+going to do command enter to refresh our DF base and when add to that base our
+geometry now let’s see what happens here
+we probably will get an error so it says down here that the stat count must not
+be used with a Y aesthetic so we can’t do a count here but what we do is we put
+in identity and once we do that we hit enter we have our identity it just means
+hey use this age as the value on our y-axis so we have our ages across the
+y-axis however as you can tell here since my name was repeated three times</p>
+<p>00:05
+it actually added up our ages so it a grenaded them so typically let’s just
+get rid of the other marks typically you
+would use this so we’ll delete two males
+and let’s rerun this again and it should make more sense did I get in here oh we
+didn’t get rid of the yeah just get rid of to two ages as well run that again
+and here we go so now the ages are there so 60 Jill is 60 you see it here it
+lines up so the difference between identity and count is very important one
+more thing here we want to also know which one’s male and which ones female
+that would be kind of fun to have let’s see if we can add anything to that so we
+have a geometry of stat equals identity comma AES fill equals and we’re gonna
+put the fill as our gender let’s see what happens there
+and these are fun to play around with so you can tell that the female is the red</p>
+<p>00:06
+and the male is the green and it did exactly what we were saying lots of
+different options on here you have to also learn how to use the help features
+within our itself by doing question mark you can type in things like G on
+went or G on bar and you can read the help down here if that doesn’t quite do
+it for you when you go to you stack over or something in google you google it
+you’re gonna see things that are similar and just getting used to the syntax is
+really what matters because you know this could have easily have been let’s
+let’s see what happens if we put this in our actual geometry plot up here as an
+aesthetic and we say fill equals gender rerun that and run it and it does the
+same thing so when you see things that are slightly different don’t be afraid
+to try them out as all I’m saying but yeah now we have a colorful pretty chart</p>
+<p>00:07
+and that’s the basics of bar charts so when you use identity you’re actually
+using the y-axis as some sort of value in your data in this case our age and
+when we’re using stat we’re doing a count of how many occurrences for
+example let’s do one more example and let’s let’s go and say let’s make this
+60 into a 23 so we should have if we do the stat equals count again but with the
+count remember we can’t have in a y-axis because we’re just doing a count of
+occurrences and we’re not doing people we’re doing age now let’s keep the fill
+as gender there and just see what happens so we hit enter gender not found
+let’s see there we go something just wasn’t loaded
+and now we run this again and we do have the gender works now of course this</p>
+<p>00:08
+doesn’t make too much sense because we have our ages as a continuous variable
+when we know it’s discrete so what we could do is what we have to do is we can
+say factor age and do it this way because remember it all depends on what
+you’re doing but if we do it as factor it actually stacks them up like that
+again factors are like categories instead of saying hey we have a
+continuous amount of ages which we really we do but not in this data you
+know we have a very specific age 23 doesn’t matter if you 23 and a half or
+23.2 so remember that if you run into that problem where this is gone and it
+like this you know you’re looking at a continuous spectrum between zero and
+whatever that highest number is you probably want this to be a factor or a
+category I want to know how categorically how many people are age 23
+that’s male and how many that are female and that’s what this chart shows you</p>
+<p>00:09
+simple and there are so many things you can do with ggplot I just wanted to give
+you a very quick explanation of how bar charts work so there you go let’s move
+on to the next lessonEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=2uOIKE-cp6w">
+<picture><img src="https://i.ytimg.com/vi_webp/2uOIKE-cp6w/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-7" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+previously we played around with some G on point or scatterplots
+today I’m gonna show you how to create some bar plots and so follow along add
+library ggplot and we’re going to create our own data frame as well which we
+haven’t had a lot of practice with so we
+can create a data frame we will assign a data frame structure so to get that
+structure we include data frame as a function the function data frame will
+return a data frame structure so a data frame we’re going to input random data
+so I’m going to put people and we’re going to set people equal to and
+remember the c is like reminds me of column so if i have a column of people
+the header is called people and the people that are in that column is
+whatever we want them to be let’s do Dave Jackie</p>
+<p>00:01
+mark and then we’ll do for an example we’re gonna repeat a couple of these
+let’s do mark mark a couple times and let’s add a another one Jill okay so we
+have some people here now this data frame only consists of one column at the
+moment so let’s create another column let’s add something by hitting a comma
+here I’m gonna hit enter just to get some white space in there I want to add
+their ages so we’ll do the same thing we’ll use a column let’s put that C
+there and let’s put in ages twenty three
+twenty five I’m just making these up and I think there should be at least six of
+them right and they don’t have to be in any order something like that so there
+are some ages for us and let’s add one more and put gender in there so a column
+that says gender we’re gonna do male female male male</p>
+<p>00:02
+male and finally female let’s hit command to enter on that and make sure
+your data frame your DF the object returned is a data frame you can see it
+over here and in our environment click on DF you can see what I’m talking about
+the columns of people columns of Ages and gender and they’re all lined up it’s
+a little confusing sometimes because you’re kind of looking at it
+horizontally here and then when it actually displays in the GUI interface
+or the view it goes downward so let’s let’s keep that in mind ok now we’re
+ready to create some bar plots let me show you the basic way to do it we’re
+gonna create our base plot we’re gonna call that our I don’t know DF base we’re
+going to assign this to DF base a GG plot remember and then we add the data
+equals data is equal to our data frame that we just created above that comma
+our aesthetic let’s say we want to plot our x equals let’s just go ahead and say</p>
+<p>00:03
+people across the x-axis and let’s let’s hit command enter on that you’ll see
+there’s no error but it also doesn’t plot anything even if I did DF base here
+and I hit command enter it plots remember it just set up our plots but it
+didn’t actually plot anything because there’s no us there’s no geometry to
+this so let’s go ahead and add a geometry let’s do a DF base and we’re
+going to add a geometry geometry gonna do G on bar now inside of this bar there
+is a parameter you have to set and that is the statistic we want a statistic to
+be equal to something if we put in the statistic to equal count let’s let’s see
+what happens so we are gonna we are going to plot
+this right now in real time on line 9 by hitting command enter and what you see
+here on the bottom is you see our names Dave Jacky Jill and mark but you see
+mark has a count of 3 on the top left here as you can see I am in there 3</p>
+<p>00:04
+times so that makes perfect sense but what if we wanted to plot instead of the
+occurrences of my name but we wanted to plot some of the values like let’s plot
+our ages that correspond with our names which is a little bit different here so
+instead of our x equals people which it will we’re also going to
+add an aesthetic 4y is equal to age and let’s see what we get here so we’re
+going to do command enter to refresh our DF base and when add to that base our
+geometry now let’s see what happens here
+we probably will get an error so it says down here that the stat count must not
+be used with a Y aesthetic so we can’t do a count here but what we do is we put
+in identity and once we do that we hit enter we have our identity it just means
+hey use this age as the value on our y-axis so we have our ages across the
+y-axis however as you can tell here since my name was repeated three times</p>
+<p>00:05
+it actually added up our ages so it a grenaded them so typically let’s just
+get rid of the other marks typically you
+would use this so we’ll delete two males
+and let’s rerun this again and it should make more sense did I get in here oh we
+didn’t get rid of the yeah just get rid of to two ages as well run that again
+and here we go so now the ages are there so 60 Jill is 60 you see it here it
+lines up so the difference between identity and count is very important one
+more thing here we want to also know which one’s male and which ones female
+that would be kind of fun to have let’s see if we can add anything to that so we
+have a geometry of stat equals identity comma AES fill equals and we’re gonna
+put the fill as our gender let’s see what happens there
+and these are fun to play around with so you can tell that the female is the red</p>
+<p>00:06
+and the male is the green and it did exactly what we were saying lots of
+different options on here you have to also learn how to use the help features
+within our itself by doing question mark you can type in things like G on
+went or G on bar and you can read the help down here if that doesn’t quite do
+it for you when you go to you stack over or something in google you google it
+you’re gonna see things that are similar and just getting used to the syntax is
+really what matters because you know this could have easily have been let’s
+let’s see what happens if we put this in our actual geometry plot up here as an
+aesthetic and we say fill equals gender rerun that and run it and it does the
+same thing so when you see things that are slightly different don’t be afraid
+to try them out as all I’m saying but yeah now we have a colorful pretty chart</p>
+<p>00:07
+and that’s the basics of bar charts so when you use identity you’re actually
+using the y-axis as some sort of value in your data in this case our age and
+when we’re using stat we’re doing a count of how many occurrences for
+example let’s do one more example and let’s let’s go and say let’s make this
+60 into a 23 so we should have if we do the stat equals count again but with the
+count remember we can’t have in a y-axis because we’re just doing a count of
+occurrences and we’re not doing people we’re doing age now let’s keep the fill
+as gender there and just see what happens so we hit enter gender not found
+let’s see there we go something just wasn’t loaded
+and now we run this again and we do have the gender works now of course this</p>
+<p>00:08
+doesn’t make too much sense because we have our ages as a continuous variable
+when we know it’s discrete so what we could do is what we have to do is we can
+say factor age and do it this way because remember it all depends on what
+you’re doing but if we do it as factor it actually stacks them up like that
+again factors are like categories instead of saying hey we have a
+continuous amount of ages which we really we do but not in this data you
+know we have a very specific age 23 doesn’t matter if you 23 and a half or
+23.2 so remember that if you run into that problem where this is gone and it
+like this you know you’re looking at a continuous spectrum between zero and
+whatever that highest number is you probably want this to be a factor or a
+category I want to know how categorically how many people are age 23
+that’s male and how many that are female and that’s what this chart shows you</p>
+<p>00:09
+simple and there are so many things you can do with ggplot I just wanted to give
+you a very quick explanation of how bar charts work so there you go let’s move
+on to the next lessonEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=2uOIKE-cp6w">
+<picture><img src="https://i.ytimg.com/vi_webp/2uOIKE-cp6w/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-8" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+previously we played around with some G on point or scatterplots
+today I’m gonna show you how to create some bar plots and so follow along add
+library ggplot and we’re going to create our own data frame as well which we
+haven’t had a lot of practice with so we
+can create a data frame we will assign a data frame structure so to get that
+structure we include data frame as a function the function data frame will
+return a data frame structure so a data frame we’re going to input random data
+so I’m going to put people and we’re going to set people equal to and
+remember the c is like reminds me of column so if i have a column of people
+the header is called people and the people that are in that column is
+whatever we want them to be let’s do Dave Jackie</p>
+<p>00:01
+mark and then we’ll do for an example we’re gonna repeat a couple of these
+let’s do mark mark a couple times and let’s add a another one Jill okay so we
+have some people here now this data frame only consists of one column at the
+moment so let’s create another column let’s add something by hitting a comma
+here I’m gonna hit enter just to get some white space in there I want to add
+their ages so we’ll do the same thing we’ll use a column let’s put that C
+there and let’s put in ages twenty three
+twenty five I’m just making these up and I think there should be at least six of
+them right and they don’t have to be in any order something like that so there
+are some ages for us and let’s add one more and put gender in there so a column
+that says gender we’re gonna do male female male male</p>
+<p>00:02
+male and finally female let’s hit command to enter on that and make sure
+your data frame your DF the object returned is a data frame you can see it
+over here and in our environment click on DF you can see what I’m talking about
+the columns of people columns of Ages and gender and they’re all lined up it’s
+a little confusing sometimes because you’re kind of looking at it
+horizontally here and then when it actually displays in the GUI interface
+or the view it goes downward so let’s let’s keep that in mind ok now we’re
+ready to create some bar plots let me show you the basic way to do it we’re
+gonna create our base plot we’re gonna call that our I don’t know DF base we’re
+going to assign this to DF base a GG plot remember and then we add the data
+equals data is equal to our data frame that we just created above that comma
+our aesthetic let’s say we want to plot our x equals let’s just go ahead and say</p>
+<p>00:03
+people across the x-axis and let’s let’s hit command enter on that you’ll see
+there’s no error but it also doesn’t plot anything even if I did DF base here
+and I hit command enter it plots remember it just set up our plots but it
+didn’t actually plot anything because there’s no us there’s no geometry to
+this so let’s go ahead and add a geometry let’s do a DF base and we’re
+going to add a geometry geometry gonna do G on bar now inside of this bar there
+is a parameter you have to set and that is the statistic we want a statistic to
+be equal to something if we put in the statistic to equal count let’s let’s see
+what happens so we are gonna we are going to plot
+this right now in real time on line 9 by hitting command enter and what you see
+here on the bottom is you see our names Dave Jacky Jill and mark but you see
+mark has a count of 3 on the top left here as you can see I am in there 3</p>
+<p>00:04
+times so that makes perfect sense but what if we wanted to plot instead of the
+occurrences of my name but we wanted to plot some of the values like let’s plot
+our ages that correspond with our names which is a little bit different here so
+instead of our x equals people which it will we’re also going to
+add an aesthetic 4y is equal to age and let’s see what we get here so we’re
+going to do command enter to refresh our DF base and when add to that base our
+geometry now let’s see what happens here
+we probably will get an error so it says down here that the stat count must not
+be used with a Y aesthetic so we can’t do a count here but what we do is we put
+in identity and once we do that we hit enter we have our identity it just means
+hey use this age as the value on our y-axis so we have our ages across the
+y-axis however as you can tell here since my name was repeated three times</p>
+<p>00:05
+it actually added up our ages so it a grenaded them so typically let’s just
+get rid of the other marks typically you
+would use this so we’ll delete two males
+and let’s rerun this again and it should make more sense did I get in here oh we
+didn’t get rid of the yeah just get rid of to two ages as well run that again
+and here we go so now the ages are there so 60 Jill is 60 you see it here it
+lines up so the difference between identity and count is very important one
+more thing here we want to also know which one’s male and which ones female
+that would be kind of fun to have let’s see if we can add anything to that so we
+have a geometry of stat equals identity comma AES fill equals and we’re gonna
+put the fill as our gender let’s see what happens there
+and these are fun to play around with so you can tell that the female is the red</p>
+<p>00:06
+and the male is the green and it did exactly what we were saying lots of
+different options on here you have to also learn how to use the help features
+within our itself by doing question mark you can type in things like G on
+went or G on bar and you can read the help down here if that doesn’t quite do
+it for you when you go to you stack over or something in google you google it
+you’re gonna see things that are similar and just getting used to the syntax is
+really what matters because you know this could have easily have been let’s
+let’s see what happens if we put this in our actual geometry plot up here as an
+aesthetic and we say fill equals gender rerun that and run it and it does the
+same thing so when you see things that are slightly different don’t be afraid
+to try them out as all I’m saying but yeah now we have a colorful pretty chart</p>
+<p>00:07
+and that’s the basics of bar charts so when you use identity you’re actually
+using the y-axis as some sort of value in your data in this case our age and
+when we’re using stat we’re doing a count of how many occurrences for
+example let’s do one more example and let’s let’s go and say let’s make this
+60 into a 23 so we should have if we do the stat equals count again but with the
+count remember we can’t have in a y-axis because we’re just doing a count of
+occurrences and we’re not doing people we’re doing age now let’s keep the fill
+as gender there and just see what happens so we hit enter gender not found
+let’s see there we go something just wasn’t loaded
+and now we run this again and we do have the gender works now of course this</p>
+<p>00:08
+doesn’t make too much sense because we have our ages as a continuous variable
+when we know it’s discrete so what we could do is what we have to do is we can
+say factor age and do it this way because remember it all depends on what
+you’re doing but if we do it as factor it actually stacks them up like that
+again factors are like categories instead of saying hey we have a
+continuous amount of ages which we really we do but not in this data you
+know we have a very specific age 23 doesn’t matter if you 23 and a half or
+23.2 so remember that if you run into that problem where this is gone and it
+like this you know you’re looking at a continuous spectrum between zero and
+whatever that highest number is you probably want this to be a factor or a
+category I want to know how categorically how many people are age 23
+that’s male and how many that are female and that’s what this chart shows you</p>
+<p>00:09
+simple and there are so many things you can do with ggplot I just wanted to give
+you a very quick explanation of how bar charts work so there you go let’s move
+on to the next lessonEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=2uOIKE-cp6w">
+<picture><img src="https://i.ytimg.com/vi_webp/2uOIKE-cp6w/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-9" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+previously we played around with some G on point or scatterplots
+today I’m gonna show you how to create some bar plots and so follow along add
+library ggplot and we’re going to create our own data frame as well which we
+haven’t had a lot of practice with so we
+can create a data frame we will assign a data frame structure so to get that
+structure we include data frame as a function the function data frame will
+return a data frame structure so a data frame we’re going to input random data
+so I’m going to put people and we’re going to set people equal to and
+remember the c is like reminds me of column so if i have a column of people
+the header is called people and the people that are in that column is
+whatever we want them to be let’s do Dave Jackie</p>
+<p>00:01
+mark and then we’ll do for an example we’re gonna repeat a couple of these
+let’s do mark mark a couple times and let’s add a another one Jill okay so we
+have some people here now this data frame only consists of one column at the
+moment so let’s create another column let’s add something by hitting a comma
+here I’m gonna hit enter just to get some white space in there I want to add
+their ages so we’ll do the same thing we’ll use a column let’s put that C
+there and let’s put in ages twenty three
+twenty five I’m just making these up and I think there should be at least six of
+them right and they don’t have to be in any order something like that so there
+are some ages for us and let’s add one more and put gender in there so a column
+that says gender we’re gonna do male female male male</p>
+<p>00:02
+male and finally female let’s hit command to enter on that and make sure
+your data frame your DF the object returned is a data frame you can see it
+over here and in our environment click on DF you can see what I’m talking about
+the columns of people columns of Ages and gender and they’re all lined up it’s
+a little confusing sometimes because you’re kind of looking at it
+horizontally here and then when it actually displays in the GUI interface
+or the view it goes downward so let’s let’s keep that in mind ok now we’re
+ready to create some bar plots let me show you the basic way to do it we’re
+gonna create our base plot we’re gonna call that our I don’t know DF base we’re
+going to assign this to DF base a GG plot remember and then we add the data
+equals data is equal to our data frame that we just created above that comma
+our aesthetic let’s say we want to plot our x equals let’s just go ahead and say</p>
+<p>00:03
+people across the x-axis and let’s let’s hit command enter on that you’ll see
+there’s no error but it also doesn’t plot anything even if I did DF base here
+and I hit command enter it plots remember it just set up our plots but it
+didn’t actually plot anything because there’s no us there’s no geometry to
+this so let’s go ahead and add a geometry let’s do a DF base and we’re
+going to add a geometry geometry gonna do G on bar now inside of this bar there
+is a parameter you have to set and that is the statistic we want a statistic to
+be equal to something if we put in the statistic to equal count let’s let’s see
+what happens so we are gonna we are going to plot
+this right now in real time on line 9 by hitting command enter and what you see
+here on the bottom is you see our names Dave Jacky Jill and mark but you see
+mark has a count of 3 on the top left here as you can see I am in there 3</p>
+<p>00:04
+times so that makes perfect sense but what if we wanted to plot instead of the
+occurrences of my name but we wanted to plot some of the values like let’s plot
+our ages that correspond with our names which is a little bit different here so
+instead of our x equals people which it will we’re also going to
+add an aesthetic 4y is equal to age and let’s see what we get here so we’re
+going to do command enter to refresh our DF base and when add to that base our
+geometry now let’s see what happens here
+we probably will get an error so it says down here that the stat count must not
+be used with a Y aesthetic so we can’t do a count here but what we do is we put
+in identity and once we do that we hit enter we have our identity it just means
+hey use this age as the value on our y-axis so we have our ages across the
+y-axis however as you can tell here since my name was repeated three times</p>
+<p>00:05
+it actually added up our ages so it a grenaded them so typically let’s just
+get rid of the other marks typically you
+would use this so we’ll delete two males
+and let’s rerun this again and it should make more sense did I get in here oh we
+didn’t get rid of the yeah just get rid of to two ages as well run that again
+and here we go so now the ages are there so 60 Jill is 60 you see it here it
+lines up so the difference between identity and count is very important one
+more thing here we want to also know which one’s male and which ones female
+that would be kind of fun to have let’s see if we can add anything to that so we
+have a geometry of stat equals identity comma AES fill equals and we’re gonna
+put the fill as our gender let’s see what happens there
+and these are fun to play around with so you can tell that the female is the red</p>
+<p>00:06
+and the male is the green and it did exactly what we were saying lots of
+different options on here you have to also learn how to use the help features
+within our itself by doing question mark you can type in things like G on
+went or G on bar and you can read the help down here if that doesn’t quite do
+it for you when you go to you stack over or something in google you google it
+you’re gonna see things that are similar and just getting used to the syntax is
+really what matters because you know this could have easily have been let’s
+let’s see what happens if we put this in our actual geometry plot up here as an
+aesthetic and we say fill equals gender rerun that and run it and it does the
+same thing so when you see things that are slightly different don’t be afraid
+to try them out as all I’m saying but yeah now we have a colorful pretty chart</p>
+<p>00:07
+and that’s the basics of bar charts so when you use identity you’re actually
+using the y-axis as some sort of value in your data in this case our age and
+when we’re using stat we’re doing a count of how many occurrences for
+example let’s do one more example and let’s let’s go and say let’s make this
+60 into a 23 so we should have if we do the stat equals count again but with the
+count remember we can’t have in a y-axis because we’re just doing a count of
+occurrences and we’re not doing people we’re doing age now let’s keep the fill
+as gender there and just see what happens so we hit enter gender not found
+let’s see there we go something just wasn’t loaded
+and now we run this again and we do have the gender works now of course this</p>
+<p>00:08
+doesn’t make too much sense because we have our ages as a continuous variable
+when we know it’s discrete so what we could do is what we have to do is we can
+say factor age and do it this way because remember it all depends on what
+you’re doing but if we do it as factor it actually stacks them up like that
+again factors are like categories instead of saying hey we have a
+continuous amount of ages which we really we do but not in this data you
+know we have a very specific age 23 doesn’t matter if you 23 and a half or
+23.2 so remember that if you run into that problem where this is gone and it
+like this you know you’re looking at a continuous spectrum between zero and
+whatever that highest number is you probably want this to be a factor or a
+category I want to know how categorically how many people are age 23
+that’s male and how many that are female and that’s what this chart shows you</p>
+<p>00:09
+simple and there are so many things you can do with ggplot I just wanted to give
+you a very quick explanation of how bar charts work so there you go let’s move
+on to the next lessonEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=2uOIKE-cp6w">
+<picture><img src="https://i.ytimg.com/vi_webp/2uOIKE-cp6w/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-10" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+previously we played around with some G on point or scatterplots
+today I’m gonna show you how to create some bar plots and so follow along add
+library ggplot and we’re going to create our own data frame as well which we
+haven’t had a lot of practice with so we
+can create a data frame we will assign a data frame structure so to get that
+structure we include data frame as a function the function data frame will
+return a data frame structure so a data frame we’re going to input random data
+so I’m going to put people and we’re going to set people equal to and
+remember the c is like reminds me of column so if i have a column of people
+the header is called people and the people that are in that column is
+whatever we want them to be let’s do Dave Jackie</p>
+<p>00:01
+mark and then we’ll do for an example we’re gonna repeat a couple of these
+let’s do mark mark a couple times and let’s add a another one Jill okay so we
+have some people here now this data frame only consists of one column at the
+moment so let’s create another column let’s add something by hitting a comma
+here I’m gonna hit enter just to get some white space in there I want to add
+their ages so we’ll do the same thing we’ll use a column let’s put that C
+there and let’s put in ages twenty three
+twenty five I’m just making these up and I think there should be at least six of
+them right and they don’t have to be in any order something like that so there
+are some ages for us and let’s add one more and put gender in there so a column
+that says gender we’re gonna do male female male male</p>
+<p>00:02
+male and finally female let’s hit command to enter on that and make sure
+your data frame your DF the object returned is a data frame you can see it
+over here and in our environment click on DF you can see what I’m talking about
+the columns of people columns of Ages and gender and they’re all lined up it’s
+a little confusing sometimes because you’re kind of looking at it
+horizontally here and then when it actually displays in the GUI interface
+or the view it goes downward so let’s let’s keep that in mind ok now we’re
+ready to create some bar plots let me show you the basic way to do it we’re
+gonna create our base plot we’re gonna call that our I don’t know DF base we’re
+going to assign this to DF base a GG plot remember and then we add the data
+equals data is equal to our data frame that we just created above that comma
+our aesthetic let’s say we want to plot our x equals let’s just go ahead and say</p>
+<p>00:03
+people across the x-axis and let’s let’s hit command enter on that you’ll see
+there’s no error but it also doesn’t plot anything even if I did DF base here
+and I hit command enter it plots remember it just set up our plots but it
+didn’t actually plot anything because there’s no us there’s no geometry to
+this so let’s go ahead and add a geometry let’s do a DF base and we’re
+going to add a geometry geometry gonna do G on bar now inside of this bar there
+is a parameter you have to set and that is the statistic we want a statistic to
+be equal to something if we put in the statistic to equal count let’s let’s see
+what happens so we are gonna we are going to plot
+this right now in real time on line 9 by hitting command enter and what you see
+here on the bottom is you see our names Dave Jacky Jill and mark but you see
+mark has a count of 3 on the top left here as you can see I am in there 3</p>
+<p>00:04
+times so that makes perfect sense but what if we wanted to plot instead of the
+occurrences of my name but we wanted to plot some of the values like let’s plot
+our ages that correspond with our names which is a little bit different here so
+instead of our x equals people which it will we’re also going to
+add an aesthetic 4y is equal to age and let’s see what we get here so we’re
+going to do command enter to refresh our DF base and when add to that base our
+geometry now let’s see what happens here
+we probably will get an error so it says down here that the stat count must not
+be used with a Y aesthetic so we can’t do a count here but what we do is we put
+in identity and once we do that we hit enter we have our identity it just means
+hey use this age as the value on our y-axis so we have our ages across the
+y-axis however as you can tell here since my name was repeated three times</p>
+<p>00:05
+it actually added up our ages so it a grenaded them so typically let’s just
+get rid of the other marks typically you
+would use this so we’ll delete two males
+and let’s rerun this again and it should make more sense did I get in here oh we
+didn’t get rid of the yeah just get rid of to two ages as well run that again
+and here we go so now the ages are there so 60 Jill is 60 you see it here it
+lines up so the difference between identity and count is very important one
+more thing here we want to also know which one’s male and which ones female
+that would be kind of fun to have let’s see if we can add anything to that so we
+have a geometry of stat equals identity comma AES fill equals and we’re gonna
+put the fill as our gender let’s see what happens there
+and these are fun to play around with so you can tell that the female is the red</p>
+<p>00:06
+and the male is the green and it did exactly what we were saying lots of
+different options on here you have to also learn how to use the help features
+within our itself by doing question mark you can type in things like G on
+went or G on bar and you can read the help down here if that doesn’t quite do
+it for you when you go to you stack over or something in google you google it
+you’re gonna see things that are similar and just getting used to the syntax is
+really what matters because you know this could have easily have been let’s
+let’s see what happens if we put this in our actual geometry plot up here as an
+aesthetic and we say fill equals gender rerun that and run it and it does the
+same thing so when you see things that are slightly different don’t be afraid
+to try them out as all I’m saying but yeah now we have a colorful pretty chart</p>
+<p>00:07
+and that’s the basics of bar charts so when you use identity you’re actually
+using the y-axis as some sort of value in your data in this case our age and
+when we’re using stat we’re doing a count of how many occurrences for
+example let’s do one more example and let’s let’s go and say let’s make this
+60 into a 23 so we should have if we do the stat equals count again but with the
+count remember we can’t have in a y-axis because we’re just doing a count of
+occurrences and we’re not doing people we’re doing age now let’s keep the fill
+as gender there and just see what happens so we hit enter gender not found
+let’s see there we go something just wasn’t loaded
+and now we run this again and we do have the gender works now of course this</p>
+<p>00:08
+doesn’t make too much sense because we have our ages as a continuous variable
+when we know it’s discrete so what we could do is what we have to do is we can
+say factor age and do it this way because remember it all depends on what
+you’re doing but if we do it as factor it actually stacks them up like that
+again factors are like categories instead of saying hey we have a
+continuous amount of ages which we really we do but not in this data you
+know we have a very specific age 23 doesn’t matter if you 23 and a half or
+23.2 so remember that if you run into that problem where this is gone and it
+like this you know you’re looking at a continuous spectrum between zero and
+whatever that highest number is you probably want this to be a factor or a
+category I want to know how categorically how many people are age 23
+that’s male and how many that are female and that’s what this chart shows you</p>
+<p>00:09
+simple and there are so many things you can do with ggplot I just wanted to give
+you a very quick explanation of how bar charts work so there you go let’s move
+on to the next lessonEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=2uOIKE-cp6w">
+<picture><img src="https://i.ytimg.com/vi_webp/2uOIKE-cp6w/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-11" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+previously we played around with some G on point or scatterplots
+today I’m gonna show you how to create some bar plots and so follow along add
+library ggplot and we’re going to create our own data frame as well which we
+haven’t had a lot of practice with so we
+can create a data frame we will assign a data frame structure so to get that
+structure we include data frame as a function the function data frame will
+return a data frame structure so a data frame we’re going to input random data
+so I’m going to put people and we’re going to set people equal to and
+remember the c is like reminds me of column so if i have a column of people
+the header is called people and the people that are in that column is
+whatever we want them to be let’s do Dave Jackie</p>
+<p>00:01
+mark and then we’ll do for an example we’re gonna repeat a couple of these
+let’s do mark mark a couple times and let’s add a another one Jill okay so we
+have some people here now this data frame only consists of one column at the
+moment so let’s create another column let’s add something by hitting a comma
+here I’m gonna hit enter just to get some white space in there I want to add
+their ages so we’ll do the same thing we’ll use a column let’s put that C
+there and let’s put in ages twenty three
+twenty five I’m just making these up and I think there should be at least six of
+them right and they don’t have to be in any order something like that so there
+are some ages for us and let’s add one more and put gender in there so a column
+that says gender we’re gonna do male female male male</p>
+<p>00:02
+male and finally female let’s hit command to enter on that and make sure
+your data frame your DF the object returned is a data frame you can see it
+over here and in our environment click on DF you can see what I’m talking about
+the columns of people columns of Ages and gender and they’re all lined up it’s
+a little confusing sometimes because you’re kind of looking at it
+horizontally here and then when it actually displays in the GUI interface
+or the view it goes downward so let’s let’s keep that in mind ok now we’re
+ready to create some bar plots let me show you the basic way to do it we’re
+gonna create our base plot we’re gonna call that our I don’t know DF base we’re
+going to assign this to DF base a GG plot remember and then we add the data
+equals data is equal to our data frame that we just created above that comma
+our aesthetic let’s say we want to plot our x equals let’s just go ahead and say</p>
+<p>00:03
+people across the x-axis and let’s let’s hit command enter on that you’ll see
+there’s no error but it also doesn’t plot anything even if I did DF base here
+and I hit command enter it plots remember it just set up our plots but it
+didn’t actually plot anything because there’s no us there’s no geometry to
+this so let’s go ahead and add a geometry let’s do a DF base and we’re
+going to add a geometry geometry gonna do G on bar now inside of this bar there
+is a parameter you have to set and that is the statistic we want a statistic to
+be equal to something if we put in the statistic to equal count let’s let’s see
+what happens so we are gonna we are going to plot
+this right now in real time on line 9 by hitting command enter and what you see
+here on the bottom is you see our names Dave Jacky Jill and mark but you see
+mark has a count of 3 on the top left here as you can see I am in there 3</p>
+<p>00:04
+times so that makes perfect sense but what if we wanted to plot instead of the
+occurrences of my name but we wanted to plot some of the values like let’s plot
+our ages that correspond with our names which is a little bit different here so
+instead of our x equals people which it will we’re also going to
+add an aesthetic 4y is equal to age and let’s see what we get here so we’re
+going to do command enter to refresh our DF base and when add to that base our
+geometry now let’s see what happens here
+we probably will get an error so it says down here that the stat count must not
+be used with a Y aesthetic so we can’t do a count here but what we do is we put
+in identity and once we do that we hit enter we have our identity it just means
+hey use this age as the value on our y-axis so we have our ages across the
+y-axis however as you can tell here since my name was repeated three times</p>
+<p>00:05
+it actually added up our ages so it a grenaded them so typically let’s just
+get rid of the other marks typically you
+would use this so we’ll delete two males
+and let’s rerun this again and it should make more sense did I get in here oh we
+didn’t get rid of the yeah just get rid of to two ages as well run that again
+and here we go so now the ages are there so 60 Jill is 60 you see it here it
+lines up so the difference between identity and count is very important one
+more thing here we want to also know which one’s male and which ones female
+that would be kind of fun to have let’s see if we can add anything to that so we
+have a geometry of stat equals identity comma AES fill equals and we’re gonna
+put the fill as our gender let’s see what happens there
+and these are fun to play around with so you can tell that the female is the red</p>
+<p>00:06
+and the male is the green and it did exactly what we were saying lots of
+different options on here you have to also learn how to use the help features
+within our itself by doing question mark you can type in things like G on
+went or G on bar and you can read the help down here if that doesn’t quite do
+it for you when you go to you stack over or something in google you google it
+you’re gonna see things that are similar and just getting used to the syntax is
+really what matters because you know this could have easily have been let’s
+let’s see what happens if we put this in our actual geometry plot up here as an
+aesthetic and we say fill equals gender rerun that and run it and it does the
+same thing so when you see things that are slightly different don’t be afraid
+to try them out as all I’m saying but yeah now we have a colorful pretty chart</p>
+<p>00:07
+and that’s the basics of bar charts so when you use identity you’re actually
+using the y-axis as some sort of value in your data in this case our age and
+when we’re using stat we’re doing a count of how many occurrences for
+example let’s do one more example and let’s let’s go and say let’s make this
+60 into a 23 so we should have if we do the stat equals count again but with the
+count remember we can’t have in a y-axis because we’re just doing a count of
+occurrences and we’re not doing people we’re doing age now let’s keep the fill
+as gender there and just see what happens so we hit enter gender not found
+let’s see there we go something just wasn’t loaded
+and now we run this again and we do have the gender works now of course this</p>
+<p>00:08
+doesn’t make too much sense because we have our ages as a continuous variable
+when we know it’s discrete so what we could do is what we have to do is we can
+say factor age and do it this way because remember it all depends on what
+you’re doing but if we do it as factor it actually stacks them up like that
+again factors are like categories instead of saying hey we have a
+continuous amount of ages which we really we do but not in this data you
+know we have a very specific age 23 doesn’t matter if you 23 and a half or
+23.2 so remember that if you run into that problem where this is gone and it
+like this you know you’re looking at a continuous spectrum between zero and
+whatever that highest number is you probably want this to be a factor or a
+category I want to know how categorically how many people are age 23
+that’s male and how many that are female and that’s what this chart shows you</p>
+<p>00:09
+simple and there are so many things you can do with ggplot I just wanted to give
+you a very quick explanation of how bar charts work so there you go let’s move
+on to the next lessonEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=2uOIKE-cp6w">
+<picture><img src="https://i.ytimg.com/vi_webp/2uOIKE-cp6w/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-12" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+previously we played around with some G on point or scatterplots
+today I’m gonna show you how to create some bar plots and so follow along add
+library ggplot and we’re going to create our own data frame as well which we
+haven’t had a lot of practice with so we
+can create a data frame we will assign a data frame structure so to get that
+structure we include data frame as a function the function data frame will
+return a data frame structure so a data frame we’re going to input random data
+so I’m going to put people and we’re going to set people equal to and
+remember the c is like reminds me of column so if i have a column of people
+the header is called people and the people that are in that column is
+whatever we want them to be let’s do Dave Jackie</p>
+<p>00:01
+mark and then we’ll do for an example we’re gonna repeat a couple of these
+let’s do mark mark a couple times and let’s add a another one Jill okay so we
+have some people here now this data frame only consists of one column at the
+moment so let’s create another column let’s add something by hitting a comma
+here I’m gonna hit enter just to get some white space in there I want to add
+their ages so we’ll do the same thing we’ll use a column let’s put that C
+there and let’s put in ages twenty three
+twenty five I’m just making these up and I think there should be at least six of
+them right and they don’t have to be in any order something like that so there
+are some ages for us and let’s add one more and put gender in there so a column
+that says gender we’re gonna do male female male male</p>
+<p>00:02
+male and finally female let’s hit command to enter on that and make sure
+your data frame your DF the object returned is a data frame you can see it
+over here and in our environment click on DF you can see what I’m talking about
+the columns of people columns of Ages and gender and they’re all lined up it’s
+a little confusing sometimes because you’re kind of looking at it
+horizontally here and then when it actually displays in the GUI interface
+or the view it goes downward so let’s let’s keep that in mind ok now we’re
+ready to create some bar plots let me show you the basic way to do it we’re
+gonna create our base plot we’re gonna call that our I don’t know DF base we’re
+going to assign this to DF base a GG plot remember and then we add the data
+equals data is equal to our data frame that we just created above that comma
+our aesthetic let’s say we want to plot our x equals let’s just go ahead and say</p>
+<p>00:03
+people across the x-axis and let’s let’s hit command enter on that you’ll see
+there’s no error but it also doesn’t plot anything even if I did DF base here
+and I hit command enter it plots remember it just set up our plots but it
+didn’t actually plot anything because there’s no us there’s no geometry to
+this so let’s go ahead and add a geometry let’s do a DF base and we’re
+going to add a geometry geometry gonna do G on bar now inside of this bar there
+is a parameter you have to set and that is the statistic we want a statistic to
+be equal to something if we put in the statistic to equal count let’s let’s see
+what happens so we are gonna we are going to plot
+this right now in real time on line 9 by hitting command enter and what you see
+here on the bottom is you see our names Dave Jacky Jill and mark but you see
+mark has a count of 3 on the top left here as you can see I am in there 3</p>
+<p>00:04
+times so that makes perfect sense but what if we wanted to plot instead of the
+occurrences of my name but we wanted to plot some of the values like let’s plot
+our ages that correspond with our names which is a little bit different here so
+instead of our x equals people which it will we’re also going to
+add an aesthetic 4y is equal to age and let’s see what we get here so we’re
+going to do command enter to refresh our DF base and when add to that base our
+geometry now let’s see what happens here
+we probably will get an error so it says down here that the stat count must not
+be used with a Y aesthetic so we can’t do a count here but what we do is we put
+in identity and once we do that we hit enter we have our identity it just means
+hey use this age as the value on our y-axis so we have our ages across the
+y-axis however as you can tell here since my name was repeated three times</p>
+<p>00:05
+it actually added up our ages so it a grenaded them so typically let’s just
+get rid of the other marks typically you
+would use this so we’ll delete two males
+and let’s rerun this again and it should make more sense did I get in here oh we
+didn’t get rid of the yeah just get rid of to two ages as well run that again
+and here we go so now the ages are there so 60 Jill is 60 you see it here it
+lines up so the difference between identity and count is very important one
+more thing here we want to also know which one’s male and which ones female
+that would be kind of fun to have let’s see if we can add anything to that so we
+have a geometry of stat equals identity comma AES fill equals and we’re gonna
+put the fill as our gender let’s see what happens there
+and these are fun to play around with so you can tell that the female is the red</p>
+<p>00:06
+and the male is the green and it did exactly what we were saying lots of
+different options on here you have to also learn how to use the help features
+within our itself by doing question mark you can type in things like G on
+went or G on bar and you can read the help down here if that doesn’t quite do
+it for you when you go to you stack over or something in google you google it
+you’re gonna see things that are similar and just getting used to the syntax is
+really what matters because you know this could have easily have been let’s
+let’s see what happens if we put this in our actual geometry plot up here as an
+aesthetic and we say fill equals gender rerun that and run it and it does the
+same thing so when you see things that are slightly different don’t be afraid
+to try them out as all I’m saying but yeah now we have a colorful pretty chart</p>
+<p>00:07
+and that’s the basics of bar charts so when you use identity you’re actually
+using the y-axis as some sort of value in your data in this case our age and
+when we’re using stat we’re doing a count of how many occurrences for
+example let’s do one more example and let’s let’s go and say let’s make this
+60 into a 23 so we should have if we do the stat equals count again but with the
+count remember we can’t have in a y-axis because we’re just doing a count of
+occurrences and we’re not doing people we’re doing age now let’s keep the fill
+as gender there and just see what happens so we hit enter gender not found
+let’s see there we go something just wasn’t loaded
+and now we run this again and we do have the gender works now of course this</p>
+<p>00:08
+doesn’t make too much sense because we have our ages as a continuous variable
+when we know it’s discrete so what we could do is what we have to do is we can
+say factor age and do it this way because remember it all depends on what
+you’re doing but if we do it as factor it actually stacks them up like that
+again factors are like categories instead of saying hey we have a
+continuous amount of ages which we really we do but not in this data you
+know we have a very specific age 23 doesn’t matter if you 23 and a half or
+23.2 so remember that if you run into that problem where this is gone and it
+like this you know you’re looking at a continuous spectrum between zero and
+whatever that highest number is you probably want this to be a factor or a
+category I want to know how categorically how many people are age 23
+that’s male and how many that are female and that’s what this chart shows you</p>
+<p>00:09
+simple and there are so many things you can do with ggplot I just wanted to give
+you a very quick explanation of how bar charts work so there you go let’s move
+on to the next lessonEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=2uOIKE-cp6w">
+<picture><img src="https://i.ytimg.com/vi_webp/2uOIKE-cp6w/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-13" class="section level2">
+<h2>Click the image to play video.</h2>
+<p>00:00
+previously we played around with some G on point or scatterplots
+today I’m gonna show you how to create some bar plots and so follow along add
+library ggplot and we’re going to create our own data frame as well which we
+haven’t had a lot of practice with so we
+can create a data frame we will assign a data frame structure so to get that
+structure we include data frame as a function the function data frame will
+return a data frame structure so a data frame we’re going to input random data
+so I’m going to put people and we’re going to set people equal to and
+remember the c is like reminds me of column so if i have a column of people
+the header is called people and the people that are in that column is
+whatever we want them to be let’s do Dave Jackie</p>
+<p>00:01
+mark and then we’ll do for an example we’re gonna repeat a couple of these
+let’s do mark mark a couple times and let’s add a another one Jill okay so we
+have some people here now this data frame only consists of one column at the
+moment so let’s create another column let’s add something by hitting a comma
+here I’m gonna hit enter just to get some white space in there I want to add
+their ages so we’ll do the same thing we’ll use a column let’s put that C
+there and let’s put in ages twenty three
+twenty five I’m just making these up and I think there should be at least six of
+them right and they don’t have to be in any order something like that so there
+are some ages for us and let’s add one more and put gender in there so a column
+that says gender we’re gonna do male female male male</p>
+<p>00:02
+male and finally female let’s hit command to enter on that and make sure
+your data frame your DF the object returned is a data frame you can see it
+over here and in our environment click on DF you can see what I’m talking about
+the columns of people columns of Ages and gender and they’re all lined up it’s
+a little confusing sometimes because you’re kind of looking at it
+horizontally here and then when it actually displays in the GUI interface
+or the view it goes downward so let’s let’s keep that in mind ok now we’re
+ready to create some bar plots let me show you the basic way to do it we’re
+gonna create our base plot we’re gonna call that our I don’t know DF base we’re
+going to assign this to DF base a GG plot remember and then we add the data
+equals data is equal to our data frame that we just created above that comma
+our aesthetic let’s say we want to plot our x equals let’s just go ahead and say</p>
+<p>00:03
+people across the x-axis and let’s let’s hit command enter on that you’ll see
+there’s no error but it also doesn’t plot anything even if I did DF base here
+and I hit command enter it plots remember it just set up our plots but it
+didn’t actually plot anything because there’s no us there’s no geometry to
+this so let’s go ahead and add a geometry let’s do a DF base and we’re
+going to add a geometry geometry gonna do G on bar now inside of this bar there
+is a parameter you have to set and that is the statistic we want a statistic to
+be equal to something if we put in the statistic to equal count let’s let’s see
+what happens so we are gonna we are going to plot
+this right now in real time on line 9 by hitting command enter and what you see
+here on the bottom is you see our names Dave Jacky Jill and mark but you see
+mark has a count of 3 on the top left here as you can see I am in there 3</p>
+<p>00:04
+times so that makes perfect sense but what if we wanted to plot instead of the
+occurrences of my name but we wanted to plot some of the values like let’s plot
+our ages that correspond with our names which is a little bit different here so
+instead of our x equals people which it will we’re also going to
+add an aesthetic 4y is equal to age and let’s see what we get here so we’re
+going to do command enter to refresh our DF base and when add to that base our
+geometry now let’s see what happens here
+we probably will get an error so it says down here that the stat count must not
+be used with a Y aesthetic so we can’t do a count here but what we do is we put
+in identity and once we do that we hit enter we have our identity it just means
+hey use this age as the value on our y-axis so we have our ages across the
+y-axis however as you can tell here since my name was repeated three times</p>
+<p>00:05
+it actually added up our ages so it a grenaded them so typically let’s just
+get rid of the other marks typically you
+would use this so we’ll delete two males
+and let’s rerun this again and it should make more sense did I get in here oh we
+didn’t get rid of the yeah just get rid of to two ages as well run that again
+and here we go so now the ages are there so 60 Jill is 60 you see it here it
+lines up so the difference between identity and count is very important one
+more thing here we want to also know which one’s male and which ones female
+that would be kind of fun to have let’s see if we can add anything to that so we
+have a geometry of stat equals identity comma AES fill equals and we’re gonna
+put the fill as our gender let’s see what happens there
+and these are fun to play around with so you can tell that the female is the red</p>
+<p>00:06
+and the male is the green and it did exactly what we were saying lots of
+different options on here you have to also learn how to use the help features
+within our itself by doing question mark you can type in things like G on
+went or G on bar and you can read the help down here if that doesn’t quite do
+it for you when you go to you stack over or something in google you google it
+you’re gonna see things that are similar and just getting used to the syntax is
+really what matters because you know this could have easily have been let’s
+let’s see what happens if we put this in our actual geometry plot up here as an
+aesthetic and we say fill equals gender rerun that and run it and it does the
+same thing so when you see things that are slightly different don’t be afraid
+to try them out as all I’m saying but yeah now we have a colorful pretty chart</p>
+<p>00:07
+and that’s the basics of bar charts so when you use identity you’re actually
+using the y-axis as some sort of value in your data in this case our age and
+when we’re using stat we’re doing a count of how many occurrences for
+example let’s do one more example and let’s let’s go and say let’s make this
+60 into a 23 so we should have if we do the stat equals count again but with the
+count remember we can’t have in a y-axis because we’re just doing a count of
+occurrences and we’re not doing people we’re doing age now let’s keep the fill
+as gender there and just see what happens so we hit enter gender not found
+let’s see there we go something just wasn’t loaded
+and now we run this again and we do have the gender works now of course this</p>
+<p>00:08
+doesn’t make too much sense because we have our ages as a continuous variable
+when we know it’s discrete so what we could do is what we have to do is we can
+say factor age and do it this way because remember it all depends on what
+you’re doing but if we do it as factor it actually stacks them up like that
+again factors are like categories instead of saying hey we have a
+continuous amount of ages which we really we do but not in this data you
+know we have a very specific age 23 doesn’t matter if you 23 and a half or
+23.2 so remember that if you run into that problem where this is gone and it
+like this you know you’re looking at a continuous spectrum between zero and
+whatever that highest number is you probably want this to be a factor or a
+category I want to know how categorically how many people are age 23
+that’s male and how many that are female and that’s what this chart shows you</p>
+<p>00:09
+simple and there are so many things you can do with ggplot I just wanted to give
+you a very quick explanation of how bar charts work so there you go let’s move
+on to the next lessonEnd of file</p>
+<p><a href="https://www.youtube.com/watch?v=2uOIKE-cp6w">
+<picture><img src="https://i.ytimg.com/vi_webp/2uOIKE-cp6w/maxresdefault.webp"></picture>
+</a></p>
+</div>
+<div id="click-the-image-to-play-video.-14" class="section level2">
 <h2>Click the image to play video.</h2>
 <p>00:00
 previously we played around with some G on point or scatterplots

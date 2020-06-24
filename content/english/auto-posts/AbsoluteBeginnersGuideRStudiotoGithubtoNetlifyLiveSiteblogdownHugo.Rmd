@@ -4,8 +4,3139 @@ date: 2020-06-13
 categories:
   - Absolute Beginners Guide
 tags:
-  - Test
-  - Test2
+  - blogdown
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=vVHZ76OwPow">
+<picture><img src="https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+welcome back today we're gonna almost finalize our little Hugo block down
+project by pulling everything that we had in github to a net low fee
+deployable site so basically as you commit messages from our studio to
+github and you push that code there Netley fee will automatically monitor
+that public folder and as it changes it'll update your website today we're
+gonna do that so stay tuned this is my main website
+it's where I teach how to create content online make money mostly for teaching
+people just like this channel here so if you want to check out how to create
+these videos check out that site margin grass comm all right so let's get
+started we have a project open and if you follow it along from the previous
+tutorials you should be at the same steps I have multiple playlists on this
+channel so some of them are merged together like for example the absolute
+
+00:01
+beginners guide to learn an R has a mixture of multiple playlists in it if
+you want something very specific check out all the different playlists I have
+for particular interests that being said this is episode 5 of the blog down Hugo
+site I believe and what I want to show you is a couple of things let's start
+off with making sure that you did commit the right code to github and again you
+need to have a github account and you've had to have done the previous tutorial
+to follow along so here we go the first thing I want to show you is
+let's look at our files real quick so I'm going to look at files I will jump
+out of the way so under files you see that I do have a public folder here
+right if you don't that means you didn't build your site correctly I'm not sure
+how we built in the last tutorial but what you want to do because the site's
+already set up you want to do blog down colon colon build site I don't think you
+
+00:02
+need to do the Hugo build I believe it's just plain build site so let's just do
+that when you build the site that actually creates two public folders it
+gives you a synopsis right here how many pages were built
+how many static files how many processed image
+etc etc right but you're only concerned about the public folder now remember
+when I said to commit we can go to get here Louis let's save it ctrl s let's
+see if that does the trick so what little show and get is anything
+that's actually had a change to it I literally just built this a few minutes
+ago so nothing's really changed on my end and that's the problem that you have
+that's why they're not showing up here so if you make a change to something
+it'll show up if you make a change it's a something that's in github so to speak
+you should have a bunch of public folders there so in order to add those
+
+00:03
+to the staging area you can do tools shell and remember we would do git add -
+just plain public because we want only the public folder
+/and I put star there I'm not sure if that's really necessary or not but get
+space add space public forward slash star now of course I don't have anything
+here but you should or you've already committed to github so this will catch
+you up if you didn't you would click the commit button and give it a name we'll
+make more reasonable names so there's no changes I didn't make any changes but
+then you'd click on push everything's up to date cool oh one thing to note is
+when you first start a project when you first wake up in the morning after
+you've done all your commits and pushes the first thing you want to do is has
+this little down arrow is pull pull from
+your github so if you're on a Macbook or a PC and you switch to one or the other
+the next day and you want to resume where you left off you would open this
+up your little project and pull from the
+github so you do the pull so you get the latest version that's just a little
+
+00:04
+extra narrative for you all right so we know that everything is on let's see
+github that's easy part right everything is easy so we go to github calm you
+could see that we have multiple projects mines on the left-hand side you might
+have to fiddle around and find where yours is but we have project one here
+and I accidentally added everything to it but you literally only need to do
+your paw like so under this public folder is
+where we're gonna be focused on and if you scroll down you'll see you have an
+index.html that's gonna be key for heaven net laughs II find it okay so
+simple as that now let's go to net loafie I if you haven't created a free
+account do those proper steps so sign up
+use your Google or get github account to
+sign up etc etc I'm already signed up so I'll just log in if you haven't signed
+
+00:05
+up please do so pause this video and then come right back to it now this is
+very simple new site from get click on that continuous deployment that's what
+we're gonna be doing continuous deployment I you've heard of maybe the
+term continuous integration continuous deployment CI slash CD you'll see that
+everywhere so now you can say to your potential employer yes I've done
+continuous integration continuous deployment because this is what that is
+we're gonna do it from github I'll show you anyways how that how that is true
+okay so from github it automatically I'm already connected
+to my github it'll probably give you a couple steps to connect to your github
+maybe ask you for a permission or something like that select yes then
+it'll automatically know all of your github projects so allow net Lafite to
+access github now the project that I've created was the project one remember so
+I have mine right here let's click on that it's simple so it automatically
+pulls in my owner I'm the owner branch to you know keep all these probably the
+
+00:06
+same build command this is important I don't know if it knows this or if I put
+this in previously somehow it knows it but make sure you have build command is
+lowercase Hugo and publish directory is public and it's case sensitive so lower
+case H and lower case P because you've created a public folder you could have
+called it something else you know through blog down build in with extra
+parameters you just said hey I don't want to publish in public but make sure
+because we're building this is a command net if he's gonna go to our public site
+on github and it's gonna know it's a hugo site because we're giving it a
+command it's basically on net leafy side
+using the command line saying hey how do i bill
+this website we're telling it how to do that now now you might have an advanced
+checkbox here click on show advanced okay this is cool to find environment
+variables this is exactly what you need you need a new variable here and it says
+
+00:07
+variable name and value what are we gonna put there let me tell you we are
+gonna put in the word Hugo underscore version ole capital all capital Hugo
+underscore version and everything is case-sensitive and what value are we
+gonna put there well let's go back to our real quick let's do blog down : :
+Hugo underscore version and figure out the exact version that you need which
+you need everything here zero point seven two point zero is the version that
+I have yours might be slightly different copy all three of those values with the
+periods so zero point seven two point zero let's go back to net loafie
+somewhere and type in zero point zero weight zero point seven two point zero
+and you need that lead in zero because it's got what its gonna do it's gonna
+actually go to particular websites using that value as a parameter and it'll be
+within the URL as a I forget what you call it but that zero matters so zero
+
+00:08
+point seven two point zero now click on deploy site and what you'll see
+hopefully it might not show you a whole lot right here but mine says in queued
+so give it a few seconds a few minutes you can hit the refresh button here if
+you'd like which I usually do and you see it's building you can actually click
+on it when you click on it and you scroll down you'll see what it's doing
+so if you clicked on it a little bit earlier you would have seen these
+populate right here and if you got an error it would show you an error and
+that's important to find because a lot of people probably will have an error
+the first couple times they might have put it wrong version in there or
+something like that but remember that URL I was talking about it actually goes
+out somewhere and uses that point seven to I right here Hugo static site
+generator version 0.72 it it just it needs to be exact that's all
+
+00:09
+there is to it but it looks like everything ran just fine right built
+completed finished processing build 32 milliseconds whatever it took
+now where is this site at well we can click on preview that's where the site
+is this is the site and it works all of this works posts all of my posts work
+and it's all under a net low fee site now you can customize your net low fee
+URL a little bit I believe we're not gonna get into that yet so that's that
+you've got a live site that anybody can go to you can share that URL that's up
+there it's not very user friendly yet though so in the next tutorial I want to
+show you how to customize that that URL just a little bit for free and how to
+add posts if you guys liked this tutorial please share it save it show me
+your website's post your links inside of
+the comments whatever you want to do I'd like to see what you've come up with
+what themes you chose we're getting close we're getting close so a few more
+
+00:10
+steps and we'll be we'll be on our way you [Music]End of file
+
+---
+title: RStudio to Github to Netlify Live Site   blogdown Hugo
+date: 2020-06-13
+categories:
+  - Absolute Beginners Guide
+tags:
+  - r statistical language
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=vVHZ76OwPow">
+<picture><img src="https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+welcome back today we're gonna almost finalize our little Hugo block down
+project by pulling everything that we had in github to a net low fee
+deployable site so basically as you commit messages from our studio to
+github and you push that code there Netley fee will automatically monitor
+that public folder and as it changes it'll update your website today we're
+gonna do that so stay tuned this is my main website
+it's where I teach how to create content online make money mostly for teaching
+people just like this channel here so if you want to check out how to create
+these videos check out that site margin grass comm all right so let's get
+started we have a project open and if you follow it along from the previous
+tutorials you should be at the same steps I have multiple playlists on this
+channel so some of them are merged together like for example the absolute
+
+00:01
+beginners guide to learn an R has a mixture of multiple playlists in it if
+you want something very specific check out all the different playlists I have
+for particular interests that being said this is episode 5 of the blog down Hugo
+site I believe and what I want to show you is a couple of things let's start
+off with making sure that you did commit the right code to github and again you
+need to have a github account and you've had to have done the previous tutorial
+to follow along so here we go the first thing I want to show you is
+let's look at our files real quick so I'm going to look at files I will jump
+out of the way so under files you see that I do have a public folder here
+right if you don't that means you didn't build your site correctly I'm not sure
+how we built in the last tutorial but what you want to do because the site's
+already set up you want to do blog down colon colon build site I don't think you
+
+00:02
+need to do the Hugo build I believe it's just plain build site so let's just do
+that when you build the site that actually creates two public folders it
+gives you a synopsis right here how many pages were built
+how many static files how many processed image
+etc etc right but you're only concerned about the public folder now remember
+when I said to commit we can go to get here Louis let's save it ctrl s let's
+see if that does the trick so what little show and get is anything
+that's actually had a change to it I literally just built this a few minutes
+ago so nothing's really changed on my end and that's the problem that you have
+that's why they're not showing up here so if you make a change to something
+it'll show up if you make a change it's a something that's in github so to speak
+you should have a bunch of public folders there so in order to add those
+
+00:03
+to the staging area you can do tools shell and remember we would do git add -
+just plain public because we want only the public folder
+/and I put star there I'm not sure if that's really necessary or not but get
+space add space public forward slash star now of course I don't have anything
+here but you should or you've already committed to github so this will catch
+you up if you didn't you would click the commit button and give it a name we'll
+make more reasonable names so there's no changes I didn't make any changes but
+then you'd click on push everything's up to date cool oh one thing to note is
+when you first start a project when you first wake up in the morning after
+you've done all your commits and pushes the first thing you want to do is has
+this little down arrow is pull pull from
+your github so if you're on a Macbook or a PC and you switch to one or the other
+the next day and you want to resume where you left off you would open this
+up your little project and pull from the
+github so you do the pull so you get the latest version that's just a little
+
+00:04
+extra narrative for you all right so we know that everything is on let's see
+github that's easy part right everything is easy so we go to github calm you
+could see that we have multiple projects mines on the left-hand side you might
+have to fiddle around and find where yours is but we have project one here
+and I accidentally added everything to it but you literally only need to do
+your paw like so under this public folder is
+where we're gonna be focused on and if you scroll down you'll see you have an
+index.html that's gonna be key for heaven net laughs II find it okay so
+simple as that now let's go to net loafie I if you haven't created a free
+account do those proper steps so sign up
+use your Google or get github account to
+sign up etc etc I'm already signed up so I'll just log in if you haven't signed
+
+00:05
+up please do so pause this video and then come right back to it now this is
+very simple new site from get click on that continuous deployment that's what
+we're gonna be doing continuous deployment I you've heard of maybe the
+term continuous integration continuous deployment CI slash CD you'll see that
+everywhere so now you can say to your potential employer yes I've done
+continuous integration continuous deployment because this is what that is
+we're gonna do it from github I'll show you anyways how that how that is true
+okay so from github it automatically I'm already connected
+to my github it'll probably give you a couple steps to connect to your github
+maybe ask you for a permission or something like that select yes then
+it'll automatically know all of your github projects so allow net Lafite to
+access github now the project that I've created was the project one remember so
+I have mine right here let's click on that it's simple so it automatically
+pulls in my owner I'm the owner branch to you know keep all these probably the
+
+00:06
+same build command this is important I don't know if it knows this or if I put
+this in previously somehow it knows it but make sure you have build command is
+lowercase Hugo and publish directory is public and it's case sensitive so lower
+case H and lower case P because you've created a public folder you could have
+called it something else you know through blog down build in with extra
+parameters you just said hey I don't want to publish in public but make sure
+because we're building this is a command net if he's gonna go to our public site
+on github and it's gonna know it's a hugo site because we're giving it a
+command it's basically on net leafy side
+using the command line saying hey how do i bill
+this website we're telling it how to do that now now you might have an advanced
+checkbox here click on show advanced okay this is cool to find environment
+variables this is exactly what you need you need a new variable here and it says
+
+00:07
+variable name and value what are we gonna put there let me tell you we are
+gonna put in the word Hugo underscore version ole capital all capital Hugo
+underscore version and everything is case-sensitive and what value are we
+gonna put there well let's go back to our real quick let's do blog down : :
+Hugo underscore version and figure out the exact version that you need which
+you need everything here zero point seven two point zero is the version that
+I have yours might be slightly different copy all three of those values with the
+periods so zero point seven two point zero let's go back to net loafie
+somewhere and type in zero point zero weight zero point seven two point zero
+and you need that lead in zero because it's got what its gonna do it's gonna
+actually go to particular websites using that value as a parameter and it'll be
+within the URL as a I forget what you call it but that zero matters so zero
+
+00:08
+point seven two point zero now click on deploy site and what you'll see
+hopefully it might not show you a whole lot right here but mine says in queued
+so give it a few seconds a few minutes you can hit the refresh button here if
+you'd like which I usually do and you see it's building you can actually click
+on it when you click on it and you scroll down you'll see what it's doing
+so if you clicked on it a little bit earlier you would have seen these
+populate right here and if you got an error it would show you an error and
+that's important to find because a lot of people probably will have an error
+the first couple times they might have put it wrong version in there or
+something like that but remember that URL I was talking about it actually goes
+out somewhere and uses that point seven to I right here Hugo static site
+generator version 0.72 it it just it needs to be exact that's all
+
+00:09
+there is to it but it looks like everything ran just fine right built
+completed finished processing build 32 milliseconds whatever it took
+now where is this site at well we can click on preview that's where the site
+is this is the site and it works all of this works posts all of my posts work
+and it's all under a net low fee site now you can customize your net low fee
+URL a little bit I believe we're not gonna get into that yet so that's that
+you've got a live site that anybody can go to you can share that URL that's up
+there it's not very user friendly yet though so in the next tutorial I want to
+show you how to customize that that URL just a little bit for free and how to
+add posts if you guys liked this tutorial please share it save it show me
+your website's post your links inside of
+the comments whatever you want to do I'd like to see what you've come up with
+what themes you chose we're getting close we're getting close so a few more
+
+00:10
+steps and we'll be we'll be on our way you [Music]End of file
+
+---
+title: RStudio to Github to Netlify Live Site   blogdown Hugo
+date: 2020-06-13
+categories:
+  - Absolute Beginners Guide
+tags:
+  - r language
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=vVHZ76OwPow">
+<picture><img src="https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+welcome back today we're gonna almost finalize our little Hugo block down
+project by pulling everything that we had in github to a net low fee
+deployable site so basically as you commit messages from our studio to
+github and you push that code there Netley fee will automatically monitor
+that public folder and as it changes it'll update your website today we're
+gonna do that so stay tuned this is my main website
+it's where I teach how to create content online make money mostly for teaching
+people just like this channel here so if you want to check out how to create
+these videos check out that site margin grass comm all right so let's get
+started we have a project open and if you follow it along from the previous
+tutorials you should be at the same steps I have multiple playlists on this
+channel so some of them are merged together like for example the absolute
+
+00:01
+beginners guide to learn an R has a mixture of multiple playlists in it if
+you want something very specific check out all the different playlists I have
+for particular interests that being said this is episode 5 of the blog down Hugo
+site I believe and what I want to show you is a couple of things let's start
+off with making sure that you did commit the right code to github and again you
+need to have a github account and you've had to have done the previous tutorial
+to follow along so here we go the first thing I want to show you is
+let's look at our files real quick so I'm going to look at files I will jump
+out of the way so under files you see that I do have a public folder here
+right if you don't that means you didn't build your site correctly I'm not sure
+how we built in the last tutorial but what you want to do because the site's
+already set up you want to do blog down colon colon build site I don't think you
+
+00:02
+need to do the Hugo build I believe it's just plain build site so let's just do
+that when you build the site that actually creates two public folders it
+gives you a synopsis right here how many pages were built
+how many static files how many processed image
+etc etc right but you're only concerned about the public folder now remember
+when I said to commit we can go to get here Louis let's save it ctrl s let's
+see if that does the trick so what little show and get is anything
+that's actually had a change to it I literally just built this a few minutes
+ago so nothing's really changed on my end and that's the problem that you have
+that's why they're not showing up here so if you make a change to something
+it'll show up if you make a change it's a something that's in github so to speak
+you should have a bunch of public folders there so in order to add those
+
+00:03
+to the staging area you can do tools shell and remember we would do git add -
+just plain public because we want only the public folder
+/and I put star there I'm not sure if that's really necessary or not but get
+space add space public forward slash star now of course I don't have anything
+here but you should or you've already committed to github so this will catch
+you up if you didn't you would click the commit button and give it a name we'll
+make more reasonable names so there's no changes I didn't make any changes but
+then you'd click on push everything's up to date cool oh one thing to note is
+when you first start a project when you first wake up in the morning after
+you've done all your commits and pushes the first thing you want to do is has
+this little down arrow is pull pull from
+your github so if you're on a Macbook or a PC and you switch to one or the other
+the next day and you want to resume where you left off you would open this
+up your little project and pull from the
+github so you do the pull so you get the latest version that's just a little
+
+00:04
+extra narrative for you all right so we know that everything is on let's see
+github that's easy part right everything is easy so we go to github calm you
+could see that we have multiple projects mines on the left-hand side you might
+have to fiddle around and find where yours is but we have project one here
+and I accidentally added everything to it but you literally only need to do
+your paw like so under this public folder is
+where we're gonna be focused on and if you scroll down you'll see you have an
+index.html that's gonna be key for heaven net laughs II find it okay so
+simple as that now let's go to net loafie I if you haven't created a free
+account do those proper steps so sign up
+use your Google or get github account to
+sign up etc etc I'm already signed up so I'll just log in if you haven't signed
+
+00:05
+up please do so pause this video and then come right back to it now this is
+very simple new site from get click on that continuous deployment that's what
+we're gonna be doing continuous deployment I you've heard of maybe the
+term continuous integration continuous deployment CI slash CD you'll see that
+everywhere so now you can say to your potential employer yes I've done
+continuous integration continuous deployment because this is what that is
+we're gonna do it from github I'll show you anyways how that how that is true
+okay so from github it automatically I'm already connected
+to my github it'll probably give you a couple steps to connect to your github
+maybe ask you for a permission or something like that select yes then
+it'll automatically know all of your github projects so allow net Lafite to
+access github now the project that I've created was the project one remember so
+I have mine right here let's click on that it's simple so it automatically
+pulls in my owner I'm the owner branch to you know keep all these probably the
+
+00:06
+same build command this is important I don't know if it knows this or if I put
+this in previously somehow it knows it but make sure you have build command is
+lowercase Hugo and publish directory is public and it's case sensitive so lower
+case H and lower case P because you've created a public folder you could have
+called it something else you know through blog down build in with extra
+parameters you just said hey I don't want to publish in public but make sure
+because we're building this is a command net if he's gonna go to our public site
+on github and it's gonna know it's a hugo site because we're giving it a
+command it's basically on net leafy side
+using the command line saying hey how do i bill
+this website we're telling it how to do that now now you might have an advanced
+checkbox here click on show advanced okay this is cool to find environment
+variables this is exactly what you need you need a new variable here and it says
+
+00:07
+variable name and value what are we gonna put there let me tell you we are
+gonna put in the word Hugo underscore version ole capital all capital Hugo
+underscore version and everything is case-sensitive and what value are we
+gonna put there well let's go back to our real quick let's do blog down : :
+Hugo underscore version and figure out the exact version that you need which
+you need everything here zero point seven two point zero is the version that
+I have yours might be slightly different copy all three of those values with the
+periods so zero point seven two point zero let's go back to net loafie
+somewhere and type in zero point zero weight zero point seven two point zero
+and you need that lead in zero because it's got what its gonna do it's gonna
+actually go to particular websites using that value as a parameter and it'll be
+within the URL as a I forget what you call it but that zero matters so zero
+
+00:08
+point seven two point zero now click on deploy site and what you'll see
+hopefully it might not show you a whole lot right here but mine says in queued
+so give it a few seconds a few minutes you can hit the refresh button here if
+you'd like which I usually do and you see it's building you can actually click
+on it when you click on it and you scroll down you'll see what it's doing
+so if you clicked on it a little bit earlier you would have seen these
+populate right here and if you got an error it would show you an error and
+that's important to find because a lot of people probably will have an error
+the first couple times they might have put it wrong version in there or
+something like that but remember that URL I was talking about it actually goes
+out somewhere and uses that point seven to I right here Hugo static site
+generator version 0.72 it it just it needs to be exact that's all
+
+00:09
+there is to it but it looks like everything ran just fine right built
+completed finished processing build 32 milliseconds whatever it took
+now where is this site at well we can click on preview that's where the site
+is this is the site and it works all of this works posts all of my posts work
+and it's all under a net low fee site now you can customize your net low fee
+URL a little bit I believe we're not gonna get into that yet so that's that
+you've got a live site that anybody can go to you can share that URL that's up
+there it's not very user friendly yet though so in the next tutorial I want to
+show you how to customize that that URL just a little bit for free and how to
+add posts if you guys liked this tutorial please share it save it show me
+your website's post your links inside of
+the comments whatever you want to do I'd like to see what you've come up with
+what themes you chose we're getting close we're getting close so a few more
+
+00:10
+steps and we'll be we'll be on our way you [Music]End of file
+
+---
+title: RStudio to Github to Netlify Live Site   blogdown Hugo
+date: 2020-06-13
+categories:
+  - Absolute Beginners Guide
+tags:
+  - r programming
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=vVHZ76OwPow">
+<picture><img src="https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+welcome back today we're gonna almost finalize our little Hugo block down
+project by pulling everything that we had in github to a net low fee
+deployable site so basically as you commit messages from our studio to
+github and you push that code there Netley fee will automatically monitor
+that public folder and as it changes it'll update your website today we're
+gonna do that so stay tuned this is my main website
+it's where I teach how to create content online make money mostly for teaching
+people just like this channel here so if you want to check out how to create
+these videos check out that site margin grass comm all right so let's get
+started we have a project open and if you follow it along from the previous
+tutorials you should be at the same steps I have multiple playlists on this
+channel so some of them are merged together like for example the absolute
+
+00:01
+beginners guide to learn an R has a mixture of multiple playlists in it if
+you want something very specific check out all the different playlists I have
+for particular interests that being said this is episode 5 of the blog down Hugo
+site I believe and what I want to show you is a couple of things let's start
+off with making sure that you did commit the right code to github and again you
+need to have a github account and you've had to have done the previous tutorial
+to follow along so here we go the first thing I want to show you is
+let's look at our files real quick so I'm going to look at files I will jump
+out of the way so under files you see that I do have a public folder here
+right if you don't that means you didn't build your site correctly I'm not sure
+how we built in the last tutorial but what you want to do because the site's
+already set up you want to do blog down colon colon build site I don't think you
+
+00:02
+need to do the Hugo build I believe it's just plain build site so let's just do
+that when you build the site that actually creates two public folders it
+gives you a synopsis right here how many pages were built
+how many static files how many processed image
+etc etc right but you're only concerned about the public folder now remember
+when I said to commit we can go to get here Louis let's save it ctrl s let's
+see if that does the trick so what little show and get is anything
+that's actually had a change to it I literally just built this a few minutes
+ago so nothing's really changed on my end and that's the problem that you have
+that's why they're not showing up here so if you make a change to something
+it'll show up if you make a change it's a something that's in github so to speak
+you should have a bunch of public folders there so in order to add those
+
+00:03
+to the staging area you can do tools shell and remember we would do git add -
+just plain public because we want only the public folder
+/and I put star there I'm not sure if that's really necessary or not but get
+space add space public forward slash star now of course I don't have anything
+here but you should or you've already committed to github so this will catch
+you up if you didn't you would click the commit button and give it a name we'll
+make more reasonable names so there's no changes I didn't make any changes but
+then you'd click on push everything's up to date cool oh one thing to note is
+when you first start a project when you first wake up in the morning after
+you've done all your commits and pushes the first thing you want to do is has
+this little down arrow is pull pull from
+your github so if you're on a Macbook or a PC and you switch to one or the other
+the next day and you want to resume where you left off you would open this
+up your little project and pull from the
+github so you do the pull so you get the latest version that's just a little
+
+00:04
+extra narrative for you all right so we know that everything is on let's see
+github that's easy part right everything is easy so we go to github calm you
+could see that we have multiple projects mines on the left-hand side you might
+have to fiddle around and find where yours is but we have project one here
+and I accidentally added everything to it but you literally only need to do
+your paw like so under this public folder is
+where we're gonna be focused on and if you scroll down you'll see you have an
+index.html that's gonna be key for heaven net laughs II find it okay so
+simple as that now let's go to net loafie I if you haven't created a free
+account do those proper steps so sign up
+use your Google or get github account to
+sign up etc etc I'm already signed up so I'll just log in if you haven't signed
+
+00:05
+up please do so pause this video and then come right back to it now this is
+very simple new site from get click on that continuous deployment that's what
+we're gonna be doing continuous deployment I you've heard of maybe the
+term continuous integration continuous deployment CI slash CD you'll see that
+everywhere so now you can say to your potential employer yes I've done
+continuous integration continuous deployment because this is what that is
+we're gonna do it from github I'll show you anyways how that how that is true
+okay so from github it automatically I'm already connected
+to my github it'll probably give you a couple steps to connect to your github
+maybe ask you for a permission or something like that select yes then
+it'll automatically know all of your github projects so allow net Lafite to
+access github now the project that I've created was the project one remember so
+I have mine right here let's click on that it's simple so it automatically
+pulls in my owner I'm the owner branch to you know keep all these probably the
+
+00:06
+same build command this is important I don't know if it knows this or if I put
+this in previously somehow it knows it but make sure you have build command is
+lowercase Hugo and publish directory is public and it's case sensitive so lower
+case H and lower case P because you've created a public folder you could have
+called it something else you know through blog down build in with extra
+parameters you just said hey I don't want to publish in public but make sure
+because we're building this is a command net if he's gonna go to our public site
+on github and it's gonna know it's a hugo site because we're giving it a
+command it's basically on net leafy side
+using the command line saying hey how do i bill
+this website we're telling it how to do that now now you might have an advanced
+checkbox here click on show advanced okay this is cool to find environment
+variables this is exactly what you need you need a new variable here and it says
+
+00:07
+variable name and value what are we gonna put there let me tell you we are
+gonna put in the word Hugo underscore version ole capital all capital Hugo
+underscore version and everything is case-sensitive and what value are we
+gonna put there well let's go back to our real quick let's do blog down : :
+Hugo underscore version and figure out the exact version that you need which
+you need everything here zero point seven two point zero is the version that
+I have yours might be slightly different copy all three of those values with the
+periods so zero point seven two point zero let's go back to net loafie
+somewhere and type in zero point zero weight zero point seven two point zero
+and you need that lead in zero because it's got what its gonna do it's gonna
+actually go to particular websites using that value as a parameter and it'll be
+within the URL as a I forget what you call it but that zero matters so zero
+
+00:08
+point seven two point zero now click on deploy site and what you'll see
+hopefully it might not show you a whole lot right here but mine says in queued
+so give it a few seconds a few minutes you can hit the refresh button here if
+you'd like which I usually do and you see it's building you can actually click
+on it when you click on it and you scroll down you'll see what it's doing
+so if you clicked on it a little bit earlier you would have seen these
+populate right here and if you got an error it would show you an error and
+that's important to find because a lot of people probably will have an error
+the first couple times they might have put it wrong version in there or
+something like that but remember that URL I was talking about it actually goes
+out somewhere and uses that point seven to I right here Hugo static site
+generator version 0.72 it it just it needs to be exact that's all
+
+00:09
+there is to it but it looks like everything ran just fine right built
+completed finished processing build 32 milliseconds whatever it took
+now where is this site at well we can click on preview that's where the site
+is this is the site and it works all of this works posts all of my posts work
+and it's all under a net low fee site now you can customize your net low fee
+URL a little bit I believe we're not gonna get into that yet so that's that
+you've got a live site that anybody can go to you can share that URL that's up
+there it's not very user friendly yet though so in the next tutorial I want to
+show you how to customize that that URL just a little bit for free and how to
+add posts if you guys liked this tutorial please share it save it show me
+your website's post your links inside of
+the comments whatever you want to do I'd like to see what you've come up with
+what themes you chose we're getting close we're getting close so a few more
+
+00:10
+steps and we'll be we'll be on our way you [Music]End of file
+
+---
+title: RStudio to Github to Netlify Live Site   blogdown Hugo
+date: 2020-06-13
+categories:
+  - Absolute Beginners Guide
+tags:
+  - website
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=vVHZ76OwPow">
+<picture><img src="https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+welcome back today we're gonna almost finalize our little Hugo block down
+project by pulling everything that we had in github to a net low fee
+deployable site so basically as you commit messages from our studio to
+github and you push that code there Netley fee will automatically monitor
+that public folder and as it changes it'll update your website today we're
+gonna do that so stay tuned this is my main website
+it's where I teach how to create content online make money mostly for teaching
+people just like this channel here so if you want to check out how to create
+these videos check out that site margin grass comm all right so let's get
+started we have a project open and if you follow it along from the previous
+tutorials you should be at the same steps I have multiple playlists on this
+channel so some of them are merged together like for example the absolute
+
+00:01
+beginners guide to learn an R has a mixture of multiple playlists in it if
+you want something very specific check out all the different playlists I have
+for particular interests that being said this is episode 5 of the blog down Hugo
+site I believe and what I want to show you is a couple of things let's start
+off with making sure that you did commit the right code to github and again you
+need to have a github account and you've had to have done the previous tutorial
+to follow along so here we go the first thing I want to show you is
+let's look at our files real quick so I'm going to look at files I will jump
+out of the way so under files you see that I do have a public folder here
+right if you don't that means you didn't build your site correctly I'm not sure
+how we built in the last tutorial but what you want to do because the site's
+already set up you want to do blog down colon colon build site I don't think you
+
+00:02
+need to do the Hugo build I believe it's just plain build site so let's just do
+that when you build the site that actually creates two public folders it
+gives you a synopsis right here how many pages were built
+how many static files how many processed image
+etc etc right but you're only concerned about the public folder now remember
+when I said to commit we can go to get here Louis let's save it ctrl s let's
+see if that does the trick so what little show and get is anything
+that's actually had a change to it I literally just built this a few minutes
+ago so nothing's really changed on my end and that's the problem that you have
+that's why they're not showing up here so if you make a change to something
+it'll show up if you make a change it's a something that's in github so to speak
+you should have a bunch of public folders there so in order to add those
+
+00:03
+to the staging area you can do tools shell and remember we would do git add -
+just plain public because we want only the public folder
+/and I put star there I'm not sure if that's really necessary or not but get
+space add space public forward slash star now of course I don't have anything
+here but you should or you've already committed to github so this will catch
+you up if you didn't you would click the commit button and give it a name we'll
+make more reasonable names so there's no changes I didn't make any changes but
+then you'd click on push everything's up to date cool oh one thing to note is
+when you first start a project when you first wake up in the morning after
+you've done all your commits and pushes the first thing you want to do is has
+this little down arrow is pull pull from
+your github so if you're on a Macbook or a PC and you switch to one or the other
+the next day and you want to resume where you left off you would open this
+up your little project and pull from the
+github so you do the pull so you get the latest version that's just a little
+
+00:04
+extra narrative for you all right so we know that everything is on let's see
+github that's easy part right everything is easy so we go to github calm you
+could see that we have multiple projects mines on the left-hand side you might
+have to fiddle around and find where yours is but we have project one here
+and I accidentally added everything to it but you literally only need to do
+your paw like so under this public folder is
+where we're gonna be focused on and if you scroll down you'll see you have an
+index.html that's gonna be key for heaven net laughs II find it okay so
+simple as that now let's go to net loafie I if you haven't created a free
+account do those proper steps so sign up
+use your Google or get github account to
+sign up etc etc I'm already signed up so I'll just log in if you haven't signed
+
+00:05
+up please do so pause this video and then come right back to it now this is
+very simple new site from get click on that continuous deployment that's what
+we're gonna be doing continuous deployment I you've heard of maybe the
+term continuous integration continuous deployment CI slash CD you'll see that
+everywhere so now you can say to your potential employer yes I've done
+continuous integration continuous deployment because this is what that is
+we're gonna do it from github I'll show you anyways how that how that is true
+okay so from github it automatically I'm already connected
+to my github it'll probably give you a couple steps to connect to your github
+maybe ask you for a permission or something like that select yes then
+it'll automatically know all of your github projects so allow net Lafite to
+access github now the project that I've created was the project one remember so
+I have mine right here let's click on that it's simple so it automatically
+pulls in my owner I'm the owner branch to you know keep all these probably the
+
+00:06
+same build command this is important I don't know if it knows this or if I put
+this in previously somehow it knows it but make sure you have build command is
+lowercase Hugo and publish directory is public and it's case sensitive so lower
+case H and lower case P because you've created a public folder you could have
+called it something else you know through blog down build in with extra
+parameters you just said hey I don't want to publish in public but make sure
+because we're building this is a command net if he's gonna go to our public site
+on github and it's gonna know it's a hugo site because we're giving it a
+command it's basically on net leafy side
+using the command line saying hey how do i bill
+this website we're telling it how to do that now now you might have an advanced
+checkbox here click on show advanced okay this is cool to find environment
+variables this is exactly what you need you need a new variable here and it says
+
+00:07
+variable name and value what are we gonna put there let me tell you we are
+gonna put in the word Hugo underscore version ole capital all capital Hugo
+underscore version and everything is case-sensitive and what value are we
+gonna put there well let's go back to our real quick let's do blog down : :
+Hugo underscore version and figure out the exact version that you need which
+you need everything here zero point seven two point zero is the version that
+I have yours might be slightly different copy all three of those values with the
+periods so zero point seven two point zero let's go back to net loafie
+somewhere and type in zero point zero weight zero point seven two point zero
+and you need that lead in zero because it's got what its gonna do it's gonna
+actually go to particular websites using that value as a parameter and it'll be
+within the URL as a I forget what you call it but that zero matters so zero
+
+00:08
+point seven two point zero now click on deploy site and what you'll see
+hopefully it might not show you a whole lot right here but mine says in queued
+so give it a few seconds a few minutes you can hit the refresh button here if
+you'd like which I usually do and you see it's building you can actually click
+on it when you click on it and you scroll down you'll see what it's doing
+so if you clicked on it a little bit earlier you would have seen these
+populate right here and if you got an error it would show you an error and
+that's important to find because a lot of people probably will have an error
+the first couple times they might have put it wrong version in there or
+something like that but remember that URL I was talking about it actually goes
+out somewhere and uses that point seven to I right here Hugo static site
+generator version 0.72 it it just it needs to be exact that's all
+
+00:09
+there is to it but it looks like everything ran just fine right built
+completed finished processing build 32 milliseconds whatever it took
+now where is this site at well we can click on preview that's where the site
+is this is the site and it works all of this works posts all of my posts work
+and it's all under a net low fee site now you can customize your net low fee
+URL a little bit I believe we're not gonna get into that yet so that's that
+you've got a live site that anybody can go to you can share that URL that's up
+there it's not very user friendly yet though so in the next tutorial I want to
+show you how to customize that that URL just a little bit for free and how to
+add posts if you guys liked this tutorial please share it save it show me
+your website's post your links inside of
+the comments whatever you want to do I'd like to see what you've come up with
+what themes you chose we're getting close we're getting close so a few more
+
+00:10
+steps and we'll be we'll be on our way you [Music]End of file
+
+---
+title: RStudio to Github to Netlify Live Site   blogdown Hugo
+date: 2020-06-13
+categories:
+  - Absolute Beginners Guide
+tags:
+  - github
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=vVHZ76OwPow">
+<picture><img src="https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+welcome back today we're gonna almost finalize our little Hugo block down
+project by pulling everything that we had in github to a net low fee
+deployable site so basically as you commit messages from our studio to
+github and you push that code there Netley fee will automatically monitor
+that public folder and as it changes it'll update your website today we're
+gonna do that so stay tuned this is my main website
+it's where I teach how to create content online make money mostly for teaching
+people just like this channel here so if you want to check out how to create
+these videos check out that site margin grass comm all right so let's get
+started we have a project open and if you follow it along from the previous
+tutorials you should be at the same steps I have multiple playlists on this
+channel so some of them are merged together like for example the absolute
+
+00:01
+beginners guide to learn an R has a mixture of multiple playlists in it if
+you want something very specific check out all the different playlists I have
+for particular interests that being said this is episode 5 of the blog down Hugo
+site I believe and what I want to show you is a couple of things let's start
+off with making sure that you did commit the right code to github and again you
+need to have a github account and you've had to have done the previous tutorial
+to follow along so here we go the first thing I want to show you is
+let's look at our files real quick so I'm going to look at files I will jump
+out of the way so under files you see that I do have a public folder here
+right if you don't that means you didn't build your site correctly I'm not sure
+how we built in the last tutorial but what you want to do because the site's
+already set up you want to do blog down colon colon build site I don't think you
+
+00:02
+need to do the Hugo build I believe it's just plain build site so let's just do
+that when you build the site that actually creates two public folders it
+gives you a synopsis right here how many pages were built
+how many static files how many processed image
+etc etc right but you're only concerned about the public folder now remember
+when I said to commit we can go to get here Louis let's save it ctrl s let's
+see if that does the trick so what little show and get is anything
+that's actually had a change to it I literally just built this a few minutes
+ago so nothing's really changed on my end and that's the problem that you have
+that's why they're not showing up here so if you make a change to something
+it'll show up if you make a change it's a something that's in github so to speak
+you should have a bunch of public folders there so in order to add those
+
+00:03
+to the staging area you can do tools shell and remember we would do git add -
+just plain public because we want only the public folder
+/and I put star there I'm not sure if that's really necessary or not but get
+space add space public forward slash star now of course I don't have anything
+here but you should or you've already committed to github so this will catch
+you up if you didn't you would click the commit button and give it a name we'll
+make more reasonable names so there's no changes I didn't make any changes but
+then you'd click on push everything's up to date cool oh one thing to note is
+when you first start a project when you first wake up in the morning after
+you've done all your commits and pushes the first thing you want to do is has
+this little down arrow is pull pull from
+your github so if you're on a Macbook or a PC and you switch to one or the other
+the next day and you want to resume where you left off you would open this
+up your little project and pull from the
+github so you do the pull so you get the latest version that's just a little
+
+00:04
+extra narrative for you all right so we know that everything is on let's see
+github that's easy part right everything is easy so we go to github calm you
+could see that we have multiple projects mines on the left-hand side you might
+have to fiddle around and find where yours is but we have project one here
+and I accidentally added everything to it but you literally only need to do
+your paw like so under this public folder is
+where we're gonna be focused on and if you scroll down you'll see you have an
+index.html that's gonna be key for heaven net laughs II find it okay so
+simple as that now let's go to net loafie I if you haven't created a free
+account do those proper steps so sign up
+use your Google or get github account to
+sign up etc etc I'm already signed up so I'll just log in if you haven't signed
+
+00:05
+up please do so pause this video and then come right back to it now this is
+very simple new site from get click on that continuous deployment that's what
+we're gonna be doing continuous deployment I you've heard of maybe the
+term continuous integration continuous deployment CI slash CD you'll see that
+everywhere so now you can say to your potential employer yes I've done
+continuous integration continuous deployment because this is what that is
+we're gonna do it from github I'll show you anyways how that how that is true
+okay so from github it automatically I'm already connected
+to my github it'll probably give you a couple steps to connect to your github
+maybe ask you for a permission or something like that select yes then
+it'll automatically know all of your github projects so allow net Lafite to
+access github now the project that I've created was the project one remember so
+I have mine right here let's click on that it's simple so it automatically
+pulls in my owner I'm the owner branch to you know keep all these probably the
+
+00:06
+same build command this is important I don't know if it knows this or if I put
+this in previously somehow it knows it but make sure you have build command is
+lowercase Hugo and publish directory is public and it's case sensitive so lower
+case H and lower case P because you've created a public folder you could have
+called it something else you know through blog down build in with extra
+parameters you just said hey I don't want to publish in public but make sure
+because we're building this is a command net if he's gonna go to our public site
+on github and it's gonna know it's a hugo site because we're giving it a
+command it's basically on net leafy side
+using the command line saying hey how do i bill
+this website we're telling it how to do that now now you might have an advanced
+checkbox here click on show advanced okay this is cool to find environment
+variables this is exactly what you need you need a new variable here and it says
+
+00:07
+variable name and value what are we gonna put there let me tell you we are
+gonna put in the word Hugo underscore version ole capital all capital Hugo
+underscore version and everything is case-sensitive and what value are we
+gonna put there well let's go back to our real quick let's do blog down : :
+Hugo underscore version and figure out the exact version that you need which
+you need everything here zero point seven two point zero is the version that
+I have yours might be slightly different copy all three of those values with the
+periods so zero point seven two point zero let's go back to net loafie
+somewhere and type in zero point zero weight zero point seven two point zero
+and you need that lead in zero because it's got what its gonna do it's gonna
+actually go to particular websites using that value as a parameter and it'll be
+within the URL as a I forget what you call it but that zero matters so zero
+
+00:08
+point seven two point zero now click on deploy site and what you'll see
+hopefully it might not show you a whole lot right here but mine says in queued
+so give it a few seconds a few minutes you can hit the refresh button here if
+you'd like which I usually do and you see it's building you can actually click
+on it when you click on it and you scroll down you'll see what it's doing
+so if you clicked on it a little bit earlier you would have seen these
+populate right here and if you got an error it would show you an error and
+that's important to find because a lot of people probably will have an error
+the first couple times they might have put it wrong version in there or
+something like that but remember that URL I was talking about it actually goes
+out somewhere and uses that point seven to I right here Hugo static site
+generator version 0.72 it it just it needs to be exact that's all
+
+00:09
+there is to it but it looks like everything ran just fine right built
+completed finished processing build 32 milliseconds whatever it took
+now where is this site at well we can click on preview that's where the site
+is this is the site and it works all of this works posts all of my posts work
+and it's all under a net low fee site now you can customize your net low fee
+URL a little bit I believe we're not gonna get into that yet so that's that
+you've got a live site that anybody can go to you can share that URL that's up
+there it's not very user friendly yet though so in the next tutorial I want to
+show you how to customize that that URL just a little bit for free and how to
+add posts if you guys liked this tutorial please share it save it show me
+your website's post your links inside of
+the comments whatever you want to do I'd like to see what you've come up with
+what themes you chose we're getting close we're getting close so a few more
+
+00:10
+steps and we'll be we'll be on our way you [Music]End of file
+
+---
+title: RStudio to Github to Netlify Live Site   blogdown Hugo
+date: 2020-06-13
+categories:
+  - Absolute Beginners Guide
+tags:
+  - hugo
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=vVHZ76OwPow">
+<picture><img src="https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+welcome back today we're gonna almost finalize our little Hugo block down
+project by pulling everything that we had in github to a net low fee
+deployable site so basically as you commit messages from our studio to
+github and you push that code there Netley fee will automatically monitor
+that public folder and as it changes it'll update your website today we're
+gonna do that so stay tuned this is my main website
+it's where I teach how to create content online make money mostly for teaching
+people just like this channel here so if you want to check out how to create
+these videos check out that site margin grass comm all right so let's get
+started we have a project open and if you follow it along from the previous
+tutorials you should be at the same steps I have multiple playlists on this
+channel so some of them are merged together like for example the absolute
+
+00:01
+beginners guide to learn an R has a mixture of multiple playlists in it if
+you want something very specific check out all the different playlists I have
+for particular interests that being said this is episode 5 of the blog down Hugo
+site I believe and what I want to show you is a couple of things let's start
+off with making sure that you did commit the right code to github and again you
+need to have a github account and you've had to have done the previous tutorial
+to follow along so here we go the first thing I want to show you is
+let's look at our files real quick so I'm going to look at files I will jump
+out of the way so under files you see that I do have a public folder here
+right if you don't that means you didn't build your site correctly I'm not sure
+how we built in the last tutorial but what you want to do because the site's
+already set up you want to do blog down colon colon build site I don't think you
+
+00:02
+need to do the Hugo build I believe it's just plain build site so let's just do
+that when you build the site that actually creates two public folders it
+gives you a synopsis right here how many pages were built
+how many static files how many processed image
+etc etc right but you're only concerned about the public folder now remember
+when I said to commit we can go to get here Louis let's save it ctrl s let's
+see if that does the trick so what little show and get is anything
+that's actually had a change to it I literally just built this a few minutes
+ago so nothing's really changed on my end and that's the problem that you have
+that's why they're not showing up here so if you make a change to something
+it'll show up if you make a change it's a something that's in github so to speak
+you should have a bunch of public folders there so in order to add those
+
+00:03
+to the staging area you can do tools shell and remember we would do git add -
+just plain public because we want only the public folder
+/and I put star there I'm not sure if that's really necessary or not but get
+space add space public forward slash star now of course I don't have anything
+here but you should or you've already committed to github so this will catch
+you up if you didn't you would click the commit button and give it a name we'll
+make more reasonable names so there's no changes I didn't make any changes but
+then you'd click on push everything's up to date cool oh one thing to note is
+when you first start a project when you first wake up in the morning after
+you've done all your commits and pushes the first thing you want to do is has
+this little down arrow is pull pull from
+your github so if you're on a Macbook or a PC and you switch to one or the other
+the next day and you want to resume where you left off you would open this
+up your little project and pull from the
+github so you do the pull so you get the latest version that's just a little
+
+00:04
+extra narrative for you all right so we know that everything is on let's see
+github that's easy part right everything is easy so we go to github calm you
+could see that we have multiple projects mines on the left-hand side you might
+have to fiddle around and find where yours is but we have project one here
+and I accidentally added everything to it but you literally only need to do
+your paw like so under this public folder is
+where we're gonna be focused on and if you scroll down you'll see you have an
+index.html that's gonna be key for heaven net laughs II find it okay so
+simple as that now let's go to net loafie I if you haven't created a free
+account do those proper steps so sign up
+use your Google or get github account to
+sign up etc etc I'm already signed up so I'll just log in if you haven't signed
+
+00:05
+up please do so pause this video and then come right back to it now this is
+very simple new site from get click on that continuous deployment that's what
+we're gonna be doing continuous deployment I you've heard of maybe the
+term continuous integration continuous deployment CI slash CD you'll see that
+everywhere so now you can say to your potential employer yes I've done
+continuous integration continuous deployment because this is what that is
+we're gonna do it from github I'll show you anyways how that how that is true
+okay so from github it automatically I'm already connected
+to my github it'll probably give you a couple steps to connect to your github
+maybe ask you for a permission or something like that select yes then
+it'll automatically know all of your github projects so allow net Lafite to
+access github now the project that I've created was the project one remember so
+I have mine right here let's click on that it's simple so it automatically
+pulls in my owner I'm the owner branch to you know keep all these probably the
+
+00:06
+same build command this is important I don't know if it knows this or if I put
+this in previously somehow it knows it but make sure you have build command is
+lowercase Hugo and publish directory is public and it's case sensitive so lower
+case H and lower case P because you've created a public folder you could have
+called it something else you know through blog down build in with extra
+parameters you just said hey I don't want to publish in public but make sure
+because we're building this is a command net if he's gonna go to our public site
+on github and it's gonna know it's a hugo site because we're giving it a
+command it's basically on net leafy side
+using the command line saying hey how do i bill
+this website we're telling it how to do that now now you might have an advanced
+checkbox here click on show advanced okay this is cool to find environment
+variables this is exactly what you need you need a new variable here and it says
+
+00:07
+variable name and value what are we gonna put there let me tell you we are
+gonna put in the word Hugo underscore version ole capital all capital Hugo
+underscore version and everything is case-sensitive and what value are we
+gonna put there well let's go back to our real quick let's do blog down : :
+Hugo underscore version and figure out the exact version that you need which
+you need everything here zero point seven two point zero is the version that
+I have yours might be slightly different copy all three of those values with the
+periods so zero point seven two point zero let's go back to net loafie
+somewhere and type in zero point zero weight zero point seven two point zero
+and you need that lead in zero because it's got what its gonna do it's gonna
+actually go to particular websites using that value as a parameter and it'll be
+within the URL as a I forget what you call it but that zero matters so zero
+
+00:08
+point seven two point zero now click on deploy site and what you'll see
+hopefully it might not show you a whole lot right here but mine says in queued
+so give it a few seconds a few minutes you can hit the refresh button here if
+you'd like which I usually do and you see it's building you can actually click
+on it when you click on it and you scroll down you'll see what it's doing
+so if you clicked on it a little bit earlier you would have seen these
+populate right here and if you got an error it would show you an error and
+that's important to find because a lot of people probably will have an error
+the first couple times they might have put it wrong version in there or
+something like that but remember that URL I was talking about it actually goes
+out somewhere and uses that point seven to I right here Hugo static site
+generator version 0.72 it it just it needs to be exact that's all
+
+00:09
+there is to it but it looks like everything ran just fine right built
+completed finished processing build 32 milliseconds whatever it took
+now where is this site at well we can click on preview that's where the site
+is this is the site and it works all of this works posts all of my posts work
+and it's all under a net low fee site now you can customize your net low fee
+URL a little bit I believe we're not gonna get into that yet so that's that
+you've got a live site that anybody can go to you can share that URL that's up
+there it's not very user friendly yet though so in the next tutorial I want to
+show you how to customize that that URL just a little bit for free and how to
+add posts if you guys liked this tutorial please share it save it show me
+your website's post your links inside of
+the comments whatever you want to do I'd like to see what you've come up with
+what themes you chose we're getting close we're getting close so a few more
+
+00:10
+steps and we'll be we'll be on our way you [Music]End of file
+
+---
+title: RStudio to Github to Netlify Live Site   blogdown Hugo
+date: 2020-06-13
+categories:
+  - Absolute Beginners Guide
+tags:
+  - netlify
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=vVHZ76OwPow">
+<picture><img src="https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+welcome back today we're gonna almost finalize our little Hugo block down
+project by pulling everything that we had in github to a net low fee
+deployable site so basically as you commit messages from our studio to
+github and you push that code there Netley fee will automatically monitor
+that public folder and as it changes it'll update your website today we're
+gonna do that so stay tuned this is my main website
+it's where I teach how to create content online make money mostly for teaching
+people just like this channel here so if you want to check out how to create
+these videos check out that site margin grass comm all right so let's get
+started we have a project open and if you follow it along from the previous
+tutorials you should be at the same steps I have multiple playlists on this
+channel so some of them are merged together like for example the absolute
+
+00:01
+beginners guide to learn an R has a mixture of multiple playlists in it if
+you want something very specific check out all the different playlists I have
+for particular interests that being said this is episode 5 of the blog down Hugo
+site I believe and what I want to show you is a couple of things let's start
+off with making sure that you did commit the right code to github and again you
+need to have a github account and you've had to have done the previous tutorial
+to follow along so here we go the first thing I want to show you is
+let's look at our files real quick so I'm going to look at files I will jump
+out of the way so under files you see that I do have a public folder here
+right if you don't that means you didn't build your site correctly I'm not sure
+how we built in the last tutorial but what you want to do because the site's
+already set up you want to do blog down colon colon build site I don't think you
+
+00:02
+need to do the Hugo build I believe it's just plain build site so let's just do
+that when you build the site that actually creates two public folders it
+gives you a synopsis right here how many pages were built
+how many static files how many processed image
+etc etc right but you're only concerned about the public folder now remember
+when I said to commit we can go to get here Louis let's save it ctrl s let's
+see if that does the trick so what little show and get is anything
+that's actually had a change to it I literally just built this a few minutes
+ago so nothing's really changed on my end and that's the problem that you have
+that's why they're not showing up here so if you make a change to something
+it'll show up if you make a change it's a something that's in github so to speak
+you should have a bunch of public folders there so in order to add those
+
+00:03
+to the staging area you can do tools shell and remember we would do git add -
+just plain public because we want only the public folder
+/and I put star there I'm not sure if that's really necessary or not but get
+space add space public forward slash star now of course I don't have anything
+here but you should or you've already committed to github so this will catch
+you up if you didn't you would click the commit button and give it a name we'll
+make more reasonable names so there's no changes I didn't make any changes but
+then you'd click on push everything's up to date cool oh one thing to note is
+when you first start a project when you first wake up in the morning after
+you've done all your commits and pushes the first thing you want to do is has
+this little down arrow is pull pull from
+your github so if you're on a Macbook or a PC and you switch to one or the other
+the next day and you want to resume where you left off you would open this
+up your little project and pull from the
+github so you do the pull so you get the latest version that's just a little
+
+00:04
+extra narrative for you all right so we know that everything is on let's see
+github that's easy part right everything is easy so we go to github calm you
+could see that we have multiple projects mines on the left-hand side you might
+have to fiddle around and find where yours is but we have project one here
+and I accidentally added everything to it but you literally only need to do
+your paw like so under this public folder is
+where we're gonna be focused on and if you scroll down you'll see you have an
+index.html that's gonna be key for heaven net laughs II find it okay so
+simple as that now let's go to net loafie I if you haven't created a free
+account do those proper steps so sign up
+use your Google or get github account to
+sign up etc etc I'm already signed up so I'll just log in if you haven't signed
+
+00:05
+up please do so pause this video and then come right back to it now this is
+very simple new site from get click on that continuous deployment that's what
+we're gonna be doing continuous deployment I you've heard of maybe the
+term continuous integration continuous deployment CI slash CD you'll see that
+everywhere so now you can say to your potential employer yes I've done
+continuous integration continuous deployment because this is what that is
+we're gonna do it from github I'll show you anyways how that how that is true
+okay so from github it automatically I'm already connected
+to my github it'll probably give you a couple steps to connect to your github
+maybe ask you for a permission or something like that select yes then
+it'll automatically know all of your github projects so allow net Lafite to
+access github now the project that I've created was the project one remember so
+I have mine right here let's click on that it's simple so it automatically
+pulls in my owner I'm the owner branch to you know keep all these probably the
+
+00:06
+same build command this is important I don't know if it knows this or if I put
+this in previously somehow it knows it but make sure you have build command is
+lowercase Hugo and publish directory is public and it's case sensitive so lower
+case H and lower case P because you've created a public folder you could have
+called it something else you know through blog down build in with extra
+parameters you just said hey I don't want to publish in public but make sure
+because we're building this is a command net if he's gonna go to our public site
+on github and it's gonna know it's a hugo site because we're giving it a
+command it's basically on net leafy side
+using the command line saying hey how do i bill
+this website we're telling it how to do that now now you might have an advanced
+checkbox here click on show advanced okay this is cool to find environment
+variables this is exactly what you need you need a new variable here and it says
+
+00:07
+variable name and value what are we gonna put there let me tell you we are
+gonna put in the word Hugo underscore version ole capital all capital Hugo
+underscore version and everything is case-sensitive and what value are we
+gonna put there well let's go back to our real quick let's do blog down : :
+Hugo underscore version and figure out the exact version that you need which
+you need everything here zero point seven two point zero is the version that
+I have yours might be slightly different copy all three of those values with the
+periods so zero point seven two point zero let's go back to net loafie
+somewhere and type in zero point zero weight zero point seven two point zero
+and you need that lead in zero because it's got what its gonna do it's gonna
+actually go to particular websites using that value as a parameter and it'll be
+within the URL as a I forget what you call it but that zero matters so zero
+
+00:08
+point seven two point zero now click on deploy site and what you'll see
+hopefully it might not show you a whole lot right here but mine says in queued
+so give it a few seconds a few minutes you can hit the refresh button here if
+you'd like which I usually do and you see it's building you can actually click
+on it when you click on it and you scroll down you'll see what it's doing
+so if you clicked on it a little bit earlier you would have seen these
+populate right here and if you got an error it would show you an error and
+that's important to find because a lot of people probably will have an error
+the first couple times they might have put it wrong version in there or
+something like that but remember that URL I was talking about it actually goes
+out somewhere and uses that point seven to I right here Hugo static site
+generator version 0.72 it it just it needs to be exact that's all
+
+00:09
+there is to it but it looks like everything ran just fine right built
+completed finished processing build 32 milliseconds whatever it took
+now where is this site at well we can click on preview that's where the site
+is this is the site and it works all of this works posts all of my posts work
+and it's all under a net low fee site now you can customize your net low fee
+URL a little bit I believe we're not gonna get into that yet so that's that
+you've got a live site that anybody can go to you can share that URL that's up
+there it's not very user friendly yet though so in the next tutorial I want to
+show you how to customize that that URL just a little bit for free and how to
+add posts if you guys liked this tutorial please share it save it show me
+your website's post your links inside of
+the comments whatever you want to do I'd like to see what you've come up with
+what themes you chose we're getting close we're getting close so a few more
+
+00:10
+steps and we'll be we'll be on our way you [Music]End of file
+
+---
+title: RStudio to Github to Netlify Live Site   blogdown Hugo
+date: 2020-06-13
+categories:
+  - Absolute Beginners Guide
+tags:
+  - developer
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=vVHZ76OwPow">
+<picture><img src="https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+welcome back today we're gonna almost finalize our little Hugo block down
+project by pulling everything that we had in github to a net low fee
+deployable site so basically as you commit messages from our studio to
+github and you push that code there Netley fee will automatically monitor
+that public folder and as it changes it'll update your website today we're
+gonna do that so stay tuned this is my main website
+it's where I teach how to create content online make money mostly for teaching
+people just like this channel here so if you want to check out how to create
+these videos check out that site margin grass comm all right so let's get
+started we have a project open and if you follow it along from the previous
+tutorials you should be at the same steps I have multiple playlists on this
+channel so some of them are merged together like for example the absolute
+
+00:01
+beginners guide to learn an R has a mixture of multiple playlists in it if
+you want something very specific check out all the different playlists I have
+for particular interests that being said this is episode 5 of the blog down Hugo
+site I believe and what I want to show you is a couple of things let's start
+off with making sure that you did commit the right code to github and again you
+need to have a github account and you've had to have done the previous tutorial
+to follow along so here we go the first thing I want to show you is
+let's look at our files real quick so I'm going to look at files I will jump
+out of the way so under files you see that I do have a public folder here
+right if you don't that means you didn't build your site correctly I'm not sure
+how we built in the last tutorial but what you want to do because the site's
+already set up you want to do blog down colon colon build site I don't think you
+
+00:02
+need to do the Hugo build I believe it's just plain build site so let's just do
+that when you build the site that actually creates two public folders it
+gives you a synopsis right here how many pages were built
+how many static files how many processed image
+etc etc right but you're only concerned about the public folder now remember
+when I said to commit we can go to get here Louis let's save it ctrl s let's
+see if that does the trick so what little show and get is anything
+that's actually had a change to it I literally just built this a few minutes
+ago so nothing's really changed on my end and that's the problem that you have
+that's why they're not showing up here so if you make a change to something
+it'll show up if you make a change it's a something that's in github so to speak
+you should have a bunch of public folders there so in order to add those
+
+00:03
+to the staging area you can do tools shell and remember we would do git add -
+just plain public because we want only the public folder
+/and I put star there I'm not sure if that's really necessary or not but get
+space add space public forward slash star now of course I don't have anything
+here but you should or you've already committed to github so this will catch
+you up if you didn't you would click the commit button and give it a name we'll
+make more reasonable names so there's no changes I didn't make any changes but
+then you'd click on push everything's up to date cool oh one thing to note is
+when you first start a project when you first wake up in the morning after
+you've done all your commits and pushes the first thing you want to do is has
+this little down arrow is pull pull from
+your github so if you're on a Macbook or a PC and you switch to one or the other
+the next day and you want to resume where you left off you would open this
+up your little project and pull from the
+github so you do the pull so you get the latest version that's just a little
+
+00:04
+extra narrative for you all right so we know that everything is on let's see
+github that's easy part right everything is easy so we go to github calm you
+could see that we have multiple projects mines on the left-hand side you might
+have to fiddle around and find where yours is but we have project one here
+and I accidentally added everything to it but you literally only need to do
+your paw like so under this public folder is
+where we're gonna be focused on and if you scroll down you'll see you have an
+index.html that's gonna be key for heaven net laughs II find it okay so
+simple as that now let's go to net loafie I if you haven't created a free
+account do those proper steps so sign up
+use your Google or get github account to
+sign up etc etc I'm already signed up so I'll just log in if you haven't signed
+
+00:05
+up please do so pause this video and then come right back to it now this is
+very simple new site from get click on that continuous deployment that's what
+we're gonna be doing continuous deployment I you've heard of maybe the
+term continuous integration continuous deployment CI slash CD you'll see that
+everywhere so now you can say to your potential employer yes I've done
+continuous integration continuous deployment because this is what that is
+we're gonna do it from github I'll show you anyways how that how that is true
+okay so from github it automatically I'm already connected
+to my github it'll probably give you a couple steps to connect to your github
+maybe ask you for a permission or something like that select yes then
+it'll automatically know all of your github projects so allow net Lafite to
+access github now the project that I've created was the project one remember so
+I have mine right here let's click on that it's simple so it automatically
+pulls in my owner I'm the owner branch to you know keep all these probably the
+
+00:06
+same build command this is important I don't know if it knows this or if I put
+this in previously somehow it knows it but make sure you have build command is
+lowercase Hugo and publish directory is public and it's case sensitive so lower
+case H and lower case P because you've created a public folder you could have
+called it something else you know through blog down build in with extra
+parameters you just said hey I don't want to publish in public but make sure
+because we're building this is a command net if he's gonna go to our public site
+on github and it's gonna know it's a hugo site because we're giving it a
+command it's basically on net leafy side
+using the command line saying hey how do i bill
+this website we're telling it how to do that now now you might have an advanced
+checkbox here click on show advanced okay this is cool to find environment
+variables this is exactly what you need you need a new variable here and it says
+
+00:07
+variable name and value what are we gonna put there let me tell you we are
+gonna put in the word Hugo underscore version ole capital all capital Hugo
+underscore version and everything is case-sensitive and what value are we
+gonna put there well let's go back to our real quick let's do blog down : :
+Hugo underscore version and figure out the exact version that you need which
+you need everything here zero point seven two point zero is the version that
+I have yours might be slightly different copy all three of those values with the
+periods so zero point seven two point zero let's go back to net loafie
+somewhere and type in zero point zero weight zero point seven two point zero
+and you need that lead in zero because it's got what its gonna do it's gonna
+actually go to particular websites using that value as a parameter and it'll be
+within the URL as a I forget what you call it but that zero matters so zero
+
+00:08
+point seven two point zero now click on deploy site and what you'll see
+hopefully it might not show you a whole lot right here but mine says in queued
+so give it a few seconds a few minutes you can hit the refresh button here if
+you'd like which I usually do and you see it's building you can actually click
+on it when you click on it and you scroll down you'll see what it's doing
+so if you clicked on it a little bit earlier you would have seen these
+populate right here and if you got an error it would show you an error and
+that's important to find because a lot of people probably will have an error
+the first couple times they might have put it wrong version in there or
+something like that but remember that URL I was talking about it actually goes
+out somewhere and uses that point seven to I right here Hugo static site
+generator version 0.72 it it just it needs to be exact that's all
+
+00:09
+there is to it but it looks like everything ran just fine right built
+completed finished processing build 32 milliseconds whatever it took
+now where is this site at well we can click on preview that's where the site
+is this is the site and it works all of this works posts all of my posts work
+and it's all under a net low fee site now you can customize your net low fee
+URL a little bit I believe we're not gonna get into that yet so that's that
+you've got a live site that anybody can go to you can share that URL that's up
+there it's not very user friendly yet though so in the next tutorial I want to
+show you how to customize that that URL just a little bit for free and how to
+add posts if you guys liked this tutorial please share it save it show me
+your website's post your links inside of
+the comments whatever you want to do I'd like to see what you've come up with
+what themes you chose we're getting close we're getting close so a few more
+
+00:10
+steps and we'll be we'll be on our way you [Music]End of file
+
+---
+title: RStudio to Github to Netlify Live Site   blogdown Hugo
+date: 2020-06-13
+categories:
+  - Absolute Beginners Guide
+tags:
+  - tutorial
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=vVHZ76OwPow">
+<picture><img src="https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+welcome back today we're gonna almost finalize our little Hugo block down
+project by pulling everything that we had in github to a net low fee
+deployable site so basically as you commit messages from our studio to
+github and you push that code there Netley fee will automatically monitor
+that public folder and as it changes it'll update your website today we're
+gonna do that so stay tuned this is my main website
+it's where I teach how to create content online make money mostly for teaching
+people just like this channel here so if you want to check out how to create
+these videos check out that site margin grass comm all right so let's get
+started we have a project open and if you follow it along from the previous
+tutorials you should be at the same steps I have multiple playlists on this
+channel so some of them are merged together like for example the absolute
+
+00:01
+beginners guide to learn an R has a mixture of multiple playlists in it if
+you want something very specific check out all the different playlists I have
+for particular interests that being said this is episode 5 of the blog down Hugo
+site I believe and what I want to show you is a couple of things let's start
+off with making sure that you did commit the right code to github and again you
+need to have a github account and you've had to have done the previous tutorial
+to follow along so here we go the first thing I want to show you is
+let's look at our files real quick so I'm going to look at files I will jump
+out of the way so under files you see that I do have a public folder here
+right if you don't that means you didn't build your site correctly I'm not sure
+how we built in the last tutorial but what you want to do because the site's
+already set up you want to do blog down colon colon build site I don't think you
+
+00:02
+need to do the Hugo build I believe it's just plain build site so let's just do
+that when you build the site that actually creates two public folders it
+gives you a synopsis right here how many pages were built
+how many static files how many processed image
+etc etc right but you're only concerned about the public folder now remember
+when I said to commit we can go to get here Louis let's save it ctrl s let's
+see if that does the trick so what little show and get is anything
+that's actually had a change to it I literally just built this a few minutes
+ago so nothing's really changed on my end and that's the problem that you have
+that's why they're not showing up here so if you make a change to something
+it'll show up if you make a change it's a something that's in github so to speak
+you should have a bunch of public folders there so in order to add those
+
+00:03
+to the staging area you can do tools shell and remember we would do git add -
+just plain public because we want only the public folder
+/and I put star there I'm not sure if that's really necessary or not but get
+space add space public forward slash star now of course I don't have anything
+here but you should or you've already committed to github so this will catch
+you up if you didn't you would click the commit button and give it a name we'll
+make more reasonable names so there's no changes I didn't make any changes but
+then you'd click on push everything's up to date cool oh one thing to note is
+when you first start a project when you first wake up in the morning after
+you've done all your commits and pushes the first thing you want to do is has
+this little down arrow is pull pull from
+your github so if you're on a Macbook or a PC and you switch to one or the other
+the next day and you want to resume where you left off you would open this
+up your little project and pull from the
+github so you do the pull so you get the latest version that's just a little
+
+00:04
+extra narrative for you all right so we know that everything is on let's see
+github that's easy part right everything is easy so we go to github calm you
+could see that we have multiple projects mines on the left-hand side you might
+have to fiddle around and find where yours is but we have project one here
+and I accidentally added everything to it but you literally only need to do
+your paw like so under this public folder is
+where we're gonna be focused on and if you scroll down you'll see you have an
+index.html that's gonna be key for heaven net laughs II find it okay so
+simple as that now let's go to net loafie I if you haven't created a free
+account do those proper steps so sign up
+use your Google or get github account to
+sign up etc etc I'm already signed up so I'll just log in if you haven't signed
+
+00:05
+up please do so pause this video and then come right back to it now this is
+very simple new site from get click on that continuous deployment that's what
+we're gonna be doing continuous deployment I you've heard of maybe the
+term continuous integration continuous deployment CI slash CD you'll see that
+everywhere so now you can say to your potential employer yes I've done
+continuous integration continuous deployment because this is what that is
+we're gonna do it from github I'll show you anyways how that how that is true
+okay so from github it automatically I'm already connected
+to my github it'll probably give you a couple steps to connect to your github
+maybe ask you for a permission or something like that select yes then
+it'll automatically know all of your github projects so allow net Lafite to
+access github now the project that I've created was the project one remember so
+I have mine right here let's click on that it's simple so it automatically
+pulls in my owner I'm the owner branch to you know keep all these probably the
+
+00:06
+same build command this is important I don't know if it knows this or if I put
+this in previously somehow it knows it but make sure you have build command is
+lowercase Hugo and publish directory is public and it's case sensitive so lower
+case H and lower case P because you've created a public folder you could have
+called it something else you know through blog down build in with extra
+parameters you just said hey I don't want to publish in public but make sure
+because we're building this is a command net if he's gonna go to our public site
+on github and it's gonna know it's a hugo site because we're giving it a
+command it's basically on net leafy side
+using the command line saying hey how do i bill
+this website we're telling it how to do that now now you might have an advanced
+checkbox here click on show advanced okay this is cool to find environment
+variables this is exactly what you need you need a new variable here and it says
+
+00:07
+variable name and value what are we gonna put there let me tell you we are
+gonna put in the word Hugo underscore version ole capital all capital Hugo
+underscore version and everything is case-sensitive and what value are we
+gonna put there well let's go back to our real quick let's do blog down : :
+Hugo underscore version and figure out the exact version that you need which
+you need everything here zero point seven two point zero is the version that
+I have yours might be slightly different copy all three of those values with the
+periods so zero point seven two point zero let's go back to net loafie
+somewhere and type in zero point zero weight zero point seven two point zero
+and you need that lead in zero because it's got what its gonna do it's gonna
+actually go to particular websites using that value as a parameter and it'll be
+within the URL as a I forget what you call it but that zero matters so zero
+
+00:08
+point seven two point zero now click on deploy site and what you'll see
+hopefully it might not show you a whole lot right here but mine says in queued
+so give it a few seconds a few minutes you can hit the refresh button here if
+you'd like which I usually do and you see it's building you can actually click
+on it when you click on it and you scroll down you'll see what it's doing
+so if you clicked on it a little bit earlier you would have seen these
+populate right here and if you got an error it would show you an error and
+that's important to find because a lot of people probably will have an error
+the first couple times they might have put it wrong version in there or
+something like that but remember that URL I was talking about it actually goes
+out somewhere and uses that point seven to I right here Hugo static site
+generator version 0.72 it it just it needs to be exact that's all
+
+00:09
+there is to it but it looks like everything ran just fine right built
+completed finished processing build 32 milliseconds whatever it took
+now where is this site at well we can click on preview that's where the site
+is this is the site and it works all of this works posts all of my posts work
+and it's all under a net low fee site now you can customize your net low fee
+URL a little bit I believe we're not gonna get into that yet so that's that
+you've got a live site that anybody can go to you can share that URL that's up
+there it's not very user friendly yet though so in the next tutorial I want to
+show you how to customize that that URL just a little bit for free and how to
+add posts if you guys liked this tutorial please share it save it show me
+your website's post your links inside of
+the comments whatever you want to do I'd like to see what you've come up with
+what themes you chose we're getting close we're getting close so a few more
+
+00:10
+steps and we'll be we'll be on our way you [Music]End of file
+
+---
+title: RStudio to Github to Netlify Live Site   blogdown Hugo
+date: 2020-06-13
+categories:
+  - Absolute Beginners Guide
+tags:
+  - code
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=vVHZ76OwPow">
+<picture><img src="https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+welcome back today we're gonna almost finalize our little Hugo block down
+project by pulling everything that we had in github to a net low fee
+deployable site so basically as you commit messages from our studio to
+github and you push that code there Netley fee will automatically monitor
+that public folder and as it changes it'll update your website today we're
+gonna do that so stay tuned this is my main website
+it's where I teach how to create content online make money mostly for teaching
+people just like this channel here so if you want to check out how to create
+these videos check out that site margin grass comm all right so let's get
+started we have a project open and if you follow it along from the previous
+tutorials you should be at the same steps I have multiple playlists on this
+channel so some of them are merged together like for example the absolute
+
+00:01
+beginners guide to learn an R has a mixture of multiple playlists in it if
+you want something very specific check out all the different playlists I have
+for particular interests that being said this is episode 5 of the blog down Hugo
+site I believe and what I want to show you is a couple of things let's start
+off with making sure that you did commit the right code to github and again you
+need to have a github account and you've had to have done the previous tutorial
+to follow along so here we go the first thing I want to show you is
+let's look at our files real quick so I'm going to look at files I will jump
+out of the way so under files you see that I do have a public folder here
+right if you don't that means you didn't build your site correctly I'm not sure
+how we built in the last tutorial but what you want to do because the site's
+already set up you want to do blog down colon colon build site I don't think you
+
+00:02
+need to do the Hugo build I believe it's just plain build site so let's just do
+that when you build the site that actually creates two public folders it
+gives you a synopsis right here how many pages were built
+how many static files how many processed image
+etc etc right but you're only concerned about the public folder now remember
+when I said to commit we can go to get here Louis let's save it ctrl s let's
+see if that does the trick so what little show and get is anything
+that's actually had a change to it I literally just built this a few minutes
+ago so nothing's really changed on my end and that's the problem that you have
+that's why they're not showing up here so if you make a change to something
+it'll show up if you make a change it's a something that's in github so to speak
+you should have a bunch of public folders there so in order to add those
+
+00:03
+to the staging area you can do tools shell and remember we would do git add -
+just plain public because we want only the public folder
+/and I put star there I'm not sure if that's really necessary or not but get
+space add space public forward slash star now of course I don't have anything
+here but you should or you've already committed to github so this will catch
+you up if you didn't you would click the commit button and give it a name we'll
+make more reasonable names so there's no changes I didn't make any changes but
+then you'd click on push everything's up to date cool oh one thing to note is
+when you first start a project when you first wake up in the morning after
+you've done all your commits and pushes the first thing you want to do is has
+this little down arrow is pull pull from
+your github so if you're on a Macbook or a PC and you switch to one or the other
+the next day and you want to resume where you left off you would open this
+up your little project and pull from the
+github so you do the pull so you get the latest version that's just a little
+
+00:04
+extra narrative for you all right so we know that everything is on let's see
+github that's easy part right everything is easy so we go to github calm you
+could see that we have multiple projects mines on the left-hand side you might
+have to fiddle around and find where yours is but we have project one here
+and I accidentally added everything to it but you literally only need to do
+your paw like so under this public folder is
+where we're gonna be focused on and if you scroll down you'll see you have an
+index.html that's gonna be key for heaven net laughs II find it okay so
+simple as that now let's go to net loafie I if you haven't created a free
+account do those proper steps so sign up
+use your Google or get github account to
+sign up etc etc I'm already signed up so I'll just log in if you haven't signed
+
+00:05
+up please do so pause this video and then come right back to it now this is
+very simple new site from get click on that continuous deployment that's what
+we're gonna be doing continuous deployment I you've heard of maybe the
+term continuous integration continuous deployment CI slash CD you'll see that
+everywhere so now you can say to your potential employer yes I've done
+continuous integration continuous deployment because this is what that is
+we're gonna do it from github I'll show you anyways how that how that is true
+okay so from github it automatically I'm already connected
+to my github it'll probably give you a couple steps to connect to your github
+maybe ask you for a permission or something like that select yes then
+it'll automatically know all of your github projects so allow net Lafite to
+access github now the project that I've created was the project one remember so
+I have mine right here let's click on that it's simple so it automatically
+pulls in my owner I'm the owner branch to you know keep all these probably the
+
+00:06
+same build command this is important I don't know if it knows this or if I put
+this in previously somehow it knows it but make sure you have build command is
+lowercase Hugo and publish directory is public and it's case sensitive so lower
+case H and lower case P because you've created a public folder you could have
+called it something else you know through blog down build in with extra
+parameters you just said hey I don't want to publish in public but make sure
+because we're building this is a command net if he's gonna go to our public site
+on github and it's gonna know it's a hugo site because we're giving it a
+command it's basically on net leafy side
+using the command line saying hey how do i bill
+this website we're telling it how to do that now now you might have an advanced
+checkbox here click on show advanced okay this is cool to find environment
+variables this is exactly what you need you need a new variable here and it says
+
+00:07
+variable name and value what are we gonna put there let me tell you we are
+gonna put in the word Hugo underscore version ole capital all capital Hugo
+underscore version and everything is case-sensitive and what value are we
+gonna put there well let's go back to our real quick let's do blog down : :
+Hugo underscore version and figure out the exact version that you need which
+you need everything here zero point seven two point zero is the version that
+I have yours might be slightly different copy all three of those values with the
+periods so zero point seven two point zero let's go back to net loafie
+somewhere and type in zero point zero weight zero point seven two point zero
+and you need that lead in zero because it's got what its gonna do it's gonna
+actually go to particular websites using that value as a parameter and it'll be
+within the URL as a I forget what you call it but that zero matters so zero
+
+00:08
+point seven two point zero now click on deploy site and what you'll see
+hopefully it might not show you a whole lot right here but mine says in queued
+so give it a few seconds a few minutes you can hit the refresh button here if
+you'd like which I usually do and you see it's building you can actually click
+on it when you click on it and you scroll down you'll see what it's doing
+so if you clicked on it a little bit earlier you would have seen these
+populate right here and if you got an error it would show you an error and
+that's important to find because a lot of people probably will have an error
+the first couple times they might have put it wrong version in there or
+something like that but remember that URL I was talking about it actually goes
+out somewhere and uses that point seven to I right here Hugo static site
+generator version 0.72 it it just it needs to be exact that's all
+
+00:09
+there is to it but it looks like everything ran just fine right built
+completed finished processing build 32 milliseconds whatever it took
+now where is this site at well we can click on preview that's where the site
+is this is the site and it works all of this works posts all of my posts work
+and it's all under a net low fee site now you can customize your net low fee
+URL a little bit I believe we're not gonna get into that yet so that's that
+you've got a live site that anybody can go to you can share that URL that's up
+there it's not very user friendly yet though so in the next tutorial I want to
+show you how to customize that that URL just a little bit for free and how to
+add posts if you guys liked this tutorial please share it save it show me
+your website's post your links inside of
+the comments whatever you want to do I'd like to see what you've come up with
+what themes you chose we're getting close we're getting close so a few more
+
+00:10
+steps and we'll be we'll be on our way you [Music]End of file
+
+---
+title: RStudio to Github to Netlify Live Site   blogdown Hugo
+date: 2020-06-13
+categories:
+  - Absolute Beginners Guide
+tags:
+  - learn
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=vVHZ76OwPow">
+<picture><img src="https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+welcome back today we're gonna almost finalize our little Hugo block down
+project by pulling everything that we had in github to a net low fee
+deployable site so basically as you commit messages from our studio to
+github and you push that code there Netley fee will automatically monitor
+that public folder and as it changes it'll update your website today we're
+gonna do that so stay tuned this is my main website
+it's where I teach how to create content online make money mostly for teaching
+people just like this channel here so if you want to check out how to create
+these videos check out that site margin grass comm all right so let's get
+started we have a project open and if you follow it along from the previous
+tutorials you should be at the same steps I have multiple playlists on this
+channel so some of them are merged together like for example the absolute
+
+00:01
+beginners guide to learn an R has a mixture of multiple playlists in it if
+you want something very specific check out all the different playlists I have
+for particular interests that being said this is episode 5 of the blog down Hugo
+site I believe and what I want to show you is a couple of things let's start
+off with making sure that you did commit the right code to github and again you
+need to have a github account and you've had to have done the previous tutorial
+to follow along so here we go the first thing I want to show you is
+let's look at our files real quick so I'm going to look at files I will jump
+out of the way so under files you see that I do have a public folder here
+right if you don't that means you didn't build your site correctly I'm not sure
+how we built in the last tutorial but what you want to do because the site's
+already set up you want to do blog down colon colon build site I don't think you
+
+00:02
+need to do the Hugo build I believe it's just plain build site so let's just do
+that when you build the site that actually creates two public folders it
+gives you a synopsis right here how many pages were built
+how many static files how many processed image
+etc etc right but you're only concerned about the public folder now remember
+when I said to commit we can go to get here Louis let's save it ctrl s let's
+see if that does the trick so what little show and get is anything
+that's actually had a change to it I literally just built this a few minutes
+ago so nothing's really changed on my end and that's the problem that you have
+that's why they're not showing up here so if you make a change to something
+it'll show up if you make a change it's a something that's in github so to speak
+you should have a bunch of public folders there so in order to add those
+
+00:03
+to the staging area you can do tools shell and remember we would do git add -
+just plain public because we want only the public folder
+/and I put star there I'm not sure if that's really necessary or not but get
+space add space public forward slash star now of course I don't have anything
+here but you should or you've already committed to github so this will catch
+you up if you didn't you would click the commit button and give it a name we'll
+make more reasonable names so there's no changes I didn't make any changes but
+then you'd click on push everything's up to date cool oh one thing to note is
+when you first start a project when you first wake up in the morning after
+you've done all your commits and pushes the first thing you want to do is has
+this little down arrow is pull pull from
+your github so if you're on a Macbook or a PC and you switch to one or the other
+the next day and you want to resume where you left off you would open this
+up your little project and pull from the
+github so you do the pull so you get the latest version that's just a little
+
+00:04
+extra narrative for you all right so we know that everything is on let's see
+github that's easy part right everything is easy so we go to github calm you
+could see that we have multiple projects mines on the left-hand side you might
+have to fiddle around and find where yours is but we have project one here
+and I accidentally added everything to it but you literally only need to do
+your paw like so under this public folder is
+where we're gonna be focused on and if you scroll down you'll see you have an
+index.html that's gonna be key for heaven net laughs II find it okay so
+simple as that now let's go to net loafie I if you haven't created a free
+account do those proper steps so sign up
+use your Google or get github account to
+sign up etc etc I'm already signed up so I'll just log in if you haven't signed
+
+00:05
+up please do so pause this video and then come right back to it now this is
+very simple new site from get click on that continuous deployment that's what
+we're gonna be doing continuous deployment I you've heard of maybe the
+term continuous integration continuous deployment CI slash CD you'll see that
+everywhere so now you can say to your potential employer yes I've done
+continuous integration continuous deployment because this is what that is
+we're gonna do it from github I'll show you anyways how that how that is true
+okay so from github it automatically I'm already connected
+to my github it'll probably give you a couple steps to connect to your github
+maybe ask you for a permission or something like that select yes then
+it'll automatically know all of your github projects so allow net Lafite to
+access github now the project that I've created was the project one remember so
+I have mine right here let's click on that it's simple so it automatically
+pulls in my owner I'm the owner branch to you know keep all these probably the
+
+00:06
+same build command this is important I don't know if it knows this or if I put
+this in previously somehow it knows it but make sure you have build command is
+lowercase Hugo and publish directory is public and it's case sensitive so lower
+case H and lower case P because you've created a public folder you could have
+called it something else you know through blog down build in with extra
+parameters you just said hey I don't want to publish in public but make sure
+because we're building this is a command net if he's gonna go to our public site
+on github and it's gonna know it's a hugo site because we're giving it a
+command it's basically on net leafy side
+using the command line saying hey how do i bill
+this website we're telling it how to do that now now you might have an advanced
+checkbox here click on show advanced okay this is cool to find environment
+variables this is exactly what you need you need a new variable here and it says
+
+00:07
+variable name and value what are we gonna put there let me tell you we are
+gonna put in the word Hugo underscore version ole capital all capital Hugo
+underscore version and everything is case-sensitive and what value are we
+gonna put there well let's go back to our real quick let's do blog down : :
+Hugo underscore version and figure out the exact version that you need which
+you need everything here zero point seven two point zero is the version that
+I have yours might be slightly different copy all three of those values with the
+periods so zero point seven two point zero let's go back to net loafie
+somewhere and type in zero point zero weight zero point seven two point zero
+and you need that lead in zero because it's got what its gonna do it's gonna
+actually go to particular websites using that value as a parameter and it'll be
+within the URL as a I forget what you call it but that zero matters so zero
+
+00:08
+point seven two point zero now click on deploy site and what you'll see
+hopefully it might not show you a whole lot right here but mine says in queued
+so give it a few seconds a few minutes you can hit the refresh button here if
+you'd like which I usually do and you see it's building you can actually click
+on it when you click on it and you scroll down you'll see what it's doing
+so if you clicked on it a little bit earlier you would have seen these
+populate right here and if you got an error it would show you an error and
+that's important to find because a lot of people probably will have an error
+the first couple times they might have put it wrong version in there or
+something like that but remember that URL I was talking about it actually goes
+out somewhere and uses that point seven to I right here Hugo static site
+generator version 0.72 it it just it needs to be exact that's all
+
+00:09
+there is to it but it looks like everything ran just fine right built
+completed finished processing build 32 milliseconds whatever it took
+now where is this site at well we can click on preview that's where the site
+is this is the site and it works all of this works posts all of my posts work
+and it's all under a net low fee site now you can customize your net low fee
+URL a little bit I believe we're not gonna get into that yet so that's that
+you've got a live site that anybody can go to you can share that URL that's up
+there it's not very user friendly yet though so in the next tutorial I want to
+show you how to customize that that URL just a little bit for free and how to
+add posts if you guys liked this tutorial please share it save it show me
+your website's post your links inside of
+the comments whatever you want to do I'd like to see what you've come up with
+what themes you chose we're getting close we're getting close so a few more
+
+00:10
+steps and we'll be we'll be on our way you [Music]End of file
+
+---
+title: RStudio to Github to Netlify Live Site   blogdown Hugo
+date: 2020-06-13
+categories:
+  - Absolute Beginners Guide
+tags:
+  - teach
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=vVHZ76OwPow">
+<picture><img src="https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+welcome back today we're gonna almost finalize our little Hugo block down
+project by pulling everything that we had in github to a net low fee
+deployable site so basically as you commit messages from our studio to
+github and you push that code there Netley fee will automatically monitor
+that public folder and as it changes it'll update your website today we're
+gonna do that so stay tuned this is my main website
+it's where I teach how to create content online make money mostly for teaching
+people just like this channel here so if you want to check out how to create
+these videos check out that site margin grass comm all right so let's get
+started we have a project open and if you follow it along from the previous
+tutorials you should be at the same steps I have multiple playlists on this
+channel so some of them are merged together like for example the absolute
+
+00:01
+beginners guide to learn an R has a mixture of multiple playlists in it if
+you want something very specific check out all the different playlists I have
+for particular interests that being said this is episode 5 of the blog down Hugo
+site I believe and what I want to show you is a couple of things let's start
+off with making sure that you did commit the right code to github and again you
+need to have a github account and you've had to have done the previous tutorial
+to follow along so here we go the first thing I want to show you is
+let's look at our files real quick so I'm going to look at files I will jump
+out of the way so under files you see that I do have a public folder here
+right if you don't that means you didn't build your site correctly I'm not sure
+how we built in the last tutorial but what you want to do because the site's
+already set up you want to do blog down colon colon build site I don't think you
+
+00:02
+need to do the Hugo build I believe it's just plain build site so let's just do
+that when you build the site that actually creates two public folders it
+gives you a synopsis right here how many pages were built
+how many static files how many processed image
+etc etc right but you're only concerned about the public folder now remember
+when I said to commit we can go to get here Louis let's save it ctrl s let's
+see if that does the trick so what little show and get is anything
+that's actually had a change to it I literally just built this a few minutes
+ago so nothing's really changed on my end and that's the problem that you have
+that's why they're not showing up here so if you make a change to something
+it'll show up if you make a change it's a something that's in github so to speak
+you should have a bunch of public folders there so in order to add those
+
+00:03
+to the staging area you can do tools shell and remember we would do git add -
+just plain public because we want only the public folder
+/and I put star there I'm not sure if that's really necessary or not but get
+space add space public forward slash star now of course I don't have anything
+here but you should or you've already committed to github so this will catch
+you up if you didn't you would click the commit button and give it a name we'll
+make more reasonable names so there's no changes I didn't make any changes but
+then you'd click on push everything's up to date cool oh one thing to note is
+when you first start a project when you first wake up in the morning after
+you've done all your commits and pushes the first thing you want to do is has
+this little down arrow is pull pull from
+your github so if you're on a Macbook or a PC and you switch to one or the other
+the next day and you want to resume where you left off you would open this
+up your little project and pull from the
+github so you do the pull so you get the latest version that's just a little
+
+00:04
+extra narrative for you all right so we know that everything is on let's see
+github that's easy part right everything is easy so we go to github calm you
+could see that we have multiple projects mines on the left-hand side you might
+have to fiddle around and find where yours is but we have project one here
+and I accidentally added everything to it but you literally only need to do
+your paw like so under this public folder is
+where we're gonna be focused on and if you scroll down you'll see you have an
+index.html that's gonna be key for heaven net laughs II find it okay so
+simple as that now let's go to net loafie I if you haven't created a free
+account do those proper steps so sign up
+use your Google or get github account to
+sign up etc etc I'm already signed up so I'll just log in if you haven't signed
+
+00:05
+up please do so pause this video and then come right back to it now this is
+very simple new site from get click on that continuous deployment that's what
+we're gonna be doing continuous deployment I you've heard of maybe the
+term continuous integration continuous deployment CI slash CD you'll see that
+everywhere so now you can say to your potential employer yes I've done
+continuous integration continuous deployment because this is what that is
+we're gonna do it from github I'll show you anyways how that how that is true
+okay so from github it automatically I'm already connected
+to my github it'll probably give you a couple steps to connect to your github
+maybe ask you for a permission or something like that select yes then
+it'll automatically know all of your github projects so allow net Lafite to
+access github now the project that I've created was the project one remember so
+I have mine right here let's click on that it's simple so it automatically
+pulls in my owner I'm the owner branch to you know keep all these probably the
+
+00:06
+same build command this is important I don't know if it knows this or if I put
+this in previously somehow it knows it but make sure you have build command is
+lowercase Hugo and publish directory is public and it's case sensitive so lower
+case H and lower case P because you've created a public folder you could have
+called it something else you know through blog down build in with extra
+parameters you just said hey I don't want to publish in public but make sure
+because we're building this is a command net if he's gonna go to our public site
+on github and it's gonna know it's a hugo site because we're giving it a
+command it's basically on net leafy side
+using the command line saying hey how do i bill
+this website we're telling it how to do that now now you might have an advanced
+checkbox here click on show advanced okay this is cool to find environment
+variables this is exactly what you need you need a new variable here and it says
+
+00:07
+variable name and value what are we gonna put there let me tell you we are
+gonna put in the word Hugo underscore version ole capital all capital Hugo
+underscore version and everything is case-sensitive and what value are we
+gonna put there well let's go back to our real quick let's do blog down : :
+Hugo underscore version and figure out the exact version that you need which
+you need everything here zero point seven two point zero is the version that
+I have yours might be slightly different copy all three of those values with the
+periods so zero point seven two point zero let's go back to net loafie
+somewhere and type in zero point zero weight zero point seven two point zero
+and you need that lead in zero because it's got what its gonna do it's gonna
+actually go to particular websites using that value as a parameter and it'll be
+within the URL as a I forget what you call it but that zero matters so zero
+
+00:08
+point seven two point zero now click on deploy site and what you'll see
+hopefully it might not show you a whole lot right here but mine says in queued
+so give it a few seconds a few minutes you can hit the refresh button here if
+you'd like which I usually do and you see it's building you can actually click
+on it when you click on it and you scroll down you'll see what it's doing
+so if you clicked on it a little bit earlier you would have seen these
+populate right here and if you got an error it would show you an error and
+that's important to find because a lot of people probably will have an error
+the first couple times they might have put it wrong version in there or
+something like that but remember that URL I was talking about it actually goes
+out somewhere and uses that point seven to I right here Hugo static site
+generator version 0.72 it it just it needs to be exact that's all
+
+00:09
+there is to it but it looks like everything ran just fine right built
+completed finished processing build 32 milliseconds whatever it took
+now where is this site at well we can click on preview that's where the site
+is this is the site and it works all of this works posts all of my posts work
+and it's all under a net low fee site now you can customize your net low fee
+URL a little bit I believe we're not gonna get into that yet so that's that
+you've got a live site that anybody can go to you can share that URL that's up
+there it's not very user friendly yet though so in the next tutorial I want to
+show you how to customize that that URL just a little bit for free and how to
+add posts if you guys liked this tutorial please share it save it show me
+your website's post your links inside of
+the comments whatever you want to do I'd like to see what you've come up with
+what themes you chose we're getting close we're getting close so a few more
+
+00:10
+steps and we'll be we'll be on our way you [Music]End of file
+
+---
+title: RStudio to Github to Netlify Live Site   blogdown Hugo
+date: 2020-06-13
+categories:
+  - Absolute Beginners Guide
+tags:
+  - cradeltograver
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=vVHZ76OwPow">
+<picture><img src="https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+welcome back today we're gonna almost finalize our little Hugo block down
+project by pulling everything that we had in github to a net low fee
+deployable site so basically as you commit messages from our studio to
+github and you push that code there Netley fee will automatically monitor
+that public folder and as it changes it'll update your website today we're
+gonna do that so stay tuned this is my main website
+it's where I teach how to create content online make money mostly for teaching
+people just like this channel here so if you want to check out how to create
+these videos check out that site margin grass comm all right so let's get
+started we have a project open and if you follow it along from the previous
+tutorials you should be at the same steps I have multiple playlists on this
+channel so some of them are merged together like for example the absolute
+
+00:01
+beginners guide to learn an R has a mixture of multiple playlists in it if
+you want something very specific check out all the different playlists I have
+for particular interests that being said this is episode 5 of the blog down Hugo
+site I believe and what I want to show you is a couple of things let's start
+off with making sure that you did commit the right code to github and again you
+need to have a github account and you've had to have done the previous tutorial
+to follow along so here we go the first thing I want to show you is
+let's look at our files real quick so I'm going to look at files I will jump
+out of the way so under files you see that I do have a public folder here
+right if you don't that means you didn't build your site correctly I'm not sure
+how we built in the last tutorial but what you want to do because the site's
+already set up you want to do blog down colon colon build site I don't think you
+
+00:02
+need to do the Hugo build I believe it's just plain build site so let's just do
+that when you build the site that actually creates two public folders it
+gives you a synopsis right here how many pages were built
+how many static files how many processed image
+etc etc right but you're only concerned about the public folder now remember
+when I said to commit we can go to get here Louis let's save it ctrl s let's
+see if that does the trick so what little show and get is anything
+that's actually had a change to it I literally just built this a few minutes
+ago so nothing's really changed on my end and that's the problem that you have
+that's why they're not showing up here so if you make a change to something
+it'll show up if you make a change it's a something that's in github so to speak
+you should have a bunch of public folders there so in order to add those
+
+00:03
+to the staging area you can do tools shell and remember we would do git add -
+just plain public because we want only the public folder
+/and I put star there I'm not sure if that's really necessary or not but get
+space add space public forward slash star now of course I don't have anything
+here but you should or you've already committed to github so this will catch
+you up if you didn't you would click the commit button and give it a name we'll
+make more reasonable names so there's no changes I didn't make any changes but
+then you'd click on push everything's up to date cool oh one thing to note is
+when you first start a project when you first wake up in the morning after
+you've done all your commits and pushes the first thing you want to do is has
+this little down arrow is pull pull from
+your github so if you're on a Macbook or a PC and you switch to one or the other
+the next day and you want to resume where you left off you would open this
+up your little project and pull from the
+github so you do the pull so you get the latest version that's just a little
+
+00:04
+extra narrative for you all right so we know that everything is on let's see
+github that's easy part right everything is easy so we go to github calm you
+could see that we have multiple projects mines on the left-hand side you might
+have to fiddle around and find where yours is but we have project one here
+and I accidentally added everything to it but you literally only need to do
+your paw like so under this public folder is
+where we're gonna be focused on and if you scroll down you'll see you have an
+index.html that's gonna be key for heaven net laughs II find it okay so
+simple as that now let's go to net loafie I if you haven't created a free
+account do those proper steps so sign up
+use your Google or get github account to
+sign up etc etc I'm already signed up so I'll just log in if you haven't signed
+
+00:05
+up please do so pause this video and then come right back to it now this is
+very simple new site from get click on that continuous deployment that's what
+we're gonna be doing continuous deployment I you've heard of maybe the
+term continuous integration continuous deployment CI slash CD you'll see that
+everywhere so now you can say to your potential employer yes I've done
+continuous integration continuous deployment because this is what that is
+we're gonna do it from github I'll show you anyways how that how that is true
+okay so from github it automatically I'm already connected
+to my github it'll probably give you a couple steps to connect to your github
+maybe ask you for a permission or something like that select yes then
+it'll automatically know all of your github projects so allow net Lafite to
+access github now the project that I've created was the project one remember so
+I have mine right here let's click on that it's simple so it automatically
+pulls in my owner I'm the owner branch to you know keep all these probably the
+
+00:06
+same build command this is important I don't know if it knows this or if I put
+this in previously somehow it knows it but make sure you have build command is
+lowercase Hugo and publish directory is public and it's case sensitive so lower
+case H and lower case P because you've created a public folder you could have
+called it something else you know through blog down build in with extra
+parameters you just said hey I don't want to publish in public but make sure
+because we're building this is a command net if he's gonna go to our public site
+on github and it's gonna know it's a hugo site because we're giving it a
+command it's basically on net leafy side
+using the command line saying hey how do i bill
+this website we're telling it how to do that now now you might have an advanced
+checkbox here click on show advanced okay this is cool to find environment
+variables this is exactly what you need you need a new variable here and it says
+
+00:07
+variable name and value what are we gonna put there let me tell you we are
+gonna put in the word Hugo underscore version ole capital all capital Hugo
+underscore version and everything is case-sensitive and what value are we
+gonna put there well let's go back to our real quick let's do blog down : :
+Hugo underscore version and figure out the exact version that you need which
+you need everything here zero point seven two point zero is the version that
+I have yours might be slightly different copy all three of those values with the
+periods so zero point seven two point zero let's go back to net loafie
+somewhere and type in zero point zero weight zero point seven two point zero
+and you need that lead in zero because it's got what its gonna do it's gonna
+actually go to particular websites using that value as a parameter and it'll be
+within the URL as a I forget what you call it but that zero matters so zero
+
+00:08
+point seven two point zero now click on deploy site and what you'll see
+hopefully it might not show you a whole lot right here but mine says in queued
+so give it a few seconds a few minutes you can hit the refresh button here if
+you'd like which I usually do and you see it's building you can actually click
+on it when you click on it and you scroll down you'll see what it's doing
+so if you clicked on it a little bit earlier you would have seen these
+populate right here and if you got an error it would show you an error and
+that's important to find because a lot of people probably will have an error
+the first couple times they might have put it wrong version in there or
+something like that but remember that URL I was talking about it actually goes
+out somewhere and uses that point seven to I right here Hugo static site
+generator version 0.72 it it just it needs to be exact that's all
+
+00:09
+there is to it but it looks like everything ran just fine right built
+completed finished processing build 32 milliseconds whatever it took
+now where is this site at well we can click on preview that's where the site
+is this is the site and it works all of this works posts all of my posts work
+and it's all under a net low fee site now you can customize your net low fee
+URL a little bit I believe we're not gonna get into that yet so that's that
+you've got a live site that anybody can go to you can share that URL that's up
+there it's not very user friendly yet though so in the next tutorial I want to
+show you how to customize that that URL just a little bit for free and how to
+add posts if you guys liked this tutorial please share it save it show me
+your website's post your links inside of
+the comments whatever you want to do I'd like to see what you've come up with
+what themes you chose we're getting close we're getting close so a few more
+
+00:10
+steps and we'll be we'll be on our way you [Music]End of file
+
+---
+title: RStudio to Github to Netlify Live Site   blogdown Hugo
+date: 2020-06-13
+categories:
+  - Absolute Beginners Guide
+tags:
+  - cradeltograve
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=vVHZ76OwPow">
+<picture><img src="https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+welcome back today we're gonna almost finalize our little Hugo block down
+project by pulling everything that we had in github to a net low fee
+deployable site so basically as you commit messages from our studio to
+github and you push that code there Netley fee will automatically monitor
+that public folder and as it changes it'll update your website today we're
+gonna do that so stay tuned this is my main website
+it's where I teach how to create content online make money mostly for teaching
+people just like this channel here so if you want to check out how to create
+these videos check out that site margin grass comm all right so let's get
+started we have a project open and if you follow it along from the previous
+tutorials you should be at the same steps I have multiple playlists on this
+channel so some of them are merged together like for example the absolute
+
+00:01
+beginners guide to learn an R has a mixture of multiple playlists in it if
+you want something very specific check out all the different playlists I have
+for particular interests that being said this is episode 5 of the blog down Hugo
+site I believe and what I want to show you is a couple of things let's start
+off with making sure that you did commit the right code to github and again you
+need to have a github account and you've had to have done the previous tutorial
+to follow along so here we go the first thing I want to show you is
+let's look at our files real quick so I'm going to look at files I will jump
+out of the way so under files you see that I do have a public folder here
+right if you don't that means you didn't build your site correctly I'm not sure
+how we built in the last tutorial but what you want to do because the site's
+already set up you want to do blog down colon colon build site I don't think you
+
+00:02
+need to do the Hugo build I believe it's just plain build site so let's just do
+that when you build the site that actually creates two public folders it
+gives you a synopsis right here how many pages were built
+how many static files how many processed image
+etc etc right but you're only concerned about the public folder now remember
+when I said to commit we can go to get here Louis let's save it ctrl s let's
+see if that does the trick so what little show and get is anything
+that's actually had a change to it I literally just built this a few minutes
+ago so nothing's really changed on my end and that's the problem that you have
+that's why they're not showing up here so if you make a change to something
+it'll show up if you make a change it's a something that's in github so to speak
+you should have a bunch of public folders there so in order to add those
+
+00:03
+to the staging area you can do tools shell and remember we would do git add -
+just plain public because we want only the public folder
+/and I put star there I'm not sure if that's really necessary or not but get
+space add space public forward slash star now of course I don't have anything
+here but you should or you've already committed to github so this will catch
+you up if you didn't you would click the commit button and give it a name we'll
+make more reasonable names so there's no changes I didn't make any changes but
+then you'd click on push everything's up to date cool oh one thing to note is
+when you first start a project when you first wake up in the morning after
+you've done all your commits and pushes the first thing you want to do is has
+this little down arrow is pull pull from
+your github so if you're on a Macbook or a PC and you switch to one or the other
+the next day and you want to resume where you left off you would open this
+up your little project and pull from the
+github so you do the pull so you get the latest version that's just a little
+
+00:04
+extra narrative for you all right so we know that everything is on let's see
+github that's easy part right everything is easy so we go to github calm you
+could see that we have multiple projects mines on the left-hand side you might
+have to fiddle around and find where yours is but we have project one here
+and I accidentally added everything to it but you literally only need to do
+your paw like so under this public folder is
+where we're gonna be focused on and if you scroll down you'll see you have an
+index.html that's gonna be key for heaven net laughs II find it okay so
+simple as that now let's go to net loafie I if you haven't created a free
+account do those proper steps so sign up
+use your Google or get github account to
+sign up etc etc I'm already signed up so I'll just log in if you haven't signed
+
+00:05
+up please do so pause this video and then come right back to it now this is
+very simple new site from get click on that continuous deployment that's what
+we're gonna be doing continuous deployment I you've heard of maybe the
+term continuous integration continuous deployment CI slash CD you'll see that
+everywhere so now you can say to your potential employer yes I've done
+continuous integration continuous deployment because this is what that is
+we're gonna do it from github I'll show you anyways how that how that is true
+okay so from github it automatically I'm already connected
+to my github it'll probably give you a couple steps to connect to your github
+maybe ask you for a permission or something like that select yes then
+it'll automatically know all of your github projects so allow net Lafite to
+access github now the project that I've created was the project one remember so
+I have mine right here let's click on that it's simple so it automatically
+pulls in my owner I'm the owner branch to you know keep all these probably the
+
+00:06
+same build command this is important I don't know if it knows this or if I put
+this in previously somehow it knows it but make sure you have build command is
+lowercase Hugo and publish directory is public and it's case sensitive so lower
+case H and lower case P because you've created a public folder you could have
+called it something else you know through blog down build in with extra
+parameters you just said hey I don't want to publish in public but make sure
+because we're building this is a command net if he's gonna go to our public site
+on github and it's gonna know it's a hugo site because we're giving it a
+command it's basically on net leafy side
+using the command line saying hey how do i bill
+this website we're telling it how to do that now now you might have an advanced
+checkbox here click on show advanced okay this is cool to find environment
+variables this is exactly what you need you need a new variable here and it says
+
+00:07
+variable name and value what are we gonna put there let me tell you we are
+gonna put in the word Hugo underscore version ole capital all capital Hugo
+underscore version and everything is case-sensitive and what value are we
+gonna put there well let's go back to our real quick let's do blog down : :
+Hugo underscore version and figure out the exact version that you need which
+you need everything here zero point seven two point zero is the version that
+I have yours might be slightly different copy all three of those values with the
+periods so zero point seven two point zero let's go back to net loafie
+somewhere and type in zero point zero weight zero point seven two point zero
+and you need that lead in zero because it's got what its gonna do it's gonna
+actually go to particular websites using that value as a parameter and it'll be
+within the URL as a I forget what you call it but that zero matters so zero
+
+00:08
+point seven two point zero now click on deploy site and what you'll see
+hopefully it might not show you a whole lot right here but mine says in queued
+so give it a few seconds a few minutes you can hit the refresh button here if
+you'd like which I usually do and you see it's building you can actually click
+on it when you click on it and you scroll down you'll see what it's doing
+so if you clicked on it a little bit earlier you would have seen these
+populate right here and if you got an error it would show you an error and
+that's important to find because a lot of people probably will have an error
+the first couple times they might have put it wrong version in there or
+something like that but remember that URL I was talking about it actually goes
+out somewhere and uses that point seven to I right here Hugo static site
+generator version 0.72 it it just it needs to be exact that's all
+
+00:09
+there is to it but it looks like everything ran just fine right built
+completed finished processing build 32 milliseconds whatever it took
+now where is this site at well we can click on preview that's where the site
+is this is the site and it works all of this works posts all of my posts work
+and it's all under a net low fee site now you can customize your net low fee
+URL a little bit I believe we're not gonna get into that yet so that's that
+you've got a live site that anybody can go to you can share that URL that's up
+there it's not very user friendly yet though so in the next tutorial I want to
+show you how to customize that that URL just a little bit for free and how to
+add posts if you guys liked this tutorial please share it save it show me
+your website's post your links inside of
+the comments whatever you want to do I'd like to see what you've come up with
+what themes you chose we're getting close we're getting close so a few more
+
+00:10
+steps and we'll be we'll be on our way you [Music]End of file
+
+---
+title: RStudio to Github to Netlify Live Site   blogdown Hugo
+date: 2020-06-13
+categories:
+  - Absolute Beginners Guide
+tags:
+  - github to netlify
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=vVHZ76OwPow">
+<picture><img src="https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+welcome back today we're gonna almost finalize our little Hugo block down
+project by pulling everything that we had in github to a net low fee
+deployable site so basically as you commit messages from our studio to
+github and you push that code there Netley fee will automatically monitor
+that public folder and as it changes it'll update your website today we're
+gonna do that so stay tuned this is my main website
+it's where I teach how to create content online make money mostly for teaching
+people just like this channel here so if you want to check out how to create
+these videos check out that site margin grass comm all right so let's get
+started we have a project open and if you follow it along from the previous
+tutorials you should be at the same steps I have multiple playlists on this
+channel so some of them are merged together like for example the absolute
+
+00:01
+beginners guide to learn an R has a mixture of multiple playlists in it if
+you want something very specific check out all the different playlists I have
+for particular interests that being said this is episode 5 of the blog down Hugo
+site I believe and what I want to show you is a couple of things let's start
+off with making sure that you did commit the right code to github and again you
+need to have a github account and you've had to have done the previous tutorial
+to follow along so here we go the first thing I want to show you is
+let's look at our files real quick so I'm going to look at files I will jump
+out of the way so under files you see that I do have a public folder here
+right if you don't that means you didn't build your site correctly I'm not sure
+how we built in the last tutorial but what you want to do because the site's
+already set up you want to do blog down colon colon build site I don't think you
+
+00:02
+need to do the Hugo build I believe it's just plain build site so let's just do
+that when you build the site that actually creates two public folders it
+gives you a synopsis right here how many pages were built
+how many static files how many processed image
+etc etc right but you're only concerned about the public folder now remember
+when I said to commit we can go to get here Louis let's save it ctrl s let's
+see if that does the trick so what little show and get is anything
+that's actually had a change to it I literally just built this a few minutes
+ago so nothing's really changed on my end and that's the problem that you have
+that's why they're not showing up here so if you make a change to something
+it'll show up if you make a change it's a something that's in github so to speak
+you should have a bunch of public folders there so in order to add those
+
+00:03
+to the staging area you can do tools shell and remember we would do git add -
+just plain public because we want only the public folder
+/and I put star there I'm not sure if that's really necessary or not but get
+space add space public forward slash star now of course I don't have anything
+here but you should or you've already committed to github so this will catch
+you up if you didn't you would click the commit button and give it a name we'll
+make more reasonable names so there's no changes I didn't make any changes but
+then you'd click on push everything's up to date cool oh one thing to note is
+when you first start a project when you first wake up in the morning after
+you've done all your commits and pushes the first thing you want to do is has
+this little down arrow is pull pull from
+your github so if you're on a Macbook or a PC and you switch to one or the other
+the next day and you want to resume where you left off you would open this
+up your little project and pull from the
+github so you do the pull so you get the latest version that's just a little
+
+00:04
+extra narrative for you all right so we know that everything is on let's see
+github that's easy part right everything is easy so we go to github calm you
+could see that we have multiple projects mines on the left-hand side you might
+have to fiddle around and find where yours is but we have project one here
+and I accidentally added everything to it but you literally only need to do
+your paw like so under this public folder is
+where we're gonna be focused on and if you scroll down you'll see you have an
+index.html that's gonna be key for heaven net laughs II find it okay so
+simple as that now let's go to net loafie I if you haven't created a free
+account do those proper steps so sign up
+use your Google or get github account to
+sign up etc etc I'm already signed up so I'll just log in if you haven't signed
+
+00:05
+up please do so pause this video and then come right back to it now this is
+very simple new site from get click on that continuous deployment that's what
+we're gonna be doing continuous deployment I you've heard of maybe the
+term continuous integration continuous deployment CI slash CD you'll see that
+everywhere so now you can say to your potential employer yes I've done
+continuous integration continuous deployment because this is what that is
+we're gonna do it from github I'll show you anyways how that how that is true
+okay so from github it automatically I'm already connected
+to my github it'll probably give you a couple steps to connect to your github
+maybe ask you for a permission or something like that select yes then
+it'll automatically know all of your github projects so allow net Lafite to
+access github now the project that I've created was the project one remember so
+I have mine right here let's click on that it's simple so it automatically
+pulls in my owner I'm the owner branch to you know keep all these probably the
+
+00:06
+same build command this is important I don't know if it knows this or if I put
+this in previously somehow it knows it but make sure you have build command is
+lowercase Hugo and publish directory is public and it's case sensitive so lower
+case H and lower case P because you've created a public folder you could have
+called it something else you know through blog down build in with extra
+parameters you just said hey I don't want to publish in public but make sure
+because we're building this is a command net if he's gonna go to our public site
+on github and it's gonna know it's a hugo site because we're giving it a
+command it's basically on net leafy side
+using the command line saying hey how do i bill
+this website we're telling it how to do that now now you might have an advanced
+checkbox here click on show advanced okay this is cool to find environment
+variables this is exactly what you need you need a new variable here and it says
+
+00:07
+variable name and value what are we gonna put there let me tell you we are
+gonna put in the word Hugo underscore version ole capital all capital Hugo
+underscore version and everything is case-sensitive and what value are we
+gonna put there well let's go back to our real quick let's do blog down : :
+Hugo underscore version and figure out the exact version that you need which
+you need everything here zero point seven two point zero is the version that
+I have yours might be slightly different copy all three of those values with the
+periods so zero point seven two point zero let's go back to net loafie
+somewhere and type in zero point zero weight zero point seven two point zero
+and you need that lead in zero because it's got what its gonna do it's gonna
+actually go to particular websites using that value as a parameter and it'll be
+within the URL as a I forget what you call it but that zero matters so zero
+
+00:08
+point seven two point zero now click on deploy site and what you'll see
+hopefully it might not show you a whole lot right here but mine says in queued
+so give it a few seconds a few minutes you can hit the refresh button here if
+you'd like which I usually do and you see it's building you can actually click
+on it when you click on it and you scroll down you'll see what it's doing
+so if you clicked on it a little bit earlier you would have seen these
+populate right here and if you got an error it would show you an error and
+that's important to find because a lot of people probably will have an error
+the first couple times they might have put it wrong version in there or
+something like that but remember that URL I was talking about it actually goes
+out somewhere and uses that point seven to I right here Hugo static site
+generator version 0.72 it it just it needs to be exact that's all
+
+00:09
+there is to it but it looks like everything ran just fine right built
+completed finished processing build 32 milliseconds whatever it took
+now where is this site at well we can click on preview that's where the site
+is this is the site and it works all of this works posts all of my posts work
+and it's all under a net low fee site now you can customize your net low fee
+URL a little bit I believe we're not gonna get into that yet so that's that
+you've got a live site that anybody can go to you can share that URL that's up
+there it's not very user friendly yet though so in the next tutorial I want to
+show you how to customize that that URL just a little bit for free and how to
+add posts if you guys liked this tutorial please share it save it show me
+your website's post your links inside of
+the comments whatever you want to do I'd like to see what you've come up with
+what themes you chose we're getting close we're getting close so a few more
+
+00:10
+steps and we'll be we'll be on our way you [Music]End of file
+
+---
+title: RStudio to Github to Netlify Live Site   blogdown Hugo
+date: 2020-06-13
+categories:
+  - Absolute Beginners Guide
+tags:
+  - netflify deploy with rstudio
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=vVHZ76OwPow">
+<picture><img src="https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+welcome back today we're gonna almost finalize our little Hugo block down
+project by pulling everything that we had in github to a net low fee
+deployable site so basically as you commit messages from our studio to
+github and you push that code there Netley fee will automatically monitor
+that public folder and as it changes it'll update your website today we're
+gonna do that so stay tuned this is my main website
+it's where I teach how to create content online make money mostly for teaching
+people just like this channel here so if you want to check out how to create
+these videos check out that site margin grass comm all right so let's get
+started we have a project open and if you follow it along from the previous
+tutorials you should be at the same steps I have multiple playlists on this
+channel so some of them are merged together like for example the absolute
+
+00:01
+beginners guide to learn an R has a mixture of multiple playlists in it if
+you want something very specific check out all the different playlists I have
+for particular interests that being said this is episode 5 of the blog down Hugo
+site I believe and what I want to show you is a couple of things let's start
+off with making sure that you did commit the right code to github and again you
+need to have a github account and you've had to have done the previous tutorial
+to follow along so here we go the first thing I want to show you is
+let's look at our files real quick so I'm going to look at files I will jump
+out of the way so under files you see that I do have a public folder here
+right if you don't that means you didn't build your site correctly I'm not sure
+how we built in the last tutorial but what you want to do because the site's
+already set up you want to do blog down colon colon build site I don't think you
+
+00:02
+need to do the Hugo build I believe it's just plain build site so let's just do
+that when you build the site that actually creates two public folders it
+gives you a synopsis right here how many pages were built
+how many static files how many processed image
+etc etc right but you're only concerned about the public folder now remember
+when I said to commit we can go to get here Louis let's save it ctrl s let's
+see if that does the trick so what little show and get is anything
+that's actually had a change to it I literally just built this a few minutes
+ago so nothing's really changed on my end and that's the problem that you have
+that's why they're not showing up here so if you make a change to something
+it'll show up if you make a change it's a something that's in github so to speak
+you should have a bunch of public folders there so in order to add those
+
+00:03
+to the staging area you can do tools shell and remember we would do git add -
+just plain public because we want only the public folder
+/and I put star there I'm not sure if that's really necessary or not but get
+space add space public forward slash star now of course I don't have anything
+here but you should or you've already committed to github so this will catch
+you up if you didn't you would click the commit button and give it a name we'll
+make more reasonable names so there's no changes I didn't make any changes but
+then you'd click on push everything's up to date cool oh one thing to note is
+when you first start a project when you first wake up in the morning after
+you've done all your commits and pushes the first thing you want to do is has
+this little down arrow is pull pull from
+your github so if you're on a Macbook or a PC and you switch to one or the other
+the next day and you want to resume where you left off you would open this
+up your little project and pull from the
+github so you do the pull so you get the latest version that's just a little
+
+00:04
+extra narrative for you all right so we know that everything is on let's see
+github that's easy part right everything is easy so we go to github calm you
+could see that we have multiple projects mines on the left-hand side you might
+have to fiddle around and find where yours is but we have project one here
+and I accidentally added everything to it but you literally only need to do
+your paw like so under this public folder is
+where we're gonna be focused on and if you scroll down you'll see you have an
+index.html that's gonna be key for heaven net laughs II find it okay so
+simple as that now let's go to net loafie I if you haven't created a free
+account do those proper steps so sign up
+use your Google or get github account to
+sign up etc etc I'm already signed up so I'll just log in if you haven't signed
+
+00:05
+up please do so pause this video and then come right back to it now this is
+very simple new site from get click on that continuous deployment that's what
+we're gonna be doing continuous deployment I you've heard of maybe the
+term continuous integration continuous deployment CI slash CD you'll see that
+everywhere so now you can say to your potential employer yes I've done
+continuous integration continuous deployment because this is what that is
+we're gonna do it from github I'll show you anyways how that how that is true
+okay so from github it automatically I'm already connected
+to my github it'll probably give you a couple steps to connect to your github
+maybe ask you for a permission or something like that select yes then
+it'll automatically know all of your github projects so allow net Lafite to
+access github now the project that I've created was the project one remember so
+I have mine right here let's click on that it's simple so it automatically
+pulls in my owner I'm the owner branch to you know keep all these probably the
+
+00:06
+same build command this is important I don't know if it knows this or if I put
+this in previously somehow it knows it but make sure you have build command is
+lowercase Hugo and publish directory is public and it's case sensitive so lower
+case H and lower case P because you've created a public folder you could have
+called it something else you know through blog down build in with extra
+parameters you just said hey I don't want to publish in public but make sure
+because we're building this is a command net if he's gonna go to our public site
+on github and it's gonna know it's a hugo site because we're giving it a
+command it's basically on net leafy side
+using the command line saying hey how do i bill
+this website we're telling it how to do that now now you might have an advanced
+checkbox here click on show advanced okay this is cool to find environment
+variables this is exactly what you need you need a new variable here and it says
+
+00:07
+variable name and value what are we gonna put there let me tell you we are
+gonna put in the word Hugo underscore version ole capital all capital Hugo
+underscore version and everything is case-sensitive and what value are we
+gonna put there well let's go back to our real quick let's do blog down : :
+Hugo underscore version and figure out the exact version that you need which
+you need everything here zero point seven two point zero is the version that
+I have yours might be slightly different copy all three of those values with the
+periods so zero point seven two point zero let's go back to net loafie
+somewhere and type in zero point zero weight zero point seven two point zero
+and you need that lead in zero because it's got what its gonna do it's gonna
+actually go to particular websites using that value as a parameter and it'll be
+within the URL as a I forget what you call it but that zero matters so zero
+
+00:08
+point seven two point zero now click on deploy site and what you'll see
+hopefully it might not show you a whole lot right here but mine says in queued
+so give it a few seconds a few minutes you can hit the refresh button here if
+you'd like which I usually do and you see it's building you can actually click
+on it when you click on it and you scroll down you'll see what it's doing
+so if you clicked on it a little bit earlier you would have seen these
+populate right here and if you got an error it would show you an error and
+that's important to find because a lot of people probably will have an error
+the first couple times they might have put it wrong version in there or
+something like that but remember that URL I was talking about it actually goes
+out somewhere and uses that point seven to I right here Hugo static site
+generator version 0.72 it it just it needs to be exact that's all
+
+00:09
+there is to it but it looks like everything ran just fine right built
+completed finished processing build 32 milliseconds whatever it took
+now where is this site at well we can click on preview that's where the site
+is this is the site and it works all of this works posts all of my posts work
+and it's all under a net low fee site now you can customize your net low fee
+URL a little bit I believe we're not gonna get into that yet so that's that
+you've got a live site that anybody can go to you can share that URL that's up
+there it's not very user friendly yet though so in the next tutorial I want to
+show you how to customize that that URL just a little bit for free and how to
+add posts if you guys liked this tutorial please share it save it show me
+your website's post your links inside of
+the comments whatever you want to do I'd like to see what you've come up with
+what themes you chose we're getting close we're getting close so a few more
+
+00:10
+steps and we'll be we'll be on our way you [Music]End of file
+
+---
+title: RStudio to Github to Netlify Live Site   blogdown Hugo
+date: 2020-06-13
+categories:
+  - Absolute Beginners Guide
+tags:
+  - rstudio
+
+type: post
+w3codecolor: false
+draft: false
+thumbnail: https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg
+---
+
+<a href="https://www.youtube.com/watch?v=vVHZ76OwPow">
+<picture><img src="https://i.ytimg.com/vi/vVHZ76OwPow/maxresdefault.jpg"></picture>
+</a>
+
+
+
+## Click the image to play video.
+
+
+
+00:00
+welcome back today we're gonna almost finalize our little Hugo block down
+project by pulling everything that we had in github to a net low fee
+deployable site so basically as you commit messages from our studio to
+github and you push that code there Netley fee will automatically monitor
+that public folder and as it changes it'll update your website today we're
+gonna do that so stay tuned this is my main website
+it's where I teach how to create content online make money mostly for teaching
+people just like this channel here so if you want to check out how to create
+these videos check out that site margin grass comm all right so let's get
+started we have a project open and if you follow it along from the previous
+tutorials you should be at the same steps I have multiple playlists on this
+channel so some of them are merged together like for example the absolute
+
+00:01
+beginners guide to learn an R has a mixture of multiple playlists in it if
+you want something very specific check out all the different playlists I have
+for particular interests that being said this is episode 5 of the blog down Hugo
+site I believe and what I want to show you is a couple of things let's start
+off with making sure that you did commit the right code to github and again you
+need to have a github account and you've had to have done the previous tutorial
+to follow along so here we go the first thing I want to show you is
+let's look at our files real quick so I'm going to look at files I will jump
+out of the way so under files you see that I do have a public folder here
+right if you don't that means you didn't build your site correctly I'm not sure
+how we built in the last tutorial but what you want to do because the site's
+already set up you want to do blog down colon colon build site I don't think you
+
+00:02
+need to do the Hugo build I believe it's just plain build site so let's just do
+that when you build the site that actually creates two public folders it
+gives you a synopsis right here how many pages were built
+how many static files how many processed image
+etc etc right but you're only concerned about the public folder now remember
+when I said to commit we can go to get here Louis let's save it ctrl s let's
+see if that does the trick so what little show and get is anything
+that's actually had a change to it I literally just built this a few minutes
+ago so nothing's really changed on my end and that's the problem that you have
+that's why they're not showing up here so if you make a change to something
+it'll show up if you make a change it's a something that's in github so to speak
+you should have a bunch of public folders there so in order to add those
+
+00:03
+to the staging area you can do tools shell and remember we would do git add -
+just plain public because we want only the public folder
+/and I put star there I'm not sure if that's really necessary or not but get
+space add space public forward slash star now of course I don't have anything
+here but you should or you've already committed to github so this will catch
+you up if you didn't you would click the commit button and give it a name we'll
+make more reasonable names so there's no changes I didn't make any changes but
+then you'd click on push everything's up to date cool oh one thing to note is
+when you first start a project when you first wake up in the morning after
+you've done all your commits and pushes the first thing you want to do is has
+this little down arrow is pull pull from
+your github so if you're on a Macbook or a PC and you switch to one or the other
+the next day and you want to resume where you left off you would open this
+up your little project and pull from the
+github so you do the pull so you get the latest version that's just a little
+
+00:04
+extra narrative for you all right so we know that everything is on let's see
+github that's easy part right everything is easy so we go to github calm you
+could see that we have multiple projects mines on the left-hand side you might
+have to fiddle around and find where yours is but we have project one here
+and I accidentally added everything to it but you literally only need to do
+your paw like so under this public folder is
+where we're gonna be focused on and if you scroll down you'll see you have an
+index.html that's gonna be key for heaven net laughs II find it okay so
+simple as that now let's go to net loafie I if you haven't created a free
+account do those proper steps so sign up
+use your Google or get github account to
+sign up etc etc I'm already signed up so I'll just log in if you haven't signed
+
+00:05
+up please do so pause this video and then come right back to it now this is
+very simple new site from get click on that continuous deployment that's what
+we're gonna be doing continuous deployment I you've heard of maybe the
+term continuous integration continuous deployment CI slash CD you'll see that
+everywhere so now you can say to your potential employer yes I've done
+continuous integration continuous deployment because this is what that is
+we're gonna do it from github I'll show you anyways how that how that is true
+okay so from github it automatically I'm already connected
+to my github it'll probably give you a couple steps to connect to your github
+maybe ask you for a permission or something like that select yes then
+it'll automatically know all of your github projects so allow net Lafite to
+access github now the project that I've created was the project one remember so
+I have mine right here let's click on that it's simple so it automatically
+pulls in my owner I'm the owner branch to you know keep all these probably the
+
+00:06
+same build command this is important I don't know if it knows this or if I put
+this in previously somehow it knows it but make sure you have build command is
+lowercase Hugo and publish directory is public and it's case sensitive so lower
+case H and lower case P because you've created a public folder you could have
+called it something else you know through blog down build in with extra
+parameters you just said hey I don't want to publish in public but make sure
+because we're building this is a command net if he's gonna go to our public site
+on github and it's gonna know it's a hugo site because we're giving it a
+command it's basically on net leafy side
+using the command line saying hey how do i bill
+this website we're telling it how to do that now now you might have an advanced
+checkbox here click on show advanced okay this is cool to find environment
+variables this is exactly what you need you need a new variable here and it says
+
+00:07
+variable name and value what are we gonna put there let me tell you we are
+gonna put in the word Hugo underscore version ole capital all capital Hugo
+underscore version and everything is case-sensitive and what value are we
+gonna put there well let's go back to our real quick let's do blog down : :
+Hugo underscore version and figure out the exact version that you need which
+you need everything here zero point seven two point zero is the version that
+I have yours might be slightly different copy all three of those values with the
+periods so zero point seven two point zero let's go back to net loafie
+somewhere and type in zero point zero weight zero point seven two point zero
+and you need that lead in zero because it's got what its gonna do it's gonna
+actually go to particular websites using that value as a parameter and it'll be
+within the URL as a I forget what you call it but that zero matters so zero
+
+00:08
+point seven two point zero now click on deploy site and what you'll see
+hopefully it might not show you a whole lot right here but mine says in queued
+so give it a few seconds a few minutes you can hit the refresh button here if
+you'd like which I usually do and you see it's building you can actually click
+on it when you click on it and you scroll down you'll see what it's doing
+so if you clicked on it a little bit earlier you would have seen these
+populate right here and if you got an error it would show you an error and
+that's important to find because a lot of people probably will have an error
+the first couple times they might have put it wrong version in there or
+something like that but remember that URL I was talking about it actually goes
+out somewhere and uses that point seven to I right here Hugo static site
+generator version 0.72 it it just it needs to be exact that's all
+
+00:09
+there is to it but it looks like everything ran just fine right built
+completed finished processing build 32 milliseconds whatever it took
+now where is this site at well we can click on preview that's where the site
+is this is the site and it works all of this works posts all of my posts work
+and it's all under a net low fee site now you can customize your net low fee
+URL a little bit I believe we're not gonna get into that yet so that's that
+you've got a live site that anybody can go to you can share that URL that's up
+there it's not very user friendly yet though so in the next tutorial I want to
+show you how to customize that that URL just a little bit for free and how to
+add posts if you guys liked this tutorial please share it save it show me
+your website's post your links inside of
+the comments whatever you want to do I'd like to see what you've come up with
+what themes you chose we're getting close we're getting close so a few more
+
+00:10
+steps and we'll be we'll be on our way you [Music]End of file
+
+---
+title: RStudio to Github to Netlify Live Site   blogdown Hugo
+date: 2020-06-13
+categories:
+  - Absolute Beginners Guide
+tags:
+  - rstats
 
 type: post
 w3codecolor: false
