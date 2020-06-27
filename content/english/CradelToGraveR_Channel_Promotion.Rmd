@@ -1,0 +1,170 @@
+---
+title: "RChannel_Promotion"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Hello, RStats community. I am going on vacation for about 10 days so I wanted to give one last push for the R Channel I am running. I think there is something for everyone here. However, it is geared mostly towards beginners. It's more of a programming channel than a stats channel but they overlap some.  
+
+The goal is to keep R videos organized in playlists. That's why I have provided separate playlists per interest area. I have also created a website to help organize the videos. The site needs a lot of work so be warned that it's a work in progress. Check out the Hugo Blogdown tutorials if you want to learn how to make sites with R.   
+
+
+Please share the content as you please. 
+
+# Cradle to Grave R
+
+* [https://www.youtube.com/channel/UCA-hX4v0FEIKOzY8yikt8ow](https://www.youtube.com/channel/UCA-hX4v0FEIKOzY8yikt8ow)
+*  [https://www.cradletograver.com/](https://www.cradletograver.com/) 
+* Discord: [https://discord.gg/f2uDBvA](https://discord.gg/f2uDBvA)
+
+&#x200B;
+
+## Absolute Beginners Guide to R
+* [https://www.youtube.com/playlist?list=PLuak\_bGvcWZO0Da0cDVBpDeTQPEWpuvCD](https://www.youtube.com/playlist?list=PLuak_bGvcWZO0Da0cDVBpDeTQPEWpuvCD)
+* [https://www.cradletograver.com/categories/absolute-beginners-guide/](https://www.cradletograver.com/categories/absolute-beginners-guide/) 
+
+&#x200B;
+
+## Live Archived
+* [https://www.youtube.com/playlist?list=PLuak\_bGvcWZPKvSh\_80rORArnsEphpP6r](https://www.youtube.com/playlist?list=PLuak_bGvcWZPKvSh_80rORArnsEphpP6r)
+* [https://www.cradletograver.com/categories/live-archived/](https://www.cradletograver.com/categories/live-archived/) 
+
+&#x200B;
+
+## R Blogdown Site
+* [https://www.youtube.com/playlist?list=PLuak\_bGvcWZNu-Eu2MPBS7gZ6Zz3jdc4w](https://www.youtube.com/playlist?list=PLuak_bGvcWZNu-Eu2MPBS7gZ6Zz3jdc4w)
+*  [https://www.cradletograver.com/categories/r-blogdown-site/](https://www.cradletograver.com/categories/r-blogdown-site/) 
+
+&#x200B;
+
+## Real Life Answers
+* [https://www.youtube.com/playlist?list=PLuak\_bGvcWZMmYwJZR-sDrJkTEGxm2zwY](https://www.youtube.com/playlist?list=PLuak_bGvcWZMmYwJZR-sDrJkTEGxm2zwY)
+*  [https://www.cradletograver.com/categories/real-life-answers/](https://www.cradletograver.com/categories/real-life-answers/) 
+
+&#x200B;
+
+## Absolute Beginners Guide to Statistical Programming
+* [https://www.youtube.com/playlist?list=PLuak\_bGvcWZP3unvBws7tF1SLeaUqgOA9](https://www.youtube.com/playlist?list=PLuak_bGvcWZP3unvBws7tF1SLeaUqgOA9)
+*  [https://www.cradletograver.com/categories/absolute-beginners-guide-to-statistical-programming/](https://www.cradletograver.com/categories/absolute-beginners-guide-to-statistical-programming/) 
+
+&#x200B;
+
+## COVID-19 Analysis
+* [https://www.youtube.com/playlist?list=PLuak\_bGvcWZPsLGEBv5LM1MxpdZuaBB0Q](https://www.youtube.com/playlist?list=PLuak_bGvcWZPsLGEBv5LM1MxpdZuaBB0Q)
+*  [https://www.cradletograver.com/categories/covid-19-analysis/](https://www.cradletograver.com/categories/covid-19-analysis/) 
+
+&#x200B;
+
+## ggplot
+* [https://www.youtube.com/playlist?list=PLuak\_bGvcWZOl0eRyZrTpY4\_Q8EPBLubE](https://www.youtube.com/playlist?list=PLuak_bGvcWZOl0eRyZrTpY4_Q8EPBLubE)
+*  [https://www.cradletograver.com/categories/ggplot/](https://www.cradletograver.com/categories/ggplot/) 
+
+&#x200B;
+
+## tidy
+* [https://www.youtube.com/playlist?list=PLuak\_bGvcWZNxOVE-\_bHNtSa4fGR1lP1a](https://www.youtube.com/playlist?list=PLuak_bGvcWZNxOVE-_bHNtSa4fGR1lP1a)
+* [https://www.cradletograver.com/categories/tidy/](https://www.cradletograver.com/categories/tidy/) 
+
+&#x200B;
+
+## Random R
+* [https://www.youtube.com/playlist?list=PLuak\_bGvcWZOcKVdgJZhZP\_WOllbzj69v](https://www.youtube.com/playlist?list=PLuak_bGvcWZOcKVdgJZhZP_WOllbzj69v)
+* [https://www.cradletograver.com/categories/random-r/](https://www.cradletograver.com/categories/random-r/) 
+
+&#x200B;
+
+## Practical R for Business
+* [https://www.youtube.com/playlist?list=PLuak\_bGvcWZM40II6nwwJe2YgGm6dFRXF](https://www.youtube.com/playlist?list=PLuak_bGvcWZM40II6nwwJe2YgGm6dFRXF)
+* [https://www.cradletograver.com/categories/practical-r-for-business/](https://www.cradletograver.com/categories/practical-r-for-business/) 
+
+&#x200B;
+
+## Scraping Content
+* [https://www.youtube.com/playlist?list=PLuak\_bGvcWZMgylLxW8dCEoT3AJ4fqWdY](https://www.youtube.com/playlist?list=PLuak_bGvcWZMgylLxW8dCEoT3AJ4fqWdY)
+* [https://www.cradletograver.com/categories/scraping-content/](https://www.cradletograver.com/categories/scraping-content/) 
+
+&#x200B;
+
+# Mark Gingrass Site
+
+This is my personal YouTube channel. If you are interested in streaming or learning how I actually create the R tutorials, check some of them out. These playlists vary widely! Fair warning. This is also a way to get to know me a little better.   
+
+
+## OBS & Streaming Tips/Tutorials
+* [https://www.youtube.com/playlist?list=PL0oBhq0tLsOBI9cELAHz6cWVaMmMDACZM](https://www.youtube.com/playlist?list=PL0oBhq0tLsOBI9cELAHz6cWVaMmMDACZM)
+
+&#x200B;
+
+## Math
+* [https://www.youtube.com/playlist?list=PL0oBhq0tLsOD\_FI5RgA3ZlInIZHNp9597](https://www.youtube.com/playlist?list=PL0oBhq0tLsOD_FI5RgA3ZlInIZHNp9597)
+
+&#x200B;
+
+## Content Insider
+* [https://www.youtube.com/playlist?list=PL0oBhq0tLsOCkR5zbaoZmNR6\_ukG4LDAy](https://www.youtube.com/playlist?list=PL0oBhq0tLsOCkR5zbaoZmNR6_ukG4LDAy)
+
+&#x200B;
+
+## Interview Exclusives
+* [https://www.youtube.com/playlist?list=PL0oBhq0tLsOB1f66N7mpXA8f6gv-4eUVZ](https://www.youtube.com/playlist?list=PL0oBhq0tLsOB1f66N7mpXA8f6gv-4eUVZ)
+
+&#x200B;
+
+## Final Cut Pro Tips
+* [https://www.youtube.com/playlist?list=PL0oBhq0tLsOB76PBHBjXCAey1TgaFJRDy](https://www.youtube.com/playlist?list=PL0oBhq0tLsOB76PBHBjXCAey1TgaFJRDy)
+
+&#x200B;
+
+## Programming
+* [https://www.youtube.com/playlist?list=PL0oBhq0tLsODtJWF401npQfT9b7lLtXij](https://www.youtube.com/playlist?list=PL0oBhq0tLsODtJWF401npQfT9b7lLtXij)
+
+&#x200B;
+
+## Computer Tips
+* [https://www.youtube.com/playlist?list=PL0oBhq0tLsOCp7QawPf0dNSxyfb\_Py8mJ](https://www.youtube.com/playlist?list=PL0oBhq0tLsOCp7QawPf0dNSxyfb_Py8mJ)
+
+&#x200B;
+
+## Udacity Self Driving Car Progress
+* [https://www.youtube.com/playlist?list=PL0oBhq0tLsODoitGEsj3gcoNo7E3rJv5H](https://www.youtube.com/playlist?list=PL0oBhq0tLsODoitGEsj3gcoNo7E3rJv5H)
+
+&#x200B;
+
+## College Algebra
+* [https://www.youtube.com/playlist?list=PL0oBhq0tLsOBSVYulL2uGhlT5SyyZ4pZL](https://www.youtube.com/playlist?list=PL0oBhq0tLsOBSVYulL2uGhlT5SyyZ4pZL)
+
+&#x200B;
+
+## VBA Tutorials
+* [https://www.youtube.com/playlist?list=PL0oBhq0tLsOBdT-zzGYofsVQ\_I\_wsRtju](https://www.youtube.com/playlist?list=PL0oBhq0tLsOBdT-zzGYofsVQ_I_wsRtju)
+
+&#x200B;
+
+## Probability Tutorials
+* [https://www.youtube.com/playlist?list=PL0oBhq0tLsOBTX711xfCMcxPrqzfjLxW3](https://www.youtube.com/playlist?list=PL0oBhq0tLsOBTX711xfCMcxPrqzfjLxW3)
+* &#x200B;
+* \#Supply Chain / Forecasting / Government Careers
+* [https://www.youtube.com/playlist?list=PL0oBhq0tLsOBddC4U3TZR0-jlZOXadogu](https://www.youtube.com/playlist?list=PL0oBhq0tLsOBddC4U3TZR0-jlZOXadogu)
+
+&#x200B;
+
+## Kids Experiments
+* [https://www.youtube.com/playlist?list=PL0oBhq0tLsOChtO-7x3U0WBUIIn-jhvRH](https://www.youtube.com/playlist?list=PL0oBhq0tLsOChtO-7x3U0WBUIIn-jhvRH)
+
+&#x200B;
+
+## C++ Tutorials
+* [https://www.youtube.com/playlist?list=PL0oBhq0tLsOBzIXpM98ezhrBHse5IJ776](https://www.youtube.com/playlist?list=PL0oBhq0tLsOBzIXpM98ezhrBHse5IJ776)
+
+&#x200B;
+
+## Reviews
+* [https://www.youtube.com/playlist?list=PL0oBhq0tLsOBxiq5q\_\_xcWV5WOqS9HGe3](https://www.youtube.com/playlist?list=PL0oBhq0tLsOBxiq5q__xcWV5WOqS9HGe3)
+
+&#x200B;
+
+## Skateboarding
+* [https://www.youtube.com/playlist?list=PL0oBhq0tLsOB9\_f91uy1ojtfYEBLNmVqC](https://www.youtube.com/playlist?list=PL0oBhq0tLsOB9_f91uy1ojtfYEBLNmVqC)
