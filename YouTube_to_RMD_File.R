@@ -6,8 +6,9 @@
 
 #TODO: duplicate posts due to dupilicate playlists. Need to make a category list and post once
 #TODO: check if youtube link is .webp and if so, use local .jpg file
+#
 
-
+#Load Libraries
 library(jsonlite)
 library(readtext)
 library(ymlthis)
@@ -19,7 +20,7 @@ library(tools)
 
 #set base URL where you downloadd all of the content from youtube-dl
 #e.g. "c:/ytdl/CradleToGraveR/"
-
+#This is so you can use this script for multiple channels
 base_yt_url <- "c:/ytdl/CradleToGraveR/"
 
 
@@ -27,6 +28,7 @@ yt_dl_JSON <- list.files(path = base_yt_url,
                         pattern = "*.json",
                       recursive = TRUE,
                       full.names = TRUE)
+
 
 yt_dl_descrip_dir <- list.files(path = base_yt_url, 
                         pattern = "*.description$",
@@ -57,6 +59,13 @@ inds4 <- match(gsub(' ', '', sub('\\..*', '', basename(yt_dl_JSON))),
 inds5 <- match(gsub(' ', '', sub('\\..*', '', basename(yt_dl_JSON))),
                gsub("[[:space:]]", "", sub('\\..*', '', basename(thumb_files2$full_path))))
 
+all_JSON <- lapply(df_yt$JSON, fromJSON)
+
+# Capture all Playlists
+play_lists <- all_JSON[[1]]$playlist
+for (index in seq_len(length(all_JSON))){
+  play_lists[index] <- all_JSON[[index]]$playlist
+}
 
 df_yt <- data.frame(File_Name = basename(yt_dl_JSON),
                     File_Name_remove_space = gsub("[[:space:]]", "", basename(yt_dl_JSON)),
@@ -64,12 +73,15 @@ df_yt <- data.frame(File_Name = basename(yt_dl_JSON),
                     VTT = yt_dl_vtt_cnvrt[inds],
                     IMAGE = yt_dl_images[inds4],
                     DESC = yt_dl_descrip_dir[inds3],
-                    thumbnail_orig = thumb_files2$full_path[inds5])
+                    thumbnail_orig = thumb_files2$full_path[inds5],
+                    categories = play_lists)
 
 # replace NA with empty string
 df_yt$VTT[is.na(df_yt$VTT)] <- "No VTT Found" 
 
 
+
+# Create the RMD FILES in this loop
 for (index in seq_len(nrow(df_yt)))
 {
   #Get the json file
