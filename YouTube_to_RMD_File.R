@@ -68,7 +68,8 @@ for (index in seq_len(length(all_JSON))){
 }
 
 df_yt <- data.frame(File_Name = basename(yt_dl_JSON),
-                    File_Name_remove_space = gsub("[[:space:]]", "", basename(yt_dl_JSON)),
+                    File_Name_remove_space = gsub("[[:space:]]", "", 
+                                                  sub('\\..*', '', basename(yt_dl_JSON))),
                     JSON = yt_dl_JSON, 
                     VTT = yt_dl_vtt_cnvrt[inds],
                     IMAGE = yt_dl_images[inds4],
@@ -76,7 +77,7 @@ df_yt <- data.frame(File_Name = basename(yt_dl_JSON),
                     thumbnail_orig = thumb_files2$full_path[inds5],
                     categories = play_lists)
 
-# replace NA with empty string
+ # replace NA with empty string
 df_yt$VTT[is.na(df_yt$VTT)] <- "No VTT Found" 
 
 
