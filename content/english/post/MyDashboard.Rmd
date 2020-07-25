@@ -1,0 +1,109 @@
+---
+author: John Doe, MaxMustermann
+title: New dashboard title
+output:
+  flexdashboard::flex_dashboard:
+    theme: cosmo
+    social: null
+    source: null
+    navbar: []
+runtime: shiny
+---
+
+```{r i2dash-global-setup}
+# Deal with operation within a switchr environment
+if (any(grepl(pattern = ".switchr", x = .libPaths()))) {
+  switchr::switchrNoUnload(TRUE)
+}
+
+# Make it possible to reuse chunk labels
+options(knitr.duplicate.label = "allow")
+
+# Set datadir variable, components should fetch their env from here!
+datadir <- "C:/Users/markg/Documents/Test"
+
+# Set up color mappings
+colormaps <- list()
+```
+
+Page 1 {data-navmenu=""}
+====================================================
+
+<!-- Page created on 2020-07-25 11:46:31 -->
+
+
+Column {data-width=600}
+-------------------------------------
+    
+### A map from leaflet
+
+<!-- Component created on 2020-07-25 11:45:21 -->
+
+```{r}
+if (!requireNamespace("leaflet", quietly = TRUE)) {
+    stop('The package "leaflet" is needed to embed objects of class "leaflet".', call. = FALSE)
+}
+
+vis_obj_HhKQrl <- readRDS(file.path(datadir, 'obj_HhKQrl.rds'))
+
+# workaround for plotly dependencies issue (https://github.com/ropensci/plotly/issues/1044)
+# 
+fix_dependency <- function(dependency){
+  if(dependency$name == "crosstalk" & dependency$version == "1.1.0"){
+    if(dependency$name == "jquery") dependency$src$file <- file.path(system.file(package ="crosstalk"), "lib/jquery")
+    if(dependency$name == "crosstalk") dependency$src$file <- file.path(system.file(package ="crosstalk"), "www")
+  }
+  return(dependency)
+}
+if ("leaflet" == "plotly"){
+  vis_obj_HhKQrl$dependencies <- lapply(vis_obj_HhKQrl$dependencies, fix_dependency)  
+}
+
+vis_obj_HhKQrl
+```
+
+
+   
+Column {data-width=400}
+-------------------------------------
+   
+
+
+
+
+Lemurs {data-navmenu="Animals"}
+====================================================
+
+<!-- Page created on 2020-07-25 11:46:31 -->
+
+
+Column {data-width=600}
+-------------------------------------
+    
+
+   
+Column {data-width=400}
+-------------------------------------
+   
+
+
+
+
+Tigers {data-navmenu="Animals"}
+====================================================
+
+<!-- Page created on 2020-07-25 11:46:31 -->
+
+
+Column {data-width=600}
+-------------------------------------
+    
+
+   
+Column {data-width=400}
+-------------------------------------
+   
+
+
+
+
