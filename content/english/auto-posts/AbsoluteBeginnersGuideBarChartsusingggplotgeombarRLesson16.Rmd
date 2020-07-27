@@ -1,5 +1,5 @@
 ---
-title: Bar Charts using ggplot geom bar   R Lesson 16
+title: Bar Charts using ggplot geom bar R Lesson 16
 date: 2019-10-01
 categories:
   - Absolute Beginners Guide
@@ -34,6 +34,9 @@ so I'm going to put people and we're going to set people equal to and
 remember the c is like reminds me of column so if i have a column of people
 the header is called people and the people that are in that column is
 whatever we want them to be let's do Dave Jackie
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=hatro-20&marketplace=amazon&region=US&placement=1491910399&asins=1491910399&linkId=9a117bbbc925d59dc8b7f7c2b1fad2ad&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+    </iframe>
 
 00:01
 mark and then we'll do for an example we're gonna repeat a couple of these

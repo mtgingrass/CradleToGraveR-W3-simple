@@ -1,0 +1,93 @@
+---
+title: i2Dash_Code
+date: 2019-10-01
+categories:
+  - Absolute Beginners Guide
+  - r-blogdown-site
+  - random-r
+tags:
+  - ggplot
+  - plotly
+  - leaflet
+  - i2dash
+  - dashboard
+
+type: post
+w3codecolor: false
+draft: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## i2Dash Code
+
+Here is the code used in the tutorial.
+
+```{r i2dash_example, echo=T, eval = FALSE}
+library(i2dash)
+
+dashboard <- i2dashboard(
+  title = "CradleToGraveR",
+  author = "Mark Gingrass",
+  interactive = TRUE,
+  theme = "spacelab")
+
+
+dashboard %<>%
+  add_page(
+    page = "home",
+    title = "Home Page",
+    layout = "focal_left",
+    menu = NULL
+  )
+
+dashboard %<>%
+  add_page(
+    page = "about",
+    title = "About Me",
+    layout = "focal_left",
+    menu = "Menu"
+  ) %>% 
+  add_page(
+    page = "contact",
+    title = "Contact Me",
+    layout = "focal_left",
+    menu = "Menu"
+  )
+
+
+library(leaflet)
+leaflet_map <- leaflet() %>% 
+  addTiles() %>% 
+  addMarkers(lng = -77.027023, lat = 38.997662,
+             popup = "My home town")
+
+library(plotly)
+plotly_object <- plot_ly(mtcars, x = ~wt, y = ~mpg)
+
+
+library(ggplot2)
+ggplot2_object <- mtcars %>% 
+  ggplot(aes(x = mpg)) + 
+  geom_density(fill = "darkgrey")
+
+dashboard %<>%
+  add_component(ggplot2_object,
+                page = "contact",
+                title = "Contact Me GGPLOT")
+dashboard %<>%
+  add_component(leaflet_map,
+                page = "home",
+                title = "This is my home") %>% 
+  add_component(plotly_object,
+                page = "about",
+                title = "Plotly Example")
+
+dashboard %>% assemble(file = "mydashboard.rmd", 
+                      pages = c("home", "contact", "about"))
+
+
+
+```
