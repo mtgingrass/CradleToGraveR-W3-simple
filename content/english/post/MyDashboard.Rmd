@@ -39,7 +39,7 @@ Column {data-width=600}
 
 <!-- Component created on 2020-07-25 11:45:21 -->
 
-```{r}
+```{r eval=FALSE}
 if (!requireNamespace("leaflet", quietly = TRUE)) {
     stop('The package "leaflet" is needed to embed objects of class "leaflet".', call. = FALSE)
 }

@@ -48,6 +48,7 @@ predictions <- model %>% predict(test.data)
 compare <- data.frame(actual = test.data$mpg,
                       predicted = predictions)
 
+
 # error 1 = 4.808
 error <- RMSE(predictions, test.data$mpg)
 ```
