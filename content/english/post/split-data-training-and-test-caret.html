@@ -369,34 +369,6 @@ summary {
 
 <div id="split-data-into-training-and-testing" class="section level2">
 <h2><strong>Split Data into Training and Testing</strong></h2>
-<p>```{r split_data_example, echo=F, eval = FALSE} library(tidyverse) library(caret)</p>
-</div>
-<div id="load-the-data" class="section level1">
-<h1>Load the Data</h1>
-<p>my_data &lt;- mtcars</p>
-</div>
-<div id="inspect-data" class="section level1">
-<h1>inspect data</h1>
-<p>sample_n(my_data, 4)</p>
-</div>
-<div id="split-data-into-training-and-test" class="section level1">
-<h1>split data into training and test</h1>
-<p>set.seed(10)</p>
-<p>training.samples &lt;- mtcars$mpg %&gt;% createDataPartition(p = .8, list = FALSE)</p>
-<p>train.data &lt;- my_data[training.samples, ] test.data &lt;- my_data[-training.samples, ]</p>
-</div>
-<div id="build-model" class="section level1">
-<h1>Build Model</h1>
-<p>model &lt;- lm(mpg ~., data = train.data)</p>
-</div>
-<div id="predict-using-the-model" class="section level1">
-<h1>predict using the model</h1>
-<p>predictions &lt;- model %&gt;% predict(test.data)</p>
-<p>compare &lt;- data.frame(actual = test.data$mpg, predicted = predictions)</p>
-</div>
-<div id="error-1-4.808" class="section level1">
-<h1>error 1 = 4.808</h1>
-<p>error &lt;- RMSE(predictions, test.data$mpg) ```</p>
 </div>
 
 
