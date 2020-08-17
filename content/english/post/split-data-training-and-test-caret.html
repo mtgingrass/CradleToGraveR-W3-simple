@@ -369,6 +369,38 @@ summary {
 
 <div id="split-data-into-training-and-testing" class="section level2">
 <h2><strong>Split Data into Training and Testing</strong></h2>
+<pre class="r"><code>library(tidyverse)
+library(caret)
+
+# Load the Data
+my_data &lt;- mtcars
+
+# inspect data
+sample_n(my_data, 4)
+
+# split data into training and test
+
+set.seed(10)
+
+training.samples &lt;- mtcars$mpg %&gt;% 
+  createDataPartition(p = .8, list = FALSE)
+
+train.data &lt;- my_data[training.samples, ]
+test.data &lt;- my_data[-training.samples, ]
+
+# Build Model
+
+model &lt;- lm(mpg ~., data = train.data)
+
+# predict using the model
+predictions &lt;- model %&gt;% predict(test.data)
+
+compare &lt;- data.frame(actual = test.data$mpg,
+                      predicted = predictions)
+
+
+# error 1 = 4.808
+error &lt;- RMSE(predictions, test.data$mpg)</code></pre>
 </div>
 
 
