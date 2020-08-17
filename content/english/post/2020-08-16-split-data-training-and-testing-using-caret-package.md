@@ -18,7 +18,7 @@ draft: true
 
 ## **Split Data into Training and Testing**
 
-```{r split_data_example, echo=T, eval = FALSE}
+```{r split_data_example, echo=F, eval = FALSE}
 library(tidyverse)
 library(caret)
 
