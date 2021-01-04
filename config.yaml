@@ -3,7 +3,7 @@ languageCode: en-us
 defaultContentLanguage: en
 theme: hugo-w3-simple
 disqusShortname: https-cradletograver-com
-googleAnalytics: ''
+googleAnalytics: 'G-KK38GDVNEW'
 paginate: 12
 hasCJKLanguage: true
 ignoreFiles:
