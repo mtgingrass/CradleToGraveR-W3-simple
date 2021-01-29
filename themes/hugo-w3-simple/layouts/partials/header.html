@@ -17,6 +17,10 @@
 <script async src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 {{ end }}
 
+<head>
+  {{ partial "google/analytics" . }}
+</head>
+
   {{ if .Site.Params.searchfunction }}
        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-green" title="Search" onclick="displaysearch()"><i class="fa fa-search"></i></a>
   {{ end }}
